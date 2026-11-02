@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Stáhne soupisky a rozlosování z chess-results.com do data/competitions.json.
-// Spouští se automaticky každý pátek (GitHub Actions), ručně:
+// Spouští se úlohou Aktualizace soupisek na GitHubu, ručně:
 //
 //     node scripts/fetch_data.mjs [--only <id>] [--save-html raw]
 //

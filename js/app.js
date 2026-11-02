@@ -21,6 +21,7 @@ let DATA = { competitions: [], generated: null };
 let S = store.loadDraft() ?? L.newMatch();
 let tab = 'zapas';
 // stav panelu Přidat soutěž
+let openBoard = null; // která šachovnice má otevřený výběr výsledku
 let addComp = { open: false, busy: false, url: '', boards: '8', short: '', msg: '', error: '', downloaded: false };
 
 const TABS = [
@@ -41,7 +42,7 @@ const NOTE_PRESETS = [
 ];
 
 const comp = () => DATA.competitions.find((c) => c.id === S.compId);
-const boards = () => comp()?.boards ?? 8;
+const boards = () => L.matchBoards(S, comp());
 const teamOf = (side) => comp()?.teams.find((t) => t.name === S[side].team);
 
 function save() {
@@ -118,9 +119,6 @@ function syncUrlUi() {
 
 function addPanel() {
   const tnr = tournamentNumber(addComp.url);
-  const boardOpts = [8, 5, 6, 4, 10, 12]
-    .map((n) => `<option ${String(n) === addComp.boards ? 'selected' : ''}>${n}</option>`)
-    .join('');
   // průběžná hláška se musí lišit od hotového výsledku, jinak vypadá načítání jako úspěch
   const status = addComp.error
     ? `<ul class="issues"><li class="error">${esc(addComp.error)}</li></ul>`
@@ -147,7 +145,8 @@ function addPanel() {
           placeholder="https://chess-results.com/tnr1507857.aspx" autocomplete="off" inputmode="url"></label>
       <p class="small-text" id="urlHint">${urlHint(addComp.url)}</p>
       <div class="grid two" style="margin-top:.5rem">
-        <label class="field"><span>Počet šachovnic v utkání</span><select data-add="boards">${boardOpts}</select></label>
+        <label class="field"><span>Počet šachovnic v utkání</span>
+          <input type="text" inputmode="numeric" data-add="boards" value="${esc(addComp.boards)}" placeholder="např. 8" autocomplete="off"></label>
         <label class="field"><span>Zkratka do nabídky (nepovinné)</span>
           <input type="text" data-add="short" value="${esc(addComp.short)}" placeholder="podle názvu soutěže" autocomplete="off"></label>
       </div>`)}
@@ -190,7 +189,7 @@ function addPanel() {
       }
       <p class="small-text muted">Místo stažených souborů jde nahrát i uložená stránka (.html) se stejnými seznamy.</p>
       <p class="small-text muted">Soutěž přidaná takhle je jen v tomhle zařízení. Aby ji v aplikaci měli všichni,
-      dá se o ni požádat na GitHubu a pak se bude obnovovat sama každý pátek.</p>
+      dá se o ni požádat na GitHubu.</p>
       <div class="row">
         <a class="btn small secondary" href="${esc(issueUrl(REPO, addComp))}" target="_blank" rel="noopener">Požádat o přidání pro všechny</a>
       </div>
@@ -274,7 +273,9 @@ function viewZapas() {
       <h2>Datum a místo</h2>
       <div class="grid two">
         <label class="field"><span>Hráno dne</span><input type="date" data-bind="date" value="${esc(S.date)}"></label>
-        <label class="field"><span>V hrací místnosti</span><input type="text" data-bind="venue" data-venue="1" value="${esc(S.venue)}" autocomplete="off" placeholder="Název a adresa herny"></label>
+        <label class="field"><span>Počet šachovnic${c ? ` (soutěž má ${c.boards})` : ''}</span>
+          <input type="text" inputmode="numeric" data-chg="matchBoards" value="${esc(boards())}" autocomplete="off"></label>
+        <label class="field"><span>Hrací místnost</span><input type="text" data-bind="venue" data-venue="1" value="${esc(S.venue)}" autocomplete="off"></label>
       </div>
     </div>
     <div class="actions"><button class="btn" data-act="go" data-tab="sestavy" type="button">Pokračovat na sestavy →</button></div>`;
@@ -373,7 +374,9 @@ function viewVysledky() {
   const away = L.sortedLineup(S.away.lineup);
   const t = L.totals(S, b);
   const done = b - t.missing.length;
-  const score = t.missing.length ? '– : –' : `${L.fmtPoints(t.home)} : ${L.fmtPoints(t.away)}`;
+  const finished = t.missing.length === 0;
+  const score = `${L.fmtPoints(t.home)} : ${L.fmtPoints(t.away)}`;
+  const lead = t.home > t.away ? 'home' : t.away > t.home ? 'away' : 'draw';
 
   const rows = [];
   for (let i = 1; i <= b; i++) {
@@ -381,30 +384,53 @@ function viewVysledky() {
     const ap = away[i - 1];
     const code = L.boardResult(S, i);
     const white = L.homeIsWhite(i);
-    const nm = (p) => (p ? esc(p.name) : '<span class="muted">neobsazeno</span>');
-    let ctrl;
-    if (hp && ap) {
-      const btn = (c) => `<button type="button" data-act="res" data-b="${i}" data-c="${c}" class="${code === c ? 'on' : ''}">${L.RESULTS[c].label}</button>`;
-      ctrl = `<div class="res">${['W', 'D', 'L'].map(btn).join('')}</div><div class="res k">${['WK', 'XK', 'LK'].map(btn).join('')}</div>`;
-    } else {
-      ctrl = `<div class="auto">Kontumace: ${L.RESULTS[code].label}</div>`;
-    }
-    rows.push(`<div class="board">
-      <div class="who">
-        <div class="l"><span class="dot ${white ? 'w' : 'b'}"></span>${nm(hp)}</div>
-        <div class="bn">${i}</div>
-        <div class="rr">${nm(ap)}<span class="dot ${white ? 'b' : 'w'}"></span></div>
-      </div>${ctrl}</div>`);
-  }
-  return `<div class="card">
-      <div class="who" style="display:grid;grid-template-columns:1fr auto 1fr;gap:.5rem;align-items:center">
-        <div><b>${esc(S.home.team || 'Domácí')}</b></div>
-        <div class="score">${score}</div>
-        <div style="text-align:right"><b>${esc(S.away.team || 'Hosté')}</b></div>
+    const auto = !hp || !ap;
+    const open = openBoard === i;
+    const player = (p, white) =>
+      `<span class="nm"><span class="dot ${white ? 'w' : 'b'}"></span><span class="t${p ? '' : ' muted'}">${
+        p ? esc(p.name) : 'neobsazeno'
+      }</span></span><span class="elo">${p ? esc(L.ratingSummary(p) || '–') : '&nbsp;'}</span>`;
+    const res = code
+      ? `<span class="rchip ${L.RESULTS[code].forfeit ? 'k' : ''} ${code === 'W' || code === 'WK' ? 'h' : code === 'L' || code === 'LK' ? 'a' : 'd'}">${L.RESULTS[code].label}</span>`
+      : '<span class="rchip none">–</span>';
+    const btn = (c) =>
+      `<button type="button" data-act="res" data-b="${i}" data-c="${c}" class="${code === c ? 'on' : ''}">${L.RESULTS[c].label}</button>`;
+    rows.push(`<li class="brow ${code ? 'set' : 'unset'} ${open ? 'open' : ''}">
+      <div class="bmain" ${auto ? '' : `data-act="openBoard" data-b="${i}"`} ${auto ? '' : 'role="button" tabindex="0"'}>
+        <span class="bno">${i}</span>
+        <span class="side h">${player(hp, white)}</span>
+        ${res}
+        <span class="side a">${player(ap, !white)}</span>
       </div>
-      <p class="muted small-text" style="text-align:center">Zadáno ${done} z ${b} šachovnic. Domácí hrají bílými na lichých šachovnicích. Kontumace (K) se počítá jako plný bod.</p>
+      ${
+        auto
+          ? `<div class="bauto">Neobsazená šachovnice, kontumace ${L.RESULTS[code].label}</div>`
+          : open
+            ? `<div class="bpick">
+                 <div class="res">${['W', 'D', 'L'].map(btn).join('')}</div>
+                 <div class="res k">${['WK', 'XK', 'LK'].map(btn).join('')}</div>
+                 ${code ? `<button class="btn small ghost" type="button" data-act="res" data-b="${i}" data-c="">Smazat výsledek</button>` : ''}
+               </div>`
+            : ''
+      }
+    </li>`);
+  }
+
+  return `<div class="card board-head">
+      <div class="score-line">
+        <div class="tname h">${esc(S.home.team || 'Domácí')}</div>
+        <div class="score ${lead}">${score}</div>
+        <div class="tname a">${esc(S.away.team || 'Hosté')}</div>
+      </div>
+      <div class="score-note">${
+        finished
+          ? `<b>Konečný stav.</b> ${lead === 'draw' ? 'Remíza.' : `Vyhrálo družstvo ${esc(lead === 'home' ? S.home.team : S.away.team)}.`}`
+          : `Průběžný stav, rozhodnuto ${done} z ${b} šachovnic${t.missing.length <= 4 ? `, zbývá ${t.missing.join(', ')}` : ''}.`
+      }</div>
     </div>
-    ${rows.join('')}
+    <ol class="boards">${rows.join('')}</ol>
+    <p class="small-text muted">Klepnutím na šachovnici zadáš výsledek. ● bílé, ○ černé: domácí hrají bílými na lichých
+    šachovnicích. K je kontumace a počítá se jako plný bod.</p>
     <div class="actions">
       <button class="btn secondary" data-act="go" data-tab="sestavy" type="button">← Zpět</button>
       <button class="btn" data-act="go" data-tab="zaver" type="button">Pokračovat na závěr →</button>
@@ -746,11 +772,18 @@ view.addEventListener('click', (e) => {
       save();
       return renderView();
     }
+    case 'openBoard': {
+      const b = Number(el.dataset.b);
+      openBoard = openBoard === b ? null : b;
+      return renderView();
+    }
     case 'res': {
       const b = Number(el.dataset.b);
       const c = el.dataset.c;
-      L.setBoardResult(S, b, L.boardResult(S, b) === c ? null : c);
+      L.setBoardResult(S, b, !c || L.boardResult(S, b) === c ? null : c);
       save();
+      // po zadání se výběr zavře, ať je vidět přehled utkání
+      if (c && L.boardResult(S, b)) openBoard = null;
       return renderView();
     }
     case 'preset': {
@@ -966,6 +999,14 @@ view.addEventListener('change', (e) => {
       setTeam(el.dataset.side, el.value);
       save();
       return renderView();
+    case 'matchBoards': {
+      const n = parseInt(el.value, 10);
+      // prázdné nebo nesmyslné vrátí počet podle soutěže
+      S.boards = Number.isInteger(n) && n >= 1 && n <= 24 ? n : null;
+      S.results = {};
+      save();
+      return renderView();
+    }
     case 'refRole':
       S.referee.role = el.value;
       if (el.value === 'captain' && S.home.captain) S.referee.name = S.home.captain;

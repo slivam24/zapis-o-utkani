@@ -50,6 +50,16 @@ export function minPlayers(boards) {
   return Math.ceil(boards / 2);
 }
 
+/**
+ * Počet šachovnic pro tenhle zápis. Bere se ze soutěže, ale zápis ho může přebít:
+ * u soutěže se dá překlepnout a některé soutěže se řídí jinými pravidly.
+ */
+export function matchBoards(state, comp) {
+  const own = Number(state?.boards);
+  if (Number.isInteger(own) && own >= 1 && own <= 24) return own;
+  return comp?.boards ?? 8;
+}
+
 /** Domácí hrají bílými na lichých šachovnicích (čl. 3.4.1). */
 export function homeIsWhite(board) {
   return board % 2 === 1;
@@ -158,6 +168,7 @@ export function newMatch({ today } = {}) {
     updatedAt: new Date().toISOString(),
     status: 'draft',
     compId: '',
+    boards: null, // null = podle soutěže
     round: '',
     date: t,
     venue: '',
@@ -183,7 +194,7 @@ export function defaultCaptain(team) {
  */
 export function validate(state, comp, { forFinal = false } = {}) {
   const issues = [];
-  const boards = comp?.boards ?? 8;
+  const boards = matchBoards(state, comp);
   const add = (level, text) => issues.push({ level, text });
 
   if (!state.compId) add('error', 'Není vybraná soutěž.');
@@ -203,10 +214,11 @@ export function validate(state, comp, { forFinal = false } = {}) {
       add('error', `${label}: v sestavě je ${lineup.length} hráčů, nejméně ${minPlayers(boards)} (čl. 3.6.2).`);
     if (lineup.length > boards) add('error', `${label}: v sestavě je více než ${boards} hráčů.`);
     const r = restrictedCount(lineup);
+    // Jen upozornění, ne chyba: zápis to dovolí vyplnit, protože soutěž se může řídit jinými pravidly.
     if (r > maxRestricted(boards))
       add(
-        'error',
-        `${label}: hostů, volných hráčů a cizinců je ${r}, povoleno nejvýše ${maxRestricted(boards)} (čl. 3.6.3).`,
+        'warn',
+        `${label}: hostů, volných hráčů a cizinců je ${r}, čl. 3.6.3 povoluje nejvýše ${maxRestricted(boards)}.`,
       );
     if (!state[side].captain?.trim()) add('warn', `${label}: chybí jméno kapitána.`);
   }

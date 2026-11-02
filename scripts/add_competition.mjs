@@ -179,7 +179,7 @@ async function main() {
       `- **Šachovnic:** ${entry.boards}`,
       `- **Načteno:** ${info.teams} družstev, ${info.players} hráčů`,
       '',
-      'Soupisky se teď stáhnou a soutěž se objeví v nabídce v aplikaci. Dál se obnovují automaticky každý pátek.',
+      'Soupisky se teď stáhnou a soutěž se objeví v nabídce v aplikaci.',
     ].join('\n'),
   );
   console.error(`::notice::pridano ${entry.id}`);

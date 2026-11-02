@@ -2,12 +2,13 @@
 // proto se plátno a načítání obrázků předávají zvenku (env).
 import {
   RESULTS, REFEREE_ROLES, sortedLineup, boardResult, totals, fmtPoints, fmtDate, fmtRating,
-  typeLabel, restrictedCount, maxRestricted, homeIsWhite, ratingColumns,
+  typeLabel, restrictedCount, maxRestricted, homeIsWhite, ratingColumns, matchBoards,
 } from './logic.js';
 
 export const PAGE_W = 794; // A4 při 96 dpi
 export const PAGE_H = 1123;
-const FONT = 'Arial, Helvetica, "DejaVu Sans", sans-serif';
+// do PDF jen písma, která jsou všude: na iOS, Androidu i v prohlížečích na počítači
+const FONT = 'Helvetica, Arial, "Liberation Sans", "DejaVu Sans", sans-serif';
 const INK = '#111827';
 const MUTED = '#6b7280';
 const LINE = '#9ca3af';
@@ -185,7 +186,7 @@ function titleBlock(ctx, text) {
  * env: { createCanvas(w,h), loadImage(src) }
  */
 export async function renderPages(state, comp, env, { scale = 2 } = {}) {
-  const boards = comp?.boards ?? 8;
+  const boards = matchBoards(state, comp);
   const home = sortedLineup(state.home.lineup);
   const away = sortedLineup(state.away.lineup);
   const sum = totals(state, boards);

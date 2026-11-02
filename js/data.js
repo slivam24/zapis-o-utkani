@@ -1,5 +1,5 @@
-// Načítání soupisek a rozlosování. Soubor data/competitions.json se každý pátek obnovuje automaticky
-// (GitHub Actions). Aplikace si poslední stažená data pamatuje, takže funguje i bez internetu.
+// Načítání soupisek a rozlosování ze sdílených dat (data/competitions.json). Ta obnovuje úloha
+// na GitHubu. Aplikace si poslední stažená data pamatuje, takže funguje i bez internetu.
 import { loadCachedData, saveCachedData, loadUserComps } from './store.js';
 
 const URL = 'data/competitions.json';

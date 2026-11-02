@@ -40,7 +40,8 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font: 16px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  /* -apple-system první kvůli starším iOS, kde system-ui nemusí sednout */
+  font: 16px/1.45 -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   padding-bottom: env(safe-area-inset-bottom);
 }
 h2 { font-size: 1.15rem; margin: 0 0 .6rem; }
@@ -89,9 +90,16 @@ main { max-width: 980px; margin: 0 auto; padding: 1rem; outline: none; }
 label.field { display: block; font-size: .8rem; font-weight: 600; color: var(--muted); }
 label.field > span { display: block; margin-bottom: .25rem; }
 input[type=text], input[type=date], input[type=number], select, textarea {
-  width: 100%; font: inherit; color: var(--ink); background: var(--card);
+  width: 100%; max-width: 100%; font: inherit; font-size: 16px; color: var(--ink); background: var(--card);
   border: 1px solid var(--line); border-radius: 8px; padding: .6rem .7rem; min-height: 44px;
 }
+/* Safari na iOS kreslí datum po svém: bez tohohle text přetéká z rámečku ven. */
+input[type=date] {
+  -webkit-appearance: none; appearance: none; display: block; line-height: 1.2;
+  text-align: left; box-sizing: border-box; height: 44px;
+}
+input[type=date]::-webkit-date-and-time-value { text-align: left; margin: 0; }
+input[type=date]::-webkit-calendar-picker-indicator { margin-left: auto; }
 textarea { min-height: 140px; resize: vertical; }
 input:focus, select:focus, textarea:focus, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 
@@ -146,24 +154,56 @@ table.lineup input { min-height: 38px; padding: .3rem .5rem; }
 table.lineup td.b { width: 2rem; color: var(--muted); font-weight: 700; }
 table.lineup td.rt { width: 4.6rem; }
 
-/* výsledky */
-.board { display: grid; gap: .5rem; padding: .8rem; border: 1px solid var(--line); border-radius: 10px; margin-bottom: .6rem; background: var(--card); }
-.board .who { display: grid; grid-template-columns: 1fr auto 1fr; gap: .5rem; align-items: center; }
-.board .who .l { text-align: left; font-weight: 600; }
-.board .who .rr { text-align: right; font-weight: 600; }
-.board .who .bn { font-weight: 800; color: var(--muted); text-align: center; }
-.dot { display: inline-block; width: .8em; height: .8em; border-radius: 50%; border: 1.5px solid var(--ink); vertical-align: -.05em; margin: 0 .3rem; }
-.dot.w { background: #fff; } .dot.b { background: #111827; }
+/* výsledky: přehled utkání, do kterého se klepne pro zadání */
+.board-head { position: sticky; top: 3.1rem; z-index: 4; padding: .7rem .8rem; }
+.score-line { display: grid; grid-template-columns: 1fr auto 1fr; gap: .5rem; align-items: center; }
+.score-line .tname { font-weight: 700; font-size: .92rem; line-height: 1.15; }
+.score-line .tname.a { text-align: right; }
+.score { font-size: 1.9rem; font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.score.home { color: var(--ok); }
+.score.away { color: var(--err); }
+.score-note { margin-top: .35rem; font-size: .8rem; color: var(--muted); text-align: center; }
+
+.boards { list-style: none; margin: .6rem 0 .4rem; padding: 0; display: grid; gap: .35rem; }
+.brow { background: var(--card); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.brow.unset { border-style: dashed; }
+.bmain {
+  display: grid; grid-template-columns: 1.5rem minmax(0, 1fr) 4.3rem minmax(0, 1fr);
+  gap: .4rem; align-items: center; padding: .5rem .6rem; min-height: 52px; cursor: pointer;
+}
+.brow.open .bmain { background: var(--sel); }
+.bno { font-weight: 800; color: var(--muted); font-size: .9rem; text-align: center; }
+.side { display: grid; min-width: 0; }
+.side.a { text-align: right; }
+.side .nm { display: flex; align-items: center; gap: .32rem; min-width: 0; font-weight: 700; font-size: .95rem; }
+.side.a .nm { flex-direction: row-reverse; }
+.side .nm .t { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.side .elo { font-size: .76rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.side .dot { flex: 0 0 auto; }
+.rchip {
+  text-align: center; font-weight: 800; font-size: 1rem; border-radius: 8px; padding: .2rem 0;
+  background: var(--line); color: var(--ink); white-space: nowrap;
+}
+.rchip.h { background: var(--ok-bg); color: var(--ok); }
+.rchip.a { background: var(--err-bg); color: var(--err); }
+.rchip.d { background: var(--sel); color: var(--accent); }
+.rchip.k { background: var(--warn-bg); color: var(--warn); }
+.rchip.none { background: transparent; color: var(--muted); border: 1px dashed var(--line); font-weight: 600; }
+.bpick { padding: .5rem .6rem .6rem; border-top: 1px solid var(--line); display: grid; gap: .4rem; }
+.bauto {
+  padding: .4rem .6rem; border-top: 1px solid var(--line); font-size: .8rem;
+  color: var(--warn); background: var(--warn-bg); font-weight: 600; text-align: center;
+}
 .res { display: grid; grid-template-columns: repeat(3, 1fr); gap: .4rem; }
 .res button {
-  font: inherit; font-weight: 800; font-size: 1.05rem; min-height: 48px; border: 1px solid var(--line);
+  font: inherit; font-weight: 800; font-size: 1.05rem; min-height: 46px; border: 1px solid var(--line);
   background: var(--card); color: var(--ink); border-radius: 10px; cursor: pointer;
 }
 .res.k button { font-size: .85rem; min-height: 38px; font-weight: 700; color: var(--warn); }
 .res button.on { background: var(--accent); color: #fff; border-color: var(--accent); }
 .res.k button.on { background: var(--warn); border-color: var(--warn); color: #fff; }
-.auto { text-align: center; font-weight: 700; color: var(--warn); background: var(--warn-bg); border-radius: 8px; padding: .5rem; }
-.score { font-size: 2rem; font-weight: 800; text-align: center; }
+.dot { display: inline-block; width: .72em; height: .72em; border-radius: 50%; border: 1.5px solid var(--ink); }
+.dot.w { background: #fff; } .dot.b { background: #111827; }
 
 .issues { list-style: none; padding: 0; margin: 0 0 1rem; display: grid; gap: .4rem; }
 .issues li { padding: .55rem .8rem; border-radius: 8px; font-size: .92rem; }

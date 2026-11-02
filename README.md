@@ -32,9 +32,10 @@ Typy hráčů: **K** kapitán, **ZK** zástupce kapitána, **H** host, **V** vol
 
 ## Data (soupisky a rozlosování)
 
-Soubor `data/competitions.json` se **každý pátek automaticky aktualizuje** (GitHub Actions,
-`.github/workflows/update-data.yml`). Jde ho spustit i ručně: záložka **Actions → Aktualizace soupisek → Run workflow**.
-Ve výchozím stavu jsou v repozitáři soupisky Krajského přeboru z 2. 11. 2026.
+Soubor `data/competitions.json` drží soupisky a rozlosování soutěží ze `scripts/competitions.json`.
+Obnoví se spuštěním úlohy **Actions → Aktualizace soupisek → Run workflow** a sám po přidání soutěže
+z hlášení. Pravidelné spouštění nastavené není: soutěž si každý umí přidat přímo v aplikaci, takže
+stačí data obnovit, když je potřeba.
 
 Soutěže se nastavují v `scripts/competitions.json` (číslo turnaje na chess-results, počet šachovnic).
 
@@ -54,8 +55,8 @@ výsledků** nese družstva a soupisky, **Los družstev pro všechna kola** kola
 nezáleží, aplikace pozná podle obsahu, co je v kterém. Stačí i samotné soupisky, pak se jen nevyberou
 kola a družstva se zadají ručně; rozlosování jde nahrát kdykoli potom a doplní se k vybrané soutěži.
 
-Takto přidaná soutěž zůstává jen v tom prohlížeči. Aby ji v aplikaci měli všichni a obnovovala se
-sama každý pátek, dá se o ni požádat hlášením na GitHubu podle postupu níže.
+Takto přidaná soutěž zůstává jen v tom prohlížeči. Aby ji v aplikaci měli všichni, dá se
+o ni požádat hlášením na GitHubu podle postupu níže.
 
 **Proč to chodí přes stažení a nahrání, a ne přímo.** chess-results neposílá hlavičku
 `Access-Control-Allow-Origin` (ověřeno), takže prohlížeč aplikaci zakáže jeho stránku *přečíst*.

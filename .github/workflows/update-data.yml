@@ -1,9 +1,10 @@
 name: Aktualizace soupisek
 
+# Spouští se ručně (záložka Actions, tlačítko Run workflow) a sama po přidání soutěže z hlášení.
+# Pravidelné páteční spouštění bylo zrušeno: soutěž si každý umí přidat v aplikaci kdykoli,
+# takže stačí obnovit data, když je potřeba.
 on:
-  schedule:
-    - cron: "17 5 * * 5" # každý pátek ráno
-  workflow_dispatch: # jde spustit i ručně (záložka Actions)
+  workflow_dispatch:
 
 permissions:
   contents: write

@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   parseTypes, maxRestricted, minPlayers, fmtPoints, fmtDate, autoResult, boardResult,
-  setBoardResult, totals, newMatch, validate, restrictedCount, homeIsWhite, slug, defaultCaptain,
+  setBoardResult, totals, newMatch, validate, hasErrors, matchBoards, restrictedCount, homeIsWhite, slug, defaultCaptain,
   ratingColumns, dominantRatingKey, ratingSummary,
 } from '../js/logic.js';
 
@@ -100,16 +100,21 @@ test('hráči se řadí podle pořadí na soupisce, ne podle výběru', () => {
   assert.equal(s.results[1].h, 2);
 });
 
-test('kontrola: limit hostů a minimum hráčů', () => {
+test('limit hostů jen upozorní, nebrání vyplnění', () => {
   const s = match([1, 2, 3, 4, 5, 6, 7, 8], [1, 2, 3, 4, 5, 6, 7, 8], {
     homeTypes: { 1: ['H'], 2: ['V'], 3: ['C'], 4: ['H'] },
   });
-  const comp = { boards: 8 };
-  let issues = validate(s, comp);
-  assert.ok(issues.some((i) => i.level === 'error' && /Domácí: hostů/.test(i.text)));
-  s.home.lineup = s.home.lineup.slice(0, 3);
-  issues = validate(s, comp);
-  assert.ok(issues.some((i) => /nejméně 4/.test(i.text)));
+  for (let b = 1; b <= 8; b++) setBoardResult(s, b, 'D');
+  const issues = validate(s, { boards: 8 });
+  const hit = issues.find((i) => /Domácí: hostů/.test(i.text));
+  assert.ok(hit, 'upozornění musí být');
+  assert.equal(hit.level, 'warn', 'je to upozornění, ne chyba');
+  assert.equal(hasErrors(issues), false, 'jinak úplný zápis nesmí být kvůli limitu blokovaný');
+});
+
+test('kontrola: minimum hráčů v sestavě', () => {
+  const s = match([1, 2, 3], [1, 2, 3, 4, 5, 6, 7, 8]);
+  assert.ok(validate(s, { boards: 8 }).some((i) => i.level === 'error' && /nejméně 4/.test(i.text)));
 });
 
 test('kontrola: 5 šachovnic, limit 2 a minimum 3', () => {
@@ -160,4 +165,27 @@ test('výpis ratingů hráče', () => {
   assert.equal(ratingSummary({ rtg: 2003, fide: null, nat: null }), '2003');
   assert.equal(ratingSummary({ rtg: null, fide: 1920, nat: 1950 }), 'FIDE 1920 · Nár. 1950');
   assert.equal(ratingSummary({ rtg: null, fide: null, nat: null }), '');
+});
+
+test('počet šachovnic: ze soutěže, ale zápis ho může přebít', () => {
+  const s = match([1, 2, 3, 4, 5], [1, 2, 3, 4, 5]);
+  assert.equal(matchBoards(s, { boards: 8 }), 8, 'bez vlastní hodnoty platí soutěž');
+  s.boards = 5;
+  assert.equal(matchBoards(s, { boards: 8 }), 5, 'vlastní hodnota má přednost');
+  s.boards = null;
+  assert.equal(matchBoards(s, { boards: 5 }), 5);
+  s.boards = 0;
+  assert.equal(matchBoards(s, { boards: 8 }), 8, 'nesmysl se ignoruje');
+  s.boards = 99;
+  assert.equal(matchBoards(s, { boards: 8 }), 8);
+  assert.equal(matchBoards({}, null), 8, 'bez soutěže se předpokládá 8');
+});
+
+test('kontrola počítá s přebitým počtem šachovnic', () => {
+  const s = match([1, 2, 3], [1, 2, 3]);
+  s.boards = 5;
+  // 3 hráči jsou při 5 šachovnicích v pořádku (minimum je 3), při 8 ne
+  assert.equal(validate(s, { boards: 8 }).some((i) => /nejméně/.test(i.text)), false);
+  s.boards = null;
+  assert.ok(validate(s, { boards: 8 }).some((i) => /nejméně 4/.test(i.text)));
 });

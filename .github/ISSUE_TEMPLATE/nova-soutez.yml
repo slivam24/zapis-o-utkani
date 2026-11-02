@@ -5,8 +5,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        Vyplněním se soutěž přidá do aplikace, obvykle do pár minut. Soupisky se pak
-        obnovují automaticky každý pátek.
+        Vyplněním se soutěž přidá do aplikace, obvykle do pár minut, a budou ji mít všichni.
+        Soutěž si ale můžeš přidat i sám přímo v aplikaci tlačítkem Přidat soutěž.
 
         Potřebuju jen odkaz na turnaj na chess-results.com a počet šachovnic.
         Název soutěže a sezónu si program přečte ze stránky sám.
