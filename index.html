@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Zápis o utkání</title>
+  <meta name="description" content="Elektronický zápis o konaném šachovém utkání s načtením soupisek z chess-results.">
+  <meta name="theme-color" content="#1f3a5f">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand"><span class="logo" aria-hidden="true">♞</span> Zápis o utkání</div>
+    <div class="top-right">
+      <span class="data-status" id="dataStatus"></span>
+      <button id="btnRefresh" class="btn small ghost" type="button" title="Stáhnout aktuální soupisky">Obnovit soupisky</button>
+    </div>
+  </header>
+  <nav class="steps" id="steps" aria-label="Kroky zápisu"></nav>
+  <main id="view" tabindex="-1"></main>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript>Aplikace potřebuje zapnutý JavaScript.</noscript>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

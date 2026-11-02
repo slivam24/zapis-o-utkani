@@ -1,0 +1,38 @@
+name: Aktualizace soupisek
+
+on:
+  schedule:
+    - cron: "17 5 * * 5" # každý pátek ráno
+  workflow_dispatch: # jde spustit i ručně (záložka Actions)
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r scripts/requirements.txt
+      - run: python scripts/fetch_data.py --save-html raw
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stazene-stranky
+          path: raw
+          retention-days: 14
+          if-no-files-found: ignore
+      - name: Uložit změny
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/competitions.json
+          if git diff --cached --quiet; then
+            echo "Beze změn."
+          else
+            git commit -m "Aktualizace soupisek z chess-results"
+            git push
+          fi
