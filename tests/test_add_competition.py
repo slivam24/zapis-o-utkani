@@ -100,10 +100,32 @@ class SeasonTests(unittest.TestCase):
         self.assertEqual(ac.split_season("Extraliga 2026/2027"), ("Extraliga", "2026/2027"))
         self.assertEqual(ac.split_season("Turnaj bez sezóny"), ("Turnaj bez sezóny", None))
 
+    def test_two_digit_season(self):
+        self.assertEqual(ac.split_season("Krajský přebor KŠSV 25/26"), ("Krajský přebor KŠSV", "2025/2026"))
+
     def test_title_from_page(self):
-        html = """<html><body><h2>Krajský přebor ÚKŠS 2026/2027</h2>
-        <h3>Los družstev pro všechna kola</h3></body></html>"""
+        html = """<html><head><title>Chess-Results Server Chess-results.com - Krajský přebor ÚKŠS 2026/2027</title></head>
+        <body><h2>Krajský přebor ÚKŠS 2026/2027</h2><h3>Los družstev pro všechna kola</h3></body></html>"""
         self.assertEqual(ac.tournament_title(html), "Krajský přebor ÚKŠS 2026/2027")
+
+    def test_server_notice_is_not_a_title(self):
+        """U starších turnajů je nad názvem upozornění serveru, to se nesmí vzít jako název."""
+        notice = (
+            "Poznámka: Kvůli redukci zatížení serveru denním skenováním všech odkazů "
+            "(denně 100 000 přístupu a více) a vyhledávačů typu Google, Yahoo a Co, všechny odkazy "
+            "turnajů starší než dva týdny (od data ukončení turnaje) jsou zobrazeny po kliknutí na tlačítko:"
+        )
+        html = f"""<html><head><title>Chess-Results Server Chess-results.com - Krajský přebor KŠSV 25/26</title></head>
+        <body><h2>{notice}</h2><h2>Krajský přebor KŠSV 25/26</h2></body></html>"""
+        self.assertEqual(ac.tournament_title(html), "Krajský přebor KŠSV 25/26")
+
+    def test_notice_only_falls_back_to_heading(self):
+        html = """<html><head><title>Chess-Results Server Chess-results.com</title></head>
+        <body><h2>Poznámka: Kvůli redukci zatížení serveru</h2><h2>1. liga západ 2026/2027</h2></body></html>"""
+        self.assertEqual(ac.tournament_title(html), "1. liga západ 2026/2027")
+
+    def test_no_title_at_all(self):
+        self.assertEqual(ac.tournament_title("<html><body><p>nic</p></body></html>"), "")
 
     def test_shorten(self):
         self.assertEqual(ac.shorten("Krajský přebor ÚKŠS"), "Krajský přebor")

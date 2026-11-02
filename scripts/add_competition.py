@@ -34,8 +34,18 @@ MAX_COMPETITIONS = 60
 MIN_BOARDS, MAX_BOARDS = 2, 16
 
 URL_RE = re.compile(r"^https?://(?:[a-z0-9-]+\.)?chess-results\.com/tnr(\d{1,9})\.aspx", re.I)
-SEASON_RE = re.compile(r"\b(20\d{2})\s*/\s*(20\d{2}|\d{2})\s*$")
+# Sezóna na konci názvu: "2026/2027", "2026/27" i "25/26".
+SEASON_RE = re.compile(r"\b(20\d{2}|\d{2})\s*/\s*(20\d{2}|\d{2})\s*$")
 NO_RESPONSE = {"_no response_", "_bez odpovědi_", "", "-"}
+
+# Nadpisy, které nejsou názvem turnaje: názvy zobrazených seznamů a upozornění serveru
+# ("Poznámka: Kvůli redukci zatížení serveru ..." u turnajů starších dvou týdnů).
+NOT_A_TITLE_RE = re.compile(
+    r"^(los|sestava|křížová|startovní|abecední|herní|tabulka|statistika|poznámka|note|hinweis|remark)\b",
+    re.I,
+)
+TITLE_PREFIX_RE = re.compile(r"^.*?chess-results\.com\s*-\s*", re.I)
+MAX_NAME = 120
 
 
 class Refused(Exception):
@@ -106,27 +116,36 @@ def parse_issue_body(body: str) -> dict:
 
 
 def split_season(title: str) -> tuple[str, str | None]:
-    """'Krajský přebor III. třídy ÚKŠS 2026/27' -> ('Krajský přebor III. třídy ÚKŠS', '2026/2027')."""
+    """'Krajský přebor ÚKŠS 2026/27' -> ('Krajský přebor ÚKŠS', '2026/2027'), zvládne i '25/26'."""
     t = fd.clean(title)
     m = SEASON_RE.search(t)
     if not m:
         return t, None
     start, end = m.group(1), m.group(2)
+    if len(start) == 2:
+        start = f"20{start}"
     if len(end) == 2:
         end = start[:2] + end
     return fd.clean(t[: m.start()]).rstrip(",-–"), f"{start}/{end}"
 
 
 def tournament_title(html: str) -> str:
+    """Název turnaje. Přednost má <title> stránky, nadpisy jsou záloha.
+
+    Nadpis není spolehlivý: u turnajů starších dvou týdnů je nad ním upozornění serveru
+    a u jednotlivých seznamů nadpis s názvem seznamu.
+    """
     soup = BeautifulSoup(html, "html.parser")
+    tag = soup.find("title")
+    if tag:
+        text = TITLE_PREFIX_RE.sub("", fd.clean(tag.get_text(" ")))
+        if text and not re.match(r"^chess-results", text, re.I):
+            return text[:MAX_NAME]
     for tag in soup.find_all(["h1", "h2", "h3"]):
         text = fd.clean(tag.get_text(" "))
-        # druhý nadpis bývá název zobrazeného seznamu, ne turnaje
-        if text and not re.match(r"^(los|sestava|křížová|startovní|abecední|herní|tabulka)", text, re.I):
+        if text and len(text) <= MAX_NAME and not NOT_A_TITLE_RE.match(text):
             return text
-    title = soup.find("title")
-    text = fd.clean(title.get_text(" ")) if title else ""
-    return re.sub(r"^.*?chess-results\.com\s*-\s*", "", text, flags=re.I)
+    return ""
 
 
 def shorten(name: str) -> str:
@@ -149,7 +168,10 @@ def probe(tnr: int) -> dict:
             "Na stránce turnaje nejsou soupisky družstev. "
             "Vypadá to na turnaj jednotlivců, ten aplikace nepodporuje."
         )
-    name, season = split_season(tournament_title(html))
+    title = tournament_title(html)
+    if not title:
+        raise Refused("Ze stránky se nepodařilo přečíst název soutěže. Napiš ho prosím do hlášení ručně.")
+    name, season = split_season(title)
     return {
         "name": name or f"Turnaj {tnr}",
         "season": season,
@@ -230,7 +252,8 @@ def main() -> int:
         f"Soupisky se teď stáhnou a soutěž se objeví v nabídce v aplikaci. "
         f"Dál se obnovují automaticky každý pátek."
     )
-    print(f"::notice::pridano {entry['id']}")
+    # do protokolu úlohy, ne do odpovědi v hlášení
+    print(f"::notice::pridano {entry['id']}", file=sys.stderr)
     return 0
 
 
