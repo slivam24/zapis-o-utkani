@@ -102,7 +102,7 @@ parser v `scripts/fetch_data.py`. Soupisky jde vždy doplnit i ručně přímo v
 
 ```bash
 npm install                 # jen linkedom, pro parsování HTML v Node
-npm test                    # 51 testů: logika zápisu, parser, čtečka .xlsx, přidávání soutěží
+npm test                    # 52 testů: logika zápisu, parser, čtečka .xlsx, přidávání soutěží
 npm run serve               # lokální spuštění: http://localhost:8080
 ```
 
