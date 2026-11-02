@@ -35,7 +35,11 @@ PLAIN_RTG_IS = "nat"
 
 TEAM_RE = re.compile(r"^\s*(\d+)\.\s+(.*)\s+\((?:Rtg|Elo|Ø)[^)]*\)\s*(?:Kapit\S*:\s*(.*))?$", re.I | re.S)
 TYPE_RE = re.compile(r"^(?:Z|K|ZK|H|V|C)(?:\s*,\s*(?:Z|K|ZK|H|V|C))*$")
-ROUND_RE = re.compile(r"(?:Kolo|Round|Runde)\s*\.?\s*(\d+)", re.I)
+# Hlavička kola na chess-results: "1. Kolo Datum kola 2026/10/18 Hodina 10:00".
+# Číslo bývá před slovem Kolo, u jiných jazyků za ním, proto dva výrazy.
+ROUND_RE = re.compile(r"^\s*(\d{1,2})\s*\.\s*(?:kolo|round|runde|rd)\b", re.I)
+ROUND_ALT_RE = re.compile(r"^\s*(?:kolo|round|runde)\s+(\d{1,2})\b", re.I)
+TIME_RE = re.compile(r"\b(\d{1,2}):(\d{2})\b")
 DATE_RE = re.compile(r"(\d{4})[/.\-](\d{1,2})[/.\-](\d{1,2})|(\d{1,2})\.\s?(\d{1,2})\.\s?(\d{4})")
 
 
@@ -191,6 +195,17 @@ def parse_date(text: str) -> str | None:
         return None
 
 
+def round_header(nonempty: list[str]) -> re.Match | None:
+    """Řádek je hlavička kola jen tehdy, má-li jedinou krátkou buňku se správným tvarem.
+
+    Tím se vyloučí navigační řádek 'Nasazení hráčů | Kolo.1' i vnořené tabulky,
+    v nichž je text celé stránky v jedné buňce.
+    """
+    if len(nonempty) != 1 or len(nonempty[0]) > 120:
+        return None
+    return ROUND_RE.match(nonempty[0]) or ROUND_ALT_RE.match(nonempty[0])
+
+
 def parse_rounds(html: str, team_names: list[str]) -> list[dict]:
     by_norm = {norm(n): n for n in team_names}
     soup = BeautifulSoup(html, "html.parser")
@@ -202,14 +217,26 @@ def parse_rounds(html: str, team_names: list[str]) -> list[dict]:
             continue
         cells = [clean(td.get_text(" ")) for td in tds]
         nonempty = [c for c in cells if c]
-        text = " ".join(nonempty)
-        found = [by_norm[norm(c)] for c in nonempty if norm(c) in by_norm]
-        rm = ROUND_RE.search(text)
-        if rm and len(nonempty) <= 3 and not found:
-            cur = {"no": int(rm.group(1)), "date": parse_date(text), "matches": []}
+        if not nonempty:
+            continue
+
+        rm = round_header(nonempty)
+        if rm:
+            text = nonempty[0]
+            tm = TIME_RE.search(text)
+            cur = {
+                "no": int(rm.group(1)),
+                "date": parse_date(text),
+                "time": f"{int(tm.group(1)):02d}:{tm.group(2)}" if tm else None,
+                "matches": [],
+            }
             rounds.append(cur)
             continue
-        if cur is not None and len(found) >= 2:
+
+        if cur is None:
+            continue
+        found = [by_norm[norm(c)] for c in cells if norm(c) in by_norm]
+        if len(found) >= 2:
             cur["matches"].append({"home": found[0], "away": found[1]})
     return [r for r in rounds if r["matches"]]
 

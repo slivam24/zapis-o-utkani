@@ -32,16 +32,41 @@ class RosterTests(unittest.TestCase):
         self.assertEqual(self.teams[1]["players"][0]["types"], ["V"])
 
 
+NAMES = [
+    'SPORTIS Svádov-Olšinky "B"',
+    'TJ Libouchec "B"',
+    'ŠK Teplice "C"',
+    "Teplice Chess Club \"C\"",
+    'SK Děčín "D"',
+    "KŠ Štětí",
+]
+
+
 class RoundTests(unittest.TestCase):
-    def test_rounds(self):
-        names = ['ŠO TJ Tatran Podbořany "A"', "Šachy Povrly", 'ŠK Louny "A"', 'ŠK Slavoj Litoměřice "D"']
-        rounds = fd.parse_rounds((FIX / "rounds.html").read_text(encoding="utf-8"), names)
-        self.assertEqual([r["no"] for r in rounds], [1, 2])
-        self.assertEqual(rounds[0]["date"], "2026-10-11")
-        self.assertEqual(rounds[1]["date"], "2026-10-18")
-        self.assertEqual(rounds[0]["matches"][0], {"home": 'ŠO TJ Tatran Podbořany "A"', "away": "Šachy Povrly"})
-        self.assertEqual(len(rounds[0]["matches"]), 2)
-        self.assertEqual(rounds[1]["matches"][0]["home"], "Šachy Povrly")
+    def setUp(self):
+        self.rounds = fd.parse_rounds((FIX / "rounds.html").read_text(encoding="utf-8"), NAMES)
+
+    def test_rounds_split(self):
+        """Kola se musí rozdělit, ne slít do jednoho."""
+        self.assertEqual([r["no"] for r in self.rounds], [1, 2, 3])
+        self.assertEqual([len(r["matches"]) for r in self.rounds], [2, 2, 1])
+
+    def test_dates(self):
+        self.assertEqual(self.rounds[0]["date"], "2026-10-18")
+        self.assertEqual(self.rounds[1]["date"], "2026-11-08")
+        self.assertEqual(self.rounds[2]["date"], "2026-11-22")
+
+    def test_pairs_order(self):
+        self.assertEqual(
+            self.rounds[0]["matches"][0],
+            {"home": 'SPORTIS Svádov-Olšinky "B"', "away": 'TJ Libouchec "B"'},
+        )
+        self.assertEqual(self.rounds[1]["matches"][0]["home"], 'TJ Libouchec "B"')
+
+    def test_nav_link_is_not_a_round(self):
+        """Odkaz 'Kolo.1' v navigaci nesmí vytvořit kolo."""
+        self.assertTrue(all(r["matches"] for r in self.rounds))
+        self.assertEqual(len(self.rounds), 3)
 
 
 class HelperTests(unittest.TestCase):
