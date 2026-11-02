@@ -33,9 +33,13 @@ Typy hráčů: **K** kapitán, **ZK** zástupce kapitána, **H** host, **V** vol
 ## Data (soupisky a rozlosování)
 
 Soubor `data/competitions.json` drží soupisky a rozlosování soutěží ze `scripts/competitions.json`.
-Obnoví se spuštěním úlohy **Actions → Aktualizace soupisek → Run workflow** a sám po přidání soutěže
-z hlášení. Pravidelné spouštění nastavené není: soutěž si každý umí přidat přímo v aplikaci, takže
-stačí data obnovit, když je potřeba.
+Obnoví se sám **každý pátek odpoledne** (úloha **Aktualizace soupisek**), po přidání soutěže z hlášení
+a kdykoli ručně přes **Actions → Aktualizace soupisek → Run workflow**. Nový soubor se uloží jen tehdy,
+když se soupisky nebo rozlosování opravdu změnily. V aplikaci se pak projeví po otevření s internetem
+nebo tlačítkem pro obnovení dat.
+
+GitHub vypíná plánované úlohy v repozitáři, kde se 60 dní nic nezměnilo. Pak stačí úlohu v záložce
+Actions znovu povolit (**Enable workflow**).
 
 Soutěže se nastavují v `scripts/competitions.json` (číslo turnaje na chess-results, počet šachovnic).
 

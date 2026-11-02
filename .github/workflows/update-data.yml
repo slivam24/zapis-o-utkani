@@ -1,9 +1,12 @@
 name: Aktualizace soupisek
 
-# Spouští se ručně (záložka Actions, tlačítko Run workflow) a sama po přidání soutěže z hlášení.
-# Pravidelné páteční spouštění bylo zrušeno: soutěž si každý umí přidat v aplikaci kdykoli,
-# takže stačí obnovit data, když je potřeba.
+# Spouští se sama každý pátek, ručně (záložka Actions, tlačítko Run workflow) a po přidání
+# soutěže z hlášení. Soupisky se mění nejvýš jednou za dva týdny, páteční stažení stačí.
+# Čas je v UTC: 15:23 UTC je 16:23 v zimě a 17:23 v létě. Minuta mimo celou hodinu je schválně,
+# úlohy plánované na :00 GitHub často spouští se zpožděním.
 on:
+  schedule:
+    - cron: "23 15 * * 5"
   workflow_dispatch:
 
 permissions:
