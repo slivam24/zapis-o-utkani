@@ -8,8 +8,9 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { parseRosters, parseRounds } from '../js/parse.js';
-import { fetchPage, toDocument, sleep } from './chess_results.mjs';
+import { parseRosters, parseRounds, parseRostersFromGrid, parseRoundsFromGrid } from '../js/parse.js';
+import { xlsxToGrid } from '../js/xlsx.js';
+import { fetchPage, fetchExport, toDocument, sleep } from './chess_results.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CONFIG = path.join(ROOT, 'scripts', 'competitions.json');
@@ -68,20 +69,45 @@ async function main() {
     console.log(`${c.short} (tnr${c.tnr})`);
     let teams = [];
     let rounds = [];
+    const sources = [];
+    const raw = saveHtml ? path.resolve(saveHtml) : null;
     try {
-      const rosterHtml = await fetchPage(c.tnr, 8);
-      if (saveHtml) await fs.writeFile(path.join(path.resolve(saveHtml), `${c.id}_art8.html`), rosterHtml);
-      teams = parseRosters(toDocument(rosterHtml)).filter((t) => t.players.length);
+      // Přednost má export do Excelu: je to stabilnější rozhraní než stránka a desetkrát menší
+      // přenos. Když export nevyjde, čte se stránka jako dřív.
+      const rosterXlsx = await fetchExport(c.tnr, 8);
+      if (rosterXlsx) {
+        if (raw) await fs.writeFile(path.join(raw, `${c.id}_art8.xlsx`), Buffer.from(rosterXlsx));
+        teams = parseRostersFromGrid(await xlsxToGrid(rosterXlsx)).filter((t) => t.players.length);
+        if (teams.length >= 2) sources.push('soupisky: export');
+      }
+      if (teams.length < 2) {
+        const rosterHtml = await fetchPage(c.tnr, 8);
+        if (raw) await fs.writeFile(path.join(raw, `${c.id}_art8.html`), rosterHtml);
+        teams = parseRosters(toDocument(rosterHtml)).filter((t) => t.players.length);
+        if (teams.length >= 2) sources.push('soupisky: stránka');
+      }
       await sleep(2000);
+
       if (teams.length >= 2) {
-        const drawHtml = await fetchPage(c.tnr, 2);
-        if (saveHtml) await fs.writeFile(path.join(path.resolve(saveHtml), `${c.id}_art2.html`), drawHtml);
-        rounds = parseRounds(toDocument(drawHtml), teams.map((t) => t.name));
+        const names = teams.map((t) => t.name);
+        const drawXlsx = await fetchExport(c.tnr, 2);
+        if (drawXlsx) {
+          if (raw) await fs.writeFile(path.join(raw, `${c.id}_art2.xlsx`), Buffer.from(drawXlsx));
+          rounds = parseRoundsFromGrid(await xlsxToGrid(drawXlsx), names);
+          if (rounds.length) sources.push('rozlosování: export');
+        }
+        if (!rounds.length) {
+          const drawHtml = await fetchPage(c.tnr, 2);
+          if (raw) await fs.writeFile(path.join(raw, `${c.id}_art2.html`), drawHtml);
+          rounds = parseRounds(toDocument(drawHtml), names);
+          if (rounds.length) sources.push('rozlosování: stránka');
+        }
         await sleep(2000);
       }
     } catch (e) {
       console.error(`  ! ${e.message}`);
     }
+    if (sources.length) console.log(`  zdroj: ${sources.join(', ')}`);
 
     if (teams.length < 2) {
       console.error('  ! soupisky nenalezeny, ponechávám předchozí data');

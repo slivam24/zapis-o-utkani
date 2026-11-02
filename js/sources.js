@@ -5,7 +5,7 @@
 // služby, v nastavení aplikace jde zadat vlastní adresu (viz worker/README.md).
 import {
   parseRosters, parseRounds, parseRostersFromGrid, parseRoundsFromGrid, titleFromGrid, gridKind,
-  splitSeason, tournamentTitle, tournamentNumber, shorten, pageUrl, clean,
+  splitSeason, tournamentTitle, tournamentNumber, shorten, pageUrl, exportUrl, clean,
 } from './parse.js';
 import { xlsxToGrid } from './xlsx.js';
 
@@ -22,12 +22,19 @@ export function proxyUrl(template, target) {
     : template.replace(/\/?$/, '/') + target;
 }
 
-async function fetchText(url) {
+async function fetchVia(url, binary) {
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
   try {
     const res = await fetch(url, { signal: ctrl.signal, redirect: 'follow' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    if (binary) {
+      const buf = await res.arrayBuffer();
+      const head = new Uint8Array(buf.slice(0, 2));
+      // prostředník, který by soubor překódoval na text, by ZIP rozbil, proto kontrola hlavičky
+      if (head[0] !== 0x50 || head[1] !== 0x4b) throw new Error('odpověď není soubor .xlsx');
+      return buf;
+    }
     const text = await res.text();
     if (!/<\s*(table|html)/i.test(text)) throw new Error('odpověď není stránka');
     return text;
@@ -36,15 +43,14 @@ async function fetchText(url) {
   }
 }
 
-/** Stáhne stránku turnaje přes první prostředníka, který odpoví. */
-export async function fetchPage(tnr, art, proxies) {
-  const target = pageUrl(tnr, art);
+/** Stáhne seznam z turnaje přes prvního prostředníka, který odpoví. */
+async function fetchThrough(target, proxies, binary) {
   const list = (proxies ?? []).filter(Boolean);
   if (!list.length) throw new Error('Není nastavená žádná adresa pro načítání.');
   const problems = [];
   for (const tpl of list) {
     try {
-      return await fetchText(proxyUrl(tpl, target));
+      return await fetchVia(proxyUrl(tpl, target), binary);
     } catch (e) {
       problems.push(`${new URL(proxyUrl(tpl, target)).host}: ${e.name === 'AbortError' ? 'vypršel čas' : e.message}`);
     }
@@ -52,18 +58,35 @@ export async function fetchPage(tnr, art, proxies) {
   throw new Error(`Načtení se nepovedlo. ${problems.join('; ')}`);
 }
 
+export const fetchPage = (tnr, art, proxies) => fetchThrough(pageUrl(tnr, art), proxies, false);
+
+/**
+ * Stáhne seznam turnaje, přednostně jako export do Excelu.
+ * Export je zhruba desetkrát menší než stránka, takže projde i tam, kde velká stránka vyprší.
+ * Vrací { grid } u exportu nebo { html } u stránky.
+ */
+export async function fetchList(tnr, art, proxies) {
+  try {
+    const buf = await fetchThrough(exportUrl(tnr, art), proxies, true);
+    return { grid: await xlsxToGrid(buf) };
+  } catch {
+    return { html: await fetchPage(tnr, art, proxies) };
+  }
+}
+
 const toDoc = (html) => new DOMParser().parseFromString(html, 'text/html');
 
-/** Soutěž ze staženého nebo nahraného HTML soupisek, případně i rozlosování. */
-export function buildCompetition({ tnr, boards, short, rosterHtml, drawHtml, season }) {
-  const doc = toDoc(rosterHtml);
-  const teams = parseRosters(doc).filter((t) => t.players.length);
+/** Soutěž ze staženého seznamu, ať už přišel jako export do Excelu, nebo jako stránka. */
+export function buildCompetition({ tnr, boards, short, roster, draw, season }) {
+  const teams = (roster.grid ? parseRostersFromGrid(roster.grid) : parseRosters(toDoc(roster.html)))
+    .filter((t) => t.players.length);
   if (teams.length < 2) {
-    throw new Error('Na stránce nejsou soupisky družstev. Vypadá to na turnaj jednotlivců nebo na jinou stránku.');
+    throw new Error('Nenašel jsem soupisky družstev. Vypadá to na turnaj jednotlivců nebo na jinou stránku.');
   }
-  const title = tournamentTitle(doc);
+  const title = roster.grid ? titleFromGrid(roster.grid) : tournamentTitle(toDoc(roster.html));
   const [name, parsedSeason] = splitSeason(title);
-  const rounds = drawHtml ? parseRounds(toDoc(drawHtml), teams.map((t) => t.name)) : [];
+  const names = teams.map((t) => t.name);
+  const rounds = !draw ? [] : draw.grid ? parseRoundsFromGrid(draw.grid, names) : parseRounds(toDoc(draw.html), names);
   return {
     id: `t${tnr}`,
     short: short || shorten(name),
@@ -90,15 +113,15 @@ export async function loadCompetition({ url, boards, short, proxies, season }, o
     throw new Error('Odkaz nevede na turnaj na chess-results.com. Čekám adresu ve tvaru https://chess-results.com/tnr1507857.aspx');
   }
   onStep('Stahuju soupisky…');
-  const rosterHtml = await fetchPage(tnr, 8, proxies);
-  let drawHtml = null;
+  const roster = await fetchList(tnr, 8, proxies);
+  let draw = null;
   try {
     onStep('Stahuju rozlosování…');
-    drawHtml = await fetchPage(tnr, 2, proxies);
+    draw = await fetchList(tnr, 2, proxies);
   } catch {
     onStep('Rozlosování se nepodařilo načíst, družstva půjdou vybrat ručně.');
   }
-  return buildCompetition({ tnr, boards, short, rosterHtml, drawHtml, season });
+  return buildCompetition({ tnr, boards, short, roster, draw, season });
 }
 
 /** Krátké stabilní id pro soutěž nahranou ze souboru, u které není známé číslo turnaje. */

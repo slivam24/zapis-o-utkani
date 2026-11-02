@@ -219,3 +219,12 @@ test('unzip čte jen vyžádané soubory', async () => {
   const files = await unzip(xlsxOf(ROSTER_ROWS), ['xl/sharedStrings.xml']);
   assert.deepEqual([...files.keys()], ['xl/sharedStrings.xml']);
 });
+
+test('adresa exportu do Excelu', async () => {
+  const { exportUrl, pageUrl } = await import('../js/parse.js');
+  assert.equal(
+    exportUrl(1464172, 8),
+    'https://chess-results.com/tnr1464172.aspx?lan=5&zeilen=0&art=8&prt=4&excel=2010',
+  );
+  assert.equal(pageUrl(1464172, 2), 'https://chess-results.com/tnr1464172.aspx?lan=5&art=2&zeilen=0');
+});

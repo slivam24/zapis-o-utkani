@@ -284,3 +284,7 @@ export function tournamentNumber(raw) {
 }
 
 export const pageUrl = (tnr, art) => `https://chess-results.com/tnr${tnr}.aspx?lan=5&art=${art}&zeilen=0`;
+
+/** Adresa exportu téhož seznamu do Excelu. Je to stabilnější rozhraní než stránka a menší přenos. */
+export const exportUrl = (tnr, art) =>
+  `https://chess-results.com/tnr${tnr}.aspx?lan=5&zeilen=0&art=${art}&prt=4&excel=2010`;
