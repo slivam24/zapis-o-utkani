@@ -88,7 +88,7 @@ a nesmyslný počet šachovnic. Nevhodný záznam se smaže řádkem v `scripts/
 
 Kdyby se stránka chess-results změnila a stahování přestalo fungovat, původní data zůstanou zachovaná.
 Stažené stránky se uloží jako příloha běhu v záložce Actions (artefakt `stazene-stranky`), podle nich jde upravit
-parser v `scripts/fetch_data.mjs`. Soupisky jde vždy doplnit i ručně přímo v aplikaci.
+parser v `js/parse.js`. Soupisky jde vždy doplnit i ručně přímo v aplikaci.
 
 ## Nasazení (GitHub Pages)
 
