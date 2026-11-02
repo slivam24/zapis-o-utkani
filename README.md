@@ -38,6 +38,16 @@ Ve výchozím stavu jsou v repozitáři soupisky Krajského přeboru z 2. 11. 20
 
 Soutěže se nastavují v `scripts/competitions.json` (číslo turnaje na chess-results, počet šachovnic).
 
+### Přidání vlastní soutěže
+
+Kdokoli může přidat soutěž družstev z chess-results.com bez zásahu do kódu: v záložce **Issues** založí
+hlášení ze šablony **Přidat soutěž**, vyplní odkaz na turnaj a počet šachovnic. Úloha
+`.github/workflows/nova-soutez.yml` odkaz ověří, přečte ze stránky název soutěže a sezónu, soutěž přidá
+do nastavení, stáhne její soupisky a do hlášení odpoví. Do aplikace se soutěž dostane během pár minut.
+
+Odmítne odkaz mimo chess-results.com, turnaj jednotlivců, soutěž, která už v seznamu je,
+a nesmyslný počet šachovnic. Nevhodný záznam se smaže řádkem v `scripts/competitions.json`.
+
 Kdyby se stránka chess-results změnila a stahování přestalo fungovat, původní data zůstanou zachovaná.
 Stažené stránky se uloží jako příloha běhu v záložce Actions (artefakt `stazene-stranky`), podle nich jde upravit
 parser v `scripts/fetch_data.py`. Soupisky jde vždy doplnit i ručně přímo v aplikaci.
@@ -53,7 +63,7 @@ parser v `scripts/fetch_data.py`. Soupisky jde vždy doplnit i ručně přímo v
 ```bash
 npm test                                  # logika zápisu (Node 20+)
 pip install -r scripts/requirements.txt
-python -m unittest tests/test_fetch_data.py   # parser chess-results
+python -m unittest discover -s tests -p "test_*.py"   # parser a přidávání soutěží
 python3 -m http.server 8080               # lokální spuštění: http://localhost:8080
 ```
 

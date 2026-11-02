@@ -1,0 +1,49 @@
+name: Přidat soutěž
+description: Přidá soutěž družstev z chess-results.com do aplikace Zápis o utkání.
+title: "Nová soutěž"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Vyplněním se soutěž přidá do aplikace, obvykle do pár minut. Soupisky se pak
+        obnovují automaticky každý pátek.
+
+        Potřebuju jen odkaz na turnaj na chess-results.com a počet šachovnic.
+        Název soutěže a sezónu si program přečte ze stránky sám.
+  - type: input
+    id: url
+    attributes:
+      label: Odkaz na turnaj
+      description: Adresa soutěže na chess-results.com. Stačí kterákoli stránka toho turnaje.
+      placeholder: https://chess-results.com/tnr1507857.aspx?lan=5
+    validations:
+      required: true
+  - type: dropdown
+    id: boards
+    attributes:
+      label: Počet šachovnic
+      description: Kolik hráčů nastupuje za družstvo v jednom utkání.
+      options:
+        - "8"
+        - "5"
+        - "6"
+        - "4"
+        - "10"
+        - "12"
+    validations:
+      required: true
+  - type: input
+    id: short
+    attributes:
+      label: Zkratka soutěže (nepovinné)
+      description: Krátký název do nabídky v aplikaci. Když nevyplníš, použije se zkrácený název ze stránky.
+      placeholder: KP II A
+    validations:
+      required: false
+  - type: checkboxes
+    id: potvrzeni
+    attributes:
+      label: Potvrzení
+      options:
+        - label: Jde o soutěž družstev (ne o turnaj jednotlivců) a odkaz vede na chess-results.com.
+          required: true

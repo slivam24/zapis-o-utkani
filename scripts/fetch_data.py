@@ -246,6 +246,11 @@ def parse_rounds(html: str, team_names: list[str]) -> list[dict]:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--save-html", metavar="DIR", help="uloží stažené stránky (pro ladění)")
+    ap.add_argument(
+        "--only",
+        metavar="ID",
+        help="stáhne jen tuhle soutěž, u ostatních ponechá dosavadní data (šetří dotazy na server)",
+    )
     args = ap.parse_args()
 
     cfg = json.loads(CONFIG.read_text(encoding="utf-8"))
@@ -262,13 +267,23 @@ def main() -> int:
     session = requests.Session()
     session.headers.update({"User-Agent": UA, "Accept-Language": "cs,en;q=0.7"})
 
+    if args.only and not any(c["id"] == args.only for c in cfg["competitions"]):
+        print(f"Soutěž {args.only} není v nastavení.", file=sys.stderr)
+        return 1
+
     comps = []
     ok = 0
     for c in cfg["competitions"]:
         comp = dict(c)
-        comp["season"] = cfg["season"]
+        comp["season"] = c.get("season") or cfg["season"]
         comp["url"] = f"https://chess-results.com/tnr{c['tnr']}.aspx?lan=5"
         old = previous.get(c["id"], {})
+        if args.only and c["id"] != args.only:
+            comp["teams"] = old.get("teams", [])
+            comp["rounds"] = old.get("rounds", [])
+            comps.append(comp)
+            ok += 1 if comp["teams"] else 0
+            continue
         print(f"{c['short']} (tnr{c['tnr']})")
         try:
             html_r = fetch(session, c["tnr"], 8)

@@ -1,0 +1,74 @@
+name: Přidání soutěže z hlášení
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: data-update
+  cancel-in-progress: false
+
+jobs:
+  pridat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r scripts/requirements.txt
+
+      - name: Přidat soutěž do nastavení
+        id: add
+        env:
+          # text hlášení jde přes proměnnou, nikdy ne přímo do příkazu
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: |
+          set +e
+          python scripts/add_competition.py --from-issue --id-file novy-id.txt > odpoved.md 2> chyba.txt
+          code=$?
+          set -e
+          cat chyba.txt >&2 || true
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          case "$code" in
+            0) echo "id=$(cat novy-id.txt)" >> "$GITHUB_OUTPUT" ;;
+            2) echo "Hlášení není žádost o soutěž, končím." ;;
+          esac
+
+      - name: Stáhnout soupisky nové soutěže
+        if: steps.add.outputs.code == '0'
+        env:
+          NOVE_ID: ${{ steps.add.outputs.id }}
+        run: python scripts/fetch_data.py --only "$NOVE_ID"
+
+      - name: Uložit změny
+        if: steps.add.outputs.code == '0'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/competitions.json data/competitions.json
+          if git diff --cached --quiet; then
+            echo "Beze změn."
+          else
+            git commit -m "Přidána soutěž z hlášení #${{ github.event.issue.number }}"
+            git pull --rebase --autostash
+            git push
+          fi
+
+      - name: Odpovědět do hlášení
+        if: steps.add.outputs.code != '2'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh issue comment "${{ github.event.issue.number }}" --body-file odpoved.md
+        continue-on-error: true
+
+      - name: Uzavřít vyřízené hlášení
+        if: steps.add.outputs.code == '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh issue close "${{ github.event.issue.number }}"
+        continue-on-error: true
