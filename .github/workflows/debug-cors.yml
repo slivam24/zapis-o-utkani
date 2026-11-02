@@ -1,0 +1,21 @@
+name: Ladění CORS
+
+on:
+  workflow_dispatch:
+
+jobs:
+  cors:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hlavičky chess-results
+        run: |
+          echo "=== GET s hlavičkou Origin ==="
+          curl -sS -D - -o /dev/null \
+            -H "Origin: https://slivam24.github.io" \
+            "https://chess-results.com/tnr1507857.aspx?lan=5&art=8" | tr -d '\r'
+          echo
+          echo "=== OPTIONS (preflight) ==="
+          curl -sS -D - -o /dev/null -X OPTIONS \
+            -H "Origin: https://slivam24.github.io" \
+            -H "Access-Control-Request-Method: GET" \
+            "https://chess-results.com/tnr1507857.aspx?lan=5&art=8" | tr -d '\r' || true
