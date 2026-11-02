@@ -8,16 +8,21 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: data-update
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-node@v4
         with:
-          python-version: "3.12"
-      - run: pip install -r scripts/requirements.txt
-      - run: python scripts/fetch_data.py --save-html raw
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - run: node scripts/fetch_data.mjs --save-html raw
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -34,5 +39,6 @@ jobs:
             echo "Beze změn."
           else
             git commit -m "Aktualizace soupisek z chess-results"
+            git pull --rebase --autostash
             git push
           fi

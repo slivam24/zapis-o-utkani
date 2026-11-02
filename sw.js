@@ -1,5 +1,5 @@
 // Service worker: aplikace funguje bez internetu. Data (soupisky) se berou přednostně ze sítě.
-const CACHE = 'zapis-v1';
+const CACHE = 'zapis-v2';
 const SHELL = [
   './',
   'index.html',
@@ -10,6 +10,8 @@ const SHELL = [
   'js/pdf.js',
   'js/store.js',
   'js/data.js',
+  'js/parse.js',
+  'js/sources.js',
   'manifest.webmanifest',
   'icons/icon.svg',
   'data/competitions.json',

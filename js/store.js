@@ -4,6 +4,8 @@ const KEY_ARCHIVE = 'zapis.archive.v1';
 const KEY_REFEREES = 'zapis.referees.v1';
 const KEY_VENUES = 'zapis.venues.v1';
 const KEY_DATA = 'zapis.data.v1';
+const KEY_COMPS = 'zapis.comps.v1';
+const KEY_PROXIES = 'zapis.proxies.v1';
 
 function read(key, fallback) {
   try {
@@ -64,3 +66,20 @@ export function rememberVenue(team, venue) {
 
 export const loadCachedData = () => read(KEY_DATA, null);
 export const saveCachedData = (d) => write(KEY_DATA, d);
+
+// Soutěže, které si uživatel přidal sám. Žijí jen v tomhle zařízení.
+export const loadUserComps = () => read(KEY_COMPS, []);
+
+export function saveUserComp(comp) {
+  const list = loadUserComps().filter((c) => c.id !== comp.id);
+  list.push(comp);
+  return write(KEY_COMPS, list);
+}
+
+export function deleteUserComp(id) {
+  return write(KEY_COMPS, loadUserComps().filter((c) => c.id !== id));
+}
+
+/** Vlastní adresy prostředníka. Prázdné pole znamená použít výchozí veřejné. */
+export const loadProxies = () => read(KEY_PROXIES, []);
+export const saveProxies = (list) => write(KEY_PROXIES, list.map((s) => s.trim()).filter(Boolean));

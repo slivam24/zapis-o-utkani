@@ -2,7 +2,7 @@
 // proto se plátno a načítání obrázků předávají zvenku (env).
 import {
   RESULTS, REFEREE_ROLES, sortedLineup, boardResult, totals, fmtPoints, fmtDate, fmtRating,
-  typeLabel, restrictedCount, maxRestricted, homeIsWhite,
+  typeLabel, restrictedCount, maxRestricted, homeIsWhite, ratingColumns,
 } from './logic.js';
 
 export const PAGE_W = 794; // A4 při 96 dpi
@@ -224,12 +224,12 @@ export async function renderPages(state, comp, env, { scale = 2 } = {}) {
   const xHome = MX;
   const xCenter = MX + sideW;
   const xAway = xCenter + centerW;
-  // sloupce uvnitř strany: poř., jméno, typ, FIDE, nár.
+  // sloupce uvnitř strany: poř., jméno, typ a kolonky s ratingem podle toho, co je v datech
   const cNo = 24;
   const cType = 34;
-  const cFide = 38;
-  const cNat = 38;
-  const cName = sideW - cNo - cType - cFide - cNat;
+  const cRtg = 40;
+  const ratings = ratingColumns([...home, ...away]);
+  const cName = sideW - cNo - cType - cRtg * ratings.length;
 
   // hlavička družstev
   const hy = ty + 8;
@@ -261,21 +261,13 @@ export async function renderPages(state, comp, env, { scale = 2 } = {}) {
   ctx.textBaseline = 'middle';
   const headY = ch + chh / 2;
   const heads = (x0, mirrored) => {
-    const cols = mirrored
-      ? [
-          ['Nár.', cNat],
-          ['FIDE', cFide],
-          ['Typ', cType],
-          ['Příjmení, jméno', cName],
-          ['Poř.', cNo],
-        ]
-      : [
-          ['Poř.', cNo],
-          ['Příjmení, jméno', cName],
-          ['Typ', cType],
-          ['FIDE', cFide],
-          ['Nár.', cNat],
-        ];
+    const base = [
+      ['Poř.', cNo],
+      ['Příjmení, jméno', cName],
+      ['Typ', cType],
+      ...ratings.map((r) => [r.short, cRtg]),
+    ];
+    const cols = mirrored ? [...base].reverse() : base;
     let x = x0;
     for (const [t, w] of cols) {
       ctx.textAlign = t === 'Příjmení, jméno' ? (mirrored ? 'right' : 'left') : 'center';
@@ -305,20 +297,22 @@ export async function renderPages(state, comp, env, { scale = 2 } = {}) {
 
     const drawSide = (pl, x0, mirrored) => {
       if (!pl) {
-        fitText(ctx, 'neobsazeno', mirrored ? x0 + cNat + cFide + cType : x0 + cNo + 4,
+        fitText(ctx, 'neobsazeno', mirrored ? x0 + cRtg * ratings.length + cType : x0 + cNo + 4,
           mid, cName - 8, { size: 9, color: '#b0b6c0', align: mirrored ? 'right' : 'left' });
         return;
       }
-      const order = mirrored
-        ? [['nat', cNat], ['fide', cFide], ['type', cType], ['name', cName], ['no', cNo]]
-        : [['no', cNo], ['name', cName], ['type', cType], ['fide', cFide], ['nat', cNat]];
+      const base = [
+        ['no', cNo],
+        ['name', cName],
+        ['type', cType],
+        ...ratings.map((r) => [r.key, cRtg]),
+      ];
       let x = x0;
-      for (const [k, w] of order) {
+      for (const [k, w] of mirrored ? [...base].reverse() : base) {
         if (k === 'no') fitText(ctx, String(pl.no), x, mid, w, { size: 10, color: MUTED, align: 'center' });
         else if (k === 'name') fitText(ctx, pl.name, x + 4, mid, w - 8, { size: 11.5, weight: 'bold', align: mirrored ? 'right' : 'left' });
         else if (k === 'type') fitText(ctx, typeLabel(pl.types), x, mid, w, { size: 9, weight: 'bold', align: 'center', color: '#b45309' });
-        else if (k === 'fide') fitText(ctx, fmtRating(pl.fide), x, mid, w, { size: 10, align: 'center' });
-        else if (k === 'nat') fitText(ctx, fmtRating(pl.nat), x, mid, w, { size: 10, align: 'center' });
+        else fitText(ctx, fmtRating(pl[k]), x, mid, w, { size: 10, align: 'center' });
         x += w;
       }
     };

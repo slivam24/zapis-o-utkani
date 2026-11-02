@@ -1,8 +1,12 @@
 import * as L from './logic.js';
 import { renderPages } from './render.js';
 import { buildPdf } from './pdf.js';
-import { loadData, refreshData, dataSummary } from './data.js';
+import { loadData, refreshData, reloadUserComps, dataSummary } from './data.js';
+import { loadCompetition, buildCompetition, issueUrl, DEFAULT_PROXIES } from './sources.js';
+import { tournamentNumber } from './parse.js';
 import * as store from './store.js';
+
+const REPO = 'slivam24/zapis-o-utkani';
 
 // ---------- pomocné ----------
 const $ = (sel, root = document) => root.querySelector(sel);
@@ -16,6 +20,8 @@ const stepsEl = $('#steps');
 let DATA = { competitions: [], generated: null };
 let S = store.loadDraft() ?? L.newMatch();
 let tab = 'zapas';
+// stav panelu Přidat soutěž
+let addComp = { open: false, busy: false, url: '', boards: '8', short: '', msg: '', error: '', showProxy: false };
 
 const TABS = [
   ['zapas', 'Zápas'],
@@ -77,6 +83,57 @@ function resetCompetition(id) {
 }
 
 // ---------- pohledy ----------
+function addPanel() {
+  const proxies = store.loadProxies();
+  const boardOpts = [8, 5, 6, 4, 10, 12]
+    .map((n) => `<option ${String(n) === addComp.boards ? 'selected' : ''}>${n}</option>`)
+    .join('');
+  const status = addComp.error
+    ? `<ul class="issues"><li class="error">${esc(addComp.error)}</li></ul>`
+    : addComp.msg
+      ? `<ul class="issues"><li class="okmsg">${esc(addComp.msg)}</li></ul>`
+      : '';
+  const fallback = `<details ${addComp.error ? 'open' : ''}>
+      <summary>Když načtení nefunguje</summary>
+      <p class="small-text muted">Načítání jde přes prostředníka, protože chess-results čtení z prohlížeče nepovoluje.
+      Když veřejná služba zrovna nefunguje, máš tři náhradní cesty.</p>
+      <div class="row">
+        <a class="btn small secondary" href="${esc(issueUrl(REPO, addComp))}" target="_blank" rel="noopener">Požádat o přidání na GitHubu</a>
+        <button class="btn small ghost" type="button" data-act="proxySettings">Nastavit vlastní adresu</button>
+      </div>
+      <p class="small-text muted" style="margin-top:.6rem">Nebo nahraj uloženou stránku se soupiskami: na chess-results
+      zobraz <em>Sestava družstva bez výsledků</em> a ulož stránku jako soubor. Rozlosování se tak nenačte,
+      družstva se pak vybírají ručně.</p>
+      <label class="field"><span>Soubor se soupiskami (.html)</span>
+        <input type="file" accept=".html,.htm,text/html" data-act="uploadRoster"></label>
+    </details>`;
+  const proxyBox = addComp.showProxy
+    ? `<label class="field" style="margin-top:.6rem"><span>Vlastní adresy prostředníka, každá na řádek (prázdné = veřejné)</span>
+         <textarea data-proxy style="min-height:80px" placeholder="${esc(DEFAULT_PROXIES[0])}">${esc(proxies.join('\n'))}</textarea></label>
+       <div class="row"><button class="btn small secondary" type="button" data-act="saveProxy">Uložit adresy</button></div>
+       <p class="small-text muted">Zástupný text <code>{url}</code> se nahradí adresou stránky. Návod na vlastní prostředníka je v repozitáři ve složce <code>worker</code>.</p>`
+    : '';
+  return `<div class="card" style="margin:.8rem 0 0;background:var(--sel)">
+    <h3>Přidat soutěž z chess-results</h3>
+    <p class="small-text muted">Vlož odkaz na turnaj. Název soutěže, sezónu, soupisky i rozlosování si aplikace načte sama.
+    Soutěž zůstane uložená v tomhle zařízení.</p>
+    <div class="grid two">
+      <label class="field"><span>Odkaz na turnaj</span>
+        <input type="text" data-add="url" value="${esc(addComp.url)}" placeholder="https://chess-results.com/tnr1507857.aspx" autocomplete="off" inputmode="url"></label>
+      <label class="field"><span>Počet šachovnic</span><select data-add="boards">${boardOpts}</select></label>
+      <label class="field"><span>Zkratka do nabídky (nepovinné)</span>
+        <input type="text" data-add="short" value="${esc(addComp.short)}" placeholder="podle názvu soutěže" autocomplete="off"></label>
+    </div>
+    <div class="row" style="margin-top:.6rem">
+      <button class="btn" type="button" data-act="loadComp" ${addComp.busy ? 'disabled' : ''}>${addComp.busy ? 'Načítám…' : 'Načíst soutěž'}</button>
+      <button class="btn ghost small" type="button" data-act="proxySettings">${addComp.showProxy ? 'Skrýt nastavení' : 'Nastavení načítání'}</button>
+    </div>
+    ${proxyBox}
+    ${status}
+    ${fallback}
+  </div>`;
+}
+
 function viewZapas() {
   const c = comp();
   const teams = c?.teams ?? [];
@@ -132,6 +189,11 @@ function viewZapas() {
         <label class="field"><span>Soutěž</span><select data-chg="comp">${compOpts}</select></label>
         ${roundField}
       </div>
+      <div class="row" style="margin-top:.6rem">
+        <button class="btn small secondary" type="button" data-act="toggleAdd">${addComp.open ? 'Skrýt přidání soutěže' : '+ Přidat soutěž'}</button>
+        ${c?.local ? `<button class="btn small danger" type="button" data-act="delComp" data-id="${esc(c.id)}">Odebrat tuhle soutěž</button>` : ''}
+      </div>
+      ${addComp.open ? addPanel() : ''}
       ${matchList}
     </div>
     <div class="card">
@@ -182,19 +244,24 @@ function rosterCard(side, label) {
         return `<div class="pl ${on ? 'sel' : ''} ${off ? 'off' : ''}" data-act="toggle" data-side="${side}" data-no="${p.no}">
           <input type="checkbox" ${on ? 'checked' : ''} ${off ? 'disabled' : ''} tabindex="-1" aria-label="${esc(p.name)}">
           <div class="nm"><span class="no">${p.no}.</span> ${esc(p.name)}${badges}</div>
-          <div class="r">${esc(L.fmtRating(p.nat) || '–')}${p.fide ? ` · FIDE ${esc(p.fide)}` : ''}</div>
+          <div class="r">${esc(L.ratingSummary(p) || '–')}</div>
         </div>`;
       })
       .join('')}</div>`;
 
+  // kolonky s ratingem podle toho, co je na soupisce: při jediném Elu jen jedna
+  const ratings = L.ratingColumns([...(t?.players ?? []), ...lineup]);
   const rows = lineup
     .map(
       (p, i) => `<tr>
         <td class="b">${i + 1}.</td>
         <td><input type="text" data-edit="name" data-side="${side}" data-no="${p.no}" value="${esc(p.name)}" aria-label="Jméno"></td>
         <td style="white-space:nowrap">${esc(L.typeLabel(p.types))}</td>
-        <td class="rt"><input type="text" inputmode="numeric" data-edit="fide" data-side="${side}" data-no="${p.no}" value="${esc(p.fide ?? '')}" aria-label="Elo FIDE" placeholder="FIDE"></td>
-        <td class="rt"><input type="text" inputmode="numeric" data-edit="nat" data-side="${side}" data-no="${p.no}" value="${esc(p.nat ?? '')}" aria-label="Elo národní" placeholder="nár."></td>
+        ${ratings
+          .map(
+            (r) => `<td class="rt"><input type="text" inputmode="numeric" data-edit="${r.key}" data-side="${side}" data-no="${p.no}" value="${esc(p[r.key] ?? '')}" aria-label="${esc(r.label)}" placeholder="${esc(r.short)}"></td>`,
+          )
+          .join('')}
         <td><button class="btn small ghost" type="button" data-act="rm" data-side="${side}" data-no="${p.no}" aria-label="Odebrat ze sestavy">✕</button></td>
       </tr>`,
     )
@@ -207,7 +274,9 @@ function rosterCard(side, label) {
     <h3 style="margin-top:1rem">Sestava (šachovnice podle pořadí na soupisce)</h3>
     ${
       lineup.length
-        ? `<table class="lineup"><thead><tr><th>Šach.</th><th>Příjmení, jméno</th><th>Typ</th><th>FIDE</th><th>Nár.</th><th></th></tr></thead><tbody>${rows}</tbody></table>`
+        ? `<table class="lineup"><thead><tr><th>Šach.</th><th>Příjmení, jméno</th><th>Typ</th>${ratings
+            .map((r) => `<th>${esc(r.short)}</th>`)
+            .join('')}<th></th></tr></thead><tbody>${rows}</tbody></table>`
         : '<p class="muted">Zatím nikdo nevybrán.</p>'
     }
     <details>
@@ -216,8 +285,9 @@ function rosterCard(side, label) {
         <label class="field"><span>Pořadí na soupisce</span><input type="text" inputmode="numeric" data-m="no"></label>
         <label class="field"><span>Příjmení, jméno</span><input type="text" data-m="name" autocomplete="off"></label>
         <label class="field"><span>Typ</span><select data-m="type"><option value="">—</option><option>K</option><option>ZK</option><option>H</option><option>V</option><option>C</option></select></label>
-        <label class="field"><span>Elo FIDE</span><input type="text" inputmode="numeric" data-m="fide"></label>
-        <label class="field"><span>Elo národní</span><input type="text" inputmode="numeric" data-m="nat"></label>
+        ${ratings
+          .map((r) => `<label class="field"><span>${esc(r.label)}</span><input type="text" inputmode="numeric" data-m="${r.key}"></label>`)
+          .join('')}
       </div>
       <div class="actions"><button class="btn secondary" type="button" data-act="addManual" data-side="${side}">Přidat do sestavy</button></div>
     </details>
@@ -579,7 +649,14 @@ view.addEventListener('click', (e) => {
       else {
         if (S[side].lineup.length >= boards()) return toast(`Sestava může mít nejvýše ${boards()} hráčů.`);
         const p = t.players.find((x) => x.no === no);
-        S[side].lineup.push({ no: p.no, name: p.name, types: [...(p.types ?? [])], fide: p.fide ?? null, nat: p.nat ?? null });
+        S[side].lineup.push({
+          no: p.no,
+          name: p.name,
+          types: [...(p.types ?? [])],
+          rtg: p.rtg ?? null,
+          fide: p.fide ?? null,
+          nat: p.nat ?? null,
+        });
       }
       save();
       return renderView();
@@ -598,7 +675,9 @@ view.addEventListener('click', (e) => {
       if (S[side].lineup.some((p) => p.no === no)) return toast(`Hráč s pořadím ${no} už je v sestavě.`);
       if (S[side].lineup.length >= boards()) return toast(`Sestava může mít nejvýše ${boards()} hráčů.`);
       const num = (v) => (Number.isFinite(parseInt(v, 10)) ? parseInt(v, 10) : null);
-      S[side].lineup.push({ no, name, types: get('type') ? [get('type')] : [], fide: num(get('fide')), nat: num(get('nat')), manual: true });
+      const player = { no, name, types: get('type') ? [get('type')] : [], rtg: null, fide: null, nat: null, manual: true };
+      for (const r of L.ratingColumns([...(teamOf(side)?.players ?? []), ...S[side].lineup])) player[r.key] = num(get(r.key));
+      S[side].lineup.push(player);
       save();
       return renderView();
     }
@@ -657,11 +736,105 @@ view.addEventListener('click', (e) => {
       return;
     case 'exportArch':
       return download(new Blob([JSON.stringify(store.loadArchive(), null, 1)], { type: 'application/json' }), `zapisy-zaloha-${new Date().toLocaleDateString('sv-SE')}.json`);
+    case 'toggleAdd':
+      addComp = { ...addComp, open: !addComp.open, msg: '', error: '' };
+      return renderView();
+    case 'proxySettings':
+      addComp = { ...addComp, open: true, showProxy: !addComp.showProxy };
+      return renderView();
+    case 'saveProxy': {
+      store.saveProxies(($('[data-proxy]')?.value ?? '').split('\n'));
+      toast('Adresy uložené.');
+      addComp = { ...addComp, showProxy: false };
+      return renderView();
+    }
+    case 'loadComp':
+      return loadNewCompetition();
+    case 'delComp': {
+      const id = el.dataset.id;
+      const target = DATA.competitions.find((x) => x.id === id);
+      if (!confirm(`Opravdu odebrat soutěž ${target?.short ?? id} z tohoto zařízení?`)) return;
+      store.deleteUserComp(id);
+      DATA = reloadUserComps();
+      if (S.compId === id) resetCompetition(DATA.competitions[0]?.id ?? '');
+      save();
+      $('#dataStatus').textContent = dataSummary(DATA);
+      toast('Soutěž odebraná.');
+      return renderView();
+    }
+  }
+});
+
+/** Načte soutěž podle vloženého odkazu a uloží ji do zařízení. */
+async function loadNewCompetition(fromFile = null) {
+  const boards = Number(addComp.boards);
+  addComp = { ...addComp, busy: true, msg: 'Načítám…', error: '' };
+  renderView();
+  try {
+    const proxies = store.loadProxies();
+    const comp = fromFile
+      ? buildCompetition({
+          tnr: tournamentNumber(addComp.url) ?? Date.now() % 1000000,
+          boards,
+          short: addComp.short,
+          rosterHtml: fromFile,
+        })
+      : await loadCompetition(
+          { url: addComp.url, boards, short: addComp.short, proxies: proxies.length ? proxies : DEFAULT_PROXIES },
+          (step) => {
+            addComp = { ...addComp, msg: step };
+            renderView();
+          },
+        );
+    if (DATA.competitions.some((x) => x.tnr === comp.tnr && !x.local)) {
+      throw new Error('Tahle soutěž už v aplikaci je mezi sdílenými, přidávat ji nemusíš.');
+    }
+    if (!store.saveUserComp(comp)) throw new Error('Soutěž se nepodařilo uložit, úložiště zařízení je plné.');
+    DATA = reloadUserComps();
+    S.compId = comp.id;
+    S.round = '';
+    S.home = { team: '', lineup: [], captain: '' };
+    S.away = { team: '', lineup: [], captain: '' };
+    S.results = {};
+    save();
+    $('#dataStatus').textContent = dataSummary(DATA);
+    const players = comp.teams.reduce((n, t) => n + t.players.length, 0);
+    addComp = {
+      ...addComp,
+      busy: false,
+      url: '',
+      short: '',
+      msg: `Přidáno: ${comp.name}. Načteno ${comp.teams.length} družstev, ${players} hráčů` +
+        `${comp.rounds.length ? ` a ${comp.rounds.length} kol` : ', rozlosování se nepodařilo načíst'}.`,
+      error: '',
+    };
+    renderView();
+    toast('Soutěž je přidaná a vybraná.');
+  } catch (e) {
+    addComp = { ...addComp, busy: false, msg: '', error: e.message };
+    renderView();
+  }
+}
+
+view.addEventListener('change', async (e) => {
+  const input = e.target;
+  if (input.dataset.act !== 'uploadRoster') return;
+  const file = input.files?.[0];
+  if (!file) return;
+  try {
+    await loadNewCompetition(await file.text());
+  } catch (err) {
+    addComp = { ...addComp, error: `Soubor se nepodařilo přečíst: ${err.message}` };
+    renderView();
   }
 });
 
 view.addEventListener('input', (e) => {
   const el = e.target;
+  if (el.dataset.add) {
+    addComp[el.dataset.add] = el.value;
+    return;
+  }
   if (el.dataset.bind) {
     setPath(S, el.dataset.bind, el.value);
     save();
@@ -677,6 +850,7 @@ view.addEventListener('input', (e) => {
 
 view.addEventListener('change', (e) => {
   const el = e.target;
+  if (el.dataset.add) addComp[el.dataset.add] = el.value;
   if (el.dataset.venue) store.rememberVenue(S.home.team, el.value);
   switch (el.dataset.chg) {
     case 'comp':

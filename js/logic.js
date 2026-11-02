@@ -76,6 +76,37 @@ export function fmtRating(n) {
   return Number.isFinite(n) && n > 0 ? String(n) : '';
 }
 
+// Ratingy: 'rtg' je neoznačené Elo ze sloupce Rtg na chess-results, u kterého se neví, které to je
+// (závisí na nastavení ve Swiss-Manageru). 'fide' a 'nat' jsou jen tam, kde je stránka rozlišuje.
+export const RATING_KINDS = [
+  { key: 'rtg', label: 'Elo', short: 'Elo' },
+  { key: 'fide', label: 'Elo FIDE', short: 'FIDE' },
+  { key: 'nat', label: 'Elo národní', short: 'Nár.' },
+];
+
+/**
+ * Které kolonky s ratingem vypsat. Vrací jen ty, které v datech opravdu jsou,
+ * takže při jediném načteném Elu je kolonka jedna a žádná prázdná se nepřidává.
+ */
+export function ratingColumns(players) {
+  const list = players ?? [];
+  const cols = RATING_KINDS.filter((k) => list.some((p) => Number.isFinite(p?.[k.key]) && p[k.key] > 0));
+  return cols.length ? cols : [RATING_KINDS[0]];
+}
+
+/** Do které kolonky ukládat ručně zadaný rating. */
+export function dominantRatingKey(players) {
+  return ratingColumns(players)[0].key;
+}
+
+/** Ratingy hráče pro výpis v soupisce, např. '1920' nebo 'FIDE 1920 · Nár. 1950'. */
+export function ratingSummary(player) {
+  const parts = RATING_KINDS.filter((k) => Number.isFinite(player?.[k.key]) && player[k.key] > 0).map((k) =>
+    k.key === 'rtg' ? String(player[k.key]) : `${k.short} ${player[k.key]}`,
+  );
+  return parts.join(' · ');
+}
+
 /** Výsledek šachovnice, který lze určit automaticky (chybějící hráč => kontumace). */
 export function autoResult(homePlayer, awayPlayer) {
   if (homePlayer && awayPlayer) return null;

@@ -17,10 +17,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-node@v4
         with:
-          python-version: "3.12"
-      - run: pip install -r scripts/requirements.txt
+          node-version: "22"
+          cache: npm
+      - run: npm ci
 
       - name: Přidat soutěž do nastavení
         id: add
@@ -29,7 +30,7 @@ jobs:
           ISSUE_BODY: ${{ github.event.issue.body }}
         run: |
           set +e
-          python scripts/add_competition.py --from-issue --id-file novy-id.txt > odpoved.md 2> chyba.txt
+          node scripts/add_competition.mjs --from-issue --id-file novy-id.txt > odpoved.md 2> chyba.txt
           code=$?
           set -e
           cat chyba.txt >&2 || true
@@ -43,7 +44,7 @@ jobs:
         if: steps.add.outputs.code == '0'
         env:
           NOVE_ID: ${{ steps.add.outputs.id }}
-        run: python scripts/fetch_data.py --only "$NOVE_ID"
+        run: node scripts/fetch_data.mjs --only "$NOVE_ID"
 
       - name: Uložit změny
         if: steps.add.outputs.code == '0'

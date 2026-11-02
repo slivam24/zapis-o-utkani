@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {
   parseTypes, maxRestricted, minPlayers, fmtPoints, fmtDate, autoResult, boardResult,
   setBoardResult, totals, newMatch, validate, restrictedCount, homeIsWhite, slug, defaultCaptain,
+  ratingColumns, dominantRatingKey, ratingSummary,
 } from '../js/logic.js';
 
 const p = (no, types = [], name = `Hrac ${no}`) => ({ no, name, types, nat: 1800, fide: null });
@@ -134,4 +135,29 @@ test('výchozí kapitán: hráč typu K, jinak hlavička soupisky', () => {
 
 test('slug odstraní diakritiku', () => {
   assert.equal(slug('Ústí nad Labem "B"'), 'Usti-nad-Labem-B');
+});
+
+test('kolonky s ratingem: jen ty, které jsou v datech', () => {
+  const only = (obj) => ({ no: 1, name: 'X', types: [], rtg: null, fide: null, nat: null, ...obj });
+  assert.deepEqual(ratingColumns([only({ rtg: 2003 })]).map((c) => c.short), ['Elo']);
+  assert.deepEqual(ratingColumns([only({ nat: 1950 })]).map((c) => c.short), ['Nár.']);
+  assert.deepEqual(ratingColumns([only({ fide: 1920 })]).map((c) => c.short), ['FIDE']);
+  assert.deepEqual(ratingColumns([only({ fide: 1920, nat: 1950 })]).map((c) => c.short), ['FIDE', 'Nár.']);
+  assert.deepEqual(ratingColumns([only({ rtg: 0 })]).map((c) => c.short), ['Elo'], 'bez ratingu zůstane jedna kolonka');
+  assert.deepEqual(ratingColumns([]).map((c) => c.short), ['Elo']);
+});
+
+test('kolonky s ratingem: nula a null se nepočítají', () => {
+  const players = [
+    { no: 1, name: 'A', types: [], rtg: 1800, fide: 0, nat: null },
+    { no: 2, name: 'B', types: [], rtg: 1750, fide: null, nat: null },
+  ];
+  assert.deepEqual(ratingColumns(players).map((c) => c.short), ['Elo'], 'FIDE 0 nevytvoří prázdnou kolonku');
+  assert.equal(dominantRatingKey(players), 'rtg');
+});
+
+test('výpis ratingů hráče', () => {
+  assert.equal(ratingSummary({ rtg: 2003, fide: null, nat: null }), '2003');
+  assert.equal(ratingSummary({ rtg: null, fide: 1920, nat: 1950 }), 'FIDE 1920 · Nár. 1950');
+  assert.equal(ratingSummary({ rtg: null, fide: null, nat: null }), '');
 });
