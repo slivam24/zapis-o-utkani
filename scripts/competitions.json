@@ -1,10 +1,53 @@
 {
   "season": "2026/2027",
   "competitions": [
-    { "id": "kp",   "short": "KP",       "name": "Krajský přebor",                "group": "",  "tnr": 1507857, "boards": 8 },
-    { "id": "kp2a", "short": "KP II A",  "name": "Krajský přebor II. třídy",      "group": "A", "tnr": 1508693, "boards": 8 },
-    { "id": "kp2b", "short": "KP II B",  "name": "Krajský přebor II. třídy",      "group": "B", "tnr": 1511935, "boards": 8 },
-    { "id": "kp3a", "short": "KP III A", "name": "Krajský přebor III. třídy",     "group": "A", "tnr": 1508277, "boards": 5 },
-    { "id": "kp3b", "short": "KP III B", "name": "Krajský přebor III. třídy",     "group": "B", "tnr": 1508895, "boards": 5 }
+    {
+      "id": "kp",
+      "short": "KP",
+      "name": "Krajský přebor",
+      "group": "",
+      "tnr": 1507857,
+      "boards": 8
+    },
+    {
+      "id": "kp2a",
+      "short": "KP II A",
+      "name": "Krajský přebor II. třídy",
+      "group": "A",
+      "tnr": 1508693,
+      "boards": 8
+    },
+    {
+      "id": "kp2b",
+      "short": "KP II B",
+      "name": "Krajský přebor II. třídy",
+      "group": "B",
+      "tnr": 1511935,
+      "boards": 8
+    },
+    {
+      "id": "kp3a",
+      "short": "KP III A",
+      "name": "Krajský přebor III. třídy",
+      "group": "A",
+      "tnr": 1508277,
+      "boards": 5
+    },
+    {
+      "id": "kp3b",
+      "short": "KP III B",
+      "name": "Krajský přebor III. třídy",
+      "group": "B",
+      "tnr": 1508895,
+      "boards": 5
+    },
+    {
+      "id": "t1246377",
+      "short": "Poznámka: Kvůli reduk…",
+      "name": "Poznámka: Kvůli redukci zatížení serveru denním skenováním všech odkazů (denně 100 000 přístupu a více) a vyhledávačů typu Google, Yahoo a Co, všechny odkazy turnajů starší než dva týdny (od data ukončení turnaje) jsou zobrazeny po kliknutí na následující tlačítko:",
+      "group": "",
+      "tnr": 1246377,
+      "boards": 8
+    }
   ]
 }
