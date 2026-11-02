@@ -1,0 +1,48 @@
+name: Ladění exportu do Excelu
+
+on:
+  workflow_dispatch:
+
+jobs:
+  zkouska:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Stáhnout export a vypsat záhlaví
+        run: |
+          cat > z.mjs <<'EOF'
+          import { unzipSync } from 'node:zlib';
+          // KP ÚKŠS (typy Z/K/ZK/H/V má) a Extraliga (typy nejspíš nepoužívá)
+          const TNR = { 'KP UKSS': 1507857, 'KP III B': 1508895 };
+          for (const [name, tnr] of Object.entries(TNR)) {
+            const url = `https://chess-results.com/tnr${tnr}.aspx?lan=5&art=8&zeilen=0&prt=4&excel=2010`;
+            const res = await fetch(url, { headers: { 'User-Agent': 'zapis-o-utkani/1.0 (zkouska exportu)' } });
+            const buf = Buffer.from(await res.arrayBuffer());
+            console.log(`\n=== ${name} (tnr${tnr}) HTTP ${res.status}, ${buf.length} B, typ ${res.headers.get('content-type')}`);
+            if (!buf.slice(0, 2).equals(Buffer.from('PK'))) {
+              console.log('  není to ZIP, začátek:', JSON.stringify(buf.slice(0, 120).toString('utf8')));
+              continue;
+            }
+            // ruční čtení ZIP: najdeme sheet1.xml a sharedStrings.xml
+            const { execFileSync } = await import('node:child_process');
+            const fs = await import('node:fs');
+            fs.writeFileSync(`/tmp/${tnr}.xlsx`, buf);
+            const list = execFileSync('unzip', ['-Z1', `/tmp/${tnr}.xlsx`]).toString().trim().split('\n');
+            console.log('  obsah:', list.join(', '));
+            const sheet = execFileSync('unzip', ['-p', `/tmp/${tnr}.xlsx`, 'xl/worksheets/sheet1.xml']).toString();
+            const shared = execFileSync('unzip', ['-p', `/tmp/${tnr}.xlsx`, 'xl/sharedStrings.xml']).toString();
+            const strings = [...shared.matchAll(/<si>(.*?)<\/si>/gs)].map((m) => m[1].replace(/<[^>]+>/g, ''));
+            const rows = [...sheet.matchAll(/<row[^>]*r="(\d+)"[^>]*>(.*?)<\/row>/gs)].slice(0, 9);
+            for (const [, r, inner] of rows) {
+              const cells = [...inner.matchAll(/<c\s+r="([A-Z]+)\d+"([^>]*?)(?:\/>|>(.*?)<\/c>)/gs)].map(([, col, attrs, body]) => {
+                const v = body && /<v>(.*?)<\/v>/s.exec(body);
+                if (!v) return `${col}:`;
+                return `${col}:${attrs.includes('t="s"') ? strings[+v[1]] : v[1]}`;
+              });
+              console.log(`  r${r}`, cells.join(' | ').slice(0, 220));
+            }
+          }
+          EOF
+          node z.mjs
