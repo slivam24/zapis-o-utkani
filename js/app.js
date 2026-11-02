@@ -521,7 +521,8 @@ function viewVystup() {
   const list = issues.length
     ? `${group('error', 'Nutné opravit')}${group('warn', 'Doporučujeme doplnit')}`
     : '<ul class="issues"><li class="okmsg">Zápis je v pořádku a podle soutěžního řádu úplný.</li></ul>';
-  return `
+  return `<div class="vystup">
+    <div class="vystup-side">
     <div class="card">
       <h2>Kontrola zápisu</h2>
       ${list}
@@ -531,7 +532,16 @@ function viewVystup() {
         <button class="btn secondary" type="button" data-act="share" id="btnShare">Sdílet</button>
       </div>
     </div>
-    <div class="card">
+    <div class="card vystup-done">
+      <h2>Dokončení</h2>
+      <p class="muted small-text">Uloží zápis do archivu v tomto zařízení (potřebné uchovat nejméně 6 měsíců, čl. 2.4.6) a otevře nový zápis.</p>
+      <div class="actions" style="margin-top:.4rem">
+        <button class="btn secondary" data-act="go" data-tab="zaver" type="button">← Zpět</button>
+        <button class="btn" type="button" data-act="archive">Uložit do archivu a začít nový</button>
+      </div>
+    </div>
+    </div>
+    <div class="card vystup-preview">
       <div class="row" style="justify-content:space-between">
         <h2 style="margin:0">Náhled</h2>
         <button class="btn small secondary" type="button" data-act="fullscreen" data-mode="zapis">⛶ Celá obrazovka</button>
@@ -539,14 +549,7 @@ function viewVystup() {
       <div class="preview" id="preview" data-act="fullscreen" data-mode="zapis" title="Klepnutím zobrazíš na celou obrazovku">
         <p class="muted">Vykresluji…</p></div>
     </div>
-    <div class="card">
-      <h2>Dokončení</h2>
-      <p class="muted small-text">Uloží zápis do archivu v tomto zařízení (potřebné uchovat nejméně 6 měsíců, čl. 2.4.6) a otevře nový zápis.</p>
-      <div class="actions" style="margin-top:.4rem">
-        <button class="btn secondary" data-act="go" data-tab="zaver" type="button">← Zpět</button>
-        <button class="btn" type="button" data-act="archive">Uložit do archivu a začít nový</button>
-      </div>
-    </div>`;
+  </div>`;
 }
 
 function viewArchiv() {
@@ -587,6 +590,7 @@ function renderView({ keepScroll = true } = {}) {
   $$('.roster').forEach((r) => (saved[r.dataset.side] = r.scrollTop));
   const y = window.scrollY;
   view.innerHTML = (VIEWS[tab] ?? viewZapas)();
+  view.classList.toggle('wide', tab === 'vystup');
   if (keepScroll) {
     $$('.roster').forEach((r) => (r.scrollTop = saved[r.dataset.side] ?? 0));
     window.scrollTo(0, y);
@@ -679,22 +683,22 @@ function prubehHtml() {
   for (let i = 1; i <= b; i++) {
     const code = L.boardResult(S, i);
     const white = L.homeIsWhite(i);
-    // jméno a pod ním pořadí na soupisce a Elo, jako v zápisu
+    // Rozložení jako na papírovém zápisu: šachovnice, pořadí na soupisce, jméno, výsledek a zrcadlově hosté.
     const nm = (p, w, side) => {
       const elo = p ? L.ratingSummary(p) : '';
-      const sub = p
-        ? `č. ${esc(p.no)}<span class="long"> na soupisce</span>${
-            elo ? ` · ${esc(/^\d+$/.test(elo) ? `Elo ${elo}` : elo)}` : ''
-          }`
-        : '';
       return `<span class="pl-side ${side}"><span class="nm"><span class="dot ${w ? 'w' : 'b'}"></span><span class="t${
         p ? '' : ' muted'
-      }">${p ? esc(p.name) : 'neobsazeno'}</span></span>${sub ? `<span class="sub">${sub}</span>` : ''}</span>`;
+      }">${p ? esc(p.name) : 'neobsazeno'}</span></span>${
+        elo ? `<span class="sub">${esc(/^\d+$/.test(elo) ? `Elo ${elo}` : elo)}</span>` : ''
+      }</span>`;
     };
+    const rno = (p) => `<span class="rno" ${p ? 'title="Pořadí na soupisce"' : ''}>${p ? esc(p.no) : ''}</span>`;
+    const hp = home[i - 1];
+    const ap = away[i - 1];
     const cls = !code ? 'none' : L.RESULTS[code].forfeit ? 'k' : code === 'W' || code === 'WK' ? 'h' : code === 'L' || code === 'LK' ? 'a' : 'd';
-    rows.push(`<li><span class="bno">${i}</span>${nm(home[i - 1], white, 'h')}<span class="rchip ${cls}">${
+    rows.push(`<li><span class="bno">${i}</span>${rno(hp)}${nm(hp, white, 'h')}<span class="rchip ${cls}">${
       code ? L.RESULTS[code].label : '–'
-    }</span>${nm(away[i - 1], !white, 'a')}</li>`);
+    }</span>${nm(ap, !white, 'a')}${rno(ap)}<span class="bno r">${i}</span></li>`);
   }
   const comp_ = comp();
   return `<div class="pr">
@@ -716,10 +720,10 @@ async function renderOverlay() {
         <button type="button" data-ov="prubeh" class="${mode === 'prubeh' ? 'on' : ''}">Průběh utkání</button>
         <button type="button" data-ov="zapis" class="${mode === 'zapis' ? 'on' : ''}">Zápis</button>
       </div>
-      ${mode === 'zapis' ? `<button type="button" class="btn small ghost" data-ov="zoom">${overlayZoom ? 'Na šířku' : 'Přiblížit'}</button>` : ''}
+      ${mode === 'zapis' ? `<button type="button" class="btn small ghost" data-ov="zoom">${overlayZoom ? 'Na šířku' : 'Celá stránka'}</button>` : ''}
       <button type="button" class="btn small" data-ov="close">Zavřít ✕</button>
     </div>
-    <div class="ov-body ${mode} ${overlayZoom ? 'zoom' : ''}">${mode === 'prubeh' ? prubehHtml() : '<p class="muted">Vykresluji…</p>'}</div>`;
+    <div class="ov-body ${mode} ${overlayZoom ? 'page' : ''}">${mode === 'prubeh' ? prubehHtml() : '<p class="muted">Vykresluji…</p>'}</div>`;
   if (mode === 'zapis') {
     const pages = await renderPages(S, comp(), env, { scale: 2 });
     const body = $('.ov-body', overlay);
