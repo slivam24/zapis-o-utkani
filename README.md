@@ -60,18 +60,24 @@ Takto přidaná soutěž zůstává jen v tom prohlížeči, do sdílených dat 
 Jestli načítání funguje, se dá kdykoli přeměřit úlohou **Ověření načítání soutěží** v záložce Actions.
 Do pole proxy se dá zadat vlastní adresa.
 
-### Nahrání soutěže ze souboru (bez prostředníka)
+### Stažení a nahrání souborů (funguje vždy)
 
 Nejjednodušší cesta, když načítání přes odkaz nefunguje, a funguje i úplně bez internetu:
 
-Každý seznam na chess-results se exportuje zvlášť, takže pro plnou funkci jsou potřeba **dva soubory**:
+Tahle cesta funguje vždy, i bez prostředníka a bez internetu:
 
-1. **Sestava družstva bez výsledků** → **Export do Excelu (.xlsx)**. Odtud se načtou družstva a soupisky.
-2. **Los družstev pro všechna kola** → export stejně. Teprve tenhle soubor přidá kola a zápasy.
+1. V aplikaci otevři **Přidat soutěž** a vlož odkaz na turnaj.
+2. Klikni na **Stáhnout soubory**. Aplikace stáhne oba potřebné exporty sama, protože stahování
+   souboru prohlížeč na rozdíl od čtení stránky nezakazuje.
+3. Oba stažené soubory nahraj v dalším kroku.
 
-V aplikaci otevři **Přidat soutěž**, rozbal **Když načtení nefunguje** a nahraj oba soubory najednou.
-Pořadí nerozhoduje, aplikace sama pozná, co je v kterém. Jde to i na dvakrát: nejdřív soupisky
-a los kdykoli potom, kola se doplní k vybrané soutěži.
+Stahují se dva, protože každý seznam na chess-results se exportuje zvlášť: **Sestava družstva bez
+výsledků** nese družstva a soupisky, **Los družstev pro všechna kola** kola a zápasy. Oba se jmenují
+`chessResultsList.xlsx`, takže druhý bývá uložený jako `chessResultsList(1).xlsx`. Na názvech ani
+pořadí nezáleží, aplikace pozná podle obsahu, co je v kterém.
+
+Jde to i na dvakrát: nejdřív soupisky a los kdykoli potom, kola se doplní k vybrané soutěži.
+Soubory se dají stáhnout i ručně z chess-results, odkazy na ně jsou v aplikaci pod **Další možnosti**.
 
 Export obsahuje všechno, co stránka: pořadí na soupisce, jména, ratingy, kapitány i sloupec **Typ**
 (K, ZK, H, V, C), takže kontrola hostů a volných hráčů podle čl. 3.6.3 funguje i touto cestou.

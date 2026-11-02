@@ -3,7 +3,7 @@ import { renderPages } from './render.js';
 import { buildPdf } from './pdf.js';
 import { loadData, refreshData, reloadUserComps, dataSummary } from './data.js';
 import { loadCompetition, buildFromFiles, readFiles, roundsFor, issueUrl, DEFAULT_PROXIES } from './sources.js';
-import { clean } from './parse.js';
+import { clean, tournamentNumber, exportUrl } from './parse.js';
 import * as store from './store.js';
 
 const REPO = 'slivam24/zapis-o-utkani';
@@ -21,7 +21,7 @@ let DATA = { competitions: [], generated: null };
 let S = store.loadDraft() ?? L.newMatch();
 let tab = 'zapas';
 // stav panelu Přidat soutěž
-let addComp = { open: false, busy: false, url: '', boards: '8', short: '', msg: '', error: '', showProxy: false };
+let addComp = { open: false, busy: false, url: '', boards: '8', short: '', msg: '', error: '', showProxy: false, downloaded: false };
 
 const TABS = [
   ['zapas', 'Zápas'],
@@ -85,6 +85,7 @@ function resetCompetition(id) {
 // ---------- pohledy ----------
 function addPanel() {
   const proxies = store.loadProxies();
+  const tnr = tournamentNumber(addComp.url);
   const boardOpts = [8, 5, 6, 4, 10, 12]
     .map((n) => `<option ${String(n) === addComp.boards ? 'selected' : ''}>${n}</option>`)
     .join('');
@@ -94,26 +95,34 @@ function addPanel() {
     : addComp.msg
       ? `<ul class="issues"><li class="${addComp.busy ? 'info' : 'okmsg'}">${esc(addComp.msg)}</li></ul>`
       : '';
-  const fallback = `<details ${addComp.error ? 'open' : ''}>
-      <summary>Když načtení nefunguje</summary>
-      <p class="small-text muted">Načítání jde přes prostředníka, protože chess-results čtení z prohlížeče nepovoluje.
-      Veřejné služby bývají nespolehlivé, takže pokud tohle selhalo, zkus některou z náhradních cest.
-      Jistotou je vlastní prostředník, nasadí se jednou a pak to funguje vždy.</p>
+  const upload = `<div class="card" style="margin:.8rem 0 0;${addComp.downloaded ? 'border-color:var(--accent)' : ''}">
+      <h3 style="margin-bottom:.3rem">${addComp.downloaded ? '2. Nahraj stažené soubory' : 'Nahrání souborů'}</h3>
+      <p class="small-text muted">${
+        addComp.downloaded
+          ? 'Oba soubory se jmenují stejně, ten druhý bývá uložený jako <code>chessResultsList(1).xlsx</code>. Na názvech ani pořadí nezáleží, aplikace pozná, co je v kterém.'
+          : 'Soupisky stačí na vyplnění sestav. Kola a zápasy přidá až soubor s rozlosováním, a ten jde doplnit i dodatečně.'
+      }</p>
+      <input type="file" accept=".xlsx,.html,.htm" multiple data-act="uploadRoster"
+        aria-label="Nahrát export soupisek a rozlosování">
+    </div>`;
+  const more = `<details ${addComp.error && !tnr ? 'open' : ''} style="margin-top:.6rem">
+      <summary>Další možnosti</summary>
+      <p class="small-text muted">Vkládání odkazu potřebuje prostředníka, protože chess-results čtení z prohlížeče
+      nepovoluje. Veřejné služby bývají nespolehlivé, jistotou je vlastní prostředník. Návod je v repozitáři
+      ve složce <code>worker</code>, nasadí se jednou a pak funguje i tlačítko Načíst soutěž.</p>
       <div class="row">
         <a class="btn small secondary" href="${esc(issueUrl(REPO, addComp))}" target="_blank" rel="noopener">Požádat o přidání na GitHubu</a>
         <button class="btn small ghost" type="button" data-act="proxySettings">Nastavit vlastní adresu</button>
       </div>
-      <p class="small-text muted" style="margin-top:.6rem"><b>Nejjednodušší je export do Excelu.</b> Každý seznam na
-      chess-results se exportuje zvlášť, takže pro plnou funkci jsou potřeba dva:</p>
-      <ol class="small-text muted" style="margin:.2rem 0 .6rem 1.1rem">
-        <li>Zobraz <em>Sestava družstva bez výsledků</em> a dole klikni na <em>Export do Excelu (.xlsx)</em>. Z tohohle
-        souboru se načtou družstva a soupisky.</li>
-        <li>Zobraz <em>Los družstev pro všechna kola</em> a exportuj stejně. Teprve tenhle soubor přidá kola a zápasy.</li>
-      </ol>
-      <p class="small-text muted">Nahraj oba najednou, nebo nejdřív soupisky a los kdykoli potom, doplní se k vybrané
-      soutěži. Místo exportu jde nahrát i uložená stránka (.html).</p>
-      <label class="field"><span>Export nebo uložená stránka (.xlsx, .html) – klidně oba soubory najednou</span>
-        <input type="file" accept=".xlsx,.html,.htm" multiple data-act="uploadRoster"></label>
+      ${
+        tnr === null
+          ? ''
+          : `<p class="small-text muted" style="margin-top:.6rem">Soubory jdou stáhnout i po jednom:
+             <a href="${esc(exportUrl(tnr, 8))}" target="_blank" rel="noopener">soupisky</a> a
+             <a href="${esc(exportUrl(tnr, 2))}" target="_blank" rel="noopener">rozlosování</a>.</p>`
+      }
+      <p class="small-text muted">Místo exportu jde nahrát i uložená stránka (.html). Na chess-results k tomu
+      zobraz <em>Sestava družstva bez výsledků</em>, případně <em>Los družstev pro všechna kola</em>.</p>
     </details>`;
   const proxyBox = addComp.showProxy
     ? `<label class="field" style="margin-top:.6rem"><span>Vlastní adresy prostředníka, každá na řádek (prázdné = veřejné)</span>
@@ -133,12 +142,19 @@ function addPanel() {
         <input type="text" data-add="short" value="${esc(addComp.short)}" placeholder="podle názvu soutěže" autocomplete="off"></label>
     </div>
     <div class="row" style="margin-top:.6rem">
-      <button class="btn" type="button" data-act="loadComp" ${addComp.busy ? 'disabled' : ''}>${addComp.busy ? 'Načítám…' : 'Načíst soutěž'}</button>
-      <button class="btn ghost small" type="button" data-act="proxySettings">${addComp.showProxy ? 'Skrýt nastavení' : 'Nastavení načítání'}</button>
+      <button class="btn" type="button" data-act="loadComp" ${addComp.busy ? 'disabled' : ''}>${addComp.busy ? 'Načítám…' : 'Načíst ze serveru'}</button>
+      ${tnr === null ? '' : `<button class="btn secondary" type="button" data-act="downloadExports">${addComp.downloaded ? 'Stáhnout znovu' : '1. Stáhnout soubory'}</button>`}
+      <button class="btn ghost small" type="button" data-act="proxySettings">${addComp.showProxy ? 'Skrýt nastavení' : 'Nastavení'}</button>
     </div>
+    <p class="small-text muted" style="margin-top:.4rem">${
+      tnr === null
+        ? 'Po vložení odkazu se objeví i tlačítko, kterým se oba potřebné soubory rovnou stáhnou.'
+        : '<b>Načíst ze serveru</b> zkusí soutěž stáhnout rovnou, to ale vyžaduje prostředníka. <b>Stáhnout soubory</b> uloží oba exporty do zařízení, ty je pak níže nahraješ. Tahle cesta funguje vždy.'
+    }</p>
     ${proxyBox}
     ${status}
-    ${fallback}
+    ${upload}
+    ${more}
   </div>`;
 }
 
@@ -759,6 +775,23 @@ view.addEventListener('click', (e) => {
     }
     case 'loadComp':
       return loadNewCompetition();
+    case 'downloadExports': {
+      const tnr = tournamentNumber(addComp.url);
+      if (tnr === null) return toast('Nejdřív vlož odkaz na turnaj.');
+      // Stahuje se přes skrytý rámec: server posílá hlavičku attachment, takže se soubor uloží
+      // a nikam se neodchází. Oproti otevření okna to neblokuje hlídač vyskakovacích oken.
+      for (const art of [8, 2]) {
+        const frame = document.createElement('iframe');
+        frame.hidden = true;
+        frame.src = exportUrl(tnr, art);
+        document.body.append(frame);
+        setTimeout(() => frame.remove(), 60000);
+      }
+      addComp = { ...addComp, downloaded: true, error: '', msg: '' };
+      renderView();
+      toast('Stahuju oba soubory. Pak je nahraj níže.');
+      return;
+    }
     case 'delComp': {
       const id = el.dataset.id;
       const target = DATA.competitions.find((x) => x.id === id);
