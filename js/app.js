@@ -679,12 +679,22 @@ function prubehHtml() {
   for (let i = 1; i <= b; i++) {
     const code = L.boardResult(S, i);
     const white = L.homeIsWhite(i);
-    const nm = (p, w) =>
-      `<span class="nm"><span class="dot ${w ? 'w' : 'b'}"></span><span class="t${p ? '' : ' muted'}">${p ? esc(p.name) : 'neobsazeno'}</span></span>`;
+    // jméno a pod ním pořadí na soupisce a Elo, jako v zápisu
+    const nm = (p, w, side) => {
+      const elo = p ? L.ratingSummary(p) : '';
+      const sub = p
+        ? `č. ${esc(p.no)}<span class="long"> na soupisce</span>${
+            elo ? ` · ${esc(/^\d+$/.test(elo) ? `Elo ${elo}` : elo)}` : ''
+          }`
+        : '';
+      return `<span class="pl-side ${side}"><span class="nm"><span class="dot ${w ? 'w' : 'b'}"></span><span class="t${
+        p ? '' : ' muted'
+      }">${p ? esc(p.name) : 'neobsazeno'}</span></span>${sub ? `<span class="sub">${sub}</span>` : ''}</span>`;
+    };
     const cls = !code ? 'none' : L.RESULTS[code].forfeit ? 'k' : code === 'W' || code === 'WK' ? 'h' : code === 'L' || code === 'LK' ? 'a' : 'd';
-    rows.push(`<li><span class="bno">${i}</span>${nm(home[i - 1], white)}<span class="rchip ${cls}">${
+    rows.push(`<li><span class="bno">${i}</span>${nm(home[i - 1], white, 'h')}<span class="rchip ${cls}">${
       code ? L.RESULTS[code].label : '–'
-    }</span>${nm(away[i - 1], !white)}</li>`);
+    }</span>${nm(away[i - 1], !white, 'a')}</li>`);
   }
   const comp_ = comp();
   return `<div class="pr">
