@@ -54,11 +54,28 @@ Takto přidaná soutěž zůstává jen v tom prohlížeči, do sdílených dat 
 - **Spolehlivé řešení je vlastní prostředník**, viz [worker/README.md](worker/README.md). Kód pro
   Cloudflare Workers je připravený, nasazení je na pár kliknutí a je zdarma. Adresa se vloží
   v aplikaci v **Nastavení načítání** a má přednost před veřejnými službami.
-- Když načtení neprojde, aplikace nabídne **nahrání uložené stránky** se soupiskami (funguje vždy,
-  i bez internetu) nebo **předvyplněné hlášení na GitHubu** podle postupu níže.
+- Když načtení neprojde, dá se soutěž **nahrát ze souboru** (viz níže) nebo požádat o její přidání
+  **hlášením na GitHubu** podle postupu dál.
 
 Jestli načítání funguje, se dá kdykoli přeměřit úlohou **Ověření načítání soutěží** v záložce Actions.
 Do pole proxy se dá zadat vlastní adresa.
+
+### Nahrání soutěže ze souboru (bez prostředníka)
+
+Nejjednodušší cesta, když načítání přes odkaz nefunguje, a funguje i úplně bez internetu:
+
+1. Na chess-results zobraz **Sestava družstva bez výsledků** a dole klikni na **Export do Excelu (.xlsx)**.
+2. V aplikaci otevři **Přidat soutěž**, rozbal **Když načtení nefunguje** a soubor nahraj.
+3. Chceš-li i výběr kola a zápasu, stáhni stejně i export seznamu **Los družstev pro všechna kola**
+   a nahraj oba soubory najednou. Pořadí nerozhoduje, aplikace sama pozná, co je v kterém.
+
+Export obsahuje všechno, co stránka: pořadí na soupisce, jména, ratingy, kapitány i sloupec **Typ**
+(K, ZK, H, V, C), takže kontrola hostů a volných hráčů podle čl. 3.6.3 funguje i touto cestou.
+Ověřeno na exportech ÚKŠS i Extraligy. Pokud soutěž typy nepoužívá, nejsou ani na stránce.
+
+Čtečka `.xlsx` je vlastní (`js/xlsx.js`), bez knihoven: soubor je ZIP s XML a rozbaluje se přes
+`DecompressionStream`, které umí všechny dnešní prohlížeče. Místo exportu jde nahrát i uložená
+stránka `.html`.
 
 ### Přidání soutěže pro všechny, přes hlášení
 
@@ -85,7 +102,7 @@ parser v `scripts/fetch_data.py`. Soupisky jde vždy doplnit i ručně přímo v
 
 ```bash
 npm install                 # jen linkedom, pro parsování HTML v Node
-npm test                    # 40 testů: logika zápisu, parser chess-results, přidávání soutěží
+npm test                    # 51 testů: logika zápisu, parser, čtečka .xlsx, přidávání soutěží
 npm run serve               # lokální spuštění: http://localhost:8080
 ```
 

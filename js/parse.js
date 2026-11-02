@@ -98,8 +98,8 @@ export function headerMap(cells) {
     const k = c.replace(/\s/g, '');
     if (['šach.', 'šach', 'bd.', 'bd', 'sach.'].includes(k)) map.no = i;
     else if (['jméno', 'name'].includes(k)) map.name = i;
-    else if (['rtgn', 'nrtg'].includes(k)) map.nat = i;
-    else if (['rtgi', 'irtg', 'fide'].includes(k)) map.fide = i;
+    else if (['rtgn', 'nrtg', 'rtgnat', 'rtglok'].includes(k)) map.nat = i;
+    else if (['rtgi', 'irtg', 'fide', 'rtgfide'].includes(k)) map.fide = i;
     else if (['rtg', 'elo'].includes(k)) map.rtg = i;
     else if (k === 'fed') map.fed = i;
     else if (['typ', 'type'].includes(k)) map.type = i;
@@ -145,13 +145,22 @@ function playerFrom(cells, linkTexts, hm) {
   };
 }
 
-/** Soupisky družstev ze stránky art=8 nebo art=1. */
-export function parseRosters(doc) {
+/** Hlavička kola jen v řádku s jedinou krátkou buňkou, jinak se chytí navigace nebo vnořená tabulka. */
+function roundHeader(nonEmpty) {
+  if (nonEmpty.length !== 1 || nonEmpty[0].length > MAX_HEADER) return null;
+  return ROUND_RE.exec(nonEmpty[0]) ?? ROUND_ALT_RE.exec(nonEmpty[0]);
+}
+
+/**
+ * Soupisky družstev z řádků tabulky. Řádek je { cells, links }.
+ * Společné jádro pro stránku i pro export do Excelu, aby rozpoznávání družstev
+ * a hráčů existovalo jen jednou.
+ */
+export function parseRosterRows(rows) {
   const teams = [];
   let cur = null;
   let hm = null;
-  for (const tr of doc.querySelectorAll('tr')) {
-    const cells = cellsOf(tr);
+  for (const { cells, links } of rows) {
     if (!cells.length) continue;
     const nonEmpty = cells.filter(Boolean);
     if (!nonEmpty.length) continue;
@@ -171,26 +180,44 @@ export function parseRosters(doc) {
       continue;
     }
     if (!cur) continue;
-    const linkTexts = [...tr.querySelectorAll('a')].map((a) => clean(a.textContent));
-    const p = playerFrom(cells, linkTexts, hm);
+    const p = playerFrom(cells, links ?? [], hm);
     if (p) cur.players.push(p);
   }
   return teams;
 }
 
-/** Hlavička kola jen v řádku s jedinou krátkou buňkou, jinak se chytí navigace nebo vnořená tabulka. */
-function roundHeader(nonEmpty) {
-  if (nonEmpty.length !== 1 || nonEmpty[0].length > MAX_HEADER) return null;
-  return ROUND_RE.exec(nonEmpty[0]) ?? ROUND_ALT_RE.exec(nonEmpty[0]);
+const rowsFromDocument = (doc) =>
+  [...doc.querySelectorAll('tr')].map((tr) => ({
+    cells: cellsOf(tr),
+    links: [...tr.querySelectorAll('a')].map((a) => clean(a.textContent)),
+  }));
+
+/** Soupisky družstev ze stránky art=8 nebo art=1. */
+export const parseRosters = (doc) => parseRosterRows(rowsFromDocument(doc));
+
+/** Soupisky družstev z exportu do Excelu (mřížka buněk z js/xlsx.js). */
+export const parseRostersFromGrid = (grid) => parseRosterRows(grid.map((cells) => ({ cells, links: [] })));
+
+/** Hlavička exportu: 2. řádek bývá název soutěže se sezónou. */
+export function titleFromGrid(grid) {
+  for (const cells of grid.slice(0, 6)) {
+    const text = clean(cells[0] ?? '');
+    if (!text || text.length > MAX_NAME) continue;
+    if (/chess-results|poslední aktualizace|last update/i.test(text)) continue;
+    if (NOT_A_TITLE_RE.test(text)) continue;
+    if (TEAM_RE.test(text)) break;
+    return text;
+  }
+  return '';
 }
 
-/** Rozlosování ze stránky art=2. Dvojice se poznají podle názvů družstev ze soupisek. */
-export function parseRounds(doc, teamNames) {
+
+/** Rozlosování z řádků tabulky. Dvojice se poznají podle názvů družstev ze soupisek. */
+export function parseRoundRows(rows, teamNames) {
   const byNorm = new Map(teamNames.map((n) => [normalize(n), n]));
   const rounds = [];
   let cur = null;
-  for (const tr of doc.querySelectorAll('tr')) {
-    const cells = cellsOf(tr);
+  for (const cells of rows) {
     const nonEmpty = cells.filter(Boolean);
     if (!nonEmpty.length) continue;
 
@@ -212,6 +239,31 @@ export function parseRounds(doc, teamNames) {
     if (found.length >= 2) cur.matches.push({ home: found[0], away: found[1] });
   }
   return rounds.filter((r) => r.matches.length);
+}
+
+/** Rozlosování ze stránky art=2. */
+export const parseRounds = (doc, teamNames) =>
+  parseRoundRows([...doc.querySelectorAll('tr')].map((tr) => cellsOf(tr)), teamNames);
+
+/** Rozlosování z exportu do Excelu. */
+export const parseRoundsFromGrid = (grid, teamNames) => parseRoundRows(grid, teamNames);
+
+/**
+ * Pozná, co je v exportu do Excelu: soupisky nebo rozlosování.
+ * Čtvrtý řádek nese název seznamu ('Sestava družstva bez výsledků', 'Los družstev pro všechna kola'),
+ * jistotou je ale obsah, protože názvy se liší podle jazyka.
+ */
+export function gridKind(grid) {
+  const head = grid.slice(0, 6).map((r) => clean(r[0] ?? '')).join(' | ').toLowerCase();
+  if (/los dru|pairings|auslosung/.test(head)) return 'rounds';
+  if (/sestava|composition|mannschaftsaufstellung/.test(head)) return 'rosters';
+  for (const cells of grid) {
+    const nonEmpty = cells.filter(Boolean);
+    if (!nonEmpty.length) continue;
+    if (nonEmpty.length <= 3 && TEAM_RE.test(nonEmpty.join(' '))) return 'rosters';
+    if (roundHeader(nonEmpty)) return 'rounds';
+  }
+  return 'unknown';
 }
 
 /** Zkrátí název soutěže na popisek do nabídky. */

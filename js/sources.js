@@ -3,7 +3,11 @@
 // chess-results neposílá hlavičku Access-Control-Allow-Origin, takže prohlížeč si jeho stránku
 // stáhnout nesmí. Proto se čte přes prostředníka (proxy). Ve výchozím stavu se zkouší veřejné
 // služby, v nastavení aplikace jde zadat vlastní adresu (viz worker/README.md).
-import { parseRosters, parseRounds, splitSeason, tournamentTitle, tournamentNumber, shorten, pageUrl } from './parse.js';
+import {
+  parseRosters, parseRounds, parseRostersFromGrid, parseRoundsFromGrid, titleFromGrid, gridKind,
+  splitSeason, tournamentTitle, tournamentNumber, shorten, pageUrl, clean,
+} from './parse.js';
+import { xlsxToGrid } from './xlsx.js';
 
 export const DEFAULT_PROXIES = [
   'https://api.allorigins.win/raw?url={url}',
@@ -95,6 +99,83 @@ export async function loadCompetition({ url, boards, short, proxies, season }, o
     onStep('Rozlosování se nepodařilo načíst, družstva půjdou vybrat ručně.');
   }
   return buildCompetition({ tnr, boards, short, rosterHtml, drawHtml, season });
+}
+
+/** Krátké stabilní id pro soutěž nahranou ze souboru, u které není známé číslo turnaje. */
+function idFromName(name) {
+  let h = 2166136261;
+  for (const ch of String(name)) {
+    h ^= ch.codePointAt(0);
+    h = Math.imul(h, 16777619);
+  }
+  return `x${(h >>> 0).toString(36)}`;
+}
+
+/**
+ * Soutěž z nahraných souborů: export do Excelu (.xlsx) nebo uložená stránka (.html).
+ * Dá se nahrát soupiska i rozlosování najednou, pořadí nerozhoduje.
+ */
+export async function buildFromFiles(files, { boards, short, url } = {}) {
+  let rosterSource = null;
+  let roundsGrid = null;
+  let roundsDoc = null;
+  let title = '';
+
+  for (const file of files) {
+    const isXlsx = /\.xlsx$/i.test(file.name) || file.type.includes('spreadsheet');
+    if (isXlsx) {
+      let grid;
+      try {
+        grid = await xlsxToGrid(await file.arrayBuffer());
+      } catch (e) {
+        throw new Error(`${file.name}: ${e.message}`);
+      }
+      const kind = gridKind(grid);
+      title = title || titleFromGrid(grid);
+      if (kind === 'rounds') roundsGrid = grid;
+      else if (kind === 'rosters') rosterSource = { kind: 'grid', grid };
+      else throw new Error(`${file.name}: nepoznávám, co v souboru je. Čekám export soupisek nebo rozlosování.`);
+    } else {
+      const doc = new DOMParser().parseFromString(await file.text(), 'text/html');
+      const teams = parseRosters(doc).filter((t) => t.players.length);
+      title = title || tournamentTitle(doc);
+      if (teams.length >= 2) rosterSource = { kind: 'doc', doc };
+      else roundsDoc = doc;
+    }
+  }
+
+  if (!rosterSource) {
+    throw new Error('Mezi soubory chybí soupisky družstev. Nahraj export seznamu „Sestava družstva bez výsledků“.');
+  }
+  const teams = (rosterSource.kind === 'grid' ? parseRostersFromGrid(rosterSource.grid) : parseRosters(rosterSource.doc))
+    .filter((t) => t.players.length);
+  if (teams.length < 2) {
+    throw new Error('V souboru jsou soupisky jen jednoho družstva. Vypadá to na turnaj jednotlivců.');
+  }
+  const names = teams.map((t) => t.name);
+  const rounds = roundsGrid
+    ? parseRoundsFromGrid(roundsGrid, names)
+    : roundsDoc
+      ? parseRounds(roundsDoc, names)
+      : [];
+
+  const [name, season] = splitSeason(clean(title));
+  const tnr = tournamentNumber(url ?? '');
+  const finalName = name || `Soutěž ${new Date().toLocaleDateString('cs-CZ')}`;
+  return {
+    id: tnr === null ? idFromName(`${finalName}|${season ?? ''}`) : `t${tnr}`,
+    short: short || shorten(finalName),
+    name: finalName,
+    group: '',
+    tnr: tnr ?? null,
+    boards,
+    season: season ?? '',
+    url: tnr === null ? '' : `https://chess-results.com/tnr${tnr}.aspx?lan=5`,
+    teams,
+    rounds,
+    added: new Date().toISOString(),
+    local: true,
+  };
 }
 
 /** Odkaz na předvyplněné hlášení na GitHubu, když načtení v prohlížeči selže. */

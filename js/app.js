@@ -2,8 +2,7 @@ import * as L from './logic.js';
 import { renderPages } from './render.js';
 import { buildPdf } from './pdf.js';
 import { loadData, refreshData, reloadUserComps, dataSummary } from './data.js';
-import { loadCompetition, buildCompetition, issueUrl, DEFAULT_PROXIES } from './sources.js';
-import { tournamentNumber } from './parse.js';
+import { loadCompetition, buildFromFiles, issueUrl, DEFAULT_PROXIES } from './sources.js';
 import * as store from './store.js';
 
 const REPO = 'slivam24/zapis-o-utkani';
@@ -103,11 +102,12 @@ function addPanel() {
         <a class="btn small secondary" href="${esc(issueUrl(REPO, addComp))}" target="_blank" rel="noopener">Požádat o přidání na GitHubu</a>
         <button class="btn small ghost" type="button" data-act="proxySettings">Nastavit vlastní adresu</button>
       </div>
-      <p class="small-text muted" style="margin-top:.6rem">Nebo nahraj uloženou stránku se soupiskami: na chess-results
-      zobraz <em>Sestava družstva bez výsledků</em> a ulož stránku jako soubor. Rozlosování se tak nenačte,
-      družstva se pak vybírají ručně.</p>
-      <label class="field"><span>Soubor se soupiskami (.html)</span>
-        <input type="file" accept=".html,.htm,text/html" data-act="uploadRoster"></label>
+      <p class="small-text muted" style="margin-top:.6rem"><b>Nejjednodušší je export do Excelu.</b> Na chess-results
+      zobraz <em>Sestava družstva bez výsledků</em>, dole klikni na <em>Export do Excelu (.xlsx)</em> a soubor nahraj sem.
+      Můžeš přidat i export seznamu <em>Los družstev pro všechna kola</em>, pak bude fungovat i výběr kola a zápasu.
+      Místo exportu jde nahrát i uloženou stránku (.html).</p>
+      <label class="field"><span>Export nebo uložená stránka (.xlsx, .html) – klidně oba soubory najednou</span>
+        <input type="file" accept=".xlsx,.html,.htm" multiple data-act="uploadRoster"></label>
     </details>`;
   const proxyBox = addComp.showProxy
     ? `<label class="field" style="margin-top:.6rem"><span>Vlastní adresy prostředníka, každá na řádek (prázdné = veřejné)</span>
@@ -142,13 +142,14 @@ function viewZapas() {
   const rounds = c?.rounds ?? [];
   const round = rounds.find((r) => String(r.no) === String(S.round));
 
+  const compLabel = (x) => {
+    const full = `${x.name}${x.group ? ` ${x.group}` : ''}`;
+    // zkratka se nepřidává, když je stejná jako název, ať se nabídka nezdvojuje
+    const label = x.short && !full.startsWith(x.short) ? `${x.short} – ${full}` : full;
+    return `${label}${x.teams.length ? '' : ' (bez soupisek)'}${x.local ? ' ★' : ''}`;
+  };
   const compOpts = DATA.competitions
-    .map(
-      (x) =>
-        `<option value="${esc(x.id)}" ${x.id === S.compId ? 'selected' : ''}>${esc(x.short)} – ${esc(x.name)}${
-          x.group ? ` ${esc(x.group)}` : ''
-        }${x.teams.length ? '' : ' (bez soupisek)'}</option>`,
-    )
+    .map((x) => `<option value="${esc(x.id)}" ${x.id === S.compId ? 'selected' : ''}>${esc(compLabel(x))}</option>`)
     .join('');
 
   const roundField = rounds.length
@@ -767,20 +768,15 @@ view.addEventListener('click', (e) => {
   }
 });
 
-/** Načte soutěž podle vloženého odkazu a uloží ji do zařízení. */
-async function loadNewCompetition(fromFile = null) {
+/** Načte soutěž podle vloženého odkazu nebo z nahraných souborů a uloží ji do zařízení. */
+async function loadNewCompetition(files = null) {
   const boards = Number(addComp.boards);
-  addComp = { ...addComp, busy: true, msg: 'Načítám…', error: '' };
+  addComp = { ...addComp, busy: true, msg: files ? 'Čtu soubory…' : 'Načítám…', error: '' };
   renderView();
   try {
     const proxies = store.loadProxies();
-    const comp = fromFile
-      ? buildCompetition({
-          tnr: tournamentNumber(addComp.url) ?? Date.now() % 1000000,
-          boards,
-          short: addComp.short,
-          rosterHtml: fromFile,
-        })
+    const comp = files
+      ? await buildFromFiles(files, { boards, short: addComp.short, url: addComp.url })
       : await loadCompetition(
           { url: addComp.url, boards, short: addComp.short, proxies: proxies.length ? proxies : DEFAULT_PROXIES },
           (step) => {
@@ -788,7 +784,7 @@ async function loadNewCompetition(fromFile = null) {
             renderView();
           },
         );
-    if (DATA.competitions.some((x) => x.tnr === comp.tnr && !x.local)) {
+    if (comp.tnr && DATA.competitions.some((x) => x.tnr === comp.tnr && !x.local)) {
       throw new Error('Tahle soutěž už v aplikaci je mezi sdílenými, přidávat ji nemusíš.');
     }
     if (!store.saveUserComp(comp)) throw new Error('Soutěž se nepodařilo uložit, úložiště zařízení je plné.');
@@ -806,8 +802,13 @@ async function loadNewCompetition(fromFile = null) {
       busy: false,
       url: '',
       short: '',
-      msg: `Přidáno: ${comp.name}. Načteno ${comp.teams.length} družstev, ${players} hráčů` +
-        `${comp.rounds.length ? ` a ${comp.rounds.length} kol` : ', rozlosování se nepodařilo načíst'}.`,
+      msg:
+        `Přidáno: ${comp.name}. Načteno ${comp.teams.length} družstev, ${players} hráčů` +
+        (comp.rounds.length
+          ? ` a ${comp.rounds.length} kol.`
+          : files
+            ? '. Rozlosování v souborech nebylo, družstva vyber ručně. Chceš-li i výběr kola a zápasu, nahraj k tomu export seznamu „Los družstev pro všechna kola“.'
+            : '. Rozlosování se nepodařilo načíst, družstva vyber ručně.'),
       error: '',
     };
     renderView();
@@ -821,14 +822,9 @@ async function loadNewCompetition(fromFile = null) {
 view.addEventListener('change', async (e) => {
   const input = e.target;
   if (input.dataset.act !== 'uploadRoster') return;
-  const file = input.files?.[0];
-  if (!file) return;
-  try {
-    await loadNewCompetition(await file.text());
-  } catch (err) {
-    addComp = { ...addComp, error: `Soubor se nepodařilo přečíst: ${err.message}` };
-    renderView();
-  }
+  const files = [...(input.files ?? [])];
+  if (!files.length) return;
+  await loadNewCompetition(files);
 });
 
 view.addEventListener('input', (e) => {
