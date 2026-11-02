@@ -13,43 +13,53 @@ jobs:
           node-version: "22"
       - run: npm i -D playwright@1.49.1 && npx playwright install --with-deps chromium
 
-      - name: Zkusit veřejné prostředníky
-        run: |
-          for p in "https://api.allorigins.win/raw?url=" "https://corsproxy.io/?url=" "https://api.codetabs.com/v1/proxy?quest="; do
-            url="${p}$(node -e 'console.log(encodeURIComponent("https://chess-results.com/tnr1507857.aspx?lan=5&art=8&zeilen=0"))')"
-            code=$(curl -s -o /tmp/out.html -w '%{http_code}' -m 30 -H "Origin: https://slivam24.github.io" -D /tmp/h.txt "$url" || echo 000)
-            acao=$(grep -i '^access-control-allow-origin' /tmp/h.txt | tr -d '\r' || true)
-            size=$(wc -c < /tmp/out.html)
-            teams=$(grep -o 'Kapitán' /tmp/out.html | wc -l || true)
-            echo "PROXY $p -> HTTP $code, ${size} B, 'Kapitán' ${teams}x, ${acao:-BEZ ACAO}"
-          done
-
-      - name: Načíst soutěž v prohlížeči na živém webu
+      - name: Vyzkoušet prostředníky z prohlížeče na živém webu
         run: |
           cat > zkouska.mjs <<'EOF'
           import { chromium } from 'playwright';
+
+          const PROXIES = [
+            'https://api.allorigins.win/raw?url={url}',
+            'https://corsproxy.io/?url={url}',
+            'https://api.codetabs.com/v1/proxy?quest={url}',
+            'https://api.cors.lol/?url={url}',
+            'https://thingproxy.freeboard.io/fetch/{url}',
+          ];
+          const APP = 'https://slivam24.github.io/zapis-o-utkani/';
+          const TNR = 'https://chess-results.com/tnr1246377.aspx?lan=5';
+
           const browser = await chromium.launch();
-          const page = await browser.newPage();
-          const errors = [];
-          page.on('pageerror', (e) => errors.push(e.message));
-          await page.goto('https://slivam24.github.io/zapis-o-utkani/', { waitUntil: 'networkidle' });
-          await page.click('button[data-act="toggleAdd"]');
-          await page.fill('input[data-add="url"]', 'https://chess-results.com/tnr1246377.aspx?lan=5');
-          await page.selectOption('select[data-add="boards"]', '8');
-          await page.click('button[data-act="loadComp"]');
-          const res = await Promise.race([
-            page.waitForSelector('.issues li.okmsg', { timeout: 90000 }).then((el) => el.textContent()).then((t) => ['OK', t]),
-            page.waitForSelector('.issues li.error', { timeout: 90000 }).then((el) => el.textContent()).then((t) => ['CHYBA', t]),
-          ]);
-          console.log(`VYSLEDEK ${res[0]}: ${res[1]}`);
-          if (res[0] === 'OK') {
-            const opts = await page.$$eval('select[data-chg="comp"] option', (o) => o.map((x) => x.textContent));
-            console.log('NABIDKA:', JSON.stringify(opts));
-            const rounds = await page.$$eval('select[data-chg="round"] option', (o) => o.length - 1).catch(() => 0);
-            console.log('KOL:', rounds);
+          const results = [];
+          for (const proxy of PROXIES) {
+            const ctx = await browser.newContext();
+            const page = await ctx.newPage();
+            try {
+              await page.goto(APP, { waitUntil: 'networkidle' });
+              await page.evaluate((p) => {
+                localStorage.setItem('zapis.proxies.v1', JSON.stringify([p]));
+                localStorage.removeItem('zapis.comps.v1');
+                localStorage.removeItem('zapis.draft.v1');
+              }, proxy);
+              await page.reload({ waitUntil: 'networkidle' });
+              await page.click('button[data-act="toggleAdd"]');
+              await page.fill('input[data-add="url"]', TNR);
+              await page.selectOption('select[data-add="boards"]', '8');
+              await page.click('button[data-act="loadComp"]');
+              // čeká se na konečný stav: tlačítko už není zašedlé
+              await page.waitForFunction(
+                () => !document.querySelector('button[data-act="loadComp"]')?.disabled,
+                { timeout: 180000 },
+              );
+              const ok = await page.$eval('.issues li.okmsg', (e) => e.textContent).catch(() => null);
+              const err = await page.$eval('.issues li.error', (e) => e.textContent).catch(() => null);
+              results.push({ proxy, stav: ok ? 'OK' : 'CHYBA', text: (ok ?? err ?? 'bez hlášky').slice(0, 160) });
+            } catch (e) {
+              results.push({ proxy, stav: 'VYPRSELO', text: e.message.slice(0, 120) });
+            }
+            await ctx.close();
           }
-          console.log('CHYBY:', JSON.stringify(errors));
           await browser.close();
-          process.exit(res[0] === 'OK' ? 0 : 1);
+          for (const r of results) console.log(`VYSLEDEK ${r.stav.padEnd(9)} ${r.proxy}\n          ${r.text}`);
+          console.log(`SHRNUTI funkčních: ${results.filter((r) => r.stav === 'OK').length} z ${results.length}`);
           EOF
           node zkouska.mjs

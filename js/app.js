@@ -88,10 +88,11 @@ function addPanel() {
   const boardOpts = [8, 5, 6, 4, 10, 12]
     .map((n) => `<option ${String(n) === addComp.boards ? 'selected' : ''}>${n}</option>`)
     .join('');
+  // průběžná hláška se musí lišit od hotového výsledku, jinak vypadá načítání jako úspěch
   const status = addComp.error
     ? `<ul class="issues"><li class="error">${esc(addComp.error)}</li></ul>`
     : addComp.msg
-      ? `<ul class="issues"><li class="okmsg">${esc(addComp.msg)}</li></ul>`
+      ? `<ul class="issues"><li class="${addComp.busy ? 'info' : 'okmsg'}">${esc(addComp.msg)}</li></ul>`
       : '';
   const fallback = `<details ${addComp.error ? 'open' : ''}>
       <summary>Když načtení nefunguje</summary>

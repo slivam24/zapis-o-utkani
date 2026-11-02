@@ -10,7 +10,7 @@ export const DEFAULT_PROXIES = [
   'https://corsproxy.io/?url={url}',
 ];
 
-const TIMEOUT_MS = 25000;
+const TIMEOUT_MS = 45000; // stránky chess-results bývají pomalé, přes prostředníka tím spíš
 
 export function proxyUrl(template, target) {
   return template.includes('{url}')
