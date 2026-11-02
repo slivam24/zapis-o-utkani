@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T16:51:54Z",
+ "generated": "2026-11-02T16:57:03Z",
  "source": "chess-results.com",
  "season": "2026/2027",
  "competitions": [
@@ -1777,7 +1777,8 @@
    "rounds": [
     {
      "no": 1,
-     "date": null,
+     "date": "2026-10-18",
+     "time": "10:00",
      "matches": [
       {
        "home": "Duras Ústí nad Labem \"B\"",
@@ -1802,7 +1803,14 @@
       {
        "home": "ŠK Slavoj Litoměřice \"D\"",
        "away": "ŠK Louny \"A\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 2,
+     "date": "2026-11-08",
+     "time": "10:00",
+     "matches": [
       {
        "home": "Duras Ústí nad Labem \"A\"",
        "away": "ŠK Louny \"A\""
@@ -1826,7 +1834,14 @@
       {
        "home": "Duras Ústí nad Labem \"B\"",
        "away": "SK Děčín \"B\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 3,
+     "date": "2026-11-22",
+     "time": "10:00",
+     "matches": [
       {
        "home": "SK Děčín \"B\"",
        "away": "Duras Ústí nad Labem \"A\""
@@ -1850,7 +1865,14 @@
       {
        "home": "ŠK Louny \"A\"",
        "away": "TJ Sokol Údlice \"B\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 4,
+     "date": "2026-12-06",
+     "time": "10:00",
+     "matches": [
       {
        "home": "Duras Ústí nad Labem \"A\"",
        "away": "TJ Sokol Údlice \"B\""
@@ -1874,7 +1896,14 @@
       {
        "home": "SK Děčín \"B\"",
        "away": "ŠO TJ Tatran Podbořany \"A\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 5,
+     "date": "2027-01-10",
+     "time": "10:00",
+     "matches": [
       {
        "home": "ŠO TJ Tatran Podbořany \"A\"",
        "away": "Duras Ústí nad Labem \"A\""
@@ -1898,7 +1927,14 @@
       {
        "home": "TJ Sokol Údlice \"B\"",
        "away": "ŠK Teplice \"A\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 6,
+     "date": "2027-01-24",
+     "time": "10:00",
+     "matches": [
       {
        "home": "Duras Ústí nad Labem \"A\"",
        "away": "ŠK Teplice \"A\""
@@ -1922,7 +1958,14 @@
       {
        "home": "ŠO TJ Tatran Podbořany \"A\"",
        "away": "TJ Klášterec nad Ohří \"A\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 7,
+     "date": "2027-02-07",
+     "time": "10:00",
+     "matches": [
       {
        "home": "TJ Klášterec nad Ohří \"A\"",
        "away": "Duras Ústí nad Labem \"A\""
@@ -1946,7 +1989,14 @@
       {
        "home": "ŠK Teplice \"A\"",
        "away": "Šachy Povrly"
-      },
+      }
+     ]
+    },
+    {
+     "no": 8,
+     "date": "2027-02-21",
+     "time": "10:00",
+     "matches": [
       {
        "home": "Duras Ústí nad Labem \"A\"",
        "away": "Šachy Povrly"
@@ -1970,7 +2020,14 @@
       {
        "home": "TJ Klášterec nad Ohří \"A\"",
        "away": "CHESS MOST \"A\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 9,
+     "date": "2027-03-14",
+     "time": "10:00",
+     "matches": [
       {
        "home": "CHESS MOST \"A\"",
        "away": "Duras Ústí nad Labem \"A\""
@@ -1994,7 +2051,14 @@
       {
        "home": "Šachy Povrly",
        "away": "SK Šachy Chlumec \"A\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 10,
+     "date": "2027-04-04",
+     "time": "10:00",
+     "matches": [
       {
        "home": "Duras Ústí nad Labem \"A\"",
        "away": "SK Šachy Chlumec \"A\""
@@ -2018,7 +2082,14 @@
       {
        "home": "CHESS MOST \"A\"",
        "away": "ŠK Slavoj Litoměřice \"D\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 11,
+     "date": "2027-04-18",
+     "time": "10:00",
+     "matches": [
       {
        "home": "ŠK Slavoj Litoměřice \"D\"",
        "away": "Duras Ústí nad Labem \"A\""
@@ -3414,7 +3485,8 @@
    "rounds": [
     {
      "no": 1,
-     "date": null,
+     "date": "2026-10-11",
+     "time": "10:00",
      "matches": [
       {
        "home": "DDM OSEK – ŠK Stropník",
@@ -3435,7 +3507,14 @@
       {
        "home": "ŠK Postoloprty",
        "away": "TJ Sokol Údlice „D\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 2,
+     "date": "2026-11-01",
+     "time": "10:00",
+     "matches": [
       {
        "home": "Chess Most \"B\"",
        "away": "TJ Sokol Údlice „D\""
@@ -3455,7 +3534,14 @@
       {
        "home": "DDM OSEK – ŠK Stropník",
        "away": "ŠK Teplice „B\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 3,
+     "date": "2026-11-15",
+     "time": "10:00",
+     "matches": [
       {
        "home": "ŠK Teplice „B\"",
        "away": "Chess Most \"B\""
@@ -3475,7 +3561,14 @@
       {
        "home": "TJ Sokol Údlice „D\"",
        "away": "TJ Sokol Údlice „C\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 4,
+     "date": "2026-11-29",
+     "time": "10:00",
+     "matches": [
       {
        "home": "Chess Most \"B\"",
        "away": "TJ Sokol Údlice „C\""
@@ -3495,7 +3588,14 @@
       {
        "home": "ŠK Teplice „B\"",
        "away": "ŠK Magic Žatec \"A\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 5,
+     "date": "2026-12-13",
+     "time": "10:00",
+     "matches": [
       {
        "home": "ŠK Magic Žatec \"A\"",
        "away": "Chess Most \"B\""
@@ -3515,7 +3615,14 @@
       {
        "home": "TJ Sokol Údlice „C\"",
        "away": "Šachovy klub Louny \"B\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 6,
+     "date": "2027-01-17",
+     "time": "10:00",
+     "matches": [
       {
        "home": "Chess Most \"B\"",
        "away": "Šachovy klub Louny \"B\""
@@ -3535,7 +3642,14 @@
       {
        "home": "ŠK Magic Žatec \"A\"",
        "away": "TJ Klášterec nad Ohří „B“"
-      },
+      }
+     ]
+    },
+    {
+     "no": 7,
+     "date": "2027-01-31",
+     "time": "10:00",
+     "matches": [
       {
        "home": "TJ Klášterec nad Ohří „B“",
        "away": "Chess Most \"B\""
@@ -3555,7 +3669,14 @@
       {
        "home": "Šachovy klub Louny \"B\"",
        "away": "Slovan Jirkov \"A\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 8,
+     "date": "2027-02-14",
+     "time": "10:00",
+     "matches": [
       {
        "home": "Chess Most \"B\"",
        "away": "Slovan Jirkov \"A\""
@@ -3575,7 +3696,14 @@
       {
        "home": "TJ Klášterec nad Ohří „B“",
        "away": "ŠK Postoloprty"
-      },
+      }
+     ]
+    },
+    {
+     "no": 9,
+     "date": "2027-02-28",
+     "time": "10:00",
+     "matches": [
       {
        "home": "ŠK Postoloprty",
        "away": "Chess Most \"B\""
@@ -4885,7 +5013,8 @@
    "rounds": [
     {
      "no": 1,
-     "date": null,
+     "date": "2026-10-11",
+     "time": "10:00",
      "matches": [
       {
        "home": "Duras Ústí n. L. \"C\"",
@@ -4906,7 +5035,14 @@
       {
        "home": "ŠK Slavoj Litoměříce \"E\"",
        "away": "Jezdci"
-      },
+      }
+     ]
+    },
+    {
+     "no": 2,
+     "date": "2026-11-01",
+     "time": "10:00",
+     "matches": [
       {
        "home": "Duras Ústí n. L. \"D\"",
        "away": "Jezdci"
@@ -4926,7 +5062,14 @@
       {
        "home": "Duras Ústí n. L. \"C\"",
        "away": "SK Děčín \"C\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 3,
+     "date": "2026-11-15",
+     "time": "10:00",
+     "matches": [
       {
        "home": "SK Děčín \"C\"",
        "away": "Duras Ústí n. L. \"D\""
@@ -4946,7 +5089,14 @@
       {
        "home": "Jezdci",
        "away": "ŠK Slávie Děčín"
-      },
+      }
+     ]
+    },
+    {
+     "no": 4,
+     "date": "2026-11-29",
+     "time": "10:00",
+     "matches": [
       {
        "home": "Duras Ústí n. L. \"D\"",
        "away": "ŠK Slávie Děčín"
@@ -4966,7 +5116,14 @@
       {
        "home": "SK Děčín \"C\"",
        "away": "Teplice Chess Club \"B\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 5,
+     "date": "2026-12-13",
+     "time": "10:00",
+     "matches": [
       {
        "home": "Teplice Chess Club \"B\"",
        "away": "Duras Ústí n. L. \"D\""
@@ -4986,7 +5143,14 @@
       {
        "home": "ŠK Slávie Děčín",
        "away": "Sportis Svádov-Olšinky \"A\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 6,
+     "date": "2027-01-17",
+     "time": "10:00",
+     "matches": [
       {
        "home": "Duras Ústí n. L. \"D\"",
        "away": "Sportis Svádov-Olšinky \"A\""
@@ -5006,7 +5170,14 @@
       {
        "home": "Teplice Chess Club \"B\"",
        "away": "SK Šachy Chlumec \"B\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 7,
+     "date": "2027-01-31",
+     "time": "10:00",
+     "matches": [
       {
        "home": "SK Šachy Chlumec \"B\"",
        "away": "Duras Ústí n. L. \"D\""
@@ -5026,7 +5197,14 @@
       {
        "home": "Sportis Svádov-Olšinky \"A\"",
        "away": "TJ Libouchec"
-      },
+      }
+     ]
+    },
+    {
+     "no": 8,
+     "date": "2027-02-14",
+     "time": "10:00",
+     "matches": [
       {
        "home": "Duras Ústí n. L. \"D\"",
        "away": "TJ Libouchec"
@@ -5046,7 +5224,14 @@
       {
        "home": "SK Šachy Chlumec \"B\"",
        "away": "ŠK Slavoj Litoměříce \"E\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 9,
+     "date": "2027-02-28",
+     "time": "10:00",
+     "matches": [
       {
        "home": "ŠK Slavoj Litoměříce \"E\"",
        "away": "Duras Ústí n. L. \"D\""
@@ -5958,7 +6143,8 @@
    "rounds": [
     {
      "no": 1,
-     "date": null,
+     "date": "2026-10-18",
+     "time": "10:00",
      "matches": [
       {
        "home": "Šachový klub Louny \"C\"",
@@ -5975,7 +6161,14 @@
       {
        "home": "ŠK Magic Žatec \"B\"",
        "away": "Krásnodvorská Myslivna"
-      },
+      }
+     ]
+    },
+    {
+     "no": 2,
+     "date": "2026-11-08",
+     "time": "10:00",
+     "matches": [
       {
        "home": "Šachový klub Louny \"D\"",
        "away": "Krásnodvorská Myslivna"
@@ -5991,7 +6184,14 @@
       {
        "home": "Šachový klub Louny \"C\"",
        "away": "TJ Sokol Údlice \"E\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 3,
+     "date": "2026-11-22",
+     "time": "10:00",
+     "matches": [
       {
        "home": "TJ Sokol Údlice \"E\"",
        "away": "Šachový klub Louny \"D\""
@@ -6007,7 +6207,14 @@
       {
        "home": "Krásnodvorská Myslivna",
        "away": "Slovan Jirkov \"B\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 4,
+     "date": "2026-12-06",
+     "time": "10:00",
+     "matches": [
       {
        "home": "Šachový klub Louny \"D\"",
        "away": "Slovan Jirkov \"B\""
@@ -6023,7 +6230,14 @@
       {
        "home": "TJ Sokol Údlice \"E\"",
        "away": "TJ Sokol Litvínov - Lom"
-      },
+      }
+     ]
+    },
+    {
+     "no": 5,
+     "date": "2027-01-10",
+     "time": "10:00",
+     "matches": [
       {
        "home": "TJ Sokol Litvínov - Lom",
        "away": "Šachový klub Louny \"D\""
@@ -6039,7 +6253,14 @@
       {
        "home": "Slovan Jirkov \"B\"",
        "away": "Chess Most \"C\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 6,
+     "date": "2027-01-24",
+     "time": "10:00",
+     "matches": [
       {
        "home": "Šachový klub Louny \"D\"",
        "away": "Chess Most \"C\""
@@ -6055,7 +6276,14 @@
       {
        "home": "TJ Sokol Litvínov - Lom",
        "away": "ŠK Magic Žatec \"B\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 7,
+     "date": "2027-02-07",
+     "time": "10:00",
+     "matches": [
       {
        "home": "ŠK Magic Žatec \"B\"",
        "away": "Šachový klub Louny \"D\""
@@ -6735,7 +6963,8 @@
    "rounds": [
     {
      "no": 1,
-     "date": null,
+     "date": "2026-10-18",
+     "time": "10:00",
      "matches": [
       {
        "home": "SPORTIS Svádov-Olšinky \"B\"",
@@ -6748,7 +6977,14 @@
       {
        "home": "KŠ Štětí",
        "away": "SK Děčín \"D\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 2,
+     "date": "2026-11-08",
+     "time": "10:00",
+     "matches": [
       {
        "home": "TJ Libouchec \"B\"",
        "away": "SK Děčín \"D\""
@@ -6760,7 +6996,14 @@
       {
        "home": "SPORTIS Svádov-Olšinky \"B\"",
        "away": "ŠK Teplice \"C\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 3,
+     "date": "2026-11-22",
+     "time": "10:00",
+     "matches": [
       {
        "home": "ŠK Teplice \"C\"",
        "away": "TJ Libouchec \"B\""
@@ -6772,7 +7015,14 @@
       {
        "home": "SK Děčín \"D\"",
        "away": "Teplice Chess Club \"C\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 4,
+     "date": "2026-12-06",
+     "time": "10:00",
+     "matches": [
       {
        "home": "TJ Libouchec \"B\"",
        "away": "Teplice Chess Club \"C\""
@@ -6784,7 +7034,14 @@
       {
        "home": "ŠK Teplice \"C\"",
        "away": "KŠ Štětí"
-      },
+      }
+     ]
+    },
+    {
+     "no": 5,
+     "date": "2027-01-10",
+     "time": "10:00",
+     "matches": [
       {
        "home": "KŠ Štětí",
        "away": "TJ Libouchec \"B\""
@@ -6796,7 +7053,14 @@
       {
        "home": "Teplice Chess Club \"C\"",
        "away": "SPORTIS Svádov-Olšinky \"B\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 6,
+     "date": "2027-01-24",
+     "time": "10:00",
+     "matches": [
       {
        "home": "TJ Libouchec \"B\"",
        "away": "SPORTIS Svádov-Olšinky \"B\""
@@ -6808,7 +7072,14 @@
       {
        "home": "SK Děčín \"D\"",
        "away": "KŠ Štětí"
-      },
+      }
+     ]
+    },
+    {
+     "no": 7,
+     "date": "2027-02-07",
+     "time": "10:00",
+     "matches": [
       {
        "home": "SK Děčín \"D\"",
        "away": "TJ Libouchec \"B\""
@@ -6820,7 +7091,14 @@
       {
        "home": "ŠK Teplice \"C\"",
        "away": "SPORTIS Svádov-Olšinky \"B\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 8,
+     "date": "2027-02-21",
+     "time": "10:00",
+     "matches": [
       {
        "home": "TJ Libouchec \"B\"",
        "away": "ŠK Teplice \"C\""
@@ -6832,7 +7110,14 @@
       {
        "home": "Teplice Chess Club \"C\"",
        "away": "SK Děčín \"D\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 9,
+     "date": "2027-03-14",
+     "time": "10:00",
+     "matches": [
       {
        "home": "Teplice Chess Club \"C\"",
        "away": "TJ Libouchec \"B\""
@@ -6844,7 +7129,14 @@
       {
        "home": "KŠ Štětí",
        "away": "ŠK Teplice \"C\""
-      },
+      }
+     ]
+    },
+    {
+     "no": 10,
+     "date": "2027-04-04",
+     "time": "10:00",
+     "matches": [
       {
        "home": "TJ Libouchec \"B\"",
        "away": "KŠ Štětí"
