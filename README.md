@@ -40,52 +40,39 @@ Soutěže se nastavují v `scripts/competitions.json` (číslo turnaje na chess-
 
 ### Přidání soutěže přímo v aplikaci
 
-U výběru soutěže je tlačítko **Přidat soutěž**: vloží se odkaz na turnaj z chess-results a počet
-šachovnic, aplikace načte název, sezónu, soupisky i rozlosování a soutěž uloží do zařízení.
-Takto přidaná soutěž zůstává jen v tom prohlížeči, do sdílených dat se nedostane.
+U výběru soutěže je tlačítko **Přidat soutěž** a pod ním tři kroky:
 
-**Načítání potřebuje prostředníka.** chess-results neposílá hlavičku `Access-Control-Allow-Origin`
-(ověřeno), takže prohlížeč si jeho stránku stáhnout nesmí. Aplikace proto čte přes proxy:
+1. **Vlož odkaz na soutěž.** Stačí adresa kterékoli stránky té soutěže na chess-results.com.
+   Aplikace z ní vezme číslo turnaje a potvrdí, že je v pořádku. Tady se taky zadá počet šachovnic,
+   protože ten se z chess-results vyčíst nedá.
+2. **Stáhni dva soubory.** Jedno kliknutí a aplikace stáhne oba potřebné exporty sama.
+3. **Nahraj je zpátky.** Vyberou se oba najednou a soutěž se přidá.
 
-- Ve výchozím stavu zkouší veřejné služby. **Jsou nespolehlivé.** Při zkoušce z GitHubu neprošla
-  ani jedna z pěti (vypršení času, HTTP 401, odmítnuté spojení). Zkouška ale běží v datovém centru,
-  jehož adresy tyhle služby běžně blokují, takže z běžného prohlížeče fungovat mohou. Ověř si to
-  jedním pokusem přímo v aplikaci.
-- **Spolehlivé řešení je vlastní prostředník**, viz [worker/README.md](worker/README.md). Kód pro
-  Cloudflare Workers je připravený, nasazení je na pár kliknutí a je zdarma. Adresa se vloží
-  v aplikaci v **Nastavení načítání** a má přednost před veřejnými službami.
-- Když načtení neprojde, dá se soutěž **nahrát ze souboru** (viz níže) nebo požádat o její přidání
-  **hlášením na GitHubu** podle postupu dál.
-
-Jestli načítání funguje, se dá kdykoli přeměřit úlohou **Ověření načítání soutěží** v záložce Actions.
-Do pole proxy se dá zadat vlastní adresa.
-
-### Stažení a nahrání souborů (funguje vždy)
-
-Nejjednodušší cesta, když načítání přes odkaz nefunguje, a funguje i úplně bez internetu:
-
-Tahle cesta funguje vždy, i bez prostředníka a bez internetu:
-
-1. V aplikaci otevři **Přidat soutěž** a vlož odkaz na turnaj.
-2. Klikni na **Stáhnout soubory**. Aplikace stáhne oba potřebné exporty sama, protože stahování
-   souboru prohlížeč na rozdíl od čtení stránky nezakazuje.
-3. Oba stažené soubory nahraj v dalším kroku.
-
-Stahují se dva, protože každý seznam na chess-results se exportuje zvlášť: **Sestava družstva bez
+Soubory jsou dva, protože každý seznam na chess-results se exportuje zvlášť: **Sestava družstva bez
 výsledků** nese družstva a soupisky, **Los družstev pro všechna kola** kola a zápasy. Oba se jmenují
-`chessResultsList.xlsx`, takže druhý bývá uložený jako `chessResultsList(1).xlsx`. Na názvech ani
-pořadí nezáleží, aplikace pozná podle obsahu, co je v kterém.
+`chessResultsList.xlsx`, takže druhý se uloží jako `chessResultsList(1).xlsx`. Na názvech ani pořadí
+nezáleží, aplikace pozná podle obsahu, co je v kterém. Stačí i samotné soupisky, pak se jen nevyberou
+kola a družstva se zadají ručně; rozlosování jde nahrát kdykoli potom a doplní se k vybrané soutěži.
 
-Jde to i na dvakrát: nejdřív soupisky a los kdykoli potom, kola se doplní k vybrané soutěži.
-Soubory se dají stáhnout i ručně z chess-results, odkazy na ně jsou v aplikaci pod **Další možnosti**.
+Takto přidaná soutěž zůstává jen v tom prohlížeči. Aby ji v aplikaci měli všichni a obnovovala se
+sama každý pátek, dá se o ni požádat hlášením na GitHubu podle postupu níže.
+
+**Proč to chodí přes stažení a nahrání, a ne přímo.** chess-results neposílá hlavičku
+`Access-Control-Allow-Origin` (ověřeno), takže prohlížeč aplikaci zakáže jeho stránku *přečíst*.
+*Stáhnout* soubor ale prohlížeč nebrání, a export posílá hlavičku `content-disposition: attachment`,
+takže se rovnou uloží. Načítání přes prostředníka (CORS proxy) tu dřív bylo, ale neprošla ani jedna
+z pěti veřejných služeb, a to ani z GitHubu, ani z běžné sítě, ani z mobilních dat, takže bylo
+odstraněno. Kdo by ho chtěl, najde ho v historii repozitáře i s připraveným Cloudflare Workerem.
+
+Úloha na GitHubu žádného prostředníka nepotřebuje, protože neběží v prohlížeči, a stahuje přímo.
 
 Export obsahuje všechno, co stránka: pořadí na soupisce, jména, ratingy, kapitány i sloupec **Typ**
 (K, ZK, H, V, C), takže kontrola hostů a volných hráčů podle čl. 3.6.3 funguje i touto cestou.
 Ověřeno na exportech ÚKŠS i Extraligy. Pokud soutěž typy nepoužívá, nejsou ani na stránce.
 
 Čtečka `.xlsx` je vlastní (`js/xlsx.js`), bez knihoven: soubor je ZIP s XML a rozbaluje se přes
-`DecompressionStream`, které umí všechny dnešní prohlížeče. Místo exportu jde nahrát i uložená
-stránka `.html`.
+`DecompressionStream`, které umí všechny dnešní prohlížeče. Místo stažených exportů jde nahrát
+i uložená stránka `.html` se stejnými seznamy.
 
 ### Přidání soutěže pro všechny, přes hlášení
 

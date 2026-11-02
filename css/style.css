@@ -172,6 +172,19 @@ table.lineup td.rt { width: 4.6rem; }
 .issues li.okmsg { background: var(--ok-bg); color: var(--ok); font-weight: 600; }
 .issues li.info { background: var(--sel); color: var(--accent); font-weight: 600; }
 
+/* očíslované kroky při přidávání soutěže */
+.addpanel { background: var(--sel); margin: .8rem 0 0; }
+.step { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: .7rem .8rem; margin-bottom: .6rem; }
+.step:last-of-type { margin-bottom: 0; }
+.step.done { border-color: var(--ok); }
+.step h4 { margin: 0 0 .35rem; font-size: .98rem; display: flex; align-items: center; gap: .45rem; }
+.step .n {
+  flex: 0 0 auto; width: 1.5rem; height: 1.5rem; border-radius: 50%; background: var(--line); color: var(--ink);
+  display: inline-flex; align-items: center; justify-content: center; font-size: .82rem; font-weight: 700;
+}
+.step.done .n { background: var(--ok); color: #fff; }
+.step input[type=file] { width: 100%; }
+
 .sigs { display: grid; gap: .8rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 .sig canvas { width: 100%; height: 150px; border: 1px dashed var(--muted); border-radius: 10px; background: #fff; touch-action: none; display: block; }
 .sig .cap { font-size: .8rem; font-weight: 600; color: var(--muted); margin-bottom: .25rem; }

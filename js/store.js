@@ -5,7 +5,6 @@ const KEY_REFEREES = 'zapis.referees.v1';
 const KEY_VENUES = 'zapis.venues.v1';
 const KEY_DATA = 'zapis.data.v1';
 const KEY_COMPS = 'zapis.comps.v1';
-const KEY_PROXIES = 'zapis.proxies.v1';
 
 function read(key, fallback) {
   try {
@@ -80,6 +79,3 @@ export function deleteUserComp(id) {
   return write(KEY_COMPS, loadUserComps().filter((c) => c.id !== id));
 }
 
-/** Vlastní adresy prostředníka. Prázdné pole znamená použít výchozí veřejné. */
-export const loadProxies = () => read(KEY_PROXIES, []);
-export const saveProxies = (list) => write(KEY_PROXIES, list.map((s) => s.trim()).filter(Boolean));

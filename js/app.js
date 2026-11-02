@@ -2,7 +2,7 @@ import * as L from './logic.js';
 import { renderPages } from './render.js';
 import { buildPdf } from './pdf.js';
 import { loadData, refreshData, reloadUserComps, dataSummary } from './data.js';
-import { loadCompetition, buildFromFiles, readFiles, roundsFor, issueUrl, DEFAULT_PROXIES } from './sources.js';
+import { buildFromFiles, readFiles, roundsFor, issueUrl } from './sources.js';
 import { clean, tournamentNumber, exportUrl } from './parse.js';
 import * as store from './store.js';
 
@@ -21,7 +21,7 @@ let DATA = { competitions: [], generated: null };
 let S = store.loadDraft() ?? L.newMatch();
 let tab = 'zapas';
 // stav panelu Přidat soutěž
-let addComp = { open: false, busy: false, url: '', boards: '8', short: '', msg: '', error: '', showProxy: false, downloaded: false };
+let addComp = { open: false, busy: false, url: '', boards: '8', short: '', msg: '', error: '', downloaded: false };
 
 const TABS = [
   ['zapas', 'Zápas'],
@@ -83,8 +83,40 @@ function resetCompetition(id) {
 }
 
 // ---------- pohledy ----------
+/** Hláška pod odkazem. Mění se při psaní, proto se vykresluje zvlášť. */
+function urlHint(url) {
+  const tnr = tournamentNumber(url);
+  if (tnr !== null) return `<span style="color:var(--ok)">Turnaj č. ${tnr} rozpoznán.</span>`;
+  if (!url.trim()) return '<span class="muted">Vlož odkaz a objeví se tu potvrzení, že je v pořádku.</span>';
+  return '<span style="color:var(--err)">Tohle není odkaz na turnaj na chess-results.com. Čekám adresu, ve které je <code>tnr</code> a číslo.</span>';
+}
+
+/**
+ * Po vložení odkazu musí panel zareagovat hned, ale překreslit ho celý nejde:
+ * uživateli by zmizel kurzor z pole. Proto se upraví jen to, co se odkazem mění.
+ */
+function syncUrlUi() {
+  const tnr = tournamentNumber(addComp.url);
+  const hint = $('#urlHint');
+  if (hint) hint.innerHTML = urlHint(addComp.url);
+  const btn = $('button[data-act="downloadExports"]');
+  if (btn) btn.disabled = tnr === null;
+  const step1 = $('.step');
+  if (step1) {
+    step1.classList.toggle('done', tnr !== null);
+    const n = $('.n', step1);
+    if (n) n.textContent = tnr === null ? '1' : '✓';
+  }
+  const note = $('#downloadNote');
+  if (note) {
+    note.innerHTML =
+      tnr === null
+        ? 'Nejdřív vlož odkaz v kroku 1.'
+        : 'Oba se jmenují <code>chessResultsList.xlsx</code>, takže druhý se uloží jako <code>chessResultsList(1).xlsx</code>. Najdeš je mezi staženými soubory.';
+  }
+}
+
 function addPanel() {
-  const proxies = store.loadProxies();
   const tnr = tournamentNumber(addComp.url);
   const boardOpts = [8, 5, 6, 4, 10, 12]
     .map((n) => `<option ${String(n) === addComp.boards ? 'selected' : ''}>${n}</option>`)
@@ -95,66 +127,74 @@ function addPanel() {
     : addComp.msg
       ? `<ul class="issues"><li class="${addComp.busy ? 'info' : 'okmsg'}">${esc(addComp.msg)}</li></ul>`
       : '';
-  const upload = `<div class="card" style="margin:.8rem 0 0;${addComp.downloaded ? 'border-color:var(--accent)' : ''}">
-      <h3 style="margin-bottom:.3rem">${addComp.downloaded ? '2. Nahraj stažené soubory' : 'Nahrání souborů'}</h3>
-      <p class="small-text muted">${
-        addComp.downloaded
-          ? 'Oba soubory se jmenují stejně, ten druhý bývá uložený jako <code>chessResultsList(1).xlsx</code>. Na názvech ani pořadí nezáleží, aplikace pozná, co je v kterém.'
-          : 'Soupisky stačí na vyplnění sestav. Kola a zápasy přidá až soubor s rozlosováním, a ten jde doplnit i dodatečně.'
-      }</p>
-      <input type="file" accept=".xlsx,.html,.htm" multiple data-act="uploadRoster"
-        aria-label="Nahrát export soupisek a rozlosování">
-    </div>`;
-  const more = `<details ${addComp.error && !tnr ? 'open' : ''} style="margin-top:.6rem">
-      <summary>Další možnosti</summary>
-      <p class="small-text muted">Vkládání odkazu potřebuje prostředníka, protože chess-results čtení z prohlížeče
-      nepovoluje. Veřejné služby bývají nespolehlivé, jistotou je vlastní prostředník. Návod je v repozitáři
-      ve složce <code>worker</code>, nasadí se jednou a pak funguje i tlačítko Načíst soutěž.</p>
+
+  const step = (n, title, done, body) =>
+    `<div class="step ${done ? 'done' : ''}">
+       <h4><span class="n">${done ? '✓' : n}</span>${title}</h4>
+       ${body}
+     </div>`;
+
+  return `<div class="card addpanel" data-busy="${addComp.busy ? '1' : '0'}">
+    <h3>Přidat soutěž z chess-results</h3>
+    <p class="small-text muted">Soutěž se přidá ze dvou souborů, které chess-results nabízí ke stažení.
+    Aplikace je stáhne za tebe, ty je jen nahraješ zpátky. Soutěž pak zůstane uložená v tomhle zařízení.</p>
+
+    ${step(1, 'Vlož odkaz na soutěž', tnr !== null, `
+      <p class="small-text muted">Otevři soutěž na chess-results.com a zkopíruj adresu z prohlížeče. Je jedno,
+      kterou stránku soutěže máš zrovna otevřenou.</p>
+      <label class="field"><span>Odkaz na turnaj</span>
+        <input type="text" data-add="url" value="${esc(addComp.url)}"
+          placeholder="https://chess-results.com/tnr1507857.aspx" autocomplete="off" inputmode="url"></label>
+      <p class="small-text" id="urlHint">${urlHint(addComp.url)}</p>
+      <div class="grid two" style="margin-top:.5rem">
+        <label class="field"><span>Počet šachovnic v utkání</span><select data-add="boards">${boardOpts}</select></label>
+        <label class="field"><span>Zkratka do nabídky (nepovinné)</span>
+          <input type="text" data-add="short" value="${esc(addComp.short)}" placeholder="podle názvu soutěže" autocomplete="off"></label>
+      </div>`)}
+
+    ${step(2, 'Stáhni dva soubory', addComp.downloaded, `
+      <p class="small-text muted">Kliknutím se stáhnou oba soubory, které aplikace potřebuje. Chess-results
+      nabízí každý seznam zvlášť, proto jsou dva:</p>
+      <ul class="small-text muted" style="margin:.2rem 0 .6rem 1.1rem">
+        <li><b>Soupisky družstev</b> (seznam <em>Sestava družstva bez výsledků</em>) – z nich se berou družstva a hráči.</li>
+        <li><b>Rozlosování</b> (seznam <em>Los družstev pro všechna kola</em>) – z něj se berou kola a zápasy.</li>
+      </ul>
       <div class="row">
-        <a class="btn small secondary" href="${esc(issueUrl(REPO, addComp))}" target="_blank" rel="noopener">Požádat o přidání na GitHubu</a>
-        <button class="btn small ghost" type="button" data-act="proxySettings">Nastavit vlastní adresu</button>
+        <button class="btn" type="button" data-act="downloadExports" ${tnr === null ? 'disabled' : ''}>
+          ${addComp.downloaded ? 'Stáhnout znovu' : 'Stáhnout oba soubory'}</button>
       </div>
+      <p class="small-text muted" style="margin-top:.4rem" id="downloadNote">${
+        tnr === null
+          ? 'Nejdřív vlož odkaz v kroku 1.'
+          : 'Oba se jmenují <code>chessResultsList.xlsx</code>, takže druhý se uloží jako <code>chessResultsList(1).xlsx</code>. Najdeš je mezi staženými soubory.'
+      }</p>`)}
+
+    ${step(3, 'Nahraj je zpátky', false, `
+      <p class="small-text muted">Vyber oba stažené soubory najednou. Na pořadí ani na názvech nezáleží,
+      aplikace pozná podle obsahu, co je v kterém.</p>
+      <input type="file" accept=".xlsx,.html,.htm" multiple data-act="uploadRoster"
+        aria-label="Nahrát stažené soubory se soupiskami a rozlosováním">
+      <p class="small-text muted" style="margin-top:.4rem">Stačí i samotné soupisky, pak se jen nevyberou kola
+      a družstva zadáš ručně. Rozlosování jde nahrát kdykoli potom, doplní se k vybrané soutěži.</p>`)}
+
+    ${status}
+
+    <details style="margin-top:.6rem">
+      <summary>Další možnosti</summary>
       ${
         tnr === null
           ? ''
-          : `<p class="small-text muted" style="margin-top:.6rem">Soubory jdou stáhnout i po jednom:
-             <a href="${esc(exportUrl(tnr, 8))}" target="_blank" rel="noopener">soupisky</a> a
-             <a href="${esc(exportUrl(tnr, 2))}" target="_blank" rel="noopener">rozlosování</a>.</p>`
+          : `<p class="small-text muted">Stáhnout po jednom:
+             <a href="${esc(exportUrl(tnr, 8))}" target="_blank" rel="noopener">soupisky</a> ·
+             <a href="${esc(exportUrl(tnr, 2))}" target="_blank" rel="noopener">rozlosování</a></p>`
       }
-      <p class="small-text muted">Místo exportu jde nahrát i uložená stránka (.html). Na chess-results k tomu
-      zobraz <em>Sestava družstva bez výsledků</em>, případně <em>Los družstev pro všechna kola</em>.</p>
-    </details>`;
-  const proxyBox = addComp.showProxy
-    ? `<label class="field" style="margin-top:.6rem"><span>Vlastní adresy prostředníka, každá na řádek (prázdné = veřejné)</span>
-         <textarea data-proxy style="min-height:80px" placeholder="${esc(DEFAULT_PROXIES[0])}">${esc(proxies.join('\n'))}</textarea></label>
-       <div class="row"><button class="btn small secondary" type="button" data-act="saveProxy">Uložit adresy</button></div>
-       <p class="small-text muted">Zástupný text <code>{url}</code> se nahradí adresou stránky. Návod na vlastní prostředníka je v repozitáři ve složce <code>worker</code>.</p>`
-    : '';
-  return `<div class="card" style="margin:.8rem 0 0;background:var(--sel)">
-    <h3>Přidat soutěž z chess-results</h3>
-    <p class="small-text muted">Vlož odkaz na turnaj. Název soutěže, sezónu, soupisky i rozlosování si aplikace načte sama.
-    Soutěž zůstane uložená v tomhle zařízení.</p>
-    <div class="grid two">
-      <label class="field"><span>Odkaz na turnaj</span>
-        <input type="text" data-add="url" value="${esc(addComp.url)}" placeholder="https://chess-results.com/tnr1507857.aspx" autocomplete="off" inputmode="url"></label>
-      <label class="field"><span>Počet šachovnic</span><select data-add="boards">${boardOpts}</select></label>
-      <label class="field"><span>Zkratka do nabídky (nepovinné)</span>
-        <input type="text" data-add="short" value="${esc(addComp.short)}" placeholder="podle názvu soutěže" autocomplete="off"></label>
-    </div>
-    <div class="row" style="margin-top:.6rem">
-      <button class="btn" type="button" data-act="loadComp" ${addComp.busy ? 'disabled' : ''}>${addComp.busy ? 'Načítám…' : 'Načíst ze serveru'}</button>
-      ${tnr === null ? '' : `<button class="btn secondary" type="button" data-act="downloadExports">${addComp.downloaded ? 'Stáhnout znovu' : '1. Stáhnout soubory'}</button>`}
-      <button class="btn ghost small" type="button" data-act="proxySettings">${addComp.showProxy ? 'Skrýt nastavení' : 'Nastavení'}</button>
-    </div>
-    <p class="small-text muted" style="margin-top:.4rem">${
-      tnr === null
-        ? 'Po vložení odkazu se objeví i tlačítko, kterým se oba potřebné soubory rovnou stáhnou.'
-        : '<b>Načíst ze serveru</b> zkusí soutěž stáhnout rovnou, to ale vyžaduje prostředníka. <b>Stáhnout soubory</b> uloží oba exporty do zařízení, ty je pak níže nahraješ. Tahle cesta funguje vždy.'
-    }</p>
-    ${proxyBox}
-    ${status}
-    ${upload}
-    ${more}
+      <p class="small-text muted">Místo stažených souborů jde nahrát i uložená stránka (.html) se stejnými seznamy.</p>
+      <p class="small-text muted">Soutěž přidaná takhle je jen v tomhle zařízení. Aby ji v aplikaci měli všichni,
+      dá se o ni požádat na GitHubu a pak se bude obnovovat sama každý pátek.</p>
+      <div class="row">
+        <a class="btn small secondary" href="${esc(issueUrl(REPO, addComp))}" target="_blank" rel="noopener">Požádat o přidání pro všechny</a>
+      </div>
+    </details>
   </div>`;
 }
 
@@ -764,17 +804,6 @@ view.addEventListener('click', (e) => {
     case 'toggleAdd':
       addComp = { ...addComp, open: !addComp.open, msg: '', error: '' };
       return renderView();
-    case 'proxySettings':
-      addComp = { ...addComp, open: true, showProxy: !addComp.showProxy };
-      return renderView();
-    case 'saveProxy': {
-      store.saveProxies(($('[data-proxy]')?.value ?? '').split('\n'));
-      toast('Adresy uložené.');
-      addComp = { ...addComp, showProxy: false };
-      return renderView();
-    }
-    case 'loadComp':
-      return loadNewCompetition();
     case 'downloadExports': {
       const tnr = tournamentNumber(addComp.url);
       if (tnr === null) return toast('Nejdřív vlož odkaz na turnaj.');
@@ -838,13 +867,13 @@ async function attachRounds(files) {
   return { comp: updated, rounds: rounds.length };
 }
 
-/** Načte soutěž podle vloženého odkazu nebo z nahraných souborů a uloží ji do zařízení. */
-async function loadNewCompetition(files = null) {
+/** Přečte nahrané soubory, vytvoří z nich soutěž a uloží ji do zařízení. */
+async function loadNewCompetition(files) {
   const boards = Number(addComp.boards);
-  addComp = { ...addComp, busy: true, msg: files ? 'Čtu soubory…' : 'Načítám…', error: '' };
+  addComp = { ...addComp, busy: true, msg: 'Čtu soubory…', error: '' };
   renderView();
   try {
-    if (files) {
+    {
       const attached = await attachRounds(files);
       if (attached) {
         addComp = {
@@ -858,16 +887,7 @@ async function loadNewCompetition(files = null) {
         return;
       }
     }
-    const proxies = store.loadProxies();
-    const comp = files
-      ? await buildFromFiles(files, { boards, short: addComp.short, url: addComp.url })
-      : await loadCompetition(
-          { url: addComp.url, boards, short: addComp.short, proxies: proxies.length ? proxies : DEFAULT_PROXIES },
-          (step) => {
-            addComp = { ...addComp, msg: step };
-            renderView();
-          },
-        );
+    const comp = await buildFromFiles(files, { boards, short: addComp.short, url: addComp.url });
     if (comp.tnr && DATA.competitions.some((x) => x.tnr === comp.tnr && !x.local)) {
       throw new Error('Tahle soutěž už v aplikaci je mezi sdílenými, přidávat ji nemusíš.');
     }
@@ -890,9 +910,7 @@ async function loadNewCompetition(files = null) {
         `Přidáno: ${comp.name}. Načteno ${comp.teams.length} družstev, ${players} hráčů` +
         (comp.rounds.length
           ? ` a ${comp.rounds.length} kol.`
-          : files
-            ? '. Rozlosování v souborech nebylo, družstva vyber ručně. Chceš-li i výběr kola a zápasu, nahraj k tomu export seznamu „Los družstev pro všechna kola“.'
-            : '. Rozlosování se nepodařilo načíst, družstva vyber ručně.'),
+          : '. Rozlosování mezi soubory nebylo, takže se nedají vybrat kola a družstva zadáš ručně. Druhý soubor jde nahrát kdykoli potom.'),
       error: '',
     };
     renderView();
@@ -915,6 +933,7 @@ view.addEventListener('input', (e) => {
   const el = e.target;
   if (el.dataset.add) {
     addComp[el.dataset.add] = el.value;
+    if (el.dataset.add === 'url') syncUrlUi();
     return;
   }
   if (el.dataset.bind) {
