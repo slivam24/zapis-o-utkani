@@ -1,0 +1,55 @@
+name: Ladění načítání v prohlížeči
+
+on:
+  workflow_dispatch:
+
+jobs:
+  zkouska:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm i -D playwright@1.49.1 && npx playwright install --with-deps chromium
+
+      - name: Zkusit veřejné prostředníky
+        run: |
+          for p in "https://api.allorigins.win/raw?url=" "https://corsproxy.io/?url=" "https://api.codetabs.com/v1/proxy?quest="; do
+            url="${p}$(node -e 'console.log(encodeURIComponent("https://chess-results.com/tnr1507857.aspx?lan=5&art=8&zeilen=0"))')"
+            code=$(curl -s -o /tmp/out.html -w '%{http_code}' -m 30 -H "Origin: https://slivam24.github.io" -D /tmp/h.txt "$url" || echo 000)
+            acao=$(grep -i '^access-control-allow-origin' /tmp/h.txt | tr -d '\r' || true)
+            size=$(wc -c < /tmp/out.html)
+            teams=$(grep -o 'Kapitán' /tmp/out.html | wc -l || true)
+            echo "PROXY $p -> HTTP $code, ${size} B, 'Kapitán' ${teams}x, ${acao:-BEZ ACAO}"
+          done
+
+      - name: Načíst soutěž v prohlížeči na živém webu
+        run: |
+          cat > zkouska.mjs <<'EOF'
+          import { chromium } from 'playwright';
+          const browser = await chromium.launch();
+          const page = await browser.newPage();
+          const errors = [];
+          page.on('pageerror', (e) => errors.push(e.message));
+          await page.goto('https://slivam24.github.io/zapis-o-utkani/', { waitUntil: 'networkidle' });
+          await page.click('button[data-act="toggleAdd"]');
+          await page.fill('input[data-add="url"]', 'https://chess-results.com/tnr1246377.aspx?lan=5');
+          await page.selectOption('select[data-add="boards"]', '8');
+          await page.click('button[data-act="loadComp"]');
+          const res = await Promise.race([
+            page.waitForSelector('.issues li.okmsg', { timeout: 90000 }).then((el) => el.textContent()).then((t) => ['OK', t]),
+            page.waitForSelector('.issues li.error', { timeout: 90000 }).then((el) => el.textContent()).then((t) => ['CHYBA', t]),
+          ]);
+          console.log(`VYSLEDEK ${res[0]}: ${res[1]}`);
+          if (res[0] === 'OK') {
+            const opts = await page.$$eval('select[data-chg="comp"] option', (o) => o.map((x) => x.textContent));
+            console.log('NABIDKA:', JSON.stringify(opts));
+            const rounds = await page.$$eval('select[data-chg="round"] option', (o) => o.length - 1).catch(() => 0);
+            console.log('KOL:', rounds);
+          }
+          console.log('CHYBY:', JSON.stringify(errors));
+          await browser.close();
+          process.exit(res[0] === 'OK' ? 0 : 1);
+          EOF
+          node zkouska.mjs
