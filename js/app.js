@@ -2,7 +2,8 @@ import * as L from './logic.js';
 import { renderPages } from './render.js';
 import { buildPdf } from './pdf.js';
 import { loadData, refreshData, reloadUserComps, dataSummary } from './data.js';
-import { loadCompetition, buildFromFiles, issueUrl, DEFAULT_PROXIES } from './sources.js';
+import { loadCompetition, buildFromFiles, readFiles, roundsFor, issueUrl, DEFAULT_PROXIES } from './sources.js';
+import { clean } from './parse.js';
 import * as store from './store.js';
 
 const REPO = 'slivam24/zapis-o-utkani';
@@ -102,10 +103,15 @@ function addPanel() {
         <a class="btn small secondary" href="${esc(issueUrl(REPO, addComp))}" target="_blank" rel="noopener">Požádat o přidání na GitHubu</a>
         <button class="btn small ghost" type="button" data-act="proxySettings">Nastavit vlastní adresu</button>
       </div>
-      <p class="small-text muted" style="margin-top:.6rem"><b>Nejjednodušší je export do Excelu.</b> Na chess-results
-      zobraz <em>Sestava družstva bez výsledků</em>, dole klikni na <em>Export do Excelu (.xlsx)</em> a soubor nahraj sem.
-      Můžeš přidat i export seznamu <em>Los družstev pro všechna kola</em>, pak bude fungovat i výběr kola a zápasu.
-      Místo exportu jde nahrát i uloženou stránku (.html).</p>
+      <p class="small-text muted" style="margin-top:.6rem"><b>Nejjednodušší je export do Excelu.</b> Každý seznam na
+      chess-results se exportuje zvlášť, takže pro plnou funkci jsou potřeba dva:</p>
+      <ol class="small-text muted" style="margin:.2rem 0 .6rem 1.1rem">
+        <li>Zobraz <em>Sestava družstva bez výsledků</em> a dole klikni na <em>Export do Excelu (.xlsx)</em>. Z tohohle
+        souboru se načtou družstva a soupisky.</li>
+        <li>Zobraz <em>Los družstev pro všechna kola</em> a exportuj stejně. Teprve tenhle soubor přidá kola a zápasy.</li>
+      </ol>
+      <p class="small-text muted">Nahraj oba najednou, nebo nejdřív soupisky a los kdykoli potom, doplní se k vybrané
+      soutěži. Místo exportu jde nahrát i uložená stránka (.html).</p>
       <label class="field"><span>Export nebo uložená stránka (.xlsx, .html) – klidně oba soubory najednou</span>
         <input type="file" accept=".xlsx,.html,.htm" multiple data-act="uploadRoster"></label>
     </details>`;
@@ -768,12 +774,57 @@ view.addEventListener('click', (e) => {
   }
 });
 
+/**
+ * Doplní rozlosování k soutěži, která už je přidaná. Vrací počet načtených kol.
+ * Používá se, když uživatel nahraje jen export seznamu „Los družstev pro všechna kola“.
+ */
+async function attachRounds(files) {
+  const { roster, draw, title } = await readFiles(files);
+  if (roster) return null; // soubory obsahují i soupisky, řeší se jako nová soutěž
+  const target =
+    (comp()?.local ? comp() : null) ??
+    DATA.competitions.find((c) => c.local && title && c.name && clean(title).startsWith(c.name));
+  if (!target) {
+    throw new Error(
+      'Nejdřív přidej soutěž ze soupisek. Pak u ní můžeš doplnit kola nahráním exportu „Los družstev pro všechna kola“.',
+    );
+  }
+  const rounds = roundsFor(draw, target.teams.map((t) => t.name));
+  if (!rounds.length) {
+    throw new Error(
+      `V souboru nejsou kola družstev z vybrané soutěže (${target.name}). Zkontroluj, že export je z téže soutěže.`,
+    );
+  }
+  const updated = { ...target, rounds };
+  if (!store.saveUserComp(updated)) throw new Error('Nepodařilo se uložit, úložiště zařízení je plné.');
+  DATA = reloadUserComps();
+  S.compId = updated.id;
+  S.round = '';
+  save();
+  $('#dataStatus').textContent = dataSummary(DATA);
+  return { comp: updated, rounds: rounds.length };
+}
+
 /** Načte soutěž podle vloženého odkazu nebo z nahraných souborů a uloží ji do zařízení. */
 async function loadNewCompetition(files = null) {
   const boards = Number(addComp.boards);
   addComp = { ...addComp, busy: true, msg: files ? 'Čtu soubory…' : 'Načítám…', error: '' };
   renderView();
   try {
+    if (files) {
+      const attached = await attachRounds(files);
+      if (attached) {
+        addComp = {
+          ...addComp,
+          busy: false,
+          msg: `K soutěži ${attached.comp.name} se doplnilo ${attached.rounds} kol. Teď jde vybrat kolo a zápas.`,
+          error: '',
+        };
+        renderView();
+        toast('Rozlosování doplněno.');
+        return;
+      }
+    }
     const proxies = store.loadProxies();
     const comp = files
       ? await buildFromFiles(files, { boards, short: addComp.short, url: addComp.url })

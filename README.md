@@ -64,10 +64,14 @@ Do pole proxy se dá zadat vlastní adresa.
 
 Nejjednodušší cesta, když načítání přes odkaz nefunguje, a funguje i úplně bez internetu:
 
-1. Na chess-results zobraz **Sestava družstva bez výsledků** a dole klikni na **Export do Excelu (.xlsx)**.
-2. V aplikaci otevři **Přidat soutěž**, rozbal **Když načtení nefunguje** a soubor nahraj.
-3. Chceš-li i výběr kola a zápasu, stáhni stejně i export seznamu **Los družstev pro všechna kola**
-   a nahraj oba soubory najednou. Pořadí nerozhoduje, aplikace sama pozná, co je v kterém.
+Každý seznam na chess-results se exportuje zvlášť, takže pro plnou funkci jsou potřeba **dva soubory**:
+
+1. **Sestava družstva bez výsledků** → **Export do Excelu (.xlsx)**. Odtud se načtou družstva a soupisky.
+2. **Los družstev pro všechna kola** → export stejně. Teprve tenhle soubor přidá kola a zápasy.
+
+V aplikaci otevři **Přidat soutěž**, rozbal **Když načtení nefunguje** a nahraj oba soubory najednou.
+Pořadí nerozhoduje, aplikace sama pozná, co je v kterém. Jde to i na dvakrát: nejdřív soupisky
+a los kdykoli potom, kola se doplní k vybrané soutěži.
 
 Export obsahuje všechno, co stránka: pořadí na soupisce, jména, ratingy, kapitány i sloupec **Typ**
 (K, ZK, H, V, C), takže kontrola hostů a volných hráčů podle čl. 3.6.3 funguje i touto cestou.

@@ -135,13 +135,12 @@ function idFromName(name) {
 }
 
 /**
- * Soutěž z nahraných souborů: export do Excelu (.xlsx) nebo uložená stránka (.html).
- * Dá se nahrát soupiska i rozlosování najednou, pořadí nerozhoduje.
+ * Roztřídí nahrané soubory na soupisky a rozlosování. Přijímá export do Excelu (.xlsx)
+ * i uloženou stránku (.html), na pořadí souborů nezáleží.
  */
-export async function buildFromFiles(files, { boards, short, url } = {}) {
-  let rosterSource = null;
-  let roundsGrid = null;
-  let roundsDoc = null;
+export async function readFiles(files) {
+  let roster = null;
+  let draw = null;
   let title = '';
 
   for (const file of files) {
@@ -155,32 +154,42 @@ export async function buildFromFiles(files, { boards, short, url } = {}) {
       }
       const kind = gridKind(grid);
       title = title || titleFromGrid(grid);
-      if (kind === 'rounds') roundsGrid = grid;
-      else if (kind === 'rosters') rosterSource = { kind: 'grid', grid };
+      if (kind === 'rounds') draw = { grid };
+      else if (kind === 'rosters') roster = { grid };
       else throw new Error(`${file.name}: nepoznávám, co v souboru je. Čekám export soupisek nebo rozlosování.`);
     } else {
       const doc = new DOMParser().parseFromString(await file.text(), 'text/html');
-      const teams = parseRosters(doc).filter((t) => t.players.length);
       title = title || tournamentTitle(doc);
-      if (teams.length >= 2) rosterSource = { kind: 'doc', doc };
-      else roundsDoc = doc;
+      if (parseRosters(doc).filter((t) => t.players.length).length >= 2) roster = { doc };
+      else draw = { doc };
     }
   }
+  if (!roster && !draw) throw new Error('V souborech jsem nenašel soupisky ani rozlosování.');
+  return { roster, draw, title };
+}
 
-  if (!rosterSource) {
-    throw new Error('Mezi soubory chybí soupisky družstev. Nahraj export seznamu „Sestava družstva bez výsledků“.');
+/** Rozlosování z nahraného souboru, přiřazené k družstvům už načtené soutěže. */
+export function roundsFor(draw, teamNames) {
+  if (!draw) return [];
+  return draw.grid ? parseRoundsFromGrid(draw.grid, teamNames) : parseRounds(toDoc(draw.html ?? ''), teamNames);
+}
+
+/** Soutěž z nahraných souborů. Soupisky jsou povinné, rozlosování nepovinné. */
+export async function buildFromFiles(files, { boards, short, url } = {}) {
+  const { roster, draw, title } = await readFiles(files);
+  if (!roster) {
+    throw new Error(
+      'V souborech jsou jen kola, chybí soupisky družstev. Nahraj k tomu i export seznamu „Sestava družstva bez výsledků“.',
+    );
   }
-  const teams = (rosterSource.kind === 'grid' ? parseRostersFromGrid(rosterSource.grid) : parseRosters(rosterSource.doc))
-    .filter((t) => t.players.length);
+  const teams = (roster.grid ? parseRostersFromGrid(roster.grid) : parseRosters(roster.doc)).filter(
+    (t) => t.players.length,
+  );
   if (teams.length < 2) {
     throw new Error('V souboru jsou soupisky jen jednoho družstva. Vypadá to na turnaj jednotlivců.');
   }
   const names = teams.map((t) => t.name);
-  const rounds = roundsGrid
-    ? parseRoundsFromGrid(roundsGrid, names)
-    : roundsDoc
-      ? parseRounds(roundsDoc, names)
-      : [];
+  const rounds = draw ? (draw.grid ? parseRoundsFromGrid(draw.grid, names) : parseRounds(draw.doc, names)) : [];
 
   const [name, season] = splitSeason(clean(title));
   const tnr = tournamentNumber(url ?? '');
