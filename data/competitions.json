@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T17:19:01Z",
+ "generated": "2026-11-02T18:16:01Z",
  "source": "chess-results.com",
  "season": "2026/2027",
  "competitions": [
@@ -21,7 +21,8 @@
        "no": 1,
        "name": "Kriz, Denis",
        "types": [],
-       "nat": 2003,
+       "rtg": 2003,
+       "nat": null,
        "fide": null
       },
       {
@@ -30,21 +31,24 @@
        "types": [
         "K"
        ],
-       "nat": 2000,
+       "rtg": 2000,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Poliakov, Ivan",
        "types": [],
-       "nat": 1858,
+       "rtg": 1858,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Krsek, Tomas",
        "types": [],
-       "nat": 1895,
+       "rtg": 1895,
+       "nat": null,
        "fide": null
       },
       {
@@ -53,48 +57,55 @@
        "types": [
         "ZK"
        ],
-       "nat": 1911,
+       "rtg": 1911,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Veltrusky, Petr",
        "types": [],
-       "nat": 1867,
+       "rtg": 1867,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Zikranets, Bohdan",
        "types": [],
-       "nat": 1676,
+       "rtg": 1676,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Mriso, Milos",
        "types": [],
-       "nat": 1721,
+       "rtg": 1721,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Mrisova, Eliska",
        "types": [],
-       "nat": 1762,
+       "rtg": 1762,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Voslar, Jan",
        "types": [],
-       "nat": 2041,
+       "rtg": 2041,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Gebert, Marcel",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -102,41 +113,47 @@
        "no": 12,
        "name": "Rehacek, Jan",
        "types": [],
-       "nat": 1720,
+       "rtg": 1720,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Litos, Ondrej",
        "types": [],
-       "nat": 1757,
+       "rtg": 1757,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Rehacek, Jan",
        "types": [],
-       "nat": 1544,
+       "rtg": 1544,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Rehacek, Oldrich",
        "types": [],
-       "nat": 1697,
+       "rtg": 1697,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Jerabek, Jakub",
        "types": [],
-       "nat": 1627,
+       "rtg": 1627,
+       "nat": null,
        "fide": null
       },
       {
        "no": 17,
        "name": "Pesek, Michal",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -144,14 +161,16 @@
        "no": 18,
        "name": "Krucky, Krystof",
        "types": [],
-       "nat": 1480,
+       "rtg": 1480,
+       "nat": null,
        "fide": null
       },
       {
        "no": 19,
        "name": "Vanek, Matyas",
        "types": [],
-       "nat": 1277,
+       "rtg": 1277,
+       "nat": null,
        "fide": null
       }
      ]
@@ -166,7 +185,8 @@
        "types": [
         "V"
        ],
-       "nat": 2134,
+       "rtg": 2134,
+       "nat": null,
        "fide": null
       },
       {
@@ -175,7 +195,8 @@
        "types": [
         "V"
        ],
-       "nat": 1982,
+       "rtg": 1982,
+       "nat": null,
        "fide": null
       },
       {
@@ -184,7 +205,8 @@
        "types": [
         "K"
        ],
-       "nat": 1937,
+       "rtg": 1937,
+       "nat": null,
        "fide": null
       },
       {
@@ -193,7 +215,8 @@
        "types": [
         "V"
        ],
-       "nat": 2081,
+       "rtg": 2081,
+       "nat": null,
        "fide": null
       },
       {
@@ -202,21 +225,24 @@
        "types": [
         "ZK"
        ],
-       "nat": 2066,
+       "rtg": 2066,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Havranek, Tomas",
        "types": [],
-       "nat": 2009,
+       "rtg": 2009,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Lesak, Jiri",
        "types": [],
-       "nat": 2002,
+       "rtg": 2002,
+       "nat": null,
        "fide": null
       },
       {
@@ -225,83 +251,95 @@
        "types": [
         "C"
        ],
-       "nat": 1960,
+       "rtg": 1960,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Jusko, Jindrich",
        "types": [],
-       "nat": 1883,
+       "rtg": 1883,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Machka, Vit",
        "types": [],
-       "nat": 1859,
+       "rtg": 1859,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Lesak, Ondrej",
        "types": [],
-       "nat": 1828,
+       "rtg": 1828,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Papay, Jindrich",
        "types": [],
-       "nat": 1885,
+       "rtg": 1885,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Divis, Jiri",
        "types": [],
-       "nat": 1851,
+       "rtg": 1851,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Goc, Vlastimil",
        "types": [],
-       "nat": 1884,
+       "rtg": 1884,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Riha, Vitek",
        "types": [],
-       "nat": 1651,
+       "rtg": 1651,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Cerny, Lumir",
        "types": [],
-       "nat": 1753,
+       "rtg": 1753,
+       "nat": null,
        "fide": null
       },
       {
        "no": 17,
        "name": "Radvanovsky, Petr",
        "types": [],
-       "nat": 1779,
+       "rtg": 1779,
+       "nat": null,
        "fide": null
       },
       {
        "no": 18,
        "name": "Machka, Roman",
        "types": [],
-       "nat": 1571,
+       "rtg": 1571,
+       "nat": null,
        "fide": null
       },
       {
        "no": 19,
        "name": "Beaver, Maxim",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -309,7 +347,8 @@
        "no": 20,
        "name": "Ngo, Alex",
        "types": [],
-       "nat": 1193,
+       "rtg": 1193,
+       "nat": null,
        "fide": null
       }
      ]
@@ -324,7 +363,8 @@
        "types": [
         "K"
        ],
-       "nat": 2277,
+       "rtg": 2277,
+       "nat": null,
        "fide": null
       },
       {
@@ -333,7 +373,8 @@
        "types": [
         "H"
        ],
-       "nat": 2067,
+       "rtg": 2067,
+       "nat": null,
        "fide": null
       },
       {
@@ -342,7 +383,8 @@
        "types": [
         "H"
        ],
-       "nat": 2000,
+       "rtg": 2000,
+       "nat": null,
        "fide": null
       },
       {
@@ -351,7 +393,8 @@
        "types": [
         "ZK"
        ],
-       "nat": 1993,
+       "rtg": 1993,
+       "nat": null,
        "fide": null
       },
       {
@@ -360,7 +403,8 @@
        "types": [
         "H"
        ],
-       "nat": 1896,
+       "rtg": 1896,
+       "nat": null,
        "fide": null
       },
       {
@@ -369,28 +413,32 @@
        "types": [
         "H"
        ],
-       "nat": 1886,
+       "rtg": 1886,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Balin, Kamil",
        "types": [],
-       "nat": 1946,
+       "rtg": 1946,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Srkal, Miroslav",
        "types": [],
-       "nat": 1744,
+       "rtg": 1744,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Pichert, Miroslav",
        "types": [],
-       "nat": 1716,
+       "rtg": 1716,
+       "nat": null,
        "fide": null
       },
       {
@@ -399,28 +447,32 @@
        "types": [
         "H"
        ],
-       "nat": 1778,
+       "rtg": 1778,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Lorenc, Vojtech",
        "types": [],
-       "nat": 1743,
+       "rtg": 1743,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Hruska, Vladislav",
        "types": [],
-       "nat": 1746,
+       "rtg": 1746,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Pindiak, Slavomir",
        "types": [],
-       "nat": 1675,
+       "rtg": 1675,
+       "nat": null,
        "fide": null
       },
       {
@@ -429,7 +481,8 @@
        "types": [
         "H"
        ],
-       "nat": 1598,
+       "rtg": 1598,
+       "nat": null,
        "fide": null
       },
       {
@@ -438,13 +491,15 @@
        "types": [
         "H"
        ],
-       "nat": 1701,
+       "rtg": 1701,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Sykora, Vojtech",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -452,6 +507,7 @@
        "no": 17,
        "name": "Balak, Jiri",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -459,14 +515,16 @@
        "no": 18,
        "name": "Slavik, Ladislav",
        "types": [],
-       "nat": 1673,
+       "rtg": 1673,
+       "nat": null,
        "fide": null
       },
       {
        "no": 19,
        "name": "Libosvar, Jan",
        "types": [],
-       "nat": 1698,
+       "rtg": 1698,
+       "nat": null,
        "fide": null
       }
      ]
@@ -481,35 +539,40 @@
        "types": [
         "H"
        ],
-       "nat": 2278,
+       "rtg": 2278,
+       "nat": null,
        "fide": null
       },
       {
        "no": 2,
        "name": "Chvajova, Helena",
        "types": [],
-       "nat": 2082,
+       "rtg": 2082,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Mert, Petr",
        "types": [],
-       "nat": 2049,
+       "rtg": 2049,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Mazanek, Kamil",
        "types": [],
-       "nat": 2039,
+       "rtg": 2039,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Svarc, Roman",
        "types": [],
-       "nat": 1976,
+       "rtg": 1976,
+       "nat": null,
        "fide": null
       },
       {
@@ -518,7 +581,8 @@
        "types": [
         "ZK"
        ],
-       "nat": 1883,
+       "rtg": 1883,
+       "nat": null,
        "fide": null
       },
       {
@@ -527,42 +591,48 @@
        "types": [
         "H"
        ],
-       "nat": 1962,
+       "rtg": 1962,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Vaic, Pavel",
        "types": [],
-       "nat": 1825,
+       "rtg": 1825,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Rezac, Josef",
        "types": [],
-       "nat": 1856,
+       "rtg": 1856,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Kozak, Karel",
        "types": [],
-       "nat": 1899,
+       "rtg": 1899,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Vaic, Radek",
        "types": [],
-       "nat": 1667,
+       "rtg": 1667,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Godla, Milan",
        "types": [],
-       "nat": 1821,
+       "rtg": 1821,
+       "nat": null,
        "fide": null
       },
       {
@@ -571,55 +641,63 @@
        "types": [
         "K"
        ],
-       "nat": 1822,
+       "rtg": 1822,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Bauer, Miroslav",
        "types": [],
-       "nat": 1686,
+       "rtg": 1686,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Kalyncukova, Katerina",
        "types": [],
-       "nat": 1592,
+       "rtg": 1592,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Prchal, Jan",
        "types": [],
-       "nat": 1631,
+       "rtg": 1631,
+       "nat": null,
        "fide": null
       },
       {
        "no": 17,
        "name": "Godlova, Kamila",
        "types": [],
-       "nat": 1588,
+       "rtg": 1588,
+       "nat": null,
        "fide": null
       },
       {
        "no": 18,
        "name": "Lapcik, Zdenek",
        "types": [],
-       "nat": 1631,
+       "rtg": 1631,
+       "nat": null,
        "fide": null
       },
       {
        "no": 19,
        "name": "Krasny, Drahomir",
        "types": [],
-       "nat": 1600,
+       "rtg": 1600,
+       "nat": null,
        "fide": null
       },
       {
        "no": 20,
        "name": "Benes, David",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       }
@@ -633,7 +711,8 @@
        "no": 1,
        "name": "Hrbolka, Ladislav",
        "types": [],
-       "nat": 2129,
+       "rtg": 2129,
+       "nat": null,
        "fide": null
       },
       {
@@ -642,7 +721,8 @@
        "types": [
         "K"
        ],
-       "nat": 1992,
+       "rtg": 1992,
+       "nat": null,
        "fide": null
       },
       {
@@ -651,14 +731,16 @@
        "types": [
         "H"
        ],
-       "nat": 1944,
+       "rtg": 1944,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Horan, Tomas",
        "types": [],
-       "nat": 1991,
+       "rtg": 1991,
+       "nat": null,
        "fide": null
       },
       {
@@ -667,14 +749,16 @@
        "types": [
         "H"
        ],
-       "nat": 1968,
+       "rtg": 1968,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Budil, Zdenek",
        "types": [],
-       "nat": 1908,
+       "rtg": 1908,
+       "nat": null,
        "fide": null
       },
       {
@@ -683,62 +767,71 @@
        "types": [
         "ZK"
        ],
-       "nat": 1924,
+       "rtg": 1924,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Svab, Jan",
        "types": [],
-       "nat": 1991,
+       "rtg": 1991,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Cifka, Petr",
        "types": [],
-       "nat": 1706,
+       "rtg": 1706,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Vacha, Zdenek",
        "types": [],
-       "nat": 1871,
+       "rtg": 1871,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Volak, Jan",
        "types": [],
-       "nat": 1876,
+       "rtg": 1876,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Sebl, Jan",
        "types": [],
-       "nat": 1839,
+       "rtg": 1839,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Kubik, Miroslav",
        "types": [],
-       "nat": 1778,
+       "rtg": 1778,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Matusik, Milan",
        "types": [],
-       "nat": 1611,
+       "rtg": 1611,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Cibulka, Karel",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -746,6 +839,7 @@
        "no": 16,
        "name": "Zelinger, Jiri",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -753,6 +847,7 @@
        "no": 17,
        "name": "Vrana, Tomas",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -760,7 +855,8 @@
        "no": 18,
        "name": "Hrbolka, Oliver",
        "types": [],
-       "nat": 1008,
+       "rtg": 1008,
+       "nat": null,
        "fide": null
       }
      ]
@@ -775,14 +871,16 @@
        "types": [
         "H"
        ],
-       "nat": 2102,
+       "rtg": 2102,
+       "nat": null,
        "fide": null
       },
       {
        "no": 2,
        "name": "Hula, Lukas",
        "types": [],
-       "nat": 2014,
+       "rtg": 2014,
+       "nat": null,
        "fide": null
       },
       {
@@ -791,7 +889,8 @@
        "types": [
         "V"
        ],
-       "nat": 1920,
+       "rtg": 1920,
+       "nat": null,
        "fide": null
       },
       {
@@ -800,7 +899,8 @@
        "types": [
         "V"
        ],
-       "nat": 1972,
+       "rtg": 1972,
+       "nat": null,
        "fide": null
       },
       {
@@ -809,7 +909,8 @@
        "types": [
         "V"
        ],
-       "nat": 2045,
+       "rtg": 2045,
+       "nat": null,
        "fide": null
       },
       {
@@ -818,28 +919,32 @@
        "types": [
         "V"
        ],
-       "nat": 2064,
+       "rtg": 2064,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Augustyn, Patrik",
        "types": [],
-       "nat": 1988,
+       "rtg": 1988,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Hoke, Petr",
        "types": [],
-       "nat": 2012,
+       "rtg": 2012,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Sura, Jaroslav",
        "types": [],
-       "nat": 2010,
+       "rtg": 2010,
+       "nat": null,
        "fide": null
       },
       {
@@ -848,76 +953,87 @@
        "types": [
         "V"
        ],
-       "nat": 1980,
+       "rtg": 1980,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Novacek, Jan",
        "types": [],
-       "nat": 1965,
+       "rtg": 1965,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Prny, Jan",
        "types": [],
-       "nat": 1895,
+       "rtg": 1895,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Chaloupka, Frantisek",
        "types": [],
-       "nat": 1929,
+       "rtg": 1929,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Bauer, Ondrej",
        "types": [],
-       "nat": 1898,
+       "rtg": 1898,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Matous, Pavel",
        "types": [],
-       "nat": 1829,
+       "rtg": 1829,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Wilhelm, Oldrich",
        "types": [],
-       "nat": 1765,
+       "rtg": 1765,
+       "nat": null,
        "fide": null
       },
       {
        "no": 17,
        "name": "Sulc, Frantisek",
        "types": [],
-       "nat": 1737,
+       "rtg": 1737,
+       "nat": null,
        "fide": null
       },
       {
        "no": 18,
        "name": "Vydra, Jaroslav",
        "types": [],
-       "nat": 1713,
+       "rtg": 1713,
+       "nat": null,
        "fide": null
       },
       {
        "no": 19,
        "name": "John, Zbynek",
        "types": [],
-       "nat": 1642,
+       "rtg": 1642,
+       "nat": null,
        "fide": null
       },
       {
        "no": 20,
        "name": "Dokoupil, Filip",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       }
@@ -933,7 +1049,8 @@
        "types": [
         "H"
        ],
-       "nat": 2254,
+       "rtg": 2254,
+       "nat": null,
        "fide": null
       },
       {
@@ -942,7 +1059,8 @@
        "types": [
         "ZK"
        ],
-       "nat": 2081,
+       "rtg": 2081,
+       "nat": null,
        "fide": null
       },
       {
@@ -951,7 +1069,8 @@
        "types": [
         "H"
        ],
-       "nat": 2035,
+       "rtg": 2035,
+       "nat": null,
        "fide": null
       },
       {
@@ -960,21 +1079,24 @@
        "types": [
         "H"
        ],
-       "nat": 2096,
+       "rtg": 2096,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Volek, Radomir",
        "types": [],
-       "nat": 1999,
+       "rtg": 1999,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Klakurka, Stanislav",
        "types": [],
-       "nat": 1926,
+       "rtg": 1926,
+       "nat": null,
        "fide": null
       },
       {
@@ -983,21 +1105,24 @@
        "types": [
         "K"
        ],
-       "nat": 1872,
+       "rtg": 1872,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Majerik, Vladimir",
        "types": [],
-       "nat": 1871,
+       "rtg": 1871,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Kostal, Jindrich",
        "types": [],
-       "nat": 1823,
+       "rtg": 1823,
+       "nat": null,
        "fide": null
       },
       {
@@ -1006,28 +1131,32 @@
        "types": [
         "H"
        ],
-       "nat": 2070,
+       "rtg": 2070,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Krupka, Ales",
        "types": [],
-       "nat": 1805,
+       "rtg": 1805,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Jilek, Jaromir",
        "types": [],
-       "nat": 1896,
+       "rtg": 1896,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Antonec, Adam",
        "types": [],
-       "nat": 1845,
+       "rtg": 1845,
+       "nat": null,
        "fide": null
       },
       {
@@ -1036,42 +1165,48 @@
        "types": [
         "H"
        ],
-       "nat": 1852,
+       "rtg": 1852,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Drobny, Zbynek",
        "types": [],
-       "nat": 1828,
+       "rtg": 1828,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Vobruba, Pavel",
        "types": [],
-       "nat": 1813,
+       "rtg": 1813,
+       "nat": null,
        "fide": null
       },
       {
        "no": 17,
        "name": "Jarina, Ladislav",
        "types": [],
-       "nat": 1800,
+       "rtg": 1800,
+       "nat": null,
        "fide": null
       },
       {
        "no": 18,
        "name": "Zebisch, Jan",
        "types": [],
-       "nat": 1667,
+       "rtg": 1667,
+       "nat": null,
        "fide": null
       },
       {
        "no": 19,
        "name": "Gajdac, Sandra",
        "types": [],
-       "nat": 1575,
+       "rtg": 1575,
+       "nat": null,
        "fide": null
       }
      ]
@@ -1086,7 +1221,8 @@
        "types": [
         "V"
        ],
-       "nat": 2119,
+       "rtg": 2119,
+       "nat": null,
        "fide": null
       },
       {
@@ -1095,21 +1231,24 @@
        "types": [
         "V"
        ],
-       "nat": 2063,
+       "rtg": 2063,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Kotrba, Matej",
        "types": [],
-       "nat": 2034,
+       "rtg": 2034,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Kovar, Jan",
        "types": [],
-       "nat": 2030,
+       "rtg": 2030,
+       "nat": null,
        "fide": null
       },
       {
@@ -1118,7 +1257,8 @@
        "types": [
         "V"
        ],
-       "nat": 1997,
+       "rtg": 1997,
+       "nat": null,
        "fide": null
       },
       {
@@ -1127,21 +1267,24 @@
        "types": [
         "ZK"
        ],
-       "nat": 1970,
+       "rtg": 1970,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Nudcenko, Karel",
        "types": [],
-       "nat": 1965,
+       "rtg": 1965,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Tichy, Lukas",
        "types": [],
-       "nat": 1957,
+       "rtg": 1957,
+       "nat": null,
        "fide": null
       },
       {
@@ -1150,84 +1293,96 @@
        "types": [
         "K"
        ],
-       "nat": 1900,
+       "rtg": 1900,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Kaluzny, Michal",
        "types": [],
-       "nat": 1900,
+       "rtg": 1900,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Kaluzny, Jiri",
        "types": [],
-       "nat": 1872,
+       "rtg": 1872,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Kovar, Vladimir",
        "types": [],
-       "nat": 1870,
+       "rtg": 1870,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Kindl, Jan",
        "types": [],
-       "nat": 1879,
+       "rtg": 1879,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Kindl, Frantisek",
        "types": [],
-       "nat": 1823,
+       "rtg": 1823,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Richter, Pavel",
        "types": [],
-       "nat": 1801,
+       "rtg": 1801,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Potucek, Martin",
        "types": [],
-       "nat": 1795,
+       "rtg": 1795,
+       "nat": null,
        "fide": null
       },
       {
        "no": 17,
        "name": "Jezil, Pavel",
        "types": [],
-       "nat": 1786,
+       "rtg": 1786,
+       "nat": null,
        "fide": null
       },
       {
        "no": 18,
        "name": "Boledovic, Jan",
        "types": [],
-       "nat": 1786,
+       "rtg": 1786,
+       "nat": null,
        "fide": null
       },
       {
        "no": 19,
        "name": "Storch, Milan",
        "types": [],
-       "nat": 1767,
+       "rtg": 1767,
+       "nat": null,
        "fide": null
       },
       {
        "no": 20,
        "name": "Strelec, Eduard",
        "types": [],
-       "nat": 1711,
+       "rtg": 1711,
+       "nat": null,
        "fide": null
       }
      ]
@@ -1242,7 +1397,8 @@
        "types": [
         "H"
        ],
-       "nat": 2115,
+       "rtg": 2115,
+       "nat": null,
        "fide": null
       },
       {
@@ -1251,7 +1407,8 @@
        "types": [
         "ZK"
        ],
-       "nat": 2106,
+       "rtg": 2106,
+       "nat": null,
        "fide": null
       },
       {
@@ -1260,21 +1417,24 @@
        "types": [
         "H"
        ],
-       "nat": 2153,
+       "rtg": 2153,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Blaha, Jiri",
        "types": [],
-       "nat": 2096,
+       "rtg": 2096,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Kudrlicka, Ladislav",
        "types": [],
-       "nat": 2021,
+       "rtg": 2021,
+       "nat": null,
        "fide": null
       },
       {
@@ -1283,105 +1443,120 @@
        "types": [
         "K"
        ],
-       "nat": 1980,
+       "rtg": 1980,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Hrazdira, Matyas Josef",
        "types": [],
-       "nat": 1923,
+       "rtg": 1923,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Vyslysel, Petr",
        "types": [],
-       "nat": 1919,
+       "rtg": 1919,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Jenicek, Emil",
        "types": [],
-       "nat": 2001,
+       "rtg": 2001,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Urbansky, Stepan",
        "types": [],
-       "nat": 1948,
+       "rtg": 1948,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Slivova, Linda",
        "types": [],
-       "nat": 1811,
+       "rtg": 1811,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Stastny, Petr",
        "types": [],
-       "nat": 1969,
+       "rtg": 1969,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Hadraba, Vladimir",
        "types": [],
-       "nat": 1987,
+       "rtg": 1987,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Bayer, Radek",
        "types": [],
-       "nat": 2000,
+       "rtg": 2000,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Bublik, Frantisek",
        "types": [],
-       "nat": 1911,
+       "rtg": 1911,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Skuthan, Radek",
        "types": [],
-       "nat": 1888,
+       "rtg": 1888,
+       "nat": null,
        "fide": null
       },
       {
        "no": 17,
        "name": "Kleker, Jiri",
        "types": [],
-       "nat": 1848,
+       "rtg": 1848,
+       "nat": null,
        "fide": null
       },
       {
        "no": 18,
        "name": "Hanzlik, Radek",
        "types": [],
-       "nat": 1704,
+       "rtg": 1704,
+       "nat": null,
        "fide": null
       },
       {
        "no": 19,
        "name": "Sliva, Petr",
        "types": [],
-       "nat": 1842,
+       "rtg": 1842,
+       "nat": null,
        "fide": null
       },
       {
        "no": 20,
        "name": "Vrchotka, Antonin",
        "types": [],
-       "nat": 1732,
+       "rtg": 1732,
+       "nat": null,
        "fide": null
       }
      ]
@@ -1396,7 +1571,8 @@
        "types": [
         "H"
        ],
-       "nat": 2029,
+       "rtg": 2029,
+       "nat": null,
        "fide": null
       },
       {
@@ -1405,7 +1581,8 @@
        "types": [
         "K"
        ],
-       "nat": 2153,
+       "rtg": 2153,
+       "nat": null,
        "fide": null
       },
       {
@@ -1414,35 +1591,40 @@
        "types": [
         "H"
        ],
-       "nat": 2020,
+       "rtg": 2020,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Riha, Jaroslav",
        "types": [],
-       "nat": 2057,
+       "rtg": 2057,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Krivos, Rudolf",
        "types": [],
-       "nat": 1911,
+       "rtg": 1911,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Klatil, Karel",
        "types": [],
-       "nat": 1909,
+       "rtg": 1909,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Cernikova, Alena",
        "types": [],
-       "nat": 1906,
+       "rtg": 1906,
+       "nat": null,
        "fide": null
       },
       {
@@ -1451,34 +1633,39 @@
        "types": [
         "ZK"
        ],
-       "nat": 1811,
+       "rtg": 1811,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Kubanek, Martin",
        "types": [],
-       "nat": 1912,
+       "rtg": 1912,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Krejci, Vladimir",
        "types": [],
-       "nat": 1800,
+       "rtg": 1800,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Vrzal, Jiri",
        "types": [],
-       "nat": 1839,
+       "rtg": 1839,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Sianpour, Babak",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       }
@@ -1492,7 +1679,8 @@
        "no": 1,
        "name": "Soukal, Vladimir",
        "types": [],
-       "nat": 1912,
+       "rtg": 1912,
+       "nat": null,
        "fide": null
       },
       {
@@ -1501,7 +1689,8 @@
        "types": [
         "ZK"
        ],
-       "nat": 1930,
+       "rtg": 1930,
+       "nat": null,
        "fide": null
       },
       {
@@ -1510,21 +1699,24 @@
        "types": [
         "K"
        ],
-       "nat": 1850,
+       "rtg": 1850,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Turecek, Vaclav",
        "types": [],
-       "nat": 1867,
+       "rtg": 1867,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Novak, Lukas",
        "types": [],
-       "nat": 1756,
+       "rtg": 1756,
+       "nat": null,
        "fide": null
       },
       {
@@ -1533,91 +1725,104 @@
        "types": [
         "H"
        ],
-       "nat": 1799,
+       "rtg": 1799,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Nachazel, Vaclav",
        "types": [],
-       "nat": 1695,
+       "rtg": 1695,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Francl, Zdenek",
        "types": [],
-       "nat": 1805,
+       "rtg": 1805,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Mittelbach, Zdenek",
        "types": [],
-       "nat": 1873,
+       "rtg": 1873,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Bryda, Martin",
        "types": [],
-       "nat": 1741,
+       "rtg": 1741,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Ladra, Antonin",
        "types": [],
-       "nat": 1797,
+       "rtg": 1797,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Balvin, Rudolf",
        "types": [],
-       "nat": 1694,
+       "rtg": 1694,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Svarha, Michal",
        "types": [],
-       "nat": 1740,
+       "rtg": 1740,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Pechek, Jan",
        "types": [],
-       "nat": 1844,
+       "rtg": 1844,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Povr, Milan",
        "types": [],
-       "nat": 1595,
+       "rtg": 1595,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Hausler, Milan",
        "types": [],
-       "nat": 1941,
+       "rtg": 1941,
+       "nat": null,
        "fide": null
       },
       {
        "no": 17,
        "name": "Belina, Lukas",
        "types": [],
-       "nat": 1500,
+       "rtg": 1500,
+       "nat": null,
        "fide": null
       },
       {
        "no": 18,
        "name": "Kindl, Vaclav",
        "types": [],
-       "nat": 1032,
+       "rtg": 1032,
+       "nat": null,
        "fide": null
       }
      ]
@@ -1632,21 +1837,24 @@
        "types": [
         "H"
        ],
-       "nat": 2219,
+       "rtg": 2219,
+       "nat": null,
        "fide": null
       },
       {
        "no": 2,
        "name": "Mikulka, Martin Michael",
        "types": [],
-       "nat": 2189,
+       "rtg": 2189,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Kotek, Daniel",
        "types": [],
-       "nat": 2152,
+       "rtg": 2152,
+       "nat": null,
        "fide": null
       },
       {
@@ -1655,21 +1863,24 @@
        "types": [
         "H"
        ],
-       "nat": 2112,
+       "rtg": 2112,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Vozka, Pavel",
        "types": [],
-       "nat": 2227,
+       "rtg": 2227,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Zischka, Vit",
        "types": [],
-       "nat": 1962,
+       "rtg": 1962,
+       "nat": null,
        "fide": null
       },
       {
@@ -1678,7 +1889,8 @@
        "types": [
         "ZK"
        ],
-       "nat": 2092,
+       "rtg": 2092,
+       "nat": null,
        "fide": null
       },
       {
@@ -1687,7 +1899,8 @@
        "types": [
         "K"
        ],
-       "nat": 2055,
+       "rtg": 2055,
+       "nat": null,
        "fide": null
       },
       {
@@ -1696,7 +1909,8 @@
        "types": [
         "H"
        ],
-       "nat": 2033,
+       "rtg": 2033,
+       "nat": null,
        "fide": null
       },
       {
@@ -1705,70 +1919,80 @@
        "types": [
         "H"
        ],
-       "nat": 1871,
+       "rtg": 1871,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Lev, Lukas",
        "types": [],
-       "nat": 1860,
+       "rtg": 1860,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Chochol, Libor",
        "types": [],
-       "nat": 2052,
+       "rtg": 2052,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Bazantova, Marie",
        "types": [],
-       "nat": 1909,
+       "rtg": 1909,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Sliva, Michal",
        "types": [],
-       "nat": 1870,
+       "rtg": 1870,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Ederer, Karel",
        "types": [],
-       "nat": 1958,
+       "rtg": 1958,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Rouc, Michal",
        "types": [],
-       "nat": 1865,
+       "rtg": 1865,
+       "nat": null,
        "fide": null
       },
       {
        "no": 17,
        "name": "Carboch, Ladislav",
        "types": [],
-       "nat": 1767,
+       "rtg": 1767,
+       "nat": null,
        "fide": null
       },
       {
        "no": 18,
        "name": "Zima, Tomas",
        "types": [],
-       "nat": 1914,
+       "rtg": 1914,
+       "nat": null,
        "fide": null
       },
       {
        "no": 19,
        "name": "Zima, Jaroslav",
        "types": [],
-       "nat": 1661,
+       "rtg": 1661,
+       "nat": null,
        "fide": null
       }
      ]
@@ -2138,7 +2362,8 @@
        "types": [
         "H"
        ],
-       "nat": 1892,
+       "rtg": 1892,
+       "nat": null,
        "fide": null
       },
       {
@@ -2147,49 +2372,56 @@
        "types": [
         "H"
        ],
-       "nat": 1732,
+       "rtg": 1732,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Kral, David",
        "types": [],
-       "nat": 1995,
+       "rtg": 1995,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Krajic, Karel",
        "types": [],
-       "nat": 1991,
+       "rtg": 1991,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Vrchotka, Josef",
        "types": [],
-       "nat": 1936,
+       "rtg": 1936,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Berezny, Jan",
        "types": [],
-       "nat": 1896,
+       "rtg": 1896,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Dolezal, Jiri",
        "types": [],
-       "nat": 1828,
+       "rtg": 1828,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Simovic, Ludvik",
        "types": [],
-       "nat": 1729,
+       "rtg": 1729,
+       "nat": null,
        "fide": null
       },
       {
@@ -2198,7 +2430,8 @@
        "types": [
         "K"
        ],
-       "nat": 1129,
+       "rtg": 1129,
+       "nat": null,
        "fide": null
       },
       {
@@ -2207,13 +2440,15 @@
        "types": [
         "ZK"
        ],
-       "nat": 1834,
+       "rtg": 1834,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Novotny, Jiri",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -2221,6 +2456,7 @@
        "no": 12,
        "name": "Kinkor, Marek",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       }
@@ -2236,7 +2472,8 @@
        "types": [
         "ZK"
        ],
-       "nat": 1969,
+       "rtg": 1969,
+       "nat": null,
        "fide": null
       },
       {
@@ -2245,35 +2482,40 @@
        "types": [
         "V"
        ],
-       "nat": 1919,
+       "rtg": 1919,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Urbansky, Stepan",
        "types": [],
-       "nat": 1943,
+       "rtg": 1943,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Slivova, Linda",
        "types": [],
-       "nat": 1811,
+       "rtg": 1811,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Hadraba, Vladimir",
        "types": [],
-       "nat": 1987,
+       "rtg": 1987,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Hanzlik, Radek",
        "types": [],
-       "nat": 1704,
+       "rtg": 1704,
+       "nat": null,
        "fide": null
       },
       {
@@ -2282,42 +2524,48 @@
        "types": [
         "K"
        ],
-       "nat": 1911,
+       "rtg": 1911,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Sliva, Petr",
        "types": [],
-       "nat": 1842,
+       "rtg": 1842,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Kleker, Jiri",
        "types": [],
-       "nat": 1848,
+       "rtg": 1848,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Skuthan, Radek",
        "types": [],
-       "nat": 1888,
+       "rtg": 1888,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Kucera, Bohuslav",
        "types": [],
-       "nat": 1737,
+       "rtg": 1737,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Schuldes, Rene",
        "types": [],
-       "nat": 1780,
+       "rtg": 1780,
+       "nat": null,
        "fide": null
       },
       {
@@ -2326,48 +2574,55 @@
        "types": [
         "H"
        ],
-       "nat": 1717,
+       "rtg": 1717,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Kolman, Jiri",
        "types": [],
-       "nat": 1599,
+       "rtg": 1599,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Jakoubek, Stepan",
        "types": [],
-       "nat": 1636,
+       "rtg": 1636,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Semova, Lada",
        "types": [],
-       "nat": 1674,
+       "rtg": 1674,
+       "nat": null,
        "fide": null
       },
       {
        "no": 17,
        "name": "Nedobeha, Anna",
        "types": [],
-       "nat": 1494,
+       "rtg": 1494,
+       "nat": null,
        "fide": null
       },
       {
        "no": 18,
        "name": "Hryhoriev, Hnat",
        "types": [],
-       "nat": 1274,
+       "rtg": 1274,
+       "nat": null,
        "fide": null
       },
       {
        "no": 19,
        "name": "Dang, Martin Tri Nhan",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       }
@@ -2381,7 +2636,8 @@
        "no": 1,
        "name": "Volf, Michal",
        "types": [],
-       "nat": 1974,
+       "rtg": 1974,
+       "nat": null,
        "fide": null
       },
       {
@@ -2390,14 +2646,16 @@
        "types": [
         "ZK"
        ],
-       "nat": 1826,
+       "rtg": 1826,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Timr, Jan",
        "types": [],
-       "nat": 1846,
+       "rtg": 1846,
+       "nat": null,
        "fide": null
       },
       {
@@ -2406,35 +2664,40 @@
        "types": [
         "K"
        ],
-       "nat": 1898,
+       "rtg": 1898,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Begy, Jan",
        "types": [],
-       "nat": 1869,
+       "rtg": 1869,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Urban, Miroslav",
        "types": [],
-       "nat": 1857,
+       "rtg": 1857,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Vychodil, Radomir",
        "types": [],
-       "nat": 1829,
+       "rtg": 1829,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Pallag, Demeter",
        "types": [],
-       "nat": 1803,
+       "rtg": 1803,
+       "nat": null,
        "fide": null
       },
       {
@@ -2443,62 +2706,71 @@
        "types": [
         "H"
        ],
-       "nat": 1910,
+       "rtg": 1910,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Matousek, Josef",
        "types": [],
-       "nat": 1786,
+       "rtg": 1786,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Fiala, Matej",
        "types": [],
-       "nat": 1772,
+       "rtg": 1772,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Rath, Vladimir",
        "types": [],
-       "nat": 1683,
+       "rtg": 1683,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Sladky, Petr",
        "types": [],
-       "nat": 1764,
+       "rtg": 1764,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Nemec, Vaclav",
        "types": [],
-       "nat": 1648,
+       "rtg": 1648,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Matas, Jiri",
        "types": [],
-       "nat": 1336,
+       "rtg": 1336,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Bejcek, Pavel",
        "types": [],
-       "nat": 1568,
+       "rtg": 1568,
+       "nat": null,
        "fide": null
       },
       {
        "no": 17,
        "name": "Berka, Tomas",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -2506,6 +2778,7 @@
        "no": 18,
        "name": "Bejcek, Jan",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       }
@@ -2519,7 +2792,8 @@
        "no": 1,
        "name": "Rezac, Josef",
        "types": [],
-       "nat": 1856,
+       "rtg": 1856,
+       "nat": null,
        "fide": null
       },
       {
@@ -2528,35 +2802,40 @@
        "types": [
         "H"
        ],
-       "nat": 1857,
+       "rtg": 1857,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Godla, Milan",
        "types": [],
-       "nat": 1821,
+       "rtg": 1821,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Vaic, Pavel",
        "types": [],
-       "nat": 1825,
+       "rtg": 1825,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Vaic, Radek",
        "types": [],
-       "nat": 1667,
+       "rtg": 1667,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Gruss, Petr",
        "types": [],
-       "nat": 1822,
+       "rtg": 1822,
+       "nat": null,
        "fide": null
       },
       {
@@ -2565,28 +2844,32 @@
        "types": [
         "K"
        ],
-       "nat": 1686,
+       "rtg": 1686,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Prchal, Jan",
        "types": [],
-       "nat": 1631,
+       "rtg": 1631,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Mayer, Daniel",
        "types": [],
-       "nat": 1883,
+       "rtg": 1883,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Kalyncukova, Katerina",
        "types": [],
-       "nat": 1592,
+       "rtg": 1592,
+       "nat": null,
        "fide": null
       },
       {
@@ -2595,27 +2878,31 @@
        "types": [
         "ZK"
        ],
-       "nat": 1588,
+       "rtg": 1588,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Lapcik, Zdenek",
        "types": [],
-       "nat": 1631,
+       "rtg": 1631,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Krasny, Drahomir",
        "types": [],
-       "nat": 1600,
+       "rtg": 1600,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Benes, David",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       }
@@ -2631,7 +2918,8 @@
        "types": [
         "H"
        ],
-       "nat": 1671,
+       "rtg": 1671,
+       "nat": null,
        "fide": null
       },
       {
@@ -2640,14 +2928,16 @@
        "types": [
         "H"
        ],
-       "nat": 1931,
+       "rtg": 1931,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Smarkon, Antonin",
        "types": [],
-       "nat": 1889,
+       "rtg": 1889,
+       "nat": null,
        "fide": null
       },
       {
@@ -2656,35 +2946,40 @@
        "types": [
         "K"
        ],
-       "nat": 1852,
+       "rtg": 1852,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Urban, Miroslav",
        "types": [],
-       "nat": 1798,
+       "rtg": 1798,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Salaba, Vaclav",
        "types": [],
-       "nat": 1899,
+       "rtg": 1899,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Riha, Zdenek",
        "types": [],
-       "nat": 1772,
+       "rtg": 1772,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Bidovsky, Petr",
        "types": [],
-       "nat": 1722,
+       "rtg": 1722,
+       "nat": null,
        "fide": null
       },
       {
@@ -2693,28 +2988,32 @@
        "types": [
         "ZK"
        ],
-       "nat": 1699,
+       "rtg": 1699,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Mach, Vaclav",
        "types": [],
-       "nat": 1721,
+       "rtg": 1721,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Krpec, Jaroslav",
        "types": [],
-       "nat": 1633,
+       "rtg": 1633,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Barukcic, Jozo",
        "types": [],
-       "nat": 1547,
+       "rtg": 1547,
+       "nat": null,
        "fide": null
       },
       {
@@ -2723,27 +3022,31 @@
        "types": [
         "H"
        ],
-       "nat": 1477,
+       "rtg": 1477,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Partyka, Jaroslav",
        "types": [],
-       "nat": 1543,
+       "rtg": 1543,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Vitek, Filip",
        "types": [],
-       "nat": 1455,
+       "rtg": 1455,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Partykova, Nikola",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -2753,6 +3056,7 @@
        "types": [
         "H"
        ],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -2762,6 +3066,7 @@
        "types": [
         "H"
        ],
+       "rtg": null,
        "nat": null,
        "fide": null
       }
@@ -2775,7 +3080,8 @@
        "no": 1,
        "name": "Kaluzny, Michal",
        "types": [],
-       "nat": 1900,
+       "rtg": 1900,
+       "nat": null,
        "fide": null
       },
       {
@@ -2784,56 +3090,64 @@
        "types": [
         "K"
        ],
-       "nat": 1872,
+       "rtg": 1872,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Boledovic, Jan",
        "types": [],
-       "nat": 1786,
+       "rtg": 1786,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Srp, Josef",
        "types": [],
-       "nat": 1715,
+       "rtg": 1715,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Svoboda, Pravoslav",
        "types": [],
-       "nat": 1602,
+       "rtg": 1602,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Kaluzny, Maxmilian",
        "types": [],
-       "nat": 1670,
+       "rtg": 1670,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Nguyen, Trung Minh",
        "types": [],
-       "nat": 1610,
+       "rtg": 1610,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Snabl, Simon",
        "types": [],
-       "nat": 1631,
+       "rtg": 1631,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Mojzik, Mojmir",
        "types": [],
-       "nat": 1618,
+       "rtg": 1618,
+       "nat": null,
        "fide": null
       },
       {
@@ -2842,41 +3156,47 @@
        "types": [
         "K"
        ],
-       "nat": 1560,
+       "rtg": 1560,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Kostrhun, Ludvik",
        "types": [],
-       "nat": 1535,
+       "rtg": 1535,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Dytrych, Alan",
        "types": [],
-       "nat": 1387,
+       "rtg": 1387,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Kaluzny, Lukas",
        "types": [],
-       "nat": 1044,
+       "rtg": 1044,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Sebesta, Daniel",
        "types": [],
-       "nat": 1009,
+       "rtg": 1009,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Blahova, Andrea",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -2884,6 +3204,7 @@
        "no": 16,
        "name": "Luu, Khai Minh",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -2891,6 +3212,7 @@
        "no": 17,
        "name": "Mikolanda, Tomas",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -2898,6 +3220,7 @@
        "no": 18,
        "name": "Tyr, Tobias",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -2905,6 +3228,7 @@
        "no": 19,
        "name": "Tichy, Vojtech",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -2912,6 +3236,7 @@
        "no": 20,
        "name": "Bui, Manh Tien",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       }
@@ -2927,28 +3252,32 @@
        "types": [
         "VK"
        ],
-       "nat": 1970,
+       "rtg": 1970,
+       "nat": null,
        "fide": null
       },
       {
        "no": 2,
        "name": "Koblasa, Josef",
        "types": [],
-       "nat": 1900,
+       "rtg": 1900,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Kovar, Vladimir",
        "types": [],
-       "nat": 1870,
+       "rtg": 1870,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Kindl, Frantisek",
        "types": [],
-       "nat": 1823,
+       "rtg": 1823,
+       "nat": null,
        "fide": null
       },
       {
@@ -2957,55 +3286,63 @@
        "types": [
         "ZK"
        ],
-       "nat": 1801,
+       "rtg": 1801,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Potucek, Martin",
        "types": [],
-       "nat": 1795,
+       "rtg": 1795,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Jezil, Pavel",
        "types": [],
-       "nat": 1786,
+       "rtg": 1786,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Richter, Daniel",
        "types": [],
-       "nat": 1775,
+       "rtg": 1775,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Hladik, Vladimir",
        "types": [],
-       "nat": 1768,
+       "rtg": 1768,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Storch, Milan",
        "types": [],
-       "nat": 1767,
+       "rtg": 1767,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Strelec, Eduard",
        "types": [],
-       "nat": 1711,
+       "rtg": 1711,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Bilek, Lukas",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -3013,6 +3350,7 @@
        "no": 13,
        "name": "Prokop, Martin",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -3020,27 +3358,31 @@
        "no": 14,
        "name": "Primas, Jiri",
        "types": [],
-       "nat": 1578,
+       "rtg": 1578,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Kousek, Adam",
        "types": [],
-       "nat": 1036,
+       "rtg": 1036,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Hofrichter, Jan",
        "types": [],
-       "nat": 1016,
+       "rtg": 1016,
+       "nat": null,
        "fide": null
       },
       {
        "no": 17,
        "name": "Tvrz, Adam",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -3048,6 +3390,7 @@
        "no": 18,
        "name": "Tvrz, Petr",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -3055,6 +3398,7 @@
        "no": 19,
        "name": "Krepindl, Jan",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -3062,6 +3406,7 @@
        "no": 20,
        "name": "Troch, Tadeas",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       }
@@ -3077,7 +3422,8 @@
        "types": [
         "V."
        ],
-       "nat": 1872,
+       "rtg": 1872,
+       "nat": null,
        "fide": null
       },
       {
@@ -3086,7 +3432,8 @@
        "types": [
         "V"
        ],
-       "nat": 1926,
+       "rtg": 1926,
+       "nat": null,
        "fide": null
       },
       {
@@ -3095,35 +3442,40 @@
        "types": [
         "V"
        ],
-       "nat": 1871,
+       "rtg": 1871,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Vobruba, Pavel",
        "types": [],
-       "nat": 1813,
+       "rtg": 1813,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Kostal, Jindrich",
        "types": [],
-       "nat": 1823,
+       "rtg": 1823,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Drobny, Zbynek",
        "types": [],
-       "nat": 1828,
+       "rtg": 1828,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Protiva, Miloslav",
        "types": [],
-       "nat": 1749,
+       "rtg": 1749,
+       "nat": null,
        "fide": null
       },
       {
@@ -3132,7 +3484,8 @@
        "types": [
         "ZK"
        ],
-       "nat": 1805,
+       "rtg": 1805,
+       "nat": null,
        "fide": null
       },
       {
@@ -3141,84 +3494,96 @@
        "types": [
         "K"
        ],
-       "nat": 1800,
+       "rtg": 1800,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Jilek, Jaromir",
        "types": [],
-       "nat": 1896,
+       "rtg": 1896,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Pecina, Svatopluk",
        "types": [],
-       "nat": 1663,
+       "rtg": 1663,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Perutka, Bohumil",
        "types": [],
-       "nat": 1680,
+       "rtg": 1680,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Chocholous, Jaroslav",
        "types": [],
-       "nat": 1705,
+       "rtg": 1705,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Jezek, Jiri",
        "types": [],
-       "nat": 1722,
+       "rtg": 1722,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Tyl, Petr",
        "types": [],
-       "nat": 1551,
+       "rtg": 1551,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Hess, Alexander",
        "types": [],
-       "nat": 1622,
+       "rtg": 1622,
+       "nat": null,
        "fide": null
       },
       {
        "no": 17,
        "name": "Hert, Karel",
        "types": [],
-       "nat": 1593,
+       "rtg": 1593,
+       "nat": null,
        "fide": null
       },
       {
        "no": 18,
        "name": "Satanek, Oleg",
        "types": [],
-       "nat": 1038,
+       "rtg": 1038,
+       "nat": null,
        "fide": null
       },
       {
        "no": 19,
        "name": "Horvath, Michal",
        "types": [],
-       "nat": 1692,
+       "rtg": 1692,
+       "nat": null,
        "fide": null
       },
       {
        "no": 20,
        "name": "Antonec, Adam",
        "types": [],
-       "nat": 1845,
+       "rtg": 1845,
+       "nat": null,
        "fide": null
       }
      ]
@@ -3233,7 +3598,8 @@
        "types": [
         "H"
        ],
-       "nat": 1854,
+       "rtg": 1854,
+       "nat": null,
        "fide": null
       },
       {
@@ -3242,14 +3608,16 @@
        "types": [
         "H"
        ],
-       "nat": 1851,
+       "rtg": 1851,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Stuchly, Jaroslav",
        "types": [],
-       "nat": 1890,
+       "rtg": 1890,
+       "nat": null,
        "fide": null
       },
       {
@@ -3258,7 +3626,8 @@
        "types": [
         "ZK"
        ],
-       "nat": 1811,
+       "rtg": 1811,
+       "nat": null,
        "fide": null
       },
       {
@@ -3267,14 +3636,16 @@
        "types": [
         "K"
        ],
-       "nat": 1800,
+       "rtg": 1800,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Vojta, Jaroslav",
        "types": [],
-       "nat": 1717,
+       "rtg": 1717,
+       "nat": null,
        "fide": null
       },
       {
@@ -3283,55 +3654,63 @@
        "types": [
         "H"
        ],
-       "nat": 1743,
+       "rtg": 1743,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Slezinger, Jaroslav",
        "types": [],
-       "nat": 1660,
+       "rtg": 1660,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Celko, Milan",
        "types": [],
-       "nat": 1684,
+       "rtg": 1684,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Kosinar, Vojtech",
        "types": [],
-       "nat": 1667,
+       "rtg": 1667,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Schmidt, Vojtech",
        "types": [],
-       "nat": 1661,
+       "rtg": 1661,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Dusek, Matyas",
        "types": [],
-       "nat": 1501,
+       "rtg": 1501,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Muller, Jakub",
        "types": [],
-       "nat": 1719,
+       "rtg": 1719,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Bilek, Adam",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -3339,6 +3718,7 @@
        "no": 15,
        "name": "Tichy, Jakub",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       }
@@ -3354,7 +3734,8 @@
        "types": [
         "V"
        ],
-       "nat": 1924,
+       "rtg": 1924,
+       "nat": null,
        "fide": null
       },
       {
@@ -3363,21 +3744,24 @@
        "types": [
         "V"
        ],
-       "nat": 1908,
+       "rtg": 1908,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Cifka, Petr",
        "types": [],
-       "nat": 1706,
+       "rtg": 1706,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Volak, Jan",
        "types": [],
-       "nat": 1876,
+       "rtg": 1876,
+       "nat": null,
        "fide": null
       },
       {
@@ -3386,14 +3770,16 @@
        "types": [
         "K"
        ],
-       "nat": 1871,
+       "rtg": 1871,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Sebl, Jan",
        "types": [],
-       "nat": 1839,
+       "rtg": 1839,
+       "nat": null,
        "fide": null
       },
       {
@@ -3402,13 +3788,15 @@
        "types": [
         "ZK"
        ],
-       "nat": 1778,
+       "rtg": 1778,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Zelinger, Jiri",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -3416,6 +3804,7 @@
        "no": 9,
        "name": "Devera, Jan",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -3425,13 +3814,15 @@
        "types": [
         "H"
        ],
-       "nat": 1746,
+       "rtg": 1746,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Jandus, David",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -3439,13 +3830,15 @@
        "no": 12,
        "name": "Matusik, Milan",
        "types": [],
-       "nat": 1611,
+       "rtg": 1611,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Cibulka, Karel",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -3453,6 +3846,7 @@
        "no": 14,
        "name": "Vrana, Tomas",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -3460,13 +3854,15 @@
        "no": 15,
        "name": "Hrbolka, Oliver",
        "types": [],
-       "nat": 1008,
+       "rtg": 1008,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Proks, Michal",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -3476,7 +3872,8 @@
        "types": [
         "V"
        ],
-       "nat": 1991,
+       "rtg": 1991,
+       "nat": null,
        "fide": null
       }
      ]
@@ -3746,83 +4143,95 @@
        "no": 1,
        "name": "Balín, Daniel",
        "types": [],
-       "nat": 2001,
+       "rtg": 2001,
+       "nat": null,
        "fide": null
       },
       {
        "no": 2,
        "name": "Ederer, Karel",
        "types": [],
-       "nat": 1958,
+       "rtg": 1958,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Balín, Kamil",
        "types": [],
-       "nat": 1953,
+       "rtg": 1953,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Bažantová, Marie",
        "types": [],
-       "nat": 1905,
+       "rtg": 1905,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Rouč, Michal",
        "types": [],
-       "nat": 1865,
+       "rtg": 1865,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Sliva, Michal",
        "types": [],
-       "nat": 1854,
+       "rtg": 1854,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Řeháček, Jan",
        "types": [],
-       "nat": 1720,
+       "rtg": 1720,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Litoš, Ondřej",
        "types": [],
-       "nat": 1789,
+       "rtg": 1789,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Řeháček, Jan",
        "types": [],
-       "nat": 1538,
+       "rtg": 1538,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Řeháček, Oldřich",
        "types": [],
-       "nat": 1697,
+       "rtg": 1697,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Mikulka, Martin",
        "types": [],
-       "nat": 1605,
+       "rtg": 1605,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Pešek, Michal",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -3830,42 +4239,48 @@
        "no": 13,
        "name": "Plíšek, Matěj",
        "types": [],
-       "nat": 1446,
+       "rtg": 1446,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Křenek, Pavel",
        "types": [],
-       "nat": 1750,
+       "rtg": 1750,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Senger, Richard",
        "types": [],
-       "nat": 1787,
+       "rtg": 1787,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Sliva, Richard",
        "types": [],
-       "nat": 1812,
+       "rtg": 1812,
+       "nat": null,
        "fide": null
       },
       {
        "no": 17,
        "name": "Šolc, Miroslav",
        "types": [],
-       "nat": 1193,
+       "rtg": 1193,
+       "nat": null,
        "fide": null
       },
       {
        "no": 18,
        "name": "Veltruský, Petr",
        "types": [],
-       "nat": 1847,
+       "rtg": 1847,
+       "nat": null,
        "fide": null
       }
      ]
@@ -3878,111 +4293,127 @@
        "no": 1,
        "name": "Machka, Vít",
        "types": [],
-       "nat": 1859,
+       "rtg": 1859,
+       "nat": null,
        "fide": null
       },
       {
        "no": 2,
        "name": "Lešák, Ondřej",
        "types": [],
-       "nat": 1820,
+       "rtg": 1820,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Diviš, Jiří",
        "types": [],
-       "nat": 1851,
+       "rtg": 1851,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Řezáč, Pavel",
        "types": [],
-       "nat": 1825,
+       "rtg": 1825,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Říha, Vítek",
        "types": [],
-       "nat": 1685,
+       "rtg": 1685,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Papay, Jindřich",
        "types": [],
-       "nat": 1898,
+       "rtg": 1898,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Radvanovský, Petr",
        "types": [],
-       "nat": 1790,
+       "rtg": 1790,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Černý, Lumír",
        "types": [],
-       "nat": 1741,
+       "rtg": 1741,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Mašek, Daniel",
        "types": [],
-       "nat": 1933,
+       "rtg": 1933,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Lešák, Jiří",
        "types": [],
-       "nat": 2002,
+       "rtg": 2002,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Purkyt, Jaroslav",
        "types": [],
-       "nat": 1702,
+       "rtg": 1702,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Machka, Roman",
        "types": [],
-       "nat": 1577,
+       "rtg": 1577,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Pokorný, Radek",
        "types": [],
-       "nat": 1332,
+       "rtg": 1332,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Herich, Damián",
        "types": [],
-       "nat": 1502,
+       "rtg": 1502,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Herich, Lukáš",
        "types": [],
-       "nat": 1438,
+       "rtg": 1438,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Beaver, Maxim",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -3990,7 +4421,8 @@
        "no": 17,
        "name": "Ngo, Alex",
        "types": [],
-       "nat": 1193,
+       "rtg": 1193,
+       "nat": null,
        "fide": null
       }
      ]
@@ -4003,118 +4435,135 @@
        "no": 1,
        "name": "Židů, Jan",
        "types": [],
-       "nat": 1979,
+       "rtg": 1979,
+       "nat": null,
        "fide": null
       },
       {
        "no": 2,
        "name": "Šlangal, Lukáš",
        "types": [],
-       "nat": 1919,
+       "rtg": 1919,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Morávek, Zdeněk",
        "types": [],
-       "nat": 1842,
+       "rtg": 1842,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Bürgermeister, Michal",
        "types": [],
-       "nat": 1804,
+       "rtg": 1804,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Křehla, Milan",
        "types": [],
-       "nat": 1857,
+       "rtg": 1857,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Přívozník, Luboš",
        "types": [],
-       "nat": 1729,
+       "rtg": 1729,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Maščák, Milan",
        "types": [],
-       "nat": 1733,
+       "rtg": 1733,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Tilgner, Marcel",
        "types": [],
-       "nat": 1935,
+       "rtg": 1935,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Bartošík, Denis",
        "types": [],
-       "nat": 1526,
+       "rtg": 1526,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Studnička, Ondřej",
        "types": [],
-       "nat": 1779,
+       "rtg": 1779,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Doležal, Eduard",
        "types": [],
-       "nat": 1463,
+       "rtg": 1463,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Kollarová, Gabriela",
        "types": [],
-       "nat": 1494,
+       "rtg": 1494,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Samoilenko, Kyryl",
        "types": [],
-       "nat": 1492,
+       "rtg": 1492,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Korchak, Yevhenii",
        "types": [],
-       "nat": 1484,
+       "rtg": 1484,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Vrkoč, Alexandr",
        "types": [],
-       "nat": 1440,
+       "rtg": 1440,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Abrahám, Darien",
        "types": [],
-       "nat": 1266,
+       "rtg": 1266,
+       "nat": null,
        "fide": null
       },
       {
        "no": 17,
        "name": "Válek, Tomáš",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       }
@@ -4128,139 +4577,159 @@
        "no": 1,
        "name": "Laban, Vladimír",
        "types": [],
-       "nat": 1949,
+       "rtg": 1949,
+       "nat": null,
        "fide": null
       },
       {
        "no": 2,
        "name": "Polák, Martin",
        "types": [],
-       "nat": 1857,
+       "rtg": 1857,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Tureček, Václav",
        "types": [],
-       "nat": 1880,
+       "rtg": 1880,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Mittelbach, Zdeněk",
        "types": [],
-       "nat": 1847,
+       "rtg": 1847,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Francl, Zdeněk",
        "types": [],
-       "nat": 1797,
+       "rtg": 1797,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Hajzler, Tomáš",
        "types": [],
-       "nat": 1790,
+       "rtg": 1790,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Brýda, Martin",
        "types": [],
-       "nat": 1741,
+       "rtg": 1741,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Balvín, Rudolf",
        "types": [],
-       "nat": 1687,
+       "rtg": 1687,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Ladra, Antonín",
        "types": [],
-       "nat": 1796,
+       "rtg": 1796,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Švarha, Michal",
        "types": [],
-       "nat": 1749,
+       "rtg": 1749,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Pechek, Jan",
        "types": [],
-       "nat": 1844,
+       "rtg": 1844,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Stibor, Ondřej",
        "types": [],
-       "nat": 1819,
+       "rtg": 1819,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Novák, Lukáš",
        "types": [],
-       "nat": 1746,
+       "rtg": 1746,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Nacházel, Václav",
        "types": [],
-       "nat": 1725,
+       "rtg": 1725,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Povr, Milan",
        "types": [],
-       "nat": 1547,
+       "rtg": 1547,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Berka, Lukáš",
        "types": [],
-       "nat": 1011,
+       "rtg": 1011,
+       "nat": null,
        "fide": null
       },
       {
        "no": 17,
        "name": "Berka, Štěpán",
        "types": [],
-       "nat": 1034,
+       "rtg": 1034,
+       "nat": null,
        "fide": null
       },
       {
        "no": 18,
        "name": "Bělina, Lukáš",
        "types": [],
-       "nat": 1500,
+       "rtg": 1500,
+       "nat": null,
        "fide": null
       },
       {
        "no": 19,
        "name": "Kindl, Václav",
        "types": [],
-       "nat": 1032,
+       "rtg": 1032,
+       "nat": null,
        "fide": null
       },
       {
        "no": 20,
        "name": "Hančl, Lukas",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       }
@@ -4274,118 +4743,135 @@
        "no": 1,
        "name": "Šura, Jaroslav",
        "types": [],
-       "nat": 2010,
+       "rtg": 2010,
+       "nat": null,
        "fide": null
       },
       {
        "no": 2,
        "name": "Nováček, Jan",
        "types": [],
-       "nat": 1967,
+       "rtg": 1967,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Chaloupka, František",
        "types": [],
-       "nat": 1929,
+       "rtg": 1929,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Prný, Jan",
        "types": [],
-       "nat": 1901,
+       "rtg": 1901,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Bauer, Ondřej",
        "types": [],
-       "nat": 1906,
+       "rtg": 1906,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Matouš, Pavel",
        "types": [],
-       "nat": 1839,
+       "rtg": 1839,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Wilhelm, Oldřich",
        "types": [],
-       "nat": 1753,
+       "rtg": 1753,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Medek, Šimon",
        "types": [],
-       "nat": 1816,
+       "rtg": 1816,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Šulc, František",
        "types": [],
-       "nat": 1737,
+       "rtg": 1737,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Vydra, Jaroslav",
        "types": [],
-       "nat": 1713,
+       "rtg": 1713,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Souralová, Alena",
        "types": [],
-       "nat": 1701,
+       "rtg": 1701,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Vrána, František",
        "types": [],
-       "nat": 1689,
+       "rtg": 1689,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Jesenský, Jaromír",
        "types": [],
-       "nat": 1644,
+       "rtg": 1644,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "John, Zbyněk",
        "types": [],
-       "nat": 1642,
+       "rtg": 1642,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Aghayev, Kamil",
        "types": [],
-       "nat": 1628,
+       "rtg": 1628,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Roděj, Vladimír",
        "types": [],
-       "nat": 1498,
+       "rtg": 1498,
+       "nat": null,
        "fide": null
       },
       {
        "no": 17,
        "name": "Müller, Andreas",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -4393,13 +4879,15 @@
        "no": 18,
        "name": "Děžinský, Filip",
        "types": [],
-       "nat": 1621,
+       "rtg": 1621,
+       "nat": null,
        "fide": null
       },
       {
        "no": 19,
        "name": "Dokoupil, Filip",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -4407,7 +4895,8 @@
        "no": 20,
        "name": "Husák, Richard",
        "types": [],
-       "nat": 1135,
+       "rtg": 1135,
+       "nat": null,
        "fide": null
       }
      ]
@@ -4420,83 +4909,95 @@
        "no": 1,
        "name": "Lavrinčík, Pavel",
        "types": [],
-       "nat": 1756,
+       "rtg": 1756,
+       "nat": null,
        "fide": null
       },
       {
        "no": 2,
        "name": "Jeřábek, Jan",
        "types": [],
-       "nat": 1738,
+       "rtg": 1738,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Černý, Martin",
        "types": [],
-       "nat": 1799,
+       "rtg": 1799,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Vašíček, Milan",
        "types": [],
-       "nat": 1766,
+       "rtg": 1766,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Černý, Svatopluk",
        "types": [],
-       "nat": 1719,
+       "rtg": 1719,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Wirth, Pavel",
        "types": [],
-       "nat": 1695,
+       "rtg": 1695,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Chovanec, Aleš",
        "types": [],
-       "nat": 1648,
+       "rtg": 1648,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Kovář, Petr",
        "types": [],
-       "nat": 1485,
+       "rtg": 1485,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Šimovič, Ludvík",
        "types": [],
-       "nat": 1742,
+       "rtg": 1742,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Beran, Petr",
        "types": [],
-       "nat": 1668,
+       "rtg": 1668,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Harašta, František",
        "types": [],
-       "nat": 1645,
+       "rtg": 1645,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Jašek, Martin",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       }
@@ -4510,62 +5011,71 @@
        "no": 1,
        "name": "Goč, Vlastimil",
        "types": [],
-       "nat": 1875,
+       "rtg": 1875,
+       "nat": null,
        "fide": null
       },
       {
        "no": 2,
        "name": "Zaťko, Michal",
        "types": [],
-       "nat": 1884,
+       "rtg": 1884,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Riedel, Miroslav",
        "types": [],
-       "nat": 1804,
+       "rtg": 1804,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Hellinger, Jan",
        "types": [],
-       "nat": 1664,
+       "rtg": 1664,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Čermák, Jan",
        "types": [],
-       "nat": 1856,
+       "rtg": 1856,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Uhlík, Bohumil",
        "types": [],
-       "nat": 1821,
+       "rtg": 1821,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Málek, Jiří",
        "types": [],
-       "nat": 1770,
+       "rtg": 1770,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Kebrt, Jaromír",
        "types": [],
-       "nat": 1689,
+       "rtg": 1689,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Máslo, Daniel",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -4573,42 +5083,48 @@
        "no": 10,
        "name": "Holub, Josef",
        "types": [],
-       "nat": 1833,
+       "rtg": 1833,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Koubek, Josef",
        "types": [],
-       "nat": 1048,
+       "rtg": 1048,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Hloušek, Zdeněk",
        "types": [],
-       "nat": 1726,
+       "rtg": 1726,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Mareš, Otakar",
        "types": [],
-       "nat": 1845,
+       "rtg": 1845,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Gorej, Vojtěch",
        "types": [],
-       "nat": 1688,
+       "rtg": 1688,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Gorej, Jan",
        "types": [],
-       "nat": 1594,
+       "rtg": 1594,
+       "nat": null,
        "fide": null
       }
      ]
@@ -4621,111 +5137,127 @@
        "no": 1,
        "name": "Gallik, Miroslav",
        "types": [],
-       "nat": 2030,
+       "rtg": 2030,
+       "nat": null,
        "fide": null
       },
       {
        "no": 2,
        "name": "Šebesta, Jan",
        "types": [],
-       "nat": 1963,
+       "rtg": 1963,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Hozda, David",
        "types": [],
-       "nat": 1842,
+       "rtg": 1842,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Valenta, Petr",
        "types": [],
-       "nat": 1719,
+       "rtg": 1719,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Pešek, Michal",
        "types": [],
-       "nat": 1734,
+       "rtg": 1734,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Malina, Josef",
        "types": [],
-       "nat": 1805,
+       "rtg": 1805,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Vodehnal, Václav",
        "types": [],
-       "nat": 1710,
+       "rtg": 1710,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Musil, Antonín",
        "types": [],
-       "nat": 1735,
+       "rtg": 1735,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Kostišče, Ján",
        "types": [],
-       "nat": 1710,
+       "rtg": 1710,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Šebesta, Jan",
        "types": [],
-       "nat": 1899,
+       "rtg": 1899,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Waclawek, Karel",
        "types": [],
-       "nat": 1659,
+       "rtg": 1659,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Černý, Vladimír",
        "types": [],
-       "nat": 1726,
+       "rtg": 1726,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Křivský, Jiří",
        "types": [],
-       "nat": 1690,
+       "rtg": 1690,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Beil, Richard",
        "types": [],
-       "nat": 1627,
+       "rtg": 1627,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Korol, Jiří",
        "types": [],
-       "nat": 1366,
+       "rtg": 1366,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Pačinek, Oto",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -4733,14 +5265,16 @@
        "no": 17,
        "name": "Chudina, Jan",
        "types": [],
-       "nat": 1580,
+       "rtg": 1580,
+       "nat": null,
        "fide": null
       },
       {
        "no": 18,
        "name": "Král, Jaromír",
        "types": [],
-       "nat": 1623,
+       "rtg": 1623,
+       "nat": null,
        "fide": null
       }
      ]
@@ -4753,111 +5287,127 @@
        "no": 1,
        "name": "Jusko, Jindřich",
        "types": [],
-       "nat": 1877,
+       "rtg": 1877,
+       "nat": null,
        "fide": null
       },
       {
        "no": 2,
        "name": "Viola, Jan",
        "types": [],
-       "nat": 1908,
+       "rtg": 1908,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Voleman, Milan",
        "types": [],
-       "nat": 1704,
+       "rtg": 1704,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Holec, Jaroslav",
        "types": [],
-       "nat": 1759,
+       "rtg": 1759,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Weiss, Josef",
        "types": [],
-       "nat": 1775,
+       "rtg": 1775,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Červinka, Jiří",
        "types": [],
-       "nat": 1709,
+       "rtg": 1709,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Dlouhý, Dominik",
        "types": [],
-       "nat": 1672,
+       "rtg": 1672,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Lukeš, Václav",
        "types": [],
-       "nat": 1616,
+       "rtg": 1616,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Kudrna, Jan",
        "types": [],
-       "nat": 1758,
+       "rtg": 1758,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Weiss, Pavel",
        "types": [],
-       "nat": 1692,
+       "rtg": 1692,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Weiss, Petr",
        "types": [],
-       "nat": 1646,
+       "rtg": 1646,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Kudrna, Václav",
        "types": [],
-       "nat": 1730,
+       "rtg": 1730,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Voleman, Marek",
        "types": [],
-       "nat": 1689,
+       "rtg": 1689,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Maxa, Martin",
        "types": [],
-       "nat": 1582,
+       "rtg": 1582,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Chmátal, Petr",
        "types": [],
-       "nat": 1173,
+       "rtg": 1173,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Michňo, Jan",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -4865,6 +5415,7 @@
        "no": 17,
        "name": "Kudrna, Adam",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       }
@@ -4878,132 +5429,151 @@
        "no": 1,
        "name": "Voslař, Jan",
        "types": [],
-       "nat": 2041,
+       "rtg": 2041,
+       "nat": null,
        "fide": null
       },
       {
        "no": 2,
        "name": "Hrabal, Ivan",
        "types": [],
-       "nat": 1916,
+       "rtg": 1916,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Poliakov, Ivan",
        "types": [],
-       "nat": 1866,
+       "rtg": 1866,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Zikranets, Bohdan",
        "types": [],
-       "nat": 1678,
+       "rtg": 1678,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Rojt, Jiří",
        "types": [],
-       "nat": 1730,
+       "rtg": 1730,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Carboch, Ladislav",
        "types": [],
-       "nat": 1756,
+       "rtg": 1756,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Jeřábek, Jakub",
        "types": [],
-       "nat": 1668,
+       "rtg": 1668,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Krausz, Milan",
        "types": [],
-       "nat": 1658,
+       "rtg": 1658,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Zima, Tomáš",
        "types": [],
-       "nat": 1914,
+       "rtg": 1914,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Zima, Jaroslav",
        "types": [],
-       "nat": 1661,
+       "rtg": 1661,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Mach, Michal",
        "types": [],
-       "nat": 1699,
+       "rtg": 1699,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Koudelka, Jiří",
        "types": [],
-       "nat": 1588,
+       "rtg": 1588,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Vaněk, Matyáš",
        "types": [],
-       "nat": 1277,
+       "rtg": 1277,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Krucký, Kryštof",
        "types": [],
-       "nat": 1470,
+       "rtg": 1470,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Rokyta, Jan",
        "types": [],
-       "nat": 1464,
+       "rtg": 1464,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Brodský, Jan",
        "types": [],
-       "nat": 1046,
+       "rtg": 1046,
+       "nat": null,
        "fide": null
       },
       {
        "no": 17,
        "name": "Honchar, Denys",
        "types": [],
-       "nat": 1609,
+       "rtg": 1609,
+       "nat": null,
        "fide": null
       },
       {
        "no": 18,
        "name": "Franěk, Prokop",
        "types": [],
-       "nat": 1019,
+       "rtg": 1019,
+       "nat": null,
        "fide": null
       },
       {
        "no": 19,
        "name": "Shemota, Oleksandr",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       }
@@ -5276,35 +5846,40 @@
        "types": [
         "V"
        ],
-       "nat": 1828,
+       "rtg": 1828,
+       "nat": null,
        "fide": null
       },
       {
        "no": 2,
        "name": "Kopriva, Richard",
        "types": [],
-       "nat": 1803,
+       "rtg": 1803,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Dousa, Vaclav",
        "types": [],
-       "nat": 1769,
+       "rtg": 1769,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Perutka, Bohumil",
        "types": [],
-       "nat": 1680,
+       "rtg": 1680,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Tyl, Petr",
        "types": [],
-       "nat": 1551,
+       "rtg": 1551,
+       "nat": null,
        "fide": null
       },
       {
@@ -5313,14 +5888,16 @@
        "types": [
         "ZK"
        ],
-       "nat": 1663,
+       "rtg": 1663,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Hess, Alexander",
        "types": [],
-       "nat": 1622,
+       "rtg": 1622,
+       "nat": null,
        "fide": null
       },
       {
@@ -5329,27 +5906,31 @@
        "types": [
         "K"
        ],
-       "nat": 1593,
+       "rtg": 1593,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Mudra, Josef",
        "types": [],
-       "nat": 1543,
+       "rtg": 1543,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Kindl, Vaclav",
        "types": [],
-       "nat": 1516,
+       "rtg": 1516,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Holcr, Michal",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -5357,14 +5938,16 @@
        "no": 12,
        "name": "Jezek, Jiri",
        "types": [],
-       "nat": 1722,
+       "rtg": 1722,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Dousa, Michal",
        "types": [],
-       "nat": 1647,
+       "rtg": 1647,
+       "nat": null,
        "fide": null
       }
      ]
@@ -5379,7 +5962,8 @@
        "types": [
         "V"
        ],
-       "nat": 1795,
+       "rtg": 1795,
+       "nat": null,
        "fide": null
       },
       {
@@ -5388,7 +5972,8 @@
        "types": [
         "V"
        ],
-       "nat": 1775,
+       "rtg": 1775,
+       "nat": null,
        "fide": null
       },
       {
@@ -5397,21 +5982,24 @@
        "types": [
         "V"
        ],
-       "nat": 1801,
+       "rtg": 1801,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Hladik, Vladimir",
        "types": [],
-       "nat": 1768,
+       "rtg": 1768,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Storch, Milan",
        "types": [],
-       "nat": 1767,
+       "rtg": 1767,
+       "nat": null,
        "fide": null
       },
       {
@@ -5420,7 +6008,8 @@
        "types": [
         "ZK"
        ],
-       "nat": 1711,
+       "rtg": 1711,
+       "nat": null,
        "fide": null
       },
       {
@@ -5429,20 +6018,23 @@
        "types": [
         "V"
        ],
-       "nat": 1631,
+       "rtg": 1631,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Mojzik, Mojmir",
        "types": [],
-       "nat": 1618,
+       "rtg": 1618,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Bilek, Lukas",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -5450,34 +6042,39 @@
        "no": 10,
        "name": "Kostrhun, Ludvik",
        "types": [],
-       "nat": 1535,
+       "rtg": 1535,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Dytrych, Alan",
        "types": [],
-       "nat": 1387,
+       "rtg": 1387,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Hofrichter, Jan",
        "types": [],
-       "nat": 1016,
+       "rtg": 1016,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Sebesta, Daniel",
        "types": [],
-       "nat": 1009,
+       "rtg": 1009,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Tvrz, Adam",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -5485,6 +6082,7 @@
        "no": 15,
        "name": "Tvrz, Petr",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -5492,6 +6090,7 @@
        "no": 16,
        "name": "Krepindl, Jan",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -5499,6 +6098,7 @@
        "no": 17,
        "name": "Troch, Tadeas",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -5506,6 +6106,7 @@
        "no": 18,
        "name": "Blahova, Andrea",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -5513,6 +6114,7 @@
        "no": 19,
        "name": "Mikolanda, Tomas",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -5520,6 +6122,7 @@
        "no": 20,
        "name": "Tyr, Tobias",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       }
@@ -5533,14 +6136,16 @@
        "no": 1,
        "name": "Chmelik, Jiri",
        "types": [],
-       "nat": 1854,
+       "rtg": 1854,
+       "nat": null,
        "fide": null
       },
       {
        "no": 2,
        "name": "Saffova, Michaela",
        "types": [],
-       "nat": 1840,
+       "rtg": 1840,
+       "nat": null,
        "fide": null
       },
       {
@@ -5549,21 +6154,24 @@
        "types": [
         "ZK"
        ],
-       "nat": 1743,
+       "rtg": 1743,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Berka, Jiri",
        "types": [],
-       "nat": 1687,
+       "rtg": 1687,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Svehla, Hynek",
        "types": [],
-       "nat": 1642,
+       "rtg": 1642,
+       "nat": null,
        "fide": null
       },
       {
@@ -5572,7 +6180,8 @@
        "types": [
         "K"
        ],
-       "nat": 1492,
+       "rtg": 1492,
+       "nat": null,
        "fide": null
       }
      ]
@@ -5587,7 +6196,8 @@
        "types": [
         "V"
        ],
-       "nat": 1826,
+       "rtg": 1826,
+       "nat": null,
        "fide": null
       },
       {
@@ -5596,7 +6206,8 @@
        "types": [
         "V"
        ],
-       "nat": 1869,
+       "rtg": 1869,
+       "nat": null,
        "fide": null
       },
       {
@@ -5605,14 +6216,16 @@
        "types": [
         "V"
        ],
-       "nat": 1898,
+       "rtg": 1898,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Fiala, Matej",
        "types": [],
-       "nat": 1772,
+       "rtg": 1772,
+       "nat": null,
        "fide": null
       },
       {
@@ -5621,55 +6234,63 @@
        "types": [
         "V"
        ],
-       "nat": 1829,
+       "rtg": 1829,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Sladky, Petr",
        "types": [],
-       "nat": 1764,
+       "rtg": 1764,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Matousek, Josef",
        "types": [],
-       "nat": 1786,
+       "rtg": 1786,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Nemec, Vaclav",
        "types": [],
-       "nat": 1648,
+       "rtg": 1648,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Urban, Miroslav",
        "types": [],
-       "nat": 1857,
+       "rtg": 1857,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Spirek, David",
        "types": [],
-       "nat": 1647,
+       "rtg": 1647,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Rath, Vladimir",
        "types": [],
-       "nat": 1683,
+       "rtg": 1683,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Berka, Tomas",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -5677,6 +6298,7 @@
        "no": 13,
        "name": "Bejcek, Jan",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -5684,6 +6306,7 @@
        "no": 14,
        "name": "Farka, Jakub",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -5691,14 +6314,16 @@
        "no": 15,
        "name": "Bejcek, Pavel",
        "types": [],
-       "nat": 1568,
+       "rtg": 1568,
+       "nat": null,
        "fide": null
       },
       {
        "no": 16,
        "name": "Matas, Jiri",
        "types": [],
-       "nat": 1336,
+       "rtg": 1336,
+       "nat": null,
        "fide": null
       }
      ]
@@ -5711,14 +6336,16 @@
        "no": 1,
        "name": "Kucera, Milan",
        "types": [],
-       "nat": 1851,
+       "rtg": 1851,
+       "nat": null,
        "fide": null
       },
       {
        "no": 2,
        "name": "Wirkner, Frantisek",
        "types": [],
-       "nat": 1819,
+       "rtg": 1819,
+       "nat": null,
        "fide": null
       },
       {
@@ -5727,14 +6354,16 @@
        "types": [
         "ZK"
        ],
-       "nat": 1896,
+       "rtg": 1896,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Hermann, Miroslav",
        "types": [],
-       "nat": 1701,
+       "rtg": 1701,
+       "nat": null,
        "fide": null
       },
       {
@@ -5743,14 +6372,16 @@
        "types": [
         "K"
        ],
-       "nat": 1598,
+       "rtg": 1598,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Hesky, Rostislav",
        "types": [],
-       "nat": 1663,
+       "rtg": 1663,
+       "nat": null,
        "fide": null
       },
       {
@@ -5759,7 +6390,8 @@
        "types": [
         "H"
        ],
-       "nat": 1744,
+       "rtg": 1744,
+       "nat": null,
        "fide": null
       },
       {
@@ -5768,7 +6400,8 @@
        "types": [
         "H"
        ],
-       "nat": 1716,
+       "rtg": 1716,
+       "nat": null,
        "fide": null
       },
       {
@@ -5777,6 +6410,7 @@
        "types": [
         "H"
        ],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -5786,13 +6420,15 @@
        "types": [
         "H"
        ],
-       "nat": 1675,
+       "rtg": 1675,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Wolfram, Petr",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -5800,27 +6436,31 @@
        "no": 12,
        "name": "Jarolimek, Bedrich",
        "types": [],
-       "nat": 1581,
+       "rtg": 1581,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Vesely, Jiri",
        "types": [],
-       "nat": 1684,
+       "rtg": 1684,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Stepan, Petr",
        "types": [],
-       "nat": 1536,
+       "rtg": 1536,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Janda, Borek",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -5828,7 +6468,8 @@
        "no": 16,
        "name": "Filek, Eduard",
        "types": [],
-       "nat": 1612,
+       "rtg": 1612,
+       "nat": null,
        "fide": null
       }
      ]
@@ -5843,7 +6484,8 @@
        "types": [
         "V"
        ],
-       "nat": 1800,
+       "rtg": 1800,
+       "nat": null,
        "fide": null
       },
       {
@@ -5852,28 +6494,32 @@
        "types": [
         "V"
        ],
-       "nat": 1717,
+       "rtg": 1717,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Dusek, Matyas",
        "types": [],
-       "nat": 1501,
+       "rtg": 1501,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Schmidt, Vojtech",
        "types": [],
-       "nat": 1661,
+       "rtg": 1661,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Muller, Jakub",
        "types": [],
-       "nat": 1719,
+       "rtg": 1719,
+       "nat": null,
        "fide": null
       },
       {
@@ -5882,27 +6528,31 @@
        "types": [
         "V"
        ],
-       "nat": 1660,
+       "rtg": 1660,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Celko, Milan",
        "types": [],
-       "nat": 1684,
+       "rtg": 1684,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Kosinar, Vojtech",
        "types": [],
-       "nat": 1667,
+       "rtg": 1667,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Tichy, Jakub",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -5910,6 +6560,7 @@
        "no": 10,
        "name": "Bilek, Adam",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       }
@@ -5925,7 +6576,8 @@
        "types": [
         "V"
        ],
-       "nat": 1871,
+       "rtg": 1871,
+       "nat": null,
        "fide": null
       },
       {
@@ -5934,13 +6586,15 @@
        "types": [
         "V"
        ],
-       "nat": 1876,
+       "rtg": 1876,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Devera, Jan",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -5950,6 +6604,7 @@
        "types": [
         "ZK"
        ],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -5959,6 +6614,7 @@
        "types": [
         "V"
        ],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -5968,13 +6624,15 @@
        "types": [
         "V"
        ],
-       "nat": 1778,
+       "rtg": 1778,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Cibulka, Karel",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -5982,13 +6640,15 @@
        "no": 8,
        "name": "Matusik, Milan",
        "types": [],
-       "nat": 1611,
+       "rtg": 1611,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Vrana, Tomas",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -5996,13 +6656,15 @@
        "no": 10,
        "name": "Hrbolka, Oliver",
        "types": [],
-       "nat": 1008,
+       "rtg": 1008,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Proks, Michal",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       }
@@ -6018,7 +6680,8 @@
        "types": [
         "H"
        ],
-       "nat": 1852,
+       "rtg": 1852,
+       "nat": null,
        "fide": null
       },
       {
@@ -6027,35 +6690,40 @@
        "types": [
         "V"
        ],
-       "nat": 1805,
+       "rtg": 1805,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Zebisch, Jan",
        "types": [],
-       "nat": 1667,
+       "rtg": 1667,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Horvath, Michal",
        "types": [],
-       "nat": 1692,
+       "rtg": 1692,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Antonec, Adam",
        "types": [],
-       "nat": 1845,
+       "rtg": 1845,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Gajdac, Sandra",
        "types": [],
-       "nat": 1575,
+       "rtg": 1575,
+       "nat": null,
        "fide": null
       },
       {
@@ -6064,48 +6732,55 @@
        "types": [
         "H"
        ],
-       "nat": 1455,
+       "rtg": 1455,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Zebisch, Jan",
        "types": [],
-       "nat": 1477,
+       "rtg": 1477,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Satanek, Oleg",
        "types": [],
-       "nat": 1038,
+       "rtg": 1038,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Korous, Ondrej",
        "types": [],
-       "nat": 1033,
+       "rtg": 1033,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Sunovsky, Marek",
        "types": [],
-       "nat": 1011,
+       "rtg": 1011,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Gajdac, Martin",
        "types": [],
-       "nat": 1586,
+       "rtg": 1586,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Havrlant, Jan",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -6113,6 +6788,7 @@
        "no": 14,
        "name": "Lhotsky, Simon",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -6120,6 +6796,7 @@
        "no": 15,
        "name": "Rychtarik, Jan",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -6127,6 +6804,7 @@
        "no": 16,
        "name": "Satanek, Kosma",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -6134,6 +6812,7 @@
        "no": 17,
        "name": "Satanek, Samo",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       }
@@ -6322,41 +7001,47 @@
        "no": 1,
        "name": "Kostišče, Ján",
        "types": [],
-       "nat": 1720,
+       "rtg": 1720,
+       "nat": null,
        "fide": null
       },
       {
        "no": 2,
        "name": "Černý, Vladimír",
        "types": [],
-       "nat": 1717,
+       "rtg": 1717,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Křivský, Jiří",
        "types": [],
-       "nat": 1702,
+       "rtg": 1702,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Vodehnal, Václav",
        "types": [],
-       "nat": 1710,
+       "rtg": 1710,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Beil, Richard",
        "types": [],
-       "nat": 1630,
+       "rtg": 1630,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Pačinek, Oto",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -6364,28 +7049,32 @@
        "no": 7,
        "name": "Wáclawek, Karel",
        "types": [],
-       "nat": 1663,
+       "rtg": 1663,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Korol, Jiří",
        "types": [],
-       "nat": 1366,
+       "rtg": 1366,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Chudina, Jan",
        "types": [],
-       "nat": 1580,
+       "rtg": 1580,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Král, Jaromír",
        "types": [],
-       "nat": 1623,
+       "rtg": 1623,
+       "nat": null,
        "fide": null
       }
      ]
@@ -6398,76 +7087,87 @@
        "no": 1,
        "name": "Bayer, Radek",
        "types": [],
-       "nat": 2000,
+       "rtg": 2000,
+       "nat": null,
        "fide": null
       },
       {
        "no": 2,
        "name": "Olšák, Oliver",
        "types": [],
-       "nat": 1717,
+       "rtg": 1717,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Schuldes, René",
        "types": [],
-       "nat": 1780,
+       "rtg": 1780,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Kučera, Bohuslav",
        "types": [],
-       "nat": 1735,
+       "rtg": 1735,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Semová, Lada",
        "types": [],
-       "nat": 1674,
+       "rtg": 1674,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Kolman, Jiří",
        "types": [],
-       "nat": 1599,
+       "rtg": 1599,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Hübl, Dominik",
        "types": [],
-       "nat": 1673,
+       "rtg": 1673,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Jakoubek, Štepán",
        "types": [],
-       "nat": 1636,
+       "rtg": 1636,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Nedobeha, Anna",
        "types": [],
-       "nat": 1494,
+       "rtg": 1494,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Hryhoriev, Hnat",
        "types": [],
-       "nat": 1274,
+       "rtg": 1274,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Čábelková, Květoslava",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -6475,6 +7175,7 @@
        "no": 12,
        "name": "Dang, Martin Tri Nhan",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -6482,13 +7183,15 @@
        "no": 13,
        "name": "Pham, Quang Nam Phong",
        "types": [],
-       "nat": 1145,
+       "rtg": 1145,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Pham, Quang Nhat",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -6496,6 +7199,7 @@
        "no": 15,
        "name": "Tkachenko, Kostiantyn",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -6503,6 +7207,7 @@
        "no": 16,
        "name": "Vosička, Pavel",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       }
@@ -6516,63 +7221,72 @@
        "no": 1,
        "name": "Černík, Lukáš",
        "types": [],
-       "nat": 2081,
+       "rtg": 2081,
+       "nat": null,
        "fide": null
       },
       {
        "no": 2,
        "name": "Lev, Lukáš",
        "types": [],
-       "nat": 1860,
+       "rtg": 1860,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Cvek, Jaroslav",
        "types": [],
-       "nat": 1885,
+       "rtg": 1885,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Papík, Jaromír",
        "types": [],
-       "nat": 1566,
+       "rtg": 1566,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Gruber, Tobiáš",
        "types": [],
-       "nat": 1632,
+       "rtg": 1632,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Šotolová, Jana",
        "types": [],
-       "nat": 1612,
+       "rtg": 1612,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Durdisová, Monika",
        "types": [],
-       "nat": 1491,
+       "rtg": 1491,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Pěkný, Jaroslav",
        "types": [],
-       "nat": 1360,
+       "rtg": 1360,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Černíková, Berenice Emma",
        "types": [],
-       "nat": 1026,
+       "rtg": 1026,
+       "nat": null,
        "fide": null
       }
      ]
@@ -6585,48 +7299,55 @@
        "no": 1,
        "name": "Diviš, Jiří",
        "types": [],
-       "nat": 1851,
+       "rtg": 1851,
+       "nat": null,
        "fide": null
       },
       {
        "no": 2,
        "name": "Janda, Lukáš",
        "types": [],
-       "nat": 1509,
+       "rtg": 1509,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Černý, Lumír",
        "types": [],
-       "nat": 1753,
+       "rtg": 1753,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Machka, Roman",
        "types": [],
-       "nat": 1571,
+       "rtg": 1571,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Radvanovský, Petr",
        "types": [],
-       "nat": 1779,
+       "rtg": 1779,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Říha, Vítek",
        "types": [],
-       "nat": 1651,
+       "rtg": 1651,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Beaver, Maxim",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -6634,27 +7355,31 @@
        "no": 8,
        "name": "Ngo, Alex",
        "types": [],
-       "nat": 1193,
+       "rtg": 1193,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Herich, Damián",
        "types": [],
-       "nat": 1502,
+       "rtg": 1502,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Herich, Lukáš",
        "types": [],
-       "nat": 1438,
+       "rtg": 1438,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Pomahač, Daniel",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -6662,27 +7387,31 @@
        "no": 12,
        "name": "Papay, Jindřich",
        "types": [],
-       "nat": 1885,
+       "rtg": 1885,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Novotný, Tomáš",
        "types": [],
-       "nat": 1864,
+       "rtg": 1864,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Pokorný, Radek",
        "types": [],
-       "nat": 1332,
+       "rtg": 1332,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Štverák, Jiří",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -6690,14 +7419,16 @@
        "no": 16,
        "name": "Purkyt, Jaroslav",
        "types": [],
-       "nat": 1704,
+       "rtg": 1704,
+       "nat": null,
        "fide": null
       },
       {
        "no": 17,
        "name": "Zíval, Vratislav",
        "types": [],
-       "nat": 1016,
+       "rtg": 1016,
+       "nat": null,
        "fide": null
       }
      ]
@@ -6710,90 +7441,103 @@
        "no": 1,
        "name": "Jirásek, Jiří",
        "types": [],
-       "nat": 1851,
+       "rtg": 1851,
+       "nat": null,
        "fide": null
       },
       {
        "no": 2,
        "name": "Mašcák, Milan",
        "types": [],
-       "nat": 1709,
+       "rtg": 1709,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Mašata, Roman",
        "types": [],
-       "nat": 1448,
+       "rtg": 1448,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Doležal, Eduard",
        "types": [],
-       "nat": 1515,
+       "rtg": 1515,
+       "nat": null,
        "fide": null
       },
       {
        "no": 5,
        "name": "Samoilenko, Kyryl",
        "types": [],
-       "nat": 1492,
+       "rtg": 1492,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Abrahám, Darien",
        "types": [],
-       "nat": 1266,
+       "rtg": 1266,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Vrkoč, Alexandr",
        "types": [],
-       "nat": 1431,
+       "rtg": 1431,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Sejpka, Šimon",
        "types": [],
-       "nat": 1449,
+       "rtg": 1449,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Bartošík, Denis",
        "types": [],
-       "nat": 1526,
+       "rtg": 1526,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Korchak, Yevhenii",
        "types": [],
-       "nat": 1484,
+       "rtg": 1484,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Wistein, Matěj",
        "types": [],
-       "nat": 1425,
+       "rtg": 1425,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Mareš, David",
        "types": [],
-       "nat": 1491,
+       "rtg": 1491,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Kopta, Petr",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -6801,6 +7545,7 @@
        "no": 14,
        "name": "Babin, Dmitrii",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -6808,6 +7553,7 @@
        "no": 15,
        "name": "Nedohibčenko, Vladislav",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -6815,13 +7561,15 @@
        "no": 16,
        "name": "Tyburec, Tobiáš",
        "types": [],
-       "nat": 1001,
+       "rtg": 1001,
+       "nat": null,
        "fide": null
       },
       {
        "no": 17,
        "name": "Schauer, Mark",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -6829,6 +7577,7 @@
        "no": 18,
        "name": "Šulc, Jan",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -6836,6 +7585,7 @@
        "no": 19,
        "name": "Pecha, Karel",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -6843,6 +7593,7 @@
        "no": 20,
        "name": "Válek, Tomáš",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       }
@@ -6856,27 +7607,31 @@
        "no": 1,
        "name": "Weiss, Pavel",
        "types": [],
-       "nat": 1689,
+       "rtg": 1689,
+       "nat": null,
        "fide": null
       },
       {
        "no": 2,
        "name": "Weiss, Petr",
        "types": [],
-       "nat": 1632,
+       "rtg": 1632,
+       "nat": null,
        "fide": null
       },
       {
        "no": 3,
        "name": "Chmátal, Petr",
        "types": [],
-       "nat": 1173,
+       "rtg": 1173,
+       "nat": null,
        "fide": null
       },
       {
        "no": 4,
        "name": "Michňo, Jan",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       },
@@ -6884,76 +7639,87 @@
        "no": 5,
        "name": "Lukeš, Václav",
        "types": [],
-       "nat": 1616,
+       "rtg": 1616,
+       "nat": null,
        "fide": null
       },
       {
        "no": 6,
        "name": "Viola, Jan",
        "types": [],
-       "nat": 1904,
+       "rtg": 1904,
+       "nat": null,
        "fide": null
       },
       {
        "no": 7,
        "name": "Kudrna, Jan",
        "types": [],
-       "nat": 1758,
+       "rtg": 1758,
+       "nat": null,
        "fide": null
       },
       {
        "no": 8,
        "name": "Červinka, Jiří",
        "types": [],
-       "nat": 1709,
+       "rtg": 1709,
+       "nat": null,
        "fide": null
       },
       {
        "no": 9,
        "name": "Weiss, Josef",
        "types": [],
-       "nat": 1775,
+       "rtg": 1775,
+       "nat": null,
        "fide": null
       },
       {
        "no": 10,
        "name": "Holec, Jaroslav",
        "types": [],
-       "nat": 1759,
+       "rtg": 1759,
+       "nat": null,
        "fide": null
       },
       {
        "no": 11,
        "name": "Voleman, Milan",
        "types": [],
-       "nat": 1706,
+       "rtg": 1706,
+       "nat": null,
        "fide": null
       },
       {
        "no": 12,
        "name": "Kudrna, Václav",
        "types": [],
-       "nat": 1734,
+       "rtg": 1734,
+       "nat": null,
        "fide": null
       },
       {
        "no": 13,
        "name": "Maxa, Martin",
        "types": [],
-       "nat": 1582,
+       "rtg": 1582,
+       "nat": null,
        "fide": null
       },
       {
        "no": 14,
        "name": "Voleman, Marek",
        "types": [],
-       "nat": 1689,
+       "rtg": 1689,
+       "nat": null,
        "fide": null
       },
       {
        "no": 15,
        "name": "Kudrna, Adam",
        "types": [],
+       "rtg": null,
        "nat": null,
        "fide": null
       }
