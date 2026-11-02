@@ -22,6 +22,7 @@ let S = store.loadDraft() ?? L.newMatch();
 let tab = 'zapas';
 // stav panelu Přidat soutěž
 let openBoard = null; // která šachovnice má otevřený výběr výsledku
+let editRow = null; // hráč v sestavě, kterému se upravuje jméno nebo Elo ('home:3')
 let addComp = { open: false, busy: false, url: '', boards: '8', short: '', msg: '', error: '', downloaded: false };
 
 const TABS = [
@@ -231,7 +232,9 @@ function viewZapas() {
            (m, i) =>
              `<button type="button" class="match-btn ${
                S.home.team === m.home && S.away.team === m.away ? 'active' : ''
-             }" data-act="pickMatch" data-i="${i}">${esc(m.home)} <span class="muted">–</span> ${esc(m.away)}</button>`,
+             }" data-act="pickMatch" data-i="${i}" ${
+               S.home.team === m.home && S.away.team === m.away ? 'aria-pressed="true"' : ''
+             }>${esc(m.home)} <span class="muted">–</span> ${esc(m.away)}</button>`,
          )
          .join('')}</div>`
     : '';
@@ -245,6 +248,26 @@ function viewZapas() {
       .map((t) => `<option ${t.name === S[side].team ? 'selected' : ''}>${esc(t.name)}</option>`)
       .join('')}</select></label>`;
   };
+
+  // Když je vybraný zápas z rozlosování, výběr družstev je jen záloha pro výjimky a schová se.
+  const fromDraw = round?.matches?.some((m) => m.home === S.home.team && m.away === S.away.team);
+  const teamFields = `<div class="grid two">${teamField('home', 'Domácí družstvo')}${teamField('away', 'Hostující družstvo')}</div>`;
+  const teamsCard = round?.matches?.length
+    ? `<div class="card">
+        <details ${fromDraw || !(S.home.team || S.away.team) ? '' : 'open'}>
+          <summary>Zadat družstva ručně (zápas není v rozlosování)</summary>
+          <div style="margin-top:.5rem">${teamFields}</div>
+        </details>
+      </div>`
+    : `<div class="card">
+        <h2>Družstva</h2>
+        ${
+          teams.length
+            ? ''
+            : '<p class="muted small-text">Pro tuto soutěž zatím nejsou soupisky. Názvy družstev a hráče můžeš zadat ručně.</p>'
+        }
+        ${teamFields}
+      </div>`;
 
   return `
     <div class="card">
@@ -260,15 +283,7 @@ function viewZapas() {
       ${addComp.open ? addPanel() : ''}
       ${matchList}
     </div>
-    <div class="card">
-      <h2>Družstva</h2>
-      ${
-        teams.length
-          ? ''
-          : '<p class="muted small-text">Pro tuto soutěž zatím nejsou soupisky. Názvy družstev a hráče můžeš zadat ručně.</p>'
-      }
-      <div class="grid two">${teamField('home', 'Domácí družstvo')}${teamField('away', 'Hostující družstvo')}</div>
-    </div>
+    ${teamsCard}
     <div class="card">
       <h2>Datum a místo</h2>
       <div class="grid two">
@@ -317,20 +332,31 @@ function rosterCard(side, label) {
 
   // kolonky s ratingem podle toho, co je na soupisce: při jediném Elu jen jedna
   const ratings = L.ratingColumns([...(t?.players ?? []), ...lineup]);
+  // Sestava se čte, upravuje se jen výjimečně: jméno a Elo jsou text, pole se otevřou tužkou.
   const rows = lineup
-    .map(
-      (p, i) => `<tr>
-        <td class="b">${i + 1}.</td>
-        <td><input type="text" data-edit="name" data-side="${side}" data-no="${p.no}" value="${esc(p.name)}" aria-label="Jméno"></td>
-        <td style="white-space:nowrap">${esc(L.typeLabel(p.types))}</td>
-        ${ratings
-          .map(
-            (r) => `<td class="rt"><input type="text" inputmode="numeric" data-edit="${r.key}" data-side="${side}" data-no="${p.no}" value="${esc(p[r.key] ?? '')}" aria-label="${esc(r.label)}" placeholder="${esc(r.short)}"></td>`,
-          )
-          .join('')}
-        <td><button class="btn small ghost" type="button" data-act="rm" data-side="${side}" data-no="${p.no}" aria-label="Odebrat ze sestavy">✕</button></td>
-      </tr>`,
-    )
+    .map((p, i) => {
+      const key = `${side}:${p.no}`;
+      const editing = editRow === key;
+      const edit = editing
+        ? `<div class="lu-edit">
+            <label class="field"><span>Příjmení, jméno</span><input type="text" data-edit="name" data-side="${side}" data-no="${p.no}" value="${esc(p.name)}" autocomplete="off"></label>
+            ${ratings
+              .map(
+                (r) => `<label class="field rt"><span>${esc(r.label)}</span><input type="text" inputmode="numeric" data-edit="${r.key}" data-side="${side}" data-no="${p.no}" value="${esc(p[r.key] ?? '')}" autocomplete="off"></label>`,
+              )
+              .join('')}
+            <button class="btn small" type="button" data-act="editRow" data-key="${key}">Hotovo</button>
+          </div>`
+        : '';
+      return `<li class="lu-row ${editing ? 'editing' : ''}">
+        <span class="b">${i + 1}.</span>
+        <span class="nm">${esc(p.name)}${(p.types ?? []).map((x) => `<span class="badge ${x === 'K' || x === 'ZK' ? 'k' : ''}">${esc(x)}</span>`).join('')}</span>
+        <span class="r">${esc(ratings.map((r) => p[r.key] ?? '–').join(' / ') || '')}</span>
+        <button class="icon-btn" type="button" data-act="editRow" data-key="${key}" aria-label="Upravit jméno a Elo" title="Upravit">✎</button>
+        <button class="icon-btn" type="button" data-act="rm" data-side="${side}" data-no="${p.no}" aria-label="Odebrat ze sestavy" title="Odebrat">✕</button>
+        ${edit}
+      </li>`;
+    })
     .join('');
 
   return `<div class="card">
@@ -338,13 +364,7 @@ function rosterCard(side, label) {
     ${sideCounters(side)}
     ${roster}
     <h3 style="margin-top:1rem">Sestava (šachovnice podle pořadí na soupisce)</h3>
-    ${
-      lineup.length
-        ? `<table class="lineup"><thead><tr><th>Šach.</th><th>Příjmení, jméno</th><th>Typ</th>${ratings
-            .map((r) => `<th>${esc(r.short)}</th>`)
-            .join('')}<th></th></tr></thead><tbody>${rows}</tbody></table>`
-        : '<p class="muted">Zatím nikdo nevybrán.</p>'
-    }
+    ${lineup.length ? `<ol class="lineup">${rows}</ol>` : '<p class="muted">Zatím nikdo nevybrán.</p>'}
     <details>
       <summary>Přidat hráče, který není v soupisce</summary>
       <div class="grid three" data-manual="${side}">
@@ -429,10 +449,11 @@ function viewVysledky() {
       }</div>
     </div>
     <ol class="boards">${rows.join('')}</ol>
-    <p class="small-text muted">Klepnutím na šachovnici zadáš výsledek. ● bílé, ○ černé: domácí hrají bílými na lichých
-    šachovnicích. K je kontumace a počítá se jako plný bod.</p>
+    <p class="small-text muted">Klepnutím na šachovnici zadáš výsledek. <span class="dot w"></span> bílé,
+    <span class="dot b"></span> černé: domácí hrají bílými na lichých šachovnicích. K je kontumace a počítá se jako plný bod.</p>
     <div class="actions">
       <button class="btn secondary" data-act="go" data-tab="sestavy" type="button">← Zpět</button>
+      <button class="btn secondary" data-act="fullscreen" data-mode="prubeh" type="button">⛶ Celá obrazovka</button>
       <button class="btn" data-act="go" data-tab="zaver" type="button">Pokračovat na závěr →</button>
     </div>`;
 }
@@ -488,8 +509,17 @@ function viewZaver() {
 
 function viewVystup() {
   const issues = L.validate(S, comp(), { forFinal: true });
+  const tabName = Object.fromEntries(TABS);
+  const item = (i) =>
+    `<li class="${i.level}"><span>${esc(i.text)}</span>${
+      i.tab ? `<button class="fix" type="button" data-act="go" data-tab="${i.tab}">${esc(tabName[i.tab])} →</button>` : ''
+    }</li>`;
+  const group = (level, title) => {
+    const xs = issues.filter((i) => i.level === level);
+    return xs.length ? `<h3 class="issues-h">${title}</h3><ul class="issues">${xs.map(item).join('')}</ul>` : '';
+  };
   const list = issues.length
-    ? `<ul class="issues">${issues.map((i) => `<li class="${i.level}">${esc(i.text)}</li>`).join('')}</ul>`
+    ? `${group('error', 'Nutné opravit')}${group('warn', 'Doporučujeme doplnit')}`
     : '<ul class="issues"><li class="okmsg">Zápis je v pořádku a podle soutěžního řádu úplný.</li></ul>';
   return `
     <div class="card">
@@ -502,8 +532,12 @@ function viewVystup() {
       </div>
     </div>
     <div class="card">
-      <h2>Náhled</h2>
-      <div class="preview" id="preview"><p class="muted">Vykresluji…</p></div>
+      <div class="row" style="justify-content:space-between">
+        <h2 style="margin:0">Náhled</h2>
+        <button class="btn small secondary" type="button" data-act="fullscreen" data-mode="zapis">⛶ Celá obrazovka</button>
+      </div>
+      <div class="preview" id="preview" data-act="fullscreen" data-mode="zapis" title="Klepnutím zobrazíš na celou obrazovku">
+        <p class="muted">Vykresluji…</p></div>
     </div>
     <div class="card">
       <h2>Dokončení</h2>
@@ -543,9 +577,9 @@ function renderSteps() {
   const items = TABS.map(
     ([id, label], i) => `<button type="button" data-act="go" data-tab="${id}" class="${tab === id ? 'active' : ''}" ${tab === id ? 'aria-current="step"' : ''}><span class="n">${i + 1}</span>${label}</button>`,
   ).join('');
-  stepsEl.innerHTML = `${items}<span class="spacer"></span>
-    <button type="button" data-act="go" data-tab="archiv" class="${tab === 'archiv' ? 'active' : ''}">Archiv</button>
-    <button type="button" data-act="new">Nový zápis</button>`;
+  stepsEl.innerHTML = items;
+  $('#btnArchive').classList.toggle('active', tab === 'archiv');
+  stepsEl.querySelector('.active')?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
 }
 
 function renderView({ keepScroll = true } = {}) {
@@ -628,6 +662,106 @@ function initPad(canvas, key) {
   canvas.addEventListener('pointerup', end);
   canvas.addEventListener('pointercancel', end);
 }
+
+// ---------- celá obrazovka: zápis k prohlížení nebo průběh utkání ----------
+// Na tabletu u stolu se dá přepnout na velký přehled, který je čitelný i z dálky.
+const overlay = $('#overlay');
+let overlayMode = null;
+let overlayZoom = false;
+
+function prubehHtml() {
+  const b = boards();
+  const home = L.sortedLineup(S.home.lineup);
+  const away = L.sortedLineup(S.away.lineup);
+  const t = L.totals(S, b);
+  const lead = t.home > t.away ? 'home' : t.away > t.home ? 'away' : 'draw';
+  const rows = [];
+  for (let i = 1; i <= b; i++) {
+    const code = L.boardResult(S, i);
+    const white = L.homeIsWhite(i);
+    const nm = (p, w) =>
+      `<span class="nm"><span class="dot ${w ? 'w' : 'b'}"></span><span class="t${p ? '' : ' muted'}">${p ? esc(p.name) : 'neobsazeno'}</span></span>`;
+    const cls = !code ? 'none' : L.RESULTS[code].forfeit ? 'k' : code === 'W' || code === 'WK' ? 'h' : code === 'L' || code === 'LK' ? 'a' : 'd';
+    rows.push(`<li><span class="bno">${i}</span>${nm(home[i - 1], white)}<span class="rchip ${cls}">${
+      code ? L.RESULTS[code].label : '–'
+    }</span>${nm(away[i - 1], !white)}</li>`);
+  }
+  const comp_ = comp();
+  return `<div class="pr">
+    <div class="pr-meta">${esc(comp_?.short ?? '')}${S.round ? ` · ${esc(S.round)}. kolo` : ''}${S.date ? ` · ${esc(L.fmtDate(S.date))}` : ''}</div>
+    <div class="pr-head">
+      <div class="tname">${esc(S.home.team || 'Domácí')}</div>
+      <div class="score ${lead}">${L.fmtPoints(t.home)} : ${L.fmtPoints(t.away)}</div>
+      <div class="tname a">${esc(S.away.team || 'Hosté')}</div>
+    </div>
+    <div class="pr-note">${t.missing.length ? `Hraje se, rozhodnuto ${b - t.missing.length} z ${b}` : 'Konečný stav'}</div>
+    <ol class="pr-boards">${rows.join('')}</ol>
+  </div>`;
+}
+
+async function renderOverlay() {
+  const mode = overlayMode;
+  overlay.innerHTML = `<div class="ov-bar">
+      <div class="seg" role="tablist">
+        <button type="button" data-ov="prubeh" class="${mode === 'prubeh' ? 'on' : ''}">Průběh utkání</button>
+        <button type="button" data-ov="zapis" class="${mode === 'zapis' ? 'on' : ''}">Zápis</button>
+      </div>
+      ${mode === 'zapis' ? `<button type="button" class="btn small ghost" data-ov="zoom">${overlayZoom ? 'Na šířku' : 'Přiblížit'}</button>` : ''}
+      <button type="button" class="btn small" data-ov="close">Zavřít ✕</button>
+    </div>
+    <div class="ov-body ${mode} ${overlayZoom ? 'zoom' : ''}">${mode === 'prubeh' ? prubehHtml() : '<p class="muted">Vykresluji…</p>'}</div>`;
+  if (mode === 'zapis') {
+    const pages = await renderPages(S, comp(), env, { scale: 2 });
+    const body = $('.ov-body', overlay);
+    if (overlayMode === 'zapis' && body) body.replaceChildren(...pages);
+  }
+}
+
+function openOverlay(mode) {
+  overlayMode = mode === 'zapis' ? 'zapis' : 'prubeh';
+  overlayZoom = false;
+  overlay.hidden = false;
+  document.body.classList.add('ov-open');
+  renderOverlay();
+  // skutečná celá obrazovka tam, kde ji prohlížeč dovolí (na iPhonu ne, tam zůstane překryv)
+  const req = overlay.requestFullscreen ?? overlay.webkitRequestFullscreen;
+  try {
+    req?.call(overlay)?.catch?.(() => {});
+  } catch {
+    /* bez celé obrazovky to funguje taky */
+  }
+}
+
+function closeOverlay() {
+  overlayMode = null;
+  overlay.hidden = true;
+  overlay.innerHTML = '';
+  document.body.classList.remove('ov-open');
+  const fs = document.fullscreenElement ?? document.webkitFullscreenElement;
+  if (fs) (document.exitFullscreen ?? document.webkitExitFullscreen)?.call(document)?.catch?.(() => {});
+}
+
+overlay.addEventListener('click', (e) => {
+  const el = e.target.closest('[data-ov]');
+  if (!el) return;
+  const a = el.dataset.ov;
+  if (a === 'close') return closeOverlay();
+  if (a === 'zoom') overlayZoom = !overlayZoom;
+  else {
+    overlayMode = a;
+    overlayZoom = false;
+  }
+  renderOverlay();
+});
+// Když uživatel opustí celou obrazovku gestem nebo klávesou Esc, zavře se i překryv.
+const onFsChange = () => {
+  if (!(document.fullscreenElement ?? document.webkitFullscreenElement) && overlayMode) closeOverlay();
+};
+document.addEventListener('fullscreenchange', onFsChange);
+document.addEventListener('webkitfullscreenchange', onFsChange);
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && overlayMode) closeOverlay();
+});
 
 // ---------- výstup (PDF / PNG) ----------
 const env = {
@@ -752,6 +886,12 @@ view.addEventListener('click', (e) => {
       save();
       return renderView();
     }
+    case 'editRow': {
+      editRow = editRow === el.dataset.key ? null : el.dataset.key;
+      renderView();
+      if (editRow) $(`.lu-row.editing input`)?.focus();
+      return;
+    }
     case 'rm': {
       S[side].lineup = S[side].lineup.filter((p) => p.no !== Number(el.dataset.no));
       save();
@@ -804,6 +944,8 @@ view.addEventListener('click', (e) => {
       c.getContext('2d').clearRect(0, 0, c.width, c.height);
       return;
     }
+    case 'fullscreen':
+      return openOverlay(el.dataset.mode);
     case 'pdf':
       return exportPdf();
     case 'png':
@@ -1017,15 +1159,18 @@ view.addEventListener('change', (e) => {
 
 stepsEl.addEventListener('click', (e) => {
   const el = e.target.closest('[data-act]');
-  if (!el) return;
-  if (el.dataset.act === 'go') return goTo(el.dataset.tab);
-  if (el.dataset.act === 'new') {
-    const started = S.home.team || S.away.team || S.home.lineup.length || S.away.lineup.length;
-    if (!started || confirm('Zahodit rozpracovaný zápis a začít nový?')) newMatch();
-  }
+  if (el?.dataset.act === 'go') goTo(el.dataset.tab);
 });
 
-$('#btnRefresh').addEventListener('click', async () => {
+$('#btnArchive').addEventListener('click', () => goTo('archiv'));
+$('#btnNew').addEventListener('click', () => {
+  const started = S.home.team || S.away.team || S.home.lineup.length || S.away.lineup.length;
+  if (!started || confirm('Zahodit rozpracovaný zápis a začít nový?')) newMatch();
+});
+
+$('#btnRefresh').addEventListener('click', async (e) => {
+  const btn = e.currentTarget;
+  btn.classList.add('spin');
   try {
     DATA = await refreshData();
     $('#dataStatus').textContent = dataSummary(DATA);
@@ -1033,6 +1178,8 @@ $('#btnRefresh').addEventListener('click', async () => {
     renderView();
   } catch {
     toast('Soupisky se nepodařilo stáhnout (jsi online?). Používají se uložené.');
+  } finally {
+    btn.classList.remove('spin');
   }
 });
 

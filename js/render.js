@@ -354,7 +354,7 @@ export async function renderPages(state, comp, env, { scale = 2 } = {}) {
   const maxR = maxRestricted(boards);
   const note =
     `Hosté, volní hráči a cizinci v sestavě (nejvýše ${maxR}): domácí ${restrictedCount(home)}, hosté ${restrictedCount(away)}.  ` +
-    'Typy: K kapitán, ZK zástupce kapitána, H host, V volný hráč, C cizinec.  K = kontumace.  ● bílé / ○ černé: domácí hrají bílými na lichých šachovnicích.';
+    'Typy: K kapitán, ZK zástupce kapitána, H host, V volný hráč, C cizinec.  K = kontumace.  ○ bílé / ● černé: domácí hrají bílými na lichých šachovnicích.';
   const noteLines = wrapLines(ctx, note, CW);
   noteLines.forEach((l, i) => ctx.fillText(l, MX, tableBottom + 14 + i * 10));
 

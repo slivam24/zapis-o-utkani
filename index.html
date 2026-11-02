@@ -13,12 +13,19 @@
 </head>
 <body>
   <header class="top">
-    <div class="brand"><span class="logo" aria-hidden="true">♞</span> Zápis o utkání</div>
+    <div class="brand-wrap">
+      <div class="brand"><span class="logo" aria-hidden="true">♞</span> Zápis o utkání</div>
+      <div class="data-line">
+        <span class="data-status" id="dataStatus"></span>
+        <button id="btnRefresh" class="icon-btn" type="button" title="Obnovit soupisky" aria-label="Obnovit soupisky">↻</button>
+      </div>
+    </div>
     <div class="top-right">
-      <span class="data-status" id="dataStatus"></span>
-      <button id="btnRefresh" class="btn small ghost" type="button" title="Stáhnout aktuální soupisky">Obnovit soupisky</button>
+      <button id="btnArchive" class="btn small ghost" type="button">Archiv</button>
+      <button id="btnNew" class="btn small ghost" type="button">+ Nový zápis</button>
     </div>
   </header>
+  <div id="overlay" class="overlay" hidden></div>
   <nav class="steps" id="steps" aria-label="Kroky zápisu"></nav>
   <main id="view" tabindex="-1"></main>
   <div id="toast" role="status" aria-live="polite"></div>

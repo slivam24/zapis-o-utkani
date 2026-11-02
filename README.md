@@ -11,8 +11,11 @@ prstem a na konci vznikne **PDF** a **obrázek (PNG)** zápisu.
    Aplikace hlídá limit hostů, volných hráčů a cizinců (čl. 3.6.3) a nejmenší počet hráčů (čl. 3.6.2).
 3. **Výsledky:** `1 : 0`, `½ : ½`, `0 : 1` a kontumace `1K : 0K`, `0K : 0K`, `0K : 1K`.
    Neobsazené šachovnice se doplní jako kontumace samy. Součet se počítá automaticky.
+   Tlačítko **Celá obrazovka** přepne tablet na velký přehled průběhu utkání, čitelný i z dálky,
+   a odtud jde přepnout i na celý zápis.
 4. **Závěr a podpisy:** rozhodčí, kapitáni, záznam rozhodčího a tři podpisy.
-5. **Výstup:** kontrola zápisu, náhled, PDF, PNG, sdílení. Hotový zápis jde uložit do archivu v zařízení.
+5. **Výstup:** kontrola zápisu (co je nutné opravit a co jen doporučujeme, s odkazem na příslušný krok),
+   náhled na celou obrazovku, PDF, PNG, sdílení. Hotový zápis jde uložit do archivu v zařízení.
 
 Aplikace funguje i **bez internetu** (po prvním otevření). Internet je potřeba jen pro stažení čerstvých soupisek.
 Dá se „nainstalovat“ na plochu telefonu (v prohlížeči: Přidat na plochu).

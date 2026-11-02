@@ -195,43 +195,45 @@ export function defaultCaptain(team) {
 export function validate(state, comp, { forFinal = false } = {}) {
   const issues = [];
   const boards = matchBoards(state, comp);
-  const add = (level, text) => issues.push({ level, text });
+  // tab: krok aplikace, ve kterém se problém opraví
+  const add = (level, text, tab) => issues.push({ level, text, tab });
 
-  if (!state.compId) add('error', 'Není vybraná soutěž.');
-  if (!state.home.team || !state.away.team) add('error', 'Vyber domácí i hostující družstvo.');
-  else if (state.home.team === state.away.team) add('error', 'Domácí a hostující družstvo je stejné.');
-  if (!state.date) add('error', 'Chybí datum utkání.');
-  if (!state.venue?.trim()) add('warn', 'Chybí hrací místnost.');
-  if (!String(state.round ?? '').trim()) add('warn', 'Chybí číslo kola.');
+  if (!state.compId) add('error', 'Není vybraná soutěž.', 'zapas');
+  if (!state.home.team || !state.away.team) add('error', 'Vyber domácí i hostující družstvo.', 'zapas');
+  else if (state.home.team === state.away.team) add('error', 'Domácí a hostující družstvo je stejné.', 'zapas');
+  if (!state.date) add('error', 'Chybí datum utkání.', 'zapas');
+  if (!state.venue?.trim()) add('warn', 'Chybí hrací místnost.', 'zapas');
+  if (!String(state.round ?? '').trim()) add('warn', 'Chybí číslo kola.', 'zapas');
 
   for (const [side, label] of [
     ['home', 'Domácí'],
     ['away', 'Hosté'],
   ]) {
     const lineup = state[side].lineup;
-    if (lineup.length === 0) add('error', `${label}: sestava je prázdná.`);
+    if (lineup.length === 0) add('error', `${label}: sestava je prázdná.`, 'sestavy');
     else if (lineup.length < minPlayers(boards))
-      add('error', `${label}: v sestavě je ${lineup.length} hráčů, nejméně ${minPlayers(boards)} (čl. 3.6.2).`);
-    if (lineup.length > boards) add('error', `${label}: v sestavě je více než ${boards} hráčů.`);
+      add('error', `${label}: v sestavě je ${lineup.length} hráčů, nejméně ${minPlayers(boards)} (čl. 3.6.2).`, 'sestavy');
+    if (lineup.length > boards) add('error', `${label}: v sestavě je více než ${boards} hráčů.`, 'sestavy');
     const r = restrictedCount(lineup);
     // Jen upozornění, ne chyba: zápis to dovolí vyplnit, protože soutěž se může řídit jinými pravidly.
     if (r > maxRestricted(boards))
       add(
         'warn',
         `${label}: hostů, volných hráčů a cizinců je ${r}, čl. 3.6.3 povoluje nejvýše ${maxRestricted(boards)}.`,
+        'sestavy',
       );
-    if (!state[side].captain?.trim()) add('warn', `${label}: chybí jméno kapitána.`);
+    if (!state[side].captain?.trim()) add('warn', `${label}: chybí jméno kapitána.`, 'zaver');
   }
 
   const t = totals(state, boards);
-  if (t.missing.length) add('error', `Chybí výsledek na šachovnicích: ${t.missing.join(', ')}.`);
+  if (t.missing.length) add('error', `Chybí výsledek na šachovnicích: ${t.missing.join(', ')}.`, 'vysledky');
 
-  if (!state.referee?.name?.trim()) add('error', 'Chybí jméno rozhodčího.');
+  if (!state.referee?.name?.trim()) add('error', 'Chybí jméno rozhodčího.', 'zaver');
 
   if (forFinal) {
     const names = { home: 'kapitána domácích', ref: 'rozhodčího', away: 'kapitána hostů' };
     for (const k of ['home', 'ref', 'away']) {
-      if (!state.sig?.[k]) add('warn', `Chybí podpis ${names[k]}.`);
+      if (!state.sig?.[k]) add('warn', `Chybí podpis ${names[k]}.`, 'zaver');
     }
   }
   return issues;
