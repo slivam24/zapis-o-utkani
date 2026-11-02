@@ -38,9 +38,32 @@ Ve výchozím stavu jsou v repozitáři soupisky Krajského přeboru z 2. 11. 20
 
 Soutěže se nastavují v `scripts/competitions.json` (číslo turnaje na chess-results, počet šachovnic).
 
-### Přidání vlastní soutěže
+### Přidání soutěže přímo v aplikaci
 
-Kdokoli může přidat soutěž družstev z chess-results.com bez zásahu do kódu: v záložce **Issues** založí
+U výběru soutěže je tlačítko **Přidat soutěž**: vloží se odkaz na turnaj z chess-results a počet
+šachovnic, aplikace načte název, sezónu, soupisky i rozlosování a soutěž uloží do zařízení.
+Takto přidaná soutěž zůstává jen v tom prohlížeči, do sdílených dat se nedostane.
+
+**Načítání potřebuje prostředníka.** chess-results neposílá hlavičku `Access-Control-Allow-Origin`
+(ověřeno), takže prohlížeč si jeho stránku stáhnout nesmí. Aplikace proto čte přes proxy:
+
+- Ve výchozím stavu zkouší veřejné služby. **Jsou nespolehlivé.** Při zkoušce z GitHubu neprošla
+  ani jedna z pěti (vypršení času, HTTP 401, odmítnuté spojení). Zkouška ale běží v datovém centru,
+  jehož adresy tyhle služby běžně blokují, takže z běžného prohlížeče fungovat mohou. Ověř si to
+  jedním pokusem přímo v aplikaci.
+- **Spolehlivé řešení je vlastní prostředník**, viz [worker/README.md](worker/README.md). Kód pro
+  Cloudflare Workers je připravený, nasazení je na pár kliknutí a je zdarma. Adresa se vloží
+  v aplikaci v **Nastavení načítání** a má přednost před veřejnými službami.
+- Když načtení neprojde, aplikace nabídne **nahrání uložené stránky** se soupiskami (funguje vždy,
+  i bez internetu) nebo **předvyplněné hlášení na GitHubu** podle postupu níže.
+
+Jestli načítání funguje, se dá kdykoli přeměřit úlohou **Ověření načítání soutěží** v záložce Actions.
+Do pole proxy se dá zadat vlastní adresa.
+
+### Přidání soutěže pro všechny, přes hlášení
+
+Soutěž přidaná v aplikaci žije jen v jednom zařízení. Aby ji měli všichni, jde o ni požádat:
+kdokoli v záložce **Issues** založí
 hlášení ze šablony **Přidat soutěž**, vyplní odkaz na turnaj a počet šachovnic. Úloha
 `.github/workflows/nova-soutez.yml` odkaz ověří, přečte ze stránky název soutěže a sezónu, soutěž přidá
 do nastavení, stáhne její soupisky a do hlášení odpoví. Do aplikace se soutěž dostane během pár minut.
@@ -61,18 +84,24 @@ parser v `scripts/fetch_data.py`. Soupisky jde vždy doplnit i ručně přímo v
 ## Vývoj a testy
 
 ```bash
-npm test                                  # logika zápisu (Node 20+)
-pip install -r scripts/requirements.txt
-python -m unittest discover -s tests -p "test_*.py"   # parser a přidávání soutěží
-python3 -m http.server 8080               # lokální spuštění: http://localhost:8080
+npm install                 # jen linkedom, pro parsování HTML v Node
+npm test                    # 40 testů: logika zápisu, parser chess-results, přidávání soutěží
+npm run serve               # lokální spuštění: http://localhost:8080
 ```
 
-Bez sestavování, bez závislostí: čisté HTML, CSS a JavaScript (moduly).
+Aplikace se nesestavuje a v prohlížeči nemá žádné závislosti: čisté HTML, CSS a JavaScript (moduly).
+
+Parser stránek chess-results je jeden, v `js/parse.js`, a sdílí ho aplikace i úlohy na GitHubu.
+V prohlížeči pracuje nad `DOMParser`, v Node nad `linkedom`. Záměrně není ve dvou jazycích,
+protože právě parser je na celém řešení to nejkřehčí a dvě verze by se časem rozešly.
 
 ## Poznámky
 
-- Jména hráčů jsou tak, jak jsou na chess-results (bez diakritiky). V sestavě jdou upravit.
-- Sloupec `Rtg` z chess-results se bere jako **národní** rating. FIDE rating lze doplnit ručně u hráče v sestavě.
+- Jména hráčů jsou tak, jak jsou na chess-results. V sestavě jdou upravit.
+- **Ratingy:** co je na chess-results ve sloupci `Rtg`, závisí na nastavení ve Swiss-Manageru, proto se
+  ukládá zvlášť jako neoznačené Elo. V zápisu se vypisují jen kolonky, které v datech opravdu jsou:
+  při jediném načteném Elu je tedy jedna kolonka `Elo` a žádná prázdná navíc. Má-li stránka oddělené
+  sloupce `RtgN` a `RtgI`, objeví se kolonky `FIDE` a `Nár.`.
 - Zápis v PDF je obrázek stránky A4 (text v něm nejde vyhledávat ani kopírovat). Funguje tak bez internetu a s diakritikou.
 - Než začnete elektronický zápis používat ostře, ověřte u řídicího orgánu soutěže (ÚKŠS), že ho přijímá, viz čl. 2.4.6
   (způsob a formu zasílání zápisu určují pravidla soutěže).

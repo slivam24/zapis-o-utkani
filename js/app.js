@@ -97,7 +97,8 @@ function addPanel() {
   const fallback = `<details ${addComp.error ? 'open' : ''}>
       <summary>Když načtení nefunguje</summary>
       <p class="small-text muted">Načítání jde přes prostředníka, protože chess-results čtení z prohlížeče nepovoluje.
-      Když veřejná služba zrovna nefunguje, máš tři náhradní cesty.</p>
+      Veřejné služby bývají nespolehlivé, takže pokud tohle selhalo, zkus některou z náhradních cest.
+      Jistotou je vlastní prostředník, nasadí se jednou a pak to funguje vždy.</p>
       <div class="row">
         <a class="btn small secondary" href="${esc(issueUrl(REPO, addComp))}" target="_blank" rel="noopener">Požádat o přidání na GitHubu</a>
         <button class="btn small ghost" type="button" data-act="proxySettings">Nastavit vlastní adresu</button>
