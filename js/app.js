@@ -437,6 +437,8 @@ function viewVysledky() {
   }
 
   return `<div class="card board-head">
+      <button class="btn small secondary fs-btn" data-act="fullscreen" data-mode="prubeh" type="button"
+        title="Průběh utkání na celou obrazovku">⛶ Celá obrazovka</button>
       <div class="score-line">
         <div class="tname h">${esc(S.home.team || 'Domácí')}</div>
         <div class="score ${lead}">${score}</div>

@@ -1,5 +1,5 @@
 // Service worker: aplikace funguje bez internetu. Data (soupisky) se berou přednostně ze sítě.
-const CACHE = 'zapis-v6';
+const CACHE = 'zapis-v7';
 const SHELL = [
   './',
   'index.html',
@@ -19,7 +19,14 @@ const SHELL = [
 ];
 
 self.addEventListener('install', (e) => {
-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
+  // cache: 'reload' obejde mezipaměť prohlížeče. GitHub Pages ji drží 10 minut, takže bez toho by se
+  // do nové verze uložily staré soubory a nová stránka by běžela se starým skriptem.
+  e.waitUntil(
+    caches
+      .open(CACHE)
+      .then((c) => c.addAll(SHELL.map((u) => new Request(u, { cache: 'reload' }))))
+      .then(() => self.skipWaiting()),
+  );
 });
 
 self.addEventListener('activate', (e) => {
@@ -54,7 +61,8 @@ self.addEventListener('fetch', (e) => {
   // zbytek: cache napřed, na pozadí obnovit
   e.respondWith(
     caches.match(req, { ignoreSearch: true }).then((hit) => {
-      const net = fetch(req)
+      // obnova na pozadí se vždy ptá serveru, ne mezipaměti prohlížeče
+      const net = fetch(req, { cache: 'no-cache' })
         .then((res) => {
           if (res.ok) caches.open(CACHE).then((c) => c.put(req, res.clone()));
           return res;
