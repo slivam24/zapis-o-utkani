@@ -303,13 +303,13 @@ body.ov-open { overflow: hidden; }
 /* celá stránka: vejde se na obrazovku celá */
 .ov-body.zapis.page canvas { width: auto; max-width: 100%; max-height: calc(100dvh - 5rem); }
 
-.pr { max-width: 1300px; margin: 0 auto; display: flex; flex-direction: column; min-height: 100%; }
+.pr { max-width: 1700px; margin: 0 auto; display: flex; flex-direction: column; min-height: 100%; }
 .pr-meta { text-align: center; color: var(--muted); font-weight: 600; }
 .pr-head { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; margin: .4rem 0 .1rem; }
-.pr-head .tname { font-size: clamp(1.1rem, 3vw, 2rem); font-weight: 800; line-height: 1.15; }
+.pr-head .tname { font-size: clamp(1.1rem, min(3vw, 4vh), 3rem); font-weight: 800; line-height: 1.15; }
 .pr-head .tname.a { text-align: right; }
-.pr-head .score { font-size: clamp(2.6rem, 9vw, 6rem); line-height: 1; }
-.pr-note { text-align: center; color: var(--muted); margin-bottom: .6rem; font-size: clamp(.9rem, 2vw, 1.2rem); }
+.pr-head .score { font-size: clamp(2.6rem, min(9vw, 11vh), 9rem); line-height: 1; }
+.pr-note { text-align: center; color: var(--muted); margin-bottom: .6rem; font-size: clamp(.9rem, min(2vw, 2.4vh), 1.6rem); }
 /* sloupce jako na papírovém zápisu: šach. | poř. | domácí | výsledek | hosté | poř. | šach. */
 .pr-boards li {
   display: grid; grid-template-columns: 1.4em 2em minmax(0, 1fr) auto minmax(0, 1fr) 2em 1.4em;
@@ -318,7 +318,8 @@ body.ov-open { overflow: hidden; }
 .pr-boards { list-style: none; margin: 0; padding: 0; display: grid; gap: .4rem; flex: 1; grid-auto-rows: minmax(0, 1fr); }
 .pr-boards li {
   background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: .5rem .8rem;
-  font-size: clamp(1rem, 2.4vw, 1.5rem);
+  /* písmo roste se šířkou i výškou obrazovky, aby na velkém monitoru řádky nebyly prázdné */
+  font-size: clamp(1rem, min(2.4vw, 3.6vh), 2.8rem);
 }
 .pr-boards .bno { font-size: .75em; text-align: center; font-weight: 600; }
 .pr-boards .rno { font-size: 1.3em; font-weight: 800; text-align: center; font-variant-numeric: tabular-nums; }
@@ -331,11 +332,14 @@ body.ov-open { overflow: hidden; }
 .pr-boards .pl-side.a .sub { padding: 0 1.2em 0 0; }
 .pr-boards .dot { flex: 0 0 auto; }
 .pr-boards .rchip { min-width: 4.5em; font-size: 1em; padding: .2rem .5rem; }
-/* tablet na šířku: přehled vyplní celou výšku obrazovky, osm šachovnic bez posouvání */
+/* na šířku (tablet, monitor): přehled vyplní celou výšku obrazovky, osm šachovnic bez posouvání */
 @media (orientation: landscape) and (min-width: 900px) {
   .ov-body.prubeh { padding: .6rem 1rem; }
-  .pr-head .score { font-size: clamp(2.6rem, 7vh, 5rem); }
-  .pr-boards li { font-size: clamp(1rem, 2.6vh, 1.6rem); padding: .3rem .8rem; }
+  .pr-head { margin: .2rem 0 0; }
+  .pr-head .score { font-size: clamp(2.6rem, 8vh, 9rem); }
+  .pr-note { margin-bottom: .4rem; }
+  .pr-boards { gap: .3rem; }
+  .pr-boards li { font-size: clamp(1rem, min(2.4vw, 2.7vh), 2.6rem); padding: .2rem .9rem; line-height: 1.2; }
 }
 @media (max-width: 600px) {
   .ov-body { padding: .6rem; }

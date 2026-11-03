@@ -464,6 +464,21 @@ function namesList(side) {
   return (teamOf(side)?.players ?? []).map((p) => `<option value="${esc(p.name)}">`).join('');
 }
 
+/** Výběr rozhodčího ze soupisek obou družstev. Jméno jde vždy i napsat ručně. */
+function refPicker() {
+  const group = (side, label) => {
+    const players = teamOf(side)?.players ?? [];
+    if (!players.length) return '';
+    return `<optgroup label="${esc(label)}: ${esc(S[side].team)}">${players
+      .map((p) => `<option value="${esc(p.name)}" ${p.name === S.referee.name ? 'selected' : ''}>${esc(p.no)}. ${esc(p.name)}</option>`)
+      .join('')}</optgroup>`;
+  };
+  const opts = group('home', 'Domácí') + group('away', 'Hosté');
+  if (!opts) return '';
+  return `<label class="field" style="margin-top:.8rem"><span>Nebo vyber ze soupisky</span>
+    <select data-chg="refPick"><option value="">— vyber hráče —</option>${opts}</select></label>`;
+}
+
 function viewZaver() {
   const refList = store.recentReferees().map((n) => `<option value="${esc(n)}">`).join('');
   const role = (v, l) => `<option value="${v}" ${S.referee.role === v ? 'selected' : ''}>${l}</option>`;
@@ -474,9 +489,10 @@ function viewZaver() {
     <div class="card">
       <h2>Rozhodčí</h2>
       <div class="grid two">
-        <label class="field"><span>Funkce</span><select data-chg="refRole">${role('delegated', 'Delegovaný rozhodčí')}${role('substitute', 'Náhradní rozhodčí')}${role('captain', 'Kapitán domácího družstva')}</select></label>
+        <label class="field"><span>Funkce</span><select data-chg="refRole">${role('delegated', 'Delegovaný rozhodčí')}${role('substitute', 'Náhradní rozhodčí')}${role('captain', 'Kapitán domácího družstva')}${role('player', 'Hráč ze soupisky')}</select></label>
         <label class="field"><span>Jméno a příjmení rozhodčího</span><input type="text" list="dl-ref" data-bind="referee.name" value="${esc(S.referee.name)}" autocomplete="off"></label>
       </div>
+      ${refPicker()}
       <datalist id="dl-ref">${refList}${namesList('home')}${namesList('away')}</datalist>
     </div>
     <div class="card">
@@ -1168,6 +1184,13 @@ view.addEventListener('change', (e) => {
     case 'refRole':
       S.referee.role = el.value;
       if (el.value === 'captain' && S.home.captain) S.referee.name = S.home.captain;
+      save();
+      return renderView();
+    case 'refPick':
+      if (!el.value) return;
+      S.referee.name = el.value;
+      // vybraný hráč ze soupisky: když funkce byla delegovaný rozhodčí, přepne se na hráče
+      if (S.referee.role === 'delegated') S.referee.role = el.value === S.home.captain ? 'captain' : 'player';
       save();
       return renderView();
   }

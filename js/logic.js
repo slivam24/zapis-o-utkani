@@ -15,6 +15,7 @@ export const REFEREE_ROLES = {
   delegated: 'delegovaný rozhodčí',
   substitute: 'náhradní rozhodčí',
   captain: 'kapitán domácího družstva',
+  player: 'hráč ze soupisky',
 };
 
 /** Typy, které se počítají do limitu z čl. 3.6.3 (host, volný hráč, cizinec). */
