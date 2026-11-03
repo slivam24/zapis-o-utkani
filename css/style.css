@@ -331,6 +331,13 @@ body.ov-open { overflow: hidden; }
 .pr-boards .pl-side.a .nm { flex-direction: row-reverse; }
 .pr-boards .nm .t { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .pr-boards .sub { flex: 0 0 auto; font-size: .75em; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+/* Elo pod jménem u všech (nastaví skript, když se u někoho nevejde za jméno) */
+.pr.stacked .pl-side { flex-direction: column; align-items: flex-start; }
+.pr.stacked .pl-side.a { align-items: flex-end; }
+.pr.stacked .pl-side .nm { max-width: 100%; }
+.pr.stacked .sub { padding: 0 0 0 1.2em; }
+.pr.stacked .pl-side.a .sub { padding: 0 1.2em 0 0; }
+.pr.stacked .pr-boards li { font-size: clamp(1rem, min(2.4vw, 2.9vh), 2.6rem); }
 .pr-boards .dot { flex: 0 0 auto; }
 .pr-boards .rchip { min-width: 4.5em; font-size: 1em; padding: .2rem .5rem; }
 /* na šířku (tablet, monitor): přehled vyplní celou výšku obrazovky, osm šachovnic bez posouvání */
@@ -341,6 +348,7 @@ body.ov-open { overflow: hidden; }
   .pr-note { margin-bottom: .4rem; }
   .pr-boards { gap: .3rem; }
   .pr-boards li { font-size: clamp(1rem, min(2vw, 4vh), 3rem); padding: .2rem .9rem; line-height: 1.2; }
+  .pr.stacked .pr-boards li { font-size: clamp(1rem, min(2.2vw, 2.7vh), 2.6rem); }
 }
 @media (max-width: 600px) {
   .ov-body { padding: .6rem; }

@@ -731,6 +731,23 @@ function prubehHtml() {
   </div>`;
 }
 
+/**
+ * Elo je za jménem, jen když se tam vejde u všech hráčů. Jakmile se u jednoho zalomí,
+ * dá se pod jméno všem, aby přehled vypadal jednotně.
+ */
+function fitPrubeh() {
+  const pr = $('.pr', overlay);
+  if (!pr) return;
+  pr.classList.toggle('stacked', false);
+  const wrapped = $$('.pl-side', pr).some((side) => {
+    const nm = $('.nm', side);
+    const sub = $('.sub', side);
+    if (!nm || !sub) return false;
+    return sub.getBoundingClientRect().top >= nm.getBoundingClientRect().bottom - 2;
+  });
+  pr.classList.toggle('stacked', wrapped);
+}
+
 async function renderOverlay() {
   const mode = overlayMode;
   overlay.innerHTML = `<div class="ov-bar">
@@ -742,6 +759,7 @@ async function renderOverlay() {
       <button type="button" class="btn small" data-ov="close">Zavřít ✕</button>
     </div>
     <div class="ov-body ${mode} ${overlayZoom ? 'page' : ''}">${mode === 'prubeh' ? prubehHtml() : '<p class="muted">Vykresluji…</p>'}</div>`;
+  if (mode === 'prubeh') fitPrubeh();
   if (mode === 'zapis') {
     const pages = await renderPages(S, comp(), env, { scale: 2 });
     const body = $('.ov-body', overlay);
@@ -793,6 +811,11 @@ document.addEventListener('fullscreenchange', onFsChange);
 document.addEventListener('webkitfullscreenchange', onFsChange);
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && overlayMode) closeOverlay();
+});
+let fitTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(fitTimer);
+  fitTimer = setTimeout(() => overlayMode === 'prubeh' && fitPrubeh(), 100);
 });
 
 // ---------- výstup (PDF / PNG) ----------
