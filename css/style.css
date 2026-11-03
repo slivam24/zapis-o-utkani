@@ -319,17 +319,18 @@ body.ov-open { overflow: hidden; }
 .pr-boards li {
   background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: .5rem .8rem;
   /* písmo roste se šířkou i výškou obrazovky, aby na velkém monitoru řádky nebyly prázdné */
-  font-size: clamp(1rem, min(2.4vw, 3.6vh), 2.8rem);
+  font-size: clamp(1rem, min(2.4vw, 4vh), 3rem);
 }
 .pr-boards .bno { font-size: .75em; text-align: center; font-weight: 600; }
 .pr-boards .rno { font-size: 1.3em; font-weight: 800; text-align: center; font-variant-numeric: tabular-nums; }
-.pr-boards .pl-side { display: grid; min-width: 0; }
-.pr-boards .pl-side.a { text-align: right; }
+/* Elo hned za jménem; když se do řádku nevejde, spadne pod jméno. Hosté zrcadlově. */
+.pr-boards .pl-side { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: .6em; min-width: 0; }
+.pr-boards .pl-side.a { flex-direction: row-reverse; text-align: right; }
+.pr-boards .pl-side .nm { flex: 0 1 auto; }
 .pr-boards .nm { display: flex; align-items: center; gap: .45rem; min-width: 0; font-weight: 700; }
 .pr-boards .pl-side.a .nm { flex-direction: row-reverse; }
 .pr-boards .nm .t { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.pr-boards .sub { font-size: .7em; color: var(--muted); font-variant-numeric: tabular-nums; padding-left: 1.2em; }
-.pr-boards .pl-side.a .sub { padding: 0 1.2em 0 0; }
+.pr-boards .sub { flex: 0 0 auto; font-size: .75em; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .pr-boards .dot { flex: 0 0 auto; }
 .pr-boards .rchip { min-width: 4.5em; font-size: 1em; padding: .2rem .5rem; }
 /* na šířku (tablet, monitor): přehled vyplní celou výšku obrazovky, osm šachovnic bez posouvání */
@@ -339,7 +340,7 @@ body.ov-open { overflow: hidden; }
   .pr-head .score { font-size: clamp(2.6rem, 8vh, 9rem); }
   .pr-note { margin-bottom: .4rem; }
   .pr-boards { gap: .3rem; }
-  .pr-boards li { font-size: clamp(1rem, min(2.4vw, 2.7vh), 2.6rem); padding: .2rem .9rem; line-height: 1.2; }
+  .pr-boards li { font-size: clamp(1rem, min(2vw, 4vh), 3rem); padding: .2rem .9rem; line-height: 1.2; }
 }
 @media (max-width: 600px) {
   .ov-body { padding: .6rem; }
