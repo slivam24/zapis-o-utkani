@@ -102,6 +102,26 @@ export function setTeamLogo(team, dataUrl) {
   return write(KEY_LOGOS, l);
 }
 
+// Nastavení aplikace: zapnuté funkce, lhůta archivu.
+const KEY_SETTINGS = 'zapis.settings.v1';
+export const loadSettings = () => read(KEY_SETTINGS, {});
+export const saveSettings = (s) => write(KEY_SETTINGS, s);
+
+/** Smaže všechna data aplikace z tohoto zařízení (zápisy, archiv, loga, nastavení). */
+export function clearAll() {
+  try {
+    const keys = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k && k.startsWith('zapis.')) keys.push(k);
+    }
+    keys.forEach((k) => localStorage.removeItem(k));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 // Zobrazení: 'auto' (podle zařízení), 'desktop' nebo 'touch'.
 const KEY_UI = 'zapis.ui.v1';
 export const uiPref = () => read(KEY_UI, 'auto');

@@ -5,6 +5,8 @@ import { loadData, refreshData, reloadUserComps, dataSummary } from './data.js';
 import { buildFromFiles, readFiles, roundsFor, issueUrl } from './sources.js';
 import { clean, tournamentNumber, exportUrl } from './parse.js';
 import * as store from './store.js';
+import { makeBackup, parseBackup, mergeArchive, olderThan } from './archive.js';
+import { helpPage, privacyPage } from './pages.js';
 
 const REPO = 'slivam24/zapis-o-utkani';
 
@@ -52,22 +54,43 @@ const uiMode = () => {
 const UI_NAMES = { desktop: 'Počítač', touch: 'Tablet a mobil' };
 
 function applyUi() {
-  const mode = uiMode();
-  const pref = store.uiPref();
-  document.documentElement.dataset.ui = mode;
-  const menu = document.getElementById('uiMenu');
-  if (!menu) return;
-  menu.querySelector('.ui-ico').textContent = mode === 'desktop' ? '🖥' : '📱';
-  menu.querySelector('.ui-label').textContent = UI_NAMES[mode];
-  menu.querySelectorAll('[data-ui]').forEach((b) => {
-    const on = b.dataset.ui === pref || (pref !== 'desktop' && pref !== 'touch' && b.dataset.ui === 'auto');
-    b.classList.toggle('on', on);
-    b.setAttribute('aria-checked', on ? 'true' : 'false');
-  });
-  menu.querySelector('[data-ui="auto"]').textContent = `Automaticky (${UI_NAMES[detectUi()]})`;
+  document.documentElement.dataset.ui = uiMode();
 }
 
-const comp = () => DATA.competitions.find((c) => c.id === S.compId);
+// ---------- funkce, které jde v Nastavení vypnout ----------
+const FEATURES = [
+  ['fullscreen', 'Celá obrazovka', 'Velký přehled průběhu utkání a zápis přes celou obrazovku.', true],
+  ['editPlayers', 'Úprava hráčů v sestavě', 'Tužka u hráče v sestavě: oprava jména nebo Ela.', true],
+  ['manualPlayer', 'Hráč mimo soupisku', 'Ruční přidání hráče, který na soupisce chybí.', true],
+  ['notePresets', 'Rychlé texty záznamu', 'Tlačítka s připravenými větami do záznamu rozhodčího.', true],
+  ['logos', 'Loga v zápisu', 'Logo svazu, krajského svazu a družstev v zápisu.', true],
+  ['mail', 'Odeslání e-mailem', 'Odeslání hotového zápisu e-mailem.', true],
+  ['png', 'Obrázek PNG', 'Stažení zápisu i jako obrázek, nejen PDF.', true],
+  ['share', 'Sdílení', 'Sdílení PDF do jiné aplikace (na tabletu a telefonu).', true],
+  ['addComp', 'Přidání vlastní soutěže', 'Soutěž, která v nabídce není, jde přidat ze souborů z chess-results.', false],
+];
+const RETENTION = [6, 12, 24, 0];
+
+const settings = () => store.loadSettings();
+function feature(key) {
+  const v = settings().features?.[key];
+  return typeof v === 'boolean' ? v : FEATURES.find((f) => f[0] === key)?.[3] ?? true;
+}
+const retentionMonths = () => {
+  const v = settings().retention;
+  return RETENTION.includes(v) ? v : 12;
+};
+function setSetting(path, value) {
+  const s = settings();
+  if (path.startsWith('features.')) s.features = { ...(s.features ?? {}), [path.slice(9)]: value };
+  else s[path] = value;
+  store.saveSettings(s);
+}
+
+// Archivovaný zápis nese kopii údajů o soutěži, aby šel otevřít i tam, kde soutěž v datech není.
+const comp = () => DATA.competitions.find((c) => c.id === S.compId) ?? S.compInfo;
+const compSnapshot = (c = comp()) =>
+  c ? { name: c.name ?? '', short: c.short ?? '', group: c.group ?? '', season: c.season ?? '', boards: c.boards ?? null, teams: [], rounds: [] } : undefined;
 const boards = () => L.matchBoards(S, comp());
 const teamOf = (side) => comp()?.teams.find((t) => t.name === S[side].team);
 
@@ -302,11 +325,15 @@ function viewZapas() {
         <label class="field"><span>Soutěž</span><select data-chg="comp">${compOpts}</select></label>
         ${roundField}
       </div>
-      <div class="row" style="margin-top:.6rem">
-        <button class="btn small secondary" type="button" data-act="toggleAdd">${addComp.open ? 'Skrýt přidání soutěže' : '+ Přidat soutěž'}</button>
+      ${
+        feature('addComp') || c?.local
+          ? `<div class="row" style="margin-top:.6rem">
+        ${feature('addComp') ? `<button class="btn small secondary" type="button" data-act="toggleAdd">${addComp.open ? 'Skrýt přidání soutěže' : '+ Přidat soutěž'}</button>` : ''}
         ${c?.local ? `<button class="btn small danger" type="button" data-act="delComp" data-id="${esc(c.id)}">Odebrat tuhle soutěž</button>` : ''}
-      </div>
-      ${addComp.open ? addPanel() : ''}
+      </div>`
+          : ''
+      }
+      ${addComp.open && feature('addComp') ? addPanel() : ''}
       ${matchList}
     </div>
     </div>
@@ -382,7 +409,7 @@ function rosterCard(side, label) {
         <span class="b">${i + 1}.</span>
         <span class="nm">${esc(p.name)}${(p.types ?? []).map((x) => `<span class="badge ${x === 'K' || x === 'ZK' ? 'k' : ''}">${esc(x)}</span>`).join('')}</span>
         <span class="r">${esc(ratings.map((r) => p[r.key] ?? '–').join(' / ') || '')}</span>
-        <button class="icon-btn" type="button" data-act="editRow" data-key="${key}" aria-label="Upravit jméno a Elo" title="Upravit">✎</button>
+        ${feature('editPlayers') ? `<button class="icon-btn" type="button" data-act="editRow" data-key="${key}" aria-label="Upravit jméno a Elo" title="Upravit">✎</button>` : '<span></span>'}
         <button class="icon-btn" type="button" data-act="rm" data-side="${side}" data-no="${p.no}" aria-label="Odebrat ze sestavy" title="Odebrat">✕</button>
         ${edit}
       </li>`;
@@ -395,7 +422,9 @@ function rosterCard(side, label) {
     ${roster}
     <h3 style="margin-top:1rem">Sestava (šachovnice podle pořadí na soupisce)</h3>
     ${lineup.length ? `<ol class="lineup">${rows}</ol>` : '<p class="muted">Zatím nikdo nevybrán.</p>'}
-    <details>
+    ${
+      feature('manualPlayer') || !t?.players?.length
+        ? `<details>
       <summary>Přidat hráče, který není v soupisce</summary>
       <div class="grid three" data-manual="${side}">
         <label class="field"><span>Pořadí na soupisce</span><input type="text" inputmode="numeric" data-m="no"></label>
@@ -406,7 +435,9 @@ function rosterCard(side, label) {
           .join('')}
       </div>
       <div class="actions"><button class="btn secondary" type="button" data-act="addManual" data-side="${side}">Přidat do sestavy</button></div>
-    </details>
+    </details>`
+        : ''
+    }
   </div>`;
 }
 
@@ -467,8 +498,8 @@ function viewVysledky() {
   }
 
   return `<div class="card board-head">
-      <button class="btn small secondary fs-btn" data-act="fullscreen" data-mode="prubeh" type="button"
-        title="Průběh utkání na celou obrazovku">⛶ Celá obrazovka</button>
+      ${feature('fullscreen') ? `<button class="btn small secondary fs-btn" data-act="fullscreen" data-mode="prubeh" type="button"
+        title="Průběh utkání na celou obrazovku">⛶ Celá obrazovka</button>` : ''}
       <div class="score-line">
         <div class="tname h">${esc(S.home.team || 'Domácí')}</div>
         <div class="score ${lead}">${score}</div>
@@ -485,7 +516,7 @@ function viewVysledky() {
     <span class="dot b"></span> černé: domácí hrají bílými na lichých šachovnicích. K je kontumace a počítá se jako plný bod.</p>
     <div class="actions">
       <button class="btn secondary" data-act="go" data-tab="sestavy" type="button">← Zpět</button>
-      <button class="btn secondary" data-act="fullscreen" data-mode="prubeh" type="button">⛶ Celá obrazovka</button>
+      ${feature('fullscreen') ? '<button class="btn secondary" data-act="fullscreen" data-mode="prubeh" type="button">⛶ Celá obrazovka</button>' : ''}
       <button class="btn" data-act="go" data-tab="zaver" type="button">Pokračovat na závěr →</button>
     </div>`;
 }
@@ -541,8 +572,8 @@ function viewZaver() {
     </div>
     <div class="card">
       <h2>Záznam rozhodčího</h2>
-      <p class="muted small-text">Průběh utkání, případné přestupky či spory, námitky kapitánů. Rychlé vložení:</p>
-      <div class="presets">${NOTE_PRESETS.map(([l], i) => `<button class="btn small ghost" type="button" data-act="preset" data-i="${i}">${esc(l)}</button>`).join('')}</div>
+      <p class="muted small-text">Průběh utkání, případné přestupky či spory, námitky kapitánů.${feature('notePresets') ? ' Rychlé vložení:' : ''}</p>
+      ${feature('notePresets') ? `<div class="presets">${NOTE_PRESETS.map(([l], i) => `<button class="btn small ghost" type="button" data-act="preset" data-i="${i}">${esc(l)}</button>`).join('')}</div>` : ''}
       <textarea data-bind="notes" id="notes" placeholder="Bez zápisu = prázdné pole">${esc(S.notes)}</textarea>
     </div>
     <div class="card">
@@ -576,7 +607,7 @@ function logoImages() {
 }
 
 /** Loga, která jdou do zápisu: zapnutá a s obrázkem. */
-const currentLogos = () => L.activeLogos(S, logoImages());
+const currentLogos = () => (feature('logos') ? L.activeLogos(S, logoImages()) : {});
 
 function logosCard() {
   const flags = L.logoFlags(S);
@@ -674,12 +705,12 @@ function viewVystup() {
       ${list}
       <div class="actions" style="margin-top:0">
         <button class="btn" type="button" data-act="pdf">Stáhnout PDF</button>
-        <button class="btn" type="button" data-act="png">Stáhnout obrázek (PNG)</button>
-        <button class="btn secondary" type="button" data-act="share" id="btnShare">Sdílet</button>
+        ${feature('png') ? '<button class="btn" type="button" data-act="png">Stáhnout obrázek (PNG)</button>' : ''}
+        ${feature('share') ? '<button class="btn secondary" type="button" data-act="share" id="btnShare">Sdílet</button>' : ''}
       </div>
     </div>
-    ${logosCard()}
-    ${mailCard()}
+    ${feature('logos') ? logosCard() : ''}
+    ${feature('mail') ? mailCard() : ''}
     <div class="card vystup-done">
       <h2>Dokončení</h2>
       <p class="muted small-text">Uloží zápis do archivu v tomto zařízení (potřebné uchovat nejméně 6 měsíců, čl. 2.4.6) a otevře nový zápis.</p>
@@ -692,36 +723,123 @@ function viewVystup() {
     <div class="card vystup-preview">
       <div class="row" style="justify-content:space-between">
         <h2 style="margin:0">Náhled</h2>
-        <button class="btn small secondary" type="button" data-act="fullscreen" data-mode="zapis">⛶ Celá obrazovka</button>
+        ${feature('fullscreen') ? '<button class="btn small secondary" type="button" data-act="fullscreen" data-mode="zapis">⛶ Celá obrazovka</button>' : ''}
       </div>
-      <div class="preview" id="preview" data-act="fullscreen" data-mode="zapis" title="Klepnutím zobrazíš na celou obrazovku">
+      <div class="preview ${feature('fullscreen') ? 'zoomable' : ''}" id="preview" ${feature('fullscreen') ? 'data-act="fullscreen" data-mode="zapis" title="Klepnutím zobrazíš na celou obrazovku"' : ''}>
         <p class="muted">Vykresluji…</p></div>
     </div>
   </div>`;
 }
 
+/** Tlačítko zpět na zápis na stránkách z menu. */
+const backBar = () =>
+  `<div class="page-back"><button class="btn small secondary" type="button" data-act="go" data-tab="${lastStep}">← Zpět k zápisu</button></div>`;
+
+const archComp = (m) => DATA.competitions.find((x) => x.id === m.compId) ?? m.compInfo;
+
 function viewArchiv() {
   const list = store.loadArchive();
-  if (!list.length)
-    return '<div class="card"><h2>Archiv</h2><p class="muted">Zatím tu nejsou žádné uložené zápisy.</p></div>';
+  const months = retentionMonths();
+  const old = olderThan(list, months);
   const items = list
     .map((m) => {
-      const c = DATA.competitions.find((x) => x.id === m.compId);
-      const t = L.totals(m, c?.boards ?? 8);
+      const c = archComp(m);
+      const t = L.totals(m, L.matchBoards(m, c));
       const score = t.missing.length ? '' : ` · ${L.fmtPoints(t.home)} : ${L.fmtPoints(t.away)}`;
       return `<div class="it">
         <div><b>${esc(m.home.team)} – ${esc(m.away.team)}${score}</b>
-        <span class="muted small-text">${esc(L.fmtDate(m.date))} · ${esc(c?.short ?? m.compId)}${m.round ? ` · ${esc(m.round)}. kolo` : ''}</span></div>
-        <div class="row"><button class="btn small" type="button" data-act="openArch" data-id="${esc(m.id)}">Otevřít a stáhnout</button>
+        <span class="muted small-text">${esc(L.fmtDate(m.date))} · ${esc(c?.short || c?.name || m.compId)}${m.round ? ` · ${esc(m.round)}. kolo` : ''}</span></div>
+        <div class="row"><button class="btn small" type="button" data-act="openArch" data-id="${esc(m.id)}">Otevřít</button>
+        <button class="btn small secondary" type="button" data-act="exportOne" data-id="${esc(m.id)}">Uložit do souboru</button>
         <button class="btn small danger" type="button" data-act="delArch" data-id="${esc(m.id)}">Smazat</button></div>
       </div>`;
     })
     .join('');
-  return `<div class="card"><h2>Archiv zápisů (${list.length})</h2><div class="arch">${items}</div>
-    <div class="actions"><button class="btn secondary" type="button" data-act="exportArch">Stáhnout zálohu všech zápisů (JSON)</button></div></div>`;
+  return `${backBar()}
+  <div class="card">
+    <h2>Archiv zápisů${list.length ? ` (${list.length})` : ''}</h2>
+    <p class="muted small-text">Archiv je jen v tomto zařízení a vymazáním dat prohlížeče zmizí. Vlastní archiv si vedeš tak,
+    že si zápisy stáhneš do souboru a uložíš si ho, kam chceš (počítač, cloudový disk). Soubor jde kdykoli nahrát zpátky,
+    i na jiném zařízení. Zápisy se sloučí bez duplicit.</p>
+    <div class="actions" style="margin-top:.4rem">
+      <button class="btn" type="button" data-act="exportArch" ${list.length ? '' : 'disabled'}>Stáhnout zálohu všech zápisů</button>
+      <label class="btn secondary file-btn">Nahrát ze souboru
+        <input type="file" accept=".json,application/json" multiple hidden data-act="importArch"></label>
+    </div>
+  </div>
+  ${
+    old.length
+      ? `<ul class="issues"><li class="warn"><span>${old.length === 1 ? '1 zápis je starší' : `${old.length} zápisů je starších`} než ${months} měsíců.
+         Pokud ho už nepotřebuješ, smaž ho. Předtím si můžeš stáhnout zálohu.</span>
+         <button class="fix" type="button" data-act="delOld">Smazat staré</button></li></ul>`
+      : ''
+  }
+  <div class="card">${list.length ? `<div class="arch">${items}</div>` : '<p class="muted">Zatím tu nejsou žádné uložené zápisy.</p>'}</div>`;
 }
 
-const VIEWS = { zapas: viewZapas, sestavy: viewSestavy, vysledky: viewVysledky, zaver: viewZaver, vystup: viewVystup, archiv: viewArchiv };
+function viewNastaveni() {
+  const pref = store.uiPref();
+  const uiOpt = (v, label) =>
+    `<label class="set-radio"><input type="radio" name="ui" data-chg="uiPref" value="${v}" ${
+      (pref === v || (v === 'auto' && pref !== 'desktop' && pref !== 'touch')) ? 'checked' : ''
+    }><span>${label}</span></label>`;
+  const featureRows = FEATURES.map(
+    ([key, label, desc]) => `<label class="set-row">
+      <span><b>${esc(label)}</b><span class="muted small-text">${esc(desc)}</span></span>
+      <input type="checkbox" class="switch" data-chg="feature" data-key="${key}" ${feature(key) ? 'checked' : ''}>
+    </label>`,
+  ).join('');
+  const months = retentionMonths();
+  return `${backBar()}
+  <div class="card">
+    <h2>Nastavení</h2>
+    <p class="muted small-text">Nastavení platí pro toto zařízení.</p>
+    <h3 style="margin-top:.8rem">Zobrazení</h3>
+    <div class="set-radios">
+      ${uiOpt('auto', `Automaticky <span class="muted">(teď ${esc(UI_NAMES[detectUi()])})</span>`)}
+      ${uiOpt('desktop', '🖥 Počítač')}
+      ${uiOpt('touch', '📱 Tablet a mobil')}
+    </div>
+  </div>
+  <div class="card">
+    <h3>Funkce</h3>
+    <p class="muted small-text">Co nepotřebuješ, vypni a zápis bude jednodušší. Vypnutím se nic nesmaže, funkci jde kdykoli zase zapnout.</p>
+    <div class="set-list">${featureRows}</div>
+  </div>
+  <div class="card">
+    <h3>Archiv</h3>
+    <label class="field"><span>Upozornit na zápisy starší než</span>
+      <select data-chg="retention">${RETENTION.map(
+        (m) => `<option value="${m}" ${m === months ? 'selected' : ''}>${m ? `${m} měsíců` : 'neupozorňovat'}</option>`,
+      ).join('')}</select></label>
+    <p class="muted small-text">Soutěžní řád žádá archivovat zápis nejméně 6 měsíců (čl. 2.4.6).</p>
+  </div>
+  <div class="card">
+    <h3>Data v tomto zařízení</h3>
+    <p class="muted small-text">Smaže rozpracovaný zápis, archiv, loga, zapamatované údaje i nastavení. Nejdřív si stáhni zálohu archivu.</p>
+    <div class="actions" style="margin-top:.4rem">
+      <button class="btn secondary" type="button" data-act="exportArch">Stáhnout zálohu archivu</button>
+      <button class="btn danger" type="button" data-act="clearAll">Smazat všechna data</button>
+    </div>
+  </div>`;
+}
+
+const viewNapoveda = () => `${backBar()}${helpPage()}`;
+const viewSoukromi = () => `${backBar()}${privacyPage()}`;
+
+const VIEWS = {
+  zapas: viewZapas,
+  sestavy: viewSestavy,
+  vysledky: viewVysledky,
+  zaver: viewZaver,
+  vystup: viewVystup,
+  archiv: viewArchiv,
+  nastaveni: viewNastaveni,
+  napoveda: viewNapoveda,
+  soukromi: viewSoukromi,
+};
+const isStep = (id) => TABS.some(([t]) => t === id);
+let lastStep = 'zapas';
 
 // ---------- vykreslení ----------
 function renderSteps() {
@@ -729,7 +847,7 @@ function renderSteps() {
     ([id, label], i) => `<button type="button" data-act="go" data-tab="${id}" class="${tab === id ? 'active' : ''}" ${tab === id ? 'aria-current="step"' : ''}><span class="n">${i + 1}</span>${label}</button>`,
   ).join('');
   stepsEl.innerHTML = items;
-  $('#btnArchive').classList.toggle('active', tab === 'archiv');
+  $$('#appMenu [data-menu]').forEach((b) => b.classList.toggle('cur', b.dataset.menu === tab));
   stepsEl.querySelector('.active')?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
 }
 
@@ -738,7 +856,7 @@ function renderView({ keepScroll = true } = {}) {
   $$('.roster').forEach((r) => (saved[r.dataset.side] = r.scrollTop));
   const y = window.scrollY;
   view.innerHTML = (VIEWS[tab] ?? viewZapas)();
-  view.classList.toggle('wide', tab === 'vystup' || (uiMode() === 'desktop' && tab !== 'vysledky'));
+  view.classList.toggle('wide', tab === 'vystup' || (uiMode() === 'desktop' && isStep(tab) && tab !== 'vysledky'));
   if (keepScroll) {
     $$('.roster').forEach((r) => (r.scrollTop = saved[r.dataset.side] ?? 0));
     window.scrollTo(0, y);
@@ -753,6 +871,7 @@ function renderAll(opts) {
 
 function goTo(id) {
   tab = id;
+  if (isStep(id)) lastStep = id;
   renderAll({ keepScroll: false });
 }
 
@@ -1190,6 +1309,9 @@ view.addEventListener('click', (e) => {
     case 'archive': {
       const issues = L.validate(S, comp(), { forFinal: true });
       if (L.hasErrors(issues) && !confirm('Zápis obsahuje chyby. Opravdu ho uložit do archivu?')) return;
+      // počet šachovnic a údaje o soutěži do zápisu, aby šel otevřít i bez dat soutěže
+      S.boards = boards();
+      S.compInfo = compSnapshot();
       if (!store.archiveMatch(S)) return toast('Zápis se nepodařilo uložit (plné úložiště zařízení).');
       store.rememberReferee(S.referee.name);
       store.rememberVenue(S.home.team, S.venue);
@@ -1199,6 +1321,9 @@ view.addEventListener('click', (e) => {
     case 'openArch': {
       const m = store.loadArchive().find((x) => x.id === el.dataset.id);
       if (!m) return;
+      const inArchive = store.loadArchive().some((x) => x.id === S.id);
+      const started = S.home.team || S.away.team || S.home.lineup.length || S.away.lineup.length;
+      if (started && !inArchive && S.id !== m.id && !confirm('Rozpracovaný zápis není v archivu a otevřením se zahodí. Pokračovat?')) return;
       S = JSON.parse(JSON.stringify(m));
       save();
       return goTo('vystup');
@@ -1209,8 +1334,42 @@ view.addEventListener('click', (e) => {
         renderView();
       }
       return;
-    case 'exportArch':
-      return download(new Blob([JSON.stringify(store.loadArchive(), null, 1)], { type: 'application/json' }), `zapisy-zaloha-${new Date().toLocaleDateString('sv-SE')}.json`);
+    case 'exportArch': {
+      const list = store.loadArchive();
+      if (!list.length) return toast('Archiv je prázdný.');
+      return download(
+        new Blob([JSON.stringify(makeBackup(list), null, 1)], { type: 'application/json' }),
+        `zapisy-archiv-${new Date().toLocaleDateString('sv-SE')}.json`,
+      );
+    }
+    case 'exportOne': {
+      const m = store.loadArchive().find((x) => x.id === el.dataset.id);
+      if (!m) return;
+      return download(
+        new Blob([JSON.stringify(makeBackup([m]), null, 1)], { type: 'application/json' }),
+        `${L.fileBase(m, archComp(m))}.json`,
+      );
+    }
+    case 'delOld': {
+      const list = store.loadArchive();
+      const old = olderThan(list, retentionMonths());
+      if (!old.length) return;
+      if (!confirm(`Smazat ${old.length} starých zápisů z archivu? Nejde to vrátit.`)) return;
+      const ids = new Set(old.map((m) => m.id));
+      store.saveArchive(list.filter((m) => !ids.has(m.id)));
+      toast('Staré zápisy jsou smazané.');
+      return renderView();
+    }
+    case 'clearAll': {
+      if (!confirm('Smazat všechna data aplikace z tohoto zařízení? Zmizí rozpracovaný zápis, archiv, loga i nastavení. Nejde to vrátit.')) return;
+      store.clearAll();
+      try {
+        caches?.keys?.().then((ks) => Promise.all(ks.map((k) => caches.delete(k)))).finally(() => location.reload());
+      } catch {
+        location.reload();
+      }
+      return;
+    }
     case 'toggleAdd':
       addComp = { ...addComp, open: !addComp.open, msg: '', error: '' };
       return renderView();
@@ -1349,6 +1508,34 @@ view.addEventListener('change', async (e) => {
     }
     return renderView();
   }
+  if (input.dataset.act === 'importArch') {
+    const files = [...(input.files ?? [])];
+    if (!files.length) return;
+    let list = store.loadArchive();
+    let added = 0;
+    let updated = 0;
+    let skipped = 0;
+    const errors = [];
+    for (const f of files) {
+      try {
+        const r = mergeArchive(list, parseBackup(await f.text()));
+        list = r.list;
+        added += r.added;
+        updated += r.updated;
+        skipped += r.skipped;
+      } catch (err) {
+        errors.push(`${f.name}: ${err.message}`);
+      }
+    }
+    if (added || updated) {
+      if (!store.saveArchive(list)) return toast('Archiv se nepodařilo uložit, úložiště zařízení je plné.');
+    }
+    renderView();
+    if (errors.length && !(added || updated || skipped)) return toast(errors[0]);
+    const parts = [`nové ${added}`, updated ? `aktualizované ${updated}` : '', skipped ? `už v archivu ${skipped}` : ''].filter(Boolean);
+    toast(`Nahráno: ${parts.join(', ')}.${errors.length ? ` ${errors.length} soubor se nepodařilo přečíst.` : ''}`);
+    return;
+  }
   if (input.dataset.act !== 'uploadRoster') return;
   const files = [...(input.files ?? [])];
   if (!files.length) return;
@@ -1400,6 +1587,16 @@ view.addEventListener('change', (e) => {
       save();
       return renderView();
     }
+    case 'feature':
+      setSetting(`features.${el.dataset.key}`, el.checked);
+      return toast(`${FEATURES.find((f) => f[0] === el.dataset.key)?.[1]}: ${el.checked ? 'zapnuto' : 'vypnuto'}.`);
+    case 'uiPref':
+      store.setUiPref(el.value);
+      applyUi();
+      return renderView();
+    case 'retention':
+      setSetting('retention', Number(el.value));
+      return;
     case 'logo':
       S.logos = { ...L.logoFlags(S), [el.dataset.slot]: el.checked };
       save();
@@ -1424,19 +1621,21 @@ stepsEl.addEventListener('click', (e) => {
   if (el?.dataset.act === 'go') goTo(el.dataset.tab);
 });
 
-$('#btnArchive').addEventListener('click', () => goTo('archiv'));
-$('#uiMenu').addEventListener('click', (e) => {
-  const b = e.target.closest('[data-ui]');
+$('#appMenu').addEventListener('click', (e) => {
+  const b = e.target.closest('[data-menu]');
   if (!b) return;
-  store.setUiPref(b.dataset.ui);
-  $('#uiMenu').open = false;
-  applyUi();
-  renderView();
-  toast(`Zobrazení: ${UI_NAMES[uiMode()]}${b.dataset.ui === 'auto' ? ' (automaticky)' : ''}.`);
+  $('#appMenu').open = false;
+  if (b.dataset.menu === 'new') {
+    const started = S.home.team || S.away.team || S.home.lineup.length || S.away.lineup.length;
+    const inArchive = store.loadArchive().some((x) => x.id === S.id);
+    if (!started || inArchive || confirm('Rozpracovaný zápis není v archivu. Zahodit ho a začít nový?')) newMatch();
+    return;
+  }
+  goTo(b.dataset.menu);
 });
-// klepnutí mimo nabídku ji zavře
+// klepnutí mimo menu ho zavře
 document.addEventListener('click', (e) => {
-  const m = $('#uiMenu');
+  const m = $('#appMenu');
   if (m.open && !m.contains(e.target)) m.open = false;
 });
 // automatický režim sleduje zařízení (např. připojená myš k tabletu)
@@ -1445,10 +1644,6 @@ window.matchMedia?.('(hover: hover) and (pointer: fine)').addEventListener?.('ch
     applyUi();
     renderView();
   }
-});
-$('#btnNew').addEventListener('click', () => {
-  const started = S.home.team || S.away.team || S.home.lineup.length || S.away.lineup.length;
-  if (!started || confirm('Zahodit rozpracovaný zápis a začít nový?')) newMatch();
 });
 
 $('#btnRefresh').addEventListener('click', async (e) => {

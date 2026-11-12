@@ -17,11 +17,22 @@ prstem a na konci vznikne **PDF** a **obrázek (PNG)** zápisu.
 5. **Výstup:** kontrola zápisu (co je nutné opravit a co jen doporučujeme, s odkazem na příslušný krok),
    loga v zápisu, náhled na celou obrazovku, PDF, PNG, sdílení a odeslání e-mailem.
 
+### Menu, nastavení a archiv
+
+Zápis zůstává co nejjednodušší, všechno ostatní je v **☰ Menu** v hlavičce:
+
+- **Nový zápis** a **Archiv**: archiv je jen v zařízení, proto jde stáhnout do souboru (celý i jednotlivé zápisy)
+  a nahrát zpátky na stejném nebo jiném zařízení. Zápisy se sloučí bez duplicit (stejný zápis nahradí jen novější verze).
+  Archiv upozorní na zápisy starší než zvolená lhůta (výchozí 12 měsíců) a nabídne jejich smazání.
+- **Nastavení**: zobrazení, funkce, které jde vypnout (celá obrazovka, úprava hráčů, hráč mimo soupisku, rychlé texty
+  záznamu, loga, e-mail, PNG, sdílení, přidání vlastní soutěže), lhůta archivu a smazání všech dat ze zařízení.
+- **Nápověda** a **Ochrana osobních údajů**: jak aplikaci používat, co umí a co se kde ukládá.
+
 ### Zobrazení pro počítač a pro tablet a mobil
 
 Aplikace má dvě zobrazení a vybere je sama podle zařízení: s myší je to **Počítač** (hustší ovládání,
 karty vedle sebe, e-mail přes poštovní program), s dotykovou obrazovkou **Tablet a mobil** (velké dotykové
-prvky, odesílání přes nabídku sdílení). V hlavičce jde zobrazení přepnout ručně, zařízení si volbu pamatuje;
+prvky, odesílání přes nabídku sdílení). V Nastavení jde zobrazení přepnout ručně, zařízení si volbu pamatuje;
 volba **Automaticky** vrátí výběr podle zařízení.
 
 ### Loga v zápisu
@@ -69,7 +80,8 @@ Soutěže se nastavují v `scripts/competitions.json` (číslo turnaje na chess-
 
 ### Přidání soutěže přímo v aplikaci
 
-U výběru soutěže je tlačítko **Přidat soutěž** a pod ním tři kroky:
+Funkce je ve výchozím stavu vypnutá, zapíná se v **Nastavení → Přidání vlastní soutěže**.
+Pak je u výběru soutěže tlačítko **Přidat soutěž** a pod ním tři kroky:
 
 1. **Vlož odkaz na soutěž.** Stačí adresa kterékoli stránky té soutěže na chess-results.com.
    Aplikace z ní vezme číslo turnaje a potvrdí, že je v pořádku. Tady se taky zadá počet šachovnic,
@@ -128,7 +140,7 @@ parser v `js/parse.js`. Soupisky jde vždy doplnit i ručně přímo v aplikaci.
 
 ```bash
 npm install                 # jen linkedom, pro parsování HTML v Node
-npm test                    # 57 testů: logika zápisu, parser, čtečka .xlsx, přidávání soutěží
+npm test                    # 65 testů: logika zápisu, parser, čtečka .xlsx, přidávání soutěží, archiv
 npm run serve               # lokální spuštění: http://localhost:8080
 ```
 
