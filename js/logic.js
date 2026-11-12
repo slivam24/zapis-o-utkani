@@ -179,7 +179,86 @@ export function newMatch({ today } = {}) {
     referee: { name: '', role: 'delegated' },
     notes: '',
     sig: { home: '', ref: '', away: '' },
+    logos: { ...DEFAULT_LOGOS },
   };
+}
+
+/**
+ * Loga v zápisu: šachový svaz, krajský svaz, domácí, hosté. Tady je jen, která se mají použít;
+ * obrázky se drží v zařízení (store.js) a logo, ke kterému obrázek není, se vynechá.
+ */
+export const LOGO_SLOTS = ['svaz', 'kraj', 'home', 'away'];
+export const DEFAULT_LOGOS = { svaz: true, kraj: true, home: true, away: true };
+
+/** Volby log zápisu, u starších zápisů bez nich výchozí. */
+export function logoFlags(state) {
+  return { ...DEFAULT_LOGOS, ...(state?.logos ?? {}) };
+}
+
+/** Která loga se do zápisu opravdu dostanou: zapnutá a s obrázkem. */
+export function activeLogos(state, images) {
+  const flags = logoFlags(state);
+  const out = {};
+  for (const k of LOGO_SLOTS) out[k] = flags[k] && images?.[k] ? images[k] : null;
+  return out;
+}
+
+// ---------- odeslání e-mailem ----------
+
+function matchTitle(state, comp) {
+  const parts = [comp?.short || comp?.name || '', state.round ? `${state.round}. kolo` : ''].filter(Boolean);
+  return parts.join(', ');
+}
+
+/** Předmět e-mailu se zápisem. */
+export function mailSubject(state, comp) {
+  const b = matchBoards(state, comp);
+  const t = totals(state, b);
+  const score = t.missing.length ? '' : ` ${fmtPoints(t.home)}:${fmtPoints(t.away)}`;
+  const head = matchTitle(state, comp);
+  return `Zápis o utkání${head ? ` ${head}` : ''}: ${state.home.team || 'Domácí'} – ${state.away.team || 'Hosté'}${score}`;
+}
+
+/** Text e-mailu: shrnutí utkání s výsledky na šachovnicích. PDF zápisu jde jako příloha. */
+export function mailBody(state, comp, { attached = true, fileName = '' } = {}) {
+  const b = matchBoards(state, comp);
+  const t = totals(state, b);
+  const home = sortedLineup(state.home.lineup);
+  const away = sortedLineup(state.away.lineup);
+  const lines = [];
+  lines.push('Zápis o konaném šachovém utkání');
+  const head = matchTitle(state, comp);
+  if (head) lines.push(`Soutěž: ${head}${comp?.season ? ` (${comp.season})` : ''}`);
+  lines.push(`Hráno: ${fmtDate(state.date)}${state.venue ? `, ${state.venue}` : ''}`);
+  lines.push('');
+  lines.push(
+    `${state.home.team || 'Domácí'} – ${state.away.team || 'Hosté'}  ${
+      t.missing.length ? '(neúplné)' : `${fmtPoints(t.home)} : ${fmtPoints(t.away)}`
+    }`,
+  );
+  lines.push('');
+  for (let i = 1; i <= b; i++) {
+    const code = boardResult(state, i);
+    const hp = home[i - 1]?.name ?? 'neobsazeno';
+    const ap = away[i - 1]?.name ?? 'neobsazeno';
+    lines.push(`${i}. ${hp} – ${ap}  ${code ? RESULTS[code].label : '–'}`);
+  }
+  lines.push('');
+  if (state.referee?.name) lines.push(`Rozhodčí: ${state.referee.name}`);
+  if (state.home.captain || state.away.captain)
+    lines.push(`Kapitáni: ${state.home.captain || '—'} / ${state.away.captain || '—'}`);
+  if (state.notes?.trim()) {
+    lines.push('');
+    lines.push('Záznam rozhodčího:');
+    lines.push(state.notes.trim());
+  }
+  lines.push('');
+  lines.push(
+    attached
+      ? 'Podepsaný zápis je v příloze (PDF).'
+      : `Podepsaný zápis přikládám jako PDF${fileName ? ` (${fileName})` : ''}.`,
+  );
+  return lines.join('\n');
 }
 
 /** Výchozí kapitán družstva: hráč s typem K, jinak jméno z hlavičky soupisky. */

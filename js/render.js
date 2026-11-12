@@ -163,6 +163,25 @@ function footer(ctx, pageNo, pageCount, state) {
   ctx.fillText(`Strana ${pageNo} z ${pageCount}`, PAGE_W - MX, PAGE_H - 24);
 }
 
+/**
+ * Nakreslí obrázek (logo) do rámečku se zachováním poměru stran. align: 'left' | 'right' | 'center'.
+ * Vrací šířku, kterou obrázek zabral, nebo 0, když se nepodařilo ho načíst.
+ */
+async function drawImageFit(ctx, env, src, x, y, w, h, align = 'left') {
+  if (!src) return 0;
+  try {
+    const img = await env.loadImage(src);
+    const scale = Math.min(w / img.width, h / img.height);
+    const dw = img.width * scale;
+    const dh = img.height * scale;
+    const dx = align === 'right' ? x + w - dw : align === 'center' ? x + (w - dw) / 2 : x;
+    ctx.drawImage(img, dx, y + (h - dh) / 2, dw, dh);
+    return dw;
+  } catch {
+    return 0;
+  }
+}
+
 function newPage(env, scale) {
   const canvas = env.createCanvas(Math.round(PAGE_W * scale), Math.round(PAGE_H * scale));
   const ctx = canvas.getContext('2d');
@@ -172,12 +191,28 @@ function newPage(env, scale) {
   return { canvas, ctx };
 }
 
-function titleBlock(ctx, text) {
-  font(ctx, 19, 'bold');
-  ctx.fillStyle = INK;
-  ctx.textAlign = 'left';
-  ctx.textBaseline = 'alphabetic';
-  ctx.fillText(text, MX, 56);
+/**
+ * Nadpis stránky. S logy svazů jsou loga vlevo a nadpis vpravo, jako na papírovém zápisu,
+ * bez nich je nadpis vlevo.
+ */
+async function titleBlock(ctx, env, text, logos = {}) {
+  const LOGO_H = 50;
+  const LOGO_MAX_W = 150;
+  let x = MX;
+  for (const src of [logos.svaz, logos.kraj]) {
+    const w = await drawImageFit(ctx, env, src, x, 12, LOGO_MAX_W, LOGO_H, 'left');
+    if (w) x += w + 16;
+  }
+  if (x > MX) {
+    const avail = PAGE_W - MX - x;
+    fitText(ctx, text, x, 38, avail, { size: 19, min: 12, weight: 'bold', align: 'right' });
+  } else {
+    font(ctx, 19, 'bold');
+    ctx.fillStyle = INK;
+    ctx.textAlign = 'left';
+    ctx.textBaseline = 'alphabetic';
+    ctx.fillText(text, MX, 56);
+  }
   hline(ctx, MX, PAGE_W - MX, 66, INK, 1.4);
 }
 
@@ -185,7 +220,7 @@ function titleBlock(ctx, text) {
  * Vykreslí zápis. Vrací pole pláten (1 nebo 2 strany).
  * env: { createCanvas(w,h), loadImage(src) }
  */
-export async function renderPages(state, comp, env, { scale = 2 } = {}) {
+export async function renderPages(state, comp, env, { scale = 2, logos = {} } = {}) {
   const boards = matchBoards(state, comp);
   const home = sortedLineup(state.home.lineup);
   const away = sortedLineup(state.away.lineup);
@@ -194,7 +229,7 @@ export async function renderPages(state, comp, env, { scale = 2 } = {}) {
   const p1 = newPage(env, scale);
   const ctx = p1.ctx;
 
-  titleBlock(ctx, 'ZÁPIS O KONANÉM ŠACHOVÉM UTKÁNÍ');
+  await titleBlock(ctx, env, 'ZÁPIS O KONANÉM ŠACHOVÉM UTKÁNÍ', logos);
 
   // --- Údaje o soutěži ---
   const y1 = 86;
@@ -238,15 +273,21 @@ export async function renderPages(state, comp, env, { scale = 2 } = {}) {
   rect(ctx, xHome, hy, sideW, hh, { fill: SHADE });
   rect(ctx, xAway, hy, sideW, hh, { fill: SHADE });
   rect(ctx, xCenter, hy, centerW, hh, { fill: '#ffffff' });
+  // loga družstev: domácí vlevo, hosté vpravo, text se odsune
+  const LOGO_T = 34;
+  const homeLogoW = await drawImageFit(ctx, env, logos.home, xHome + 6, hy + 4, LOGO_T, LOGO_T, 'center');
+  const awayLogoW = await drawImageFit(ctx, env, logos.away, xAway + sideW - 6 - LOGO_T, hy + 4, LOGO_T, LOGO_T, 'center');
+  const homeShift = homeLogoW ? LOGO_T + 6 : 0;
+  const awayShift = awayLogoW ? LOGO_T + 6 : 0;
   font(ctx, 7.5, 'normal');
   ctx.fillStyle = MUTED;
   ctx.textAlign = 'left';
   ctx.textBaseline = 'alphabetic';
-  ctx.fillText('DOMÁCÍ', xHome + 8, hy + 12);
+  ctx.fillText('DOMÁCÍ', xHome + 8 + homeShift, hy + 12);
   ctx.textAlign = 'right';
-  ctx.fillText('HOSTÉ', xAway + sideW - 8, hy + 12);
-  fitText(ctx, state.home.team || '—', xHome + 8, hy + 28, sideW - 16, { size: 13, weight: 'bold' });
-  fitText(ctx, state.away.team || '—', xAway + 8, hy + 28, sideW - 16, { size: 13, weight: 'bold', align: 'right' });
+  ctx.fillText('HOSTÉ', xAway + sideW - 8 - awayShift, hy + 12);
+  fitText(ctx, state.home.team || '—', xHome + 8 + homeShift, hy + 28, sideW - 16 - homeShift, { size: 13, weight: 'bold' });
+  fitText(ctx, state.away.team || '—', xAway + 8, hy + 28, sideW - 16 - awayShift, { size: 13, weight: 'bold', align: 'right' });
   font(ctx, 7.5, 'normal');
   ctx.fillStyle = MUTED;
   ctx.textAlign = 'center';
@@ -395,7 +436,7 @@ export async function renderPages(state, comp, env, { scale = 2 } = {}) {
   if (needSecond) {
     const p2 = newPage(env, scale);
     const c2 = p2.ctx;
-    titleBlock(c2, 'ZÁPIS O UTKÁNÍ – POKRAČOVÁNÍ');
+    await titleBlock(c2, env, 'ZÁPIS O UTKÁNÍ – POKRAČOVÁNÍ', logos);
     font(c2, 10.5, 'bold');
     c2.fillStyle = INK;
     c2.textAlign = 'left';

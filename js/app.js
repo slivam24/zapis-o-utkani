@@ -525,6 +525,97 @@ function viewZaver() {
     </div>`;
 }
 
+// ---------- loga ----------
+const SVAZ_LOGO = 'img/logo-sscr.png';
+
+/** Obrázky log, které má zařízení k dispozici (zapnutá nebo ne). */
+function logoImages() {
+  return {
+    svaz: SVAZ_LOGO,
+    kraj: store.krajLogo(),
+    home: store.teamLogo(S.home.team),
+    away: store.teamLogo(S.away.team),
+  };
+}
+
+/** Loga, která jdou do zápisu: zapnutá a s obrázkem. */
+const currentLogos = () => L.activeLogos(S, logoImages());
+
+function logosCard() {
+  const flags = L.logoFlags(S);
+  const img = logoImages();
+  const row = (slot, title, sub, { canUpload = true } = {}) => {
+    const has = !!img[slot];
+    const on = flags[slot] && has;
+    return `<div class="logo-row ${on ? 'on' : ''}">
+      <label class="logo-check">
+        <input type="checkbox" data-chg="logo" data-slot="${slot}" ${on ? 'checked' : ''} ${has ? '' : 'disabled'}>
+        <span><b>${esc(title)}</b>${sub ? `<span class="muted small-text">${esc(sub)}</span>` : ''}</span>
+      </label>
+      <span class="logo-thumb">${has ? `<img src="${esc(img[slot])}" alt="">` : '<span class="muted small-text">bez loga</span>'}</span>
+      ${
+        canUpload
+          ? `<span class="logo-btns">
+              <label class="btn small secondary">${has ? 'Změnit' : 'Nahrát'}
+                <input type="file" accept="image/*" hidden data-act="logoUpload" data-slot="${slot}"></label>
+              ${has ? `<button class="btn small ghost" type="button" data-act="logoRemove" data-slot="${slot}" aria-label="Odebrat logo">✕</button>` : ''}
+            </span>`
+          : '<span class="logo-btns"></span>'
+      }
+    </div>`;
+  };
+  return `<div class="card">
+    <h2>Loga v zápisu</h2>
+    <p class="muted small-text">Zaškrtnutá loga se vykreslí do zápisu. Logo krajského svazu a loga družstev si zařízení pamatuje, příště se doplní samo.</p>
+    <div class="logos">
+      ${row('svaz', 'Šachový svaz ČR', '', { canUpload: false })}
+      ${row('kraj', 'Krajský svaz', '')}
+      ${row('home', 'Domácí', S.home.team)}
+      ${row('away', 'Hosté', S.away.team)}
+    </div>
+  </div>`;
+}
+
+/** Zmenší nahraný obrázek na nejvýš 400 px a vrátí ho jako data URL (PNG kvůli průhlednosti). */
+async function fileToLogo(file) {
+  const url = URL.createObjectURL(file);
+  try {
+    const img = await env.loadImage(url);
+    const max = 400;
+    const k = Math.min(1, max / Math.max(img.width || max, img.height || max));
+    const w = Math.max(1, Math.round((img.width || max) * k));
+    const h = Math.max(1, Math.round((img.height || max) * k));
+    const c = env.createCanvas(w, h);
+    c.getContext('2d').drawImage(img, 0, 0, w, h);
+    return c.toDataURL('image/png');
+  } finally {
+    URL.revokeObjectURL(url);
+  }
+}
+
+function saveLogo(slot, dataUrl) {
+  if (slot === 'kraj') return store.setKrajLogo(dataUrl);
+  if (slot === 'home' || slot === 'away') return store.setTeamLogo(S[slot].team, dataUrl);
+  return false;
+}
+
+function mailCard() {
+  const to = store.mailFor(S.compId);
+  return `<div class="card">
+    <h2>Odeslat e-mailem</h2>
+    <label class="field"><span>Komu (např. řídicí soutěže)</span>
+      <input type="email" id="mailTo" value="${esc(to)}" placeholder="adresa@example.cz" autocomplete="email" inputmode="email"></label>
+    <div class="actions" style="margin-top:.6rem">
+      <button class="btn" type="button" data-act="mail">Odeslat zápis e-mailem</button>
+    </div>
+    <p class="muted small-text" style="margin-top:.4rem">${
+      prefersShare()
+        ? 'Otevře se nabídka sdílení se zápisem v PDF. Vyber poštovní aplikaci, adresu příjemce aplikace zkopíruje, stačí ji vložit.'
+        : 'Zápis se stáhne jako PDF a otevře se poštovní program s vyplněným předmětem a textem. Stažený soubor do e-mailu přilož.'
+    } Adresa se pro tuto soutěž zapamatuje.</p>
+  </div>`;
+}
+
 function viewVystup() {
   const issues = L.validate(S, comp(), { forFinal: true });
   const tabName = Object.fromEntries(TABS);
@@ -550,6 +641,8 @@ function viewVystup() {
         <button class="btn secondary" type="button" data-act="share" id="btnShare">Sdílet</button>
       </div>
     </div>
+    ${logosCard()}
+    ${mailCard()}
     <div class="card vystup-done">
       <h2>Dokončení</h2>
       <p class="muted small-text">Uloží zápis do archivu v tomto zařízení (potřebné uchovat nejméně 6 měsíců, čl. 2.4.6) a otevře nový zápis.</p>
@@ -761,7 +854,7 @@ async function renderOverlay() {
     <div class="ov-body ${mode} ${overlayZoom ? 'page' : ''}">${mode === 'prubeh' ? prubehHtml() : '<p class="muted">Vykresluji…</p>'}</div>`;
   if (mode === 'prubeh') fitPrubeh();
   if (mode === 'zapis') {
-    const pages = await renderPages(S, comp(), env, { scale: 2 });
+    const pages = await renderPages(S, comp(), env, { scale: 2, logos: currentLogos() });
     const body = $('.ov-body', overlay);
     if (overlayMode === 'zapis' && body) body.replaceChildren(...pages);
   }
@@ -840,14 +933,14 @@ const toBlob = (canvas, type, q) => new Promise((res) => canvas.toBlob(res, type
 let previewToken = 0;
 async function renderPreview() {
   const token = ++previewToken;
-  const pages = await renderPages(S, comp(), env, { scale: 1.6 });
+  const pages = await renderPages(S, comp(), env, { scale: 1.6, logos: currentLogos() });
   const box = $('#preview');
   if (token !== previewToken || tab !== 'vystup' || !box) return;
   box.replaceChildren(...pages);
 }
 
 async function makePdfBlob() {
-  const pages = await renderPages(S, comp(), env, { scale: 2 });
+  const pages = await renderPages(S, comp(), env, { scale: 2, logos: currentLogos() });
   const list = [];
   for (const c of pages) {
     const blob = await toBlob(c, 'image/jpeg', 0.92);
@@ -875,7 +968,7 @@ async function exportPdf() {
 
 async function exportPng() {
   toast('Vytvářím obrázek…');
-  const pages = await renderPages(S, comp(), env, { scale: 2 });
+  const pages = await renderPages(S, comp(), env, { scale: 2, logos: currentLogos() });
   for (let i = 0; i < pages.length; i++) {
     const blob = await toBlob(pages[i], 'image/png');
     download(blob, `${L.fileBase(S, comp())}${pages.length > 1 ? `_strana${i + 1}` : ''}.png`);
@@ -892,6 +985,50 @@ async function shareFiles() {
       /* uživatel zrušil */
     }
   } else toast('Sdílení souboru toto zařízení nepodporuje, použij stažení.');
+}
+
+/** Na tabletu a telefonu jde PDF poslat jako přílohu přes nabídku sdílení, na počítači přes mailto. */
+function prefersShare() {
+  const coarse = window.matchMedia?.('(pointer: coarse)').matches;
+  return !!(coarse && navigator.canShare && navigator.share);
+}
+
+async function sendMail() {
+  const to = ($('#mailTo')?.value ?? '').trim();
+  store.rememberMail(S.compId, to);
+  const issues = L.validate(S, comp(), { forFinal: true });
+  if (L.hasErrors(issues) && !confirm('Zápis obsahuje chyby (viz Kontrola zápisu). Opravdu ho odeslat?')) return;
+  toast('Připravuji zápis…');
+  const name = `${L.fileBase(S, comp())}.pdf`;
+  const pdf = await makePdfBlob();
+  const subject = L.mailSubject(S, comp());
+  if (prefersShare()) {
+    const file = new File([pdf], name, { type: 'application/pdf' });
+    if (navigator.canShare({ files: [file] })) {
+      if (to) {
+        try {
+          await navigator.clipboard.writeText(to);
+          toast('Adresa příjemce je zkopírovaná, vlož ji do e-mailu.');
+        } catch {
+          /* schránka nedostupná, adresu člověk opíše */
+        }
+      }
+      try {
+        await navigator.share({ files: [file], title: subject, text: L.mailBody(S, comp()) });
+      } catch {
+        /* uživatel zrušil */
+      }
+      return;
+    }
+  }
+  // Odkaz mailto přílohu přidat neumí: PDF se stáhne a otevře se e-mail s předmětem a textem.
+  download(pdf, name);
+  const body = L.mailBody(S, comp(), { attached: false, fileName: name });
+  const href = `mailto:${encodeURIComponent(to).replace(/%40/g, '@')}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  setTimeout(() => {
+    window.location.href = href;
+  }, 400);
+  toast('PDF je stažené, přilož ho do otevřeného e-mailu.');
 }
 
 function newMatch() {
@@ -1007,6 +1144,13 @@ view.addEventListener('click', (e) => {
       return exportPng();
     case 'share':
       return shareFiles();
+    case 'mail':
+      return sendMail();
+    case 'logoRemove': {
+      if (!confirm('Odebrat logo z tohoto zařízení?')) return;
+      saveLogo(el.dataset.slot, null);
+      return renderView();
+    }
     case 'archive': {
       const issues = L.validate(S, comp(), { forFinal: true });
       if (L.hasErrors(issues) && !confirm('Zápis obsahuje chyby. Opravdu ho uložit do archivu?')) return;
@@ -1153,6 +1297,22 @@ async function loadNewCompetition(files) {
 
 view.addEventListener('change', async (e) => {
   const input = e.target;
+  if (input.dataset.act === 'logoUpload') {
+    const file = input.files?.[0];
+    if (!file) return;
+    const slot = input.dataset.slot;
+    if ((slot === 'home' || slot === 'away') && !S[slot].team) return toast('Nejdřív vyber družstvo.');
+    try {
+      const dataUrl = await fileToLogo(file);
+      if (!saveLogo(slot, dataUrl)) return toast('Logo se nepodařilo uložit, úložiště zařízení je plné.');
+      S.logos = { ...L.logoFlags(S), [slot]: true };
+      save();
+      toast('Logo je nahrané.');
+    } catch {
+      toast('Tenhle soubor se jako obrázek načíst nepodařilo.');
+    }
+    return renderView();
+  }
   if (input.dataset.act !== 'uploadRoster') return;
   const files = [...(input.files ?? [])];
   if (!files.length) return;
@@ -1204,6 +1364,10 @@ view.addEventListener('change', (e) => {
       save();
       return renderView();
     }
+    case 'logo':
+      S.logos = { ...L.logoFlags(S), [el.dataset.slot]: el.checked };
+      save();
+      return renderView();
     case 'refRole':
       S.referee.role = el.value;
       if (el.value === 'captain' && S.home.captain) S.referee.name = S.home.captain;

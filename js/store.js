@@ -79,3 +79,39 @@ export function deleteUserComp(id) {
   return write(KEY_COMPS, loadUserComps().filter((c) => c.id !== id));
 }
 
+
+// Loga do zápisu: krajský svaz (jedno pro zařízení) a loga družstev podle názvu družstva.
+// Logo šachového svazu je součástí aplikace (img/logo-sscr.png).
+const KEY_LOGOS = 'zapis.logos.v1';
+const loadLogos = () => read(KEY_LOGOS, { kraj: null, teams: {} });
+
+export const krajLogo = () => loadLogos().kraj ?? null;
+export function setKrajLogo(dataUrl) {
+  const l = loadLogos();
+  l.kraj = dataUrl || null;
+  return write(KEY_LOGOS, l);
+}
+
+export const teamLogo = (team) => (team ? loadLogos().teams?.[team] ?? null : null);
+export function setTeamLogo(team, dataUrl) {
+  if (!team) return false;
+  const l = loadLogos();
+  l.teams = l.teams ?? {};
+  if (dataUrl) l.teams[team] = dataUrl;
+  else delete l.teams[team];
+  return write(KEY_LOGOS, l);
+}
+
+// Adresa, kam se zápisy posílají (řídicí soutěže), zvlášť pro každou soutěž.
+const KEY_MAIL = 'zapis.mail.v1';
+export const mailFor = (compId) => {
+  const m = read(KEY_MAIL, {});
+  return m[compId] ?? m._last ?? '';
+};
+export function rememberMail(compId, to) {
+  const m = read(KEY_MAIL, {});
+  const v = (to ?? '').trim();
+  if (compId) m[compId] = v;
+  if (v) m._last = v;
+  write(KEY_MAIL, m);
+}

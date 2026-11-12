@@ -110,7 +110,7 @@ main { max-width: 980px; margin: 0 auto; padding: 1rem; outline: none; }
 
 label.field { display: block; font-size: .8rem; font-weight: 600; color: var(--muted); }
 label.field > span { display: block; margin-bottom: .25rem; }
-input[type=text], input[type=date], input[type=number], select, textarea {
+input[type=text], input[type=email], input[type=date], input[type=number], select, textarea {
   width: 100%; max-width: 100%; font: inherit; font-size: 16px; color: var(--ink); background: var(--card);
   border: 1px solid var(--line); border-radius: 8px; padding: .6rem .7rem; min-height: 44px;
 }
@@ -273,6 +273,24 @@ ol.lineup { list-style: none; margin: 0 0 .6rem; padding: 0; border: 1px solid v
 
 .preview { display: grid; gap: .8rem; cursor: zoom-in; margin-top: .6rem; }
 .preview canvas { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; background: #fff; box-shadow: 0 1px 6px rgba(0,0,0,.12); }
+
+/* loga v zápisu */
+.logos { display: grid; gap: .4rem; }
+.logo-row {
+  display: grid; grid-template-columns: minmax(0, 1fr) 4.5rem 7.2rem; gap: .6rem; align-items: center;
+  border: 1px solid var(--line); border-radius: 10px; padding: .45rem .6rem; min-height: 56px;
+}
+.logo-row.on { border-color: var(--accent); background: var(--sel); }
+.logo-check { display: flex; align-items: center; gap: .6rem; cursor: pointer; min-width: 0; }
+.logo-check input { width: 22px; height: 22px; flex: 0 0 auto; }
+.logo-check > span { display: grid; min-width: 0; }
+.logo-check .small-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.logo-thumb { display: flex; align-items: center; justify-content: center; height: 40px; background: #fff;
+  border-radius: 6px; padding: 2px; }
+.logo-thumb img { max-width: 100%; max-height: 36px; object-fit: contain; }
+.logo-thumb .muted { color: #9ca3af; }
+.logo-btns { display: flex; gap: .3rem; align-items: center; }
+.logo-btns label.btn { display: inline-flex; align-items: center; cursor: pointer; }
 
 .arch { display: grid; gap: .6rem; }
 .arch .it { display: grid; gap: .3rem; border: 1px solid var(--line); border-radius: 10px; padding: .7rem .9rem; background: var(--card); }

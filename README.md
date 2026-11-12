@@ -15,7 +15,21 @@ prstem a na konci vznikne **PDF** a **obrázek (PNG)** zápisu.
    a odtud jde přepnout i na celý zápis.
 4. **Závěr a podpisy:** rozhodčí, kapitáni, záznam rozhodčího a tři podpisy.
 5. **Výstup:** kontrola zápisu (co je nutné opravit a co jen doporučujeme, s odkazem na příslušný krok),
-   náhled na celou obrazovku, PDF, PNG, sdílení. Hotový zápis jde uložit do archivu v zařízení.
+   loga v zápisu, náhled na celou obrazovku, PDF, PNG, sdílení a odeslání e-mailem.
+
+### Loga v zápisu
+
+Zápis může mít 0 až 4 loga: Šachový svaz ČR (je součástí aplikace a ve výchozím stavu zapnuté), krajský svaz,
+domácí a hosté. Loga svazů jsou vlevo nahoře vedle nadpisu jako na papírovém zápisu, loga družstev u jejich názvů.
+Každé jde v kroku Výstup vypnout. Logo krajského svazu a loga družstev se nahrají z obrázku v zařízení,
+zmenší se a zařízení si je pamatuje (loga družstev podle názvu družstva), takže příště se doplní sama.
+
+### Odeslání e-mailem
+
+Na tabletu a telefonu se otevře nabídka sdílení se zápisem v PDF jako přílohou; adresa příjemce se zkopíruje
+do schránky. Na počítači se PDF stáhne a otevře se poštovní program s vyplněným předmětem a textem
+(odkaz `mailto:` přílohu přidat neumí, soubor se přiloží ručně). Adresa se pamatuje pro každou soutěž zvlášť.
+Aplikace nic neodesílá přes vlastní server, e-mail jde vždy z pošty uživatele. Hotový zápis jde uložit do archivu v zařízení.
 
 Aplikace funguje i **bez internetu** (po prvním otevření). Internet je potřeba jen pro stažení čerstvých soupisek.
 Dá se „nainstalovat“ na plochu telefonu (v prohlížeči: Přidat na plochu).
@@ -107,7 +121,7 @@ parser v `js/parse.js`. Soupisky jde vždy doplnit i ručně přímo v aplikaci.
 
 ```bash
 npm install                 # jen linkedom, pro parsování HTML v Node
-npm test                    # 55 testů: logika zápisu, parser, čtečka .xlsx, přidávání soutěží
+npm test                    # 57 testů: logika zápisu, parser, čtečka .xlsx, přidávání soutěží
 npm run serve               # lokální spuštění: http://localhost:8080
 ```
 

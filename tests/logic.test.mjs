@@ -189,3 +189,33 @@ test('kontrola počítá s přebitým počtem šachovnic', () => {
   s.boards = null;
   assert.ok(validate(s, { boards: 8 }).some((i) => /nejméně 4/.test(i.text)));
 });
+
+test('loga: výchozí jsou všechna zapnutá, použijí se jen ta s obrázkem', async () => {
+  const { activeLogos, logoFlags } = await import('../js/logic.js');
+  const s = newMatch({ today: '2026-11-02' });
+  assert.deepEqual(logoFlags(s), { svaz: true, kraj: true, home: true, away: true });
+  // starší zápis bez voleb log
+  delete s.logos;
+  assert.equal(logoFlags(s).svaz, true);
+  const img = { svaz: 'svaz.png', kraj: null, home: 'home.png' };
+  assert.deepEqual(activeLogos(s, img), { svaz: 'svaz.png', kraj: null, home: 'home.png', away: null });
+  // bez loga
+  s.logos = { svaz: false, kraj: false, home: false, away: false };
+  assert.deepEqual(activeLogos(s, img), { svaz: null, kraj: null, home: null, away: null });
+});
+
+test('e-mail: předmět a text se skóre a výsledky šachovnic', async () => {
+  const { mailSubject, mailBody } = await import('../js/logic.js');
+  const s = match([1, 2, 3, 4, 5, 6, 7, 8], [1, 2, 3, 4, 5, 6, 7, 8]);
+  const comp = { short: 'KP II A', name: 'Krajský přebor II. třídy', season: '2026/2027', boards: 8 };
+  assert.equal(mailSubject(s, comp), 'Zápis o utkání KP II A, 1. kolo: A – B');
+  for (let b = 1; b <= 8; b++) setBoardResult(s, b, b % 2 ? 'W' : 'L');
+  assert.equal(mailSubject(s, comp), 'Zápis o utkání KP II A, 1. kolo: A – B 4:4');
+  const body = mailBody(s, comp);
+  assert.match(body, /Soutěž: KP II A, 1\. kolo \(2026\/2027\)/);
+  assert.match(body, /A – B {2}4 : 4/);
+  assert.match(body, /1\. Hrac 1 – Hrac 1 {2}1 : 0/);
+  assert.match(body, /Rozhodčí: Rozhodčí/);
+  assert.match(body, /v příloze/);
+  assert.match(mailBody(s, comp, { attached: false, fileName: 'z.pdf' }), /přikládám jako PDF \(z\.pdf\)/);
+});
