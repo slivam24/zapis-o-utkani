@@ -102,6 +102,11 @@ export function setTeamLogo(team, dataUrl) {
   return write(KEY_LOGOS, l);
 }
 
+// Zobrazení: 'auto' (podle zařízení), 'desktop' nebo 'touch'.
+const KEY_UI = 'zapis.ui.v1';
+export const uiPref = () => read(KEY_UI, 'auto');
+export const setUiPref = (v) => write(KEY_UI, v);
+
 // Adresa, kam se zápisy posílají (řídicí soutěže), zvlášť pro každou soutěž.
 const KEY_MAIL = 'zapis.mail.v1';
 export const mailFor = (compId) => {

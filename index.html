@@ -21,8 +21,17 @@
       </div>
     </div>
     <div class="top-right">
+      <details class="ui-menu" id="uiMenu">
+        <summary title="Zobrazení"><span class="ui-ico" aria-hidden="true"></span><span class="ui-label"></span></summary>
+        <div class="ui-pop" role="menu">
+          <div class="ui-head">Zobrazení</div>
+          <button type="button" data-ui="auto" role="menuitemradio">Automaticky</button>
+          <button type="button" data-ui="desktop" role="menuitemradio">🖥 Počítač</button>
+          <button type="button" data-ui="touch" role="menuitemradio">📱 Tablet a mobil</button>
+        </div>
+      </details>
       <button id="btnArchive" class="btn small ghost" type="button">Archiv</button>
-      <button id="btnNew" class="btn small ghost" type="button">+ Nový zápis</button>
+      <button id="btnNew" class="btn small ghost" type="button" aria-label="Nový zápis">+ Nový<span class="long"> zápis</span></button>
     </div>
   </header>
   <div id="overlay" class="overlay" hidden></div>

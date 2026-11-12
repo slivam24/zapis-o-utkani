@@ -42,6 +42,31 @@ const NOTE_PRESETS = [
   ['Námitka kapitána', 'Námitka kapitána družstva: '],
 ];
 
+// ---------- zobrazení: počítač, nebo tablet a mobil ----------
+// Automaticky podle zařízení: myš (jemný ukazatel s najetím) = počítač, jinak dotykové zobrazení.
+const detectUi = () => (window.matchMedia?.('(hover: hover) and (pointer: fine)').matches ? 'desktop' : 'touch');
+const uiMode = () => {
+  const pref = store.uiPref();
+  return pref === 'desktop' || pref === 'touch' ? pref : detectUi();
+};
+const UI_NAMES = { desktop: 'Počítač', touch: 'Tablet a mobil' };
+
+function applyUi() {
+  const mode = uiMode();
+  const pref = store.uiPref();
+  document.documentElement.dataset.ui = mode;
+  const menu = document.getElementById('uiMenu');
+  if (!menu) return;
+  menu.querySelector('.ui-ico').textContent = mode === 'desktop' ? '🖥' : '📱';
+  menu.querySelector('.ui-label').textContent = UI_NAMES[mode];
+  menu.querySelectorAll('[data-ui]').forEach((b) => {
+    const on = b.dataset.ui === pref || (pref !== 'desktop' && pref !== 'touch' && b.dataset.ui === 'auto');
+    b.classList.toggle('on', on);
+    b.setAttribute('aria-checked', on ? 'true' : 'false');
+  });
+  menu.querySelector('[data-ui="auto"]').textContent = `Automaticky (${UI_NAMES[detectUi()]})`;
+}
+
 const comp = () => DATA.competitions.find((c) => c.id === S.compId);
 const boards = () => L.matchBoards(S, comp());
 const teamOf = (side) => comp()?.teams.find((t) => t.name === S[side].team);
@@ -269,7 +294,8 @@ function viewZapas() {
         ${teamFields}
       </div>`;
 
-  return `
+  return `<div class="cols">
+    <div class="col">
     <div class="card">
       <h2>Soutěž a kolo</h2>
       <div class="grid two">
@@ -283,6 +309,8 @@ function viewZapas() {
       ${addComp.open ? addPanel() : ''}
       ${matchList}
     </div>
+    </div>
+    <div class="col">
     ${teamsCard}
     <div class="card">
       <h2>Datum a místo</h2>
@@ -292,6 +320,8 @@ function viewZapas() {
           <input type="text" inputmode="numeric" data-chg="matchBoards" value="${esc(boards())}" autocomplete="off"></label>
         <label class="field"><span>Hrací místnost</span><input type="text" data-bind="venue" data-venue="1" value="${esc(S.venue)}" autocomplete="off"></label>
       </div>
+    </div>
+    </div>
     </div>
     <div class="actions"><button class="btn" data-act="go" data-tab="sestavy" type="button">Pokračovat na sestavy →</button></div>`;
 }
@@ -381,7 +411,7 @@ function rosterCard(side, label) {
 }
 
 function viewSestavy() {
-  return `${rosterCard('home', 'Domácí')}${rosterCard('away', 'Hosté')}
+  return `<div class="cols"><div class="col">${rosterCard('home', 'Domácí')}</div><div class="col">${rosterCard('away', 'Hosté')}</div></div>
     <div class="actions">
       <button class="btn secondary" data-act="go" data-tab="zapas" type="button">← Zpět</button>
       <button class="btn" data-act="go" data-tab="vysledky" type="button">Pokračovat na výsledky →</button>
@@ -485,7 +515,8 @@ function viewZaver() {
   const sigBox = (key, title, name) => `<div class="sig"><div class="cap">${title}${name ? `: ${esc(name)}` : ''}</div>
       <canvas data-sig="${key}" aria-label="Podpis: ${esc(title)}"></canvas>
       <div class="row end"><button class="btn small ghost" type="button" data-act="clearSig" data-key="${key}">Smazat podpis</button></div></div>`;
-  return `
+  return `<div class="cols">
+    <div class="col">
     <div class="card">
       <h2>Rozhodčí</h2>
       <div class="grid two">
@@ -495,6 +526,8 @@ function viewZaver() {
       ${refPicker()}
       <datalist id="dl-ref">${refList}${namesList('home')}${namesList('away')}</datalist>
     </div>
+    </div>
+    <div class="col">
     <div class="card">
       <h2>Kapitáni</h2>
       <div class="grid two">
@@ -504,6 +537,8 @@ function viewZaver() {
       <datalist id="dl-home">${namesList('home')}</datalist><datalist id="dl-away">${namesList('away')}</datalist>
       <p class="muted small-text">V nižších soutěžích bývá kapitánem někdo z domácích, ve vyšších bývá delegován. Jméno můžeš vybrat ze soupisky nebo napsat.</p>
     </div>
+    </div>
+    </div>
     <div class="card">
       <h2>Záznam rozhodčího</h2>
       <p class="muted small-text">Průběh utkání, případné přestupky či spory, námitky kapitánů. Rychlé vložení:</p>
@@ -512,7 +547,9 @@ function viewZaver() {
     </div>
     <div class="card">
       <h2>Podpisy</h2>
-      <p class="muted small-text">Podepiš prstem nebo perem na displeji. Správnost zápisu potvrzují oba kapitáni a rozhodčí.</p>
+      <p class="muted small-text">${
+        uiMode() === 'desktop' ? 'Podepiš myší nebo perem tabletu.' : 'Podepiš prstem nebo perem na displeji.'
+      } Správnost zápisu potvrzují oba kapitáni a rozhodčí.</p>
       <div class="sigs">
         ${sigBox('home', 'Kapitán domácího družstva', S.home.captain)}
         ${sigBox('ref', 'Rozhodčí', S.referee.name)}
@@ -701,7 +738,7 @@ function renderView({ keepScroll = true } = {}) {
   $$('.roster').forEach((r) => (saved[r.dataset.side] = r.scrollTop));
   const y = window.scrollY;
   view.innerHTML = (VIEWS[tab] ?? viewZapas)();
-  view.classList.toggle('wide', tab === 'vystup');
+  view.classList.toggle('wide', tab === 'vystup' || (uiMode() === 'desktop' && tab !== 'vysledky'));
   if (keepScroll) {
     $$('.roster').forEach((r) => (r.scrollTop = saved[r.dataset.side] ?? 0));
     window.scrollTo(0, y);
@@ -989,8 +1026,7 @@ async function shareFiles() {
 
 /** Na tabletu a telefonu jde PDF poslat jako přílohu přes nabídku sdílení, na počítači přes mailto. */
 function prefersShare() {
-  const coarse = window.matchMedia?.('(pointer: coarse)').matches;
-  return !!(coarse && navigator.canShare && navigator.share);
+  return !!(uiMode() === 'touch' && navigator.canShare && navigator.share);
 }
 
 async function sendMail() {
@@ -1389,6 +1425,27 @@ stepsEl.addEventListener('click', (e) => {
 });
 
 $('#btnArchive').addEventListener('click', () => goTo('archiv'));
+$('#uiMenu').addEventListener('click', (e) => {
+  const b = e.target.closest('[data-ui]');
+  if (!b) return;
+  store.setUiPref(b.dataset.ui);
+  $('#uiMenu').open = false;
+  applyUi();
+  renderView();
+  toast(`Zobrazení: ${UI_NAMES[uiMode()]}${b.dataset.ui === 'auto' ? ' (automaticky)' : ''}.`);
+});
+// klepnutí mimo nabídku ji zavře
+document.addEventListener('click', (e) => {
+  const m = $('#uiMenu');
+  if (m.open && !m.contains(e.target)) m.open = false;
+});
+// automatický režim sleduje zařízení (např. připojená myš k tabletu)
+window.matchMedia?.('(hover: hover) and (pointer: fine)').addEventListener?.('change', () => {
+  if (store.uiPref() === 'auto') {
+    applyUi();
+    renderView();
+  }
+});
 $('#btnNew').addEventListener('click', () => {
   const started = S.home.team || S.away.team || S.home.lineup.length || S.away.lineup.length;
   if (!started || confirm('Zahodit rozpracovaný zápis a začít nový?')) newMatch();
@@ -1411,6 +1468,7 @@ $('#btnRefresh').addEventListener('click', async (e) => {
 
 // ---------- start ----------
 async function init() {
+  applyUi();
   try {
     const r = await loadData();
     DATA = r.data;

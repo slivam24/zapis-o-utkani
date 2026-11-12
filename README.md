@@ -17,6 +17,13 @@ prstem a na konci vznikne **PDF** a **obrázek (PNG)** zápisu.
 5. **Výstup:** kontrola zápisu (co je nutné opravit a co jen doporučujeme, s odkazem na příslušný krok),
    loga v zápisu, náhled na celou obrazovku, PDF, PNG, sdílení a odeslání e-mailem.
 
+### Zobrazení pro počítač a pro tablet a mobil
+
+Aplikace má dvě zobrazení a vybere je sama podle zařízení: s myší je to **Počítač** (hustší ovládání,
+karty vedle sebe, e-mail přes poštovní program), s dotykovou obrazovkou **Tablet a mobil** (velké dotykové
+prvky, odesílání přes nabídku sdílení). V hlavičce jde zobrazení přepnout ručně, zařízení si volbu pamatuje;
+volba **Automaticky** vrátí výběr podle zařízení.
+
 ### Loga v zápisu
 
 Zápis může mít 0 až 4 loga: Šachový svaz ČR (je součástí aplikace a ve výchozím stavu zapnuté), krajský svaz,
