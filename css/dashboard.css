@@ -1,0 +1,283 @@
+/* Dashboard: los aktuálního kola dvou turnajů. Určeno pro televizi nebo projektor,
+   proto je výchozí tmavý vzhled; světlý se zapne ?tema=svetle. */
+
+:root {
+  --bg: #11161d;
+  --panel: #171e27;
+  --row: #1c2530;
+  --row-alt: #18202a;
+  --line: #2b3642;
+  --text: #eef2f6;
+  --muted: #8d9aa8;
+  --accent: #f2b544;
+  --ok: #5fd08a;
+  --warn: #f0a04b;
+  --bad: #ef6b6b;
+  --white-piece: #f4f4f0;
+  --black-piece: #2a2f36;
+  --bar-h: 3.2rem;
+  color-scheme: dark;
+}
+
+:root[data-theme='light'] {
+  --bg: #eef1f5;
+  --panel: #ffffff;
+  --row: #ffffff;
+  --row-alt: #f3f5f8;
+  --line: #d5dbe2;
+  --text: #121820;
+  --muted: #5c6773;
+  --accent: #a86400;
+  --ok: #17803d;
+  --warn: #b05a00;
+  --bad: #c02727;
+  --white-piece: #ffffff;
+  --black-piece: #20252c;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+  overflow: hidden;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.35rem 0.8rem;
+  cursor: pointer;
+}
+button:hover { border-color: var(--muted); }
+button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* horní lišta */
+.bar {
+  height: var(--bar-h);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+  border-bottom: 1px solid var(--line);
+}
+.clock {
+  font-size: 1.9rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+.status { flex: 1; color: var(--muted); font-size: 0.95rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.status .warn { color: var(--warn); }
+.status .bad { color: var(--bad); }
+.tools { display: flex; gap: 0.5rem; transition: opacity 0.4s; }
+body.idle .tools { opacity: 0; pointer-events: none; }
+body.idle { cursor: none; }
+
+/* dva panely */
+.boards {
+  height: calc(100% - var(--bar-h));
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.panel {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1.2vh 1.4vw 1vh;
+  overflow: hidden;
+}
+.panel + .panel { border-left: 2px solid var(--line); }
+
+.head { flex: none; margin-bottom: 1vh; }
+.title {
+  margin: 0;
+  font-size: clamp(1.1rem, 2.1vw, 3rem);
+  line-height: 1.15;
+  font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.sub {
+  margin-top: 0.3vh;
+  font-size: clamp(0.9rem, 1.45vw, 2rem);
+  color: var(--muted);
+}
+.sub .round { color: var(--accent); font-weight: 700; }
+.flag {
+  display: inline-block;
+  margin-left: 0.6em;
+  font-size: 0.8em;
+  color: var(--warn);
+}
+
+.body { flex: 1; min-height: 0; overflow: hidden; position: relative; }
+.scroller { will-change: transform; }
+
+/* tabulka losu */
+table.pairs {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.18em;
+  table-layout: fixed;
+  font-size: 24px; /* přepisuje se podle místa */
+}
+.pairs td {
+  background: var(--row);
+  padding: 0.28em 0.45em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  line-height: 1.2;
+}
+.pairs tr:nth-child(even) td { background: var(--row-alt); }
+.pairs td:first-child { border-radius: 0.3em 0 0 0.3em; }
+.pairs td:last-child { border-radius: 0 0.3em 0.3em 0; }
+
+.pairs .bd {
+  width: 2.6em;
+  text-align: center;
+  font-weight: 800;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+.pairs .res {
+  width: 4.6em;
+  text-align: center;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.pairs.team .res { width: 5.6em; }
+.pairs .res.empty { color: var(--muted); font-weight: 400; }
+.pairs .pl.right { text-align: right; }
+.pairs .name { font-weight: 600; }
+.pairs .nb { white-space: nowrap; }
+.pairs .ttl { color: var(--accent); font-weight: 700; font-size: 0.78em; margin-right: 0.3em; }
+.pairs .meta { color: var(--muted); font-size: 0.72em; margin-left: 0.45em; font-variant-numeric: tabular-nums; }
+.pairs .right .meta { margin-left: 0; margin-right: 0.45em; }
+.pairs .meta { flex: none; }
+.pairs .bye { color: var(--muted); font-style: italic; }
+.pairs .pc { display: flex; align-items: baseline; min-width: 0; }
+.pairs .right .pc { flex-direction: row-reverse; }
+.pairs .line { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* rating a body pod jménem */
+.pairs.stack .pc, .pairs.stack .right .pc { flex-direction: column; align-items: flex-start; }
+.pairs.stack .right .pc { align-items: flex-end; }
+.pairs.stack .line { max-width: 100%; }
+.pairs.stack .meta, .pairs.stack .right .meta { margin: 0.05em 0 0 1.07em; }
+.pairs.stack .right .meta { margin: 0.05em 1.07em 0 0; }
+/* dlouhá jména se zalomí (nejvýš na dva řádky) místo zkrácení */
+.pairs.wrap .line { white-space: normal; overflow-wrap: anywhere; line-height: 1.15; }
+.pairs .win .name { color: var(--ok); }
+
+.piece {
+  display: inline-block;
+  width: 0.62em;
+  height: 0.62em;
+  border-radius: 50%;
+  border: 1px solid var(--muted);
+  vertical-align: 0.05em;
+}
+.piece.w { background: var(--white-piece); margin-right: 0.45em; }
+.piece.b { background: var(--black-piece); margin-left: 0.45em; }
+
+/* stavy panelu */
+.empty-state {
+  flex: 1;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.6vw, 2rem);
+  gap: 0.6em;
+  padding: 1em;
+}
+.empty-state strong { color: var(--text); }
+.empty-state a { color: var(--accent); }
+
+.frame-wrap { flex: 1; display: flex; flex-direction: column; min-height: 0; gap: 0.6vh; }
+.frame-note {
+  flex: none;
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
+  color: var(--warn);
+}
+.frame-note a { color: var(--accent); }
+.frame-wrap iframe { flex: 1; width: 100%; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
+
+/* úvodní nabídka celé obrazovky */
+.start {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 1rem;
+  background: color-mix(in srgb, var(--bg) 78%, transparent);
+  backdrop-filter: blur(3px);
+  z-index: 10;
+}
+.start[hidden] { display: none; }
+.start-btn {
+  display: grid;
+  gap: 0.4rem;
+  justify-items: center;
+  font-size: clamp(1.3rem, 2.6vw, 2.4rem);
+  font-weight: 700;
+  padding: 1.4em 2em;
+  border: 2px solid var(--accent);
+  border-radius: 18px;
+  background: var(--panel);
+}
+.start-btn small { font-size: 0.5em; font-weight: 400; color: var(--muted); }
+.start-icon { font-size: 1.8em; color: var(--accent); line-height: 1; }
+.link-btn { border: 0; color: var(--muted); text-decoration: underline; }
+
+/* nastavení */
+.settings {
+  width: min(38rem, calc(100vw - 32px));
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.4rem;
+}
+.settings::backdrop { background: rgb(0 0 0 / 0.55); }
+.settings h2 { margin: 0 0 0.3rem; font-size: 1.3rem; }
+.settings .hint { margin: 0 0 1rem; color: var(--muted); }
+.settings label { display: grid; gap: 0.3rem; margin-bottom: 0.8rem; font-weight: 600; }
+.settings input {
+  font: inherit;
+  font-weight: 400;
+  padding: 0.55rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--text);
+}
+.settings .err { color: var(--bad); min-height: 1.2em; margin: 0.2rem 0; }
+.settings .note { color: var(--muted); font-size: 0.92rem; line-height: 1.45; }
+.settings .note a { color: var(--accent); }
+.settings .actions { display: flex; gap: 0.5rem; align-items: center; margin-top: 1rem; }
+.settings .grow { flex: 1; }
+.primary { background: var(--accent); color: #1a1205; border-color: var(--accent); font-weight: 700; }
+
+/* úzké obrazovky: panely pod sebou */
+@media (max-width: 700px) {
+  html, body { overflow: auto; }
+  .boards { grid-template-columns: 1fr; height: auto; }
+  .panel { min-height: 70vh; }
+  .panel + .panel { border-left: 0; border-top: 2px solid var(--line); }
+  .bar { padding: 0 16px; }
+  .tools button { padding: 0.3rem 0.5rem; font-size: 0.85rem; }
+  .status { display: none; }
+}
