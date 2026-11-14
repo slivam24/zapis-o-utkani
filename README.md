@@ -130,31 +130,6 @@ Kdyby se stránka chess-results změnila a stahování přestalo fungovat, půvo
 Stažené stránky se uloží jako příloha běhu v záložce Actions (artefakt `stazene-stranky`), podle nich jde upravit
 parser v `js/parse.js`. Soupisky jde vždy doplnit i ručně přímo v aplikaci.
 
-## Dashboard: los kola dvou turnajů na celou obrazovku
-
-`https://slivam24.github.io/zapis-o-utkani/dashboard.html` ukazuje na televizi nebo projektoru
-**vlevo los aktuálního kola jednoho turnaje a vpravo druhého**. Po otevření nabídne tlačítko
-**Spustit na celou obrazovku** (prohlížeč ji dovolí zapnout jen po kliknutí; klávesa **F** ji přepíná,
-**Esc** ukončí). Písmo se samo zvětší tak, aby se los vešel na výšku; když má turnaj hodně šachovnic,
-los se pomalu posouvá. Ovládání a kurzor po pár sekundách zmizí, obrazovka nezhasíná, nahoře jsou hodiny.
-Turnaje jednotlivců ukazují partie (šachovnice, bílý, výsledek, černý, rating a body), turnaje družstev
-zápasy kola se skóre. Hotové výsledky se doplňují samy.
-
-**Jak zadat turnaje** (číslo turnaje, nebo odkaz na kteroukoli jeho stránku na chess-results.com):
-
-1. **Actions → Dashboard → Run workflow**, vyplnit *Turnaj vlevo* a *Turnaj vpravo*. Uloží se do
-   `scripts/dashboard.json` a los se hned stáhne. Případně jde `scripts/dashboard.json` upravit přímo.
-2. Jen na jednom zařízení: na dashboardu tlačítko **⚙ Turnaje** (nebo klávesa **S**), případně adresa
-   `dashboard.html?vlevo=1516901&vpravo=1507857`. Turnaj, který úloha nestahuje, se tak ukáže jako
-   vložená stránka chess-results; v přehledném zobrazení až po kroku 1.
-
-**Odkud jsou data.** chess-results nedovoluje stránce z jiného webu číst svůj obsah (CORS), proto los
-stahuje úloha `.github/workflows/dashboard.yml` **každých 10 minut** (GitHub ji občas o pár minut zpozdí)
-a ukládá ho do větve `dashboard-data` (jediný soubor, bez historie), takže v `main` nepřibývají commity.
-Stránka si ho načítá každou minutu. Když chess-results neodpoví, zůstane poslední los a dashboard to
-ukáže. Mimo turnaje jde stahování vypnout v `scripts/dashboard.json` hodnotou `"aktivni": false`.
-Úloha s plánem běží jen z větve `main`. Parser losu je v `js/pairings.js`.
-
 ## Nasazení (GitHub Pages)
 
 1. Repozitář → **Settings → Pages**.
@@ -165,7 +140,7 @@ ukáže. Mimo turnaje jde stahování vypnout v `scripts/dashboard.json` hodnoto
 
 ```bash
 npm install                 # jen linkedom, pro parsování HTML v Node
-npm test                    # 69 testů: logika zápisu, parser, los pro dashboard, čtečka .xlsx, přidávání soutěží, archiv
+npm test                    # 65 testů: logika zápisu, parser, čtečka .xlsx, přidávání soutěží, archiv
 npm run serve               # lokální spuštění: http://localhost:8080
 ```
 

@@ -1,5 +1,5 @@
 // Service worker: aplikace funguje bez internetu. Data (soupisky) se berou přednostně ze sítě.
-const CACHE = 'zapis-v14';
+const CACHE = 'zapis-v13';
 const SHELL = [
   './',
   'index.html',
@@ -46,8 +46,6 @@ self.addEventListener('fetch', (e) => {
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
   if (url.origin !== location.origin) return;
-  // dashboard musí být vždy čerstvý a bez internetu nemá smysl, service worker ho nechává být
-  if (/\/(dashboard\.html|js\/dashboard\.js|js\/pairings\.js|css\/dashboard\.css)$/.test(url.pathname)) return;
 
   const isData = url.pathname.endsWith('/data/competitions.json');
   if (isData) {
