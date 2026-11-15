@@ -1,5 +1,6 @@
-// Minimální zapisovač PDF bez závislostí: každá strana je A4 s jedním obrázkem (JPEG).
+// Minimální zapisovač PDF bez závislostí: každá strana je A4 s jedním obrázkem.
 // Díky tomu funguje i bez internetu a bez vkládání písem (diakritika je součástí obrázku).
+// Obrázek je buď bezeztrátový (RGB zabalené do FlateDecode), nebo JPEG (DCTDecode).
 
 const A4_W = 595.28; // body (1/72 palce)
 const A4_H = 841.89;
@@ -23,7 +24,8 @@ function concat(chunks) {
 }
 
 /**
- * @param {{jpeg: Uint8Array, width: number, height: number}[]} pages  JPEG bajty a rozměry v pixelech
+ * @param {{data?: Uint8Array, jpeg?: Uint8Array, filter?: 'FlateDecode'|'DCTDecode', width: number, height: number}[]} pages
+ *   obrázek strany: `data` s filtrem (FlateDecode = zlib z RGB bajtů), nebo `jpeg`; rozměry v pixelech
  * @param {{title?: string}} [opts]
  * @returns {Uint8Array}
  */
@@ -67,11 +69,13 @@ export function buildPdf(pages, opts = {}) {
     // obrázek: binární data, proto ručně
     offsets[imgNum] = pos;
     push(`${imgNum} 0 obj\n`);
+    const bytes = p.data ?? p.jpeg;
+    const filter = p.data ? p.filter ?? 'FlateDecode' : 'DCTDecode';
     push(
       `<< /Type /XObject /Subtype /Image /Width ${p.width} /Height ${p.height} ` +
-        `/ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${p.jpeg.length} >>\nstream\n`,
+        `/ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /${filter} /Length ${bytes.length} >>\nstream\n`,
     );
-    push(p.jpeg);
+    push(bytes);
     push('\nendstream\nendobj\n');
   });
 

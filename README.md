@@ -140,7 +140,7 @@ parser v `js/parse.js`. Soupisky jde vždy doplnit i ručně přímo v aplikaci.
 
 ```bash
 npm install                 # jen linkedom, pro parsování HTML v Node
-npm test                    # 65 testů: logika zápisu, parser, čtečka .xlsx, přidávání soutěží, archiv
+npm test                    # 67 testů: logika zápisu, parser, čtečka .xlsx, přidávání soutěží, archiv, PDF
 npm run serve               # lokální spuštění: http://localhost:8080
 ```
 
@@ -157,6 +157,6 @@ protože právě parser je na celém řešení to nejkřehčí a dvě verze by s
   ukládá zvlášť jako neoznačené Elo. V zápisu se vypisují jen kolonky, které v datech opravdu jsou:
   při jediném načteném Elu je tedy jedna kolonka `Elo` a žádná prázdná navíc. Má-li stránka oddělené
   sloupce `RtgN` a `RtgI`, objeví se kolonky `FIDE` a `Nár.`.
-- Zápis v PDF je obrázek stránky A4 (text v něm nejde vyhledávat ani kopírovat). Funguje tak bez internetu a s diakritikou.
+- Zápis v PDF je obrázek stránky A4 uložený bezeztrátově (text v něm nejde vyhledávat ani kopírovat). Funguje tak bez internetu a s diakritikou. Prohlížeč, který kvůli ochraně proti sledování blokuje čtení obrázku („canvas“), aplikace pozná a vysvětlí, co dělat.
 - Než začnete elektronický zápis používat ostře, ověřte u řídicího orgánu soutěže (ÚKŠS), že ho přijímá, viz čl. 2.4.6
   (způsob a formu zasílání zápisu určují pravidla soutěže).

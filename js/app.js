@@ -581,6 +581,7 @@ function viewZaver() {
       <p class="muted small-text">${
         uiMode() === 'desktop' ? 'Podepiš myší nebo perem tabletu.' : 'Podepiš prstem nebo perem na displeji.'
       } Správnost zápisu potvrzují oba kapitáni a rozhodčí.</p>
+      ${canvasReadable() ? '' : `<ul class="issues"><li class="error"><span>${esc(CANVAS_BLOCKED)}</span></li></ul>`}
       <div class="sigs">
         ${sigBox('home', 'Kapitán domácího družstva', S.home.captain)}
         ${sigBox('ref', 'Rozhodčí', S.referee.name)}
@@ -686,6 +687,7 @@ function mailCard() {
 
 function viewVystup() {
   const issues = L.validate(S, comp(), { forFinal: true });
+  if (!canvasReadable()) issues.unshift({ level: 'error', text: CANVAS_BLOCKED });
   const tabName = Object.fromEntries(TABS);
   const item = (i) =>
     `<li class="${i.level}"><span>${esc(i.text)}</span>${
@@ -1095,13 +1097,67 @@ async function renderPreview() {
   box.replaceChildren(...pages);
 }
 
+/**
+ * Smí aplikace přečíst, co nakreslila? Některé prohlížeče to kvůli ochraně proti sledování blokují
+ * nebo obraz pozmění (Firefox s resistFingerprinting, LibreWolf, Tor, rozšíření typu CanvasBlocker).
+ * Pak by PDF, obrázek i podpisy vyšly prázdné nebo nesmyslné, proto se to ověřuje předem.
+ */
+let canvasCheck = null;
+function canvasReadable() {
+  if (canvasCheck !== null) return canvasCheck;
+  try {
+    const c = env.createCanvas(8, 8);
+    const ctx = c.getContext('2d');
+    ctx.fillStyle = 'rgb(10, 200, 30)';
+    ctx.fillRect(0, 0, 8, 8);
+    ctx.fillStyle = 'rgb(250, 20, 140)';
+    ctx.fillRect(4, 4, 4, 4);
+    const a = ctx.getImageData(1, 1, 1, 1).data;
+    const b = ctx.getImageData(6, 6, 1, 1).data;
+    canvasCheck =
+      a[0] === 10 && a[1] === 200 && a[2] === 30 && a[3] === 255 && b[0] === 250 && b[1] === 20 && b[2] === 140;
+  } catch {
+    canvasCheck = false;
+  }
+  return canvasCheck;
+}
+
+const CANVAS_BLOCKED =
+  'Prohlížeč nedovoluje aplikaci uložit obrázek zápisu (ochrana proti sledování, blokování „canvas“). ' +
+  'PDF by vyšlo prázdné. Povol pro tuto stránku čtení obrázků (ve Firefoxu ikona vlevo v adresním řádku, ' +
+  'případně vypni rozšíření, které „canvas“ blokuje), nebo zápis vytvoř v jiném prohlížeči (Chrome, Edge, Safari).';
+
+function ensureCanvas() {
+  if (canvasReadable()) return true;
+  alert(CANVAS_BLOCKED);
+  return false;
+}
+
+/** Obrázek strany do PDF: bezeztrátově (ostrý text), kde to prohlížeč umí, jinak JPEG. */
+async function pageImage(c) {
+  const { width, height } = c;
+  if (typeof CompressionStream !== 'undefined') {
+    const rgba = c.getContext('2d').getImageData(0, 0, width, height).data;
+    const rgb = new Uint8Array(width * height * 3);
+    for (let i = 0, j = 0; i < rgba.length; i += 4, j += 3) {
+      rgb[j] = rgba[i];
+      rgb[j + 1] = rgba[i + 1];
+      rgb[j + 2] = rgba[i + 2];
+    }
+    const zipped = new Blob([rgb]).stream().pipeThrough(new CompressionStream('deflate'));
+    return { data: new Uint8Array(await new Response(zipped).arrayBuffer()), filter: 'FlateDecode', width, height };
+  }
+  const blob = await toBlob(c, 'image/jpeg', 0.92);
+  const jpeg = new Uint8Array(await blob.arrayBuffer());
+  // prohlížeč, který JPEG neumí, vrátí potichu PNG; to by v PDF vyšlo jako prázdná plocha
+  if (jpeg[0] !== 0xff || jpeg[1] !== 0xd8) throw new Error('Prohlížeč neumí vytvořit obrázek JPEG.');
+  return { jpeg, width, height };
+}
+
 async function makePdfBlob() {
   const pages = await renderPages(S, comp(), env, { scale: 2, logos: currentLogos() });
   const list = [];
-  for (const c of pages) {
-    const blob = await toBlob(c, 'image/jpeg', 0.92);
-    list.push({ jpeg: new Uint8Array(await blob.arrayBuffer()), width: c.width, height: c.height });
-  }
+  for (const c of pages) list.push(await pageImage(c));
   const bytes = buildPdf(list, { title: `Zapis o utkani ${S.date}` });
   return new Blob([bytes], { type: 'application/pdf' });
 }
@@ -1118,11 +1174,13 @@ function download(blob, name) {
 }
 
 async function exportPdf() {
+  if (!ensureCanvas()) return;
   toast('Vytvářím PDF…');
   download(await makePdfBlob(), `${L.fileBase(S, comp())}.pdf`);
 }
 
 async function exportPng() {
+  if (!ensureCanvas()) return;
   toast('Vytvářím obrázek…');
   const pages = await renderPages(S, comp(), env, { scale: 2, logos: currentLogos() });
   for (let i = 0; i < pages.length; i++) {
@@ -1132,6 +1190,7 @@ async function exportPng() {
 }
 
 async function shareFiles() {
+  if (!ensureCanvas()) return;
   const pdf = await makePdfBlob();
   const file = new File([pdf], `${L.fileBase(S, comp())}.pdf`, { type: 'application/pdf' });
   if (navigator.canShare?.({ files: [file] })) {
@@ -1149,6 +1208,7 @@ function prefersShare() {
 }
 
 async function sendMail() {
+  if (!ensureCanvas()) return;
   const to = ($('#mailTo')?.value ?? '').trim();
   store.rememberMail(S.compId, to);
   const issues = L.validate(S, comp(), { forFinal: true });
