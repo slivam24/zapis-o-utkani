@@ -1102,9 +1102,11 @@ async function renderPreview() {
  * nebo obraz pozmění (Firefox s resistFingerprinting, LibreWolf, Tor, rozšíření typu CanvasBlocker).
  * Pak by PDF, obrázek i podpisy vyšly prázdné nebo nesmyslné, proto se to ověřuje předem.
  */
-let canvasCheck = null;
+// Pamatuje se jen úspěch: LibreWolf a Firefox s ochranou proti sledování se na čtení zeptají
+// ikonou v adresním řádku, a když ho uživatel povolí, musí to aplikace poznat bez obnovení stránky.
+let canvasCheck = false;
 function canvasReadable() {
-  if (canvasCheck !== null) return canvasCheck;
+  if (canvasCheck) return true;
   try {
     const c = env.createCanvas(8, 8);
     const ctx = c.getContext('2d');
@@ -1123,9 +1125,10 @@ function canvasReadable() {
 }
 
 const CANVAS_BLOCKED =
-  'Prohlížeč nedovoluje aplikaci uložit obrázek zápisu (ochrana proti sledování, blokování „canvas“). ' +
-  'PDF by vyšlo prázdné. Povol pro tuto stránku čtení obrázků (ve Firefoxu ikona vlevo v adresním řádku, ' +
-  'případně vypni rozšíření, které „canvas“ blokuje), nebo zápis vytvoř v jiném prohlížeči (Chrome, Edge, Safari).';
+  'Prohlížeč nedovoluje aplikaci uložit obrázek zápisu (ochrana proti sledování, blokování „canvas“), ' +
+  'PDF by vyšlo prázdné. V LibreWolfu a ve Firefoxu s ochranou proti sledování se v adresním řádku ' +
+  'objeví ikona obrázku: klikni na ni a čtení obrazových dat pro tuto stránku povol, pak akci opakuj. ' +
+  'Jinak vypni rozšíření, které „canvas“ blokuje, nebo zápis vytvoř v jiném prohlížeči (Firefox, Chrome, Edge, Safari).';
 
 function ensureCanvas() {
   if (canvasReadable()) return true;
