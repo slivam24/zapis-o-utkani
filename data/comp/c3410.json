@@ -1,0 +1,920 @@
+{
+ "id": "c3410",
+ "short": "RP Zlín",
+ "name": "Regionální přebor - Zlín",
+ "group": "",
+ "boards": 5,
+ "region": "SSZK",
+ "chesscz": 3410,
+ "season": "2026/2027",
+ "url": "https://www.chess.cz/soutez/3410/",
+ "teams": [
+  {
+   "name": "SK Brumov-Bylnice B",
+   "captain": "Jedlička František",
+   "players": [
+    {
+     "no": 1,
+     "name": "Častulík Jiří",
+     "types": [
+      "V",
+      "ZK"
+     ],
+     "rtg": null,
+     "nat": 1696,
+     "fide": 1856
+    },
+    {
+     "no": 2,
+     "name": "Hrabovský Vladimír",
+     "types": [],
+     "rtg": null,
+     "nat": 1853,
+     "fide": 1932
+    },
+    {
+     "no": 3,
+     "name": "Holba Josef",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1772,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Jedlička František",
+     "types": [
+      "K"
+     ],
+     "rtg": null,
+     "nat": 1462,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Solař Lukáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1447,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Machara Radek",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1414,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Častulík Libor",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1673,
+     "fide": 1833
+    },
+    {
+     "no": 8,
+     "name": "Chlupáček Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1491,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Válek František",
+     "types": [],
+     "rtg": null,
+     "nat": 1602,
+     "fide": 1942
+    },
+    {
+     "no": 10,
+     "name": "Siegl Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1638,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Kozubík Pavel",
+     "types": [],
+     "rtg": null,
+     "nat": 1385,
+     "fide": 1671
+    },
+    {
+     "no": 12,
+     "name": "Beňo Radek",
+     "types": [],
+     "rtg": null,
+     "nat": 1312,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Kroupa David",
+     "types": [],
+     "rtg": null,
+     "nat": 1247,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Janáč Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": 1341,
+     "fide": null
+    },
+    {
+     "no": 15,
+     "name": "Kozáček David",
+     "types": [],
+     "rtg": null,
+     "nat": 1126,
+     "fide": null
+    },
+    {
+     "no": 16,
+     "name": "Kozáček David",
+     "types": [],
+     "rtg": null,
+     "nat": 1133,
+     "fide": null
+    },
+    {
+     "no": 17,
+     "name": "Sudický Robert",
+     "types": [],
+     "rtg": null,
+     "nat": 1540,
+     "fide": null
+    },
+    {
+     "no": 18,
+     "name": "Chlupáček Vít",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 19,
+     "name": "Ovesný Matouš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Fatra Slavia Napajedla B",
+   "captain": "Sedláček Roman",
+   "players": [
+    {
+     "no": 1,
+     "name": "Šiška Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1353,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Sedláček Roman",
+     "types": [
+      "K"
+     ],
+     "rtg": null,
+     "nat": 1629,
+     "fide": 1812
+    },
+    {
+     "no": 3,
+     "name": "Blahynka Svatopluk",
+     "types": [
+      "ZK"
+     ],
+     "rtg": null,
+     "nat": 1536,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Landsfeld Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1260,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Gottwald Pavel",
+     "types": [],
+     "rtg": null,
+     "nat": 1446,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Jestříbek Martin",
+     "types": [],
+     "rtg": null,
+     "nat": 1415,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Bažant Radek",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1491,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Polášek Libor",
+     "types": [],
+     "rtg": null,
+     "nat": 1542,
+     "fide": 1710
+    },
+    {
+     "no": 9,
+     "name": "Orlita Vratislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1651,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Valašské Klobouky",
+   "captain": "Haboň Martin",
+   "players": [
+    {
+     "no": 1,
+     "name": "Pekař Patrik",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Haboň Martin",
+     "types": [
+      "K"
+     ],
+     "rtg": null,
+     "nat": 1455,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Jakubál Petr",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1767,
+     "fide": 1829
+    },
+    {
+     "no": 4,
+     "name": "Fojtů Vojtěch",
+     "types": [],
+     "rtg": null,
+     "nat": 1601,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Bistrý Jaromír",
+     "types": [],
+     "rtg": null,
+     "nat": 1525,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Zvonek Petr",
+     "types": [
+      "ZK"
+     ],
+     "rtg": null,
+     "nat": 1314,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Jemelka Matouš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Burša Michal",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "TJ Sokol Vizovice",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Žák Roman",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1624,
+     "fide": 1725
+    },
+    {
+     "no": 2,
+     "name": "Janál Vladimír",
+     "types": [],
+     "rtg": null,
+     "nat": 1915,
+     "fide": 1927
+    },
+    {
+     "no": 3,
+     "name": "Brzobohatý Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1702,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Bařinka Miroslav",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1537,
+     "fide": 1771
+    },
+    {
+     "no": 5,
+     "name": "Nekvapil Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1620,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Kývala Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1572,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Zicha Ladislav",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Vyoral Dušan",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1306,
+     "fide": 1586
+    },
+    {
+     "no": 9,
+     "name": "Maláč Jaroslav",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Kubíček Ota",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Kovařík Lukáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Crlík Luděk",
+     "types": [],
+     "rtg": null,
+     "nat": 1557,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "SK Horní Lhota",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Hanus Aleš",
+     "types": [],
+     "rtg": null,
+     "nat": 1457,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Žáček Jaroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1419,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Maček Libor",
+     "types": [],
+     "rtg": null,
+     "nat": 1338,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Gergela Antonín",
+     "types": [],
+     "rtg": null,
+     "nat": 1711,
+     "fide": 1824
+    },
+    {
+     "no": 5,
+     "name": "Goša Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1321,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Kadlec Martin",
+     "types": [],
+     "rtg": null,
+     "nat": 1108,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Žáček Lubomír",
+     "types": [],
+     "rtg": null,
+     "nat": 1667,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Koutný Libor",
+     "types": [],
+     "rtg": null,
+     "nat": 1347,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Procházka Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1290,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Plášek Jaroslav",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Polách Rostislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1385,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Jakubčák Marek",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Kužela Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1009,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Markivský Leoš",
+     "types": [],
+     "rtg": null,
+     "nat": 1497,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Zlín-Malenovice C",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Rak Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1432,
+     "fide": 1481
+    },
+    {
+     "no": 2,
+     "name": "Delgerdalai Tuvshinsaikhan",
+     "types": [],
+     "rtg": null,
+     "nat": 1418,
+     "fide": 1656
+    },
+    {
+     "no": 3,
+     "name": "Kratochvíl Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": 1405,
+     "fide": 1500
+    },
+    {
+     "no": 4,
+     "name": "Vyoral Benedikt Lars",
+     "types": [],
+     "rtg": null,
+     "nat": 1260,
+     "fide": 1592
+    },
+    {
+     "no": 5,
+     "name": "Delgerdalai Sainbayar",
+     "types": [],
+     "rtg": null,
+     "nat": 1212,
+     "fide": 1655
+    },
+    {
+     "no": 6,
+     "name": "Zycháček Vojtěch",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Žák Radek",
+     "types": [],
+     "rtg": null,
+     "nat": 1010,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Pavlištík Sebastián",
+     "types": [],
+     "rtg": null,
+     "nat": 1092,
+     "fide": 1488
+    },
+    {
+     "no": 9,
+     "name": "Kamenčák Lubomír",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Gregovský Matyáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Delgerdalai Ulambayar",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Macharáček Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Samohýl Vladan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Kraváček Denis",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Fatra Slavia Napajedla C",
+   "captain": "Galus Zdenek",
+   "players": [
+    {
+     "no": 1,
+     "name": "Varmuža Petr",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Zach Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Němec Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": 1176,
+     "fide": 1514
+    },
+    {
+     "no": 4,
+     "name": "Galus Štěpán",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Galus Zdenek",
+     "types": [
+      "K"
+     ],
+     "rtg": null,
+     "nat": 1142,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Kolomazník Ladislav",
+     "types": [
+      "ZK"
+     ],
+     "rtg": null,
+     "nat": 1617,
+     "fide": 1772
+    },
+    {
+     "no": 7,
+     "name": "Jestříbek Kamil",
+     "types": [],
+     "rtg": null,
+     "nat": 1408,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Bálint Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Šimek Richard",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Sedláčková Lea",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Voženílek Lukáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Holub Antonín",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  }
+ ],
+ "rounds": [
+  {
+   "no": 1,
+   "date": "2026-10-18",
+   "matches": [
+    {
+     "home": "Fatra Slavia Napajedla B",
+     "away": "SK Horní Lhota"
+    },
+    {
+     "home": "ŠK Valašské Klobouky",
+     "away": "SK Brumov-Bylnice B"
+    },
+    {
+     "home": "TJ Sokol Vizovice",
+     "away": "ŠK Zlín-Malenovice C"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "date": "2026-11-08",
+   "matches": [
+    {
+     "home": "Fatra Slavia Napajedla C",
+     "away": "Fatra Slavia Napajedla B"
+    },
+    {
+     "home": "SK Brumov-Bylnice B",
+     "away": "TJ Sokol Vizovice"
+    },
+    {
+     "home": "SK Horní Lhota",
+     "away": "ŠK Valašské Klobouky"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "date": "2026-11-22",
+   "matches": [
+    {
+     "home": "ŠK Valašské Klobouky",
+     "away": "Fatra Slavia Napajedla C"
+    },
+    {
+     "home": "ŠK Zlín-Malenovice C",
+     "away": "SK Brumov-Bylnice B"
+    },
+    {
+     "home": "TJ Sokol Vizovice",
+     "away": "SK Horní Lhota"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "date": "2026-12-06",
+   "matches": [
+    {
+     "home": "Fatra Slavia Napajedla B",
+     "away": "ŠK Valašské Klobouky"
+    },
+    {
+     "home": "Fatra Slavia Napajedla C",
+     "away": "TJ Sokol Vizovice"
+    },
+    {
+     "home": "SK Horní Lhota",
+     "away": "ŠK Zlín-Malenovice C"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "date": "2027-01-10",
+   "matches": [
+    {
+     "home": "SK Brumov-Bylnice B",
+     "away": "SK Horní Lhota"
+    },
+    {
+     "home": "ŠK Zlín-Malenovice C",
+     "away": "Fatra Slavia Napajedla C"
+    },
+    {
+     "home": "TJ Sokol Vizovice",
+     "away": "Fatra Slavia Napajedla B"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "date": "2027-01-24",
+   "matches": [
+    {
+     "home": "Fatra Slavia Napajedla B",
+     "away": "ŠK Zlín-Malenovice C"
+    },
+    {
+     "home": "Fatra Slavia Napajedla C",
+     "away": "SK Brumov-Bylnice B"
+    },
+    {
+     "home": "ŠK Valašské Klobouky",
+     "away": "TJ Sokol Vizovice"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "date": "2027-02-07",
+   "matches": [
+    {
+     "home": "SK Brumov-Bylnice B",
+     "away": "Fatra Slavia Napajedla B"
+    },
+    {
+     "home": "SK Horní Lhota",
+     "away": "Fatra Slavia Napajedla C"
+    },
+    {
+     "home": "ŠK Zlín-Malenovice C",
+     "away": "ŠK Valašské Klobouky"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1001 @@
+{
+ "id": "c3436",
+ "short": "OP Znojmo",
+ "name": "Okresní přebor Znojmo",
+ "group": "",
+ "boards": 5,
+ "region": "JmSS",
+ "chesscz": 3436,
+ "season": "2026/2027",
+ "url": "https://www.chess.cz/soutez/3436/",
+ "teams": [
+  {
+   "name": "Sokol Dobšice",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Adam Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 2036,
+     "fide": 2052
+    },
+    {
+     "no": 2,
+     "name": "Vrzáček Marko",
+     "types": [],
+     "rtg": null,
+     "nat": 1640,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Jarmara Kamil",
+     "types": [],
+     "rtg": null,
+     "nat": 1561,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Musil Vladimír",
+     "types": [],
+     "rtg": null,
+     "nat": 1511,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Vondra Martin",
+     "types": [],
+     "rtg": null,
+     "nat": 1493,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Balada David",
+     "types": [],
+     "rtg": null,
+     "nat": 1466,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Březovský Milan",
+     "types": [],
+     "rtg": null,
+     "nat": 1424,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Sapík Milan",
+     "types": [],
+     "rtg": null,
+     "nat": 1353,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Musil Vladimír",
+     "types": [],
+     "rtg": null,
+     "nat": 1408,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Sokol Štítary",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Nekula Richard",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1888,
+     "fide": 1920
+    },
+    {
+     "no": 2,
+     "name": "Potěšil Viktor",
+     "types": [],
+     "rtg": null,
+     "nat": 1608,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Podsklan Štěpán",
+     "types": [],
+     "rtg": null,
+     "nat": 1571,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Kortiš Štěpán",
+     "types": [],
+     "rtg": null,
+     "nat": 1578,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Podsklan Štěpán",
+     "types": [],
+     "rtg": null,
+     "nat": 1401,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Nekula Pavel",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "GPOA Znojmo C",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Tran Karel",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1481,
+     "fide": 1740
+    },
+    {
+     "no": 2,
+     "name": "Zahumenský Vilém",
+     "types": [],
+     "rtg": null,
+     "nat": 1442,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Peroutka Matěj",
+     "types": [],
+     "rtg": null,
+     "nat": 1462,
+     "fide": 1648
+    },
+    {
+     "no": 4,
+     "name": "Peroutka Marek",
+     "types": [],
+     "rtg": null,
+     "nat": 1293,
+     "fide": 1725
+    },
+    {
+     "no": 5,
+     "name": "Peroutka Viktor",
+     "types": [],
+     "rtg": null,
+     "nat": 1306,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Chmelka Dominik",
+     "types": [],
+     "rtg": null,
+     "nat": 1576,
+     "fide": 1713
+    },
+    {
+     "no": 7,
+     "name": "Kučera Filip",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Čtveráček Filip",
+     "types": [],
+     "rtg": null,
+     "nat": 1574,
+     "fide": 1697
+    },
+    {
+     "no": 9,
+     "name": "Štourač Šimon",
+     "types": [],
+     "rtg": null,
+     "nat": 1523,
+     "fide": 1658
+    },
+    {
+     "no": 10,
+     "name": "Molík Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1087,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Reiter Štěpán",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Holzer Heřman",
+     "types": [],
+     "rtg": null,
+     "nat": 1385,
+     "fide": 1584
+    }
+   ]
+  },
+  {
+   "name": "Optika Medek TJ Hodonice A",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Matula Roman",
+     "types": [],
+     "rtg": null,
+     "nat": 1738,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Holienka Ladislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1593,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Hora Vladimír",
+     "types": [],
+     "rtg": null,
+     "nat": 1503,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Dehner Daniel Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1621,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Tóth Michal",
+     "types": [],
+     "rtg": null,
+     "nat": 1319,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Bartoš Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1242,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Houšť Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1575,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Kružíková Eliška",
+     "types": [],
+     "rtg": null,
+     "nat": 1144,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Matula Marek",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Holienka Michael",
+     "types": [],
+     "rtg": null,
+     "nat": 1347,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Šachový klub Práče",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Forman Lubomír",
+     "types": [],
+     "rtg": null,
+     "nat": 1739,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Havránek Jan Kryštof",
+     "types": [],
+     "rtg": null,
+     "nat": 1438,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Rachůnek Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1535,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Malý Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1715,
+     "fide": 1829
+    },
+    {
+     "no": 5,
+     "name": "Houdek Vojtěch",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Bartl Pavel",
+     "types": [],
+     "rtg": null,
+     "nat": 1402,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Šidlo Jan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Musilová Valérie",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Malý Alena",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "GPOA Znojmo E",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Malitsa Dmytro",
+     "types": [],
+     "rtg": null,
+     "nat": 1142,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Trčka Richard",
+     "types": [],
+     "rtg": null,
+     "nat": 1093,
+     "fide": 1602
+    },
+    {
+     "no": 3,
+     "name": "Cvak Patrik",
+     "types": [],
+     "rtg": null,
+     "nat": 1190,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Šplíchal Vojtěch",
+     "types": [],
+     "rtg": null,
+     "nat": 1102,
+     "fide": 1447
+    },
+    {
+     "no": 5,
+     "name": "Čapoun Michal",
+     "types": [],
+     "rtg": null,
+     "nat": 1230,
+     "fide": 1548
+    },
+    {
+     "no": 6,
+     "name": "Jelínek Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1201,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Skoumal Radek",
+     "types": [],
+     "rtg": null,
+     "nat": 1208,
+     "fide": 1488
+    },
+    {
+     "no": 8,
+     "name": "Fila Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Poláček Jan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Písařík Lukáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Böhm Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Kokarev Ihor",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "GPOA Znojmo D",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Horák Miroslav",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1665,
+     "fide": 1759
+    },
+    {
+     "no": 2,
+     "name": "Vejlupek Pavel",
+     "types": [],
+     "rtg": null,
+     "nat": 1428,
+     "fide": 1609
+    },
+    {
+     "no": 3,
+     "name": "Gottwald Lubomír",
+     "types": [],
+     "rtg": null,
+     "nat": 1396,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Říčka Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1524,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Hruška Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1345,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Ruda Luboš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Ruda Matyáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1126,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Lipovský Robin",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Kučerová Karina",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Šabacký Martin",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Šafář Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Štelc Adam",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Sebranci RH",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Losík Vladimír",
+     "types": [],
+     "rtg": null,
+     "nat": 1311,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Dolejš Radek",
+     "types": [],
+     "rtg": null,
+     "nat": 1397,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Rösner Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1875,
+     "fide": 2021
+    },
+    {
+     "no": 4,
+     "name": "Bylok František",
+     "types": [],
+     "rtg": null,
+     "nat": 1537,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Mucha Karel",
+     "types": [],
+     "rtg": null,
+     "nat": 1774,
+     "fide": 1885
+    },
+    {
+     "no": 6,
+     "name": "Holešinský Grigorij",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Hašlar Jindřich",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Hašlar Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Hašlar Jindřich",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Pluskal Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1275,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Juráň Václav",
+     "types": [],
+     "rtg": null,
+     "nat": 1209,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Horký Aleš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Optika Medek TJ Hodonice B",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Lesniak Lubomír",
+     "types": [],
+     "rtg": null,
+     "nat": 1716,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Šimík František",
+     "types": [],
+     "rtg": null,
+     "nat": 1721,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Bořil Tadeáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Prokeš Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Tuna Tadeáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Prokeš Adam",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Máchal Štěpán",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Němec Petr",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Stehlík Jan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  }
+ ],
+ "rounds": [
+  {
+   "no": 1,
+   "date": "2026-10-18",
+   "matches": [
+    {
+     "home": "GPOA Znojmo C",
+     "away": "GPOA Znojmo D"
+    },
+    {
+     "home": "Optika Medek TJ Hodonice A",
+     "away": "Optika Medek TJ Hodonice B"
+    },
+    {
+     "home": "Sokol Dobšice",
+     "away": "GPOA Znojmo E"
+    },
+    {
+     "home": "Sokol Štítary",
+     "away": "ŠK Sebranci RH"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "date": "2026-11-08",
+   "matches": [
+    {
+     "home": "GPOA Znojmo E",
+     "away": "GPOA Znojmo C"
+    },
+    {
+     "home": "Optika Medek TJ Hodonice B",
+     "away": "Sokol Štítary"
+    },
+    {
+     "home": "Šachový klub Práče",
+     "away": "Optika Medek TJ Hodonice A"
+    },
+    {
+     "home": "ŠK Sebranci RH",
+     "away": "Sokol Dobšice"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "date": "2026-11-22",
+   "matches": [
+    {
+     "home": "GPOA Znojmo C",
+     "away": "ŠK Sebranci RH"
+    },
+    {
+     "home": "GPOA Znojmo D",
+     "away": "GPOA Znojmo E"
+    },
+    {
+     "home": "Sokol Dobšice",
+     "away": "Optika Medek TJ Hodonice B"
+    },
+    {
+     "home": "Sokol Štítary",
+     "away": "Šachový klub Práče"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "date": "2026-12-06",
+   "matches": [
+    {
+     "home": "Optika Medek TJ Hodonice A",
+     "away": "Sokol Štítary"
+    },
+    {
+     "home": "Optika Medek TJ Hodonice B",
+     "away": "GPOA Znojmo C"
+    },
+    {
+     "home": "Šachový klub Práče",
+     "away": "Sokol Dobšice"
+    },
+    {
+     "home": "ŠK Sebranci RH",
+     "away": "GPOA Znojmo D"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "date": "2027-01-10",
+   "matches": [
+    {
+     "home": "GPOA Znojmo C",
+     "away": "Šachový klub Práče"
+    },
+    {
+     "home": "GPOA Znojmo D",
+     "away": "Optika Medek TJ Hodonice B"
+    },
+    {
+     "home": "GPOA Znojmo E",
+     "away": "ŠK Sebranci RH"
+    },
+    {
+     "home": "Sokol Dobšice",
+     "away": "Optika Medek TJ Hodonice A"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "date": "2027-01-24",
+   "matches": [
+    {
+     "home": "Optika Medek TJ Hodonice A",
+     "away": "GPOA Znojmo C"
+    },
+    {
+     "home": "Optika Medek TJ Hodonice B",
+     "away": "GPOA Znojmo E"
+    },
+    {
+     "home": "Šachový klub Práče",
+     "away": "GPOA Znojmo D"
+    },
+    {
+     "home": "Sokol Štítary",
+     "away": "Sokol Dobšice"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "date": "2027-02-07",
+   "matches": [
+    {
+     "home": "GPOA Znojmo C",
+     "away": "Sokol Štítary"
+    },
+    {
+     "home": "GPOA Znojmo D",
+     "away": "Optika Medek TJ Hodonice A"
+    },
+    {
+     "home": "GPOA Znojmo E",
+     "away": "Šachový klub Práče"
+    },
+    {
+     "home": "ŠK Sebranci RH",
+     "away": "Optika Medek TJ Hodonice B"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "date": "2027-02-21",
+   "matches": [
+    {
+     "home": "Optika Medek TJ Hodonice A",
+     "away": "GPOA Znojmo E"
+    },
+    {
+     "home": "Šachový klub Práče",
+     "away": "ŠK Sebranci RH"
+    },
+    {
+     "home": "Sokol Dobšice",
+     "away": "GPOA Znojmo C"
+    },
+    {
+     "home": "Sokol Štítary",
+     "away": "GPOA Znojmo D"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "date": "2027-03-14",
+   "matches": [
+    {
+     "home": "GPOA Znojmo D",
+     "away": "Sokol Dobšice"
+    },
+    {
+     "home": "GPOA Znojmo E",
+     "away": "Sokol Štítary"
+    },
+    {
+     "home": "Optika Medek TJ Hodonice B",
+     "away": "Šachový klub Práče"
+    },
+    {
+     "home": "ŠK Sebranci RH",
+     "away": "Optika Medek TJ Hodonice A"
+    }
+   ]
+  }
+ ]
+}

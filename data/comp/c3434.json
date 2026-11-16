@@ -1,0 +1,1255 @@
+{
+ "id": "c3434",
+ "short": "KS",
+ "name": "Krajská soutěž",
+ "group": "",
+ "boards": 5,
+ "region": "KSSKV",
+ "chesscz": 3434,
+ "season": "2026/2027",
+ "url": "https://www.chess.cz/soutez/3434/",
+ "teams": [
+  {
+   "name": "TJ Tašovice B",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Maglia Pavel",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1738,
+     "fide": 1855
+    },
+    {
+     "no": 2,
+     "name": "Dudek Jan",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1607,
+     "fide": 1817
+    },
+    {
+     "no": 3,
+     "name": "Vanko Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1750,
+     "fide": 1873
+    },
+    {
+     "no": 4,
+     "name": "Müller Vladimír",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1535,
+     "fide": 1712
+    },
+    {
+     "no": 5,
+     "name": "Filip Miroslav",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1477,
+     "fide": 1647
+    },
+    {
+     "no": 6,
+     "name": "Střela Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1470,
+     "fide": 1613
+    },
+    {
+     "no": 7,
+     "name": "Uhlíř Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1382,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Suljakovič Ibrišim",
+     "types": [],
+     "rtg": null,
+     "nat": 1409,
+     "fide": 1659
+    },
+    {
+     "no": 9,
+     "name": "David Ladislav",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1684,
+     "fide": 1835
+    },
+    {
+     "no": 10,
+     "name": "Žemba Ladislav",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1588,
+     "fide": 1792
+    },
+    {
+     "no": 11,
+     "name": "Ehlich Vladislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1702,
+     "fide": 1787
+    },
+    {
+     "no": 12,
+     "name": "Loužil Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Anděl Jaroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1582,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Růžičková Helena",
+     "types": [],
+     "rtg": null,
+     "nat": 1362,
+     "fide": 1589
+    },
+    {
+     "no": 15,
+     "name": "Dudek Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1295,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Valdštejn Cheb D",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Vo Daniel",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1783,
+     "fide": 1871
+    },
+    {
+     "no": 2,
+     "name": "Kubát Jonáš",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1636,
+     "fide": 1791
+    },
+    {
+     "no": 3,
+     "name": "Kučera Petr",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1795,
+     "fide": 1893
+    },
+    {
+     "no": 4,
+     "name": "Pohuliailo Nikita",
+     "types": [],
+     "rtg": null,
+     "nat": 1617,
+     "fide": 1616
+    },
+    {
+     "no": 5,
+     "name": "Dziuba Dariia",
+     "types": [],
+     "rtg": null,
+     "nat": 1416,
+     "fide": 1593
+    },
+    {
+     "no": 6,
+     "name": "Chu Duc Anh David",
+     "types": [],
+     "rtg": null,
+     "nat": 1552,
+     "fide": 1727
+    },
+    {
+     "no": 7,
+     "name": "Hykel Maxmilian",
+     "types": [],
+     "rtg": null,
+     "nat": 1386,
+     "fide": 1559
+    },
+    {
+     "no": 8,
+     "name": "Nguyen Lé Nam Anh",
+     "types": [],
+     "rtg": null,
+     "nat": 1179,
+     "fide": 1593
+    },
+    {
+     "no": 9,
+     "name": "Pham Minh Tiep",
+     "types": [],
+     "rtg": null,
+     "nat": 1333,
+     "fide": 1498
+    },
+    {
+     "no": 10,
+     "name": "Zajac Peter",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Zálešák Radek",
+     "types": [],
+     "rtg": null,
+     "nat": 1470,
+     "fide": 1578
+    },
+    {
+     "no": 12,
+     "name": "Kubát Jan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Chirilov Alexandru",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Bulgaru Andrej",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 15,
+     "name": "Jarema Štěpán Přemysl",
+     "types": [],
+     "rtg": null,
+     "nat": 1022,
+     "fide": null
+    },
+    {
+     "no": 16,
+     "name": "Šipul Daniil",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 17,
+     "name": "Kout Šimon",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Valdštejn Cheb C",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Beneš Jeroným Jan",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1727,
+     "fide": 1857
+    },
+    {
+     "no": 2,
+     "name": "Nouri Ali",
+     "types": [],
+     "rtg": null,
+     "nat": 1597,
+     "fide": 1727
+    },
+    {
+     "no": 3,
+     "name": "Šimeček Jan",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1777,
+     "fide": 1841
+    },
+    {
+     "no": 4,
+     "name": "Míšek Jan",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1828,
+     "fide": 1879
+    },
+    {
+     "no": 5,
+     "name": "Bambousek Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1455,
+     "fide": 1561
+    },
+    {
+     "no": 6,
+     "name": "Panoš Jan",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1830,
+     "fide": 1854
+    },
+    {
+     "no": 7,
+     "name": "Tiller Jaroslav",
+     "types": [
+      "C"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": 2029
+    },
+    {
+     "no": 8,
+     "name": "Tomášová Jana",
+     "types": [],
+     "rtg": null,
+     "nat": 1234,
+     "fide": 1533
+    },
+    {
+     "no": 9,
+     "name": "Doležal Rudolf",
+     "types": [],
+     "rtg": null,
+     "nat": 1574,
+     "fide": 1687
+    },
+    {
+     "no": 10,
+     "name": "Zakharov Dmitry",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Koreček Michail",
+     "types": [],
+     "rtg": null,
+     "nat": 1587,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Skokan Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1860,
+     "fide": 1922
+    },
+    {
+     "no": 13,
+     "name": "Eisnerová Jana",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Turčinek Antonín",
+     "types": [],
+     "rtg": null,
+     "nat": 1152,
+     "fide": null
+    },
+    {
+     "no": 15,
+     "name": "Blažek Paparyha Ondřej",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 16,
+     "name": "Neuschl Radek",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Valdštejn Cheb E",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Stehlík Martin",
+     "types": [],
+     "rtg": null,
+     "nat": 1542,
+     "fide": 1667
+    },
+    {
+     "no": 2,
+     "name": "Rataj Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1413,
+     "fide": 1619
+    },
+    {
+     "no": 3,
+     "name": "Heřman Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1245,
+     "fide": 1481
+    },
+    {
+     "no": 4,
+     "name": "Brettlová Barbora",
+     "types": [],
+     "rtg": null,
+     "nat": 1319,
+     "fide": 1437
+    },
+    {
+     "no": 5,
+     "name": "Brettl Luděk",
+     "types": [],
+     "rtg": null,
+     "nat": 1319,
+     "fide": 1589
+    },
+    {
+     "no": 6,
+     "name": "Beránek Patrik",
+     "types": [],
+     "rtg": null,
+     "nat": 1337,
+     "fide": 1513
+    },
+    {
+     "no": 7,
+     "name": "Navrátil Jaroslav",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Riedl Filip",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Říha Filip",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Pilík Jaroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1504,
+     "fide": 1687
+    },
+    {
+     "no": 11,
+     "name": "Pekár Šimon Sebastian",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Fink Jazz",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "TJ Olympie Hroznětín z.s. C",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Hořejš Vít",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": 1704
+    },
+    {
+     "no": 2,
+     "name": "Čornyj Milan",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1577,
+     "fide": 1700
+    },
+    {
+     "no": 3,
+     "name": "Bača Petr",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1488,
+     "fide": 1669
+    },
+    {
+     "no": 4,
+     "name": "Ehlen Daniel",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1572,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Fiala Rostislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1383,
+     "fide": 1702
+    },
+    {
+     "no": 6,
+     "name": "Husák Vasil",
+     "types": [],
+     "rtg": null,
+     "nat": 1480,
+     "fide": 1620
+    },
+    {
+     "no": 7,
+     "name": "Ornet Tomáš",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1662,
+     "fide": 1752
+    },
+    {
+     "no": 8,
+     "name": "Tamáš Imrich",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1560,
+     "fide": 1717
+    },
+    {
+     "no": 9,
+     "name": "Hujsl Jan",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1491,
+     "fide": 1622
+    },
+    {
+     "no": 10,
+     "name": "Rams Milan",
+     "types": [],
+     "rtg": null,
+     "nat": 1596,
+     "fide": 1710
+    },
+    {
+     "no": 11,
+     "name": "Grieč Milan",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1499,
+     "fide": 1692
+    },
+    {
+     "no": 12,
+     "name": "Bártová Eva",
+     "types": [],
+     "rtg": null,
+     "nat": 1202,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Sedláček Roman",
+     "types": [],
+     "rtg": null,
+     "nat": 1261,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Poláček Michal",
+     "types": [],
+     "rtg": null,
+     "nat": 1122,
+     "fide": null
+    },
+    {
+     "no": 15,
+     "name": "McGuirk Oliver",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Hartenberg C",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Vachulka Václav",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1559,
+     "fide": 1746
+    },
+    {
+     "no": 2,
+     "name": "Loos Bedřich",
+     "types": [],
+     "rtg": null,
+     "nat": 1626,
+     "fide": 1708
+    },
+    {
+     "no": 3,
+     "name": "Jakobec Karel",
+     "types": [],
+     "rtg": null,
+     "nat": 1515,
+     "fide": 1568
+    },
+    {
+     "no": 4,
+     "name": "Kužvart Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1371,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Liška Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1315,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Kužvart Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1124,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Černík Jan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Bohdan Oleksandra",
+     "types": [],
+     "rtg": null,
+     "nat": 1313,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Feher Jaroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1075,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Vachovec Václav",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Pochyba Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Podhorský Ondřej",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Mikeš Václav",
+     "types": [],
+     "rtg": null,
+     "nat": 1036,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Šachový oddíl Aš",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Břicháček Miroslav",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1713,
+     "fide": 1915
+    },
+    {
+     "no": 2,
+     "name": "Bajcár Tomáš",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1919,
+     "fide": 1964
+    },
+    {
+     "no": 3,
+     "name": "Rewczuk Marcel",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": 1699
+    },
+    {
+     "no": 4,
+     "name": "Brtva Pavel",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1652,
+     "fide": 1757
+    },
+    {
+     "no": 5,
+     "name": "Perqler Adam",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Žoha Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Žoha Jonáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Hartenberg D",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Wiedermann Jan",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1644,
+     "fide": 1776
+    },
+    {
+     "no": 2,
+     "name": "Pittermann Jan",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1621,
+     "fide": 1796
+    },
+    {
+     "no": 3,
+     "name": "Křížek Pavel",
+     "types": [],
+     "rtg": null,
+     "nat": 1491,
+     "fide": 1718
+    },
+    {
+     "no": 4,
+     "name": "Kertis Čeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1250,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Novotný Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1126,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Nedvěd Marek",
+     "types": [],
+     "rtg": null,
+     "nat": 1080,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Dinh Erik",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Vu Viet Cuong",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Hauzer Matouš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Caissa Nová Role",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Koten Vojtěch",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1723,
+     "fide": 1786
+    },
+    {
+     "no": 2,
+     "name": "Mestl Martin",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1762,
+     "fide": 1904
+    },
+    {
+     "no": 3,
+     "name": "Radics Robert",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1756,
+     "fide": 1852
+    },
+    {
+     "no": 4,
+     "name": "Sýkora Robert",
+     "types": [],
+     "rtg": null,
+     "nat": 1612,
+     "fide": 1763
+    },
+    {
+     "no": 5,
+     "name": "Bachratý Stanislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1637,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Svoboda Milan",
+     "types": [],
+     "rtg": null,
+     "nat": 2046,
+     "fide": 1945
+    },
+    {
+     "no": 7,
+     "name": "Ďurovič Karel",
+     "types": [],
+     "rtg": null,
+     "nat": 1400,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Janoušek Ladislav",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1600,
+     "fide": 1746
+    },
+    {
+     "no": 9,
+     "name": "Pošvář Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1704,
+     "fide": 1826
+    },
+    {
+     "no": 10,
+     "name": "Vaníček Jiří",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1356,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Nesilovský Vladimír",
+     "types": [],
+     "rtg": null,
+     "nat": 1055,
+     "fide": null
+    }
+   ]
+  }
+ ],
+ "rounds": [
+  {
+   "no": 1,
+   "date": "2026-11-14",
+   "matches": [
+    {
+     "home": "ŠK Valdštejn Cheb C",
+     "away": "ŠK Hartenberg C"
+    },
+    {
+     "home": "ŠK Valdštejn Cheb D",
+     "away": "Šachový oddíl Aš"
+    },
+    {
+     "home": "ŠK Valdštejn Cheb E",
+     "away": "TJ Olympie Hroznětín z.s. C"
+    },
+    {
+     "home": "TJ Tašovice B",
+     "away": "ŠK Hartenberg D"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "date": "2026-11-28",
+   "matches": [
+    {
+     "home": "Šachový oddíl Aš",
+     "away": "ŠK Valdštejn Cheb C"
+    },
+    {
+     "home": "ŠK Caissa Nová Role",
+     "away": "ŠK Valdštejn Cheb D"
+    },
+    {
+     "home": "ŠK Hartenberg C",
+     "away": "TJ Tašovice B"
+    },
+    {
+     "home": "ŠK Hartenberg D",
+     "away": "ŠK Valdštejn Cheb E"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "date": "2026-12-12",
+   "matches": [
+    {
+     "home": "ŠK Valdštejn Cheb C",
+     "away": "ŠK Caissa Nová Role"
+    },
+    {
+     "home": "ŠK Valdštejn Cheb E",
+     "away": "ŠK Hartenberg C"
+    },
+    {
+     "home": "TJ Olympie Hroznětín z.s. C",
+     "away": "ŠK Hartenberg D"
+    },
+    {
+     "home": "TJ Tašovice B",
+     "away": "Šachový oddíl Aš"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "date": "2027-01-30",
+   "matches": [
+    {
+     "home": "Šachový oddíl Aš",
+     "away": "ŠK Valdštejn Cheb E"
+    },
+    {
+     "home": "ŠK Caissa Nová Role",
+     "away": "TJ Tašovice B"
+    },
+    {
+     "home": "ŠK Hartenberg C",
+     "away": "TJ Olympie Hroznětín z.s. C"
+    },
+    {
+     "home": "ŠK Valdštejn Cheb D",
+     "away": "ŠK Valdštejn Cheb C"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "date": "2027-02-13",
+   "matches": [
+    {
+     "home": "ŠK Hartenberg D",
+     "away": "ŠK Hartenberg C"
+    },
+    {
+     "home": "ŠK Valdštejn Cheb E",
+     "away": "ŠK Caissa Nová Role"
+    },
+    {
+     "home": "TJ Olympie Hroznětín z.s. C",
+     "away": "Šachový oddíl Aš"
+    },
+    {
+     "home": "TJ Tašovice B",
+     "away": "ŠK Valdštejn Cheb D"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "date": "2027-02-27",
+   "matches": [
+    {
+     "home": "Šachový oddíl Aš",
+     "away": "ŠK Hartenberg D"
+    },
+    {
+     "home": "ŠK Caissa Nová Role",
+     "away": "TJ Olympie Hroznětín z.s. C"
+    },
+    {
+     "home": "ŠK Valdštejn Cheb C",
+     "away": "TJ Tašovice B"
+    },
+    {
+     "home": "ŠK Valdštejn Cheb D",
+     "away": "ŠK Valdštejn Cheb E"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "date": "2027-03-13",
+   "matches": [
+    {
+     "home": "ŠK Hartenberg C",
+     "away": "Šachový oddíl Aš"
+    },
+    {
+     "home": "ŠK Hartenberg D",
+     "away": "ŠK Caissa Nová Role"
+    },
+    {
+     "home": "ŠK Valdštejn Cheb E",
+     "away": "ŠK Valdštejn Cheb C"
+    },
+    {
+     "home": "TJ Olympie Hroznětín z.s. C",
+     "away": "ŠK Valdštejn Cheb D"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "date": "2027-03-27",
+   "matches": [
+    {
+     "home": "ŠK Caissa Nová Role",
+     "away": "ŠK Hartenberg C"
+    },
+    {
+     "home": "ŠK Valdštejn Cheb C",
+     "away": "TJ Olympie Hroznětín z.s. C"
+    },
+    {
+     "home": "ŠK Valdštejn Cheb D",
+     "away": "ŠK Hartenberg D"
+    },
+    {
+     "home": "TJ Tašovice B",
+     "away": "ŠK Valdštejn Cheb E"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "date": "2027-04-10",
+   "matches": [
+    {
+     "home": "Šachový oddíl Aš",
+     "away": "ŠK Caissa Nová Role"
+    },
+    {
+     "home": "ŠK Hartenberg C",
+     "away": "ŠK Valdštejn Cheb D"
+    },
+    {
+     "home": "ŠK Hartenberg D",
+     "away": "ŠK Valdštejn Cheb C"
+    },
+    {
+     "home": "TJ Olympie Hroznětín z.s. C",
+     "away": "TJ Tašovice B"
+    }
+   ]
+  }
+ ]
+}

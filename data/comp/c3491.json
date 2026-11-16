@@ -1,0 +1,711 @@
+{
+ "id": "c3491",
+ "short": "OP Šumperk",
+ "name": "Přebor okresu Šumperk",
+ "group": "",
+ "boards": 5,
+ "region": "SSOK",
+ "chesscz": 3491,
+ "season": "2026/2027",
+ "url": "https://www.chess.cz/soutez/3491/",
+ "teams": [
+  {
+   "name": "ŠK TJ Libina",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Rozman Vojtěch",
+     "types": [],
+     "rtg": null,
+     "nat": 1781,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Anděl Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1807,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Pořízka Lubomír",
+     "types": [],
+     "rtg": null,
+     "nat": 1543,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Straka Bohumil",
+     "types": [],
+     "rtg": null,
+     "nat": 1636,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Chlup Radek",
+     "types": [],
+     "rtg": null,
+     "nat": 1597,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Vaněk Aleš",
+     "types": [],
+     "rtg": null,
+     "nat": 1546,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Dudková Šárka",
+     "types": [],
+     "rtg": null,
+     "nat": 1573,
+     "fide": 1716
+    },
+    {
+     "no": 8,
+     "name": "Vaněk Marek",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK SDH Stavenice",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Urbášek Oleg",
+     "types": [],
+     "rtg": null,
+     "nat": 1902,
+     "fide": 1966
+    },
+    {
+     "no": 2,
+     "name": "Hanousek Vojtěch",
+     "types": [],
+     "rtg": null,
+     "nat": 1583,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Palla Vít",
+     "types": [],
+     "rtg": null,
+     "nat": 1550,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Miketa Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1447,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Rébl Rostislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1436,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Zajíček Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1468,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Hetcl Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1462,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Zapletal Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1646,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK 1921 Zábřeh C",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Klimeš Martin",
+     "types": [],
+     "rtg": null,
+     "nat": 1452,
+     "fide": 1574
+    },
+    {
+     "no": 2,
+     "name": "Abrahámek David",
+     "types": [],
+     "rtg": null,
+     "nat": 1467,
+     "fide": 1587
+    },
+    {
+     "no": 3,
+     "name": "Bém Josef",
+     "types": [],
+     "rtg": null,
+     "nat": 1671,
+     "fide": 1827
+    },
+    {
+     "no": 4,
+     "name": "Milfort Václav",
+     "types": [],
+     "rtg": null,
+     "nat": 1197,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Benedikt František",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Přikryl Vítězslav",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Sitta Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Rýznar Antonín",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Klimeš Eduard",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Dvořáček Libor",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Michálek Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1759,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK 1921 Zábřeh D",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Pelikán Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1533,
+     "fide": 1744
+    },
+    {
+     "no": 2,
+     "name": "Skopal Daniel",
+     "types": [],
+     "rtg": null,
+     "nat": 1589,
+     "fide": 1762
+    },
+    {
+     "no": 3,
+     "name": "Kopecký Filip",
+     "types": [],
+     "rtg": null,
+     "nat": 1225,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Klein Pavel",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Skála Petr",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Dušánek Přemysl",
+     "types": [],
+     "rtg": null,
+     "nat": 1289,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Till Vladimír",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Šváb Jan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Reichl Luboš",
+     "types": [],
+     "rtg": null,
+     "nat": 1401,
+     "fide": 1641
+    },
+    {
+     "no": 10,
+     "name": "Kopecký Martin",
+     "types": [],
+     "rtg": null,
+     "nat": 1111,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Kobylka Roman",
+     "types": [],
+     "rtg": null,
+     "nat": 1389,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Loštice B",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Ramian Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1528,
+     "fide": 1706
+    },
+    {
+     "no": 2,
+     "name": "Hlaváč Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1359,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Novák František",
+     "types": [],
+     "rtg": null,
+     "nat": 1343,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Zatloukal Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1260,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Oliverius Roman",
+     "types": [],
+     "rtg": null,
+     "nat": 1761,
+     "fide": 1911
+    },
+    {
+     "no": 6,
+     "name": "Vařeka Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1506,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Šulák Radek",
+     "types": [],
+     "rtg": null,
+     "nat": 1457,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Zapletal Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1433,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Nátesta Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Kofránek David",
+     "types": [],
+     "rtg": null,
+     "nat": 1595,
+     "fide": 1791
+    }
+   ]
+  },
+  {
+   "name": "ŠK ZŠ Hrabišín B",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Glanc Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1748,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Jírů Ondřej",
+     "types": [],
+     "rtg": null,
+     "nat": 1323,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Frank Radim",
+     "types": [],
+     "rtg": null,
+     "nat": 1408,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Kamler Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1759,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Macek Radek",
+     "types": [],
+     "rtg": null,
+     "nat": 1034,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Janíček Šimon",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Kašpar Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Berlinský Vít",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Šindler Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK ZŠ Hrabišín C",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Provázek Karel",
+     "types": [],
+     "rtg": null,
+     "nat": 1597,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Osladil Lukáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1645,
+     "fide": 1695
+    },
+    {
+     "no": 3,
+     "name": "Janza Daniel",
+     "types": [],
+     "rtg": null,
+     "nat": 1423,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Halmich Vlastimil",
+     "types": [],
+     "rtg": null,
+     "nat": 1266,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Halmich Vít",
+     "types": [],
+     "rtg": null,
+     "nat": 1365,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Běhálek Daniel",
+     "types": [],
+     "rtg": null,
+     "nat": 1232,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Jírů Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Klemeš Maxmilián",
+     "types": [],
+     "rtg": null,
+     "nat": 1016,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Uttendorfský Štěpán",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  }
+ ],
+ "rounds": [
+  {
+   "no": 1,
+   "date": "2026-11-08",
+   "matches": [
+    {
+     "home": "ŠK 1921 Zábřeh C",
+     "away": "ŠK 1921 Zábřeh D"
+    },
+    {
+     "home": "ŠK Loštice B",
+     "away": "ŠK SDH Stavenice"
+    },
+    {
+     "home": "ŠK TJ Libina",
+     "away": "ŠK ZŠ Hrabišín B"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "date": "2026-11-22",
+   "matches": [
+    {
+     "home": "ŠK SDH Stavenice",
+     "away": "ŠK TJ Libina"
+    },
+    {
+     "home": "ŠK ZŠ Hrabišín B",
+     "away": "ŠK 1921 Zábřeh C"
+    },
+    {
+     "home": "ŠK ZŠ Hrabišín C",
+     "away": "ŠK Loštice B"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "date": "2026-12-06",
+   "matches": [
+    {
+     "home": "ŠK 1921 Zábřeh C",
+     "away": "ŠK SDH Stavenice"
+    },
+    {
+     "home": "ŠK 1921 Zábřeh D",
+     "away": "ŠK ZŠ Hrabišín B"
+    },
+    {
+     "home": "ŠK TJ Libina",
+     "away": "ŠK ZŠ Hrabišín C"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "date": "2027-01-10",
+   "matches": [
+    {
+     "home": "ŠK Loštice B",
+     "away": "ŠK TJ Libina"
+    },
+    {
+     "home": "ŠK SDH Stavenice",
+     "away": "ŠK 1921 Zábřeh D"
+    },
+    {
+     "home": "ŠK ZŠ Hrabišín C",
+     "away": "ŠK 1921 Zábřeh C"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "date": "2027-01-24",
+   "matches": [
+    {
+     "home": "ŠK 1921 Zábřeh C",
+     "away": "ŠK Loštice B"
+    },
+    {
+     "home": "ŠK 1921 Zábřeh D",
+     "away": "ŠK ZŠ Hrabišín C"
+    },
+    {
+     "home": "ŠK ZŠ Hrabišín B",
+     "away": "ŠK SDH Stavenice"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "date": "2027-02-07",
+   "matches": [
+    {
+     "home": "ŠK Loštice B",
+     "away": "ŠK 1921 Zábřeh D"
+    },
+    {
+     "home": "ŠK TJ Libina",
+     "away": "ŠK 1921 Zábřeh C"
+    },
+    {
+     "home": "ŠK ZŠ Hrabišín C",
+     "away": "ŠK ZŠ Hrabišín B"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "date": "2027-02-21",
+   "matches": [
+    {
+     "home": "ŠK 1921 Zábřeh D",
+     "away": "ŠK TJ Libina"
+    },
+    {
+     "home": "ŠK SDH Stavenice",
+     "away": "ŠK ZŠ Hrabišín C"
+    },
+    {
+     "home": "ŠK ZŠ Hrabišín B",
+     "away": "ŠK Loštice B"
+    }
+   ]
+  }
+ ]
+}

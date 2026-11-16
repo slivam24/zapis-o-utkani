@@ -190,7 +190,7 @@ jde upravit čtení v `scripts/chesscz.mjs` (chess.cz) nebo `js/parse.js` (chess
 
 ```bash
 npm install                 # jen linkedom, pro parsování HTML v Node
-npm test                    # 90 testů: logika zápisu, parser, čtečka .xlsx, přidávání soutěží, archiv, PDF, odkaz s QR
+npm test                    # 94 testů: logika zápisu, parser, čtečka .xlsx, přidávání soutěží, archiv, PDF, odkaz s QR
 npm run serve               # lokální spuštění: http://localhost:8080
 ```
 

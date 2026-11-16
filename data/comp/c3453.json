@@ -1,0 +1,1782 @@
+{
+ "id": "c3453",
+ "short": "KS východ",
+ "name": "Krajská soutěž - východ",
+ "group": "",
+ "boards": 8,
+ "region": "KHSS",
+ "chesscz": 3453,
+ "season": "2026/2027",
+ "url": "https://www.chess.cz/soutez/3453/",
+ "teams": [
+  {
+   "name": "TJ Náchod B",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Bubeníček Šimon",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1788,
+     "fide": 1853
+    },
+    {
+     "no": 2,
+     "name": "Vokůrka Vilém",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1838,
+     "fide": 1920
+    },
+    {
+     "no": 3,
+     "name": "Jirman Jonáš",
+     "types": [
+      "V",
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1798,
+     "fide": 1965
+    },
+    {
+     "no": 4,
+     "name": "Mojžíš Jan",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1909,
+     "fide": 1921
+    },
+    {
+     "no": 5,
+     "name": "Semerák Pavel",
+     "types": [],
+     "rtg": null,
+     "nat": 1935,
+     "fide": 1972
+    },
+    {
+     "no": 6,
+     "name": "Šobotník Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1888,
+     "fide": 1917
+    },
+    {
+     "no": 7,
+     "name": "Bednář Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1764,
+     "fide": 1890
+    },
+    {
+     "no": 8,
+     "name": "Pultar Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1789,
+     "fide": 1859
+    },
+    {
+     "no": 9,
+     "name": "Khurelbaatar Ugtakhbayar",
+     "types": [],
+     "rtg": null,
+     "nat": 1683,
+     "fide": 1834
+    },
+    {
+     "no": 10,
+     "name": "Zima Andreas Otakar",
+     "types": [],
+     "rtg": null,
+     "nat": 1661,
+     "fide": 1707
+    },
+    {
+     "no": 11,
+     "name": "Vágner Patrik",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1732,
+     "fide": 1817
+    },
+    {
+     "no": 12,
+     "name": "Hepnar David",
+     "types": [],
+     "rtg": null,
+     "nat": 1728,
+     "fide": 1800
+    },
+    {
+     "no": 13,
+     "name": "Kudrna Jakub Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Novotný Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1840,
+     "fide": 1882
+    }
+   ]
+  },
+  {
+   "name": "ŠK Lípa E",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Jedlička Luboš",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 2139,
+     "fide": 2137
+    },
+    {
+     "no": 2,
+     "name": "Sucharda Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1959,
+     "fide": 1999
+    },
+    {
+     "no": 3,
+     "name": "Ruda Ondřej",
+     "types": [],
+     "rtg": null,
+     "nat": 1983,
+     "fide": 2002
+    },
+    {
+     "no": 4,
+     "name": "Šimůnek Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1735,
+     "fide": 1848
+    },
+    {
+     "no": 5,
+     "name": "Beneda Marek",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1802,
+     "fide": 1892
+    },
+    {
+     "no": 6,
+     "name": "Fořt Hugo",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1728,
+     "fide": 1913
+    },
+    {
+     "no": 7,
+     "name": "Vítová Anna",
+     "types": [],
+     "rtg": null,
+     "nat": 1766,
+     "fide": 1840
+    },
+    {
+     "no": 8,
+     "name": "Ludvík Ladislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1433,
+     "fide": 1663
+    },
+    {
+     "no": 9,
+     "name": "Kosař Matěj",
+     "types": [],
+     "rtg": null,
+     "nat": 1792,
+     "fide": 1898
+    },
+    {
+     "no": 10,
+     "name": "Vošmik Matěj",
+     "types": [],
+     "rtg": null,
+     "nat": 1638,
+     "fide": 1746
+    },
+    {
+     "no": 11,
+     "name": "Koza Misha",
+     "types": [],
+     "rtg": null,
+     "nat": 1796,
+     "fide": 1877
+    },
+    {
+     "no": 12,
+     "name": "Hedánek Daniel",
+     "types": [],
+     "rtg": null,
+     "nat": 1617,
+     "fide": 1796
+    },
+    {
+     "no": 13,
+     "name": "Myronova Sofia",
+     "types": [],
+     "rtg": null,
+     "nat": 1573,
+     "fide": 1695
+    },
+    {
+     "no": 14,
+     "name": "Rudová Jana",
+     "types": [],
+     "rtg": null,
+     "nat": 1549,
+     "fide": 1710
+    },
+    {
+     "no": 15,
+     "name": "Chocholáč Josef",
+     "types": [],
+     "rtg": null,
+     "nat": 1671,
+     "fide": 1817
+    },
+    {
+     "no": 16,
+     "name": "Pražák Patrik",
+     "types": [],
+     "rtg": null,
+     "nat": 1460,
+     "fide": 1675
+    },
+    {
+     "no": 17,
+     "name": "Poledno Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1275,
+     "fide": 1652
+    },
+    {
+     "no": 18,
+     "name": "Levínský Jonatan",
+     "types": [],
+     "rtg": null,
+     "nat": 1198,
+     "fide": 1467
+    },
+    {
+     "no": 19,
+     "name": "Chocholáč Lukáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 20,
+     "name": "Vysloužilová Petra",
+     "types": [],
+     "rtg": null,
+     "nat": 1013,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "DDM Kostelec n. Orl.",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Dostálek Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1738,
+     "fide": 1836
+    },
+    {
+     "no": 2,
+     "name": "Blažek Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1799,
+     "fide": 1867
+    },
+    {
+     "no": 3,
+     "name": "Chmelař Vítězslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1762,
+     "fide": 1832
+    },
+    {
+     "no": 4,
+     "name": "Gabara Marek",
+     "types": [],
+     "rtg": null,
+     "nat": 1520,
+     "fide": 1814
+    },
+    {
+     "no": 5,
+     "name": "Malý Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1703,
+     "fide": 1808
+    },
+    {
+     "no": 6,
+     "name": "Matouš Lubomír",
+     "types": [],
+     "rtg": null,
+     "nat": 1741,
+     "fide": 1837
+    },
+    {
+     "no": 7,
+     "name": "Jindrásek Mojmír",
+     "types": [],
+     "rtg": null,
+     "nat": 1698,
+     "fide": 1821
+    },
+    {
+     "no": 8,
+     "name": "Janeček Vojtěch",
+     "types": [],
+     "rtg": null,
+     "nat": 1383,
+     "fide": 1557
+    },
+    {
+     "no": 9,
+     "name": "Hlávka Miloslav",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Labík Jaroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1493,
+     "fide": 1711
+    },
+    {
+     "no": 11,
+     "name": "Matoulek Jaroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1464,
+     "fide": 1687
+    },
+    {
+     "no": 12,
+     "name": "Kain Michal",
+     "types": [],
+     "rtg": null,
+     "nat": 1327,
+     "fide": 1622
+    },
+    {
+     "no": 13,
+     "name": "Žižka Michal",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Tejkl Daniel",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "TJ Jiskra Jaroměř B",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Wenke Oldřich",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1984,
+     "fide": 2042
+    },
+    {
+     "no": 2,
+     "name": "Hubka Luboš",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1943,
+     "fide": 1973
+    },
+    {
+     "no": 3,
+     "name": "Borůvka Milan",
+     "types": [],
+     "rtg": null,
+     "nat": 1837,
+     "fide": 1916
+    },
+    {
+     "no": 4,
+     "name": "Marxová Šárka",
+     "types": [],
+     "rtg": null,
+     "nat": 1587,
+     "fide": 1675
+    },
+    {
+     "no": 5,
+     "name": "Kuneš Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1732,
+     "fide": 1833
+    },
+    {
+     "no": 6,
+     "name": "Bednář Vojta",
+     "types": [],
+     "rtg": null,
+     "nat": 1538,
+     "fide": 1715
+    },
+    {
+     "no": 7,
+     "name": "Houšť Bartoloměj Filip",
+     "types": [],
+     "rtg": null,
+     "nat": 1152,
+     "fide": 1425
+    },
+    {
+     "no": 8,
+     "name": "Doubek Jan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Jecha Vratislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1999,
+     "fide": 2002
+    },
+    {
+     "no": 10,
+     "name": "Jecha Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1845,
+     "fide": 1901
+    },
+    {
+     "no": 11,
+     "name": "Rutter Lidmila",
+     "types": [],
+     "rtg": null,
+     "nat": 1896,
+     "fide": 1943
+    },
+    {
+     "no": 12,
+     "name": "Doubek Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1778,
+     "fide": 1835
+    },
+    {
+     "no": 13,
+     "name": "Minár Lukáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1578,
+     "fide": 1636
+    },
+    {
+     "no": 14,
+     "name": "Řezníček Přemysl",
+     "types": [],
+     "rtg": null,
+     "nat": 1431,
+     "fide": 1608
+    },
+    {
+     "no": 15,
+     "name": "Holda Nathan",
+     "types": [],
+     "rtg": null,
+     "nat": 1209,
+     "fide": null
+    },
+    {
+     "no": 16,
+     "name": "Bém Adam",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 17,
+     "name": "Šubrt Mikuláš",
+     "types": [],
+     "rtg": null,
+     "nat": 1028,
+     "fide": null
+    },
+    {
+     "no": 18,
+     "name": "Cölba Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 19,
+     "name": "Cölba Richard",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 20,
+     "name": "Bejr Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Panda Rychnov n. K. C",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Majocha Piotr",
+     "types": [
+      "C"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": 2096
+    },
+    {
+     "no": 2,
+     "name": "Machlowski Slawomir",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 2053,
+     "fide": 2006
+    },
+    {
+     "no": 3,
+     "name": "Pavlíček Miroslav",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1955,
+     "fide": 2018
+    },
+    {
+     "no": 4,
+     "name": "Krautschneider Daniel Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1796,
+     "fide": 1869
+    },
+    {
+     "no": 5,
+     "name": "Dušánek Michal",
+     "types": [],
+     "rtg": null,
+     "nat": 1637,
+     "fide": 1780
+    },
+    {
+     "no": 6,
+     "name": "Kroulík Štěpán",
+     "types": [],
+     "rtg": null,
+     "nat": 1764,
+     "fide": 1869
+    },
+    {
+     "no": 7,
+     "name": "Novotný Josef",
+     "types": [],
+     "rtg": null,
+     "nat": 1893,
+     "fide": 1908
+    },
+    {
+     "no": 8,
+     "name": "Daniel Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1890,
+     "fide": 1932
+    },
+    {
+     "no": 9,
+     "name": "Mareš Ilja",
+     "types": [],
+     "rtg": null,
+     "nat": 1728,
+     "fide": 1836
+    },
+    {
+     "no": 10,
+     "name": "Hartman Ivo",
+     "types": [],
+     "rtg": null,
+     "nat": 1605,
+     "fide": 1698
+    },
+    {
+     "no": 11,
+     "name": "Dvořák Milan",
+     "types": [],
+     "rtg": null,
+     "nat": 1803,
+     "fide": 1885
+    },
+    {
+     "no": 12,
+     "name": "Kubíček Adam",
+     "types": [],
+     "rtg": null,
+     "nat": 1525,
+     "fide": 1637
+    },
+    {
+     "no": 13,
+     "name": "Ulman Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": 1587,
+     "fide": 1733
+    },
+    {
+     "no": 14,
+     "name": "Daniel Robert",
+     "types": [],
+     "rtg": null,
+     "nat": 1511,
+     "fide": 1715
+    },
+    {
+     "no": 15,
+     "name": "Hetfleischová Elen",
+     "types": [],
+     "rtg": null,
+     "nat": 1511,
+     "fide": 1654
+    },
+    {
+     "no": 16,
+     "name": "Špaňhel Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": 1289,
+     "fide": null
+    },
+    {
+     "no": 17,
+     "name": "Kulštejn Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1060,
+     "fide": null
+    },
+    {
+     "no": 18,
+     "name": "Rozum Matěj",
+     "types": [],
+     "rtg": null,
+     "nat": 1036,
+     "fide": 1456
+    },
+    {
+     "no": 19,
+     "name": "Tobiška Vojtěch",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠŠPM Lipky HK D",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Přibík Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1781,
+     "fide": 1854
+    },
+    {
+     "no": 2,
+     "name": "Rozkovec Ludvík",
+     "types": [],
+     "rtg": null,
+     "nat": 1615,
+     "fide": 1720
+    },
+    {
+     "no": 3,
+     "name": "Valík Ondřej",
+     "types": [],
+     "rtg": null,
+     "nat": 1640,
+     "fide": 1736
+    },
+    {
+     "no": 4,
+     "name": "Špriňar Luděk",
+     "types": [],
+     "rtg": null,
+     "nat": 1613,
+     "fide": 1745
+    },
+    {
+     "no": 5,
+     "name": "Kocek Martin",
+     "types": [],
+     "rtg": null,
+     "nat": 1626,
+     "fide": 1754
+    },
+    {
+     "no": 6,
+     "name": "Škoda Denis",
+     "types": [],
+     "rtg": null,
+     "nat": 1505,
+     "fide": 1703
+    },
+    {
+     "no": 7,
+     "name": "Rudnytskyi Illia",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": 1698
+    },
+    {
+     "no": 8,
+     "name": "Horký Jáchym",
+     "types": [],
+     "rtg": null,
+     "nat": 1093,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Šlapák Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1541,
+     "fide": 1685
+    },
+    {
+     "no": 10,
+     "name": "Volf Michal",
+     "types": [],
+     "rtg": null,
+     "nat": 1554,
+     "fide": 1692
+    },
+    {
+     "no": 11,
+     "name": "Střeleček Marek",
+     "types": [],
+     "rtg": null,
+     "nat": 1220,
+     "fide": 1689
+    },
+    {
+     "no": 12,
+     "name": "Karatnyk Arsen",
+     "types": [
+      "C"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": 1653
+    },
+    {
+     "no": 13,
+     "name": "Vochozka Jindřich",
+     "types": [],
+     "rtg": null,
+     "nat": 1519,
+     "fide": 1641
+    },
+    {
+     "no": 14,
+     "name": "Adane Daniel Temesgen",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 15,
+     "name": "Zmija Pavel",
+     "types": [],
+     "rtg": null,
+     "nat": 1285,
+     "fide": 1513
+    },
+    {
+     "no": 16,
+     "name": "Rejzek Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1643,
+     "fide": 1761
+    },
+    {
+     "no": 17,
+     "name": "Rejzek Ondřej",
+     "types": [],
+     "rtg": null,
+     "nat": 1462,
+     "fide": 1528
+    },
+    {
+     "no": 18,
+     "name": "Dokoupil Marek",
+     "types": [],
+     "rtg": null,
+     "nat": 1548,
+     "fide": 1638
+    },
+    {
+     "no": 19,
+     "name": "Buchar Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1460,
+     "fide": 1564
+    },
+    {
+     "no": 20,
+     "name": "Makový Matouš",
+     "types": [],
+     "rtg": null,
+     "nat": 1553,
+     "fide": 1640
+    }
+   ]
+  },
+  {
+   "name": "ŠK Doudleby n. Orl.",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Vizibla Roman",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1865,
+     "fide": 1923
+    },
+    {
+     "no": 2,
+     "name": "Benešová Karina",
+     "types": [],
+     "rtg": null,
+     "nat": 1630,
+     "fide": 1832
+    },
+    {
+     "no": 3,
+     "name": "Beneš Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1492,
+     "fide": 1640
+    },
+    {
+     "no": 4,
+     "name": "Kožúšek Slavomír",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1760,
+     "fide": 1869
+    },
+    {
+     "no": 5,
+     "name": "Štolba Oldřich",
+     "types": [],
+     "rtg": null,
+     "nat": 1499,
+     "fide": 1701
+    },
+    {
+     "no": 6,
+     "name": "Palla Rostislav",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1614,
+     "fide": 1687
+    },
+    {
+     "no": 7,
+     "name": "Moravec Luboš",
+     "types": [],
+     "rtg": null,
+     "nat": 1565,
+     "fide": 1683
+    },
+    {
+     "no": 8,
+     "name": "Štolba Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1440,
+     "fide": 1855
+    },
+    {
+     "no": 9,
+     "name": "Plachetka Milan",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1618,
+     "fide": 1755
+    },
+    {
+     "no": 10,
+     "name": "Hýbl Dominik",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Řehák Zbyněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1291,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Marek Milan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Kubíček Jan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Cimfl Marek",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 15,
+     "name": "Tomíček Jan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 16,
+     "name": "Tomíček Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1139,
+     "fide": null
+    },
+    {
+     "no": 17,
+     "name": "Kremzar Petr",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Červený Kostelec",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Velecký Viktor",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 2055,
+     "fide": 2088
+    },
+    {
+     "no": 2,
+     "name": "Pinkava Josef",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1813,
+     "fide": 1881
+    },
+    {
+     "no": 3,
+     "name": "Čáp Jaroslav",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1687,
+     "fide": 1817
+    },
+    {
+     "no": 4,
+     "name": "Kuru Martin",
+     "types": [],
+     "rtg": null,
+     "nat": 1811,
+     "fide": 1874
+    },
+    {
+     "no": 5,
+     "name": "Klázar Václav",
+     "types": [],
+     "rtg": null,
+     "nat": 1634,
+     "fide": 1798
+    },
+    {
+     "no": 6,
+     "name": "Brát Libor",
+     "types": [],
+     "rtg": null,
+     "nat": 1691,
+     "fide": 1810
+    },
+    {
+     "no": 7,
+     "name": "Šretr Josef",
+     "types": [],
+     "rtg": null,
+     "nat": 1706,
+     "fide": 1824
+    },
+    {
+     "no": 8,
+     "name": "Vít Jaroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1554,
+     "fide": 1748
+    },
+    {
+     "no": 9,
+     "name": "Erban Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 2010,
+     "fide": 2006
+    },
+    {
+     "no": 10,
+     "name": "Burdilák Milan",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1606,
+     "fide": 1728
+    },
+    {
+     "no": 11,
+     "name": "Kubec Jiří",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1643,
+     "fide": 1788
+    },
+    {
+     "no": 12,
+     "name": "Vacek Jaroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1544,
+     "fide": 1682
+    },
+    {
+     "no": 13,
+     "name": "Nahaitsev Viktor",
+     "types": [],
+     "rtg": null,
+     "nat": 1424,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Šrůtek Václav",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1567,
+     "fide": 1741
+    },
+    {
+     "no": 15,
+     "name": "Linek Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1225,
+     "fide": null
+    },
+    {
+     "no": 16,
+     "name": "Petera Milan",
+     "types": [],
+     "rtg": null,
+     "nat": 1466,
+     "fide": 1680
+    },
+    {
+     "no": 17,
+     "name": "Petera Štěpán",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "DDM Třebechovice p. Or.",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Zdechovský Tobiáš",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1983,
+     "fide": 2012
+    },
+    {
+     "no": 2,
+     "name": "Mařák David",
+     "types": [],
+     "rtg": null,
+     "nat": 1824,
+     "fide": 1894
+    },
+    {
+     "no": 3,
+     "name": "Slavík Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1852,
+     "fide": 1887
+    },
+    {
+     "no": 4,
+     "name": "Přibyl Michal",
+     "types": [],
+     "rtg": null,
+     "nat": 1745,
+     "fide": 1830
+    },
+    {
+     "no": 5,
+     "name": "Krása Marek",
+     "types": [],
+     "rtg": null,
+     "nat": 1662,
+     "fide": 1761
+    },
+    {
+     "no": 6,
+     "name": "Bednář Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1646,
+     "fide": 1774
+    },
+    {
+     "no": 7,
+     "name": "Picek Karel",
+     "types": [],
+     "rtg": null,
+     "nat": 1600,
+     "fide": 1708
+    },
+    {
+     "no": 8,
+     "name": "Dvořák Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1639,
+     "fide": 1758
+    },
+    {
+     "no": 9,
+     "name": "Reschel Jan",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1619,
+     "fide": 1754
+    },
+    {
+     "no": 10,
+     "name": "Urbánek Šimon",
+     "types": [],
+     "rtg": null,
+     "nat": 1139,
+     "fide": 1584
+    },
+    {
+     "no": 11,
+     "name": "Reschel Josef",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1119,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Ficenec Natanael",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Kotlant Jan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Jarkovský Vojtěch",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 15,
+     "name": "Mičan Vojtěch",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 16,
+     "name": "Mičan Albert",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "TJ Jiskra Jaroměř C",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Staněk Petr",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1861,
+     "fide": 1942
+    },
+    {
+     "no": 2,
+     "name": "Staňková Radka",
+     "types": [],
+     "rtg": null,
+     "nat": 1811,
+     "fide": 1871
+    },
+    {
+     "no": 3,
+     "name": "Raule Tobiáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1638,
+     "fide": 1741
+    },
+    {
+     "no": 4,
+     "name": "Maisner Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": 1713
+    },
+    {
+     "no": 5,
+     "name": "Krása Šimon",
+     "types": [],
+     "rtg": null,
+     "nat": 1467,
+     "fide": 1670
+    },
+    {
+     "no": 6,
+     "name": "Archlebová Stela",
+     "types": [],
+     "rtg": null,
+     "nat": 1476,
+     "fide": 1719
+    },
+    {
+     "no": 7,
+     "name": "Linhart Vincenc",
+     "types": [],
+     "rtg": null,
+     "nat": 1115,
+     "fide": 1472
+    },
+    {
+     "no": 8,
+     "name": "Archlebová Iva",
+     "types": [],
+     "rtg": null,
+     "nat": 1399,
+     "fide": 1605
+    },
+    {
+     "no": 9,
+     "name": "Archlebová Eva",
+     "types": [],
+     "rtg": null,
+     "nat": 1287,
+     "fide": 1475
+    },
+    {
+     "no": 10,
+     "name": "Prouza Pavel",
+     "types": [],
+     "rtg": null,
+     "nat": 1954,
+     "fide": 1997
+    },
+    {
+     "no": 11,
+     "name": "Kudr Roman",
+     "types": [],
+     "rtg": null,
+     "nat": 1759,
+     "fide": 1881
+    },
+    {
+     "no": 12,
+     "name": "Havel Martin",
+     "types": [],
+     "rtg": null,
+     "nat": 1212,
+     "fide": 1547
+    },
+    {
+     "no": 13,
+     "name": "Balcar Kryštof",
+     "types": [],
+     "rtg": null,
+     "nat": 1125,
+     "fide": 1419
+    },
+    {
+     "no": 14,
+     "name": "Semerák Radim",
+     "types": [],
+     "rtg": null,
+     "nat": 1098,
+     "fide": 1472
+    },
+    {
+     "no": 15,
+     "name": "Pham Khanh Nam",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 16,
+     "name": "Archleb Josef",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 17,
+     "name": "Kudláček Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1342,
+     "fide": null
+    },
+    {
+     "no": 18,
+     "name": "Pultar Stanislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1738,
+     "fide": 1826
+    },
+    {
+     "no": 19,
+     "name": "Vrba Milan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 20,
+     "name": "Žákechová Eliška",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  }
+ ],
+ "rounds": [
+  {
+   "no": 1,
+   "date": "2026-10-11",
+   "matches": [
+    {
+     "home": "DDM Kostelec n. Orl.",
+     "away": "TJ Jiskra Jaroměř C"
+    },
+    {
+     "home": "Panda Rychnov n. K. C",
+     "away": "DDM Třebechovice p. Or."
+    },
+    {
+     "home": "ŠK Červený Kostelec",
+     "away": "ŠK Lípa E"
+    },
+    {
+     "home": "ŠŠPM Lipky HK D",
+     "away": "TJ Jiskra Jaroměř B"
+    },
+    {
+     "home": "TJ Náchod B",
+     "away": "ŠK Doudleby n. Orl."
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "date": "2026-11-01",
+   "matches": [
+    {
+     "home": "DDM Třebechovice p. Or.",
+     "away": "TJ Náchod B"
+    },
+    {
+     "home": "ŠK Červený Kostelec",
+     "away": "Panda Rychnov n. K. C"
+    },
+    {
+     "home": "ŠK Doudleby n. Orl.",
+     "away": "DDM Kostelec n. Orl."
+    },
+    {
+     "home": "ŠK Lípa E",
+     "away": "TJ Jiskra Jaroměř B"
+    },
+    {
+     "home": "TJ Jiskra Jaroměř C",
+     "away": "ŠŠPM Lipky HK D"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "date": "2026-11-15",
+   "matches": [
+    {
+     "home": "DDM Kostelec n. Orl.",
+     "away": "DDM Třebechovice p. Or."
+    },
+    {
+     "home": "Panda Rychnov n. K. C",
+     "away": "ŠK Lípa E"
+    },
+    {
+     "home": "ŠŠPM Lipky HK D",
+     "away": "ŠK Doudleby n. Orl."
+    },
+    {
+     "home": "TJ Jiskra Jaroměř B",
+     "away": "TJ Jiskra Jaroměř C"
+    },
+    {
+     "home": "TJ Náchod B",
+     "away": "ŠK Červený Kostelec"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "date": "2026-11-29",
+   "matches": [
+    {
+     "home": "DDM Třebechovice p. Or.",
+     "away": "ŠŠPM Lipky HK D"
+    },
+    {
+     "home": "Panda Rychnov n. K. C",
+     "away": "TJ Náchod B"
+    },
+    {
+     "home": "ŠK Červený Kostelec",
+     "away": "DDM Kostelec n. Orl."
+    },
+    {
+     "home": "ŠK Doudleby n. Orl.",
+     "away": "TJ Jiskra Jaroměř B"
+    },
+    {
+     "home": "ŠK Lípa E",
+     "away": "TJ Jiskra Jaroměř C"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "date": "2026-12-13",
+   "matches": [
+    {
+     "home": "DDM Kostelec n. Orl.",
+     "away": "Panda Rychnov n. K. C"
+    },
+    {
+     "home": "ŠŠPM Lipky HK D",
+     "away": "ŠK Červený Kostelec"
+    },
+    {
+     "home": "TJ Jiskra Jaroměř B",
+     "away": "DDM Třebechovice p. Or."
+    },
+    {
+     "home": "TJ Jiskra Jaroměř C",
+     "away": "ŠK Doudleby n. Orl."
+    },
+    {
+     "home": "TJ Náchod B",
+     "away": "ŠK Lípa E"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "date": "2027-01-17",
+   "matches": [
+    {
+     "home": "DDM Třebechovice p. Or.",
+     "away": "TJ Jiskra Jaroměř C"
+    },
+    {
+     "home": "Panda Rychnov n. K. C",
+     "away": "ŠŠPM Lipky HK D"
+    },
+    {
+     "home": "ŠK Červený Kostelec",
+     "away": "TJ Jiskra Jaroměř B"
+    },
+    {
+     "home": "ŠK Lípa E",
+     "away": "ŠK Doudleby n. Orl."
+    },
+    {
+     "home": "TJ Náchod B",
+     "away": "DDM Kostelec n. Orl."
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "date": "2027-01-31",
+   "matches": [
+    {
+     "home": "DDM Kostelec n. Orl.",
+     "away": "ŠK Lípa E"
+    },
+    {
+     "home": "ŠK Doudleby n. Orl.",
+     "away": "DDM Třebechovice p. Or."
+    },
+    {
+     "home": "ŠŠPM Lipky HK D",
+     "away": "TJ Náchod B"
+    },
+    {
+     "home": "TJ Jiskra Jaroměř B",
+     "away": "Panda Rychnov n. K. C"
+    },
+    {
+     "home": "TJ Jiskra Jaroměř C",
+     "away": "ŠK Červený Kostelec"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "date": "2027-02-14",
+   "matches": [
+    {
+     "home": "DDM Kostelec n. Orl.",
+     "away": "ŠŠPM Lipky HK D"
+    },
+    {
+     "home": "Panda Rychnov n. K. C",
+     "away": "TJ Jiskra Jaroměř C"
+    },
+    {
+     "home": "ŠK Červený Kostelec",
+     "away": "ŠK Doudleby n. Orl."
+    },
+    {
+     "home": "ŠK Lípa E",
+     "away": "DDM Třebechovice p. Or."
+    },
+    {
+     "home": "TJ Náchod B",
+     "away": "TJ Jiskra Jaroměř B"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "date": "2027-02-28",
+   "matches": [
+    {
+     "home": "DDM Třebechovice p. Or.",
+     "away": "ŠK Červený Kostelec"
+    },
+    {
+     "home": "ŠK Doudleby n. Orl.",
+     "away": "Panda Rychnov n. K. C"
+    },
+    {
+     "home": "ŠŠPM Lipky HK D",
+     "away": "ŠK Lípa E"
+    },
+    {
+     "home": "TJ Jiskra Jaroměř B",
+     "away": "DDM Kostelec n. Orl."
+    },
+    {
+     "home": "TJ Jiskra Jaroměř C",
+     "away": "TJ Náchod B"
+    }
+   ]
+  }
+ ]
+}

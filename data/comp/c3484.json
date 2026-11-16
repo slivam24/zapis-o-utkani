@@ -1,0 +1,1073 @@
+{
+ "id": "c3484",
+ "short": "OP Olomouce",
+ "name": "Okresní přebor Olomouce",
+ "group": "",
+ "boards": 5,
+ "region": "SSOK",
+ "chesscz": 3484,
+ "season": "2026/2027",
+ "url": "https://www.chess.cz/soutez/3484/",
+ "teams": [
+  {
+   "name": "Tatran Litovel C",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Smékal Lukáš",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1735,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Basler Jan Josef",
+     "types": [],
+     "rtg": null,
+     "nat": 1714,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Hampl Pavel",
+     "types": [],
+     "rtg": null,
+     "nat": 1666,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Myhalyna Ihor",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1499,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Ondráček Robin",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1515,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Juriga Viliam",
+     "types": [],
+     "rtg": null,
+     "nat": 1362,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Míka Tomáš",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1849,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Korienek Libor",
+     "types": [],
+     "rtg": null,
+     "nat": 1295,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Myhalyna Vladyslav",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Hampl Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Beza David",
+     "types": [],
+     "rtg": null,
+     "nat": 1010,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Šternberk B",
+   "captain": "Vymětalík Ivo",
+   "players": [
+    {
+     "no": 1,
+     "name": "Vymětalík Ivo",
+     "types": [
+      "V",
+      "K"
+     ],
+     "rtg": null,
+     "nat": 1882,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Šindler Jan",
+     "types": [
+      "ZK"
+     ],
+     "rtg": null,
+     "nat": 1574,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Kryst Konrád",
+     "types": [],
+     "rtg": null,
+     "nat": 1416,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Mišun Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1417,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Loun Martin",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Loutocký Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Pospíšil Marek",
+     "types": [],
+     "rtg": null,
+     "nat": 1497,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Zapletal Milan",
+     "types": [],
+     "rtg": null,
+     "nat": 1783,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Flejberk Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1729,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Líbal Lubomír",
+     "types": [],
+     "rtg": null,
+     "nat": 1782,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Brückner Michal",
+     "types": [],
+     "rtg": null,
+     "nat": 1684,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "STAV-IZOL ISO Olomouc C",
+   "captain": "Přenosil Jiří",
+   "players": [
+    {
+     "no": 1,
+     "name": "Přenosil Jiří",
+     "types": [
+      "V",
+      "K"
+     ],
+     "rtg": null,
+     "nat": 2045,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Svoboda Robert",
+     "types": [
+      "ZK"
+     ],
+     "rtg": null,
+     "nat": 1520,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Svoboda Radovan",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1581,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Wagner Rostislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1358,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Kubisa Vladimír",
+     "types": [],
+     "rtg": null,
+     "nat": 1589,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Tomášek Ladislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1795,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Lemrová Viktorie",
+     "types": [],
+     "rtg": null,
+     "nat": 1335,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Bartoš Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1343,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Horváth Filip",
+     "types": [],
+     "rtg": null,
+     "nat": 1484,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Tomášek Alan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Šternberk C",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Vosyka David",
+     "types": [],
+     "rtg": null,
+     "nat": 1368,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Špunda Adam",
+     "types": [],
+     "rtg": null,
+     "nat": 1206,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Novobilský Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1045,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Swaczyna František",
+     "types": [],
+     "rtg": null,
+     "nat": 1248,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Loutocká Mariana",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Pavlík Petr",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1810,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Šuba Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1721,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Loutocká Eliška",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Špunda Ondřej",
+     "types": [],
+     "rtg": null,
+     "nat": 1076,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Novobilská Nela",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Petrůj Maxim",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Wrana Daniel",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Bohuňovice C",
+   "captain": "Telařík Mojmír",
+   "players": [
+    {
+     "no": 1,
+     "name": "Telařík Radek",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1874,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Telařík Mojmír",
+     "types": [
+      "V",
+      "K"
+     ],
+     "rtg": null,
+     "nat": 1660,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Telařík Daniel",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1602,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Hojgr Karel",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1605,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Peřina Josef",
+     "types": [],
+     "rtg": null,
+     "nat": 1506,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Novák Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1347,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Koranda Ladislav",
+     "types": [
+      "ZK"
+     ],
+     "rtg": null,
+     "nat": 1341,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Molnar Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1240,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Zamazal Tobiáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Zamazal Martin",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Krejčí Pavel",
+     "types": [],
+     "rtg": null,
+     "nat": 1348,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Telařík Marek",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "STAV-IZOL ISO Olomouc D",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Zbořil Tomáš",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 2014,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Štěpán Petr",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1680,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Škarabela Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1405,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Čunderle Marek",
+     "types": [],
+     "rtg": null,
+     "nat": 1069,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Bádal Vojtěch",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Vaněčka Adam",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Štěpán Vítězslav",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Sigmia Olomouc C",
+   "captain": "Křížan Michal",
+   "players": [
+    {
+     "no": 1,
+     "name": "Ševčík Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1679,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Šiška Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1528,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Urbánek Jaroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1476,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Grúz Jiří",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1678,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Klech Jaroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1428,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Pinďura Vladimír",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1432,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Mistrík Martin",
+     "types": [],
+     "rtg": null,
+     "nat": 1415,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Poisl Milan",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1539,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Drahník Jan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Zavadil Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1048,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Křížan Michal",
+     "types": [
+      "K"
+     ],
+     "rtg": null,
+     "nat": 1337,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Smékal Matěj",
+     "types": [],
+     "rtg": null,
+     "nat": 1000,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Matadoor Přáslavice",
+   "captain": "Coufal František",
+   "players": [
+    {
+     "no": 1,
+     "name": "Chrascina Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1464,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Zavadil Stanislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1620,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Vítězslav Coufal",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Kohl Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1412,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Krejčí Karel",
+     "types": [
+      "ZK"
+     ],
+     "rtg": null,
+     "nat": 1371,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Michl Vladimír",
+     "types": [],
+     "rtg": null,
+     "nat": 1356,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Jan Bilička",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Coufal František",
+     "types": [
+      "K"
+     ],
+     "rtg": null,
+     "nat": 1391,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Rotter Pavel",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Tatran Litovel D",
+   "captain": "Krejčí Jan",
+   "players": [
+    {
+     "no": 1,
+     "name": "Krejčí Jan",
+     "types": [
+      "V",
+      "K"
+     ],
+     "rtg": null,
+     "nat": 2049,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Gerych Jan",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1969,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Vytásek Vladimír",
+     "types": [],
+     "rtg": null,
+     "nat": 1656,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Kolář Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1302,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Blümel Tobiáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1052,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Hampl Martin",
+     "types": [],
+     "rtg": null,
+     "nat": 1498,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Pudilová Anna",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Dlabal Vojtěch",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Laufer Adam",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Hájková Zdeňka",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  }
+ ],
+ "rounds": [
+  {
+   "no": 1,
+   "date": "2026-10-17",
+   "matches": [
+    {
+     "home": "ŠK Bohuňovice C",
+     "away": "Sigmia Olomouc C"
+    },
+    {
+     "home": "ŠK Šternberk C",
+     "away": "ŠK Šternberk B"
+    },
+    {
+     "home": "STAV-IZOL ISO Olomouc C",
+     "away": "STAV-IZOL ISO Olomouc D"
+    },
+    {
+     "home": "Tatran Litovel C",
+     "away": "Matadoor Přáslavice"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "date": "2026-11-07",
+   "matches": [
+    {
+     "home": "Matadoor Přáslavice",
+     "away": "ŠK Šternberk C"
+    },
+    {
+     "home": "Sigmia Olomouc C",
+     "away": "STAV-IZOL ISO Olomouc C"
+    },
+    {
+     "home": "ŠK Šternberk B",
+     "away": "ŠK Bohuňovice C"
+    },
+    {
+     "home": "Tatran Litovel D",
+     "away": "Tatran Litovel C"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "date": "2026-11-21",
+   "matches": [
+    {
+     "home": "ŠK Bohuňovice C",
+     "away": "Matadoor Přáslavice"
+    },
+    {
+     "home": "ŠK Šternberk C",
+     "away": "Tatran Litovel D"
+    },
+    {
+     "home": "STAV-IZOL ISO Olomouc C",
+     "away": "ŠK Šternberk B"
+    },
+    {
+     "home": "STAV-IZOL ISO Olomouc D",
+     "away": "Sigmia Olomouc C"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "date": "2026-12-05",
+   "matches": [
+    {
+     "home": "Matadoor Přáslavice",
+     "away": "STAV-IZOL ISO Olomouc C"
+    },
+    {
+     "home": "ŠK Šternberk B",
+     "away": "STAV-IZOL ISO Olomouc D"
+    },
+    {
+     "home": "Tatran Litovel C",
+     "away": "ŠK Šternberk C"
+    },
+    {
+     "home": "Tatran Litovel D",
+     "away": "ŠK Bohuňovice C"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "date": "2027-01-09",
+   "matches": [
+    {
+     "home": "Sigmia Olomouc C",
+     "away": "ŠK Šternberk B"
+    },
+    {
+     "home": "ŠK Bohuňovice C",
+     "away": "Tatran Litovel C"
+    },
+    {
+     "home": "STAV-IZOL ISO Olomouc C",
+     "away": "Tatran Litovel D"
+    },
+    {
+     "home": "STAV-IZOL ISO Olomouc D",
+     "away": "Matadoor Přáslavice"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "date": "2027-01-23",
+   "matches": [
+    {
+     "home": "Matadoor Přáslavice",
+     "away": "Sigmia Olomouc C"
+    },
+    {
+     "home": "ŠK Šternberk C",
+     "away": "ŠK Bohuňovice C"
+    },
+    {
+     "home": "Tatran Litovel C",
+     "away": "STAV-IZOL ISO Olomouc C"
+    },
+    {
+     "home": "Tatran Litovel D",
+     "away": "STAV-IZOL ISO Olomouc D"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "date": "2027-02-06",
+   "matches": [
+    {
+     "home": "Sigmia Olomouc C",
+     "away": "Tatran Litovel D"
+    },
+    {
+     "home": "ŠK Šternberk B",
+     "away": "Matadoor Přáslavice"
+    },
+    {
+     "home": "STAV-IZOL ISO Olomouc C",
+     "away": "ŠK Šternberk C"
+    },
+    {
+     "home": "STAV-IZOL ISO Olomouc D",
+     "away": "Tatran Litovel C"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "date": "2027-02-20",
+   "matches": [
+    {
+     "home": "ŠK Bohuňovice C",
+     "away": "STAV-IZOL ISO Olomouc C"
+    },
+    {
+     "home": "ŠK Šternberk C",
+     "away": "STAV-IZOL ISO Olomouc D"
+    },
+    {
+     "home": "Tatran Litovel C",
+     "away": "Sigmia Olomouc C"
+    },
+    {
+     "home": "Tatran Litovel D",
+     "away": "ŠK Šternberk B"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "date": "2027-03-13",
+   "matches": [
+    {
+     "home": "Matadoor Přáslavice",
+     "away": "Tatran Litovel D"
+    },
+    {
+     "home": "Sigmia Olomouc C",
+     "away": "ŠK Šternberk C"
+    },
+    {
+     "home": "ŠK Šternberk B",
+     "away": "Tatran Litovel C"
+    },
+    {
+     "home": "STAV-IZOL ISO Olomouc D",
+     "away": "ŠK Bohuňovice C"
+    }
+   ]
+  }
+ ]
+}

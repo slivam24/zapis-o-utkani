@@ -1,0 +1,944 @@
+{
+ "id": "c3490",
+ "short": "KP ml.",
+ "name": "Krajský přebor žákovských družstev",
+ "group": "",
+ "boards": 6,
+ "region": "KHSS",
+ "chesscz": 3490,
+ "season": "2026/2027",
+ "url": "https://www.chess.cz/soutez/3490/",
+ "teams": [
+  {
+   "name": "TJ Jiskra Jaroměř",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Archlebová Iva",
+     "types": [
+      "D"
+     ],
+     "rtg": null,
+     "nat": 1399,
+     "fide": 1605
+    },
+    {
+     "no": 2,
+     "name": "Archlebová Eva",
+     "types": [
+      "D"
+     ],
+     "rtg": null,
+     "nat": 1287,
+     "fide": 1475
+    },
+    {
+     "no": 3,
+     "name": "Balcar Kryštof",
+     "types": [],
+     "rtg": null,
+     "nat": 1125,
+     "fide": 1402
+    },
+    {
+     "no": 4,
+     "name": "Semerák Radim",
+     "types": [],
+     "rtg": null,
+     "nat": 1098,
+     "fide": 1477
+    },
+    {
+     "no": 5,
+     "name": "Pham Khanh Nam",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Bém Adam",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Siriak Maksym",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Šubrt Mikuláš",
+     "types": [],
+     "rtg": null,
+     "nat": 1028,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Vrba Milan",
+     "types": [
+      "M"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Bárta Aleš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Žákechová Eliška",
+     "types": [
+      "D"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Jeremiáš Jan",
+     "types": [
+      "M"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Kaválek Vít",
+     "types": [
+      "M"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Hrabík Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 15,
+     "name": "Bejr Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 16,
+     "name": "Tauchman Ondřej",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 17,
+     "name": "Gabara Vít",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 18,
+     "name": "Cölba Richard",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠŠPM Lipky HK B",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Rejzek Zdeněk",
+     "types": [
+      "V",
+      "M"
+     ],
+     "rtg": null,
+     "nat": 1643,
+     "fide": 1793
+    },
+    {
+     "no": 2,
+     "name": "Makový Matouš",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1553,
+     "fide": 1606
+    },
+    {
+     "no": 3,
+     "name": "Rejzek Ondřej",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1462,
+     "fide": 1580
+    },
+    {
+     "no": 4,
+     "name": "Holubář Roman",
+     "types": [],
+     "rtg": null,
+     "nat": 1335,
+     "fide": 1489
+    },
+    {
+     "no": 5,
+     "name": "Nagy Tomáš",
+     "types": [
+      "M"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Kašpar Antonín",
+     "types": [],
+     "rtg": null,
+     "nat": 1065,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Pecina Vratislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1046,
+     "fide": 1423
+    },
+    {
+     "no": 8,
+     "name": "Derner Filip",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Vaněk Tadeáš",
+     "types": [
+      "M"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Matoušek Filip",
+     "types": [
+      "M"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Koupil Jáchym",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Kašparová Ema",
+     "types": [
+      "D",
+      "M"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Müller Jakub",
+     "types": [
+      "M"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Kulda Michael",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Lípa C",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Rudová Jana",
+     "types": [
+      "D",
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1549,
+     "fide": 1684
+    },
+    {
+     "no": 2,
+     "name": "Myronova Sofia",
+     "types": [
+      "D",
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1573,
+     "fide": 1717
+    },
+    {
+     "no": 3,
+     "name": "Brož Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1107,
+     "fide": 1452
+    },
+    {
+     "no": 4,
+     "name": "Hrubý Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Smutek David",
+     "types": [],
+     "rtg": null,
+     "nat": 1043,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Štochl Petr",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Hanka Václav",
+     "types": [
+      "M"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Jenčovský Jan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Nečas Robin",
+     "types": [
+      "M"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Lhota David",
+     "types": [
+      "M"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Zelba Matěj",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Enkhbaatar Enkh-Erdem",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Nagy Rozálie",
+     "types": [
+      "D"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Ruda Matěj",
+     "types": [
+      "M"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Panda Rychnov n. K. B",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Kubíček Adam",
+     "types": [
+      "M"
+     ],
+     "rtg": null,
+     "nat": 1525,
+     "fide": 1637
+    },
+    {
+     "no": 2,
+     "name": "Kulštejn Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1060,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Rozum Matěj",
+     "types": [
+      "M"
+     ],
+     "rtg": null,
+     "nat": 1036,
+     "fide": 1456
+    },
+    {
+     "no": 4,
+     "name": "Kroulík Ondřej",
+     "types": [],
+     "rtg": null,
+     "nat": 1086,
+     "fide": 1442
+    },
+    {
+     "no": 5,
+     "name": "Vejžvalda Vojtěch",
+     "types": [],
+     "rtg": null,
+     "nat": 1068,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Krystlíková Salome",
+     "types": [
+      "D"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Janko Tobias",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Žaludková Julie",
+     "types": [
+      "D"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Černoch Vít",
+     "types": [
+      "M"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Korcina Karel",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Pražák William",
+     "types": [
+      "M"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Pražák Benedikt",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Dařílek Matyáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "TJ Náchod",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Cvrčková Lucie Anna",
+     "types": [
+      "D"
+     ],
+     "rtg": null,
+     "nat": 1170,
+     "fide": 1411
+    },
+    {
+     "no": 2,
+     "name": "Franc Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Frenchko Maksym",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Bubeníček Filip",
+     "types": [
+      "M"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Čapek Daniel",
+     "types": [
+      "M"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Hepnar Vojtěch",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Nehyba Erik",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Vokůrka Jaroslav",
+     "types": [
+      "M"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Horvát Matěj",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Polák Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Frenchko Anatolii",
+     "types": [
+      "M"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Tereshchuk Artem",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Stejskal Filip",
+     "types": [
+      "M"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Jungwirth Matyáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 15,
+     "name": "Jungwirth Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 16,
+     "name": "Čapek Filip",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 17,
+     "name": "Téra Štěpán",
+     "types": [
+      "M"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 18,
+     "name": "Špelda Kryštof",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 19,
+     "name": "Bořek Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 20,
+     "name": "Yahelska Vita",
+     "types": [
+      "D"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Panda Rychnov n. K. C",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Špingr Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1051,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Hrubý Jindřich",
+     "types": [],
+     "rtg": null,
+     "nat": 1010,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Dvořák Vojtěch",
+     "types": [],
+     "rtg": null,
+     "nat": 1072,
+     "fide": 1505
+    },
+    {
+     "no": 4,
+     "name": "Boleček Jonáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Schüler Filip",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Zábrodský Ondřej",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Dvořáková Karolína",
+     "types": [
+      "D",
+      "M"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Vaněk Václav",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Schülerová Jana",
+     "types": [
+      "D"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Jindra Tomáš",
+     "types": [
+      "M"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Jindra Lukáš",
+     "types": [
+      "M"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  }
+ ],
+ "rounds": [
+  {
+   "no": 1,
+   "date": "2026-11-07",
+   "matches": [
+    {
+     "home": "Panda Rychnov n. K. B",
+     "away": "Panda Rychnov n. K. C"
+    },
+    {
+     "home": "TJ Jiskra Jaroměř",
+     "away": "ŠŠPM Lipky HK B"
+    },
+    {
+     "home": "TJ Náchod",
+     "away": "ŠK Lípa C"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "date": "2026-11-28",
+   "matches": [
+    {
+     "home": "Panda Rychnov n. K. B",
+     "away": "TJ Jiskra Jaroměř"
+    },
+    {
+     "home": "Panda Rychnov n. K. C",
+     "away": "TJ Náchod"
+    },
+    {
+     "home": "ŠŠPM Lipky HK B",
+     "away": "ŠK Lípa C"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "date": "2026-11-28",
+   "matches": [
+    {
+     "home": "ŠK Lípa C",
+     "away": "Panda Rychnov n. K. B"
+    },
+    {
+     "home": "ŠŠPM Lipky HK B",
+     "away": "TJ Náchod"
+    },
+    {
+     "home": "TJ Jiskra Jaroměř",
+     "away": "Panda Rychnov n. K. C"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "date": "2026-11-28",
+   "matches": [
+    {
+     "home": "Panda Rychnov n. K. C",
+     "away": "ŠŠPM Lipky HK B"
+    },
+    {
+     "home": "ŠK Lípa C",
+     "away": "TJ Jiskra Jaroměř"
+    },
+    {
+     "home": "TJ Náchod",
+     "away": "Panda Rychnov n. K. B"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "date": "2027-01-16",
+   "matches": [
+    {
+     "home": "ŠK Lípa C",
+     "away": "Panda Rychnov n. K. C"
+    },
+    {
+     "home": "ŠŠPM Lipky HK B",
+     "away": "Panda Rychnov n. K. B"
+    },
+    {
+     "home": "TJ Náchod",
+     "away": "TJ Jiskra Jaroměř"
+    }
+   ]
+  }
+ ]
+}
