@@ -8,7 +8,8 @@
       "group": "",
       "tnr": 1507857,
       "boards": 8,
-      "region": "UKSS"
+      "region": "UKSS",
+      "chesscz": 3459
     },
     {
       "id": "kp2a",
@@ -17,7 +18,8 @@
       "group": "A",
       "tnr": 1508693,
       "boards": 8,
-      "region": "UKSS"
+      "region": "UKSS",
+      "chesscz": 3460
     },
     {
       "id": "kp2b",
@@ -26,7 +28,8 @@
       "group": "B",
       "tnr": 1511935,
       "boards": 8,
-      "region": "UKSS"
+      "region": "UKSS",
+      "chesscz": 3461
     },
     {
       "id": "kp3a",
@@ -35,7 +38,8 @@
       "group": "A",
       "tnr": 1508277,
       "boards": 5,
-      "region": "UKSS"
+      "region": "UKSS",
+      "chesscz": 3462
     },
     {
       "id": "kp3b",
@@ -44,7 +48,591 @@
       "group": "B",
       "tnr": 1508895,
       "boards": 5,
-      "region": "UKSS"
+      "region": "UKSS",
+      "chesscz": 3463
+    },
+    {
+      "id": "t1464172",
+      "short": "Extraliga",
+      "name": "šachy.cz Extraliga",
+      "group": "",
+      "tnr": 1464172,
+      "boards": 8,
+      "region": "CR",
+      "chesscz": 3379,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1469712",
+      "short": "1. liga východ",
+      "name": "1. liga - východ",
+      "group": "",
+      "tnr": 1469712,
+      "boards": 8,
+      "region": "CR",
+      "chesscz": 3381,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1464431",
+      "short": "1. liga západ",
+      "name": "1. liga - západ",
+      "group": "",
+      "tnr": 1464431,
+      "boards": 8,
+      "region": "CR",
+      "chesscz": 3380,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1464124",
+      "short": "2. liga A",
+      "name": "2. liga 'A'",
+      "group": "",
+      "tnr": 1464124,
+      "boards": 8,
+      "region": "CR",
+      "chesscz": 3382,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1470450",
+      "short": "2. liga B",
+      "name": "2. liga 'B'",
+      "group": "",
+      "tnr": 1470450,
+      "boards": 8,
+      "region": "CR",
+      "chesscz": 3383,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1466071",
+      "short": "2. liga C",
+      "name": "2. liga 'C'",
+      "group": "",
+      "tnr": 1466071,
+      "boards": 8,
+      "region": "CR",
+      "chesscz": 3384,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1463851",
+      "short": "2. liga D",
+      "name": "2. liga 'D'",
+      "group": "",
+      "tnr": 1463851,
+      "boards": 8,
+      "region": "CR",
+      "chesscz": 3385,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1465074",
+      "short": "2. liga E",
+      "name": "2. liga 'E'",
+      "group": "",
+      "tnr": 1465074,
+      "boards": 8,
+      "region": "CR",
+      "chesscz": 3386,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1464724",
+      "short": "2. liga F",
+      "name": "2. liga 'F'",
+      "group": "",
+      "tnr": 1464724,
+      "boards": 8,
+      "region": "CR",
+      "chesscz": 3387,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1486407",
+      "short": "Extraliga ml. východ",
+      "name": "Extraliga mládeže – skupina východ",
+      "group": "",
+      "tnr": 1486407,
+      "boards": 6,
+      "region": "CR",
+      "chesscz": 3393,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1486408",
+      "short": "Extraliga ml. západ",
+      "name": "Extraliga mládeže – skupina západ",
+      "group": "",
+      "tnr": 1486408,
+      "boards": 6,
+      "region": "CR",
+      "chesscz": 3392,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1493546",
+      "short": "1. liga ml. A",
+      "name": "1. liga mládeže 'A'",
+      "group": "",
+      "tnr": 1493546,
+      "boards": 6,
+      "region": "CR",
+      "chesscz": 3396,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1488956",
+      "short": "1. liga ml. B",
+      "name": "1. liga mládeže 'B'",
+      "group": "",
+      "tnr": 1488956,
+      "boards": 6,
+      "region": "CR",
+      "chesscz": 3397,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1488961",
+      "short": "1. liga ml. C",
+      "name": "1. liga mládeže 'C'",
+      "group": "",
+      "tnr": 1488961,
+      "boards": 6,
+      "region": "CR",
+      "chesscz": 3398,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1491891",
+      "short": "1. liga ml. D",
+      "name": "1. liga mládeže 'D'",
+      "group": "",
+      "tnr": 1491891,
+      "boards": 6,
+      "region": "CR",
+      "chesscz": 3399,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1505023",
+      "short": "2. divize A",
+      "name": "2. divize - zákl. skupina A",
+      "group": "",
+      "tnr": 1505023,
+      "boards": 8,
+      "region": "JSS",
+      "chesscz": 3476,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1009910",
+      "short": "KP",
+      "name": "Krajský přebor",
+      "group": "",
+      "tnr": 1009910,
+      "boards": 8,
+      "region": "KHSS",
+      "chesscz": 3452,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1009033",
+      "short": "KS západ",
+      "name": "Krajská soutěž - západ",
+      "group": "",
+      "tnr": 1009033,
+      "boards": 8,
+      "region": "KHSS",
+      "chesscz": 3454,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1521895",
+      "short": "RP B",
+      "name": "Regionální přebor - B",
+      "group": "",
+      "tnr": 1521895,
+      "boards": 5,
+      "region": "KHSS",
+      "chesscz": 3456,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1498947",
+      "short": "KP",
+      "name": "Krajský přebor I",
+      "group": "",
+      "tnr": 1498947,
+      "boards": 8,
+      "region": "KSSKV",
+      "chesscz": 3432,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1469713",
+      "short": "KP",
+      "name": "Krajský přebor",
+      "group": "",
+      "tnr": 1469713,
+      "boards": 8,
+      "region": "KSSV",
+      "chesscz": 3416,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1486612",
+      "short": "KS",
+      "name": "Krajská soutěž",
+      "group": "",
+      "tnr": 1486612,
+      "boards": 8,
+      "region": "KSSV",
+      "chesscz": 3417,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1491642",
+      "short": "RS",
+      "name": "Regionální soutěž",
+      "group": "",
+      "tnr": 1491642,
+      "boards": 5,
+      "region": "KSSV",
+      "chesscz": 3418,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1469710",
+      "short": "KP",
+      "name": "Krajský přebor",
+      "group": "",
+      "tnr": 1469710,
+      "boards": 8,
+      "region": "MKSS",
+      "chesscz": 3400,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1492183",
+      "short": "KS A",
+      "name": "Krajská soutěž „A“",
+      "group": "",
+      "tnr": 1492183,
+      "boards": 8,
+      "region": "MKSS",
+      "chesscz": 3401,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1493769",
+      "short": "KS B",
+      "name": "Krajská soutěž „B“",
+      "group": "",
+      "tnr": 1493769,
+      "boards": 8,
+      "region": "MKSS",
+      "chesscz": 3402,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1492252",
+      "short": "KS C",
+      "name": "Krajská soutěž „C“",
+      "group": "",
+      "tnr": 1492252,
+      "boards": 8,
+      "region": "MKSS",
+      "chesscz": 3403,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1508284",
+      "short": "MP Ostrava",
+      "name": "Městský přebor Ostrava",
+      "group": "",
+      "tnr": 1508284,
+      "boards": 8,
+      "region": "MKSS",
+      "chesscz": 3485,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1503416",
+      "short": "OP Frýdek-Místek",
+      "name": "Okresní přebor Frýdek-Místek",
+      "group": "",
+      "tnr": 1503416,
+      "boards": 5,
+      "region": "MKSS",
+      "chesscz": 3404,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1497155",
+      "short": "OP Karviná",
+      "name": "Okresní přebor Karviná - základní část",
+      "group": "",
+      "tnr": 1497155,
+      "boards": 8,
+      "region": "MKSS",
+      "chesscz": 3429,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1505961",
+      "short": "OP Opava",
+      "name": "Okresní přebor Opava",
+      "group": "",
+      "tnr": 1505961,
+      "boards": 5,
+      "region": "MKSS",
+      "chesscz": 3482,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1511241",
+      "short": "MS Ostrava",
+      "name": "Městská soutěž Ostrava",
+      "group": "",
+      "tnr": 1511241,
+      "boards": 5,
+      "region": "MKSS",
+      "chesscz": 3486,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1511503",
+      "short": "OS Opava",
+      "name": "Okresní soutěž Opava",
+      "group": "",
+      "tnr": 1511503,
+      "boards": 5,
+      "region": "MKSS",
+      "chesscz": 3483,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1497719",
+      "short": "KP",
+      "name": "Krajský přebor I",
+      "group": "",
+      "tnr": 1497719,
+      "boards": 8,
+      "region": "PDSS",
+      "chesscz": 3446,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1497777",
+      "short": "KP II východ",
+      "name": "Krajský přebor II východ",
+      "group": "",
+      "tnr": 1497777,
+      "boards": 8,
+      "region": "PDSS",
+      "chesscz": 3447,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1497789",
+      "short": "KP II západ",
+      "name": "Krajský přebor II západ",
+      "group": "",
+      "tnr": 1497789,
+      "boards": 8,
+      "region": "PDSS",
+      "chesscz": 3448,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1497805",
+      "short": "KS jih",
+      "name": "Krajská soutěž jih",
+      "group": "",
+      "tnr": 1497805,
+      "boards": 5,
+      "region": "PDSS",
+      "chesscz": 3450,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1497802",
+      "short": "KS východ",
+      "name": "Krajská soutěž východ",
+      "group": "",
+      "tnr": 1497802,
+      "boards": 5,
+      "region": "PDSS",
+      "chesscz": 3449,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1497807",
+      "short": "KS západ",
+      "name": "Krajská soutěž západ",
+      "group": "",
+      "tnr": 1497807,
+      "boards": 5,
+      "region": "PDSS",
+      "chesscz": 3451,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1501347",
+      "short": "KS A",
+      "name": "Krajská soutěž 'A'",
+      "group": "",
+      "tnr": 1501347,
+      "boards": 8,
+      "region": "SSS",
+      "chesscz": 3465,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1501353",
+      "short": "KS B",
+      "name": "Krajská soutěž 'B'",
+      "group": "",
+      "tnr": 1501353,
+      "boards": 8,
+      "region": "SSS",
+      "chesscz": 3466,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1501008",
+      "short": "RP B",
+      "name": "Regionální přebor 'B'",
+      "group": "",
+      "tnr": 1501008,
+      "boards": 8,
+      "region": "SSS",
+      "chesscz": 3468,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1467912",
+      "short": "RS C",
+      "name": "Regionální soutěž 'C'",
+      "group": "",
+      "tnr": 1467912,
+      "boards": 5,
+      "region": "SSS",
+      "chesscz": 3473,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1467913",
+      "short": "RS D",
+      "name": "Regionální soutěž 'D'",
+      "group": "",
+      "tnr": 1467913,
+      "boards": 5,
+      "region": "SSS",
+      "chesscz": 3474,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1480116",
+      "short": "KP ml.",
+      "name": "KP družstev mládeže",
+      "group": "",
+      "tnr": 1480116,
+      "boards": 6,
+      "region": "SSS",
+      "chesscz": 3415,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1497236",
+      "short": "KP",
+      "name": "Krajský přebor",
+      "group": "",
+      "tnr": 1497236,
+      "boards": 8,
+      "region": "SSLK",
+      "chesscz": 3439,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1497251",
+      "short": "KS I východ",
+      "name": "Krajská soutěž I. - východ",
+      "group": "",
+      "tnr": 1497251,
+      "boards": 5,
+      "region": "SSLK",
+      "chesscz": 3440,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1497247",
+      "short": "KS I západ",
+      "name": "Krajská soutěž I. - západ",
+      "group": "",
+      "tnr": 1497247,
+      "boards": 5,
+      "region": "SSLK",
+      "chesscz": 3441,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1500617",
+      "short": "KP",
+      "name": "Krajský přebor",
+      "group": "",
+      "tnr": 1500617,
+      "boards": 8,
+      "region": "SSOK",
+      "chesscz": 3422,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1469141",
+      "short": "KP",
+      "name": "Krajský přebor",
+      "group": "",
+      "tnr": 1469141,
+      "boards": 8,
+      "region": "SSZK",
+      "chesscz": 3405,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1469143",
+      "short": "RP Kroměříž",
+      "name": "Regionální přebor - Kroměříž",
+      "group": "",
+      "tnr": 1469143,
+      "boards": 8,
+      "region": "SSZK",
+      "chesscz": 3408,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1502076",
+      "short": "RS Kroměříž",
+      "name": "Regionální soutěž - Kroměříž",
+      "group": "",
+      "tnr": 1502076,
+      "boards": 5,
+      "region": "SSZK",
+      "chesscz": 3412,
+      "season": "2026/2027"
+    },
+    {
+      "id": "t1502885",
+      "short": "RS Uherské Hradiště",
+      "name": "Regionální soutěž - Uherské Hradiště",
+      "group": "",
+      "tnr": 1502885,
+      "boards": 5,
+      "region": "SSZK",
+      "chesscz": 3414,
+      "season": "2026/2027"
     }
   ]
 }

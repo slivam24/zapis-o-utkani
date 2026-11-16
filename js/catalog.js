@@ -46,23 +46,63 @@ export function regionFromText(text) {
   return null;
 }
 
-const YOUTH = /mladez|dorost|zac|junior|\bu ?1\d\b|\bu ?2\d\b/;
+const YOUTH = /mladez|dorost|zaci|zaku|zakyn|junior|\bu ?1\d\b|\bu ?2\d\b/;
 const ROMAN = { i: 1, ii: 2, iii: 3, iv: 4, v: 5 };
+const ROMAN_OUT = ['', 'I', 'II', 'III', 'IV', 'V'];
+const SIDES = [
+  [/vychod/, 'východ'],
+  [/zapad/, 'západ'],
+  [/(^|[^a-z])sever([^a-z]|$)/, 'sever'],
+  [/(^|[^a-z])jih([^a-z]|$)/, 'jih'],
+];
 
-/** Skupina soutěže: písmeno ('A'), nebo východ/západ. */
+/** Skupina soutěže: písmeno ('A'), nebo světová strana (východ, západ, sever, jih). */
 function groupOf(name, group) {
   if (group && String(group).trim()) return String(group).trim();
   const t = fold(name);
-  if (/vychod/.test(t)) return 'východ';
-  if (/zapad/.test(t)) return 'západ';
-  const m = /['"„“‚‘’]\s*([a-z])\s*['"„“‚‘’]|skupina\s+([a-z])\b|\s([a-z])$/i.exec(String(name).trim());
+  for (const [re, label] of SIDES) if (re.test(t)) return label;
+  const m = /['"„“‚‘’]\s*([a-z])\s*['"„“‚‘’]|skupin\w*\s+([a-z])\b|\s([a-z])$/i.exec(String(name).trim());
   return m ? (m[1] ?? m[2] ?? m[3]).toUpperCase() : '';
 }
 
+/** Nižší soutěže: [vzor v názvu, zkratka, úroveň]. Místo (Opava, Kroměříž) se bere z textu za názvem. */
+const LOWER = [
+  [/krajsk\w* soutez/, 'KS', 15],
+  [/oblastn\w* prebor/, 'OblP', 17],
+  [/regionaln\w* prebor/, 'RP', 18],
+  [/regionaln\w* soutez/, 'RS', 19],
+  [/okresn\w* prebor|prebor okresu/, 'OP', 20],
+  [/mestsk\w* prebor/, 'MP', 20],
+  [/okresn\w* soutez/, 'OS', 21],
+  [/mestsk\w* soutez/, 'MS', 21],
+];
+
+/** Třída soutěže z názvu: „II. třídy“, „KP II“, „Krajská soutěž I.“, „2. třídy“. */
+function classOf(t, after = '') {
+  const m =
+    /\b(i{1,3}|iv|v)\.?\s*tr/.exec(t) ??
+    /\b(\d)\.\s*tr/.exec(t) ??
+    (after ? new RegExp(`(?:${after})\\s*(i{1,3}|iv|v)\\b\\.?`).exec(t) : null);
+  return m ? { cls: ROMAN[m[1]] ?? Number(m[1]), explicit: true } : { cls: 1, explicit: false };
+}
+
+/** Místo za názvem soutěže: „Okresní přebor Frýdek-Místek“ → Frýdek-Místek, „- Kroměříž“ → Kroměříž. */
+function placeOf(name, re) {
+  const t = fold(name);
+  const m = re.exec(t);
+  if (!m) return '';
+  let rest = String(name).slice(m.index + m[0].length);
+  rest = rest.replace(/[-–]\s*z[aá]kl\S*(\s+\S+)?\s*$/i, ''); // „- základní část“, „- zákl. skupina A“
+  rest = rest.replace(/^[\s.\-–:]+/, '').replace(/['"„“‚‘’]\s*\w\s*['"„“‚‘’]/g, '').trim();
+  if (!rest || /^(i{1,3}|iv|v)\.?$/i.test(rest) || /^\w$/.test(rest)) return '';
+  if (SIDES.some(([r]) => r.test(fold(rest)))) return '';
+  return rest.replace(/\s*[-–]\s*$/, '').trim();
+}
+
 /**
- * Úroveň soutěže: { youth, rank, cls, group }. Menší rank = vyšší soutěž.
- * Extraliga 0, 1. liga 1, 2. liga 2, 3. liga 3, krajský přebor 10 (+ třída), krajská soutěž 15,
- * okresní a regionální 20, ostatní 30.
+ * Úroveň soutěže: { youth, rank, cls, group, kind, place }. Menší rank = vyšší soutěž.
+ * Extraliga 0, 1. liga 1, 2. liga 2, 3. liga 3, krajský přebor nebo divize 10 (+ třída),
+ * krajská soutěž 15, oblastní, regionální, okresní a městské 17–21, ostatní 30.
  */
 export function tierOf(comp) {
   const name = comp?.name ?? '';
@@ -71,27 +111,51 @@ export function tierOf(comp) {
   const group = groupOf(name, comp?.group);
   let rank = 30;
   let cls = 1;
+  let kind = '';
+  let place = '';
+  let explicit = false;
   if (/extraliga/.test(t)) rank = 0;
   else if (/finale/.test(t)) rank = 0.5;
   else if (/(\d)\.\s*liga/.test(t)) rank = Number(/(\d)\.\s*liga/.exec(t)[1]);
   else if (/krajsk\w* prebor|\bkp\b/.test(t)) {
-    const m = /\b(i{1,3}|iv|v)\.?\s*tr/.exec(t) ?? /\bkp\s*(i{1,3}|iv|v)\b/.exec(t) ?? /\b(\d)\.\s*tr/.exec(t);
-    cls = m ? ROMAN[m[1]] ?? Number(m[1]) : 1;
+    ({ cls, explicit } = classOf(t, 'kp|prebor'));
     rank = 10 + cls - 1;
-  } else if (/krajsk\w* soutez/.test(t)) rank = 15;
-  else if (/okresn|regionaln|oblastn|mestsk/.test(t)) rank = 20;
-  return { youth, rank, cls, group };
+    kind = 'KP';
+  } else if (/(\d)\.\s*(\w+\s+)?divize/.test(t)) {
+    cls = Number(/(\d)\.\s*(\w+\s+)?divize/.exec(t)[1]);
+    rank = 10 + cls - 1;
+    kind = 'divize';
+  } else {
+    for (const [re, abbr, r] of LOWER) {
+      if (re.test(t)) {
+        rank = r;
+        kind = abbr;
+        ({ cls, explicit } = classOf(t, 'soutez|prebor'));
+        rank += (cls - 1) * 0.1;
+        place = placeOf(name, re);
+        break;
+      }
+    }
+  }
+  // „Krajský přebor I“: koncové I je třída, ne skupina
+  const grp = explicit && group === ROMAN_OUT[cls] ? '' : group;
+  return { youth, rank, cls, group: grp, kind, place, explicit };
 }
 
-/** Jednotná zkratka: Extraliga, 1. liga východ, 2. liga A, KP, KP II A, KP III B, … (+ „ml.“ u mládeže). */
+/**
+ * Jednotná zkratka: Extraliga, 1. liga východ, 2. liga A, KP, KP II A, KP III B, 1. divize, KS I východ,
+ * RP B, OP Opava, MP Ostrava (+ „ml.“ u mládeže).
+ */
 export function standardShort(comp) {
-  const { youth, rank, cls, group } = tierOf(comp);
+  const { youth, rank, cls, group, kind, place, explicit } = tierOf(comp);
   const g = group ? ` ${group}` : '';
   const y = youth ? ' ml.' : '';
   if (rank === 0) return `Extraliga${y}${g}`;
   if (rank === 0.5) return `Finále${y}${g}`;
   if (rank >= 1 && rank <= 9) return `${rank}. liga${y}${g}`;
-  if (rank >= 10 && rank < 15) return `KP${cls > 1 ? ` ${['', 'I', 'II', 'III', 'IV', 'V'][cls]}` : ''}${y}${g}`;
+  if (kind === 'KP') return `KP${cls > 1 ? ` ${ROMAN_OUT[cls]}` : ''}${y}${g}`;
+  if (kind === 'divize') return `${cls}. divize${y}${g}`;
+  if (kind) return `${kind}${explicit ? ` ${ROMAN_OUT[cls]}` : ''}${place ? ` ${place}` : ''}${y}${g}`;
   return comp?.short || comp?.name || '';
 }
 

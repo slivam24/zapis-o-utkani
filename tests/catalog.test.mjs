@@ -17,6 +17,28 @@ test('zkratky podle názvu soutěže', () => {
     ['Extraliga mládeže – skupina východ', 'Extraliga ml. východ'],
     ['MČR družstev mládeže - finále A', 'Finále ml. A'],
     ["1. liga mládeže 'C'", '1. liga ml. C'],
+    // nižší soutěže z krajů (názvy z chess.cz)
+    ['Krajský přebor I.třídy', 'KP'],
+    ['Krajský přebor II', 'KP II'],
+    ['Krajský přebor I', 'KP'],
+    ['Krajský přebor II východ', 'KP II východ'],
+    ['1. jihočeská divize', '1. divize'],
+    ['2. divize - zákl. skupina A', '2. divize A'],
+    ['Krajská soutěž - západ', 'KS západ'],
+    ['Krajská soutěž „A“', 'KS A'],
+    ['Krajská soutěž jih', 'KS jih'],
+    ['Krajská soutěž I. - východ', 'KS I východ'],
+    ['Zlínská krajská soutěž - západ', 'KS západ'],
+    ['Oblastní přebor - sever', 'OblP sever'],
+    ['Regionální přebor - B', 'RP B'],
+    ["Regionální soutěž 'D'", 'RS D'],
+    ['Regionální přebor - Kroměříž', 'RP Kroměříž'],
+    ['Regionální soutěž - Uherské Hradiště', 'RS Uherské Hradiště'],
+    ['Okresní přebor Karviná - základní část', 'OP Karviná'],
+    ['Přebor okresu Šumperk', 'OP Šumperk'],
+    ['Městský přebor Ostrava', 'MP Ostrava'],
+    ['Okresní soutěž Opava', 'OS Opava'],
+    ['Krajský přebor družstev starších žáků', 'KP ml.'],
   ];
   for (const [name, short] of cases) assert.equal(standardShort(c(name)), short, name);
   // skupina z pole group má přednost
@@ -29,6 +51,10 @@ test('úroveň: extraliga nad ligami nad krajskými přebory, mládež zvlášť
   assert.equal(tierOf(c("Krajský přebor III. třídy 'A'")).rank, 12);
   assert.equal(tierOf(c("1. liga mládeže 'A'")).youth, true);
   assert.equal(tierOf(c('Krajský přebor ÚKŠS')).youth, false);
+  assert.equal(tierOf(c('2. divize - zákl. skupina A')).youth, false); // „zákl.“ není „žáci“
+  // pořadí v kraji: KP, KP II, KS, oblastní a regionální, okresní a městské
+  const order = ['Okresní soutěž Opava', 'Městský přebor Ostrava', 'Regionální přebor - B', 'Krajská soutěž „A“', "Krajský přebor II.třídy 'A'", 'Krajský přebor I.třídy'];
+  assert.deepEqual(order.map((n) => c(n)).sort(compareComps).map((x) => standardShort(x)), ['KP', 'KP II A', 'KS A', 'RP B', 'MP Ostrava', 'OS Opava']);
 });
 
 test('kraj z názvu', () => {
