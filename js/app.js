@@ -7,7 +7,7 @@ import { clean, tournamentNumber, exportUrl } from './parse.js';
 import * as store from './store.js';
 import { makeBackup, parseBackup, mergeArchive, olderThan } from './archive.js';
 import { helpPage, privacyPage } from './pages.js';
-import { encodeLink, decodeLink, hasLink, linkPayload } from './link.js';
+import { encodeLink, decodeLink, hasLink } from './link.js';
 import qrcode from './vendor/qrcode.js';
 
 const REPO = 'slivam24/zapis-o-utkani';
@@ -23,6 +23,22 @@ const stepsEl = $('#steps');
 
 let DATA = { competitions: [], generated: null };
 let S = store.loadDraft() ?? L.newMatch();
+// Otevřený krok se pamatuje pro tuto kartu, aby ho nezrušilo obnovení stránky (třeba po aktualizaci).
+const TAB_KEY = 'zapis.tab';
+const savedTab = () => {
+  try {
+    return sessionStorage.getItem(TAB_KEY);
+  } catch {
+    return null;
+  }
+};
+function rememberTab(id) {
+  try {
+    sessionStorage.setItem(TAB_KEY, id);
+  } catch {
+    /* bez sessionStorage se jen nepamatuje */
+  }
+}
 let tab = 'zapas';
 // stav panelu Přidat soutěž
 let openBoard = null; // která šachovnice má otevřený výběr výsledku
@@ -888,7 +904,10 @@ function renderAll(opts) {
 
 function goTo(id) {
   tab = id;
-  if (isStep(id)) lastStep = id;
+  if (isStep(id)) {
+    lastStep = id;
+    rememberTab(id);
+  }
   renderAll({ keepScroll: false });
 }
 
@@ -994,7 +1013,9 @@ async function showQr() {
   if (typeof CompressionStream === 'undefined') return toast('Tento prohlížeč QR kód nevytvoří, zkus jiný.');
   const issues = L.validate(S, comp()).filter((i) => i.level === 'error' && i.tab !== 'zaver');
   const base = `${location.origin}${location.pathname}`;
-  const url = await encodeLink(linkPayload(S, { compInfo: compSnapshot(), boards: boards() }), base);
+  // soutěž ze sdílených dat jde krátce (telefon má stejné soupisky), jinak celý zápis
+  const shared = DATA.competitions.find((c) => c.id === S.compId && !c.local);
+  const url = await encodeLink(S, { comp: shared, boards: boards(), compInfo: compSnapshot() }, base);
   const size = Math.min(520, window.innerWidth - 64, window.innerHeight - 260);
   const canvas = qrCanvas(url, Math.max(260, size));
   closeModal();
@@ -1033,10 +1054,21 @@ async function openFromLink() {
   history.replaceState(null, '', `${location.pathname}${location.search}`);
   let m;
   try {
-    m = await decodeLink(hash);
+    m = await decodeLink(hash, { competitions: DATA.competitions });
   } catch (e) {
-    toast(e.message);
-    return false;
+    if (e.code !== 'roster') {
+      alert(e.message);
+      return false;
+    }
+    // soupisky se liší: nejdřív zkusit stáhnout aktuální, pak teprve ohlásit chybu
+    try {
+      DATA = await refreshData();
+      $('#dataStatus').textContent = dataSummary(DATA);
+      m = await decodeLink(hash, { competitions: DATA.competitions });
+    } catch (e2) {
+      alert(e2.code === 'roster' || !e2.message ? e.message : e2.message);
+      return false;
+    }
   }
   const started = S.home.team || S.away.team || S.home.lineup.length || S.away.lineup.length;
   const inArchive = store.loadArchive().some((x) => x.id === S.id);
@@ -1050,6 +1082,7 @@ async function openFromLink() {
   save();
   tab = 'zaver';
   lastStep = 'zaver';
+  rememberTab('zaver');
   toast('Zápis je načtený z QR kódu. Podepište ho a odešlete.');
   return true;
 }
@@ -1377,6 +1410,7 @@ function newMatch() {
   S.compId = DATA.competitions[0]?.id ?? '';
   save();
   tab = 'zapas';
+  rememberTab('zapas');
   renderAll({ keepScroll: false });
 }
 
@@ -1849,9 +1883,49 @@ $('#btnRefresh').addEventListener('click', async (e) => {
   }
 });
 
+// ---------- aktualizace aplikace ----------
+// Nová verze se stáhne na pozadí. Aby nikdo nepracoval se starou (třeba telefon, který načte QR kód
+// a stará verze o odkazu se zápisem neví), aplikace se po stažení sama obnoví, pokud čeká zápis z odkazu
+// nebo byla právě spuštěná. Jinak nabídne obnovení tlačítkem, aby se nepřerušila rozdělaná práce.
+function showUpdateBar() {
+  if ($('.update-bar')) return;
+  const bar = document.createElement('div');
+  bar.className = 'update-bar';
+  bar.innerHTML = '<span>Je připravená nová verze aplikace.</span><button class="btn small" type="button">Načíst</button>';
+  $('button', bar).addEventListener('click', () => location.reload());
+  document.body.append(bar);
+}
+
+function setupUpdates() {
+  if (!('serviceWorker' in navigator)) return;
+  const startedAt = Date.now();
+  const hadController = !!navigator.serviceWorker.controller;
+  let reloading = false;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (!hadController || reloading) return; // první instalace, stránka už běží z nové verze
+    if (hasLink(location.hash) || Date.now() - startedAt < 20000) {
+      reloading = true;
+      location.reload();
+    } else showUpdateBar();
+  });
+  navigator.serviceWorker
+    .register('sw.js')
+    .then((reg) => {
+      // aplikace otevřená delší dobu: při návratu do ní se podívat po nové verzi
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') reg.update().catch(() => {});
+      });
+    })
+    .catch(() => {});
+}
+
 // ---------- start ----------
 async function init() {
+  // hlídání nové verze hned na začátku: nová verze se může nainstalovat dřív, než se stáhnou soupisky
+  setupUpdates();
   applyUi();
+  const st = savedTab();
+  if (st && isStep(st)) tab = lastStep = st;
   try {
     const r = await loadData();
     DATA = r.data;
@@ -1864,7 +1938,6 @@ async function init() {
   if (!DATA.competitions.some((c) => c.id === S.compId) && !S.compInfo) S.compId = DATA.competitions[0]?.id ?? '';
   $('#dataStatus').textContent = dataSummary(DATA);
   renderAll({ keepScroll: false });
-  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
 }
 
 init();

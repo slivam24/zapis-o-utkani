@@ -436,6 +436,13 @@ body.ov-open { overflow: hidden; }
 .prose li { margin: .25rem 0; }
 .preview:not(.zoomable) { cursor: default; }
 
+/* nová verze aplikace */
+.update-bar {
+  position: fixed; left: 50%; bottom: calc(1rem + env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 35;
+  display: flex; align-items: center; gap: .8rem; background: #111827; color: #fff; padding: .5rem .6rem .5rem 1rem;
+  border-radius: 999px; box-shadow: 0 6px 20px rgba(0,0,0,.3); font-weight: 600; max-width: calc(100vw - 2rem);
+}
+
 /* podpis na telefonu */
 .qr-hint {
   display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;

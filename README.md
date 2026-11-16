@@ -22,7 +22,10 @@ prstem a na konci vznikne **PDF** a **obrázek (PNG)** zápisu.
 Myší se podepisuje špatně. Na počítači je v kroku **Závěr a podpisy** tlačítko **Podepsat na telefonu**: ukáže QR kód,
 telefon ho načte fotoaparátem a otevře aplikaci se stejným zápisem rovnou u podpisů. Podepíše se prstem a zápis
 se odešle z telefonu. Bez serveru: zápis (bez podpisů) je zkomprimovaný přímo v odkazu v části za `#`, kterou
-prohlížeč na server neposílá (`js/link.js`). Loga družstev se nepřenášejí. QR kód kreslí knihovna
+prohlížeč na server neposílá (`js/link.js`). U soutěží ze sdílených dat jdou hráči jen jako pořadí na soupisce,
+kterou má telefon stejnou; kontrolní součet pozná, když se soupisky na zařízeních liší (telefon pak zkusí stáhnout
+aktuální). QR kód je tak malý (verze kolem 11, 61×61 modulů). Vlastní soutěže jdou celé. Loga družstev se nepřenášejí.
+Telefon se starší verzí aplikace se po načtení odkazu sám obnoví na novou verzi. QR kód kreslí knihovna
 [qrcode-generator](https://github.com/kazuhikoarase/qrcode-generator) (MIT, `js/vendor/qrcode.js`).
 
 ### Menu, nastavení a archiv
@@ -148,7 +151,7 @@ parser v `js/parse.js`. Soupisky jde vždy doplnit i ručně přímo v aplikaci.
 
 ```bash
 npm install                 # jen linkedom, pro parsování HTML v Node
-npm test                    # 70 testů: logika zápisu, parser, čtečka .xlsx, přidávání soutěží, archiv, PDF, odkaz s QR
+npm test                    # 75 testů: logika zápisu, parser, čtečka .xlsx, přidávání soutěží, archiv, PDF, odkaz s QR
 npm run serve               # lokální spuštění: http://localhost:8080
 ```
 
