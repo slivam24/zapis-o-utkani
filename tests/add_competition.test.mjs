@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { parseBoards, cleanShort, parseIssueBody, addEntry, Refused, MAX_COMPETITIONS, MIN_BOARDS, MAX_BOARDS } from '../scripts/add_competition.mjs';
+import { parseBoards, cleanShort, parseIssueBody, parseRegion, addEntry, Refused, MAX_COMPETITIONS, MIN_BOARDS, MAX_BOARDS } from '../scripts/add_competition.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -18,6 +18,10 @@ https://chess-results.com/tnr1507857.aspx?lan=5
 ### Zkratka soutěže (nepovinné)
 
 KP II A
+
+### Kraj
+
+Ústecký kraj (ÚKŠS)
 
 ### Potvrzení
 
@@ -51,6 +55,14 @@ test('čtení hlášení ze šablony', () => {
   assert.equal(got.url, 'https://chess-results.com/tnr1507857.aspx?lan=5');
   assert.equal(got.boards, '8');
   assert.equal(got.short, 'KP II A');
+  assert.equal(parseRegion(got.region), 'UKSS');
+});
+
+test('kraj: z výběru v hlášení, jinak z názvu', () => {
+  assert.equal(parseRegion('Celostátní soutěž (ŠSČR)'), 'CR');
+  assert.equal(parseRegion('Jihomoravský kraj (JmŠS)'), 'JmSS');
+  assert.equal(parseRegion('_No response_', 'Krajský přebor ÚKŠS 2026/2027'), 'UKSS');
+  assert.equal(parseRegion('', 'Turnaj bez kraje'), null);
 });
 
 test('jiné hlášení se ignoruje', () => {
@@ -58,13 +70,16 @@ test('jiné hlášení se ignoruje', () => {
   assert.throws(() => parseIssueBody(''), RangeError);
 });
 
-test('přidání soutěže', () => {
+test('přidání soutěže: jednotná zkratka a kraj', () => {
   const c = cfg();
-  const entry = addEntry(c, 123456, 8, 'EXT', info());
+  const entry = addEntry(c, 123456, 8, 'EXT', info(), 'CR');
   assert.equal(entry.id, 't123456');
-  assert.equal(entry.short, 'EXT');
+  assert.equal(entry.short, 'Extraliga'); // u běžného názvu má přednost jednotná zkratka
+  assert.equal(entry.region, 'CR');
   assert.equal(entry.season, '2026/2027');
   assert.equal(c.competitions.length, 2);
+  // neobvyklý název: zadaná zkratka
+  assert.equal(addEntry(cfg(), 777, 6, 'Pohár', info('Velikonoční pohár družstev')).short, 'Pohár');
 });
 
 test('bez zkratky se odvodí z názvu', () => {
@@ -93,5 +108,21 @@ test('nastavení soutěží v repozitáři je v pořádku', () => {
   for (const x of c.competitions) {
     assert.ok(x.boards >= MIN_BOARDS && x.boards <= MAX_BOARDS, `${x.short}: počet šachovnic`);
     assert.ok(x.short && x.name, `${x.id}: chybí název`);
+    assert.ok(x.region, `${x.id}: chybí kraj`);
   }
+});
+
+test('odebrání: vyhledání soutěže podle zkratky, id, čísla turnaje a odkazu', async () => {
+  const { findCompetitions } = await import('../scripts/remove_competition.mjs');
+  const list = [
+    { id: 'kp', short: 'KP', name: 'Krajský přebor', tnr: 1507857, region: 'UKSS' },
+    { id: 'kp2a', short: 'KP II A', name: 'Krajský přebor II. třídy', tnr: 1508693, region: 'UKSS' },
+    { id: 't999', short: 'KP II A', name: 'Krajský přebor II. třídy', tnr: 999999, region: 'JmSS' },
+  ];
+  assert.deepEqual(findCompetitions(list, 'kp').map((c) => c.id), ['kp']);
+  assert.deepEqual(findCompetitions(list, '1508693').map((c) => c.id), ['kp2a']);
+  assert.deepEqual(findCompetitions(list, 'https://chess-results.com/tnr999999.aspx?lan=5').map((c) => c.id), ['t999']);
+  assert.equal(findCompetitions(list, 'kp ii a').length, 2); // stejná zkratka ve dvou krajích: nic se nesmaže
+  assert.equal(findCompetitions(list, 'neexistuje').length, 0);
+  assert.equal(findCompetitions(list, '').length, 0);
 });

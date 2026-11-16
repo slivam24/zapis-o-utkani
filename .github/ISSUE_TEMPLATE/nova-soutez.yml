@@ -32,11 +32,34 @@ body:
         - "12"
     validations:
       required: true
+  - type: dropdown
+    id: kraj
+    attributes:
+      label: Kraj
+      description: Kam soutěž patří. V aplikaci se podle toho soutěže řadí do skupin.
+      options:
+        - "Celostátní soutěž (ŠSČR)"
+        - "Jihomoravský kraj (JmŠS)"
+        - "Jihočeský kraj (JŠS)"
+        - "Královéhradecký kraj (KHŠS)"
+        - "Karlovarský kraj (KŠSKV)"
+        - "Kraj Vysočina (KŠSV)"
+        - "Moravskoslezský kraj (MKŠS)"
+        - "Pardubický kraj (PDŠS)"
+        - "Praha (PŠS)"
+        - "Středočeský kraj (SŠS)"
+        - "Liberecký kraj (ŠSLK)"
+        - "Olomoucký kraj (ŠSOK)"
+        - "Plzeňský kraj (ŠSPK)"
+        - "Zlínský kraj (ŠSZK)"
+        - "Ústecký kraj (ÚKŠS)"
+    validations:
+      required: true
   - type: input
     id: short
     attributes:
       label: Zkratka soutěže (nepovinné)
-      description: Krátký název do nabídky v aplikaci. Když nevyplníš, použije se zkrácený název ze stránky.
+      description: Jen u soutěže s neobvyklým názvem. Běžné soutěže (Extraliga, 1. liga, KP II A…) dostanou jednotnou zkratku samy.
       placeholder: KP II A
     validations:
       required: false

@@ -1,0 +1,48 @@
+name: Odebrat soutěž
+
+# Spouští se ručně: záložka Actions → Odebrat soutěž → Run workflow. Spustit ji může jen ten,
+# kdo má do repozitáře právo zápisu. Soutěž zmizí z nabídky všem; zápisy v archivech zůstanou.
+on:
+  workflow_dispatch:
+    inputs:
+      soutez:
+        description: Soutěž ke smazání (zkratka, id, číslo turnaje nebo odkaz na chess-results)
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-update
+  cancel-in-progress: false
+
+jobs:
+  odebrat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - name: Odebrat ze sdílených dat
+        env:
+          # zadání jde přes proměnnou, nikdy ne přímo do příkazu
+          SOUTEZ: ${{ inputs.soutez }}
+        run: node scripts/remove_competition.mjs "$SOUTEZ"
+      - name: Uložit změny
+        env:
+          SOUTEZ: ${{ inputs.soutez }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/competitions.json data/competitions.json
+          if git diff --cached --quiet; then
+            echo "Beze změn."
+          else
+            git commit -m "Odebrána soutěž: $SOUTEZ"
+            git pull --rebase --autostash
+            git push
+          fi

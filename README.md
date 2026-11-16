@@ -130,12 +130,28 @@ i uložená stránka `.html` se stejnými seznamy.
 
 Soutěž přidaná v aplikaci žije jen v jednom zařízení. Aby ji měli všichni, jde o ni požádat:
 kdokoli v záložce **Issues** založí
-hlášení ze šablony **Přidat soutěž**, vyplní odkaz na turnaj a počet šachovnic. Úloha
+hlášení ze šablony **Přidat soutěž**, vyplní odkaz na turnaj, počet šachovnic a kraj. Úloha
 `.github/workflows/nova-soutez.yml` odkaz ověří, přečte ze stránky název soutěže a sezónu, soutěž přidá
 do nastavení, stáhne její soupisky a do hlášení odpoví. Do aplikace se soutěž dostane během pár minut.
 
 Odmítne odkaz mimo chess-results.com, turnaj jednotlivců, soutěž, která už v seznamu je,
-a nesmyslný počet šachovnic. Nevhodný záznam se smaže řádkem v `scripts/competitions.json`.
+a nesmyslný počet šachovnic. Soutěž může takhle přidat kdokoli s účtem na GitHubu (nejvýš 250 soutěží).
+
+### Řazení a pojmenování soutěží
+
+Každá soutěž má kraj (`region`: kód svazu, `CR` pro celostátní soutěže), úroveň a jednotnou zkratku se
+odvozují z názvu (`js/catalog.js`): Extraliga, 1. liga východ/západ, 2. liga A–F, KP, KP II A, KP III B,
+u mládeže s „ml.“ (1. liga ml. A). Nabídka v aplikaci je po skupinách: celostátní soutěže, celostátní soutěže
+mládeže, kraje abecedně, vlastní soutěže z tohoto zařízení a ukončené soutěže. Uvnitř skupiny od nejvyšší soutěže
+a pak podle skupin. V Nastavení si každý vybere svůj kraj a nabídka ukáže jen celostátní soutěže a ten kraj.
+Soutěž, jejíž poslední kolo bylo před víc než 30 dny, je dole mezi ukončenými (zápis z ní jde pořád dodělat).
+
+### Odebrání soutěže
+
+**Actions → Odebrat soutěž → Run workflow** a zadat soutěž (zkratku, id, číslo turnaje nebo odkaz na chess-results).
+Spustit to může jen ten, kdo má do repozitáře právo zápisu. Soutěž zmizí z nabídky všem, zápisy v archivech zůstanou,
+protože si údaje o soutěži nesou s sebou. Když zadání sedí na víc soutěží (stejná zkratka ve dvou krajích),
+nic se nesmaže a úloha je vypíše. Ukončené soutěže není potřeba mazat hned, v nabídce se odsunou samy.
 
 Kdyby se stránka chess-results změnila a stahování přestalo fungovat, původní data zůstanou zachovaná.
 Stažené stránky se uloží jako příloha běhu v záložce Actions (artefakt `stazene-stranky`), podle nich jde upravit
@@ -151,7 +167,7 @@ parser v `js/parse.js`. Soupisky jde vždy doplnit i ručně přímo v aplikaci.
 
 ```bash
 npm install                 # jen linkedom, pro parsování HTML v Node
-npm test                    # 75 testů: logika zápisu, parser, čtečka .xlsx, přidávání soutěží, archiv, PDF, odkaz s QR
+npm test                    # 83 testů: logika zápisu, parser, čtečka .xlsx, přidávání soutěží, archiv, PDF, odkaz s QR
 npm run serve               # lokální spuštění: http://localhost:8080
 ```
 

@@ -11,11 +11,13 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseRosters, splitSeason, tournamentTitle, tournamentNumber, shorten, clean } from '../js/parse.js';
 import { fetchPage, toDocument } from './chess_results.mjs';
+import { REGIONS, regionByCode, regionFromText, standardShort, tierOf } from '../js/catalog.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CONFIG = path.join(ROOT, 'scripts', 'competitions.json');
 
-export const MAX_COMPETITIONS = 60;
+// celá republika: zhruba 20 celostátních soutěží a 5 až 10 krajských přeborů v každém ze 14 krajů
+export const MAX_COMPETITIONS = 250;
 export const MIN_BOARDS = 2;
 export const MAX_BOARDS = 16;
 const NO_RESPONSE = new Set(['_no response_', '_bez odpovědi_', '', '-']);
@@ -60,7 +62,23 @@ export function parseIssueBody(body) {
     for (const [k, v] of fields) if (k.startsWith(name.toLowerCase())) return v;
     return '';
   };
-  return { url: get('odkaz na turnaj'), boards: get('počet šachovnic'), short: get('zkratka') };
+  return { url: get('odkaz na turnaj'), boards: get('počet šachovnic'), short: get('zkratka'), region: get('kraj') };
+}
+
+/**
+ * Kraj soutěže: z výběru v hlášení („Ústecký kraj (ÚKŠS)“, „Celostátní soutěž (ŠSČR)“),
+ * jinak z názvu soutěže. Vrací kód kraje (UKSS, CR, …) nebo null.
+ */
+export function parseRegion(raw, title = '') {
+  const s = String(raw ?? '').trim();
+  if (s && !NO_RESPONSE.has(s.toLowerCase())) {
+    const byAbbr = REGIONS.find((r) => s.includes(`(${r.abbr})`));
+    if (byAbbr) return byAbbr.code;
+    if (/celost/i.test(s)) return 'CR';
+    const byName = REGIONS.find((r) => s.toLowerCase().startsWith(r.name.toLowerCase()));
+    if (byName) return byName.code;
+  }
+  return regionFromText(title);
 }
 
 /** Stáhne stránku turnaje a ověří, že jde o soutěž družstev. */
@@ -83,25 +101,29 @@ export async function probe(tnr) {
   const [name, season] = splitSeason(title);
   return {
     name: name || `Turnaj ${tnr}`,
+    title,
     season,
     teams: teams.length,
     players: teams.reduce((n, t) => n + t.players.length, 0),
   };
 }
 
-export function addEntry(cfg, tnr, boards, short, info) {
+export function addEntry(cfg, tnr, boards, short, info, region = null) {
   const existing = cfg.competitions.find((c) => c.tnr === tnr);
   if (existing) throw new Refused(`Tahle soutěž už v aplikaci je, vedená jako **${existing.short}**.`);
   if (cfg.competitions.length >= MAX_COMPETITIONS) {
     throw new Refused(`Seznam soutěží je plný (${MAX_COMPETITIONS}). Napiš to prosím do hlášení bez šablony.`);
   }
+  // jednotná zkratka (KP II A, 2. liga B, …); zadaná se použije jen u soutěže s neobvyklým názvem
+  const known = tierOf({ name: info.name }).rank < 30;
   const entry = {
     id: `t${tnr}`,
-    short: short || shorten(info.name),
+    short: known ? standardShort({ name: info.name }) : short || shorten(info.name),
     name: info.name,
     group: '',
     tnr,
     boards,
+    ...(region ? { region } : {}),
   };
   if (info.season) entry.season = info.season;
   cfg.competitions.push(entry);
@@ -118,6 +140,7 @@ function parseArgs() {
     url: get('--url'),
     boards: get('--boards'),
     short: get('--short') ?? '',
+    region: get('--region') ?? '',
     fromIssue: a.includes('--from-issue'),
     dryRun: a.includes('--dry-run'),
     idFile: get('--id-file'),
@@ -138,7 +161,7 @@ async function main() {
       console.error('--url a --boards jsou povinné');
       return 1;
     }
-    raw = { url: args.url, boards: args.boards, short: args.short };
+    raw = { url: args.url, boards: args.boards, short: args.short, region: args.region };
   }
 
   let entry;
@@ -157,7 +180,7 @@ async function main() {
     const dup = cfg.competitions.find((c) => c.tnr === tnr);
     if (dup) throw new Refused(`Tahle soutěž už v aplikaci je, vedená jako **${dup.short}**.`);
     info = await probe(tnr);
-    entry = addEntry(cfg, tnr, boards, short, info);
+    entry = addEntry(cfg, tnr, boards, short, info, parseRegion(raw.region, info.title));
   } catch (e) {
     if (!(e instanceof Refused)) throw e;
     console.log(`Soutěž jsem nepřidal.\n\n${e.message}`);
@@ -175,6 +198,7 @@ async function main() {
       '',
       `- **Název:** ${entry.name}`,
       `- **Zkratka v aplikaci:** ${entry.short}`,
+      `- **Kraj:** ${regionByCode(entry.region)?.name ?? 'nepodařilo se určit (soutěž bude mezi ostatními)'}`,
       `- **Sezóna:** ${entry.season ?? 'podle nastavení'}`,
       `- **Šachovnic:** ${entry.boards}`,
       `- **Načteno:** ${info.teams} družstev, ${info.players} hráčů`,

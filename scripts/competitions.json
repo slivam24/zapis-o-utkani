@@ -7,7 +7,8 @@
       "name": "Krajský přebor",
       "group": "",
       "tnr": 1507857,
-      "boards": 8
+      "boards": 8,
+      "region": "UKSS"
     },
     {
       "id": "kp2a",
@@ -15,7 +16,8 @@
       "name": "Krajský přebor II. třídy",
       "group": "A",
       "tnr": 1508693,
-      "boards": 8
+      "boards": 8,
+      "region": "UKSS"
     },
     {
       "id": "kp2b",
@@ -23,7 +25,8 @@
       "name": "Krajský přebor II. třídy",
       "group": "B",
       "tnr": 1511935,
-      "boards": 8
+      "boards": 8,
+      "region": "UKSS"
     },
     {
       "id": "kp3a",
@@ -31,7 +34,8 @@
       "name": "Krajský přebor III. třídy",
       "group": "A",
       "tnr": 1508277,
-      "boards": 5
+      "boards": 5,
+      "region": "UKSS"
     },
     {
       "id": "kp3b",
@@ -39,7 +43,8 @@
       "name": "Krajský přebor III. třídy",
       "group": "B",
       "tnr": 1508895,
-      "boards": 5
+      "boards": 5,
+      "region": "UKSS"
     }
   ]
 }

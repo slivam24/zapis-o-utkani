@@ -9,6 +9,7 @@ import { makeBackup, parseBackup, mergeArchive, olderThan } from './archive.js';
 import { helpPage, privacyPage } from './pages.js';
 import { encodeLink, decodeLink, hasLink } from './link.js';
 import qrcode from './vendor/qrcode.js';
+import { REGIONS, groupCompetitions, standardShort } from './catalog.js';
 
 const REPO = 'slivam24/zapis-o-utkani';
 
@@ -273,13 +274,20 @@ function viewZapas() {
 
   const compLabel = (x) => {
     const full = `${x.name}${x.group ? ` ${x.group}` : ''}`;
+    const short = standardShort(x);
     // zkratka se nepřidává, když je stejná jako název, ať se nabídka nezdvojuje
-    const label = x.short && !full.startsWith(x.short) ? `${x.short} – ${full}` : full;
-    return `${label}${x.teams.length ? '' : ' (bez soupisek)'}${x.local ? ' ★' : ''}`;
+    const label = short && !full.startsWith(short) ? `${short} – ${full}` : full;
+    return `${label}${x.teams?.length ? '' : ' (bez soupisek)'}`;
   };
-  const compOpts = DATA.competitions
-    .map((x) => `<option value="${esc(x.id)}" ${x.id === S.compId ? 'selected' : ''}>${esc(compLabel(x))}</option>`)
-    .join('');
+  const opt = (x) => `<option value="${esc(x.id)}" ${x.id === S.compId ? 'selected' : ''}>${esc(compLabel(x))}</option>`;
+  // nabídka po skupinách: celostátní, mládež, kraje (můj kraj první), vlastní, ukončené
+  const groups = groupCompetitions(DATA.competitions, { region: settings().region ?? '', keep: S.compId });
+  // zápis ze soutěže, kterou toto zařízení v datech nemá (z archivu nebo QR kódu)
+  const foreign = S.compInfo && !DATA.competitions.some((x) => x.id === S.compId)
+    ? `<optgroup label="Soutěž tohoto zápisu">${opt({ ...S.compInfo, id: S.compId })}</optgroup>`
+    : '';
+  const compOpts =
+    foreign + groups.map((g) => `<optgroup label="${esc(g.label)}">${g.comps.map(opt).join('')}</optgroup>`).join('');
 
   const roundField = rounds.length
     ? `<label class="field"><span>Kolo</span><select data-chg="round"><option value="">— vyber kolo —</option>${rounds
@@ -833,6 +841,18 @@ function viewNastaveni() {
       ${uiOpt('desktop', '🖥 Počítač')}
       ${uiOpt('touch', '📱 Tablet a mobil')}
     </div>
+  </div>
+  <div class="card">
+    <h3>Soutěže</h3>
+    <label class="field"><span>Můj kraj</span>
+      <select data-chg="region">
+        <option value="">Všechny kraje</option>
+        ${REGIONS.filter((r) => r.code !== 'CR')
+          .map((r) => `<option value="${r.code}" ${settings().region === r.code ? 'selected' : ''}>${esc(r.name)} (${esc(r.abbr)})</option>`)
+          .join('')}
+      </select></label>
+    <p class="muted small-text">S vybraným krajem nabídka soutěží ukáže jen celostátní soutěže a soutěže tvého kraje.
+    Soutěže, jejichž poslední kolo bylo před víc než měsícem, jsou v nabídce dole mezi ukončenými.</p>
   </div>
   <div class="card">
     <h3>Funkce</h3>
@@ -1819,6 +1839,11 @@ view.addEventListener('change', (e) => {
     case 'retention':
       setSetting('retention', Number(el.value));
       return;
+    case 'region': {
+      setSetting('region', el.value);
+      const r = REGIONS.find((x) => x.code === el.value);
+      return toast(r ? `Soutěže: celostátní a ${r.name}.` : 'Soutěže: všechny kraje.');
+    }
     case 'logo':
       S.logos = { ...L.logoFlags(S), [el.dataset.slot]: el.checked };
       save();

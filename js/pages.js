@@ -42,9 +42,17 @@ export function helpPage() {
     <p>Funkce, které nejsou potřeba pokaždé (vlastní soutěže, loga, e-mail, rychlé texty záznamu…),
     jde v <b>Nastavení</b> vypnout. Zápis je pak jednodušší. Vypnutím se nic nesmaže, funkci jde kdykoli zase zapnout.</p>
 
+    <h3>Nabídka soutěží</h3>
+    <p>Soutěže jsou rozdělené do skupin: celostátní soutěže, celostátní soutěže mládeže a kraje. Uvnitř skupiny
+    jdou od nejvyšší soutěže (Extraliga, 1. liga, 2. liga, KP, KP II, KP III) a pak podle skupin A, B, C.
+    V <b>Nastavení → Můj kraj</b> si nabídku zúžíš na celostátní soutěže a svůj kraj. Soutěže, které už skončily,
+    jsou dole mezi ukončenými, zápis z nich jde pořád dodělat.</p>
+
     <h3>Soutěž, která v nabídce není</h3>
-    <p>V Nastavení zapni <b>Přidání vlastní soutěže</b>. U výběru soutěže se objeví tlačítko <b>+ Přidat soutěž</b>:
-    vložíš odkaz na soutěž na chess-results, aplikace stáhne dva soubory a ty je nahraješ zpátky.</p>
+    <p>Pro všechny: na GitHubu v repozitáři aplikace založ v záložce <b>Issues</b> hlášení <b>Přidat soutěž</b>
+    (odkaz na chess-results, počet šachovnic, kraj). Soutěž se do pár minut objeví v aplikaci všem.</p>
+    <p>Jen pro sebe: v Nastavení zapni <b>Přidání vlastní soutěže</b>. U výběru soutěže se objeví tlačítko
+    <b>+ Přidat soutěž</b>: vložíš odkaz na soutěž na chess-results, aplikace stáhne dva soubory a ty je nahraješ zpátky.</p>
 
     <h3>Archiv</h3>
     <p>Hotový zápis ulož tlačítkem <b>Uložit do archivu</b> na konci. Archiv je jen v tomto zařízení,
