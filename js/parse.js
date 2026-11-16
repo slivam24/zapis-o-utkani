@@ -112,7 +112,9 @@ function playerFrom(cells, linkTexts, hm) {
   if (no === null) return null;
 
   let name = '';
-  if (hm?.name !== undefined && cells[hm.name]?.includes(',')) name = cells[hm.name];
+  // ve sloupci Jméno je jméno v jakémkoli tvaru („Novák, Jan“ i „Novák Jan“); bez záhlaví podle čárky
+  const inColumn = hm?.name !== undefined ? clean(cells[hm.name]) : '';
+  if (inColumn && !/^\d+$/.test(inColumn)) name = inColumn;
   else name = linkTexts.find((t) => t.includes(',')) ?? cells.find((c) => c.includes(',') && !/^\d+$/.test(c)) ?? '';
   name = clean(name);
   if (!name) return null;

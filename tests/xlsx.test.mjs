@@ -228,3 +228,26 @@ test('adresa exportu do Excelu', async () => {
   );
   assert.equal(pageUrl(1464172, 2), 'https://chess-results.com/tnr1464172.aspx?lan=5&art=2&zeilen=0');
 });
+
+test('soupiska z exportu: jména bez čárky a sloupec RtgN', async () => {
+  const { parseRostersFromGrid } = await import('../js/parse.js');
+  const grid = [
+    ['2. liga D 2026/2027'],
+    ['Sestava družstva bez výsledků'],
+    ['1. Jezdci Jundrov "B" (Rtg prům.:2150 / PH 1: 7 / PH 2: 14,5) Kapitán: Šípek Michal, 602822769, x@y.cz', '', ''],
+    ['Šach.', '', 'Jméno', 'Rtg', 'RtgN', 'FED', 'FideID', 'Typ', 'Body', 'Partie'],
+    ['1', 'WIM', 'Richterová Nataša', '2173', '2164', 'CZE', '350591', 'z, V', '1.5', '3'],
+    ['2', '', 'Fiala Václav', '2207', '2183', 'CZE', '331503', 'z, V', '2', '3'],
+    ['3', 'FM', 'Novák, Jan', '2221', '2200', 'CZE', '305235', 'z', '1', '2'],
+    ['16', '', 'Šípek Michal', '1988', '1928', 'CZE', '325554', 'K', '1', ''],
+  ];
+  const [t] = parseRostersFromGrid(grid);
+  assert.equal(t.name, 'Jezdci Jundrov "B"');
+  assert.equal(t.captain, 'Šípek Michal');
+  assert.deepEqual(t.players.map((p) => [p.no, p.name, p.rtg, p.nat, p.types.join()]), [
+    [1, 'Richterová Nataša', 2173, 2164, 'V'],
+    [2, 'Fiala Václav', 2207, 2183, 'V'],
+    [3, 'Novák, Jan', 2221, 2200, ''],
+    [16, 'Šípek Michal', 1988, 1928, 'K'],
+  ]);
+});
