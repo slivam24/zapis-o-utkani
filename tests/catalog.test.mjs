@@ -39,6 +39,7 @@ test('zkratky podle názvu soutěže', () => {
     ['Městský přebor Ostrava', 'MP Ostrava'],
     ['Okresní soutěž Opava', 'OS Opava'],
     ['Krajský přebor družstev starších žáků', 'KP ml.'],
+    ['Krajský přebor žákovských družstev', 'KP ml.'],
   ];
   for (const [name, short] of cases) assert.equal(standardShort(c(name)), short, name);
   // skupina z pole group má přednost

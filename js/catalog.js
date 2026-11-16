@@ -46,7 +46,7 @@ export function regionFromText(text) {
   return null;
 }
 
-const YOUTH = /mladez|dorost|zaci|zaku|zakyn|junior|\bu ?1\d\b|\bu ?2\d\b/;
+const YOUTH = /mladez|dorost|zaci|zaku|zakyn|zakovsk|junior|\bu ?1\d\b|\bu ?2\d\b/;
 const ROMAN = { i: 1, ii: 2, iii: 3, iv: 4, v: 5 };
 const ROMAN_OUT = ['', 'I', 'II', 'III', 'IV', 'V'];
 const SIDES = [
