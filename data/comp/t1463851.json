@@ -1,0 +1,925 @@
+{
+ "id": "t1463851",
+ "short": "2. liga D",
+ "name": "2. liga 'D'",
+ "group": "",
+ "tnr": 1463851,
+ "boards": 8,
+ "region": "CR",
+ "chesscz": 3385,
+ "season": "2026/2027",
+ "url": "https://chess-results.com/tnr1463851.aspx?lan=5",
+ "teams": [
+  {
+   "name": "Jezdci Jundrov \"B\"",
+   "captain": "Šípek Michal",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, V",
+     "types": [
+      "V"
+     ],
+     "rtg": 2173,
+     "nat": 2164,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "z, V",
+     "types": [
+      "V"
+     ],
+     "rtg": 2207,
+     "nat": 2183,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Panda Rychnov nad Kněžnou",
+   "captain": "Horák Jan",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, C",
+     "types": [
+      "C"
+     ],
+     "rtg": 2394,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "z, C",
+     "types": [
+      "C"
+     ],
+     "rtg": 2354,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "z, C",
+     "types": [
+      "C"
+     ],
+     "rtg": 2330,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 2178,
+     "nat": 2151,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Caissa Třebíč",
+   "captain": "Halbrštát Petr",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2257,
+     "nat": 2222,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2079,
+     "nat": 2078,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2003,
+     "nat": 1971,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "H, Z",
+     "types": [
+      "H"
+     ],
+     "rtg": 1913,
+     "nat": 1827,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "TJ Náměšť nad Oslavou",
+   "captain": "Kratochvíl Vít",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2292,
+     "nat": 2271,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 2255,
+     "nat": 2236,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 1953,
+     "nat": 1913,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2043,
+     "nat": 1998,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠŠPM Lipky HK \"B\"",
+   "captain": "Dedek Jan",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, V",
+     "types": [
+      "V"
+     ],
+     "rtg": 2339,
+     "nat": 2322,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2301,
+     "nat": 2281,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2125,
+     "nat": 2118,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 2157,
+     "nat": 2117,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 2027,
+     "nat": 1969,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠO Gordic Jihlava",
+   "captain": "Seidl Štěpán",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2163,
+     "nat": 2092,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 2086,
+     "nat": 2086,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2126,
+     "nat": 2113,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 2097,
+     "nat": 2096,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Ústí nad Orlicí",
+   "captain": "Šmajzr Martin",
+   "players": [
+    {
+     "no": 2,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 2054,
+     "nat": 2050,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 2048,
+     "nat": 2009,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1992,
+     "nat": 1960,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2022,
+     "nat": 1991,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1962,
+     "nat": 1907,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Bohemia Pardubice",
+   "captain": "Horáček Michal",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2306,
+     "nat": 2290,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2210,
+     "nat": 2164,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2268,
+     "nat": 2235,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 2096,
+     "nat": 2070,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "TJ Lanškroun",
+   "captain": "Kupsa Matěj",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2335,
+     "nat": 2305,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2309,
+     "nat": 2283,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 2149,
+     "nat": 2100,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 2232,
+     "nat": 2212,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2167,
+     "nat": 2140,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Kuřim",
+   "captain": "Majer Jiří",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2176,
+     "nat": 2074,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "z, C",
+     "types": [
+      "C"
+     ],
+     "rtg": 2243,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2074,
+     "nat": 2017,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 2114,
+     "nat": 2111,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "2222 ŠK Polabiny \"B\"",
+   "captain": "Bujnoch Radek",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, C",
+     "types": [
+      "C"
+     ],
+     "rtg": 2360,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2291,
+     "nat": 2290,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2250,
+     "nat": 2235,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 2265,
+     "nat": 2251,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 2130,
+     "nat": 2100,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Vysoké Mýto",
+   "captain": "Kosek Jiří",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2257,
+     "nat": 2208,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 2210,
+     "nat": 2184,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2027,
+     "nat": 1995,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2152,
+     "nat": 2090,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 1967,
+     "nat": 1959,
+     "fide": null
+    }
+   ]
+  }
+ ],
+ "rounds": [
+  {
+   "no": 1,
+   "date": "2026-10-11",
+   "time": null,
+   "matches": [
+    {
+     "home": "Jezdci Jundrov \"B\"",
+     "away": "ŠK Vysoké Mýto"
+    },
+    {
+     "home": "Panda Rychnov nad Kněžnou",
+     "away": "2222 ŠK Polabiny \"B\""
+    },
+    {
+     "home": "Caissa Třebíč",
+     "away": "ŠK Kuřim"
+    },
+    {
+     "home": "TJ Náměšť nad Oslavou",
+     "away": "TJ Lanškroun"
+    },
+    {
+     "home": "ŠŠPM Lipky HK \"B\"",
+     "away": "ŠK Bohemia Pardubice"
+    },
+    {
+     "home": "ŠO Gordic Jihlava",
+     "away": "ŠK Ústí nad Orlicí"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "date": "2026-11-01",
+   "time": null,
+   "matches": [
+    {
+     "home": "ŠK Vysoké Mýto",
+     "away": "ŠK Ústí nad Orlicí"
+    },
+    {
+     "home": "ŠK Bohemia Pardubice",
+     "away": "ŠO Gordic Jihlava"
+    },
+    {
+     "home": "TJ Lanškroun",
+     "away": "ŠŠPM Lipky HK \"B\""
+    },
+    {
+     "home": "ŠK Kuřim",
+     "away": "TJ Náměšť nad Oslavou"
+    },
+    {
+     "home": "2222 ŠK Polabiny \"B\"",
+     "away": "Caissa Třebíč"
+    },
+    {
+     "home": "Jezdci Jundrov \"B\"",
+     "away": "Panda Rychnov nad Kněžnou"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "date": "2026-11-15",
+   "time": null,
+   "matches": [
+    {
+     "home": "Panda Rychnov nad Kněžnou",
+     "away": "ŠK Vysoké Mýto"
+    },
+    {
+     "home": "Caissa Třebíč",
+     "away": "Jezdci Jundrov \"B\""
+    },
+    {
+     "home": "TJ Náměšť nad Oslavou",
+     "away": "2222 ŠK Polabiny \"B\""
+    },
+    {
+     "home": "ŠŠPM Lipky HK \"B\"",
+     "away": "ŠK Kuřim"
+    },
+    {
+     "home": "ŠO Gordic Jihlava",
+     "away": "TJ Lanškroun"
+    },
+    {
+     "home": "ŠK Ústí nad Orlicí",
+     "away": "ŠK Bohemia Pardubice"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "date": "2026-11-29",
+   "time": null,
+   "matches": [
+    {
+     "home": "ŠK Vysoké Mýto",
+     "away": "ŠK Bohemia Pardubice"
+    },
+    {
+     "home": "TJ Lanškroun",
+     "away": "ŠK Ústí nad Orlicí"
+    },
+    {
+     "home": "ŠK Kuřim",
+     "away": "ŠO Gordic Jihlava"
+    },
+    {
+     "home": "2222 ŠK Polabiny \"B\"",
+     "away": "ŠŠPM Lipky HK \"B\""
+    },
+    {
+     "home": "Jezdci Jundrov \"B\"",
+     "away": "TJ Náměšť nad Oslavou"
+    },
+    {
+     "home": "Panda Rychnov nad Kněžnou",
+     "away": "Caissa Třebíč"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "date": "2026-12-13",
+   "time": null,
+   "matches": [
+    {
+     "home": "Caissa Třebíč",
+     "away": "ŠK Vysoké Mýto"
+    },
+    {
+     "home": "TJ Náměšť nad Oslavou",
+     "away": "Panda Rychnov nad Kněžnou"
+    },
+    {
+     "home": "ŠŠPM Lipky HK \"B\"",
+     "away": "Jezdci Jundrov \"B\""
+    },
+    {
+     "home": "ŠO Gordic Jihlava",
+     "away": "2222 ŠK Polabiny \"B\""
+    },
+    {
+     "home": "ŠK Ústí nad Orlicí",
+     "away": "ŠK Kuřim"
+    },
+    {
+     "home": "ŠK Bohemia Pardubice",
+     "away": "TJ Lanškroun"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "date": "2027-01-17",
+   "time": null,
+   "matches": [
+    {
+     "home": "ŠK Vysoké Mýto",
+     "away": "TJ Lanškroun"
+    },
+    {
+     "home": "ŠK Kuřim",
+     "away": "ŠK Bohemia Pardubice"
+    },
+    {
+     "home": "2222 ŠK Polabiny \"B\"",
+     "away": "ŠK Ústí nad Orlicí"
+    },
+    {
+     "home": "Jezdci Jundrov \"B\"",
+     "away": "ŠO Gordic Jihlava"
+    },
+    {
+     "home": "Panda Rychnov nad Kněžnou",
+     "away": "ŠŠPM Lipky HK \"B\""
+    },
+    {
+     "home": "Caissa Třebíč",
+     "away": "TJ Náměšť nad Oslavou"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "date": "2027-01-31",
+   "time": null,
+   "matches": [
+    {
+     "home": "TJ Náměšť nad Oslavou",
+     "away": "ŠK Vysoké Mýto"
+    },
+    {
+     "home": "ŠŠPM Lipky HK \"B\"",
+     "away": "Caissa Třebíč"
+    },
+    {
+     "home": "ŠO Gordic Jihlava",
+     "away": "Panda Rychnov nad Kněžnou"
+    },
+    {
+     "home": "ŠK Ústí nad Orlicí",
+     "away": "Jezdci Jundrov \"B\""
+    },
+    {
+     "home": "ŠK Bohemia Pardubice",
+     "away": "2222 ŠK Polabiny \"B\""
+    },
+    {
+     "home": "TJ Lanškroun",
+     "away": "ŠK Kuřim"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "date": "2027-02-14",
+   "time": null,
+   "matches": [
+    {
+     "home": "ŠK Vysoké Mýto",
+     "away": "ŠK Kuřim"
+    },
+    {
+     "home": "2222 ŠK Polabiny \"B\"",
+     "away": "TJ Lanškroun"
+    },
+    {
+     "home": "Jezdci Jundrov \"B\"",
+     "away": "ŠK Bohemia Pardubice"
+    },
+    {
+     "home": "Panda Rychnov nad Kněžnou",
+     "away": "ŠK Ústí nad Orlicí"
+    },
+    {
+     "home": "Caissa Třebíč",
+     "away": "ŠO Gordic Jihlava"
+    },
+    {
+     "home": "TJ Náměšť nad Oslavou",
+     "away": "ŠŠPM Lipky HK \"B\""
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "date": "2027-02-28",
+   "time": null,
+   "matches": [
+    {
+     "home": "ŠŠPM Lipky HK \"B\"",
+     "away": "ŠK Vysoké Mýto"
+    },
+    {
+     "home": "ŠO Gordic Jihlava",
+     "away": "TJ Náměšť nad Oslavou"
+    },
+    {
+     "home": "ŠK Ústí nad Orlicí",
+     "away": "Caissa Třebíč"
+    },
+    {
+     "home": "ŠK Bohemia Pardubice",
+     "away": "Panda Rychnov nad Kněžnou"
+    },
+    {
+     "home": "TJ Lanškroun",
+     "away": "Jezdci Jundrov \"B\""
+    },
+    {
+     "home": "ŠK Kuřim",
+     "away": "2222 ŠK Polabiny \"B\""
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "date": "2027-03-21",
+   "time": null,
+   "matches": [
+    {
+     "home": "ŠK Vysoké Mýto",
+     "away": "2222 ŠK Polabiny \"B\""
+    },
+    {
+     "home": "Jezdci Jundrov \"B\"",
+     "away": "ŠK Kuřim"
+    },
+    {
+     "home": "Panda Rychnov nad Kněžnou",
+     "away": "TJ Lanškroun"
+    },
+    {
+     "home": "Caissa Třebíč",
+     "away": "ŠK Bohemia Pardubice"
+    },
+    {
+     "home": "TJ Náměšť nad Oslavou",
+     "away": "ŠK Ústí nad Orlicí"
+    },
+    {
+     "home": "ŠŠPM Lipky HK \"B\"",
+     "away": "ŠO Gordic Jihlava"
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "date": "2027-04-11",
+   "time": null,
+   "matches": [
+    {
+     "home": "ŠO Gordic Jihlava",
+     "away": "ŠK Vysoké Mýto"
+    },
+    {
+     "home": "ŠK Ústí nad Orlicí",
+     "away": "ŠŠPM Lipky HK \"B\""
+    },
+    {
+     "home": "ŠK Bohemia Pardubice",
+     "away": "TJ Náměšť nad Oslavou"
+    },
+    {
+     "home": "TJ Lanškroun",
+     "away": "Caissa Třebíč"
+    },
+    {
+     "home": "ŠK Kuřim",
+     "away": "Panda Rychnov nad Kněžnou"
+    },
+    {
+     "home": "2222 ŠK Polabiny \"B\"",
+     "away": "Jezdci Jundrov \"B\""
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1203 @@
+{
+ "id": "t1502076",
+ "short": "RS Kroměříž",
+ "name": "Regionální soutěž - Kroměříž",
+ "group": "",
+ "tnr": 1502076,
+ "boards": 5,
+ "region": "SSZK",
+ "chesscz": 3412,
+ "season": "2026/2027",
+ "url": "https://chess-results.com/tnr1502076.aspx?lan=5",
+ "teams": [
+  {
+   "name": "ŠO TJ Zborovice B",
+   "captain": "Slavík Miroslav",
+   "players": [
+    {
+     "no": 1,
+     "name": "Prachař, David",
+     "types": [
+      "V"
+     ],
+     "rtg": 1617,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Indrák, Jiří",
+     "types": [
+      "V"
+     ],
+     "rtg": 1582,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Šebestík, Roman",
+     "types": [],
+     "rtg": 1556,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Slavík, Miroslav",
+     "types": [
+      "K"
+     ],
+     "rtg": 1408,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Kucián, Martin",
+     "types": [],
+     "rtg": 1282,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Vrána, Martin",
+     "types": [],
+     "rtg": 1170,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Nezdařil, Vlastimil",
+     "types": [
+      "ZK"
+     ],
+     "rtg": 1474,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Dostál, Jiří",
+     "types": [],
+     "rtg": 1111,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Štěpánek, Ondřej",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Slavíková, Nina",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Slavia Kroměříž F",
+   "captain": "Jakub Coufalík",
+   "players": [
+    {
+     "no": 1,
+     "name": "Coufalík, Jakub",
+     "types": [
+      "V"
+     ],
+     "rtg": 1337,
+     "nat": null,
+     "fide": 1589
+    },
+    {
+     "no": 2,
+     "name": "Spáčil, Antonín",
+     "types": [],
+     "rtg": 1631,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Šudřich, Dominik",
+     "types": [
+      "H"
+     ],
+     "rtg": 1307,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Hlavinka, Petr",
+     "types": [],
+     "rtg": 1220,
+     "nat": null,
+     "fide": 1510
+    },
+    {
+     "no": 5,
+     "name": "Jurkovič, Ondřej",
+     "types": [],
+     "rtg": 1022,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Vynnyk, Marko",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Bystroň, Daniel",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Luběna, Viktor",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Lovkin, Serhii",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Skopalová, Viktorie",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Navrátilová, Lenka",
+     "types": [],
+     "rtg": 1411,
+     "nat": null,
+     "fide": 1653
+    },
+    {
+     "no": 12,
+     "name": "Ševčík, Filip",
+     "types": [
+      "H"
+     ],
+     "rtg": 1153,
+     "nat": null,
+     "fide": 1508
+    }
+   ]
+  },
+  {
+   "name": "SK EMKaD Holešov B",
+   "captain": "Marián Tomeček",
+   "players": [
+    {
+     "no": 1,
+     "name": "Košata, Jiří",
+     "types": [],
+     "rtg": 1433,
+     "nat": null,
+     "fide": 1592
+    },
+    {
+     "no": 2,
+     "name": "Kunc, Miroslav",
+     "types": [],
+     "rtg": 1417,
+     "nat": null,
+     "fide": 1657
+    },
+    {
+     "no": 3,
+     "name": "Tomeček, Marián",
+     "types": [
+      "K"
+     ],
+     "rtg": 1408,
+     "nat": null,
+     "fide": 1545
+    },
+    {
+     "no": 4,
+     "name": "Blažek, Pavel",
+     "types": [],
+     "rtg": 1312,
+     "nat": null,
+     "fide": 1421
+    },
+    {
+     "no": 5,
+     "name": "Navrátil, Vojtěch",
+     "types": [
+      "H"
+     ],
+     "rtg": 1015,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Neoral, Radovan",
+     "types": [],
+     "rtg": 1182,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Skýpala, Zbyněk",
+     "types": [],
+     "rtg": 1361,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Do, Minh Hieu",
+     "types": [
+      "ZK"
+     ],
+     "rtg": 1316,
+     "nat": null,
+     "fide": 1501
+    },
+    {
+     "no": 9,
+     "name": "Dobešová, Anna",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Konečný, František",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Pavelka, Vojta",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Zapletal, Matěj",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Mikula, Daniel",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Bačík, Dominik",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 15,
+     "name": "Janalík, Patrik",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 16,
+     "name": "Kyrychová, Naděžda",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 17,
+     "name": "Sidorenko, Artur",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK RAPOS Sulimov C",
+   "captain": "Martin Kováč",
+   "players": [
+    {
+     "no": 1,
+     "name": "Hýža, Jiří",
+     "types": [
+      "V"
+     ],
+     "rtg": 1248,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Lednický, Adam",
+     "types": [
+      "V"
+     ],
+     "rtg": 1436,
+     "nat": null,
+     "fide": 1582
+    },
+    {
+     "no": 3,
+     "name": "Romaňák, Jan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Kalenda, Alex",
+     "types": [
+      "V"
+     ],
+     "rtg": 1422,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Jurášek, Petr",
+     "types": [],
+     "rtg": 1538,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Kováč, Martin",
+     "types": [
+      "K"
+     ],
+     "rtg": 1255,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Uherka, Adam",
+     "types": [
+      "V"
+     ],
+     "rtg": 1453,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Coufalová, Aneta",
+     "types": [],
+     "rtg": 1100,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Cícha, Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Dubina, Pavel",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Šumbera, Nathanael",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Šumbera, Joshua",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Válková, Viktorie",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Janáčová, Elizabeth",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 15,
+     "name": "Navrátil, Tobiáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 16,
+     "name": "Glos, Filip",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 17,
+     "name": "Buček, Arnošt",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 18,
+     "name": "Kurinnyi, Mykhailo",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 19,
+     "name": "Brtník, Jan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Loukov",
+   "captain": "Ing. Miroslav Dvořák",
+   "players": [
+    {
+     "no": 1,
+     "name": "Trefílek, Josef",
+     "types": [],
+     "rtg": 1479,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Dvořák, Miroslav",
+     "types": [
+      "K"
+     ],
+     "rtg": 1456,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Kučerka, Miroslav",
+     "types": [],
+     "rtg": 1521,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Růdl, Karel",
+     "types": [
+      "H"
+     ],
+     "rtg": 1396,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Kuběja, Josef",
+     "types": [],
+     "rtg": 1365,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Ondroušek, Josef",
+     "types": [],
+     "rtg": 1306,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Vlach, Jan",
+     "types": [
+      "H"
+     ],
+     "rtg": 1327,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Koutný, Josef",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "T.J. Sokol Morkovice B",
+   "captain": "František Pavlík",
+   "players": [
+    {
+     "no": 1,
+     "name": "Pavlík, František ml.",
+     "types": [
+      "V"
+     ],
+     "rtg": 1815,
+     "nat": null,
+     "fide": 1814
+    },
+    {
+     "no": 2,
+     "name": "Navrátil, Marek",
+     "types": [
+      "V"
+     ],
+     "rtg": 1129,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Schorník, Mojmír",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Jurásková, Amélie",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Podlipský, František",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Mišurec, Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Mišurec, Dominik",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Gajdušková, Jana",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Procházková, Lenka",
+     "types": [],
+     "rtg": 1142,
+     "nat": null,
+     "fide": 1499
+    },
+    {
+     "no": 10,
+     "name": "Úlehla, Filip",
+     "types": [],
+     "rtg": 1436,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Tran, Viet Anh",
+     "types": [],
+     "rtg": 1205,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Pešák, Ondřej",
+     "types": [
+      "V"
+     ],
+     "rtg": 1664,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Studený, Karel",
+     "types": [
+      "V"
+     ],
+     "rtg": 1441,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Hauschwitz, David",
+     "types": [
+      "V"
+     ],
+     "rtg": 1457,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 15,
+     "name": "Kejnar, Jaroslav",
+     "types": [
+      "V"
+     ],
+     "rtg": 1609,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 16,
+     "name": "Pavlík, František st.",
+     "types": [],
+     "rtg": 1496,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "TJ Sokol Postoupky C",
+   "captain": "MUDr. Miloš Kucián",
+   "players": [
+    {
+     "no": 1,
+     "name": "Charčenko, Valerij",
+     "types": [
+      "V"
+     ],
+     "rtg": 1821,
+     "nat": null,
+     "fide": 1885
+    },
+    {
+     "no": 2,
+     "name": "Kucián, Miloš",
+     "types": [
+      "V"
+     ],
+     "rtg": 1679,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Navrátil, Daniel",
+     "types": [],
+     "rtg": 1477,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Vaňharová, Lucie",
+     "types": [],
+     "rtg": 1269,
+     "nat": null,
+     "fide": 1518
+    },
+    {
+     "no": 5,
+     "name": "Huňa, Rostislav",
+     "types": [
+      "V"
+     ],
+     "rtg": 1411,
+     "nat": null,
+     "fide": 1631
+    },
+    {
+     "no": 6,
+     "name": "Šimčák, Marek",
+     "types": [],
+     "rtg": 1131,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Baček, Daniel",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Vejtasa, Adam",
+     "types": [],
+     "rtg": 1061,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Turek, Josef",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Turek, Jindřich",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Herman, Michal",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Maceja, Vojtěch",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Kadlčík, Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Bystřice pod Hostýnem C",
+   "captain": "Martin Zbranek",
+   "players": [
+    {
+     "no": 1,
+     "name": "Šenk, Jan",
+     "types": [
+      "V"
+     ],
+     "rtg": 1326,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Papežík, Ivo",
+     "types": [],
+     "rtg": 1295,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Krejčí, Zdeněk",
+     "types": [
+      "V"
+     ],
+     "rtg": 1280,
+     "nat": null,
+     "fide": 1428
+    },
+    {
+     "no": 4,
+     "name": "Zbranek, Martin",
+     "types": [
+      "K"
+     ],
+     "rtg": 1158,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Škarpich, Petr",
+     "types": [],
+     "rtg": 1254,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Vaňhara, Antonín",
+     "types": [],
+     "rtg": 1379,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Kolda, Eduard",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Barot, Vít",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Perutka, František",
+     "types": [],
+     "rtg": 1441,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Kuba, Radek",
+     "types": [],
+     "rtg": 1364,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Ondroušek, Ladislav",
+     "types": [],
+     "rtg": 1273,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Štajnrt, Vojtěch",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Hošák, Jan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Helísek, Karel",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 15,
+     "name": "Bodnaruk, Vitalij",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 16,
+     "name": "Daňhel, Oldřich",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 17,
+     "name": "Hlavizňa, Jaroslav",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 18,
+     "name": "Adamec, Kevin",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 19,
+     "name": "Okoličani, Jonáš Jan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  }
+ ],
+ "rounds": [
+  {
+   "no": 1,
+   "date": "2026-10-11",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "ŠO TJ Zborovice B",
+     "away": "ŠK Bystřice pod Hostýnem C"
+    },
+    {
+     "home": "Slavia Kroměříž F",
+     "away": "TJ Sokol Postoupky C"
+    },
+    {
+     "home": "SK EMKaD Holešov B",
+     "away": "T.J. Sokol Morkovice B"
+    },
+    {
+     "home": "ŠK RAPOS Sulimov C",
+     "away": "ŠK Loukov"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "date": "2026-11-01",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "ŠK Bystřice pod Hostýnem C",
+     "away": "ŠK Loukov"
+    },
+    {
+     "home": "T.J. Sokol Morkovice B",
+     "away": "ŠK RAPOS Sulimov C"
+    },
+    {
+     "home": "TJ Sokol Postoupky C",
+     "away": "SK EMKaD Holešov B"
+    },
+    {
+     "home": "ŠO TJ Zborovice B",
+     "away": "Slavia Kroměříž F"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "date": "2026-11-15",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "Slavia Kroměříž F",
+     "away": "ŠK Bystřice pod Hostýnem C"
+    },
+    {
+     "home": "SK EMKaD Holešov B",
+     "away": "ŠO TJ Zborovice B"
+    },
+    {
+     "home": "ŠK RAPOS Sulimov C",
+     "away": "TJ Sokol Postoupky C"
+    },
+    {
+     "home": "ŠK Loukov",
+     "away": "T.J. Sokol Morkovice B"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "date": "2026-11-29",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "ŠK Bystřice pod Hostýnem C",
+     "away": "T.J. Sokol Morkovice B"
+    },
+    {
+     "home": "TJ Sokol Postoupky C",
+     "away": "ŠK Loukov"
+    },
+    {
+     "home": "ŠO TJ Zborovice B",
+     "away": "ŠK RAPOS Sulimov C"
+    },
+    {
+     "home": "Slavia Kroměříž F",
+     "away": "SK EMKaD Holešov B"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "date": "2026-12-13",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "SK EMKaD Holešov B",
+     "away": "ŠK Bystřice pod Hostýnem C"
+    },
+    {
+     "home": "ŠK RAPOS Sulimov C",
+     "away": "Slavia Kroměříž F"
+    },
+    {
+     "home": "ŠK Loukov",
+     "away": "ŠO TJ Zborovice B"
+    },
+    {
+     "home": "T.J. Sokol Morkovice B",
+     "away": "TJ Sokol Postoupky C"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "date": "2027-01-17",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "ŠK Bystřice pod Hostýnem C",
+     "away": "TJ Sokol Postoupky C"
+    },
+    {
+     "home": "ŠO TJ Zborovice B",
+     "away": "T.J. Sokol Morkovice B"
+    },
+    {
+     "home": "Slavia Kroměříž F",
+     "away": "ŠK Loukov"
+    },
+    {
+     "home": "SK EMKaD Holešov B",
+     "away": "ŠK RAPOS Sulimov C"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "date": "2027-01-31",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "ŠK RAPOS Sulimov C",
+     "away": "ŠK Bystřice pod Hostýnem C"
+    },
+    {
+     "home": "ŠK Loukov",
+     "away": "SK EMKaD Holešov B"
+    },
+    {
+     "home": "T.J. Sokol Morkovice B",
+     "away": "Slavia Kroměříž F"
+    },
+    {
+     "home": "TJ Sokol Postoupky C",
+     "away": "ŠO TJ Zborovice B"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1499 @@
+{
+ "id": "t1503416",
+ "short": "OP Frýdek-Místek",
+ "name": "Okresní přebor Frýdek-Místek",
+ "group": "",
+ "tnr": 1503416,
+ "boards": 5,
+ "region": "MKSS",
+ "chesscz": 3404,
+ "season": "2026/2027",
+ "url": "https://chess-results.com/tnr1503416.aspx?lan=5",
+ "teams": [
+  {
+   "name": "Sokol Brušperk B",
+   "captain": "Adam Langer",
+   "players": [
+    {
+     "no": 1,
+     "name": "Lipovský, Tomáš",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1767,
+     "fide": 1847
+    },
+    {
+     "no": 2,
+     "name": "Langer, Adam",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1575,
+     "fide": 1722
+    },
+    {
+     "no": 3,
+     "name": "Dětský, Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": 1375,
+     "fide": 1604
+    },
+    {
+     "no": 4,
+     "name": "Mahďák, Daniel",
+     "types": [],
+     "rtg": null,
+     "nat": 1100,
+     "fide": 1530
+    },
+    {
+     "no": 5,
+     "name": "Blecha, Josef",
+     "types": [],
+     "rtg": null,
+     "nat": 1731,
+     "fide": 1825
+    },
+    {
+     "no": 6,
+     "name": "Hora, Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1363,
+     "fide": 1710
+    },
+    {
+     "no": 7,
+     "name": "Slovák, Svatopluk",
+     "types": [],
+     "rtg": null,
+     "nat": 1763,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "TJ Bystřice",
+   "captain": "Michal Kluz",
+   "players": [
+    {
+     "no": 1,
+     "name": "Rusz, Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1692,
+     "fide": 1788
+    },
+    {
+     "no": 2,
+     "name": "Heczko, Rostislav",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1857,
+     "fide": 1938
+    },
+    {
+     "no": 3,
+     "name": "Kwasek, Andrzej",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1776,
+     "fide": 1863
+    },
+    {
+     "no": 4,
+     "name": "Kukuczka, Milan",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1777,
+     "fide": 1869
+    },
+    {
+     "no": 5,
+     "name": "Kotas, Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1719,
+     "fide": 1830
+    },
+    {
+     "no": 6,
+     "name": "Hudziec, Bronislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1731,
+     "fide": 1820
+    },
+    {
+     "no": 7,
+     "name": "Filipczyk, Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1367,
+     "fide": 1592
+    },
+    {
+     "no": 8,
+     "name": "Kluz, Michal",
+     "types": [],
+     "rtg": null,
+     "nat": 1556,
+     "fide": 1700
+    }
+   ]
+  },
+  {
+   "name": "TJ TŽ Třinec E",
+   "captain": "Arnošt Boff",
+   "players": [
+    {
+     "no": 1,
+     "name": "Krišicová, Neli",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1638,
+     "fide": 1720
+    },
+    {
+     "no": 2,
+     "name": "Krišica, Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1545,
+     "fide": 1694
+    },
+    {
+     "no": 3,
+     "name": "Boff, Vojtěch",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1647,
+     "fide": 1726
+    },
+    {
+     "no": 4,
+     "name": "Krišica, Lukáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1493,
+     "fide": 1585
+    },
+    {
+     "no": 5,
+     "name": "Pecha, Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1374,
+     "fide": 1619
+    },
+    {
+     "no": 6,
+     "name": "Žák, Ondřej",
+     "types": [],
+     "rtg": null,
+     "nat": 1428,
+     "fide": 1527
+    },
+    {
+     "no": 7,
+     "name": "Maryniok, Filip",
+     "types": [],
+     "rtg": null,
+     "nat": 1298,
+     "fide": 1505
+    },
+    {
+     "no": 8,
+     "name": "Fišer, Lukáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1417,
+     "fide": 1627
+    },
+    {
+     "no": 9,
+     "name": "Bilko, Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1312,
+     "fide": 1704
+    },
+    {
+     "no": 10,
+     "name": "Žáková, Barbora",
+     "types": [],
+     "rtg": null,
+     "nat": 1215,
+     "fide": 1539
+    },
+    {
+     "no": 11,
+     "name": "Boff, Arnošt",
+     "types": [],
+     "rtg": null,
+     "nat": 1301,
+     "fide": 1485
+    },
+    {
+     "no": 12,
+     "name": "Žáková, Lenka",
+     "types": [],
+     "rtg": null,
+     "nat": 1267,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Fišer, Tobiáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1063,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Pokorný, Vojtěch",
+     "types": [],
+     "rtg": null,
+     "nat": 1289,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "TJ Sokol Lhotka",
+   "captain": "Roman Vlášek",
+   "players": [
+    {
+     "no": 1,
+     "name": "Pán, Vladimír",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1919,
+     "fide": 1950
+    },
+    {
+     "no": 2,
+     "name": "Vlášek, Roman",
+     "types": [],
+     "rtg": null,
+     "nat": 1889,
+     "fide": 1935
+    },
+    {
+     "no": 3,
+     "name": "Prokop, Milan",
+     "types": [],
+     "rtg": null,
+     "nat": 1795,
+     "fide": 1884
+    },
+    {
+     "no": 4,
+     "name": "Zeman, Stanislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1786,
+     "fide": 1869
+    },
+    {
+     "no": 5,
+     "name": "Genšerovský, Milan",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1663,
+     "fide": 1802
+    },
+    {
+     "no": 6,
+     "name": "Smolík, Josef",
+     "types": [],
+     "rtg": null,
+     "nat": 1618,
+     "fide": 1770
+    },
+    {
+     "no": 7,
+     "name": "Ošťádal, Vratislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1490,
+     "fide": 1637
+    },
+    {
+     "no": 8,
+     "name": "Pečínka, Lukáš",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1348,
+     "fide": 1536
+    },
+    {
+     "no": 9,
+     "name": "Prašivka, Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1634,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "TJ TŽ Třinec D",
+   "captain": "Lukáš Sobek",
+   "players": [
+    {
+     "no": 1,
+     "name": "Koždoň, Marek",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1813,
+     "fide": 1850
+    },
+    {
+     "no": 2,
+     "name": "Sobek, Mikuláš",
+     "types": [],
+     "rtg": null,
+     "nat": 1637,
+     "fide": 1698
+    },
+    {
+     "no": 3,
+     "name": "Maroszczyk, Wieslaw",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1782,
+     "fide": 1838
+    },
+    {
+     "no": 4,
+     "name": "Chodura, Michal",
+     "types": [],
+     "rtg": null,
+     "nat": 1460,
+     "fide": 1664
+    },
+    {
+     "no": 5,
+     "name": "Fremr, Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1540,
+     "fide": 1680
+    },
+    {
+     "no": 6,
+     "name": "Sobek, Lukáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1405,
+     "fide": 1617
+    },
+    {
+     "no": 7,
+     "name": "Žyla, Artur",
+     "types": [],
+     "rtg": null,
+     "nat": 1272,
+     "fide": 1509
+    },
+    {
+     "no": 8,
+     "name": "Rotter, Dominik",
+     "types": [],
+     "rtg": null,
+     "nat": 1311,
+     "fide": 1560
+    },
+    {
+     "no": 9,
+     "name": "Lipus, Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1581,
+     "fide": 1762
+    },
+    {
+     "no": 10,
+     "name": "Kukuczka, Pawel Jan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Fremr, Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1027,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Borski, Michal Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1080,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Borski, Lukáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Cymorek, Adrian",
+     "types": [],
+     "rtg": null,
+     "nat": 1009,
+     "fide": null
+    },
+    {
+     "no": 15,
+     "name": "Cymorek, Andrzej",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "BŠŠ Frýdek-Místek F",
+   "captain": "Petr Záruba",
+   "players": [
+    {
+     "no": 1,
+     "name": "Lytviak, Serhii",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1917,
+     "fide": 2021
+    },
+    {
+     "no": 2,
+     "name": "Surma, Martin",
+     "types": [],
+     "rtg": null,
+     "nat": 1692,
+     "fide": 1820
+    },
+    {
+     "no": 3,
+     "name": "Mičulka, Ivo",
+     "types": [],
+     "rtg": null,
+     "nat": 1809,
+     "fide": 1892
+    },
+    {
+     "no": 4,
+     "name": "Kozelek, Jonáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1582,
+     "fide": 1706
+    },
+    {
+     "no": 5,
+     "name": "Šuta, Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1398,
+     "fide": 1643
+    },
+    {
+     "no": 6,
+     "name": "Saforek, Michal",
+     "types": [],
+     "rtg": null,
+     "nat": 1614,
+     "fide": 1759
+    },
+    {
+     "no": 7,
+     "name": "Vyvial, Václav",
+     "types": [],
+     "rtg": null,
+     "nat": 1472,
+     "fide": 1630
+    },
+    {
+     "no": 8,
+     "name": "Rechtenberg, Karel",
+     "types": [],
+     "rtg": null,
+     "nat": 1472,
+     "fide": 1623
+    },
+    {
+     "no": 9,
+     "name": "Flídr, Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1564,
+     "fide": 1697
+    },
+    {
+     "no": 10,
+     "name": "Ptáčník, Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1513,
+     "fide": 1704
+    },
+    {
+     "no": 11,
+     "name": "Keprt, Tadeáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1449,
+     "fide": 1576
+    },
+    {
+     "no": 12,
+     "name": "Gnojek, Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1499,
+     "fide": 1644
+    },
+    {
+     "no": 13,
+     "name": "Zmelty, David",
+     "types": [],
+     "rtg": null,
+     "nat": 1415,
+     "fide": 1586
+    },
+    {
+     "no": 14,
+     "name": "Frank, Martin",
+     "types": [],
+     "rtg": null,
+     "nat": 1378,
+     "fide": 1569
+    },
+    {
+     "no": 15,
+     "name": "Adamec, Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1386,
+     "fide": 1564
+    },
+    {
+     "no": 16,
+     "name": "Záruba, Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1459,
+     "fide": null
+    },
+    {
+     "no": 17,
+     "name": "Hrčková, Ema",
+     "types": [],
+     "rtg": null,
+     "nat": 1233,
+     "fide": 1411
+    },
+    {
+     "no": 18,
+     "name": "Flídrová, Mariana",
+     "types": [],
+     "rtg": null,
+     "nat": 1279,
+     "fide": 1503
+    },
+    {
+     "no": 19,
+     "name": "Václavková, Klára",
+     "types": [],
+     "rtg": null,
+     "nat": 1339,
+     "fide": 1483
+    },
+    {
+     "no": 20,
+     "name": "Václavek, Ivo",
+     "types": [],
+     "rtg": null,
+     "nat": 1294,
+     "fide": 1497
+    }
+   ]
+  },
+  {
+   "name": "BŠŠ Black Cat",
+   "captain": "Patrik Ludvík",
+   "players": [
+    {
+     "no": 1,
+     "name": "Chvostek, Ondřej",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": 1473
+    },
+    {
+     "no": 2,
+     "name": "Ludvik, Patrik",
+     "types": [],
+     "rtg": null,
+     "nat": 1215,
+     "fide": 1474
+    },
+    {
+     "no": 3,
+     "name": "Olšavský, Marek",
+     "types": [],
+     "rtg": null,
+     "nat": 1537,
+     "fide": 1723
+    },
+    {
+     "no": 4,
+     "name": "Brháček, Lubomír",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": 1764
+    },
+    {
+     "no": 5,
+     "name": "Ludvik, Petr",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": 1481
+    },
+    {
+     "no": 6,
+     "name": "Paseka, Radim",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Kollár, Marian",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Lonská, Jana",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Malucha, Daniel",
+     "types": [],
+     "rtg": null,
+     "nat": 1497,
+     "fide": 1575
+    },
+    {
+     "no": 10,
+     "name": "Kožušník, Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1546,
+     "fide": 1720
+    },
+    {
+     "no": 11,
+     "name": "Škola, Robin",
+     "types": [],
+     "rtg": null,
+     "nat": 1316,
+     "fide": 1455
+    },
+    {
+     "no": 12,
+     "name": "Moskvin, Andrii",
+     "types": [],
+     "rtg": null,
+     "nat": 1449,
+     "fide": 1558
+    },
+    {
+     "no": 13,
+     "name": "Hanzel, Martin",
+     "types": [],
+     "rtg": null,
+     "nat": 1575,
+     "fide": 1568
+    }
+   ]
+  },
+  {
+   "name": "TJ Sokol Dobrá D",
+   "captain": "Otmar Carbol",
+   "players": [
+    {
+     "no": 1,
+     "name": "Tauš, Martin",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 2014,
+     "fide": 2044
+    },
+    {
+     "no": 2,
+     "name": "Botur, Miroslav",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1820,
+     "fide": 1871
+    },
+    {
+     "no": 3,
+     "name": "Kroček, Ivan",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1704,
+     "fide": 1768
+    },
+    {
+     "no": 4,
+     "name": "Tauš, Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1520,
+     "fide": 1792
+    },
+    {
+     "no": 5,
+     "name": "Vaněk, Michal",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1580,
+     "fide": 1774
+    },
+    {
+     "no": 6,
+     "name": "Bok, Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1564,
+     "fide": 1694
+    },
+    {
+     "no": 7,
+     "name": "Oceanský, Jasen",
+     "types": [],
+     "rtg": null,
+     "nat": 1384,
+     "fide": 1647
+    },
+    {
+     "no": 8,
+     "name": "Soural, Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1577,
+     "fide": 1701
+    },
+    {
+     "no": 9,
+     "name": "Carbol, Otmar",
+     "types": [],
+     "rtg": null,
+     "nat": 1591,
+     "fide": 1742
+    },
+    {
+     "no": 10,
+     "name": "Vaňková, Ema",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1217,
+     "fide": 1469
+    },
+    {
+     "no": 11,
+     "name": "Šalamoun, Adam",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Topinka, Leoš",
+     "types": [],
+     "rtg": null,
+     "nat": 1357,
+     "fide": 1512
+    },
+    {
+     "no": 13,
+     "name": "Bebek, Ivan",
+     "types": [],
+     "rtg": null,
+     "nat": 1135,
+     "fide": 1411
+    }
+   ]
+  },
+  {
+   "name": "TJ Sokol Dobrá C",
+   "captain": "Tomáš Filip",
+   "players": [
+    {
+     "no": 1,
+     "name": "Halamíček, Radek",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1727,
+     "fide": 1830
+    },
+    {
+     "no": 2,
+     "name": "Filip, Tomáš",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1985,
+     "fide": 2038
+    },
+    {
+     "no": 3,
+     "name": "Chlebek, Jan",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1812,
+     "fide": 1869
+    },
+    {
+     "no": 4,
+     "name": "Gebauer, Adam",
+     "types": [],
+     "rtg": null,
+     "nat": 1600,
+     "fide": 1773
+    },
+    {
+     "no": 5,
+     "name": "Baran, Rostislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1804,
+     "fide": 1814
+    },
+    {
+     "no": 6,
+     "name": "Bok, Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1630,
+     "fide": 1750
+    },
+    {
+     "no": 7,
+     "name": "Žižka, Radim",
+     "types": [],
+     "rtg": null,
+     "nat": 1666,
+     "fide": 1792
+    },
+    {
+     "no": 8,
+     "name": "Fárek, Vojtěch",
+     "types": [],
+     "rtg": null,
+     "nat": 1166,
+     "fide": 1571
+    },
+    {
+     "no": 9,
+     "name": "Kočí, David",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Macháček, Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1003,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Šafra, Martin",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Kapitanov, Filip",
+     "types": [],
+     "rtg": null,
+     "nat": 1095,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "TJ Sokol Metylovice",
+   "captain": "Stanislav Žwak",
+   "players": [
+    {
+     "no": 1,
+     "name": "Vysoglad, Petr",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1841,
+     "fide": 1926
+    },
+    {
+     "no": 2,
+     "name": "Daniš, Lumír",
+     "types": [],
+     "rtg": null,
+     "nat": 1648,
+     "fide": 1768
+    },
+    {
+     "no": 3,
+     "name": "Žwak, Stanislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1593,
+     "fide": 1745
+    },
+    {
+     "no": 4,
+     "name": "Babušek, Libor",
+     "types": [],
+     "rtg": null,
+     "nat": 1381,
+     "fide": 1644
+    },
+    {
+     "no": 5,
+     "name": "Lavrišin, Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1391,
+     "fide": 1547
+    },
+    {
+     "no": 6,
+     "name": "Javorek, Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1116,
+     "fide": 1506
+    },
+    {
+     "no": 7,
+     "name": "Babinec, Rostislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1397,
+     "fide": 1579
+    },
+    {
+     "no": 8,
+     "name": "Šálek, Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1254,
+     "fide": 1419
+    },
+    {
+     "no": 9,
+     "name": "Stuchlý, Jiří",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1233,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Hajdušek, Milan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "TJ Dobratice",
+   "captain": "Milan Čubok",
+   "players": [
+    {
+     "no": 1,
+     "name": "Čubok, Milan",
+     "types": [],
+     "rtg": null,
+     "nat": 1698,
+     "fide": 1802
+    },
+    {
+     "no": 2,
+     "name": "Chroboček, Dušan",
+     "types": [],
+     "rtg": null,
+     "nat": 1567,
+     "fide": 1754
+    },
+    {
+     "no": 3,
+     "name": "Nytra, Martin",
+     "types": [],
+     "rtg": null,
+     "nat": 1357,
+     "fide": 1503
+    },
+    {
+     "no": 4,
+     "name": "Fizerová, Veronika",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1179,
+     "fide": 1540
+    },
+    {
+     "no": 5,
+     "name": "Rychlík, Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1663,
+     "fide": 1761
+    },
+    {
+     "no": 6,
+     "name": "Golasovský, Jaroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1536,
+     "fide": 1707
+    },
+    {
+     "no": 7,
+     "name": "Vašut, Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1442,
+     "fide": 1588
+    },
+    {
+     "no": 8,
+     "name": "Rucki, Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1780,
+     "fide": 1754
+    },
+    {
+     "no": 9,
+     "name": "Kacíř, Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1535,
+     "fide": 1728
+    },
+    {
+     "no": 10,
+     "name": "Klus, Milan",
+     "types": [],
+     "rtg": null,
+     "nat": 1412,
+     "fide": 1612
+    },
+    {
+     "no": 11,
+     "name": "Gongol, Ondřej",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Čubok, Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1427,
+     "fide": 1541
+    },
+    {
+     "no": 13,
+     "name": "Špalek, Karel",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  }
+ ],
+ "rounds": [
+  {
+   "no": 1,
+   "date": "2026-10-17",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "TJ Bystřice",
+     "away": "TJ Dobratice"
+    },
+    {
+     "home": "TJ TŽ Třinec E",
+     "away": "TJ Sokol Metylovice"
+    },
+    {
+     "home": "TJ Sokol Lhotka",
+     "away": "TJ Sokol Dobrá C"
+    },
+    {
+     "home": "TJ TŽ Třinec D",
+     "away": "TJ Sokol Dobrá D"
+    },
+    {
+     "home": "BŠŠ Frýdek-Místek F",
+     "away": "BŠŠ Black Cat"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "date": "2026-11-07",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "TJ Sokol Dobrá D",
+     "away": "BŠŠ Frýdek-Místek F"
+    },
+    {
+     "home": "TJ Sokol Dobrá C",
+     "away": "TJ TŽ Třinec D"
+    },
+    {
+     "home": "TJ Sokol Metylovice",
+     "away": "TJ Sokol Lhotka"
+    },
+    {
+     "home": "TJ Dobratice",
+     "away": "TJ TŽ Třinec E"
+    },
+    {
+     "home": "Sokol Brušperk B",
+     "away": "TJ Bystřice"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "date": "2026-11-21",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "TJ TŽ Třinec E",
+     "away": "Sokol Brušperk B"
+    },
+    {
+     "home": "TJ Sokol Lhotka",
+     "away": "TJ Dobratice"
+    },
+    {
+     "home": "TJ TŽ Třinec D",
+     "away": "TJ Sokol Metylovice"
+    },
+    {
+     "home": "BŠŠ Frýdek-Místek F",
+     "away": "TJ Sokol Dobrá C"
+    },
+    {
+     "home": "BŠŠ Black Cat",
+     "away": "TJ Sokol Dobrá D"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "date": "2026-12-05",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "TJ Sokol Dobrá C",
+     "away": "BŠŠ Black Cat"
+    },
+    {
+     "home": "TJ Sokol Metylovice",
+     "away": "BŠŠ Frýdek-Místek F"
+    },
+    {
+     "home": "TJ Dobratice",
+     "away": "TJ TŽ Třinec D"
+    },
+    {
+     "home": "Sokol Brušperk B",
+     "away": "TJ Sokol Lhotka"
+    },
+    {
+     "home": "TJ Bystřice",
+     "away": "TJ TŽ Třinec E"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "date": "2027-01-09",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "TJ Sokol Lhotka",
+     "away": "TJ Bystřice"
+    },
+    {
+     "home": "TJ TŽ Třinec D",
+     "away": "Sokol Brušperk B"
+    },
+    {
+     "home": "BŠŠ Frýdek-Místek F",
+     "away": "TJ Dobratice"
+    },
+    {
+     "home": "BŠŠ Black Cat",
+     "away": "TJ Sokol Metylovice"
+    },
+    {
+     "home": "TJ Sokol Dobrá D",
+     "away": "TJ Sokol Dobrá C"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "date": "2027-01-23",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "TJ Sokol Metylovice",
+     "away": "TJ Sokol Dobrá D"
+    },
+    {
+     "home": "TJ Dobratice",
+     "away": "BŠŠ Black Cat"
+    },
+    {
+     "home": "Sokol Brušperk B",
+     "away": "BŠŠ Frýdek-Místek F"
+    },
+    {
+     "home": "TJ Bystřice",
+     "away": "TJ TŽ Třinec D"
+    },
+    {
+     "home": "TJ TŽ Třinec E",
+     "away": "TJ Sokol Lhotka"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "date": "2027-02-06",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "TJ TŽ Třinec D",
+     "away": "TJ TŽ Třinec E"
+    },
+    {
+     "home": "BŠŠ Frýdek-Místek F",
+     "away": "TJ Bystřice"
+    },
+    {
+     "home": "BŠŠ Black Cat",
+     "away": "Sokol Brušperk B"
+    },
+    {
+     "home": "TJ Sokol Dobrá D",
+     "away": "TJ Dobratice"
+    },
+    {
+     "home": "TJ Sokol Dobrá C",
+     "away": "TJ Sokol Metylovice"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "date": "2027-02-20",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "TJ Dobratice",
+     "away": "TJ Sokol Dobrá C"
+    },
+    {
+     "home": "Sokol Brušperk B",
+     "away": "TJ Sokol Dobrá D"
+    },
+    {
+     "home": "TJ Bystřice",
+     "away": "BŠŠ Black Cat"
+    },
+    {
+     "home": "TJ TŽ Třinec E",
+     "away": "BŠŠ Frýdek-Místek F"
+    },
+    {
+     "home": "TJ Sokol Lhotka",
+     "away": "TJ TŽ Třinec D"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "date": "2027-03-13",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "BŠŠ Frýdek-Místek F",
+     "away": "TJ Sokol Lhotka"
+    },
+    {
+     "home": "BŠŠ Black Cat",
+     "away": "TJ TŽ Třinec E"
+    },
+    {
+     "home": "TJ Sokol Dobrá D",
+     "away": "TJ Bystřice"
+    },
+    {
+     "home": "TJ Sokol Dobrá C",
+     "away": "Sokol Brušperk B"
+    },
+    {
+     "home": "TJ Sokol Metylovice",
+     "away": "TJ Dobratice"
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "date": "2027-04-03",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "Sokol Brušperk B",
+     "away": "TJ Sokol Metylovice"
+    },
+    {
+     "home": "TJ Bystřice",
+     "away": "TJ Sokol Dobrá C"
+    },
+    {
+     "home": "TJ TŽ Třinec E",
+     "away": "TJ Sokol Dobrá D"
+    },
+    {
+     "home": "TJ Sokol Lhotka",
+     "away": "BŠŠ Black Cat"
+    },
+    {
+     "home": "TJ TŽ Třinec D",
+     "away": "BŠŠ Frýdek-Místek F"
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "date": "2027-04-17",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "BŠŠ Black Cat",
+     "away": "TJ TŽ Třinec D"
+    },
+    {
+     "home": "TJ Sokol Dobrá D",
+     "away": "TJ Sokol Lhotka"
+    },
+    {
+     "home": "TJ Sokol Dobrá C",
+     "away": "TJ TŽ Třinec E"
+    },
+    {
+     "home": "TJ Sokol Metylovice",
+     "away": "TJ Bystřice"
+    },
+    {
+     "home": "TJ Dobratice",
+     "away": "Sokol Brušperk B"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,991 @@
+{
+ "id": "t1497247",
+ "short": "KS I západ",
+ "name": "Krajská soutěž I. - západ",
+ "group": "",
+ "tnr": 1497247,
+ "boards": 5,
+ "region": "SSLK",
+ "chesscz": 3441,
+ "season": "2026/2027",
+ "url": "https://chess-results.com/tnr1497247.aspx?lan=5",
+ "teams": [
+  {
+   "name": "Desko Liberec ''D''",
+   "captain": "Jakub Pierowski",
+   "players": [
+    {
+     "no": 1,
+     "name": "Pierowski, Jakub",
+     "types": [
+      "K"
+     ],
+     "rtg": 1600,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Maršík, Ondřej",
+     "types": [],
+     "rtg": 1628,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Čejchan, Teodor",
+     "types": [],
+     "rtg": 1702,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Ausperger, Vít",
+     "types": [],
+     "rtg": 1584,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Komžík, Matěj",
+     "types": [],
+     "rtg": 1386,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Bělaška, Adam",
+     "types": [],
+     "rtg": 1598,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Maršík, Matěj",
+     "types": [],
+     "rtg": 1539,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Matlach, Samuel",
+     "types": [],
+     "rtg": 1486,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Antl, František",
+     "types": [],
+     "rtg": 1105,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Žabka, Vratislav",
+     "types": [],
+     "rtg": 1343,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Musil, Jan",
+     "types": [],
+     "rtg": 1276,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Žabka, Jiří",
+     "types": [],
+     "rtg": 1049,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Jakimič, Liam",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Čejchan, Simeon",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 15,
+     "name": "Kareis, Jakub",
+     "types": [],
+     "rtg": 1124,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "TJ Lokomotiva Liberec ''B''",
+   "captain": "Milan Voldřich",
+   "players": [
+    {
+     "no": 1,
+     "name": "Šimon, Petr",
+     "types": [
+      "V"
+     ],
+     "rtg": 1616,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Žítek, Jiří",
+     "types": [
+      "V"
+     ],
+     "rtg": 1596,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Hort, Jaroslav",
+     "types": [],
+     "rtg": 1479,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Zuzánek, Vítězslav",
+     "types": [
+      "ZK"
+     ],
+     "rtg": 1558,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Voldřich, Milan",
+     "types": [
+      "ZK"
+     ],
+     "rtg": 1353,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Kovář, Jindřich",
+     "types": [],
+     "rtg": 1553,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Zuzánek, Roman",
+     "types": [],
+     "rtg": 1676,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Šimon, Václav",
+     "types": [],
+     "rtg": 1393,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Novotný, Zdeněk",
+     "types": [],
+     "rtg": 1551,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Mohylová, Valentina",
+     "types": [],
+     "rtg": 1508,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Mohylová, Beáta",
+     "types": [],
+     "rtg": 1191,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Zachariev, Vladislav",
+     "types": [],
+     "rtg": 1087,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Šimko, Daniel",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Stráž pod Ralskem",
+   "captain": "Jan Malec",
+   "players": [
+    {
+     "no": 1,
+     "name": "Malec, Jan",
+     "types": [
+      "K"
+     ],
+     "rtg": 1906,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Řičánek, Miloslav",
+     "types": [],
+     "rtg": 1814,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Reiter, Petr",
+     "types": [],
+     "rtg": 1543,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Ščerba, Jiří",
+     "types": [
+      "ZK"
+     ],
+     "rtg": 1826,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Všetíček, Oldřich",
+     "types": [],
+     "rtg": 1716,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Kočí, Vladimír",
+     "types": [],
+     "rtg": 1569,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Holub, Jaroslav",
+     "types": [],
+     "rtg": 1554,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Šulc, Petr",
+     "types": [],
+     "rtg": 1499,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Homza, František",
+     "types": [],
+     "rtg": 1238,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Czuczor, Patrik",
+     "types": [],
+     "rtg": 1262,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Kaňák, René",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Adámek, Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "1. Novoborský ŠK ''C''",
+   "captain": "Miloš Koudelka",
+   "players": [
+    {
+     "no": 1,
+     "name": "Boleslav, Petr",
+     "types": [
+      "V"
+     ],
+     "rtg": 1941,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Tadlík, Petr",
+     "types": [
+      "V"
+     ],
+     "rtg": 1796,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Drahotský, Vladimír",
+     "types": [],
+     "rtg": 1703,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Liška, Jiří",
+     "types": [],
+     "rtg": 1643,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Kaplánek, Jan",
+     "types": [],
+     "rtg": 1607,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Tryhuba, Jaroslav",
+     "types": [],
+     "rtg": 1656,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Koudelka, Miloš",
+     "types": [
+      "K"
+     ],
+     "rtg": 1588,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Vincenc, Robin",
+     "types": [],
+     "rtg": 1572,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Boleslav, Petr",
+     "types": [],
+     "rtg": 1303,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Zahradníček, Filip",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Válek, Štěpán",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Hájek, Jiří",
+     "types": [],
+     "rtg": 1128,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Masopust, Josef",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Štys, Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 15,
+     "name": "Holá, Marie",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 16,
+     "name": "Masopustová, Simona",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 17,
+     "name": "Hofman, Přemysl",
+     "types": [],
+     "rtg": 1131,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 18,
+     "name": "Dračka, Martin",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 19,
+     "name": "Pittner, Adam",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 20,
+     "name": "Pomeisl, Antonín",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Česká Lípa ''D''",
+   "captain": "Jiří Jína",
+   "players": [
+    {
+     "no": 1,
+     "name": "Frantsev, Iegor",
+     "types": [
+      "V"
+     ],
+     "rtg": 1673,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Drvota, Bruno",
+     "types": [],
+     "rtg": 1433,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Halama, Vratislav",
+     "types": [],
+     "rtg": 1822,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Jína, Jakub",
+     "types": [],
+     "rtg": 1521,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Popovyč, Artur",
+     "types": [],
+     "rtg": 1470,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Adámek, Jiří",
+     "types": [],
+     "rtg": 1566,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Sichrovský, Filip",
+     "types": [],
+     "rtg": 1598,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Halama, Tomáš",
+     "types": [],
+     "rtg": 1350,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Hůlka, Vít",
+     "types": [],
+     "rtg": 1171,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Kovář, Václav",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Soustružník, Matěj",
+     "types": [],
+     "rtg": 1008,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Marcinkovskij, Michael",
+     "types": [],
+     "rtg": 1072,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Komkov, Bohdan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Kletečka, Filip",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 15,
+     "name": "Jínová, Jana",
+     "types": [
+      "ZK"
+     ],
+     "rtg": 1358,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Česká Lípa ''C''",
+   "captain": "Václav Grindler",
+   "players": [
+    {
+     "no": 1,
+     "name": "Völfl, Zdeněk",
+     "types": [
+      "V"
+     ],
+     "rtg": 2004,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Lesage, Milan",
+     "types": [
+      "V"
+     ],
+     "rtg": 1901,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Schütz, Miroslav",
+     "types": [
+      "ZK"
+     ],
+     "rtg": 1626,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Veselý, Pavel",
+     "types": [],
+     "rtg": 1768,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Grindler, Václav",
+     "types": [
+      "K"
+     ],
+     "rtg": 1577,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Honců, Miroslav",
+     "types": [],
+     "rtg": 1614,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Zelenka, Marek",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Švasta, Lukáš",
+     "types": [],
+     "rtg": 1821,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Grindler, Miloslav",
+     "types": [],
+     "rtg": 1539,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Dobšinský, Petr",
+     "types": [],
+     "rtg": 1317,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "TJ Krásná Lípa",
+   "captain": "Jiří Průdek",
+   "players": [
+    {
+     "no": 1,
+     "name": "Machulda, Vladimír",
+     "types": [],
+     "rtg": 1270,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Průdek, Jiří",
+     "types": [
+      "K"
+     ],
+     "rtg": 1901,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Carda, Milan",
+     "types": [],
+     "rtg": 1662,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Fúzik, Bohuslav",
+     "types": [
+      "ZK"
+     ],
+     "rtg": 1591,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Beránek, Jiří",
+     "types": [],
+     "rtg": 1312,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Mayer, Jiří",
+     "types": [],
+     "rtg": 1833,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Princ, Jiří",
+     "types": [],
+     "rtg": 1662,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Werner, Roman",
+     "types": [
+      "H"
+     ],
+     "rtg": 1645,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Hloušek, Zdeněk",
+     "types": [
+      "H"
+     ],
+     "rtg": 1589,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Šmalcl, František",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  }
+ ],
+ "rounds": [
+  {
+   "no": 1,
+   "date": "2026-10-11",
+   "time": "10:00",
+   "matches": [
+    {
+     "home": "TJ Lokomotiva Liberec ''B''",
+     "away": "TJ Krásná Lípa"
+    },
+    {
+     "home": "ŠK Stráž pod Ralskem",
+     "away": "ŠK Česká Lípa ''C''"
+    },
+    {
+     "home": "1. Novoborský ŠK ''C''",
+     "away": "ŠK Česká Lípa ''D''"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "date": "2026-11-01",
+   "time": "10:00",
+   "matches": [
+    {
+     "home": "ŠK Česká Lípa ''C''",
+     "away": "1. Novoborský ŠK ''C''"
+    },
+    {
+     "home": "TJ Krásná Lípa",
+     "away": "ŠK Stráž pod Ralskem"
+    },
+    {
+     "home": "Desko Liberec ''D''",
+     "away": "TJ Lokomotiva Liberec ''B''"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "date": "2026-11-15",
+   "time": "10:00",
+   "matches": [
+    {
+     "home": "ŠK Stráž pod Ralskem",
+     "away": "Desko Liberec ''D''"
+    },
+    {
+     "home": "1. Novoborský ŠK ''C''",
+     "away": "TJ Krásná Lípa"
+    },
+    {
+     "home": "ŠK Česká Lípa ''D''",
+     "away": "ŠK Česká Lípa ''C''"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "date": "2026-11-29",
+   "time": "10:00",
+   "matches": [
+    {
+     "home": "TJ Krásná Lípa",
+     "away": "ŠK Česká Lípa ''D''"
+    },
+    {
+     "home": "Desko Liberec ''D''",
+     "away": "1. Novoborský ŠK ''C''"
+    },
+    {
+     "home": "TJ Lokomotiva Liberec ''B''",
+     "away": "ŠK Stráž pod Ralskem"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "date": "2026-12-13",
+   "time": "10:00",
+   "matches": [
+    {
+     "home": "1. Novoborský ŠK ''C''",
+     "away": "TJ Lokomotiva Liberec ''B''"
+    },
+    {
+     "home": "ŠK Česká Lípa ''D''",
+     "away": "Desko Liberec ''D''"
+    },
+    {
+     "home": "ŠK Česká Lípa ''C''",
+     "away": "TJ Krásná Lípa"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "date": "2027-01-17",
+   "time": "10:00",
+   "matches": [
+    {
+     "home": "Desko Liberec ''D''",
+     "away": "ŠK Česká Lípa ''C''"
+    },
+    {
+     "home": "TJ Lokomotiva Liberec ''B''",
+     "away": "ŠK Česká Lípa ''D''"
+    },
+    {
+     "home": "ŠK Stráž pod Ralskem",
+     "away": "1. Novoborský ŠK ''C''"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "date": "2027-01-31",
+   "time": "10:00",
+   "matches": [
+    {
+     "home": "ŠK Česká Lípa ''D''",
+     "away": "ŠK Stráž pod Ralskem"
+    },
+    {
+     "home": "ŠK Česká Lípa ''C''",
+     "away": "TJ Lokomotiva Liberec ''B''"
+    },
+    {
+     "home": "TJ Krásná Lípa",
+     "away": "Desko Liberec ''D''"
+    }
+   ]
+  }
+ ]
+}

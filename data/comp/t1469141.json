@@ -1,0 +1,866 @@
+{
+ "id": "t1469141",
+ "short": "KP",
+ "name": "Krajský přebor",
+ "group": "",
+ "tnr": 1469141,
+ "boards": 8,
+ "region": "SSZK",
+ "chesscz": 3405,
+ "season": "2026/2027",
+ "url": "https://chess-results.com/tnr1469141.aspx?lan=5",
+ "teams": [
+  {
+   "name": "Slavia Kroměříž C",
+   "captain": "Šudřich Radek",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, V",
+     "types": [
+      "V"
+     ],
+     "rtg": 2118,
+     "nat": 2119,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "z, V",
+     "types": [
+      "V"
+     ],
+     "rtg": 2068,
+     "nat": 2023,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "z, V",
+     "types": [
+      "V"
+     ],
+     "rtg": 2105,
+     "nat": 2079,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 2048,
+     "nat": 2027,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "SK Boršice",
+   "captain": "Tománek Pavel",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2207,
+     "nat": 2183,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1889,
+     "nat": 1920,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 1883,
+     "nat": 1885,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1908,
+     "nat": 1846,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "TJ Vlčnov B",
+   "captain": "Oharek Vlastimil",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, V",
+     "types": [
+      "V"
+     ],
+     "rtg": 2131,
+     "nat": 2099,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1902,
+     "nat": 1832,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Fatra Slavia Napajedla",
+   "captain": "Pálka Bronislav",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 2225,
+     "nat": 2190,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1958,
+     "nat": 1919,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 1967,
+     "nat": 1941,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1900,
+     "nat": 1840,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Staré Město B",
+   "captain": "Dvouletý Pavel",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2487,
+     "nat": 2493,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 2037,
+     "nat": 2037,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 2037,
+     "nat": 2030,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Šachový klub Vsetín B",
+   "captain": "Píštěk Zdeněk",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, V",
+     "types": [
+      "V"
+     ],
+     "rtg": 2148,
+     "nat": 2066,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "z, V",
+     "types": [
+      "V"
+     ],
+     "rtg": 2060,
+     "nat": 2052,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 1927,
+     "nat": 1861,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Zlín-Malenovice",
+   "captain": "Boháček Jan Andrej",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2223,
+     "nat": 2180,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 2162,
+     "nat": 2126,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1926,
+     "nat": 1977,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 1883,
+     "nat": 1828,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "TJ Sokol Ústí",
+   "captain": "Matůš Filip",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2005,
+     "nat": 1957,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 1957,
+     "nat": 1936,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1858,
+     "nat": 1881,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1824,
+     "nat": 1784,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Sokol Postoupky",
+   "captain": "Vrzal Filip",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 2122,
+     "nat": 2122,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2024,
+     "nat": 2014,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1970,
+     "nat": 1915,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1904,
+     "nat": 1773,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "H, K",
+     "types": [
+      "H",
+      "K"
+     ],
+     "rtg": 1900,
+     "nat": 1906,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Dolňácko",
+   "captain": "Světinský Antonín",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2242,
+     "nat": 2240,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2263,
+     "nat": 2232,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "z, C",
+     "types": [
+      "C"
+     ],
+     "rtg": 2141,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "TJ Sokol Valašská Bystřice",
+   "captain": "Foukal Jiří",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2110,
+     "nat": 2113,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 2148,
+     "nat": 2140,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1942,
+     "nat": 1978,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 1822,
+     "nat": 1725,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Zlín B",
+   "captain": "Machala Matěj",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, V",
+     "types": [
+      "V"
+     ],
+     "rtg": 2168,
+     "nat": 2149,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "z, V",
+     "types": [
+      "V"
+     ],
+     "rtg": 2091,
+     "nat": 2069,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "z, C",
+     "types": [
+      "C"
+     ],
+     "rtg": 2078,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 1937,
+     "nat": 1898,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 1848,
+     "nat": 1755,
+     "fide": null
+    }
+   ]
+  }
+ ],
+ "rounds": [
+  {
+   "no": 1,
+   "date": "2026-10-18",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "Slavia Kroměříž C",
+     "away": "ŠK Zlín B"
+    },
+    {
+     "home": "SK Boršice",
+     "away": "TJ Sokol Valašská Bystřice"
+    },
+    {
+     "home": "TJ Vlčnov B",
+     "away": "ŠK Dolňácko"
+    },
+    {
+     "home": "Fatra Slavia Napajedla",
+     "away": "Sokol Postoupky"
+    },
+    {
+     "home": "ŠK Staré Město B",
+     "away": "TJ Sokol Ústí"
+    },
+    {
+     "home": "Šachový klub Vsetín B",
+     "away": "ŠK Zlín-Malenovice"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "date": "2026-11-08",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "ŠK Zlín B",
+     "away": "ŠK Zlín-Malenovice"
+    },
+    {
+     "home": "TJ Sokol Ústí",
+     "away": "Šachový klub Vsetín B"
+    },
+    {
+     "home": "Sokol Postoupky",
+     "away": "ŠK Staré Město B"
+    },
+    {
+     "home": "ŠK Dolňácko",
+     "away": "Fatra Slavia Napajedla"
+    },
+    {
+     "home": "TJ Sokol Valašská Bystřice",
+     "away": "TJ Vlčnov B"
+    },
+    {
+     "home": "Slavia Kroměříž C",
+     "away": "SK Boršice"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "date": "2026-11-22",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "SK Boršice",
+     "away": "ŠK Zlín B"
+    },
+    {
+     "home": "TJ Vlčnov B",
+     "away": "Slavia Kroměříž C"
+    },
+    {
+     "home": "Fatra Slavia Napajedla",
+     "away": "TJ Sokol Valašská Bystřice"
+    },
+    {
+     "home": "ŠK Staré Město B",
+     "away": "ŠK Dolňácko"
+    },
+    {
+     "home": "Šachový klub Vsetín B",
+     "away": "Sokol Postoupky"
+    },
+    {
+     "home": "ŠK Zlín-Malenovice",
+     "away": "TJ Sokol Ústí"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "date": "2026-12-06",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "ŠK Zlín B",
+     "away": "TJ Sokol Ústí"
+    },
+    {
+     "home": "Sokol Postoupky",
+     "away": "ŠK Zlín-Malenovice"
+    },
+    {
+     "home": "ŠK Dolňácko",
+     "away": "Šachový klub Vsetín B"
+    },
+    {
+     "home": "TJ Sokol Valašská Bystřice",
+     "away": "ŠK Staré Město B"
+    },
+    {
+     "home": "Slavia Kroměříž C",
+     "away": "Fatra Slavia Napajedla"
+    },
+    {
+     "home": "SK Boršice",
+     "away": "TJ Vlčnov B"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "date": "2027-01-10",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "TJ Vlčnov B",
+     "away": "ŠK Zlín B"
+    },
+    {
+     "home": "Fatra Slavia Napajedla",
+     "away": "SK Boršice"
+    },
+    {
+     "home": "ŠK Staré Město B",
+     "away": "Slavia Kroměříž C"
+    },
+    {
+     "home": "Šachový klub Vsetín B",
+     "away": "TJ Sokol Valašská Bystřice"
+    },
+    {
+     "home": "ŠK Zlín-Malenovice",
+     "away": "ŠK Dolňácko"
+    },
+    {
+     "home": "TJ Sokol Ústí",
+     "away": "Sokol Postoupky"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "date": "2027-01-24",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "ŠK Zlín B",
+     "away": "Sokol Postoupky"
+    },
+    {
+     "home": "ŠK Dolňácko",
+     "away": "TJ Sokol Ústí"
+    },
+    {
+     "home": "TJ Sokol Valašská Bystřice",
+     "away": "ŠK Zlín-Malenovice"
+    },
+    {
+     "home": "Slavia Kroměříž C",
+     "away": "Šachový klub Vsetín B"
+    },
+    {
+     "home": "SK Boršice",
+     "away": "ŠK Staré Město B"
+    },
+    {
+     "home": "TJ Vlčnov B",
+     "away": "Fatra Slavia Napajedla"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "date": "2027-02-07",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "Fatra Slavia Napajedla",
+     "away": "ŠK Zlín B"
+    },
+    {
+     "home": "ŠK Staré Město B",
+     "away": "TJ Vlčnov B"
+    },
+    {
+     "home": "Šachový klub Vsetín B",
+     "away": "SK Boršice"
+    },
+    {
+     "home": "ŠK Zlín-Malenovice",
+     "away": "Slavia Kroměříž C"
+    },
+    {
+     "home": "TJ Sokol Ústí",
+     "away": "TJ Sokol Valašská Bystřice"
+    },
+    {
+     "home": "Sokol Postoupky",
+     "away": "ŠK Dolňácko"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "date": "2027-02-21",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "ŠK Zlín B",
+     "away": "ŠK Dolňácko"
+    },
+    {
+     "home": "TJ Sokol Valašská Bystřice",
+     "away": "Sokol Postoupky"
+    },
+    {
+     "home": "Slavia Kroměříž C",
+     "away": "TJ Sokol Ústí"
+    },
+    {
+     "home": "SK Boršice",
+     "away": "ŠK Zlín-Malenovice"
+    },
+    {
+     "home": "TJ Vlčnov B",
+     "away": "Šachový klub Vsetín B"
+    },
+    {
+     "home": "Fatra Slavia Napajedla",
+     "away": "ŠK Staré Město B"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "date": "2027-03-14",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "ŠK Staré Město B",
+     "away": "ŠK Zlín B"
+    },
+    {
+     "home": "Šachový klub Vsetín B",
+     "away": "Fatra Slavia Napajedla"
+    },
+    {
+     "home": "ŠK Zlín-Malenovice",
+     "away": "TJ Vlčnov B"
+    },
+    {
+     "home": "TJ Sokol Ústí",
+     "away": "SK Boršice"
+    },
+    {
+     "home": "Sokol Postoupky",
+     "away": "Slavia Kroměříž C"
+    },
+    {
+     "home": "ŠK Dolňácko",
+     "away": "TJ Sokol Valašská Bystřice"
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "date": "2027-04-04",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "ŠK Zlín B",
+     "away": "TJ Sokol Valašská Bystřice"
+    },
+    {
+     "home": "Slavia Kroměříž C",
+     "away": "ŠK Dolňácko"
+    },
+    {
+     "home": "SK Boršice",
+     "away": "Sokol Postoupky"
+    },
+    {
+     "home": "TJ Vlčnov B",
+     "away": "TJ Sokol Ústí"
+    },
+    {
+     "home": "Fatra Slavia Napajedla",
+     "away": "ŠK Zlín-Malenovice"
+    },
+    {
+     "home": "ŠK Staré Město B",
+     "away": "Šachový klub Vsetín B"
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "date": "2027-04-18",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "Šachový klub Vsetín B",
+     "away": "ŠK Zlín B"
+    },
+    {
+     "home": "ŠK Zlín-Malenovice",
+     "away": "ŠK Staré Město B"
+    },
+    {
+     "home": "TJ Sokol Ústí",
+     "away": "Fatra Slavia Napajedla"
+    },
+    {
+     "home": "Sokol Postoupky",
+     "away": "TJ Vlčnov B"
+    },
+    {
+     "home": "ŠK Dolňácko",
+     "away": "SK Boršice"
+    },
+    {
+     "home": "TJ Sokol Valašská Bystřice",
+     "away": "Slavia Kroměříž C"
+    }
+   ]
+  }
+ ]
+}

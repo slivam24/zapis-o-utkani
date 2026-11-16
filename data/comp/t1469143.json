@@ -1,0 +1,787 @@
+{
+ "id": "t1469143",
+ "short": "RP Kroměříž",
+ "name": "Regionální přebor - Kroměříž",
+ "group": "",
+ "tnr": 1469143,
+ "boards": 8,
+ "region": "SSZK",
+ "chesscz": 3408,
+ "season": "2026/2027",
+ "url": "https://chess-results.com/tnr1469143.aspx?lan=5",
+ "teams": [
+  {
+   "name": "ŠO TJ Zborovice",
+   "captain": "Prachař Mojmír",
+   "players": [
+    {
+     "no": 2,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 1827,
+     "nat": null,
+     "fide": 1940
+    },
+    {
+     "no": 4,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1914,
+     "nat": null,
+     "fide": 2053
+    },
+    {
+     "no": 6,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 1617,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "SK Rusava",
+   "captain": "Bartošek Zdeněk",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1727,
+     "nat": null,
+     "fide": 1815
+    },
+    {
+     "no": 2,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 1627,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1456,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1479,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "SK EMKaD Holešov",
+   "captain": "Kunc Miroslav",
+   "players": [
+    {
+     "no": 3,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 1880,
+     "nat": null,
+     "fide": 1900
+    },
+    {
+     "no": 6,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1500,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1455,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Bystřice p. Hostýnem B",
+   "captain": "Pecl Jaroslav",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, V",
+     "types": [
+      "V"
+     ],
+     "rtg": 1768,
+     "nat": null,
+     "fide": 1917
+    },
+    {
+     "no": 2,
+     "name": "z, V",
+     "types": [
+      "V"
+     ],
+     "rtg": 1785,
+     "nat": null,
+     "fide": 1971
+    },
+    {
+     "no": 3,
+     "name": "z, V",
+     "types": [
+      "V"
+     ],
+     "rtg": 1690,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 1523,
+     "nat": null,
+     "fide": 1540
+    }
+   ]
+  },
+  {
+   "name": "ŠK Prusinovice",
+   "captain": "Mlčák Bohumil",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1955,
+     "nat": null,
+     "fide": 2005
+    },
+    {
+     "no": 2,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 1700,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1823,
+     "nat": null,
+     "fide": 1921
+    },
+    {
+     "no": 5,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1653,
+     "nat": null,
+     "fide": 1856
+    },
+    {
+     "no": 8,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 1609,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Sokol Litenčice",
+   "captain": "Endlicher Milan",
+   "players": [
+    {
+     "no": 2,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 1538,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 1447,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Slavia Kroměříž E",
+   "captain": "Štencel Karel",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1667,
+     "nat": null,
+     "fide": 1693
+    },
+    {
+     "no": 2,
+     "name": "z, V",
+     "types": [
+      "V"
+     ],
+     "rtg": 1964,
+     "nat": null,
+     "fide": 2006
+    },
+    {
+     "no": 3,
+     "name": "z, V",
+     "types": [
+      "V"
+     ],
+     "rtg": 2027,
+     "nat": null,
+     "fide": 2054
+    },
+    {
+     "no": 7,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 1752,
+     "nat": null,
+     "fide": 1740
+    }
+   ]
+  },
+  {
+   "name": "TJ Lutopecny-Měrůtky",
+   "captain": "Pospíšil Josef nejml.",
+   "players": [
+    {
+     "no": 2,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 1768,
+     "nat": null,
+     "fide": 1906
+    },
+    {
+     "no": 3,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1735,
+     "nat": null,
+     "fide": 1945
+    },
+    {
+     "no": 5,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 1376,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Sokol Postoupky B",
+   "captain": "Opluštil Vladimír",
+   "players": [
+    {
+     "no": 3,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 1606,
+     "nat": null,
+     "fide": 1640
+    },
+    {
+     "no": 5,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 1925,
+     "nat": null,
+     "fide": 1965
+    }
+   ]
+  },
+  {
+   "name": "ŠK RAPOS Sulimov B",
+   "captain": "Březovják Štěpán",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, V",
+     "types": [
+      "V"
+     ],
+     "rtg": 1763,
+     "nat": null,
+     "fide": 1749
+    },
+    {
+     "no": 2,
+     "name": "z, V",
+     "types": [
+      "V"
+     ],
+     "rtg": 1683,
+     "nat": null,
+     "fide": 1704
+    },
+    {
+     "no": 7,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 1519,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "TJ Sokol Pravčice",
+   "captain": "Mrhálek Ctirad",
+   "players": [
+    {
+     "no": 2,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 1635,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 1486,
+     "nat": null,
+     "fide": 1569
+    }
+   ]
+  },
+  {
+   "name": "TJ Sokol Morkovice",
+   "captain": "Pavlík František",
+   "players": [
+    {
+     "no": 1,
+     "name": "z, H",
+     "types": [
+      "H"
+     ],
+     "rtg": 1845,
+     "nat": null,
+     "fide": 1866
+    },
+    {
+     "no": 2,
+     "name": "z, K",
+     "types": [
+      "K"
+     ],
+     "rtg": 1815,
+     "nat": null,
+     "fide": 1814
+    },
+    {
+     "no": 3,
+     "name": "z, Z",
+     "types": [],
+     "rtg": 1609,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  }
+ ],
+ "rounds": [
+  {
+   "no": 1,
+   "date": "2026-10-18",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "ŠO TJ Zborovice",
+     "away": "TJ Sokol Morkovice"
+    },
+    {
+     "home": "SK Rusava",
+     "away": "TJ Sokol Pravčice"
+    },
+    {
+     "home": "SK EMKaD Holešov",
+     "away": "ŠK RAPOS Sulimov B"
+    },
+    {
+     "home": "ŠK Bystřice p. Hostýnem B",
+     "away": "Sokol Postoupky B"
+    },
+    {
+     "home": "ŠK Prusinovice",
+     "away": "TJ Lutopecny-Měrůtky"
+    },
+    {
+     "home": "Sokol Litenčice",
+     "away": "Slavia Kroměříž E"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "date": "2026-11-08",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "TJ Sokol Morkovice",
+     "away": "Slavia Kroměříž E"
+    },
+    {
+     "home": "TJ Lutopecny-Měrůtky",
+     "away": "Sokol Litenčice"
+    },
+    {
+     "home": "Sokol Postoupky B",
+     "away": "ŠK Prusinovice"
+    },
+    {
+     "home": "ŠK RAPOS Sulimov B",
+     "away": "ŠK Bystřice p. Hostýnem B"
+    },
+    {
+     "home": "TJ Sokol Pravčice",
+     "away": "SK EMKaD Holešov"
+    },
+    {
+     "home": "ŠO TJ Zborovice",
+     "away": "SK Rusava"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "date": "2026-11-22",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "SK Rusava",
+     "away": "TJ Sokol Morkovice"
+    },
+    {
+     "home": "SK EMKaD Holešov",
+     "away": "ŠO TJ Zborovice"
+    },
+    {
+     "home": "ŠK Bystřice p. Hostýnem B",
+     "away": "TJ Sokol Pravčice"
+    },
+    {
+     "home": "ŠK Prusinovice",
+     "away": "ŠK RAPOS Sulimov B"
+    },
+    {
+     "home": "Sokol Litenčice",
+     "away": "Sokol Postoupky B"
+    },
+    {
+     "home": "Slavia Kroměříž E",
+     "away": "TJ Lutopecny-Měrůtky"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "date": "2026-12-06",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "TJ Sokol Morkovice",
+     "away": "TJ Lutopecny-Měrůtky"
+    },
+    {
+     "home": "Sokol Postoupky B",
+     "away": "Slavia Kroměříž E"
+    },
+    {
+     "home": "ŠK RAPOS Sulimov B",
+     "away": "Sokol Litenčice"
+    },
+    {
+     "home": "TJ Sokol Pravčice",
+     "away": "ŠK Prusinovice"
+    },
+    {
+     "home": "ŠO TJ Zborovice",
+     "away": "ŠK Bystřice p. Hostýnem B"
+    },
+    {
+     "home": "SK Rusava",
+     "away": "SK EMKaD Holešov"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "date": "2027-01-10",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "SK EMKaD Holešov",
+     "away": "TJ Sokol Morkovice"
+    },
+    {
+     "home": "ŠK Bystřice p. Hostýnem B",
+     "away": "SK Rusava"
+    },
+    {
+     "home": "ŠK Prusinovice",
+     "away": "ŠO TJ Zborovice"
+    },
+    {
+     "home": "Sokol Litenčice",
+     "away": "TJ Sokol Pravčice"
+    },
+    {
+     "home": "Slavia Kroměříž E",
+     "away": "ŠK RAPOS Sulimov B"
+    },
+    {
+     "home": "TJ Lutopecny-Měrůtky",
+     "away": "Sokol Postoupky B"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "date": "2027-01-24",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "TJ Sokol Morkovice",
+     "away": "Sokol Postoupky B"
+    },
+    {
+     "home": "ŠK RAPOS Sulimov B",
+     "away": "TJ Lutopecny-Měrůtky"
+    },
+    {
+     "home": "TJ Sokol Pravčice",
+     "away": "Slavia Kroměříž E"
+    },
+    {
+     "home": "ŠO TJ Zborovice",
+     "away": "Sokol Litenčice"
+    },
+    {
+     "home": "SK Rusava",
+     "away": "ŠK Prusinovice"
+    },
+    {
+     "home": "SK EMKaD Holešov",
+     "away": "ŠK Bystřice p. Hostýnem B"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "date": "2027-02-07",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "ŠK Bystřice p. Hostýnem B",
+     "away": "TJ Sokol Morkovice"
+    },
+    {
+     "home": "ŠK Prusinovice",
+     "away": "SK EMKaD Holešov"
+    },
+    {
+     "home": "Sokol Litenčice",
+     "away": "SK Rusava"
+    },
+    {
+     "home": "Slavia Kroměříž E",
+     "away": "ŠO TJ Zborovice"
+    },
+    {
+     "home": "TJ Lutopecny-Měrůtky",
+     "away": "TJ Sokol Pravčice"
+    },
+    {
+     "home": "Sokol Postoupky B",
+     "away": "ŠK RAPOS Sulimov B"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "date": "2027-02-21",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "TJ Sokol Morkovice",
+     "away": "ŠK RAPOS Sulimov B"
+    },
+    {
+     "home": "TJ Sokol Pravčice",
+     "away": "Sokol Postoupky B"
+    },
+    {
+     "home": "ŠO TJ Zborovice",
+     "away": "TJ Lutopecny-Měrůtky"
+    },
+    {
+     "home": "SK Rusava",
+     "away": "Slavia Kroměříž E"
+    },
+    {
+     "home": "SK EMKaD Holešov",
+     "away": "Sokol Litenčice"
+    },
+    {
+     "home": "ŠK Bystřice p. Hostýnem B",
+     "away": "ŠK Prusinovice"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "date": "2027-03-14",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "ŠK Prusinovice",
+     "away": "TJ Sokol Morkovice"
+    },
+    {
+     "home": "Sokol Litenčice",
+     "away": "ŠK Bystřice p. Hostýnem B"
+    },
+    {
+     "home": "Slavia Kroměříž E",
+     "away": "SK EMKaD Holešov"
+    },
+    {
+     "home": "TJ Lutopecny-Měrůtky",
+     "away": "SK Rusava"
+    },
+    {
+     "home": "Sokol Postoupky B",
+     "away": "ŠO TJ Zborovice"
+    },
+    {
+     "home": "ŠK RAPOS Sulimov B",
+     "away": "TJ Sokol Pravčice"
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "date": "2027-04-04",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "TJ Sokol Morkovice",
+     "away": "TJ Sokol Pravčice"
+    },
+    {
+     "home": "ŠO TJ Zborovice",
+     "away": "ŠK RAPOS Sulimov B"
+    },
+    {
+     "home": "SK Rusava",
+     "away": "Sokol Postoupky B"
+    },
+    {
+     "home": "SK EMKaD Holešov",
+     "away": "TJ Lutopecny-Měrůtky"
+    },
+    {
+     "home": "ŠK Bystřice p. Hostýnem B",
+     "away": "Slavia Kroměříž E"
+    },
+    {
+     "home": "ŠK Prusinovice",
+     "away": "Sokol Litenčice"
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "date": "2027-04-18",
+   "time": "09:00",
+   "matches": [
+    {
+     "home": "Sokol Litenčice",
+     "away": "TJ Sokol Morkovice"
+    },
+    {
+     "home": "Slavia Kroměříž E",
+     "away": "ŠK Prusinovice"
+    },
+    {
+     "home": "TJ Lutopecny-Měrůtky",
+     "away": "ŠK Bystřice p. Hostýnem B"
+    },
+    {
+     "home": "Sokol Postoupky B",
+     "away": "SK EMKaD Holešov"
+    },
+    {
+     "home": "ŠK RAPOS Sulimov B",
+     "away": "SK Rusava"
+    },
+    {
+     "home": "TJ Sokol Pravčice",
+     "away": "ŠO TJ Zborovice"
+    }
+   ]
+  }
+ ]
+}
