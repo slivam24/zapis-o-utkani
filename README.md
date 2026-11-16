@@ -1,7 +1,8 @@
 # Zápis o utkání
 
 Webová aplikace, která nahrazuje papírový „Zápis o konaném šachovém utkání“. Soupisky družstev se načítají
-z [chess-results.com](https://chess-results.com), zápis se vyplňuje na telefonu nebo tabletu, podepisuje se
+ze stránek svazu [chess.cz](https://www.chess.cz/souteze/vyber-kraje/) (u soutěží, které tam nejsou,
+z [chess-results.com](https://chess-results.com)), zápis se vyplňuje na telefonu nebo tabletu, podepisuje se
 prstem a na konci vznikne **PDF** a **obrázek (PNG)** zápisu.
 
 ## Postup při utkání
@@ -93,15 +94,21 @@ nebo tlačítkem pro obnovení dat.
 GitHub vypíná plánované úlohy v repozitáři, kde se 60 dní nic nezměnilo. Pak stačí úlohu v záložce
 Actions znovu povolit (**Enable workflow**).
 
-Soutěže se nastavují v `scripts/competitions.json` (číslo turnaje na chess-results, počet šachovnic, kraj).
+Soutěže se nastavují v `scripts/competitions.json`: číslo soutěže na chess.cz (`chesscz`), případně číslo turnaje
+na chess-results (`tnr`), počet šachovnic a kraj.
+
+**Odkud se soupisky berou.** Přednost má chess.cz: stránka „Všechny soupisky“ a kompletní „Rozpis“ soutěže,
+tedy dva dotazy na soutěž (`scripts/chesscz.mjs`). Má všechny soutěže svazu, jména s diakritikou a zvlášť národní
+Elo i Elo FIDE. Chess-results je záloha pro soutěže, které na chess.cz nejsou (přidané hlášením nebo v aplikaci),
+a pro případ, že chess.cz zrovna nejde stáhnout: čte se z jeho exportu do Excelu.
 
 ### Přidání všech soutěží kraje nebo celé republiky z chess.cz
 
 **Actions → Přidat soutěže z chess.cz → Run workflow**, vybrat kraj, celostátní soutěže nebo celou republiku
-(`scripts/import_chesscz.mjs`). Úloha projde seznam soutěží na chess.cz, u každé vezme z detailu číslo turnaje
-na chess-results a z prvního odehraného kola počet šachovnic, přidá ji s krajem a jednotnou zkratkou a stáhne
-soupisky. Soutěže, které v aplikaci už jsou, nechá být. Soutěž, u které chess.cz zatím nemá odkaz na
-chess-results, přeskočí (stačí úlohu později spustit znovu). Když se ještě nehrálo, počet šachovnic jen odhadne
+(`scripts/import_chesscz.mjs`). Úloha projde seznam soutěží na chess.cz, u každé zjistí z prvního odehraného kola
+počet šachovnic (a z detailu číslo turnaje na chess-results jako zálohu, jen když je ze stejné sezóny), přidá ji
+s krajem a jednotnou zkratkou a stáhne soupisky. Soutěže, které v aplikaci už jsou, nechá být.
+Když se ještě nehrálo, počet šachovnic jen odhadne
 (8) a páteční aktualizace ho doplní, jakmile se odehraje první kolo. Na začátku nové sezóny se úloha spustí
 s novým ročníkem.
 
@@ -169,9 +176,9 @@ Spustit to může jen ten, kdo má do repozitáře právo zápisu. Soutěž zmiz
 protože si údaje o soutěži nesou s sebou. Když zadání sedí na víc soutěží (stejná zkratka ve dvou krajích),
 nic se nesmaže a úloha je vypíše. Ukončené soutěže není potřeba mazat hned, v nabídce se odsunou samy.
 
-Kdyby se stránka chess-results změnila a stahování přestalo fungovat, původní data zůstanou zachovaná.
-Stažené stránky se uloží jako příloha běhu v záložce Actions (artefakt `stazene-stranky`), podle nich jde upravit
-parser v `js/parse.js`. Soupisky jde vždy doplnit i ručně přímo v aplikaci.
+Kdyby se stránky chess.cz nebo chess-results změnily a stahování přestalo fungovat, původní data zůstanou
+zachovaná. Stažené stránky se uloží jako příloha běhu v záložce Actions (artefakt `stazene-stranky`), podle nich
+jde upravit čtení v `scripts/chesscz.mjs` (chess.cz) nebo `js/parse.js` (chess-results). Soupisky jde vždy doplnit i ručně přímo v aplikaci.
 
 ## Nasazení (GitHub Pages)
 
@@ -196,8 +203,9 @@ protože právě parser je na celém řešení to nejkřehčí a dvě verze by s
 
 ## Poznámky
 
-- Jména hráčů jsou tak, jak jsou na chess-results. V sestavě jdou upravit.
-- **Ratingy:** co je na chess-results ve sloupci `Rtg`, závisí na nastavení ve Swiss-Manageru, proto se
+- Jména hráčů jsou tak, jak jsou na chess.cz (u soutěží z chess-results tak, jak jsou tam). V sestavě jdou upravit.
+- **Ratingy:** z chess.cz přichází národní Elo i Elo FIDE, v zápisu jsou kolonky `FIDE` a `Nár.`.
+  Co je na chess-results ve sloupci `Rtg`, závisí na nastavení ve Swiss-Manageru, proto se
   ukládá zvlášť jako neoznačené Elo. V zápisu se vypisují jen kolonky, které v datech opravdu jsou:
   při jediném načteném Elu je tedy jedna kolonka `Elo` a žádná prázdná navíc. Má-li stránka oddělené
   sloupce `RtgN` a `RtgI`, objeví se kolonky `FIDE` a `Nár.`.

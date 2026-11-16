@@ -102,9 +102,13 @@ test('strop počtu soutěží', () => {
 test('nastavení soutěží v repozitáři je v pořádku', () => {
   const c = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts', 'competitions.json'), 'utf8'));
   const ids = c.competitions.map((x) => x.id);
-  const tnrs = c.competitions.map((x) => x.tnr);
+  // soutěž jen z chess.cz číslo turnaje na chess-results nemá
+  const tnrs = c.competitions.map((x) => x.tnr).filter(Boolean);
+  const chesscz = c.competitions.map((x) => x.chesscz).filter(Boolean);
   assert.equal(ids.length, new Set(ids).size, 'id soutěží se opakují');
   assert.equal(tnrs.length, new Set(tnrs).size, 'čísla turnajů se opakují');
+  assert.equal(chesscz.length, new Set(chesscz).size, 'čísla soutěží na chess.cz se opakují');
+  for (const x of c.competitions) assert.ok(x.tnr || x.chesscz, `${x.id}: chybí odkud stahovat soupisky`);
   for (const x of c.competitions) {
     assert.ok(x.boards >= MIN_BOARDS && x.boards <= MAX_BOARDS, `${x.short}: počet šachovnic`);
     assert.ok(x.short && x.name, `${x.id}: chybí název`);

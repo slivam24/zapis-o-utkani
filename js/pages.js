@@ -22,7 +22,8 @@ export function helpPage() {
 
     <h3>Co aplikace umí</h3>
     <ul>
-      <li>Soupisky a rozlosování krajských soutěží z chess-results.com, obnovují se každý pátek. Ručně je obnovíš ikonou ↻ v hlavičce.</li>
+      <li>Soupisky a rozlosování soutěží družstev z celé republiky ze stránek svazu chess.cz (jména s diakritikou,
+      národní Elo i Elo FIDE), obnovují se každý pátek. Ručně je obnovíš ikonou ↻ v hlavičce.</li>
       <li>Funguje i bez internetu (po prvním otevření). Jde „nainstalovat“ na plochu: v prohlížeči <i>Přidat na plochu</i>.</li>
       <li>Kontumace <b>1K : 0K</b>, <b>0K : 1K</b> a <b>0K : 0K</b>, typy hráčů K, ZK, H, V a C.</li>
       <li>Kontrola podle soutěžního řádu: hráči v pořadí soupisky, nejméně polovina hráčů,
@@ -82,7 +83,8 @@ export function privacyPage() {
     <h3>Kam se data posílají</h3>
     <ul>
       <li>Nikam, dokud zápis sami nepošlete e-mailem nebo nesdílíte. E-mail odchází z vaší pošty.</li>
-      <li>Soupisky se stahují z veřejných stránek chess-results.com: jména, rating, typ hráče a jméno kapitána.
+      <li>Soupisky se stahují z veřejných stránek svazu chess.cz (u několika soutěží z chess-results.com):
+      jména, Elo, typ hráče a jméno kapitána.
       Kontakty kapitánů ani identifikátory FIDE aplikace neukládá.</li>
       <li>Při podpisu na telefonu je zápis (bez podpisů) přímo v QR kódu a v odkazu, který telefon otevře.
       Část odkazu se zápisem prohlížeč na server neposílá, odkaz ale zůstane v historii prohlížeče telefonu.</li>

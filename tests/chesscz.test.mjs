@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { toDoc, parseRegionPage, parseLeagues, parseDetail, parseBoards, detectBoards, boardsUrl } from '../scripts/chesscz.mjs';
+import { toDoc, parseRegionPage, parseLeagues, parseDetail, parseBoards, detectBoards, boardsUrl, parseAllRosters, parseSchedule, fetchCompetition, rostersUrl, scheduleUrl } from '../scripts/chesscz.mjs';
 import { parseKraj, seasonYear, makeEntry, otherSeason } from '../scripts/import_chesscz.mjs';
 import { readData, writeData, indexEntry } from '../scripts/data_store.mjs';
 
@@ -76,4 +76,40 @@ test('rozdělená data: zápis, čtení, smazání odebrané soutěže', async (
   assert.equal(back.comps.get('a').teams.length, 1);
   assert.deepEqual(indexEntry(comp('x')).teamCount, 1);
   fs.rmSync(dir, { recursive: true });
+});
+
+test('chess.cz: všechny soupisky soutěže (jména s diakritikou, národní Elo i FIDE)', () => {
+  const teams = parseAllRosters(toDoc(fixture('soupisky.html')));
+  assert.equal(teams.length, 3);
+  assert.equal(teams[0].name, 'TJ Sokol Údlice "B"');
+  assert.ok(teams[0].players.length >= 15);
+  assert.deepEqual(teams[0].players[0], { no: 1, name: 'Horák Aleš', types: ['V'], rtg: null, nat: 2098, fide: 2120 });
+  // kapitán je hráč s typem K, typ Z (registrace) se vynechá
+  for (const t of teams) {
+    const k = t.players.find((p) => p.types.includes('K'));
+    assert.equal(t.captain, k?.name ?? '');
+    assert.ok(t.players.every((p) => !p.types.includes('Z')));
+  }
+});
+
+test('chess.cz: kompletní rozpis kol', () => {
+  const rounds = parseSchedule(toDoc(fixture('rozpis.html')));
+  assert.deepEqual(rounds.map((r) => [r.no, r.date, r.matches.length]), [[1, '2026-10-18', 6], [2, '2026-11-08', 6]]);
+  assert.deepEqual(rounds[0].matches[0], { home: 'CHESS MOST "A"', away: 'TJ Sokol Údlice "B"' });
+});
+
+test('chess.cz: celá soutěž dvěma dotazy', async () => {
+  const urls = [];
+  const pages = { [rostersUrl(3459)]: fixture('soupisky.html'), [scheduleUrl(3459)]: fixture('rozpis.html') };
+  const c = await fetchCompetition(3459, { get: async (u) => (urls.push(u), pages[u]) });
+  assert.equal(urls.length, 2);
+  assert.equal(c.teams.length, 3);
+  assert.equal(c.rounds.length, 2);
+});
+
+test('import: soutěž jen na chess.cz dostane id podle chess.cz', () => {
+  const e = makeEntry({ chesscz: 3458, name: 'Krajský přebor I.třídy', tnr: null, boards: 8, region: 'JmSS', season: '2026/2027' });
+  assert.equal(e.id, 'c3458');
+  assert.equal(e.tnr, undefined);
+  assert.equal(e.short, 'KP');
 });

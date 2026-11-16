@@ -97,3 +97,81 @@ export async function detectBoards(id, rounds, { tries = 3, get = fetchHtml } = 
   }
   return 0;
 }
+
+// ---------- soupisky a rozpis přímo z chess.cz ----------
+// Celá soutěž ze dvou stránek: „Všechny soupisky“ (tabulka na družstvo, název v popisku tabulky)
+// a „Rozpis“ (tabulka na kolo: číslo kola a datum v záhlaví, zápasy jako odkazy na družstva).
+
+export const rostersUrl = (id) => `${BASE}/soutez/druzstvo/${id}/`;
+export const scheduleUrl = (id) => `${BASE}/soutez/rozpis/${id}/`;
+
+const toInt = (s) => {
+  const n = Number.parseInt(String(s ?? '').replace(/\s/g, ''), 10);
+  return Number.isFinite(n) ? n : null;
+};
+const isoDate = (s) => {
+  const m = /(\d{1,2})\.\s*(\d{1,2})\.\s*(\d{4})/.exec(s ?? '');
+  return m ? `${m[3]}-${m[2].padStart(2, '0')}-${m[1].padStart(2, '0')}` : null;
+};
+
+/** Hráči z tabulky soupisky: { no, name, types, rtg: null, nat, fide }. */
+function rosterRows(table) {
+  const head = [...(table.querySelector('thead tr, tr')?.querySelectorAll('th,td') ?? [])].map(text);
+  const col = (label) => head.indexOf(label);
+  const pos = (v) => (v && v > 0 ? v : null);
+  const players = [];
+  for (const tr of table.querySelectorAll('tbody tr')) {
+    const cells = [...tr.querySelectorAll('td')].map(text);
+    const no = /^(\d+)\.?$/.exec(cells[0] ?? '');
+    if (!no || !tr.querySelector('a[href*="/hrac/"]')) continue;
+    players.push({
+      no: Number(no[1]),
+      name: cells[col('Jméno hráče')] ?? '',
+      // Z je jen registrace, typ hráče jsou K, ZK, H, V, C
+      types: (cells[col('Typ')] ?? '').split(/[\s,]+/).map((t) => t.toUpperCase()).filter((t) => t && t !== 'Z'),
+      rtg: null,
+      nat: pos(toInt(cells[col('N ELO')])),
+      fide: pos(toInt(cells[col('F ELO')])),
+    });
+  }
+  return players;
+}
+
+/** Stránka „Všechny soupisky“: [{ name, captain, players }]. Kapitán je hráč s typem K. */
+export function parseAllRosters(doc) {
+  const teams = [];
+  for (const table of doc.querySelectorAll('table')) {
+    const name = text(table.querySelector('caption'));
+    const head = [...(table.querySelector('thead tr, tr')?.querySelectorAll('th,td') ?? [])].map(text);
+    if (!name || !head.includes('Jméno hráče')) continue;
+    const players = rosterRows(table);
+    teams.push({ name, captain: players.find((p) => p.types.includes('K'))?.name ?? '', players });
+  }
+  return teams;
+}
+
+/** Stránka „Rozpis“ (kompletní): [{ no, date, time, matches: [{ home, away }] }]. */
+export function parseSchedule(doc) {
+  const rounds = [];
+  for (const table of doc.querySelectorAll('table')) {
+    const head = text(table.querySelector('thead') ?? table.querySelector('tr'));
+    const m = /(\d+)\.\s*kolo\s*[-–]\s*(\d{1,2}\.\s*\d{1,2}\.\s*\d{4})/i.exec(head);
+    if (!m) continue;
+    const round = { no: Number(m[1]), date: isoDate(m[2]), matches: [] };
+    for (const tr of table.querySelectorAll('tbody tr')) {
+      const links = [...tr.querySelectorAll('a[href*="/soutez/druzstvo/"]')].map(text);
+      if (links.length >= 2) round.matches.push({ home: links[0], away: links[1] });
+      const time = /^(\d{1,2}):(\d{2})$/.exec(text(tr.querySelector('td')));
+      if (time && !round.time) round.time = `${time[1].padStart(2, '0')}:${time[2]}`;
+    }
+    rounds.push(round);
+  }
+  return rounds.sort((a, b) => a.no - b.no);
+}
+
+/** Celá soutěž z chess.cz: { teams, rounds }. Dva dotazy na soutěž. */
+export async function fetchCompetition(id, { get = fetchHtml } = {}) {
+  const teams = parseAllRosters(toDoc(await get(rostersUrl(id))));
+  const rounds = parseSchedule(toDoc(await get(scheduleUrl(id))));
+  return { teams, rounds };
+}

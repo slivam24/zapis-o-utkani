@@ -7,9 +7,9 @@
 //     node scripts/import_chesscz.mjs --kraj vse           (celá republika)
 //     node scripts/import_chesscz.mjs --recheck            (doplní počet šachovnic, kde ještě chybí)
 //
-// U každé soutěže vezme z detailu na chess.cz číslo turnaje na chess-results a z prvního odehraného kola
-// počet šachovnic. Soutěž, která v nastavení už je, jen doplní (kraj, odkaz na chess.cz). Soutěž bez odkazu
-// na chess-results přeskočí, aplikace z ní nemá odkud vzít soupisky. Když se ještě nehrálo, počet šachovnic
+// Soupisky a rozpis se pak stahují z chess.cz (scripts/fetch_data.mjs). Z detailu soutěže se vezme i číslo
+// turnaje na chess-results (záloha, jen když je ze stejné sezóny) a z prvního odehraného kola počet šachovnic.
+// Soutěž, která v nastavení už je, jen doplní (kraj, odkaz na chess.cz). Když se ještě nehrálo, počet šachovnic
 // odhadne a označí (boardsUnverified); páteční aktualizace ho doplní spuštěním s --recheck.
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -76,11 +76,12 @@ async function chessResultsTitle(tnr) {
 export function makeEntry({ chesscz, name, tnr, boards, region, season }) {
   const known = tierOf({ name }).rank < 30;
   return {
-    id: `t${tnr}`,
+    // id podle chess-results, když soutěž odkaz má (tak vznikly i dřívější soutěže), jinak podle chess.cz
+    id: tnr ? `t${tnr}` : `c${chesscz}`,
     short: known ? standardShort({ name }) : shorten(name),
     name,
     group: '',
-    tnr,
+    ...(tnr ? { tnr } : {}),
     boards: boards || DEFAULT_BOARDS,
     region,
     chesscz,
@@ -118,19 +119,13 @@ async function importRegion(cfg, code, year, report) {
       report.push(`- ⚠️ ${label}: detail soutěže se nepodařilo stáhnout (${e.message})`);
       continue;
     }
-    if (detail.tnr === null) {
-      // soutěž, kterou už někdo přidal ručně (odkaz na chess-results zná jen aplikace)
-      const known = tierOf({ name: item.name }).rank < 30 && cfg.competitions.find(
-        (c) => (c.region ?? code) === code && c.short === standardShort({ name: item.name }),
-      );
-      if (known) {
-        known.region = known.region ?? code;
-        known.chesscz = known.chesscz ?? item.chesscz;
-        report.push(`- ✔️ ${label}: už v aplikaci (${known.short})`);
-      } else report.push(`- ⏭️ ${label}: na chess.cz zatím není odkaz na chess-results, přeskočeno (zkus později znovu)`);
-      continue;
-    }
-    const existing = cfg.competitions.find((c) => c.tnr === detail.tnr);
+    // už v aplikaci: podle čísla na chess.cz, čísla turnaje na chess-results, nebo zkratky v kraji
+    const existing =
+      cfg.competitions.find((c) => c.chesscz === item.chesscz) ??
+      (detail.tnr !== null ? cfg.competitions.find((c) => c.tnr === detail.tnr) : null) ??
+      (tierOf({ name: item.name }).rank < 30
+        ? cfg.competitions.find((c) => (c.region ?? code) === code && !c.chesscz && c.short === standardShort({ name: item.name }))
+        : null);
     if (existing) {
       // už v aplikaci: jen doplnit, co chybí
       existing.region = existing.region ?? code;
@@ -142,15 +137,17 @@ async function importRegion(cfg, code, year, report) {
       report.push(`- ⚠️ ${label}: seznam soutěží je plný (${MAX_COMPETITIONS}), nepřidáno`);
       continue;
     }
-    let title = '';
-    try {
-      title = await chessResultsTitle(detail.tnr);
-    } catch {
-      /* název se nepodařilo zjistit, sezóna se nekontroluje */
-    }
-    if (otherSeason(title, year)) {
-      report.push(`- ⏭️ ${label}: chess.cz odkazuje na turnaj z jiné sezóny („${title}“), přeskočeno`);
-      continue;
+    // Soupisky se berou z chess.cz; odkaz na chess-results je jen záloha. Když vede na turnaj
+    // z jiné sezóny (chess.cz občas odkazuje na loňský), nepoužije se.
+    let tnr = detail.tnr;
+    if (tnr !== null) {
+      let title = '';
+      try {
+        title = await chessResultsTitle(tnr);
+      } catch {
+        /* název se nepodařilo zjistit, sezóna se nekontroluje */
+      }
+      if (otherSeason(title, year)) tnr = null;
     }
     let boards = 0;
     try {
@@ -158,7 +155,7 @@ async function importRegion(cfg, code, year, report) {
     } catch {
       /* počet šachovnic se doplní později */
     }
-    const entry = makeEntry({ ...item, tnr: detail.tnr, boards, region: code, season });
+    const entry = makeEntry({ ...item, tnr, boards, region: code, season });
     cfg.competitions.push(entry);
     report.push(
       `- ➕ ${label}: přidáno jako **${entry.short}**, ${entry.boards} šachovnic${

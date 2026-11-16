@@ -13,6 +13,7 @@ import { parseRosters, parseRounds, parseRostersFromGrid, parseRoundsFromGrid } 
 import { xlsxToGrid } from '../js/xlsx.js';
 import { fetchPage, fetchExport, toDocument, sleep } from './chess_results.mjs';
 import { readData, writeData } from './data_store.mjs';
+import { fetchCompetition, detailUrl, fetchHtml } from './chesscz.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CONFIG = path.join(ROOT, 'scripts', 'competitions.json');
@@ -57,7 +58,7 @@ async function main() {
     const comp = {
       ...c,
       season: c.season || cfg.season,
-      url: `https://chess-results.com/tnr${c.tnr}.aspx?lan=5`,
+      url: c.chesscz ? detailUrl(c.chesscz) : `https://chess-results.com/tnr${c.tnr}.aspx?lan=5`,
     };
     if (only && c.id !== only) {
       comp.teams = old.teams ?? [];
@@ -67,12 +68,30 @@ async function main() {
       continue;
     }
 
-    console.log(`${c.short} (tnr${c.tnr})`);
+    console.log(`${c.short} (${c.chesscz ? `chess.cz ${c.chesscz}` : ''}${c.chesscz && c.tnr ? ', ' : ''}${c.tnr ? `tnr${c.tnr}` : ''})`);
     let teams = [];
     let rounds = [];
     const sources = [];
     const raw = saveHtml ? path.resolve(saveHtml) : null;
-    try {
+    // Přednost má chess.cz (soupisky svazu: jména s diakritikou, národní Elo i FIDE, všechny soutěže).
+    // chess-results je záloha pro soutěže, které na chess.cz nejsou, nebo když chess.cz nevyjde.
+    if (c.chesscz) {
+      try {
+        const got = await fetchCompetition(c.chesscz, {
+          get: async (url) => {
+            const html = await fetchHtml(url);
+            if (raw) await fs.writeFile(path.join(raw, `${c.id}_${url.includes('rozpis') ? 'rozpis' : 'soupisky'}.html`), html);
+            return html;
+          },
+        });
+        teams = got.teams.filter((t) => t.players.length);
+        rounds = got.rounds;
+        if (teams.length >= 2) sources.push('chess.cz');
+      } catch (e) {
+        console.error(`  ! chess.cz: ${e.message}`);
+      }
+    }
+    if (teams.length < 2 && c.tnr) try {
       // Přednost má export do Excelu: je to stabilnější rozhraní než stránka a desetkrát menší
       // přenos. Když export nevyjde, čte se stránka jako dřív.
       const rosterXlsx = await fetchExport(c.tnr, 8);
