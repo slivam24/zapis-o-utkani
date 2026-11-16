@@ -15,7 +15,9 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { REGIONS, regionByCode, standardShort, tierOf } from '../js/catalog.js';
-import { shorten } from '../js/parse.js';
+import { shorten, splitSeason, titleFromGrid } from '../js/parse.js';
+import { xlsxToGrid } from '../js/xlsx.js';
+import { fetchExport } from './chess_results.mjs';
 import { MAX_COMPETITIONS } from './add_competition.mjs';
 import {
   fetchHtml, toDoc, regionUrl, leaguesUrl, detailUrl, parseRegionPage, parseLeagues, parseDetail, detectBoards,
@@ -51,6 +53,23 @@ export function seasonYear(cfg, now = new Date()) {
   const m = /^(\d{4})/.exec(cfg?.season ?? '');
   if (m) return Number(m[1]);
   return now.getMonth() >= 6 ? now.getFullYear() : now.getFullYear() - 1;
+}
+
+/**
+ * Je turnaj na chess-results z jiné sezóny, než se importuje? Podle názvu („Krajský přebor 2024/2025“).
+ * Chess.cz u některých soutěží odkazuje na loňský turnaj. Název bez sezóny se bere jako v pořádku.
+ */
+export function otherSeason(title, year) {
+  // „2024/2025“, „2024/25“ i „2024/5“: začátek sezóny je čtyřmístný rok před lomítkem
+  const m = /\b(20\d\d)\s*[/–-]\s*\d{1,4}\b/.exec(title ?? '');
+  if (m) return Number(m[1]) !== Number(year);
+  const [, season] = splitSeason(title ?? '');
+  return season ? !season.startsWith(String(year)) : false;
+}
+
+async function chessResultsTitle(tnr) {
+  const buf = await fetchExport(tnr, 2, { retries: 2 });
+  return buf ? titleFromGrid(await xlsxToGrid(buf)) : '';
 }
 
 /** Záznam soutěže pro nastavení. */
@@ -121,6 +140,16 @@ async function importRegion(cfg, code, year, report) {
     }
     if (cfg.competitions.length >= MAX_COMPETITIONS) {
       report.push(`- ⚠️ ${label}: seznam soutěží je plný (${MAX_COMPETITIONS}), nepřidáno`);
+      continue;
+    }
+    let title = '';
+    try {
+      title = await chessResultsTitle(detail.tnr);
+    } catch {
+      /* název se nepodařilo zjistit, sezóna se nekontroluje */
+    }
+    if (otherSeason(title, year)) {
+      report.push(`- ⏭️ ${label}: chess.cz odkazuje na turnaj z jiné sezóny („${title}“), přeskočeno`);
       continue;
     }
     let boards = 0;

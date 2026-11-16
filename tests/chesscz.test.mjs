@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { toDoc, parseRegionPage, parseLeagues, parseDetail, parseBoards, detectBoards, boardsUrl } from '../scripts/chesscz.mjs';
-import { parseKraj, seasonYear, makeEntry } from '../scripts/import_chesscz.mjs';
+import { parseKraj, seasonYear, makeEntry, otherSeason } from '../scripts/import_chesscz.mjs';
 import { readData, writeData, indexEntry } from '../scripts/data_store.mjs';
 
 const fixture = (f) => fs.readFileSync(new URL(`./fixtures/chesscz/${f}`, import.meta.url), 'utf8');
@@ -45,6 +45,13 @@ test('import: kraj, ročník a záznam soutěže', () => {
   assert.equal(parseKraj('Celá republika'), 'vse');
   assert.equal(parseKraj('nesmysl'), null);
   assert.equal(seasonYear({ season: '2026/2027' }), 2026);
+  // chess.cz občas odkazuje na loňský turnaj na chess-results
+  assert.equal(otherSeason('Krajský přebor KHŠS 2024/2025', 2026), true);
+  assert.equal(otherSeason('KHŠS - Krajský přebor družstev 2024/5', 2026), true);
+  assert.equal(otherSeason('2. liga D 2026/27', 2026), false);
+  assert.equal(otherSeason('Krajský přebor ÚKŠS 2026/2027', 2026), false);
+  assert.equal(otherSeason('Krajský přebor 26/27', 2026), false);
+  assert.equal(otherSeason('Krajský přebor', 2026), false);
   assert.equal(seasonYear({}, new Date('2027-03-01')), 2026);
   assert.equal(seasonYear({}, new Date('2027-09-01')), 2027);
   const e = makeEntry({ chesscz: 3460, name: "Krajský přebor II.třídy 'A'", tnr: 1508693, boards: 8, region: 'UKSS', season: '2026/2027' });

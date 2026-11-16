@@ -183,7 +183,7 @@ parser v `js/parse.js`. Soupisky jde vždy doplnit i ručně přímo v aplikaci.
 
 ```bash
 npm install                 # jen linkedom, pro parsování HTML v Node
-npm test                    # 83 testů: logika zápisu, parser, čtečka .xlsx, přidávání soutěží, archiv, PDF, odkaz s QR
+npm test                    # 90 testů: logika zápisu, parser, čtečka .xlsx, přidávání soutěží, archiv, PDF, odkaz s QR
 npm run serve               # lokální spuštění: http://localhost:8080
 ```
 
