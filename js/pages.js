@@ -32,6 +32,12 @@ export function helpPage() {
       <li>Dvě zobrazení: pro počítač a pro tablet a mobil. Aplikace vybere samo, přepnout jde v Nastavení.</li>
     </ul>
 
+    <h3>Podpisy, když zápis vyplňuješ na počítači</h3>
+    <p>Myší se podepisuje špatně. V kroku <b>Závěr a podpisy</b> klepni na <b>Podepsat na telefonu</b>: ukáže se QR kód.
+    Načti ho fotoaparátem telefonu a zápis se v telefonu otevře rovnou u podpisů. Oba kapitáni a rozhodčí se podepíšou prstem
+    a zápis se odešle z telefonu. Nic se neposílá přes internet, zápis je přímo v QR kódu. Loga družstev nahraná
+    na počítači se do telefonu nepřenesou.</p>
+
     <h3>Nastavení</h3>
     <p>Funkce, které nejsou potřeba pokaždé (vlastní soutěže, loga, e-mail, rychlé texty záznamu…),
     jde v <b>Nastavení</b> vypnout. Zápis je pak jednodušší. Vypnutím se nic nesmaže, funkci jde kdykoli zase zapnout.</p>
@@ -70,6 +76,8 @@ export function privacyPage() {
       <li>Nikam, dokud zápis sami nepošlete e-mailem nebo nesdílíte. E-mail odchází z vaší pošty.</li>
       <li>Soupisky se stahují z veřejných stránek chess-results.com: jména, rating, typ hráče a jméno kapitána.
       Kontakty kapitánů ani identifikátory FIDE aplikace neukládá.</li>
+      <li>Při podpisu na telefonu je zápis (bez podpisů) přímo v QR kódu a v odkazu, který telefon otevře.
+      Část odkazu se zápisem prohlížeč na server neposílá, odkaz ale zůstane v historii prohlížeče telefonu.</li>
       <li>Aplikaci hostuje GitHub Pages. Jako každý web zaznamenává adresy návštěvníků.
       Aplikace nepoužívá cookies ani měření návštěvnosti.</li>
     </ul>

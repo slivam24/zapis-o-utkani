@@ -436,6 +436,25 @@ body.ov-open { overflow: hidden; }
 .prose li { margin: .25rem 0; }
 .preview:not(.zoomable) { cursor: default; }
 
+/* podpis na telefonu */
+.qr-hint {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  background: var(--sel); border: 1px solid var(--accent); border-radius: 10px; padding: .7rem .9rem; margin: .4rem 0 .8rem;
+}
+.qr-hint > div { display: grid; gap: .15rem; flex: 1 1 18rem; }
+.modal {
+  position: fixed; inset: 0; z-index: 40; background: rgba(0,0,0,.55); display: grid; place-items: center;
+  padding: 1rem; overflow: auto;
+}
+.modal-box {
+  background: var(--card); color: var(--ink); border-radius: 14px; padding: 1.1rem 1.2rem; max-width: 600px; width: 100%;
+  box-shadow: 0 12px 40px rgba(0,0,0,.35);
+}
+.modal-box ol { padding-left: 1.2rem; margin: .6rem 0; }
+.modal-box li { margin: .25rem 0; }
+.qr-wrap { display: grid; place-items: center; background: #fff; border-radius: 10px; padding: .5rem; margin: .4rem 0; }
+.qr-wrap canvas { display: block; image-rendering: pixelated; }
+
 /* rozvržení do sloupců: v dotykovém zobrazení pod sebou, na počítači vedle sebe */
 .cols, .col { display: block; }
 

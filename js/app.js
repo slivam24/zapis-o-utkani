@@ -7,6 +7,8 @@ import { clean, tournamentNumber, exportUrl } from './parse.js';
 import * as store from './store.js';
 import { makeBackup, parseBackup, mergeArchive, olderThan } from './archive.js';
 import { helpPage, privacyPage } from './pages.js';
+import { encodeLink, decodeLink, hasLink, linkPayload } from './link.js';
+import qrcode from './vendor/qrcode.js';
 
 const REPO = 'slivam24/zapis-o-utkani';
 
@@ -67,6 +69,7 @@ const FEATURES = [
   ['mail', 'Odeslání e-mailem', 'Odeslání hotového zápisu e-mailem.', true],
   ['png', 'Obrázek PNG', 'Stažení zápisu i jako obrázek, nejen PDF.', true],
   ['share', 'Sdílení', 'Sdílení PDF do jiné aplikace (na tabletu a telefonu).', true],
+  ['qrSign', 'Podpis na telefonu', 'QR kód, kterým se zápis přenese z počítače na telefon a podepíše se tam prstem.', true],
   ['addComp', 'Přidání vlastní soutěže', 'Soutěž, která v nabídce není, jde přidat ze souborů z chess-results.', false],
 ];
 const RETENTION = [6, 12, 24, 0];
@@ -582,6 +585,18 @@ function viewZaver() {
         uiMode() === 'desktop' ? 'Podepiš myší nebo perem tabletu.' : 'Podepiš prstem nebo perem na displeji.'
       } Správnost zápisu potvrzují oba kapitáni a rozhodčí.</p>
       ${canvasReadable() ? '' : `<ul class="issues"><li class="error"><span>${esc(CANVAS_BLOCKED)}</span></li></ul>`}
+      ${
+        feature('qrSign')
+          ? uiMode() === 'desktop'
+            ? `<div class="qr-hint">
+                <div><b>Podepsat na telefonu</b>
+                <span class="muted small-text">Myší se podepisuje špatně. Ukaž QR kód, načti ho telefonem a zápis se v něm otevře.
+                Podepíšete ho prstem a z telefonu ho odešlete.</span></div>
+                <button class="btn" type="button" data-act="qrSign">📱 Podepsat na telefonu</button>
+              </div>`
+            : `<div class="row" style="margin:.2rem 0 .6rem"><button class="btn small secondary" type="button" data-act="qrSign">📱 Podepsat na jiném zařízení (QR kód)</button></div>`
+          : ''
+      }
       <div class="sigs">
         ${sigBox('home', 'Kapitán domácího družstva', S.home.captain)}
         ${sigBox('ref', 'Rozhodčí', S.referee.name)}
@@ -936,6 +951,109 @@ function initPad(canvas, key) {
   canvas.addEventListener('pointercancel', end);
 }
 
+// ---------- podpis na telefonu: zápis se přenese QR kódem ----------
+/** Nakreslí QR kód do plátna; vrací plátno, nebo null, když se data do QR nevejdou. */
+function qrCanvas(text, cssSize) {
+  const make = (level) => {
+    const qr = qrcode(0, level);
+    qr.addData(text, 'Byte');
+    qr.make();
+    return qr;
+  };
+  let q;
+  try {
+    // z displeje je obraz čistý, nižší oprava chyb (L) dá řidší a lépe čitelný kód;
+    // verzi 23 se vyhýbáme: čtečka jsQR (používají ji některé webové čtečky) má pro ni chybnou
+    // polohu zarovnávacích značek a při úrovni L kód nepřečte
+    q = make('L');
+    if (q.getModuleCount() === 23 * 4 + 17) q = make('M');
+  } catch {
+    return null;
+  }
+  const n = q.getModuleCount();
+  const quiet = 4;
+  const dpr = Math.max(1, window.devicePixelRatio || 1);
+  const cell = Math.max(2, Math.floor((cssSize * dpr) / (n + 2 * quiet)));
+  const size = cell * (n + 2 * quiet);
+  const c = env.createCanvas(size, size);
+  const ctx = c.getContext('2d');
+  ctx.fillStyle = '#fff';
+  ctx.fillRect(0, 0, size, size);
+  ctx.fillStyle = '#000';
+  for (let r = 0; r < n; r++) for (let k = 0; k < n; k++) if (q.isDark(r, k)) ctx.fillRect((k + quiet) * cell, (r + quiet) * cell, cell, cell);
+  c.style.width = `${size / dpr}px`;
+  c.style.height = `${size / dpr}px`;
+  return c;
+}
+
+function closeModal() {
+  $('.modal')?.remove();
+}
+
+async function showQr() {
+  if (typeof CompressionStream === 'undefined') return toast('Tento prohlížeč QR kód nevytvoří, zkus jiný.');
+  const issues = L.validate(S, comp()).filter((i) => i.level === 'error' && i.tab !== 'zaver');
+  const base = `${location.origin}${location.pathname}`;
+  const url = await encodeLink(linkPayload(S, { compInfo: compSnapshot(), boards: boards() }), base);
+  const size = Math.min(520, window.innerWidth - 64, window.innerHeight - 260);
+  const canvas = qrCanvas(url, Math.max(260, size));
+  closeModal();
+  const m = document.createElement('div');
+  m.className = 'modal';
+  m.innerHTML = `<div class="modal-box" role="dialog" aria-modal="true" aria-label="Podepsat na telefonu">
+      <h2>Podepsat na telefonu</h2>
+      <div class="qr-wrap"></div>
+      <ol class="small-text">
+        <li>Na telefonu otevři fotoaparát a namiř ho na QR kód. Klepni na odkaz, který se objeví.</li>
+        <li>Zápis se v telefonu otevře rovnou u podpisů. Oba kapitáni a rozhodčí se podepíšou prstem.</li>
+        <li>Z telefonu zápis odešli (Výstup → Odeslat e-mailem) a ulož do archivu.</li>
+      </ol>
+      ${
+        issues.length
+          ? `<ul class="issues"><li class="warn"><span>Zápis ještě není kompletní (${esc(issues[0].text)}). Telefon dostane zápis tak, jak je teď.</span></li></ul>`
+          : ''
+      }
+      <p class="muted small-text">QR kód obsahuje zápis tak, jak je teď. Co na tomto zařízení změníš potom, telefon neuvidí,
+      v tom případě ukaž nový QR kód. Data jdou přímo do telefonu, ne přes internet.</p>
+      <div class="actions"><button class="btn" type="button" data-close>Zavřít</button></div>
+    </div>`;
+  if (canvas) $('.qr-wrap', m).append(canvas);
+  else $('.qr-wrap', m).innerHTML = '<p class="muted">Zápis je na QR kód příliš dlouhý. Zkrať záznam rozhodčího a zkus to znovu.</p>';
+  m.addEventListener('click', (e) => {
+    if (e.target === m || e.target.closest('[data-close]')) closeModal();
+  });
+  document.body.append(m);
+  $('[data-close]', m).focus();
+}
+
+/** Zápis z odkazu (QR kódu): otevře se u podpisů. Volá se při spuštění a při změně # v adrese. */
+async function openFromLink() {
+  if (!hasLink(location.hash)) return false;
+  const hash = location.hash;
+  history.replaceState(null, '', `${location.pathname}${location.search}`);
+  let m;
+  try {
+    m = await decodeLink(hash);
+  } catch (e) {
+    toast(e.message);
+    return false;
+  }
+  const started = S.home.team || S.away.team || S.home.lineup.length || S.away.lineup.length;
+  const inArchive = store.loadArchive().some((x) => x.id === S.id);
+  const signed = S.sig?.home || S.sig?.ref || S.sig?.away;
+  if (S.id === m.id) {
+    if (signed && !confirm('Tento zápis už v zařízení je i s podpisy. Nahradit ho verzí z QR kódu? Podpisy se smažou.')) return false;
+  } else if (started && !inArchive && !confirm('Otevřít zápis z QR kódu? Rozpracovaný zápis v tomto zařízení není v archivu a zahodí se.')) {
+    return false;
+  }
+  S = m;
+  save();
+  tab = 'zaver';
+  lastStep = 'zaver';
+  toast('Zápis je načtený z QR kódu. Podepište ho a odešlete.');
+  return true;
+}
+
 // ---------- celá obrazovka: zápis k prohlížení nebo průběh utkání ----------
 // Na tabletu u stolu se dá přepnout na velký přehled, který je čitelný i z dálky.
 const overlay = $('#overlay');
@@ -1062,6 +1180,11 @@ document.addEventListener('fullscreenchange', onFsChange);
 document.addEventListener('webkitfullscreenchange', onFsChange);
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && overlayMode) closeOverlay();
+  if (e.key === 'Escape') closeModal();
+});
+// telefon s už otevřenou aplikací: načtení QR kódu změní jen část adresy za #
+window.addEventListener('hashchange', async () => {
+  if (await openFromLink()) renderAll({ keepScroll: false });
 });
 let fitTimer;
 window.addEventListener('resize', () => {
@@ -1356,6 +1479,8 @@ view.addEventListener('click', (e) => {
     }
     case 'fullscreen':
       return openOverlay(el.dataset.mode);
+    case 'qrSign':
+      return showQr();
     case 'pdf':
       return exportPdf();
     case 'png':
@@ -1734,7 +1859,9 @@ async function init() {
   } catch {
     toast('Soupisky se nepodařilo načíst.');
   }
-  if (!DATA.competitions.some((c) => c.id === S.compId)) S.compId = DATA.competitions[0]?.id ?? '';
+  await openFromLink();
+  // výchozí soutěž jen pro nový zápis; zápis z archivu nebo z QR kódu si nese vlastní údaje o soutěži
+  if (!DATA.competitions.some((c) => c.id === S.compId) && !S.compInfo) S.compId = DATA.competitions[0]?.id ?? '';
   $('#dataStatus').textContent = dataSummary(DATA);
   renderAll({ keepScroll: false });
   if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});

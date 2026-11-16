@@ -17,6 +17,14 @@ prstem a na konci vznikne **PDF** a **obrázek (PNG)** zápisu.
 5. **Výstup:** kontrola zápisu (co je nutné opravit a co jen doporučujeme, s odkazem na příslušný krok),
    loga v zápisu, náhled na celou obrazovku, PDF, PNG, sdílení a odeslání e-mailem.
 
+### Podpis na telefonu (QR kód)
+
+Myší se podepisuje špatně. Na počítači je v kroku **Závěr a podpisy** tlačítko **Podepsat na telefonu**: ukáže QR kód,
+telefon ho načte fotoaparátem a otevře aplikaci se stejným zápisem rovnou u podpisů. Podepíše se prstem a zápis
+se odešle z telefonu. Bez serveru: zápis (bez podpisů) je zkomprimovaný přímo v odkazu v části za `#`, kterou
+prohlížeč na server neposílá (`js/link.js`). Loga družstev se nepřenášejí. QR kód kreslí knihovna
+[qrcode-generator](https://github.com/kazuhikoarase/qrcode-generator) (MIT, `js/vendor/qrcode.js`).
+
 ### Menu, nastavení a archiv
 
 Zápis zůstává co nejjednodušší, všechno ostatní je v **☰ Menu** v hlavičce:
@@ -140,11 +148,12 @@ parser v `js/parse.js`. Soupisky jde vždy doplnit i ručně přímo v aplikaci.
 
 ```bash
 npm install                 # jen linkedom, pro parsování HTML v Node
-npm test                    # 67 testů: logika zápisu, parser, čtečka .xlsx, přidávání soutěží, archiv, PDF
+npm test                    # 70 testů: logika zápisu, parser, čtečka .xlsx, přidávání soutěží, archiv, PDF, odkaz s QR
 npm run serve               # lokální spuštění: http://localhost:8080
 ```
 
-Aplikace se nesestavuje a v prohlížeči nemá žádné závislosti: čisté HTML, CSS a JavaScript (moduly).
+Aplikace se nesestavuje a v prohlížeči nemá žádné závislosti kromě převzaté knihovny na QR kód
+(`js/vendor/qrcode.js`): čisté HTML, CSS a JavaScript (moduly).
 
 Parser stránek chess-results je jeden, v `js/parse.js`, a sdílí ho aplikace i úlohy na GitHubu.
 V prohlížeči pracuje nad `DOMParser`, v Node nad `linkedom`. Záměrně není ve dvou jazycích,
