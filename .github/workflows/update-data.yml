@@ -19,6 +19,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -26,6 +27,9 @@ jobs:
           node-version: "22"
           cache: npm
       - run: npm ci
+      - name: Doplnit počet šachovnic, kde byl jen odhad
+        run: node scripts/import_chesscz.mjs --recheck >> "$GITHUB_STEP_SUMMARY"
+        continue-on-error: true
       - run: node scripts/fetch_data.mjs --save-html raw
       - uses: actions/upload-artifact@v4
         if: always()
@@ -38,7 +42,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/competitions.json
+          git add -A data scripts/competitions.json
           if git diff --cached --quiet; then
             echo "Beze změn."
           else

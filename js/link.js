@@ -189,10 +189,18 @@ export async function encodeLink(state, { comp, boards, compInfo } = {}, base = 
  * Zápis z části odkazu za „#“. competitions jsou soutěže, které má toto zařízení (pro krátký formát).
  * Vrací pročištěný zápis; jinak hodí chybu (u rozdílných soupisek s code 'roster').
  */
-export async function decodeLink(hash, { competitions = [] } = {}) {
+export async function decodeLink(hash, { competitions = [], prepare } = {}) {
   if (!hasLink(hash)) throw new Error('Odkaz neobsahuje zápis.');
   const short = hash.startsWith(PREFIX2);
   const obj = await unpack(hash.slice((short ? PREFIX2 : PREFIX1).length));
+  // krátký formát potřebuje soupisky soutěže: aplikace je stáhne až teď (prepare)
+  if (short && prepare) {
+    try {
+      await prepare(obj.c);
+    } catch {
+      /* bez soupisek to níže ohlásí jako rozdílné soupisky */
+    }
+  }
   const m = cleanMatch(short ? unpackShort(obj, competitions) : obj);
   if (!m) throw new Error('Odkaz neobsahuje platný zápis.');
   return m;

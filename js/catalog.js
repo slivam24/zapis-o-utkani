@@ -1,23 +1,26 @@
 // Jednotné řazení a pojmenování soutěží: celostátní soutěže, soutěže mládeže a 14 krajských svazů.
 // Úroveň a zkratka se odvozují z názvu soutěže, kraj je uložený u soutěže (pole region).
 
-/** Kraje podle chess.cz (Soutěže družstev → Výběr kraje). Kód je bez diakritiky, aby se dobře psal do dat. */
+/**
+ * Kraje podle chess.cz (Soutěže družstev → Výběr kraje). Kód je bez diakritiky, aby se dobře psal do dat,
+ * chesscz je číslo kraje v adrese https://www.chess.cz/souteze/kraj-<číslo>/rocnik-<rok>/.
+ */
 export const REGIONS = [
   { code: 'CR', abbr: 'ŠSČR', name: 'Celostátní soutěže' },
-  { code: 'JmSS', abbr: 'JmŠS', name: 'Jihomoravský kraj' },
-  { code: 'JSS', abbr: 'JŠS', name: 'Jihočeský kraj' },
-  { code: 'KHSS', abbr: 'KHŠS', name: 'Královéhradecký kraj' },
-  { code: 'KSSKV', abbr: 'KŠSKV', name: 'Karlovarský kraj' },
-  { code: 'KSSV', abbr: 'KŠSV', name: 'Kraj Vysočina' },
-  { code: 'MKSS', abbr: 'MKŠS', name: 'Moravskoslezský kraj' },
-  { code: 'PDSS', abbr: 'PDŠS', name: 'Pardubický kraj' },
-  { code: 'PSS', abbr: 'PŠS', name: 'Praha' },
-  { code: 'SSS', abbr: 'SŠS', name: 'Středočeský kraj' },
-  { code: 'SSLK', abbr: 'ŠSLK', name: 'Liberecký kraj' },
-  { code: 'SSOK', abbr: 'ŠSOK', name: 'Olomoucký kraj' },
-  { code: 'SSPK', abbr: 'ŠSPK', name: 'Plzeňský kraj' },
-  { code: 'SSZK', abbr: 'ŠSZK', name: 'Zlínský kraj' },
-  { code: 'UKSS', abbr: 'ÚKŠS', name: 'Ústecký kraj' },
+  { code: 'JmSS', abbr: 'JmŠS', name: 'Jihomoravský kraj', chesscz: 22 },
+  { code: 'JSS', abbr: 'JŠS', name: 'Jihočeský kraj', chesscz: 13 },
+  { code: 'KHSS', abbr: 'KHŠS', name: 'Královéhradecký kraj', chesscz: 18 },
+  { code: 'KSSKV', abbr: 'KŠSKV', name: 'Karlovarský kraj', chesscz: 15 },
+  { code: 'KSSV', abbr: 'KŠSV', name: 'Kraj Vysočina', chesscz: 21 },
+  { code: 'MKSS', abbr: 'MKŠS', name: 'Moravskoslezský kraj', chesscz: 25 },
+  { code: 'PDSS', abbr: 'PDŠS', name: 'Pardubický kraj', chesscz: 19 },
+  { code: 'PSS', abbr: 'PŠS', name: 'Praha', chesscz: 11 },
+  { code: 'SSS', abbr: 'SŠS', name: 'Středočeský kraj', chesscz: 12 },
+  { code: 'SSLK', abbr: 'ŠSLK', name: 'Liberecký kraj', chesscz: 17 },
+  { code: 'SSOK', abbr: 'ŠSOK', name: 'Olomoucký kraj', chesscz: 24 },
+  { code: 'SSPK', abbr: 'ŠSPK', name: 'Plzeňský kraj', chesscz: 14 },
+  { code: 'SSZK', abbr: 'ŠSZK', name: 'Zlínský kraj', chesscz: 23 },
+  { code: 'UKSS', abbr: 'ÚKŠS', name: 'Ústecký kraj', chesscz: 16 },
 ];
 export const regionByCode = (code) => REGIONS.find((r) => r.code === code) ?? null;
 
@@ -94,9 +97,12 @@ export function standardShort(comp) {
 
 /** Je soutěž ukončená? Poslední kolo před víc než `days` dny. Soutěž bez rozlosování se za ukončenou nepovažuje. */
 export function isFinished(comp, { now = new Date(), days = 30 } = {}) {
-  const dates = (comp?.rounds ?? []).map((r) => r.date).filter(Boolean).sort();
-  if (!dates.length) return false;
-  const last = new Date(`${dates.at(-1)}T12:00:00`);
+  // seznam soutěží nese datum posledního kola, celá soutěž rozlosování
+  const rounds = Array.isArray(comp?.rounds) ? comp.rounds : [];
+  const dates = rounds.map((r) => r.date).filter(Boolean).sort();
+  const lastDate = comp?.lastRound ?? dates.at(-1);
+  if (!lastDate) return false;
+  const last = new Date(`${lastDate}T12:00:00`);
   return now - last > days * 86400000;
 }
 

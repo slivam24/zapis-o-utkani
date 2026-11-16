@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Odebere soutěž ze sdílených dat (scripts/competitions.json a data/competitions.json).
+// Odebere soutěž ze sdílených dat (scripts/competitions.json a data/).
 // Spouští se úlohou „Odebrat soutěž“ na GitHubu (Actions → Run workflow), ručně:
 //
 //     node scripts/remove_competition.mjs "KP II A"
@@ -12,10 +12,11 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { tournamentNumber } from '../js/parse.js';
 import { regionByCode } from '../js/catalog.js';
+import { readData, writeData } from './data_store.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CONFIG = path.join(ROOT, 'scripts', 'competitions.json');
-const DATA = path.join(ROOT, 'data', 'competitions.json');
+const DATA_DIR = path.join(ROOT, 'data');
 
 const norm = (s) => String(s ?? '').trim().toLowerCase().replace(/\s+/g, ' ');
 
@@ -50,13 +51,9 @@ async function main() {
   const [gone] = found;
   cfg.competitions = cfg.competitions.filter((c) => c.id !== gone.id);
   await fs.writeFile(CONFIG, `${JSON.stringify(cfg, null, 2)}\n`, 'utf8');
-  try {
-    const data = JSON.parse(await fs.readFile(DATA, 'utf8'));
-    data.competitions = (data.competitions ?? []).filter((c) => c.id !== gone.id);
-    await fs.writeFile(DATA, `${JSON.stringify(data, null, 1)}\n`, 'utf8');
-  } catch {
-    /* data ještě nejsou, stačí nastavení */
-  }
+  const data = await readData(DATA_DIR);
+  data.comps.delete(gone.id);
+  await writeData(DATA_DIR, { season: data.season ?? cfg.season, comps: [...data.comps.values()] });
   console.log(`Odebráno: ${describe(gone)}`);
   return 0;
 }

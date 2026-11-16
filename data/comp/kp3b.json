@@ -1,0 +1,945 @@
+{
+ "id": "kp3b",
+ "short": "KP III B",
+ "name": "Krajský přebor III. třídy",
+ "group": "B",
+ "tnr": 1508895,
+ "boards": 5,
+ "season": "2026/2027",
+ "url": "https://chess-results.com/tnr1508895.aspx?lan=5",
+ "teams": [
+  {
+   "name": "SPORTIS Svádov-Olšinky \"B\"",
+   "captain": "Richard Beil",
+   "players": [
+    {
+     "no": 1,
+     "name": "Kostišče, Ján",
+     "types": [],
+     "rtg": 1710,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Černý, Vladimír",
+     "types": [],
+     "rtg": 1726,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Křivský, Jiří",
+     "types": [],
+     "rtg": 1690,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Vodehnal, Václav",
+     "types": [],
+     "rtg": 1710,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Beil, Richard",
+     "types": [],
+     "rtg": 1627,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Pačinek, Oto",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Wáclawek, Karel",
+     "types": [],
+     "rtg": 1659,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Korol, Jiří",
+     "types": [],
+     "rtg": 1366,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Chudina, Jan",
+     "types": [],
+     "rtg": 1580,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Král, Jaromír",
+     "types": [],
+     "rtg": 1623,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Teplice \"C\"",
+   "captain": "Radek Bayer",
+   "players": [
+    {
+     "no": 1,
+     "name": "Bayer, Radek",
+     "types": [],
+     "rtg": 2000,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Olšák, Oliver",
+     "types": [],
+     "rtg": 1716,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Schuldes, René",
+     "types": [],
+     "rtg": 1768,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Kučera, Bohuslav",
+     "types": [],
+     "rtg": 1736,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Semová, Lada",
+     "types": [],
+     "rtg": 1674,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Kolman, Jiří",
+     "types": [],
+     "rtg": 1597,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Hübl, Dominik",
+     "types": [],
+     "rtg": 1673,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Jakoubek, Štepán",
+     "types": [],
+     "rtg": 1636,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Nedobeha, Anna",
+     "types": [],
+     "rtg": 1494,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Hryhoriev, Hnat",
+     "types": [],
+     "rtg": 1274,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Čábelková, Květoslava",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Dang, Martin Tri Nhan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Pham, Quang Nam Phong",
+     "types": [],
+     "rtg": 1145,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Pham, Quang Nhat",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 15,
+     "name": "Tkachenko, Kostiantyn",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 16,
+     "name": "Vosička, Pavel",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "KŠ Štětí",
+   "captain": "Jaromír Papík",
+   "players": [
+    {
+     "no": 1,
+     "name": "Černík, Lukáš",
+     "types": [],
+     "rtg": 2083,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Lev, Lukáš",
+     "types": [],
+     "rtg": 1865,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Cvek, Jaroslav",
+     "types": [],
+     "rtg": 1885,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Papík, Jaromír",
+     "types": [],
+     "rtg": 1566,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Gruber, Tobiáš",
+     "types": [],
+     "rtg": 1629,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Šotolová, Jana",
+     "types": [],
+     "rtg": 1612,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Durdisová, Monika",
+     "types": [],
+     "rtg": 1485,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Pěkný, Jaroslav",
+     "types": [],
+     "rtg": 1360,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Černíková, Berenice Emma",
+     "types": [],
+     "rtg": 1026,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "SK Děčín \"D\"",
+   "captain": "Roman Machka",
+   "players": [
+    {
+     "no": 1,
+     "name": "Diviš, Jiří",
+     "types": [],
+     "rtg": 1851,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Janda, Lukáš",
+     "types": [],
+     "rtg": 1513,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Černý, Lumír",
+     "types": [],
+     "rtg": 1741,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Machka, Roman",
+     "types": [],
+     "rtg": 1577,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Radvanovský, Petr",
+     "types": [],
+     "rtg": 1790,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Říha, Vítek",
+     "types": [],
+     "rtg": 1685,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Beaver, Maxim",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Ngo, Alex",
+     "types": [],
+     "rtg": 1193,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Herich, Damián",
+     "types": [],
+     "rtg": 1502,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Herich, Lukáš",
+     "types": [],
+     "rtg": 1438,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Pomahač, Daniel",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Papay, Jindřich",
+     "types": [],
+     "rtg": 1898,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Novotný, Tomáš",
+     "types": [],
+     "rtg": 1864,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Pokorný, Radek",
+     "types": [],
+     "rtg": 1332,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 15,
+     "name": "Štverák, Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 16,
+     "name": "Purkyt, Jaroslav",
+     "types": [],
+     "rtg": 1702,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 17,
+     "name": "Zíval, Vratislav",
+     "types": [],
+     "rtg": 1016,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 18,
+     "name": "Vitouš, David",
+     "types": [],
+     "rtg": 1030,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Teplice Chess Club \"C\"",
+   "captain": "Milan Maščák",
+   "players": [
+    {
+     "no": 1,
+     "name": "Jirásek, Jiří",
+     "types": [],
+     "rtg": 1859,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Mašcák, Milan",
+     "types": [],
+     "rtg": 1733,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Mašata, Roman",
+     "types": [],
+     "rtg": 1534,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Doležal, Eduard",
+     "types": [],
+     "rtg": 1463,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Samoilenko, Kyryl",
+     "types": [],
+     "rtg": 1492,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Abrahám, Darien",
+     "types": [],
+     "rtg": 1266,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Vrkoč, Alexandr",
+     "types": [],
+     "rtg": 1440,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Sejpka, Šimon",
+     "types": [],
+     "rtg": 1449,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Bartošík, Denis",
+     "types": [],
+     "rtg": 1526,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Korchak, Yevhenii",
+     "types": [],
+     "rtg": 1484,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Wistein, Matěj",
+     "types": [],
+     "rtg": 1425,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Mareš, David",
+     "types": [],
+     "rtg": 1491,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Kopta, Petr",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Babin, Dmitrii",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 15,
+     "name": "Nedohibčenko, Vladislav",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 16,
+     "name": "Tyburec, Tobiáš",
+     "types": [],
+     "rtg": 1001,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 17,
+     "name": "Schauer, Mark",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 18,
+     "name": "Šulc, Jan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 19,
+     "name": "Pecha, Karel",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 20,
+     "name": "Válek, Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "TJ Libouchec \"B\"",
+   "captain": "Jan Viola",
+   "players": [
+    {
+     "no": 1,
+     "name": "Weiss, Pavel",
+     "types": [],
+     "rtg": 1692,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Weiss, Petr",
+     "types": [],
+     "rtg": 1646,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Chmátal, Petr",
+     "types": [],
+     "rtg": 1173,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Michňo, Jan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Lukeš, Václav",
+     "types": [],
+     "rtg": 1616,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Viola, Jan",
+     "types": [],
+     "rtg": 1908,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Kudrna, Jan",
+     "types": [],
+     "rtg": 1758,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Červinka, Jiří",
+     "types": [],
+     "rtg": 1709,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Weiss, Josef",
+     "types": [],
+     "rtg": 1775,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Holec, Jaroslav",
+     "types": [],
+     "rtg": 1759,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Voleman, Milan",
+     "types": [],
+     "rtg": 1704,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Kudrna, Václav",
+     "types": [],
+     "rtg": 1730,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Maxa, Martin",
+     "types": [],
+     "rtg": 1582,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Voleman, Marek",
+     "types": [],
+     "rtg": 1689,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 15,
+     "name": "Kudrna, Adam",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  }
+ ],
+ "rounds": [
+  {
+   "no": 1,
+   "date": "2026-10-18",
+   "time": "10:00",
+   "matches": [
+    {
+     "home": "SPORTIS Svádov-Olšinky \"B\"",
+     "away": "TJ Libouchec \"B\""
+    },
+    {
+     "home": "ŠK Teplice \"C\"",
+     "away": "Teplice Chess Club \"C\""
+    },
+    {
+     "home": "KŠ Štětí",
+     "away": "SK Děčín \"D\""
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "date": "2026-11-08",
+   "time": "10:00",
+   "matches": [
+    {
+     "home": "TJ Libouchec \"B\"",
+     "away": "SK Děčín \"D\""
+    },
+    {
+     "home": "Teplice Chess Club \"C\"",
+     "away": "KŠ Štětí"
+    },
+    {
+     "home": "SPORTIS Svádov-Olšinky \"B\"",
+     "away": "ŠK Teplice \"C\""
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "date": "2026-11-22",
+   "time": "10:00",
+   "matches": [
+    {
+     "home": "ŠK Teplice \"C\"",
+     "away": "TJ Libouchec \"B\""
+    },
+    {
+     "home": "KŠ Štětí",
+     "away": "SPORTIS Svádov-Olšinky \"B\""
+    },
+    {
+     "home": "SK Děčín \"D\"",
+     "away": "Teplice Chess Club \"C\""
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "date": "2026-12-06",
+   "time": "10:00",
+   "matches": [
+    {
+     "home": "TJ Libouchec \"B\"",
+     "away": "Teplice Chess Club \"C\""
+    },
+    {
+     "home": "SPORTIS Svádov-Olšinky \"B\"",
+     "away": "SK Děčín \"D\""
+    },
+    {
+     "home": "ŠK Teplice \"C\"",
+     "away": "KŠ Štětí"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "date": "2027-01-10",
+   "time": "10:00",
+   "matches": [
+    {
+     "home": "KŠ Štětí",
+     "away": "TJ Libouchec \"B\""
+    },
+    {
+     "home": "SK Děčín \"D\"",
+     "away": "ŠK Teplice \"C\""
+    },
+    {
+     "home": "Teplice Chess Club \"C\"",
+     "away": "SPORTIS Svádov-Olšinky \"B\""
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "date": "2027-01-24",
+   "time": "10:00",
+   "matches": [
+    {
+     "home": "TJ Libouchec \"B\"",
+     "away": "SPORTIS Svádov-Olšinky \"B\""
+    },
+    {
+     "home": "Teplice Chess Club \"C\"",
+     "away": "ŠK Teplice \"C\""
+    },
+    {
+     "home": "SK Děčín \"D\"",
+     "away": "KŠ Štětí"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "date": "2027-02-07",
+   "time": "10:00",
+   "matches": [
+    {
+     "home": "SK Děčín \"D\"",
+     "away": "TJ Libouchec \"B\""
+    },
+    {
+     "home": "KŠ Štětí",
+     "away": "Teplice Chess Club \"C\""
+    },
+    {
+     "home": "ŠK Teplice \"C\"",
+     "away": "SPORTIS Svádov-Olšinky \"B\""
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "date": "2027-02-21",
+   "time": "10:00",
+   "matches": [
+    {
+     "home": "TJ Libouchec \"B\"",
+     "away": "ŠK Teplice \"C\""
+    },
+    {
+     "home": "SPORTIS Svádov-Olšinky \"B\"",
+     "away": "KŠ Štětí"
+    },
+    {
+     "home": "Teplice Chess Club \"C\"",
+     "away": "SK Děčín \"D\""
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "date": "2027-03-14",
+   "time": "10:00",
+   "matches": [
+    {
+     "home": "Teplice Chess Club \"C\"",
+     "away": "TJ Libouchec \"B\""
+    },
+    {
+     "home": "SK Děčín \"D\"",
+     "away": "SPORTIS Svádov-Olšinky \"B\""
+    },
+    {
+     "home": "KŠ Štětí",
+     "away": "ŠK Teplice \"C\""
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "date": "2027-04-04",
+   "time": "10:00",
+   "matches": [
+    {
+     "home": "TJ Libouchec \"B\"",
+     "away": "KŠ Štětí"
+    },
+    {
+     "home": "ŠK Teplice \"C\"",
+     "away": "SK Děčín \"D\""
+    },
+    {
+     "home": "SPORTIS Svádov-Olšinky \"B\"",
+     "away": "Teplice Chess Club \"C\""
+    }
+   ]
+  }
+ ],
+ "region": "UKSS"
+}

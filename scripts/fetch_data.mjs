@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-// Stáhne soupisky a rozlosování z chess-results.com do data/competitions.json.
+// Stáhne soupisky a rozlosování z chess-results.com do data/ (seznam data/index.json
+// a soubor pro každou soutěž data/comp/<id>.json, viz scripts/data_store.mjs).
 // Spouští se úlohou Aktualizace soupisek na GitHubu, ručně:
 //
 //     node scripts/fetch_data.mjs [--only <id>] [--save-html raw]
@@ -11,10 +12,11 @@ import { fileURLToPath } from 'node:url';
 import { parseRosters, parseRounds, parseRostersFromGrid, parseRoundsFromGrid } from '../js/parse.js';
 import { xlsxToGrid } from '../js/xlsx.js';
 import { fetchPage, fetchExport, toDocument, sleep } from './chess_results.mjs';
+import { readData, writeData } from './data_store.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CONFIG = path.join(ROOT, 'scripts', 'competitions.json');
-const OUT = path.join(ROOT, 'data', 'competitions.json');
+const DATA_DIR = path.join(ROOT, 'data');
 
 function args() {
   const a = process.argv.slice(2);
@@ -40,8 +42,7 @@ async function main() {
     console.error('Nastavení soutěží chybí nebo je prázdné.');
     return 1;
   }
-  const prevJson = await readJson(OUT, { competitions: [] });
-  const previous = new Map((prevJson.competitions ?? []).map((c) => [c.id, c]));
+  const previous = (await readData(DATA_DIR)).comps;
   if (saveHtml) await fs.mkdir(path.resolve(saveHtml), { recursive: true });
 
   if (only && !cfg.competitions.some((c) => c.id === only)) {
@@ -134,16 +135,8 @@ async function main() {
     return 1;
   }
 
-  const body = { season: cfg.season, competitions: comps };
-  const oldBody = { season: prevJson.season ?? null, competitions: prevJson.competitions ?? null };
-  if (JSON.stringify(oldBody) === JSON.stringify(body)) {
-    console.log('Beze změn, soubor se nepřepisuje.');
-    return 0;
-  }
-  const out = { generated: new Date().toISOString().replace(/\.\d{3}Z$/, 'Z'), source: 'chess-results.com', ...body };
-  await fs.mkdir(path.dirname(OUT), { recursive: true });
-  await fs.writeFile(OUT, `${JSON.stringify(out, null, 1)}\n`, 'utf8');
-  console.log('Zapsáno data/competitions.json');
+  const changed = await writeData(DATA_DIR, { season: cfg.season, comps });
+  console.log(changed.length ? `Zapsáno do data/: ${changed.join(', ')}` : 'Beze změn, soubory se nepřepisují.');
   return 0;
 }
 

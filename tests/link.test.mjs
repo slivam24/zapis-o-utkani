@@ -6,7 +6,9 @@ import { newMatch, setBoardResult, totals } from '../js/logic.js';
 import qrcode from '../js/vendor/qrcode.js';
 
 const BASE = 'https://slivam24.github.io/zapis-o-utkani/';
-const DATA = JSON.parse(fs.readFileSync(new URL('../data/competitions.json', import.meta.url)));
+// sdílená data: seznam a soubor pro každou soutěž (viz scripts/data_store.mjs)
+const read = (f) => JSON.parse(fs.readFileSync(new URL(`../data/${f}`, import.meta.url)));
+const DATA = { competitions: read('index.json').competitions.map((c) => read(`comp/${c.id}.json`)) };
 const clone = (x) => JSON.parse(JSON.stringify(x));
 
 /** Skutečné utkání ze soupisek: 8 šachovnic, výsledky, rozhodčí, záznam, podpisy. */

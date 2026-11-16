@@ -78,8 +78,14 @@ Typy hráčů: **K** kapitán, **ZK** zástupce kapitána, **H** host, **V** vol
 
 ## Data (soupisky a rozlosování)
 
-Soubor `data/competitions.json` drží soupisky a rozlosování soutěží ze `scripts/competitions.json`.
-Obnoví se sám **každý pátek odpoledne** (úloha **Aktualizace soupisek**), po přidání soutěže z hlášení
+Soupisky a rozlosování soutěží ze `scripts/competitions.json` jsou v adresáři `data/`, rozdělené,
+aby aplikace nestahovala soupisky celé republiky (`scripts/data_store.mjs`):
+
+- `data/index.json`: seznam soutěží bez soupisek (název, kraj, šachovnice, první a poslední kolo), desítky kB;
+- `data/comp/<id>.json`: jedna soutěž celá. Aplikace ji stáhne, až když se soutěž vybere. S nastaveným krajem
+  si předem stáhne celostátní soutěže a soutěže kraje, takže v hrací místnosti funguje i bez internetu.
+
+Data se obnoví sama **každý pátek odpoledne** (úloha **Aktualizace soupisek**), po přidání soutěže z hlášení
 a kdykoli ručně přes **Actions → Aktualizace soupisek → Run workflow**. Nový soubor se uloží jen tehdy,
 když se soupisky nebo rozlosování opravdu změnily. V aplikaci se pak projeví po otevření s internetem
 nebo tlačítkem pro obnovení dat.
@@ -87,7 +93,17 @@ nebo tlačítkem pro obnovení dat.
 GitHub vypíná plánované úlohy v repozitáři, kde se 60 dní nic nezměnilo. Pak stačí úlohu v záložce
 Actions znovu povolit (**Enable workflow**).
 
-Soutěže se nastavují v `scripts/competitions.json` (číslo turnaje na chess-results, počet šachovnic).
+Soutěže se nastavují v `scripts/competitions.json` (číslo turnaje na chess-results, počet šachovnic, kraj).
+
+### Přidání všech soutěží kraje nebo celé republiky z chess.cz
+
+**Actions → Přidat soutěže z chess.cz → Run workflow**, vybrat kraj, celostátní soutěže nebo celou republiku
+(`scripts/import_chesscz.mjs`). Úloha projde seznam soutěží na chess.cz, u každé vezme z detailu číslo turnaje
+na chess-results a z prvního odehraného kola počet šachovnic, přidá ji s krajem a jednotnou zkratkou a stáhne
+soupisky. Soutěže, které v aplikaci už jsou, nechá být. Soutěž, u které chess.cz zatím nemá odkaz na
+chess-results, přeskočí (stačí úlohu později spustit znovu). Když se ještě nehrálo, počet šachovnic jen odhadne
+(8) a páteční aktualizace ho doplní, jakmile se odehraje první kolo. Na začátku nové sezóny se úloha spustí
+s novým ročníkem.
 
 ### Přidání soutěže přímo v aplikaci
 

@@ -1,5 +1,5 @@
 // Service worker: aplikace funguje bez internetu. Data (soupisky) se berou přednostně ze sítě.
-const CACHE = 'zapis-v18';
+const CACHE = 'zapis-v19';
 const SHELL = [
   './',
   'index.html',
@@ -21,7 +21,7 @@ const SHELL = [
   'manifest.webmanifest',
   'icons/icon.svg',
   'img/logo-sscr.png',
-  'data/competitions.json',
+  'data/index.json',
 ];
 
 self.addEventListener('install', (e) => {
@@ -50,17 +50,21 @@ self.addEventListener('fetch', (e) => {
   const url = new URL(req.url);
   if (url.origin !== location.origin) return;
 
-  const isData = url.pathname.endsWith('/data/competitions.json');
+  // data (seznam soutěží a jednotlivé soutěže): síť napřed, při selhání poslední uložená verze;
+  // ukládá se bez ?t=…, aby obnovení vynucené z aplikace přepsalo tutéž položku
+  const isData = /\/data\/.+\.json$/.test(url.pathname);
   if (isData) {
-    // síť napřed, při selhání poslední uložená verze
+    const key = new Request(`${url.origin}${url.pathname}`);
     e.respondWith(
       fetch(req)
         .then((res) => {
-          const copy = res.clone();
-          caches.open(CACHE).then((c) => c.put('data/competitions.json', copy));
+          if (res.ok) {
+            const copy = res.clone();
+            caches.open(CACHE).then((c) => c.put(key, copy));
+          }
           return res;
         })
-        .catch(() => caches.match('data/competitions.json')),
+        .catch(() => caches.match(key).then((hit) => hit ?? Response.error())),
     );
     return;
   }

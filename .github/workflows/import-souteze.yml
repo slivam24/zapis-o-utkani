@@ -1,0 +1,84 @@
+name: Přidat soutěže z chess.cz
+
+# Spouští se ručně: záložka Actions → Přidat soutěže z chess.cz → Run workflow.
+# Přidá všechny soutěže družstev vybraného kraje (nebo celostátní, nebo celé republiky) podle chess.cz,
+# s krajem, jednotnou zkratkou a počtem šachovnic z prvního odehraného kola, a stáhne jejich soupisky.
+# Soutěže, které v aplikaci už jsou, nechá být. Výsledek je v souhrnu běhu.
+on:
+  workflow_dispatch:
+    inputs:
+      kraj:
+        description: Které soutěže přidat
+        required: true
+        type: choice
+        options:
+          - Celostátní soutěže (ŠSČR)
+          - Jihomoravský kraj (JmŠS)
+          - Jihočeský kraj (JŠS)
+          - Královéhradecký kraj (KHŠS)
+          - Karlovarský kraj (KŠSKV)
+          - Kraj Vysočina (KŠSV)
+          - Moravskoslezský kraj (MKŠS)
+          - Pardubický kraj (PDŠS)
+          - Praha (PŠS)
+          - Středočeský kraj (SŠS)
+          - Liberecký kraj (ŠSLK)
+          - Olomoucký kraj (ŠSOK)
+          - Plzeňský kraj (ŠSPK)
+          - Zlínský kraj (ŠSZK)
+          - Ústecký kraj (ÚKŠS)
+          - Celá republika
+      rocnik:
+        description: Ročník (rok začátku sezóny, např. 2026); prázdné = podle nastavení
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-update
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - name: Přidat soutěže podle chess.cz
+        env:
+          # výběr jde přes proměnnou, nikdy ne přímo do příkazu
+          KRAJ: ${{ inputs.kraj }}
+          ROCNIK: ${{ inputs.rocnik }}
+        run: |
+          {
+            echo "## Přidání soutěží: $KRAJ"
+            echo
+            if [ -n "$ROCNIK" ]; then
+              node scripts/import_chesscz.mjs --kraj "$KRAJ" --rocnik "$ROCNIK"
+            else
+              node scripts/import_chesscz.mjs --kraj "$KRAJ"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Stáhnout soupisky
+        run: node scripts/fetch_data.mjs
+      - name: Uložit změny
+        env:
+          KRAJ: ${{ inputs.kraj }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A scripts/competitions.json data
+          if git diff --cached --quiet; then
+            echo "Beze změn."
+          else
+            git commit -m "Přidány soutěže z chess.cz: $KRAJ"
+            git pull --rebase --autostash
+            git push
+          fi

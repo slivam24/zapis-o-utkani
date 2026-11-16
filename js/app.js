@@ -1,7 +1,7 @@
 import * as L from './logic.js';
 import { renderPages } from './render.js';
 import { buildPdf } from './pdf.js';
-import { loadData, refreshData, reloadUserComps, dataSummary } from './data.js';
+import { loadData, refreshData, reloadUserComps, dataSummary, ensureComp, isLoaded } from './data.js';
 import { buildFromFiles, readFiles, roundsFor, issueUrl } from './sources.js';
 import { clean, tournamentNumber, exportUrl } from './parse.js';
 import * as store from './store.js';
@@ -9,7 +9,7 @@ import { makeBackup, parseBackup, mergeArchive, olderThan } from './archive.js';
 import { helpPage, privacyPage } from './pages.js';
 import { encodeLink, decodeLink, hasLink } from './link.js';
 import qrcode from './vendor/qrcode.js';
-import { REGIONS, groupCompetitions, standardShort } from './catalog.js';
+import { REGIONS, groupCompetitions, standardShort, isFinished as isFinishedComp } from './catalog.js';
 
 const REPO = 'slivam24/zapis-o-utkani';
 
@@ -112,7 +112,45 @@ const comp = () => DATA.competitions.find((c) => c.id === S.compId) ?? S.compInf
 const compSnapshot = (c = comp()) =>
   c ? { name: c.name ?? '', short: c.short ?? '', group: c.group ?? '', season: c.season ?? '', boards: c.boards ?? null, teams: [], rounds: [] } : undefined;
 const boards = () => L.matchBoards(S, comp());
-const teamOf = (side) => comp()?.teams.find((t) => t.name === S[side].team);
+const teamOf = (side) => comp()?.teams?.find((t) => t.name === S[side].team);
+
+/** Soupisky vybrané soutěže: stáhnou se až když jsou potřeba. Po načtení překreslí pohled. */
+let compLoadError = '';
+let compLoading = null; // id soutěže, která se právě stahuje
+let compFailed = null; // id soutěže, kterou se nepodařilo stáhnout (znovu až po obnovení)
+async function loadCompData(id = S.compId, { fresh = false } = {}) {
+  const c = DATA.competitions.find((x) => x.id === id);
+  if (!c || (isLoaded(c) && !fresh)) return;
+  compLoadError = '';
+  compFailed = null;
+  try {
+    await ensureComp(DATA, id, { fresh });
+  } catch {
+    compFailed = id;
+    compLoadError = navigator.onLine === false
+      ? 'Soupisky této soutěže v zařízení ještě nejsou a teď jsi bez internetu. Připoj se a zkus to znovu.'
+      : 'Soupisky této soutěže se nepodařilo stáhnout. Zkus to znovu ikonou ↻ v hlavičce.';
+  }
+}
+
+/**
+ * Předem stáhne soupisky soutěží, které se budou hodit bez internetu: celostátní a soutěže mého kraje.
+ * Jen když je nastavený kraj a jen probíhající soutěže, po jedné, aby to nezdržovalo.
+ */
+async function prefetchMyRegion() {
+  const region = settings().region;
+  if (!region || navigator.onLine === false) return;
+  const todo = DATA.competitions.filter(
+    (c) => !c.local && !isLoaded(c) && (c.region === region || c.region === 'CR') && !isFinishedComp(c),
+  );
+  for (const c of todo) {
+    try {
+      await ensureComp(DATA, c.id);
+    } catch {
+      /* zkusí se příště */
+    }
+  }
+}
 
 function save() {
   S.updatedAt = new Date().toISOString();
@@ -277,7 +315,7 @@ function viewZapas() {
     const short = standardShort(x);
     // zkratka se nepřidává, když je stejná jako název, ať se nabídka nezdvojuje
     const label = short && !full.startsWith(short) ? `${short} – ${full}` : full;
-    return `${label}${x.teams?.length ? '' : ' (bez soupisek)'}`;
+    return `${label}${(x.teams?.length ?? x.teamCount) ? '' : ' (bez soupisek)'}`;
   };
   const opt = (x) => `<option value="${esc(x.id)}" ${x.id === S.compId ? 'selected' : ''}>${esc(compLabel(x))}</option>`;
   // nabídka po skupinách: celostátní, mládež, kraje (můj kraj první), vlastní, ukončené
@@ -348,6 +386,11 @@ function viewZapas() {
     <div class="col">
     <div class="card">
       <h2>Soutěž a kolo</h2>
+      ${
+        c && !isLoaded(c)
+          ? `<ul class="issues"><li class="${compLoadError ? 'error' : 'info'}"><span>${esc(compLoadError || 'Načítám soupisky a rozlosování…')}</span></li></ul>`
+          : ''
+      }
       <div class="grid two">
         <label class="field"><span>Soutěž</span><select data-chg="comp">${compOpts}</select></label>
         ${roundField}
@@ -909,6 +952,15 @@ function renderView({ keepScroll = true } = {}) {
   $$('.roster').forEach((r) => (saved[r.dataset.side] = r.scrollTop));
   const y = window.scrollY;
   view.innerHTML = (VIEWS[tab] ?? viewZapas)();
+  // vybraná soutěž bez soupisek: dotáhnout a překreslit
+  const cur = DATA.competitions.find((x) => x.id === S.compId);
+  if (cur && !isLoaded(cur) && compLoading !== cur.id && compFailed !== cur.id) {
+    compLoading = cur.id;
+    loadCompData(cur.id).finally(() => {
+      compLoading = null;
+      renderView();
+    });
+  }
   view.classList.toggle('wide', tab === 'vystup' || (uiMode() === 'desktop' && isStep(tab) && tab !== 'vysledky'));
   if (keepScroll) {
     $$('.roster').forEach((r) => (r.scrollTop = saved[r.dataset.side] ?? 0));
@@ -1073,8 +1125,9 @@ async function openFromLink() {
   const hash = location.hash;
   history.replaceState(null, '', `${location.pathname}${location.search}`);
   let m;
+  const prepare = (id) => ensureComp(DATA, id);
   try {
-    m = await decodeLink(hash, { competitions: DATA.competitions });
+    m = await decodeLink(hash, { competitions: DATA.competitions, prepare });
   } catch (e) {
     if (e.code !== 'roster') {
       alert(e.message);
@@ -1084,7 +1137,7 @@ async function openFromLink() {
     try {
       DATA = await refreshData();
       $('#dataStatus').textContent = dataSummary(DATA);
-      m = await decodeLink(hash, { competitions: DATA.competitions });
+      m = await decodeLink(hash, { competitions: DATA.competitions, prepare: (id) => ensureComp(DATA, id, { fresh: true }) });
     } catch (e2) {
       alert(e2.code === 'roster' || !e2.message ? e.message : e2.message);
       return false;
@@ -1811,6 +1864,7 @@ view.addEventListener('change', (e) => {
   switch (el.dataset.chg) {
     case 'comp':
       resetCompetition(el.value);
+      compFailed = null;
       save();
       return renderView();
     case 'round':
@@ -1841,6 +1895,7 @@ view.addEventListener('change', (e) => {
       return;
     case 'region': {
       setSetting('region', el.value);
+      prefetchMyRegion();
       const r = REGIONS.find((x) => x.code === el.value);
       return toast(r ? `Soutěže: celostátní a ${r.name}.` : 'Soutěže: všechny kraje.');
     }
@@ -1898,9 +1953,12 @@ $('#btnRefresh').addEventListener('click', async (e) => {
   btn.classList.add('spin');
   try {
     DATA = await refreshData();
+    compFailed = null;
+    await loadCompData(S.compId, { fresh: true });
     $('#dataStatus').textContent = dataSummary(DATA);
-    toast('Soupisky jsou aktuální.');
+    toast(compLoadError || 'Soupisky jsou aktuální.');
     renderView();
+    prefetchMyRegion();
   } catch {
     toast('Soupisky se nepodařilo stáhnout (jsi online?). Používají se uložené.');
   } finally {
@@ -1963,6 +2021,7 @@ async function init() {
   if (!DATA.competitions.some((c) => c.id === S.compId) && !S.compInfo) S.compId = DATA.competitions[0]?.id ?? '';
   $('#dataStatus').textContent = dataSummary(DATA);
   renderAll({ keepScroll: false });
+  prefetchMyRegion();
 }
 
 init();
