@@ -180,6 +180,27 @@ Kdyby se stránky chess.cz nebo chess-results změnily a stahování přestalo f
 zachovaná. Stažené stránky se uloží jako příloha běhu v záložce Actions (artefakt `stazene-stranky`), podle nich
 jde upravit čtení v `scripts/chesscz.mjs` (chess.cz) nebo `js/parse.js` (chess-results). Soupisky jde vždy doplnit i ručně přímo v aplikaci.
 
+## Švýcar: turnaje jednotlivců (`turnaj/`)
+
+Samostatná webová aplikace v podsložce `turnaj/` pro řízení turnajů jednotlivců švýcarským systémem.
+
+- **Losování** podle FIDE C.04.3 (holandský systém) ve znění od 1. 2. 2026, včetně C.04.1 a C.04.2:
+  kritéria [C1]–[C21], nové kritérium [C5] (volno co nejníže), [C9], přidělení barev podle čl. 5,
+  pořadí šachovnic podle C.04.2 čl. 3.6, volna na žádost, pozdě přihlášení a odstoupení.
+  Jádro (`turnaj/js/dutch.js`) hledá podle pravidel první nejlepší kandidát v posloupnosti
+  transpozic a výměn; místo zkoušení kandidátů po jednom k tomu používá vážené párování
+  (`turnaj/js/matching.js`), takže i turnaj se stovkami hráčů se vylosuje během chvilky.
+- **Pomocná hodnocení** podle FIDE C.07 (od 1. 3. 2026) včetně čl. 16 (neodehraná kola) a výjimky
+  pro Cut-1; výchozí pořadí podle Soutěžního řádu ŠSČR čl. 5.2.3 (vzájemné partie, Buchholz bez
+  nejhoršího, Buchholz, Sonneborn-Berger, více partií černými, los). Pořadí jde v nastavení změnit.
+- **Výsledky z mobilu**, pořadí po libovolném kole, tabulka, tisk losování a pořadí,
+  export **TRF** (zpráva pro FIDE, kontrola losování jiným programem), záloha a načtení turnaje.
+- Data jsou jen v zařízení (localStorage).
+
+Testy: `tests/turnaj-*.test.mjs`. Losování se ověřuje na všech 9 kolech vzorového turnaje
+z příručky FIDE „Mastering the Dutch“ (verze 2026) a na testovacích případech programu bbpPairings.
+Program není na seznamu FIDE schválených programů (C.04.2 čl. 1.4).
+
 ## Nasazení (GitHub Pages)
 
 1. Repozitář → **Settings → Pages**.
