@@ -93,6 +93,164 @@
    ]
   },
   {
+   "name": "Sokol Nová Bělá C",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Ryška Lukáš",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1738,
+     "fide": 1811
+    },
+    {
+     "no": 2,
+     "name": "Paseka Aleš",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1640,
+     "fide": 1760
+    },
+    {
+     "no": 3,
+     "name": "Žwak Stanislav",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1593,
+     "fide": 1734
+    },
+    {
+     "no": 4,
+     "name": "Babinec Rostislav",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1397,
+     "fide": 1579
+    },
+    {
+     "no": 5,
+     "name": "Pokorný Martin",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Kozák Ladislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1543,
+     "fide": 1697
+    },
+    {
+     "no": 7,
+     "name": "Ryška Jindřich",
+     "types": [],
+     "rtg": null,
+     "nat": 1727,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Javorek Stanislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1342,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Stuchlý Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1233,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Neuvirt Marek",
+     "types": [],
+     "rtg": null,
+     "nat": 1051,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "VOKD Poruba",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Kovář Oldřich",
+     "types": [],
+     "rtg": null,
+     "nat": 1965,
+     "fide": 1985
+    },
+    {
+     "no": 2,
+     "name": "Chliapas Nikos",
+     "types": [],
+     "rtg": null,
+     "nat": 1784,
+     "fide": 1882
+    },
+    {
+     "no": 3,
+     "name": "Vizner Jaroslav",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1748,
+     "fide": 1808
+    },
+    {
+     "no": 4,
+     "name": "Zeman Josef",
+     "types": [],
+     "rtg": null,
+     "nat": 1495,
+     "fide": 1678
+    },
+    {
+     "no": 5,
+     "name": "Novotný Marek",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Orlík David",
+     "types": [],
+     "rtg": null,
+     "nat": 1255,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Klímek Lukáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
    "name": "ŠK Šenov D",
    "captain": "",
    "players": [
@@ -389,100 +547,6 @@
    ]
   },
   {
-   "name": "Sokol Nová Bělá C",
-   "captain": "",
-   "players": [
-    {
-     "no": 1,
-     "name": "Ryška Lukáš",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 1738,
-     "fide": 1811
-    },
-    {
-     "no": 2,
-     "name": "Paseka Aleš",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 1640,
-     "fide": 1760
-    },
-    {
-     "no": 3,
-     "name": "Žwak Stanislav",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": 1593,
-     "fide": 1734
-    },
-    {
-     "no": 4,
-     "name": "Babinec Rostislav",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": 1397,
-     "fide": 1579
-    },
-    {
-     "no": 5,
-     "name": "Pokorný Martin",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 6,
-     "name": "Kozák Ladislav",
-     "types": [],
-     "rtg": null,
-     "nat": 1543,
-     "fide": 1697
-    },
-    {
-     "no": 7,
-     "name": "Ryška Jindřich",
-     "types": [],
-     "rtg": null,
-     "nat": 1727,
-     "fide": null
-    },
-    {
-     "no": 8,
-     "name": "Javorek Stanislav",
-     "types": [],
-     "rtg": null,
-     "nat": 1342,
-     "fide": null
-    },
-    {
-     "no": 9,
-     "name": "Stuchlý Jiří",
-     "types": [],
-     "rtg": null,
-     "nat": 1233,
-     "fide": null
-    },
-    {
-     "no": 10,
-     "name": "Neuvirt Marek",
-     "types": [],
-     "rtg": null,
-     "nat": 1051,
-     "fide": null
-    }
-   ]
-  },
-  {
    "name": "ŠK Šenov E",
    "captain": "",
    "players": [
@@ -611,70 +675,6 @@
     {
      "no": 16,
      "name": "Kusák Jan",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    }
-   ]
-  },
-  {
-   "name": "VOKD Poruba",
-   "captain": "",
-   "players": [
-    {
-     "no": 1,
-     "name": "Kovář Oldřich",
-     "types": [],
-     "rtg": null,
-     "nat": 1965,
-     "fide": 1985
-    },
-    {
-     "no": 2,
-     "name": "Chliapas Nikos",
-     "types": [],
-     "rtg": null,
-     "nat": 1784,
-     "fide": 1882
-    },
-    {
-     "no": 3,
-     "name": "Vizner Jaroslav",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": 1748,
-     "fide": 1808
-    },
-    {
-     "no": 4,
-     "name": "Zeman Josef",
-     "types": [],
-     "rtg": null,
-     "nat": 1495,
-     "fide": 1678
-    },
-    {
-     "no": 5,
-     "name": "Novotný Marek",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 6,
-     "name": "Orlík David",
-     "types": [],
-     "rtg": null,
-     "nat": 1255,
-     "fide": null
-    },
-    {
-     "no": 7,
-     "name": "Klímek Lukáš",
      "types": [],
      "rtg": null,
      "nat": null,
