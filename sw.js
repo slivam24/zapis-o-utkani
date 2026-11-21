@@ -1,5 +1,5 @@
 // Service worker: aplikace funguje bez internetu. Data (soupisky) se berou přednostně ze sítě.
-const CACHE = 'zapis-v22';
+const CACHE = 'zapis-v21';
 const SHELL = [
   './',
   'index.html',
@@ -22,16 +22,6 @@ const SHELL = [
   'icons/icon.svg',
   'img/logo-sscr.png',
   'data/index.json',
-  'turnaj/',
-  'turnaj/index.html',
-  'turnaj/css/turnaj.css',
-  'turnaj/js/app.js',
-  'turnaj/js/model.js',
-  'turnaj/js/dutch.js',
-  'turnaj/js/matching.js',
-  'turnaj/js/tiebreaks.js',
-  'turnaj/js/trf.js',
-  'turnaj/js/store.js',
 ];
 
 self.addEventListener('install', (e) => {
