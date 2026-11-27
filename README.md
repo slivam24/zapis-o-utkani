@@ -38,7 +38,13 @@ Zápis zůstává co nejjednodušší, všechno ostatní je v **☰ Menu** v hla
   Archiv upozorní na zápisy starší než zvolená lhůta (výchozí 12 měsíců) a nabídne jejich smazání.
 - **Nastavení**: zobrazení, funkce, které jde vypnout (celá obrazovka, úprava hráčů, hráč mimo soupisku, rychlé texty
   záznamu, loga, e-mail, PNG, sdílení, přidání vlastní soutěže), lhůta archivu a smazání všech dat ze zařízení.
-- **Nápověda** a **Ochrana osobních údajů**: jak aplikaci používat, co umí a co se kde ukládá.
+- **O aplikaci a návod**: tři záložky. **Návod** krok za krokem i s častými potížemi, **Co je nového** (seznam změn
+  po dnech) a **O aplikaci** (verze, odkud jsou data, kde nahlásit chybu). Po aktualizaci aplikace lišta upozorní na novinky.
+- **Ochrana osobních údajů**: co se kde ukládá.
+
+Seznam změn je v `js/changelog.js`. Při změně, kterou uživatel pozná, se do něj přidá položka k dnešnímu datu
+(nový den navrch). Datum nejnovějšího dne je verze aplikace: když se změní, zařízení, které ho ještě nevidělo, ukáže
+lištu **Aplikace má novinky**. Nové dny jsou v seznamu označené.
 
 ### Zobrazení pro počítač a pro tablet a mobil
 
@@ -202,7 +208,7 @@ jde upravit čtení v `scripts/chesscz.mjs` (chess.cz) nebo `js/parse.js` (chess
 
 ```bash
 npm install                 # jen linkedom, pro parsování HTML v Node
-npm test                    # 102 testů: logika zápisu, parser, čtečky .xlsx a .xls, ratingy z LOK, přidávání soutěží, archiv, PDF, odkaz s QR
+npm test                    # 107 testů: logika zápisu, parser, čtečky .xlsx a .xls, ratingy z LOK, přidávání soutěží, archiv, PDF, odkaz s QR
 npm run serve               # lokální spuštění: http://localhost:8080
 ```
 
