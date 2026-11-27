@@ -46,7 +46,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "Beze změn."
           else
-            git commit -m "Aktualizace soupisek z chess-results"
+            git commit -m "Aktualizace soupisek z chess.cz a chess-results"
             git pull --rebase --autostash
             git push
           fi

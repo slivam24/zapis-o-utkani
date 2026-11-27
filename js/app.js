@@ -154,7 +154,30 @@ async function prefetchMyRegion() {
 
 function save() {
   S.updatedAt = new Date().toISOString();
-  store.saveDraft(S);
+  showSaveWarning(!store.saveDraft(S));
+}
+
+/**
+ * Když se rozpracovaný zápis nevejde do úložiště zařízení, musí to být vidět hned a pořád:
+ * po obnovení stránky by výsledky a podpisy zmizely. Lišta zmizí, jakmile se zápis zase uloží.
+ */
+function showSaveWarning(failed) {
+  const bar = $('.store-bar');
+  if (!failed) return bar?.remove();
+  if (bar) return;
+  const b = document.createElement('div');
+  b.className = 'update-bar store-bar';
+  b.setAttribute('role', 'alert');
+  b.innerHTML =
+    '<span>Zápis se nepodařilo uložit, úložiště zařízení je plné. Stránku neobnovuj, uvolni místo v archivu.</span>' +
+    '<button class="btn small" type="button">Archiv</button>';
+  $('button', b).addEventListener('click', () => goTo('archiv'));
+  document.body.append(b);
+}
+
+/** Po uvolnění místa (smazání z archivu) zkusit rozpracovaný zápis uložit znovu. */
+function retrySave() {
+  if ($('.store-bar')) save();
 }
 
 let toastTimer;
@@ -983,30 +1006,63 @@ function goTo(id) {
   renderAll({ keepScroll: false });
 }
 
+// plátna podpisů hlídají svou velikost (otočení tabletu, změna okna, přeskládání stránky)
+const padObserver =
+  typeof ResizeObserver === 'function'
+    ? new ResizeObserver((entries) => entries.forEach((e) => sizePad(e.target, e.target.dataset.sig)))
+    : null;
+
 function afterRender() {
-  $$('canvas[data-sig]').forEach((c) => initPad(c, c.dataset.sig));
+  padObserver?.disconnect();
+  $$('canvas[data-sig]').forEach((c) => {
+    initPad(c, c.dataset.sig);
+    padObserver?.observe(c);
+  });
   if (tab === 'vystup') renderPreview();
   const share = $('#btnShare');
   if (share && !navigator.share) share.style.display = 'none';
 }
 
 // ---------- podpisy ----------
-function initPad(canvas, key) {
+/**
+ * Nastaví plátnu podpisu rozlišení podle jeho velikosti na obrazovce a nakreslí do něj uložený podpis.
+ * Volá se při vykreslení kroku a znovu, když se plátno změní (otočení tabletu, změna okna):
+ * jinak by se obrázek roztáhl a čára by se nekreslila pod prstem.
+ */
+function sizePad(canvas, key) {
   const dpr = Math.max(1, window.devicePixelRatio || 1);
   const rect = canvas.getBoundingClientRect();
-  canvas.width = Math.round(rect.width * dpr);
-  canvas.height = Math.round(rect.height * dpr);
+  if (!rect.width || !rect.height) return;
+  const w = Math.round(rect.width * dpr);
+  const h = Math.round(rect.height * dpr);
+  if (canvas.width === w && canvas.height === h && canvas.dataset.sized) return;
+  canvas.dataset.sized = '1';
+  canvas.width = w; // změna rozměru plátno vymaže a vrátí nastavení kreslení
+  canvas.height = h;
   const ctx = canvas.getContext('2d');
-  ctx.scale(dpr, dpr);
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   ctx.lineWidth = 2.4;
   ctx.lineCap = 'round';
   ctx.lineJoin = 'round';
   ctx.strokeStyle = '#0b2a6f';
-  if (S.sig?.[key]) {
-    const img = new Image();
-    img.onload = () => ctx.drawImage(img, 0, 0, rect.width, rect.height);
-    img.src = S.sig[key];
-  }
+  const src = S.sig?.[key];
+  if (!src) return;
+  const img = new Image();
+  img.onload = () => {
+    // plátno se mezitím mohlo znovu změnit nebo podpis smazat
+    if (canvas.width !== w || canvas.height !== h || S.sig?.[key] !== src) return;
+    // podpis z plátna jiného tvaru se zmenší tak, aby se vešel, a nedeformuje se
+    const k = Math.min(rect.width / img.width, rect.height / img.height);
+    const dw = img.width * k;
+    const dh = img.height * k;
+    ctx.drawImage(img, (rect.width - dw) / 2, (rect.height - dh) / 2, dw, dh);
+  };
+  img.src = src;
+}
+
+function initPad(canvas, key) {
+  sizePad(canvas, key);
+  const ctx = canvas.getContext('2d');
   let drawing = false;
   let last = null;
   const pos = (e) => {
@@ -1295,7 +1351,11 @@ window.addEventListener('hashchange', async () => {
 let fitTimer;
 window.addEventListener('resize', () => {
   clearTimeout(fitTimer);
-  fitTimer = setTimeout(() => overlayMode === 'prubeh' && fitPrubeh(), 100);
+  fitTimer = setTimeout(() => {
+    if (overlayMode === 'prubeh') fitPrubeh();
+    // záloha pro prohlížeče bez ResizeObserver
+    $$('canvas[data-sig]').forEach((c) => sizePad(c, c.dataset.sig));
+  }, 100);
 });
 
 // ---------- výstup (PDF / PNG) ----------
@@ -1626,6 +1686,7 @@ view.addEventListener('click', (e) => {
     case 'delArch':
       if (confirm('Opravdu smazat tento zápis z archivu?')) {
         store.deleteFromArchive(el.dataset.id);
+        retrySave();
         renderView();
       }
       return;
@@ -1652,6 +1713,7 @@ view.addEventListener('click', (e) => {
       if (!confirm(`Smazat ${old.length} starých zápisů z archivu? Nejde to vrátit.`)) return;
       const ids = new Set(old.map((m) => m.id));
       store.saveArchive(list.filter((m) => !ids.has(m.id)));
+      retrySave();
       toast('Staré zápisy jsou smazané.');
       return renderView();
     }
