@@ -140,3 +140,8 @@ export function rememberMail(compId, to) {
   if (v) m._last = v;
   write(KEY_MAIL, m);
 }
+
+// Verze aplikace (datum v seznamu změn), jejíž novinky uživatel už viděl.
+const KEY_SEEN = 'zapis.seen.v1';
+export const seenVersion = () => read(KEY_SEEN, '');
+export const setSeenVersion = (v) => write(KEY_SEEN, v);

@@ -6,7 +6,8 @@ import { buildFromFiles, readFiles, roundsFor, issueUrl } from './sources.js';
 import { clean, tournamentNumber, exportUrl } from './parse.js';
 import * as store from './store.js';
 import { makeBackup, parseBackup, mergeArchive, olderThan } from './archive.js';
-import { helpPage, privacyPage } from './pages.js';
+import { aboutPage, privacyPage } from './pages.js';
+import { VERSION, newerThan } from './changelog.js';
 import { encodeLink, decodeLink, hasLink } from './link.js';
 import qrcode from './vendor/qrcode.js';
 import { REGIONS, groupCompetitions, standardShort, regionCompCount, isFinished as isFinishedComp } from './catalog.js';
@@ -974,7 +975,10 @@ function viewNastaveni() {
   </div>`;
 }
 
-const viewNapoveda = () => `${backBar()}${helpPage()}`;
+// O aplikaci: záložka a verze, kterou uživatel viděl před otevřením seznamu změn (aby zůstalo vidět, co je nové)
+let aboutSub = 'navod';
+let aboutSeen = '';
+const viewOAplikaci = () => `${backBar()}${aboutPage(aboutSub, { seen: aboutSeen })}`;
 const viewSoukromi = () => `${backBar()}${privacyPage()}`;
 
 const VIEWS = {
@@ -985,7 +989,7 @@ const VIEWS = {
   vystup: viewVystup,
   archiv: viewArchiv,
   nastaveni: viewNastaveni,
-  napoveda: viewNapoveda,
+  oaplikaci: viewOAplikaci,
   soukromi: viewSoukromi,
 };
 const isStep = (id) => TABS.some(([t]) => t === id);
@@ -1606,6 +1610,8 @@ view.addEventListener('click', (e) => {
   switch (a) {
     case 'go':
       return goTo(el.dataset.tab);
+    case 'aboutTab':
+      return openAbout(el.dataset.sub);
     case 'pickMatch': {
       const round = comp()?.rounds.find((r) => String(r.no) === String(S.round));
       const m = round?.matches[Number(el.dataset.i)];
@@ -2046,6 +2052,7 @@ $('#appMenu').addEventListener('click', (e) => {
     if (!started || inArchive || confirm('Rozpracovaný zápis není v archivu. Zahodit ho a začít nový?')) newMatch();
     return;
   }
+  if (b.dataset.menu === 'oaplikaci') aboutSub = 'navod';
   goTo(b.dataset.menu);
 });
 // klepnutí mimo menu ho zavře
@@ -2084,11 +2091,48 @@ $('#btnRefresh').addEventListener('click', async (e) => {
 // a stará verze o odkazu se zápisem neví), aplikace se po stažení sama obnoví, pokud čeká zápis z odkazu
 // nebo byla právě spuštěná. Jinak nabídne obnovení tlačítkem, aby se nepřerušila rozdělaná práce.
 function showUpdateBar() {
-  if ($('.update-bar')) return;
+  if ($('.update-bar.ver-bar')) return;
+  $('.news-bar')?.remove(); // novinky ukáže až nová verze
   const bar = document.createElement('div');
-  bar.className = 'update-bar';
+  bar.className = 'update-bar ver-bar';
   bar.innerHTML = '<span>Je připravená nová verze aplikace.</span><button class="btn small" type="button">Načíst</button>';
   $('button', bar).addEventListener('click', () => location.reload());
+  document.body.append(bar);
+}
+
+// ---------- co je nového ----------
+/** Otevře O aplikaci na dané záložce; seznam změn zároveň označí jako přečtený. */
+function openAbout(sub) {
+  aboutSub = sub;
+  if (sub === 'zmeny') {
+    const seen = store.seenVersion();
+    if (seen !== VERSION) aboutSeen = seen;
+    store.setSeenVersion(VERSION);
+    $('.news-bar')?.remove();
+  }
+  if (tab === 'oaplikaci') renderView({ keepScroll: false });
+  else goTo('oaplikaci');
+}
+
+// Po aktualizaci aplikace lišta upozorní na novinky. Při prvním spuštění se jen poznamená verze,
+// u zařízení, které aplikaci používalo už před zavedením seznamu změn, se novinky ukážou.
+function checkNews() {
+  const seen = store.seenVersion();
+  const usedBefore = !seen && (store.loadDraft() || store.loadArchive().length);
+  if (!seen && !usedBefore) return store.setSeenVersion(VERSION);
+  if (!newerThan(seen).length || $('.update-bar.ver-bar')) return;
+  const bar = document.createElement('div');
+  bar.className = 'update-bar news-bar';
+  bar.innerHTML = `<span>Aplikace má novinky.</span>
+    <button class="btn small" type="button" data-news="open">Co je nového</button>
+    <button class="btn small ghost" type="button" data-news="close" aria-label="Zavřít">✕</button>`;
+  bar.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-news]');
+    if (!b) return;
+    if (b.dataset.news === 'open') return openAbout('zmeny');
+    store.setSeenVersion(VERSION);
+    bar.remove();
+  });
   document.body.append(bar);
 }
 
@@ -2134,6 +2178,7 @@ async function init() {
   if (!DATA.competitions.some((c) => c.id === S.compId) && !S.compInfo) S.compId = DATA.competitions[0]?.id ?? '';
   $('#dataStatus').textContent = dataSummary(DATA);
   renderAll({ keepScroll: false });
+  checkNews();
   prefetchMyRegion();
 }
 
