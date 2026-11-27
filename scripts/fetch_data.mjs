@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 // Stáhne soupisky a rozlosování z chess.cz (záloha chess-results.com) do data/ (seznam data/index.json
-// a soubor pro každou soutěž data/comp/<id>.json, viz scripts/data_store.mjs).
+// a soubor pro každou soutěž data/comp/<id>.json, viz scripts/data_store.mjs). Hráčům doplní aktuální
+// národní Elo a FIDE z listiny LOK (scripts/lok.mjs).
 // Spouští se úlohou Aktualizace soupisek na GitHubu, ručně:
 //
-//     node scripts/fetch_data.mjs [--only <id>] [--save-html raw]
+//     node scripts/fetch_data.mjs [--only <id>] [--save-html raw] [--lok lok_sm_cz.xls]
 //
+// --lok vezme listinu LOK ze souboru místo stažení z elo.miramal.com.
 // Stahuje se jen pár stránek jednou týdně, mezi požadavky je prodleva.
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -14,6 +16,7 @@ import { xlsxToGrid } from '../js/xlsx.js';
 import { fetchPage, fetchExport, toDocument, sleep } from './chess_results.mjs';
 import { readData, writeData } from './data_store.mjs';
 import { fetchCompetition, detailUrl, fetchHtml } from './chesscz.mjs';
+import { fetchLok, readLok, applyLok } from './lok.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CONFIG = path.join(ROOT, 'scripts', 'competitions.json');
@@ -25,7 +28,7 @@ function args() {
     const i = a.indexOf(name);
     return i >= 0 ? a[i + 1] : null;
   };
-  return { only: get('--only'), saveHtml: get('--save-html') };
+  return { only: get('--only'), saveHtml: get('--save-html'), lokFile: get('--lok') };
 }
 
 const readJson = async (file, fallback = null) => {
@@ -37,7 +40,7 @@ const readJson = async (file, fallback = null) => {
 };
 
 async function main() {
-  const { only, saveHtml } = args();
+  const { only, saveHtml, lokFile } = args();
   const cfg = await readJson(CONFIG);
   if (!cfg?.competitions?.length) {
     console.error('Nastavení soutěží chybí nebo je prázdné.');
@@ -152,6 +155,22 @@ async function main() {
   if (!ok) {
     console.error('Nepodařilo se načíst žádnou soutěž.');
     return 1;
+  }
+
+  // Aktuální Elo z LOK. Když listina nevyjde, zůstanou ratingy ze soupisek a data se uloží i tak.
+  try {
+    const lok = lokFile ? readLok(await fs.readFile(lokFile)) : await fetchLok();
+    const sum = { players: 0, matched: 0, rating: 0, name: 0 };
+    for (const c of comps) {
+      const st = applyLok(c.teams, lok);
+      for (const k of Object.keys(sum)) sum[k] += st[k];
+    }
+    console.log(
+      `LOK (${lok.size} hráčů): spárováno ${sum.matched} z ${sum.players} hráčů, ` +
+        `aktuální Elo u ${sum.rating}, jméno podle LOK u ${sum.name}`,
+    );
+  } catch (e) {
+    console.error(`! LOK: ${e.message}, ratingy zůstávají ze soupisek`);
   }
 
   const changed = await writeData(DATA_DIR, { season: cfg.season, comps });

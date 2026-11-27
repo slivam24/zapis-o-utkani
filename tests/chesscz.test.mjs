@@ -83,7 +83,7 @@ test('chess.cz: všechny soupisky soutěže (jména s diakritikou, národní Elo
   assert.equal(teams.length, 3);
   assert.equal(teams[0].name, 'TJ Sokol Údlice "B"');
   assert.ok(teams[0].players.length >= 15);
-  assert.deepEqual(teams[0].players[0], { no: 1, name: 'Horák Aleš', types: ['V'], rtg: null, nat: 2098, fide: 2120 });
+  assert.deepEqual(teams[0].players[0], { no: 1, id: 34231, name: 'Horák Aleš', types: ['V'], rtg: null, nat: 2098, fide: 2120 });
   // kapitán je hráč s typem K, typ Z (registrace) se vynechá
   for (const t of teams) {
     const k = t.players.find((p) => p.types.includes('K'));

@@ -104,6 +104,16 @@ tedy dva dotazy na soutěž (`scripts/chesscz.mjs`). Má všechny soutěže svaz
 Elo i Elo FIDE. Chess-results je záloha pro soutěže, které na chess.cz nejsou (přidané hlášením nebo v aplikaci),
 a pro případ, že chess.cz zrovna nejde stáhnout: čte se z jeho exportu do Excelu.
 
+**Aktuální Elo z LOK.** Na soupiskách je Elo z přihlášek na začátku soutěže. Úloha proto při každé aktualizaci
+stáhne listinu LOK z [elo.miramal.com](https://elo.miramal.com/) (`lok_sm_cz.xls`) a hráčům přepíše národní Elo
+a Elo FIDE na aktuální (`scripts/lok.mjs`). Hráči se párují přesně, ne podle jména (v LOK je spousta jmenovců):
+u soupisek z chess.cz podle ID hráče (číslo v odkazu `chess.cz/hrac/<ID>/` je ID v LOK), u soupisek
+z chess-results podle FIDE ID. Když hráč v LOK není nebo tam rating nemá, zůstane Elo ze soupisky.
+Jméno se z LOK vezme, jen když se od soupisky liší diakritikou nebo tvarem („Kriz, Denis“ → „Kříž Denis“).
+Když listina nejde stáhnout, soupisky se uloží s ratingy ze soupisek. Soubor `.xls` (starý formát Excelu)
+čte vlastní čtečka `scripts/xls.mjs`, bez knihoven. Ručně jde listina zadat ze souboru:
+`node scripts/fetch_data.mjs --lok lok_sm_cz.xls`.
+
 ### Přidání všech soutěží kraje nebo celé republiky z chess.cz
 
 **Actions → Přidat soutěže z chess.cz → Run workflow**, vybrat kraj, celostátní soutěže nebo celou republiku
@@ -192,7 +202,7 @@ jde upravit čtení v `scripts/chesscz.mjs` (chess.cz) nebo `js/parse.js` (chess
 
 ```bash
 npm install                 # jen linkedom, pro parsování HTML v Node
-npm test                    # 95 testů: logika zápisu, parser, čtečka .xlsx, přidávání soutěží, archiv, PDF, odkaz s QR
+npm test                    # 102 testů: logika zápisu, parser, čtečky .xlsx a .xls, ratingy z LOK, přidávání soutěží, archiv, PDF, odkaz s QR
 npm run serve               # lokální spuštění: http://localhost:8080
 ```
 
@@ -205,9 +215,10 @@ protože právě parser je na celém řešení to nejkřehčí a dvě verze by s
 
 ## Poznámky
 
-- Jména hráčů jsou tak, jak jsou na chess.cz (u soutěží z chess-results tak, jak jsou tam). V sestavě jdou upravit.
-- **Ratingy:** z chess.cz přichází národní Elo i Elo FIDE, v zápisu jsou kolonky `FIDE` a `Nár.`.
-  Co je na chess-results ve sloupci `Rtg`, závisí na nastavení ve Swiss-Manageru, proto se
+- Jména hráčů jsou tak, jak jsou na chess.cz (u soutěží z chess-results tak, jak jsou tam, případně opravená podle LOK).
+  V sestavě jdou upravit.
+- **Ratingy:** u sdílených soutěží jsou aktuální národní Elo a Elo FIDE z LOK (viz výše), v zápisu jsou kolonky
+  `FIDE` a `Nár.`. U soutěží přidaných jen v aplikaci je Elo ze soupisky. Co je na chess-results ve sloupci `Rtg`, závisí na nastavení ve Swiss-Manageru, proto se
   ukládá zvlášť jako neoznačené Elo. V zápisu se vypisují jen kolonky, které v datech opravdu jsou:
   při jediném načteném Elu je tedy jedna kolonka `Elo` a žádná prázdná navíc. Má-li stránka oddělené
   sloupce `RtgN` a `RtgI`, objeví se kolonky `FIDE` a `Nár.`.

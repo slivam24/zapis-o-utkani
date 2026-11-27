@@ -31,7 +31,7 @@ test('soupisky: družstva a kapitáni', () => {
 test('soupisky: hráči, typy a ratingy', () => {
   const [a, b] = parseRosters(doc('rosters.html'));
   assert.equal(a.players.length, 4);
-  assert.deepEqual(a.players[0], { no: 1, name: 'Kriz, Denis', types: [], rtg: 2003, nat: null, fide: null });
+  assert.deepEqual(a.players[0], { no: 1, fideId: 23767537, name: 'Kriz, Denis', types: [], rtg: 2003, nat: null, fide: null });
   assert.deepEqual(a.players[1].types, ['K']);
   assert.deepEqual(a.players[2].types, ['H']);
   assert.equal(a.players[2].rtg, null, 'rating 0 znamená bez ratingu');

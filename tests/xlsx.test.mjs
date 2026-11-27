@@ -171,7 +171,7 @@ test('export soupisek: družstva, kapitáni, typy a ratingy', async () => {
   const teams = parseRostersFromGrid(grid);
   assert.deepEqual(teams.map((t) => t.name), ['Duras Ústí nad Labem "B"', 'SK Děčín "B"']);
   assert.equal(teams[0].captain, 'Pavel Chrz');
-  assert.deepEqual(teams[0].players[0], { no: 1, name: 'Kriz, Denis', types: [], rtg: 2003, nat: null, fide: null });
+  assert.deepEqual(teams[0].players[0], { no: 1, fideId: 23767537, name: 'Kriz, Denis', types: [], rtg: 2003, nat: null, fide: null });
   assert.deepEqual(teams[0].players[1].types, ['K']);
   assert.deepEqual(teams[0].players[2].types, ['H']);
   assert.deepEqual(teams[1].players[0].types, ['V']);
