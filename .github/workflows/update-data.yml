@@ -27,6 +27,15 @@ jobs:
           node-version: "22"
           cache: npm
       - run: npm ci
+      # Nové soutěže, které svaz zveřejnil až během sezóny (třeba Praha, která hraje v kalendářním roce).
+      # Soutěže, které v aplikaci už jsou, nechá být; do souhrnu se vypíšou jen ty nové a problémy.
+      - name: Přidat nové soutěže z chess.cz
+        run: |
+          {
+            echo "## Nové soutěže z chess.cz"
+            node scripts/import_chesscz.mjs --kraj vse | grep -v "už v aplikaci" || echo "Žádné nové."
+          } >> "$GITHUB_STEP_SUMMARY"
+        continue-on-error: true
       - name: Doplnit počet šachovnic, kde byl jen odhad
         run: node scripts/import_chesscz.mjs --recheck >> "$GITHUB_STEP_SUMMARY"
         continue-on-error: true
@@ -46,7 +55,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "Beze změn."
           else
-            git commit -m "Aktualizace soupisek z chess-results"
+            git commit -m "Aktualizace soupisek z chess.cz a chess-results"
             git pull --rebase --autostash
             git push
           fi

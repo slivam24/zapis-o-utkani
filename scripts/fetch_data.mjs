@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Stáhne soupisky a rozlosování z chess.cz (záložně z chess-results.com) do data/ (seznam data/index.json
+// Stáhne soupisky a rozlosování z chess.cz (záloha chess-results.com) do data/ (seznam data/index.json
 // a soubor pro každou soutěž data/comp/<id>.json, viz scripts/data_store.mjs). Hráčům doplní aktuální
 // národní Elo a FIDE z listiny LOK (scripts/lok.mjs).
 // Spouští se úlohou Aktualizace soupisek na GitHubu, ručně:

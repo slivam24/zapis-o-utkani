@@ -101,7 +101,7 @@ export async function writeData(dir, { season, comps }, { now = new Date() } = {
   const same = oldIndex && JSON.stringify({ s: oldIndex.season, c: oldIndex.competitions }) === JSON.stringify({ s: season, c: list });
   if (!same || changed.length) {
     const generated = changed.length || !same ? now.toISOString().replace(/\.\d{3}Z$/, 'Z') : oldIndex.generated;
-    await fs.writeFile(path.join(dir, INDEX), json({ generated, source: 'chess-results.com', season, competitions: list }), 'utf8');
+    await fs.writeFile(path.join(dir, INDEX), json({ generated, source: 'chess.cz, chess-results.com', season, competitions: list }), 'utf8');
     changed.push(INDEX);
   }
   return changed;
