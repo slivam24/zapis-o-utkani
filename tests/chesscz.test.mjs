@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { toDoc, parseRegionPage, parseLeagues, parseDetail, parseBoards, detectBoards, boardsUrl, parseAllRosters, parseSchedule, fetchCompetition, rostersUrl, scheduleUrl } from '../scripts/chesscz.mjs';
+import { toDoc, parseRegionPage, parseLeagues, parseDetail, parseBoards, detectBoards, boardsUrl, parseAllRosters, parseSchedule, fetchCompetition, fetchHtml, rostersUrl, scheduleUrl } from '../scripts/chesscz.mjs';
 import { parseKraj, seasonYear, makeEntry, otherSeason } from '../scripts/import_chesscz.mjs';
 import { readData, writeData, indexEntry } from '../scripts/data_store.mjs';
 
@@ -105,6 +105,42 @@ test('chess.cz: celá soutěž dvěma dotazy', async () => {
   assert.equal(urls.length, 2);
   assert.equal(c.teams.length, 3);
   assert.equal(c.rounds.length, 2);
+});
+
+test('chess.cz: soutěž bez zadaných kol (rozpis vrací 404) si nechá soupisky', async () => {
+  const notFound = (u) => Object.assign(new Error(`${u}: HTTP 404`), { status: 404 });
+  const get = async (u) => {
+    if (u === scheduleUrl(3394)) throw notFound(u);
+    return fixture('soupisky.html');
+  };
+  const c = await fetchCompetition(3394, { get });
+  assert.equal(c.teams.length, 3);
+  assert.deepEqual(c.rounds, []);
+  assert.equal(c.noSchedule, true);
+
+  // jiná chyba než 404 (výpadek, 500) zůstává chybou
+  const down = async (u) => {
+    if (u === scheduleUrl(3394)) throw Object.assign(new Error('HTTP 500'), { status: 500 });
+    return fixture('soupisky.html');
+  };
+  await assert.rejects(fetchCompetition(3394, { get: down }), /HTTP 500/);
+});
+
+test('chess.cz: stránka 404 se nezkouší znovu, jiná chyba ano', async () => {
+  const real = globalThis.fetch;
+  let calls = 0;
+  try {
+    globalThis.fetch = async () => (calls++, new Response('nenalezeno', { status: 404 }));
+    await assert.rejects(fetchHtml('https://www.chess.cz/soutez/rozpis/3394/', { pause: 0 }), (e) => e.status === 404 && /HTTP 404/.test(e.message));
+    assert.equal(calls, 1);
+
+    calls = 0;
+    globalThis.fetch = async () => (calls++, calls < 2 ? new Response('chyba', { status: 503 }) : new Response('<p>ok</p>'));
+    assert.equal(await fetchHtml('https://www.chess.cz/x/', { pause: 0, retries: 2 }), '<p>ok</p>');
+    assert.equal(calls, 2);
+  } finally {
+    globalThis.fetch = real;
+  }
 });
 
 test('import: soutěž jen na chess.cz dostane id podle chess.cz', () => {

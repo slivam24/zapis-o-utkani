@@ -75,6 +75,7 @@ async function main() {
     let teams = [];
     let rounds = [];
     const sources = [];
+    let noSchedule = false; // chess.cz odpověděl, jen soutěž ještě nemá rozpis (404)
     const raw = saveHtml ? path.resolve(saveHtml) : null;
     // Přednost má chess.cz (soupisky svazu: jména s diakritikou, národní Elo i FIDE, všechny soutěže).
     // chess-results je záloha pro soutěže, které na chess.cz nejsou, nebo když chess.cz nevyjde.
@@ -89,7 +90,9 @@ async function main() {
         });
         teams = got.teams.filter((t) => t.players.length);
         rounds = got.rounds;
+        noSchedule = Boolean(got.noSchedule);
         if (teams.length >= 2) sources.push('chess.cz');
+        if (noSchedule) console.log(`  rozpis na chess.cz zatím není (soutěž nemá zadaná kola)${teams.length ? '' : ', ani družstva'}`);
       } catch (e) {
         console.error(`  ! chess.cz: ${e.message}`);
       }
@@ -133,7 +136,9 @@ async function main() {
     if (sources.length) console.log(`  zdroj: ${sources.join(', ')}`);
 
     if (teams.length < 2) {
-      console.error('  ! soupisky nenalezeny, ponechávám předchozí data');
+      // soutěž, která na chess.cz zatím nemá družstva ani kola, není chyba
+      if (noSchedule && !teams.length) console.log('  ponechávám předchozí data');
+      else console.error('  ! soupisky nenalezeny, ponechávám předchozí data');
       teams = old.teams ?? [];
       rounds = old.rounds ?? [];
     } else {
@@ -141,7 +146,7 @@ async function main() {
       const short = teams.filter((t) => t.players.length < c.boards).map((t) => t.name);
       if (short.length) console.error(`  ! méně hráčů než šachovnic: ${short.join(', ')}`);
       if (!rounds.length) {
-        console.error('  ! rozlosování nenalezeno, ponechávám předchozí');
+        if (!noSchedule) console.error('  ! rozlosování nenalezeno, ponechávám předchozí');
         rounds = old.rounds ?? [];
       }
     }
