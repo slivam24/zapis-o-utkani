@@ -11,82 +11,6 @@
  "url": "https://www.chess.cz/soutez/3404/",
  "teams": [
   {
-   "name": "TJ Bystřice",
-   "captain": "",
-   "players": [
-    {
-     "no": 1,
-     "name": "Rusz Jan",
-     "types": [],
-     "rtg": null,
-     "nat": 1692,
-     "fide": 1788
-    },
-    {
-     "no": 2,
-     "name": "Heczko Rostislav",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 1857,
-     "fide": 1938
-    },
-    {
-     "no": 3,
-     "name": "Kwasek Andrzej",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 1776,
-     "fide": 1863
-    },
-    {
-     "no": 4,
-     "name": "Kukuczka Milan",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 1777,
-     "fide": 1869
-    },
-    {
-     "no": 5,
-     "name": "Kotas Jan",
-     "types": [],
-     "rtg": null,
-     "nat": 1719,
-     "fide": 1830
-    },
-    {
-     "no": 6,
-     "name": "Hudziec Bronislav",
-     "types": [],
-     "rtg": null,
-     "nat": 1731,
-     "fide": 1820
-    },
-    {
-     "no": 7,
-     "name": "Filipczyk Jan",
-     "types": [],
-     "rtg": null,
-     "nat": 1367,
-     "fide": 1592
-    },
-    {
-     "no": 8,
-     "name": "Kluz Michal",
-     "types": [],
-     "rtg": null,
-     "nat": 1556,
-     "fide": 1700
-    }
-   ]
-  },
-  {
    "name": "TJ Sokol Dobrá C",
    "captain": "",
    "players": [
@@ -191,6 +115,126 @@
      "rtg": null,
      "nat": 1095,
      "fide": null
+    }
+   ]
+  },
+  {
+   "name": "TJ Sokol Dobrá D",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Tauš Martin",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 2014,
+     "fide": 2044
+    },
+    {
+     "no": 2,
+     "name": "Botur Miroslav",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1820,
+     "fide": 1871
+    },
+    {
+     "no": 3,
+     "name": "Kroček Ivan",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1704,
+     "fide": 1768
+    },
+    {
+     "no": 4,
+     "name": "Tauš Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1520,
+     "fide": 1792
+    },
+    {
+     "no": 5,
+     "name": "Vaněk Michal",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1580,
+     "fide": 1774
+    },
+    {
+     "no": 6,
+     "name": "Bok Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1564,
+     "fide": 1694
+    },
+    {
+     "no": 7,
+     "name": "Oceanský Jasen",
+     "types": [],
+     "rtg": null,
+     "nat": 1384,
+     "fide": 1647
+    },
+    {
+     "no": 8,
+     "name": "Soural Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1577,
+     "fide": 1701
+    },
+    {
+     "no": 9,
+     "name": "Carbol Otmar",
+     "types": [],
+     "rtg": null,
+     "nat": 1591,
+     "fide": 1742
+    },
+    {
+     "no": 10,
+     "name": "Vaňková Ema",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1217,
+     "fide": 1469
+    },
+    {
+     "no": 11,
+     "name": "Šalamoun Adam",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Topinka Leoš",
+     "types": [],
+     "rtg": null,
+     "nat": 1357,
+     "fide": 1512
+    },
+    {
+     "no": 13,
+     "name": "Bebek Ivan",
+     "types": [],
+     "rtg": null,
+     "nat": 1135,
+     "fide": 1411
     }
    ]
   },
@@ -317,126 +361,6 @@
    ]
   },
   {
-   "name": "TJ Sokol Dobrá D",
-   "captain": "",
-   "players": [
-    {
-     "no": 1,
-     "name": "Tauš Martin",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": 2014,
-     "fide": 2044
-    },
-    {
-     "no": 2,
-     "name": "Botur Miroslav",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 1820,
-     "fide": 1871
-    },
-    {
-     "no": 3,
-     "name": "Kroček Ivan",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 1704,
-     "fide": 1768
-    },
-    {
-     "no": 4,
-     "name": "Tauš Zdeněk",
-     "types": [],
-     "rtg": null,
-     "nat": 1520,
-     "fide": 1792
-    },
-    {
-     "no": 5,
-     "name": "Vaněk Michal",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": 1580,
-     "fide": 1774
-    },
-    {
-     "no": 6,
-     "name": "Bok Zdeněk",
-     "types": [],
-     "rtg": null,
-     "nat": 1564,
-     "fide": 1694
-    },
-    {
-     "no": 7,
-     "name": "Oceanský Jasen",
-     "types": [],
-     "rtg": null,
-     "nat": 1384,
-     "fide": 1647
-    },
-    {
-     "no": 8,
-     "name": "Soural Jiří",
-     "types": [],
-     "rtg": null,
-     "nat": 1577,
-     "fide": 1701
-    },
-    {
-     "no": 9,
-     "name": "Carbol Otmar",
-     "types": [],
-     "rtg": null,
-     "nat": 1591,
-     "fide": 1742
-    },
-    {
-     "no": 10,
-     "name": "Vaňková Ema",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": 1217,
-     "fide": 1469
-    },
-    {
-     "no": 11,
-     "name": "Šalamoun Adam",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 12,
-     "name": "Topinka Leoš",
-     "types": [],
-     "rtg": null,
-     "nat": 1357,
-     "fide": 1512
-    },
-    {
-     "no": 13,
-     "name": "Bebek Ivan",
-     "types": [],
-     "rtg": null,
-     "nat": 1135,
-     "fide": 1411
-    }
-   ]
-  },
-  {
    "name": "TJ Sokol Lhotka",
    "captain": "",
    "players": [
@@ -517,6 +441,82 @@
      "rtg": null,
      "nat": 1634,
      "fide": null
+    }
+   ]
+  },
+  {
+   "name": "TJ Bystřice",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Rusz Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1692,
+     "fide": 1788
+    },
+    {
+     "no": 2,
+     "name": "Heczko Rostislav",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1857,
+     "fide": 1938
+    },
+    {
+     "no": 3,
+     "name": "Kwasek Andrzej",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1776,
+     "fide": 1863
+    },
+    {
+     "no": 4,
+     "name": "Kukuczka Milan",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1777,
+     "fide": 1869
+    },
+    {
+     "no": 5,
+     "name": "Kotas Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1719,
+     "fide": 1830
+    },
+    {
+     "no": 6,
+     "name": "Hudziec Bronislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1731,
+     "fide": 1820
+    },
+    {
+     "no": 7,
+     "name": "Filipczyk Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1367,
+     "fide": 1592
+    },
+    {
+     "no": 8,
+     "name": "Kluz Michal",
+     "types": [],
+     "rtg": null,
+     "nat": 1556,
+     "fide": 1700
     }
    ]
   },
@@ -819,6 +819,170 @@
    ]
   },
   {
+   "name": "TJ Sokol Metylovice",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Vysoglad Petr",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1841,
+     "fide": 1926
+    },
+    {
+     "no": 2,
+     "name": "Daniš Lumír",
+     "types": [],
+     "rtg": null,
+     "nat": 1648,
+     "fide": 1768
+    },
+    {
+     "no": 3,
+     "name": "Žwak Stanislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1593,
+     "fide": 1745
+    },
+    {
+     "no": 4,
+     "name": "Babušek Libor",
+     "types": [],
+     "rtg": null,
+     "nat": 1381,
+     "fide": 1644
+    },
+    {
+     "no": 5,
+     "name": "Lavrišin Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1391,
+     "fide": 1547
+    },
+    {
+     "no": 6,
+     "name": "Javorek Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1116,
+     "fide": 1506
+    },
+    {
+     "no": 7,
+     "name": "Babinec Rostislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1397,
+     "fide": 1579
+    },
+    {
+     "no": 8,
+     "name": "Šálek Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1254,
+     "fide": 1419
+    },
+    {
+     "no": 9,
+     "name": "Stuchlý Jiří",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1233,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Pokorný Martin",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Hajdušek Milan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Sokol Brušperk B",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Lipovský Tomáš",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1767,
+     "fide": 1847
+    },
+    {
+     "no": 2,
+     "name": "Langer Adam",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1575,
+     "fide": 1722
+    },
+    {
+     "no": 3,
+     "name": "Dětský Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": 1375,
+     "fide": 1604
+    },
+    {
+     "no": 4,
+     "name": "Mahďák Daniel",
+     "types": [],
+     "rtg": null,
+     "nat": 1100,
+     "fide": 1530
+    },
+    {
+     "no": 5,
+     "name": "Blecha Josef",
+     "types": [],
+     "rtg": null,
+     "nat": 1731,
+     "fide": 1825
+    },
+    {
+     "no": 6,
+     "name": "Hora Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1363,
+     "fide": 1710
+    },
+    {
+     "no": 7,
+     "name": "Slovák Svatopluk",
+     "types": [],
+     "rtg": null,
+     "nat": 1763,
+     "fide": null
+    }
+   ]
+  },
+  {
    "name": "TJ Dobratice",
    "captain": "",
    "players": [
@@ -926,162 +1090,6 @@
      "types": [],
      "rtg": null,
      "nat": null,
-     "fide": null
-    }
-   ]
-  },
-  {
-   "name": "TJ Sokol Metylovice",
-   "captain": "",
-   "players": [
-    {
-     "no": 1,
-     "name": "Vysoglad Petr",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": 1841,
-     "fide": 1926
-    },
-    {
-     "no": 2,
-     "name": "Daniš Lumír",
-     "types": [],
-     "rtg": null,
-     "nat": 1648,
-     "fide": 1768
-    },
-    {
-     "no": 3,
-     "name": "Žwak Stanislav",
-     "types": [],
-     "rtg": null,
-     "nat": 1593,
-     "fide": 1745
-    },
-    {
-     "no": 4,
-     "name": "Babušek Libor",
-     "types": [],
-     "rtg": null,
-     "nat": 1381,
-     "fide": 1644
-    },
-    {
-     "no": 5,
-     "name": "Lavrišin Jan",
-     "types": [],
-     "rtg": null,
-     "nat": 1391,
-     "fide": 1547
-    },
-    {
-     "no": 6,
-     "name": "Javorek Petr",
-     "types": [],
-     "rtg": null,
-     "nat": 1116,
-     "fide": 1506
-    },
-    {
-     "no": 7,
-     "name": "Babinec Rostislav",
-     "types": [],
-     "rtg": null,
-     "nat": 1397,
-     "fide": 1579
-    },
-    {
-     "no": 8,
-     "name": "Šálek Miroslav",
-     "types": [],
-     "rtg": null,
-     "nat": 1254,
-     "fide": 1419
-    },
-    {
-     "no": 9,
-     "name": "Stuchlý Jiří",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": 1233,
-     "fide": null
-    },
-    {
-     "no": 10,
-     "name": "Hajdušek Milan",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    }
-   ]
-  },
-  {
-   "name": "Sokol Brušperk B",
-   "captain": "",
-   "players": [
-    {
-     "no": 1,
-     "name": "Lipovský Tomáš",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 1767,
-     "fide": 1847
-    },
-    {
-     "no": 2,
-     "name": "Langer Adam",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 1575,
-     "fide": 1722
-    },
-    {
-     "no": 3,
-     "name": "Dětský Jakub",
-     "types": [],
-     "rtg": null,
-     "nat": 1375,
-     "fide": 1604
-    },
-    {
-     "no": 4,
-     "name": "Mahďák Daniel",
-     "types": [],
-     "rtg": null,
-     "nat": 1100,
-     "fide": 1530
-    },
-    {
-     "no": 5,
-     "name": "Blecha Josef",
-     "types": [],
-     "rtg": null,
-     "nat": 1731,
-     "fide": 1825
-    },
-    {
-     "no": 6,
-     "name": "Hora Jan",
-     "types": [],
-     "rtg": null,
-     "nat": 1363,
-     "fide": 1710
-    },
-    {
-     "no": 7,
-     "name": "Slovák Svatopluk",
-     "types": [],
-     "rtg": null,
-     "nat": 1763,
      "fide": null
     }
    ]

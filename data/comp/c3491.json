@@ -150,6 +150,170 @@
    ]
   },
   {
+   "name": "ŠK ZŠ Hrabišín B",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Glanc Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1748,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Jírů Ondřej",
+     "types": [],
+     "rtg": null,
+     "nat": 1323,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Frank Radim",
+     "types": [],
+     "rtg": null,
+     "nat": 1408,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Kamler Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1759,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Macek Radek",
+     "types": [],
+     "rtg": null,
+     "nat": 1034,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Janíček Šimon",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Kašpar Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Berlinský Vít",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Šindler Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Loštice B",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Ramian Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1528,
+     "fide": 1706
+    },
+    {
+     "no": 2,
+     "name": "Hlaváč Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1359,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Novák František",
+     "types": [],
+     "rtg": null,
+     "nat": 1343,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Zatloukal Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1260,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Oliverius Roman",
+     "types": [],
+     "rtg": null,
+     "nat": 1761,
+     "fide": 1911
+    },
+    {
+     "no": 6,
+     "name": "Vařeka Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1506,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Šulák Radek",
+     "types": [],
+     "rtg": null,
+     "nat": 1457,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Zapletal Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1433,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Nátesta Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Kofránek David",
+     "types": [],
+     "rtg": null,
+     "nat": 1595,
+     "fide": 1791
+    }
+   ]
+  },
+  {
    "name": "ŠK 1921 Zábřeh C",
    "captain": "",
    "players": [
@@ -333,170 +497,6 @@
      "types": [],
      "rtg": null,
      "nat": 1389,
-     "fide": null
-    }
-   ]
-  },
-  {
-   "name": "ŠK Loštice B",
-   "captain": "",
-   "players": [
-    {
-     "no": 1,
-     "name": "Ramian Zdeněk",
-     "types": [],
-     "rtg": null,
-     "nat": 1528,
-     "fide": 1706
-    },
-    {
-     "no": 2,
-     "name": "Hlaváč Zdeněk",
-     "types": [],
-     "rtg": null,
-     "nat": 1359,
-     "fide": null
-    },
-    {
-     "no": 3,
-     "name": "Novák František",
-     "types": [],
-     "rtg": null,
-     "nat": 1343,
-     "fide": null
-    },
-    {
-     "no": 4,
-     "name": "Zatloukal Tomáš",
-     "types": [],
-     "rtg": null,
-     "nat": 1260,
-     "fide": null
-    },
-    {
-     "no": 5,
-     "name": "Oliverius Roman",
-     "types": [],
-     "rtg": null,
-     "nat": 1761,
-     "fide": 1911
-    },
-    {
-     "no": 6,
-     "name": "Vařeka Jiří",
-     "types": [],
-     "rtg": null,
-     "nat": 1506,
-     "fide": null
-    },
-    {
-     "no": 7,
-     "name": "Šulák Radek",
-     "types": [],
-     "rtg": null,
-     "nat": 1457,
-     "fide": null
-    },
-    {
-     "no": 8,
-     "name": "Zapletal Miroslav",
-     "types": [],
-     "rtg": null,
-     "nat": 1433,
-     "fide": null
-    },
-    {
-     "no": 9,
-     "name": "Nátesta Jiří",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 10,
-     "name": "Kofránek David",
-     "types": [],
-     "rtg": null,
-     "nat": 1595,
-     "fide": 1791
-    }
-   ]
-  },
-  {
-   "name": "ŠK ZŠ Hrabišín B",
-   "captain": "",
-   "players": [
-    {
-     "no": 1,
-     "name": "Glanc Miroslav",
-     "types": [],
-     "rtg": null,
-     "nat": 1748,
-     "fide": null
-    },
-    {
-     "no": 2,
-     "name": "Jírů Ondřej",
-     "types": [],
-     "rtg": null,
-     "nat": 1323,
-     "fide": null
-    },
-    {
-     "no": 3,
-     "name": "Frank Radim",
-     "types": [],
-     "rtg": null,
-     "nat": 1408,
-     "fide": null
-    },
-    {
-     "no": 4,
-     "name": "Kamler Zdeněk",
-     "types": [],
-     "rtg": null,
-     "nat": 1759,
-     "fide": null
-    },
-    {
-     "no": 5,
-     "name": "Macek Radek",
-     "types": [],
-     "rtg": null,
-     "nat": 1034,
-     "fide": null
-    },
-    {
-     "no": 6,
-     "name": "Janíček Šimon",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 7,
-     "name": "Kašpar Jiří",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 8,
-     "name": "Berlinský Vít",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 9,
-     "name": "Šindler Tomáš",
-     "types": [],
-     "rtg": null,
-     "nat": null,
      "fide": null
     }
    ]

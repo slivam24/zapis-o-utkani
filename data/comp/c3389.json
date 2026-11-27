@@ -10,6 +10,146 @@
  "url": "https://www.chess.cz/soutez/3389/",
  "teams": [
   {
+   "name": "ŠK Sokol Tišnov \"D\"",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Šilha Josef",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1543,
+     "fide": 1793
+    },
+    {
+     "no": 2,
+     "name": "Bartek Tomáš",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1488,
+     "fide": 1653
+    },
+    {
+     "no": 3,
+     "name": "Bytešník Aleš",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1547,
+     "fide": 1751
+    },
+    {
+     "no": 4,
+     "name": "Vyskočil Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1296,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Fiala Alexandr",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Janák Václav",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Janda Vojtěch",
+     "types": [],
+     "rtg": null,
+     "nat": 1003,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Šudák Vít",
+     "types": [],
+     "rtg": null,
+     "nat": 1435,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Hošek Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1418,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Jilg Ladislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1246,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Endlicher Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1724,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Hamřík Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1632,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Vávra Šimon",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Apeltauer Jáchym",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 15,
+     "name": "Frei Lukáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 16,
+     "name": "Frei Ema",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
    "name": "ŠK Střelice \"B\"",
    "captain": "",
    "players": [
@@ -124,152 +264,6 @@
     {
      "no": 13,
      "name": "Sabol Jan",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    }
-   ]
-  },
-  {
-   "name": "ŠK Sokol Tišnov \"D\"",
-   "captain": "",
-   "players": [
-    {
-     "no": 1,
-     "name": "Šilha Josef",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 1543,
-     "fide": 1793
-    },
-    {
-     "no": 2,
-     "name": "Bartek Tomáš",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 1488,
-     "fide": 1653
-    },
-    {
-     "no": 3,
-     "name": "Bytešník Aleš",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 1547,
-     "fide": 1751
-    },
-    {
-     "no": 4,
-     "name": "Vyskočil Jiří",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 1296,
-     "fide": null
-    },
-    {
-     "no": 5,
-     "name": "Fiala Alexandr",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 6,
-     "name": "Janák Václav",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 7,
-     "name": "Janda Vojtěch",
-     "types": [],
-     "rtg": null,
-     "nat": 1003,
-     "fide": null
-    },
-    {
-     "no": 8,
-     "name": "Šudák Vít",
-     "types": [],
-     "rtg": null,
-     "nat": 1435,
-     "fide": null
-    },
-    {
-     "no": 9,
-     "name": "Hošek Zdeněk",
-     "types": [],
-     "rtg": null,
-     "nat": 1418,
-     "fide": null
-    },
-    {
-     "no": 10,
-     "name": "Jilg Ladislav",
-     "types": [],
-     "rtg": null,
-     "nat": 1246,
-     "fide": null
-    },
-    {
-     "no": 11,
-     "name": "Endlicher Jiří",
-     "types": [],
-     "rtg": null,
-     "nat": 1724,
-     "fide": null
-    },
-    {
-     "no": 12,
-     "name": "Hamřík Miroslav",
-     "types": [],
-     "rtg": null,
-     "nat": 1632,
-     "fide": null
-    },
-    {
-     "no": 13,
-     "name": "Vávra Šimon",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 14,
-     "name": "Apeltauer Jáchym",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 15,
-     "name": "Frei Lukáš",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 16,
-     "name": "Frei Ema",
      "types": [],
      "rtg": null,
      "nat": null,
@@ -676,88 +670,6 @@
    ]
   },
   {
-   "name": "ŠK Lokomotiva Brno \"E\"",
-   "captain": "",
-   "players": [
-    {
-     "no": 1,
-     "name": "Hurta Miroslav",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 1749,
-     "fide": 1765
-    },
-    {
-     "no": 2,
-     "name": "Hlinka Vít",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 1326,
-     "fide": 1581
-    },
-    {
-     "no": 3,
-     "name": "Česlíková Markéta",
-     "types": [],
-     "rtg": null,
-     "nat": 1361,
-     "fide": 1482
-    },
-    {
-     "no": 4,
-     "name": "Hofírek Jiří",
-     "types": [],
-     "rtg": null,
-     "nat": 1220,
-     "fide": null
-    },
-    {
-     "no": 5,
-     "name": "Stoklasa Jakub",
-     "types": [],
-     "rtg": null,
-     "nat": 1197,
-     "fide": 1596
-    },
-    {
-     "no": 6,
-     "name": "Procházka Martin",
-     "types": [],
-     "rtg": null,
-     "nat": 1130,
-     "fide": null
-    },
-    {
-     "no": 7,
-     "name": "Toman Matěj",
-     "types": [],
-     "rtg": null,
-     "nat": 1006,
-     "fide": null
-    },
-    {
-     "no": 8,
-     "name": "Medveď Albert",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 9,
-     "name": "Sedlák Antonín",
-     "types": [],
-     "rtg": null,
-     "nat": 1053,
-     "fide": null
-    }
-   ]
-  },
-  {
    "name": "TJ Slovan Ivančice \"B\"",
    "captain": "",
    "players": [
@@ -847,6 +759,88 @@
      "types": [],
      "rtg": null,
      "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠK Lokomotiva Brno \"E\"",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Hurta Miroslav",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1749,
+     "fide": 1765
+    },
+    {
+     "no": 2,
+     "name": "Hlinka Vít",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1326,
+     "fide": 1581
+    },
+    {
+     "no": 3,
+     "name": "Česlíková Markéta",
+     "types": [],
+     "rtg": null,
+     "nat": 1361,
+     "fide": 1482
+    },
+    {
+     "no": 4,
+     "name": "Hofírek Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1220,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Stoklasa Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": 1197,
+     "fide": 1596
+    },
+    {
+     "no": 6,
+     "name": "Procházka Martin",
+     "types": [],
+     "rtg": null,
+     "nat": 1130,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Toman Matěj",
+     "types": [],
+     "rtg": null,
+     "nat": 1006,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Medveď Albert",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Sedlák Antonín",
+     "types": [],
+     "rtg": null,
+     "nat": 1053,
      "fide": null
     }
    ]

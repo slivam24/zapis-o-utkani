@@ -131,6 +131,14 @@
      "rtg": null,
      "nat": null,
      "fide": null
+    },
+    {
+     "no": 15,
+     "name": "Peňáz Vladimír",
+     "types": [],
+     "rtg": null,
+     "nat": 1246,
+     "fide": 1469
     }
    ]
   },
@@ -193,56 +201,274 @@
    ]
   },
   {
-   "name": "TJ Sokol Krouna",
-   "captain": "Jirmásek Vladimír",
+   "name": "ŠO Hlinsko C",
+   "captain": "Indrová Jana",
    "players": [
     {
      "no": 1,
-     "name": "Netolický Josef",
+     "name": "Dvořák Slavomil",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1870,
+     "fide": 1923
+    },
+    {
+     "no": 2,
+     "name": "Ročňák Michal",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1504,
+     "fide": 1707
+    },
+    {
+     "no": 3,
+     "name": "Kotek Samuel",
+     "types": [],
+     "rtg": null,
+     "nat": 1222,
+     "fide": 1730
+    },
+    {
+     "no": 4,
+     "name": "Machovec Vojtěch",
+     "types": [],
+     "rtg": null,
+     "nat": 1373,
+     "fide": 1573
+    },
+    {
+     "no": 5,
+     "name": "Dospěl Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1275,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Žák Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": 1216,
+     "fide": 1610
+    },
+    {
+     "no": 7,
+     "name": "Ročňák Zdeněk",
      "types": [
       "ZK"
      ],
      "rtg": null,
-     "nat": 1436,
-     "fide": 1609
+     "nat": 1431,
+     "fide": 1647
     },
     {
-     "no": 2,
-     "name": "Holík Pavel",
+     "no": 8,
+     "name": "Klepek Jindřich",
      "types": [],
      "rtg": null,
-     "nat": 1393,
-     "fide": 1614
+     "nat": 1036,
+     "fide": null
     },
     {
-     "no": 3,
-     "name": "Jirmásek Vladimír",
+     "no": 9,
+     "name": "Lédl Adam",
+     "types": [],
+     "rtg": null,
+     "nat": 1139,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Indrová Jana",
      "types": [
       "K"
      ],
      "rtg": null,
-     "nat": 1466,
-     "fide": 1685
+     "nat": 1556,
+     "fide": 1709
+    },
+    {
+     "no": 11,
+     "name": "Vosmíková Barbora",
+     "types": [],
+     "rtg": null,
+     "nat": 1000,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Tomášek Milan",
+     "types": [],
+     "rtg": null,
+     "nat": 1000,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Adámek Vít",
+     "types": [],
+     "rtg": null,
+     "nat": 1099,
+     "fide": 1406
+    },
+    {
+     "no": 14,
+     "name": "Vašková Marie",
+     "types": [],
+     "rtg": null,
+     "nat": 1455,
+     "fide": 1672
+    },
+    {
+     "no": 15,
+     "name": "Luňáčková Tereza",
+     "types": [],
+     "rtg": null,
+     "nat": 1014,
+     "fide": null
+    },
+    {
+     "no": 16,
+     "name": "Jirmásek Antonín",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 17,
+     "name": "Novotná Rozálie",
+     "types": [],
+     "rtg": null,
+     "nat": 1001,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "ŠO Miřetice",
+   "captain": "Janoušek Ladislav",
+   "players": [
+    {
+     "no": 1,
+     "name": "Janoušek Petr",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1691,
+     "fide": 1823
+    },
+    {
+     "no": 2,
+     "name": "Bartoš Martin",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1637,
+     "fide": 1768
+    },
+    {
+     "no": 3,
+     "name": "Havran Bohuslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1407,
+     "fide": 1578
     },
     {
      "no": 4,
-     "name": "Profousová Věra",
+     "name": "Kůsová Jana",
      "types": [],
      "rtg": null,
-     "nat": 1524,
-     "fide": 1665
+     "nat": 1464,
+     "fide": null
     },
     {
      "no": 5,
-     "name": "Dědič Tomáš",
-     "types": [],
+     "name": "Janoušek Ladislav",
+     "types": [
+      "K"
+     ],
      "rtg": null,
-     "nat": 1145,
-     "fide": 1423
+     "nat": 1377,
+     "fide": 1546
     },
     {
      "no": 6,
-     "name": "Novotný Milan",
+     "name": "Samková Pavla",
+     "types": [],
+     "rtg": null,
+     "nat": 1321,
+     "fide": 1556
+    },
+    {
+     "no": 7,
+     "name": "Kůs Miroslav",
+     "types": [
+      "ZK"
+     ],
+     "rtg": null,
+     "nat": 1309,
+     "fide": 1532
+    },
+    {
+     "no": 8,
+     "name": "Šebek Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1325,
+     "fide": 1508
+    },
+    {
+     "no": 9,
+     "name": "Janoušek Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1171,
+     "fide": 1451
+    },
+    {
+     "no": 10,
+     "name": "Bureš Michal",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Vrběcký Daniel",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Hromek Karel",
+     "types": [],
+     "rtg": null,
+     "nat": 1411,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Kubelka Libor",
+     "types": [],
+     "rtg": null,
+     "nat": 1427,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Klein Štěpán",
      "types": [],
      "rtg": null,
      "nat": null,
@@ -448,277 +674,59 @@
    ]
   },
   {
-   "name": "ŠO Miřetice",
-   "captain": "Janoušek Ladislav",
+   "name": "TJ Sokol Krouna",
+   "captain": "Jirmásek Vladimír",
    "players": [
     {
      "no": 1,
-     "name": "Janoušek Petr",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": 1691,
-     "fide": 1823
-    },
-    {
-     "no": 2,
-     "name": "Bartoš Martin",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": 1637,
-     "fide": 1768
-    },
-    {
-     "no": 3,
-     "name": "Havran Bohuslav",
-     "types": [],
-     "rtg": null,
-     "nat": 1407,
-     "fide": 1578
-    },
-    {
-     "no": 4,
-     "name": "Kůsová Jana",
-     "types": [],
-     "rtg": null,
-     "nat": 1464,
-     "fide": null
-    },
-    {
-     "no": 5,
-     "name": "Janoušek Ladislav",
-     "types": [
-      "K"
-     ],
-     "rtg": null,
-     "nat": 1377,
-     "fide": 1546
-    },
-    {
-     "no": 6,
-     "name": "Samková Pavla",
-     "types": [],
-     "rtg": null,
-     "nat": 1321,
-     "fide": 1556
-    },
-    {
-     "no": 7,
-     "name": "Kůs Miroslav",
+     "name": "Netolický Josef",
      "types": [
       "ZK"
      ],
      "rtg": null,
-     "nat": 1309,
-     "fide": 1532
-    },
-    {
-     "no": 8,
-     "name": "Šebek Miroslav",
-     "types": [],
-     "rtg": null,
-     "nat": 1325,
-     "fide": 1508
-    },
-    {
-     "no": 9,
-     "name": "Janoušek Jiří",
-     "types": [],
-     "rtg": null,
-     "nat": 1171,
-     "fide": 1451
-    },
-    {
-     "no": 10,
-     "name": "Bureš Michal",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 11,
-     "name": "Vrběcký Daniel",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 12,
-     "name": "Hromek Karel",
-     "types": [],
-     "rtg": null,
-     "nat": 1411,
-     "fide": null
-    },
-    {
-     "no": 13,
-     "name": "Kubelka Libor",
-     "types": [],
-     "rtg": null,
-     "nat": 1427,
-     "fide": null
-    },
-    {
-     "no": 14,
-     "name": "Klein Štěpán",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    }
-   ]
-  },
-  {
-   "name": "ŠO Hlinsko C",
-   "captain": "Indrová Jana",
-   "players": [
-    {
-     "no": 1,
-     "name": "Dvořák Slavomil",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 1870,
-     "fide": 1923
+     "nat": 1436,
+     "fide": 1609
     },
     {
      "no": 2,
-     "name": "Ročňák Michal",
-     "types": [
-      "V"
-     ],
+     "name": "Holík Pavel",
+     "types": [],
      "rtg": null,
-     "nat": 1504,
-     "fide": 1707
+     "nat": 1393,
+     "fide": 1614
     },
     {
      "no": 3,
-     "name": "Kotek Samuel",
-     "types": [],
-     "rtg": null,
-     "nat": 1222,
-     "fide": 1730
-    },
-    {
-     "no": 4,
-     "name": "Machovec Vojtěch",
-     "types": [],
-     "rtg": null,
-     "nat": 1373,
-     "fide": 1573
-    },
-    {
-     "no": 5,
-     "name": "Dospěl Tomáš",
-     "types": [],
-     "rtg": null,
-     "nat": 1275,
-     "fide": null
-    },
-    {
-     "no": 6,
-     "name": "Žák Jakub",
-     "types": [],
-     "rtg": null,
-     "nat": 1216,
-     "fide": 1610
-    },
-    {
-     "no": 7,
-     "name": "Ročňák Zdeněk",
-     "types": [
-      "ZK"
-     ],
-     "rtg": null,
-     "nat": 1431,
-     "fide": 1647
-    },
-    {
-     "no": 8,
-     "name": "Klepek Jindřich",
-     "types": [],
-     "rtg": null,
-     "nat": 1036,
-     "fide": null
-    },
-    {
-     "no": 9,
-     "name": "Lédl Adam",
-     "types": [],
-     "rtg": null,
-     "nat": 1139,
-     "fide": null
-    },
-    {
-     "no": 10,
-     "name": "Indrová Jana",
+     "name": "Jirmásek Vladimír",
      "types": [
       "K"
      ],
      "rtg": null,
-     "nat": 1556,
-     "fide": 1709
+     "nat": 1466,
+     "fide": 1685
     },
     {
-     "no": 11,
-     "name": "Vosmíková Barbora",
+     "no": 4,
+     "name": "Profousová Věra",
      "types": [],
      "rtg": null,
-     "nat": 1000,
-     "fide": null
+     "nat": 1524,
+     "fide": 1665
     },
     {
-     "no": 12,
-     "name": "Tomášek Milan",
+     "no": 5,
+     "name": "Dědič Tomáš",
      "types": [],
      "rtg": null,
-     "nat": 1000,
-     "fide": null
+     "nat": 1145,
+     "fide": 1423
     },
     {
-     "no": 13,
-     "name": "Adámek Vít",
-     "types": [],
-     "rtg": null,
-     "nat": 1099,
-     "fide": 1406
-    },
-    {
-     "no": 14,
-     "name": "Vašková Marie",
-     "types": [],
-     "rtg": null,
-     "nat": 1455,
-     "fide": 1672
-    },
-    {
-     "no": 15,
-     "name": "Luňáčková Tereza",
-     "types": [],
-     "rtg": null,
-     "nat": 1014,
-     "fide": null
-    },
-    {
-     "no": 16,
-     "name": "Jirmásek Antonín",
+     "no": 6,
+     "name": "Novotný Milan",
      "types": [],
      "rtg": null,
      "nat": null,
-     "fide": null
-    },
-    {
-     "no": 17,
-     "name": "Novotná Rozálie",
-     "types": [],
-     "rtg": null,
-     "nat": 1001,
      "fide": null
     }
    ]
@@ -1015,6 +1023,14 @@
      "rtg": null,
      "nat": null,
      "fide": null
+    },
+    {
+     "no": 17,
+     "name": "Horáčková Isabela",
+     "types": [],
+     "rtg": null,
+     "nat": 1249,
+     "fide": 1413
     }
    ]
   },
@@ -1064,6 +1080,14 @@
     },
     {
      "no": 5,
+     "name": "Kratochvíl Ondřej",
+     "types": [],
+     "rtg": null,
+     "nat": 1322,
+     "fide": 1573
+    },
+    {
+     "no": 6,
      "name": "Haken Zdislav",
      "types": [],
      "rtg": null,
@@ -1071,7 +1095,7 @@
      "fide": null
     },
     {
-     "no": 6,
+     "no": 7,
      "name": "Kurka Petr",
      "types": [
       "K"
@@ -1081,7 +1105,7 @@
      "fide": 1507
     },
     {
-     "no": 7,
+     "no": 8,
      "name": "Tamchyna Samuel",
      "types": [],
      "rtg": null,
@@ -1089,7 +1113,7 @@
      "fide": null
     },
     {
-     "no": 8,
+     "no": 9,
      "name": "Zedník Vojtěch",
      "types": [],
      "rtg": null,

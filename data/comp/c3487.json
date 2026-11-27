@@ -188,6 +188,84 @@
    ]
   },
   {
+   "name": "Spartak Bílovec „A“",
+   "captain": "Opluštil Jiří",
+   "players": [
+    {
+     "no": 1,
+     "name": "Osladil Jaroslav",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1629,
+     "fide": 1769
+    },
+    {
+     "no": 2,
+     "name": "Cyroň Karel",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1652,
+     "fide": 1693
+    },
+    {
+     "no": 3,
+     "name": "Vesteg Peter",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Foltas Ondřej",
+     "types": [],
+     "rtg": null,
+     "nat": 1672,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Opluštil Jiří",
+     "types": [
+      "K"
+     ],
+     "rtg": null,
+     "nat": 1688,
+     "fide": 1797
+    },
+    {
+     "no": 6,
+     "name": "Babiš Zdeněk",
+     "types": [
+      "ZK"
+     ],
+     "rtg": null,
+     "nat": 1540,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Lapáček Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Kubatík Eliáš",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    }
+   ]
+  },
+  {
    "name": "Šachy Nový Jičín",
    "captain": "Bienek Petr",
    "players": [
@@ -428,84 +506,6 @@
     {
      "no": 16,
      "name": "Novák Antonín",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    }
-   ]
-  },
-  {
-   "name": "Spartak Bílovec „A“",
-   "captain": "Opluštil Jiří",
-   "players": [
-    {
-     "no": 1,
-     "name": "Osladil Jaroslav",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": 1629,
-     "fide": 1769
-    },
-    {
-     "no": 2,
-     "name": "Cyroň Karel",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": 1652,
-     "fide": 1693
-    },
-    {
-     "no": 3,
-     "name": "Vesteg Peter",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 4,
-     "name": "Foltas Ondřej",
-     "types": [],
-     "rtg": null,
-     "nat": 1672,
-     "fide": null
-    },
-    {
-     "no": 5,
-     "name": "Opluštil Jiří",
-     "types": [
-      "K"
-     ],
-     "rtg": null,
-     "nat": 1688,
-     "fide": 1797
-    },
-    {
-     "no": 6,
-     "name": "Babiš Zdeněk",
-     "types": [
-      "ZK"
-     ],
-     "rtg": null,
-     "nat": 1540,
-     "fide": null
-    },
-    {
-     "no": 7,
-     "name": "Lapáček Jakub",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 8,
-     "name": "Kubatík Eliáš",
      "types": [],
      "rtg": null,
      "nat": null,
@@ -772,6 +772,80 @@
    ]
   },
   {
+   "name": "TJ Frenštát „A“",
+   "captain": "Klecker David",
+   "players": [
+    {
+     "no": 1,
+     "name": "Halamíček Robert",
+     "types": [
+      "ZK"
+     ],
+     "rtg": null,
+     "nat": 1751,
+     "fide": 1829
+    },
+    {
+     "no": 2,
+     "name": "Klabazňa Michal",
+     "types": [],
+     "rtg": null,
+     "nat": 1653,
+     "fide": 1709
+    },
+    {
+     "no": 3,
+     "name": "Šimetka Vlastimil",
+     "types": [],
+     "rtg": null,
+     "nat": 1669,
+     "fide": 1774
+    },
+    {
+     "no": 4,
+     "name": "Klecker David",
+     "types": [
+      "K"
+     ],
+     "rtg": null,
+     "nat": 1648,
+     "fide": 1747
+    },
+    {
+     "no": 5,
+     "name": "Georgiu Dimitri",
+     "types": [],
+     "rtg": null,
+     "nat": 1544,
+     "fide": 1688
+    },
+    {
+     "no": 6,
+     "name": "Kolařík Pavel",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Hanus Michal",
+     "types": [],
+     "rtg": null,
+     "nat": 1473,
+     "fide": 1711
+    },
+    {
+     "no": 8,
+     "name": "Hanus Marek",
+     "types": [],
+     "rtg": null,
+     "nat": 1320,
+     "fide": 1657
+    }
+   ]
+  },
+  {
    "name": "TJ Mořkov „C“",
    "captain": "Černoch Václav",
    "players": [
@@ -897,56 +971,54 @@
    ]
   },
   {
-   "name": "TJ Frenštát „A“",
-   "captain": "Klecker David",
+   "name": "TJ Frenštát „B“",
+   "captain": "Vojvodík Vlastimil",
    "players": [
     {
      "no": 1,
-     "name": "Halamíček Robert",
-     "types": [
-      "ZK"
-     ],
-     "rtg": null,
-     "nat": 1751,
-     "fide": 1829
-    },
-    {
-     "no": 2,
-     "name": "Klabazňa Michal",
-     "types": [],
-     "rtg": null,
-     "nat": 1653,
-     "fide": 1709
-    },
-    {
-     "no": 3,
-     "name": "Šimetka Vlastimil",
-     "types": [],
-     "rtg": null,
-     "nat": 1669,
-     "fide": 1774
-    },
-    {
-     "no": 4,
-     "name": "Klecker David",
+     "name": "Vojvodík Vlastimil",
      "types": [
       "K"
      ],
      "rtg": null,
-     "nat": 1648,
-     "fide": 1747
+     "nat": 1317,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Adamec Ladislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1456,
+     "fide": 1660
+    },
+    {
+     "no": 3,
+     "name": "Šindler Václav",
+     "types": [],
+     "rtg": null,
+     "nat": 1578,
+     "fide": 1709
+    },
+    {
+     "no": 4,
+     "name": "Žáček Josef",
+     "types": [],
+     "rtg": null,
+     "nat": 1529,
+     "fide": 1714
     },
     {
      "no": 5,
-     "name": "Georgiu Dimitri",
+     "name": "Blažek Stanislav",
      "types": [],
      "rtg": null,
-     "nat": 1544,
-     "fide": 1688
+     "nat": 1153,
+     "fide": 1457
     },
     {
      "no": 6,
-     "name": "Kolařík Pavel",
+     "name": "Jiskra Kryštof",
      "types": [],
      "rtg": null,
      "nat": null,
@@ -954,19 +1026,21 @@
     },
     {
      "no": 7,
-     "name": "Hanus Michal",
-     "types": [],
+     "name": "Obšil Přemysl",
+     "types": [
+      "ZK"
+     ],
      "rtg": null,
-     "nat": 1473,
-     "fide": 1711
+     "nat": 1554,
+     "fide": 1681
     },
     {
      "no": 8,
-     "name": "Hanus Marek",
+     "name": "Vojtíšek Matěj",
      "types": [],
      "rtg": null,
-     "nat": 1320,
-     "fide": 1657
+     "nat": null,
+     "fide": null
     }
    ]
   },
@@ -1048,80 +1122,6 @@
      ],
      "rtg": null,
      "nat": 1357,
-     "fide": null
-    }
-   ]
-  },
-  {
-   "name": "TJ Frenštát „B“",
-   "captain": "Vojvodík Vlastimil",
-   "players": [
-    {
-     "no": 1,
-     "name": "Vojvodík Vlastimil",
-     "types": [
-      "K"
-     ],
-     "rtg": null,
-     "nat": 1317,
-     "fide": null
-    },
-    {
-     "no": 2,
-     "name": "Adamec Ladislav",
-     "types": [],
-     "rtg": null,
-     "nat": 1456,
-     "fide": 1660
-    },
-    {
-     "no": 3,
-     "name": "Šindler Václav",
-     "types": [],
-     "rtg": null,
-     "nat": 1578,
-     "fide": 1709
-    },
-    {
-     "no": 4,
-     "name": "Žáček Josef",
-     "types": [],
-     "rtg": null,
-     "nat": 1529,
-     "fide": 1714
-    },
-    {
-     "no": 5,
-     "name": "Blažek Stanislav",
-     "types": [],
-     "rtg": null,
-     "nat": 1153,
-     "fide": 1457
-    },
-    {
-     "no": 6,
-     "name": "Jiskra Kryštof",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 7,
-     "name": "Obšil Přemysl",
-     "types": [
-      "ZK"
-     ],
-     "rtg": null,
-     "nat": 1554,
-     "fide": 1681
-    },
-    {
-     "no": 8,
-     "name": "Vojtíšek Matěj",
-     "types": [],
-     "rtg": null,
-     "nat": null,
      "fide": null
     }
    ]

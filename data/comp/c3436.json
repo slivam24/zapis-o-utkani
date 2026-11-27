@@ -88,6 +88,110 @@
    ]
   },
   {
+   "name": "GPOA Znojmo C",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Tran Karel",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1481,
+     "fide": 1734
+    },
+    {
+     "no": 2,
+     "name": "Zahumenský Vilém",
+     "types": [],
+     "rtg": null,
+     "nat": 1442,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Peroutka Matěj",
+     "types": [],
+     "rtg": null,
+     "nat": 1462,
+     "fide": 1648
+    },
+    {
+     "no": 4,
+     "name": "Peroutka Marek",
+     "types": [],
+     "rtg": null,
+     "nat": 1293,
+     "fide": 1725
+    },
+    {
+     "no": 5,
+     "name": "Peroutka Viktor",
+     "types": [],
+     "rtg": null,
+     "nat": 1306,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Chmelka Dominik",
+     "types": [],
+     "rtg": null,
+     "nat": 1576,
+     "fide": 1701
+    },
+    {
+     "no": 7,
+     "name": "Kučera Filip",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Čtveráček Filip",
+     "types": [],
+     "rtg": null,
+     "nat": 1574,
+     "fide": 1697
+    },
+    {
+     "no": 9,
+     "name": "Štourač Šimon",
+     "types": [],
+     "rtg": null,
+     "nat": 1523,
+     "fide": 1658
+    },
+    {
+     "no": 10,
+     "name": "Molík Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1087,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Reiter Štěpán",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Holzer Heřman",
+     "types": [],
+     "rtg": null,
+     "nat": 1385,
+     "fide": 1584
+    }
+   ]
+  },
+  {
    "name": "Sokol Štítary",
    "captain": "",
    "players": [
@@ -144,62 +248,60 @@
    ]
   },
   {
-   "name": "GPOA Znojmo C",
+   "name": "Šachový klub Práče",
    "captain": "",
    "players": [
     {
      "no": 1,
-     "name": "Tran Karel",
-     "types": [
-      "H"
-     ],
+     "name": "Forman Lubomír",
+     "types": [],
      "rtg": null,
-     "nat": 1481,
-     "fide": 1740
+     "nat": 1739,
+     "fide": null
     },
     {
      "no": 2,
-     "name": "Zahumenský Vilém",
+     "name": "Havránek Jan Kryštof",
      "types": [],
      "rtg": null,
-     "nat": 1442,
+     "nat": 1438,
      "fide": null
     },
     {
      "no": 3,
-     "name": "Peroutka Matěj",
+     "name": "Rachůnek Miroslav",
      "types": [],
      "rtg": null,
-     "nat": 1462,
-     "fide": 1648
+     "nat": 1535,
+     "fide": null
     },
     {
      "no": 4,
-     "name": "Peroutka Marek",
+     "name": "Malý Jiří",
      "types": [],
      "rtg": null,
-     "nat": 1293,
-     "fide": 1725
+     "nat": 1715,
+     "fide": 1829
     },
     {
      "no": 5,
-     "name": "Peroutka Viktor",
+     "name": "Houdek Vojtěch",
      "types": [],
      "rtg": null,
-     "nat": 1306,
+     "nat": null,
      "fide": null
     },
     {
      "no": 6,
-     "name": "Chmelka Dominik",
+     "name": "Bartl Pavel",
      "types": [],
      "rtg": null,
-     "nat": 1576,
-     "fide": 1713
+     "nat": 1402,
+     "fide": null
     },
     {
      "no": 7,
-     "name": "Kučera Filip",
+     "name": "Šidlo Jan",
      "types": [],
      "rtg": null,
      "nat": null,
@@ -207,43 +309,19 @@
     },
     {
      "no": 8,
-     "name": "Čtveráček Filip",
-     "types": [],
-     "rtg": null,
-     "nat": 1574,
-     "fide": 1697
-    },
-    {
-     "no": 9,
-     "name": "Štourač Šimon",
-     "types": [],
-     "rtg": null,
-     "nat": 1523,
-     "fide": 1658
-    },
-    {
-     "no": 10,
-     "name": "Molík Jan",
-     "types": [],
-     "rtg": null,
-     "nat": 1087,
-     "fide": null
-    },
-    {
-     "no": 11,
-     "name": "Reiter Štěpán",
+     "name": "Musilová Valérie",
      "types": [],
      "rtg": null,
      "nat": null,
      "fide": null
     },
     {
-     "no": 12,
-     "name": "Holzer Heřman",
+     "no": 9,
+     "name": "Malý Alena",
      "types": [],
      "rtg": null,
-     "nat": 1385,
-     "fide": 1584
+     "nat": null,
+     "fide": null
     }
    ]
   },
@@ -334,68 +412,70 @@
    ]
   },
   {
-   "name": "Šachový klub Práče",
+   "name": "GPOA Znojmo D",
    "captain": "",
    "players": [
     {
      "no": 1,
-     "name": "Forman Lubomír",
-     "types": [],
+     "name": "Horák Miroslav",
+     "types": [
+      "H"
+     ],
      "rtg": null,
-     "nat": 1739,
-     "fide": null
+     "nat": 1665,
+     "fide": 1759
     },
     {
      "no": 2,
-     "name": "Havránek Jan Kryštof",
+     "name": "Vejlupek Pavel",
      "types": [],
      "rtg": null,
-     "nat": 1438,
-     "fide": null
+     "nat": 1428,
+     "fide": 1609
     },
     {
      "no": 3,
-     "name": "Rachůnek Miroslav",
+     "name": "Gottwald Lubomír",
      "types": [],
      "rtg": null,
-     "nat": 1535,
+     "nat": 1396,
      "fide": null
     },
     {
      "no": 4,
-     "name": "Malý Jiří",
+     "name": "Říčka Petr",
      "types": [],
      "rtg": null,
-     "nat": 1715,
-     "fide": 1829
+     "nat": 1524,
+     "fide": null
     },
     {
      "no": 5,
-     "name": "Houdek Vojtěch",
+     "name": "Hruška Zdeněk",
      "types": [],
      "rtg": null,
-     "nat": null,
+     "nat": 1345,
      "fide": null
     },
     {
      "no": 6,
-     "name": "Bartl Pavel",
-     "types": [],
-     "rtg": null,
-     "nat": 1402,
-     "fide": null
-    },
-    {
-     "no": 7,
-     "name": "Šidlo Jan",
+     "name": "Ruda Luboš",
      "types": [],
      "rtg": null,
      "nat": null,
      "fide": null
     },
     {
+     "no": 7,
+     "name": "Ruda Matyáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1126,
+     "fide": null
+    },
+    {
      "no": 8,
-     "name": "Musilová Valérie",
+     "name": "Lipovský Robin",
      "types": [],
      "rtg": null,
      "nat": null,
@@ -403,7 +483,31 @@
     },
     {
      "no": 9,
-     "name": "Malý Alena",
+     "name": "Kučerová Karina",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Šabacký Martin",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Šafář Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Štelc Adam",
      "types": [],
      "rtg": null,
      "nat": null,
@@ -506,110 +610,6 @@
     {
      "no": 12,
      "name": "Kokarev Ihor",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    }
-   ]
-  },
-  {
-   "name": "GPOA Znojmo D",
-   "captain": "",
-   "players": [
-    {
-     "no": 1,
-     "name": "Horák Miroslav",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": 1665,
-     "fide": 1759
-    },
-    {
-     "no": 2,
-     "name": "Vejlupek Pavel",
-     "types": [],
-     "rtg": null,
-     "nat": 1428,
-     "fide": 1609
-    },
-    {
-     "no": 3,
-     "name": "Gottwald Lubomír",
-     "types": [],
-     "rtg": null,
-     "nat": 1396,
-     "fide": null
-    },
-    {
-     "no": 4,
-     "name": "Říčka Petr",
-     "types": [],
-     "rtg": null,
-     "nat": 1524,
-     "fide": null
-    },
-    {
-     "no": 5,
-     "name": "Hruška Zdeněk",
-     "types": [],
-     "rtg": null,
-     "nat": 1345,
-     "fide": null
-    },
-    {
-     "no": 6,
-     "name": "Ruda Luboš",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 7,
-     "name": "Ruda Matyáš",
-     "types": [],
-     "rtg": null,
-     "nat": 1126,
-     "fide": null
-    },
-    {
-     "no": 8,
-     "name": "Lipovský Robin",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 9,
-     "name": "Kučerová Karina",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 10,
-     "name": "Šabacký Martin",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 11,
-     "name": "Šafář Jakub",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 12,
-     "name": "Štelc Adam",
      "types": [],
      "rtg": null,
      "nat": null,

@@ -11,166 +11,6 @@
  "url": "https://www.chess.cz/soutez/3405/",
  "teams": [
   {
-   "name": "TJ Vlčnov B",
-   "captain": "Oharek Vlastimil",
-   "players": [
-    {
-     "no": 1,
-     "name": "Mudrák Josef",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 2099,
-     "fide": 2131
-    },
-    {
-     "no": 2,
-     "name": "Karlík Vladimír",
-     "types": [],
-     "rtg": null,
-     "nat": 2037,
-     "fide": 2079
-    },
-    {
-     "no": 3,
-     "name": "Kapusta Petr",
-     "types": [],
-     "rtg": null,
-     "nat": 2062,
-     "fide": 2135
-    },
-    {
-     "no": 4,
-     "name": "Babula Milan",
-     "types": [],
-     "rtg": null,
-     "nat": 2098,
-     "fide": 2150
-    },
-    {
-     "no": 5,
-     "name": "Buráň Jaroslav",
-     "types": [],
-     "rtg": null,
-     "nat": 1922,
-     "fide": 1949
-    },
-    {
-     "no": 6,
-     "name": "Moštěk Jan",
-     "types": [],
-     "rtg": null,
-     "nat": 1952,
-     "fide": 1986
-    },
-    {
-     "no": 7,
-     "name": "Zálešák Robert",
-     "types": [],
-     "rtg": null,
-     "nat": 1829,
-     "fide": 1844
-    },
-    {
-     "no": 8,
-     "name": "Kolouch Jiří",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": 1832,
-     "fide": 1902
-    },
-    {
-     "no": 9,
-     "name": "Knotek Josef",
-     "types": [],
-     "rtg": null,
-     "nat": 1856,
-     "fide": 1912
-    },
-    {
-     "no": 10,
-     "name": "Flekač Milan",
-     "types": [],
-     "rtg": null,
-     "nat": 1832,
-     "fide": 1948
-    },
-    {
-     "no": 11,
-     "name": "Ficenc Libor",
-     "types": [
-      "ZK"
-     ],
-     "rtg": null,
-     "nat": 1803,
-     "fide": 1870
-    },
-    {
-     "no": 12,
-     "name": "Podškubka Ondřej",
-     "types": [],
-     "rtg": null,
-     "nat": 1739,
-     "fide": 1828
-    },
-    {
-     "no": 13,
-     "name": "Oharek Vlastimil",
-     "types": [
-      "K"
-     ],
-     "rtg": null,
-     "nat": 1680,
-     "fide": 1738
-    },
-    {
-     "no": 14,
-     "name": "Škarpa Marek",
-     "types": [],
-     "rtg": null,
-     "nat": 1613,
-     "fide": 1631
-    },
-    {
-     "no": 15,
-     "name": "Mentzl Matouš",
-     "types": [],
-     "rtg": null,
-     "nat": 1260,
-     "fide": null
-    },
-    {
-     "no": 16,
-     "name": "Moravec René",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": 1375,
-     "fide": 1572
-    },
-    {
-     "no": 17,
-     "name": "Lörinc Lukáš",
-     "types": [],
-     "rtg": null,
-     "nat": 1367,
-     "fide": 1713
-    },
-    {
-     "no": 18,
-     "name": "Dubina Pavel",
-     "types": [],
-     "rtg": null,
-     "nat": 2015,
-     "fide": 2008
-    }
-   ]
-  },
-  {
    "name": "Sokol Postoupky",
    "captain": "Vrzal Filip",
    "players": [
@@ -666,8 +506,16 @@
      "name": "Hovora Štěpán",
      "types": [],
      "rtg": null,
-     "nat": null,
+     "nat": 1000,
      "fide": null
+    },
+    {
+     "no": 20,
+     "name": "Jánek Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1709,
+     "fide": 1837
     }
    ]
   },
@@ -802,6 +650,328 @@
      "rtg": null,
      "nat": 1463,
      "fide": 1598
+    }
+   ]
+  },
+  {
+   "name": "TJ Vlčnov B",
+   "captain": "Oharek Vlastimil",
+   "players": [
+    {
+     "no": 1,
+     "name": "Mudrák Josef",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 2099,
+     "fide": 2131
+    },
+    {
+     "no": 2,
+     "name": "Karlík Vladimír",
+     "types": [],
+     "rtg": null,
+     "nat": 2037,
+     "fide": 2079
+    },
+    {
+     "no": 3,
+     "name": "Kapusta Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 2062,
+     "fide": 2135
+    },
+    {
+     "no": 4,
+     "name": "Babula Milan",
+     "types": [],
+     "rtg": null,
+     "nat": 2098,
+     "fide": 2150
+    },
+    {
+     "no": 5,
+     "name": "Buráň Jaroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1922,
+     "fide": 1949
+    },
+    {
+     "no": 6,
+     "name": "Moštěk Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1952,
+     "fide": 1986
+    },
+    {
+     "no": 7,
+     "name": "Zálešák Robert",
+     "types": [],
+     "rtg": null,
+     "nat": 1829,
+     "fide": 1844
+    },
+    {
+     "no": 8,
+     "name": "Kolouch Jiří",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1832,
+     "fide": 1902
+    },
+    {
+     "no": 9,
+     "name": "Knotek Josef",
+     "types": [],
+     "rtg": null,
+     "nat": 1856,
+     "fide": 1912
+    },
+    {
+     "no": 10,
+     "name": "Flekač Milan",
+     "types": [],
+     "rtg": null,
+     "nat": 1832,
+     "fide": 1948
+    },
+    {
+     "no": 11,
+     "name": "Ficenc Libor",
+     "types": [
+      "ZK"
+     ],
+     "rtg": null,
+     "nat": 1803,
+     "fide": 1870
+    },
+    {
+     "no": 12,
+     "name": "Podškubka Ondřej",
+     "types": [],
+     "rtg": null,
+     "nat": 1739,
+     "fide": 1828
+    },
+    {
+     "no": 13,
+     "name": "Oharek Vlastimil",
+     "types": [
+      "K"
+     ],
+     "rtg": null,
+     "nat": 1680,
+     "fide": 1738
+    },
+    {
+     "no": 14,
+     "name": "Škarpa Marek",
+     "types": [],
+     "rtg": null,
+     "nat": 1613,
+     "fide": 1631
+    },
+    {
+     "no": 15,
+     "name": "Mentzl Matouš",
+     "types": [],
+     "rtg": null,
+     "nat": 1260,
+     "fide": null
+    },
+    {
+     "no": 16,
+     "name": "Moravec René",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1375,
+     "fide": 1572
+    },
+    {
+     "no": 17,
+     "name": "Lörinc Lukáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1367,
+     "fide": 1713
+    },
+    {
+     "no": 18,
+     "name": "Dubina Pavel",
+     "types": [],
+     "rtg": null,
+     "nat": 2015,
+     "fide": 2008
+    }
+   ]
+  },
+  {
+   "name": "ŠK Zlín B",
+   "captain": "Machala Matěj",
+   "players": [
+    {
+     "no": 1,
+     "name": "Černý Michal",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 2149,
+     "fide": 2168
+    },
+    {
+     "no": 2,
+     "name": "Mařák Jakub",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 2069,
+     "fide": 2091
+    },
+    {
+     "no": 3,
+     "name": "Kuna Patrik",
+     "types": [
+      "C"
+     ],
+     "rtg": null,
+     "nat": null,
+     "fide": 2078
+    },
+    {
+     "no": 4,
+     "name": "Hodovský Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1979,
+     "fide": 2006
+    },
+    {
+     "no": 5,
+     "name": "Kocián Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 2004,
+     "fide": 2023
+    },
+    {
+     "no": 6,
+     "name": "Šťastná Martina",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1894,
+     "fide": 1942
+    },
+    {
+     "no": 7,
+     "name": "Šimek Viktor",
+     "types": [
+      "ZK"
+     ],
+     "rtg": null,
+     "nat": 1898,
+     "fide": 1937
+    },
+    {
+     "no": 8,
+     "name": "Palica Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1842,
+     "fide": 1895
+    },
+    {
+     "no": 9,
+     "name": "Machala Matěj",
+     "types": [
+      "K"
+     ],
+     "rtg": null,
+     "nat": 1755,
+     "fide": 1848
+    },
+    {
+     "no": 10,
+     "name": "Michalica Štěpán",
+     "types": [],
+     "rtg": null,
+     "nat": 1369,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Kokrda Vladimír",
+     "types": [],
+     "rtg": null,
+     "nat": 1678,
+     "fide": 1875
+    },
+    {
+     "no": 12,
+     "name": "Czinege Lukáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1000,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Kuzych Arsenii",
+     "types": [],
+     "rtg": null,
+     "nat": 1268,
+     "fide": 1694
+    },
+    {
+     "no": 14,
+     "name": "Šveďuk Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": 1564,
+     "fide": 1700
+    },
+    {
+     "no": 15,
+     "name": "Skýba Jakub Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1512,
+     "fide": 1821
+    },
+    {
+     "no": 16,
+     "name": "Baránek Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1398,
+     "fide": 1527
+    },
+    {
+     "no": 17,
+     "name": "Režná Hedvika",
+     "types": [],
+     "rtg": null,
+     "nat": 1353,
+     "fide": 1548
+    },
+    {
+     "no": 18,
+     "name": "Moscoso Eric Sebastian",
+     "types": [],
+     "rtg": null,
+     "nat": 1000,
+     "fide": null
     }
    ]
   },
@@ -970,180 +1140,6 @@
      "rtg": null,
      "nat": 1536,
      "fide": 1644
-    }
-   ]
-  },
-  {
-   "name": "Šachový klub Vsetín B",
-   "captain": "Píštěk Zdeněk",
-   "players": [
-    {
-     "no": 1,
-     "name": "Zádrapová Amálie",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 2066,
-     "fide": 2148
-    },
-    {
-     "no": 2,
-     "name": "Stančík Jakub",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 2052,
-     "fide": 2060
-    },
-    {
-     "no": 3,
-     "name": "Smilek Petr",
-     "types": [],
-     "rtg": null,
-     "nat": 1955,
-     "fide": 1971
-    },
-    {
-     "no": 4,
-     "name": "Zádrapa Radek",
-     "types": [],
-     "rtg": null,
-     "nat": 2091,
-     "fide": 2105
-    },
-    {
-     "no": 5,
-     "name": "Bosák Jan",
-     "types": [],
-     "rtg": null,
-     "nat": 1952,
-     "fide": 2052
-    },
-    {
-     "no": 6,
-     "name": "Zádrapa Jakub",
-     "types": [],
-     "rtg": null,
-     "nat": 1960,
-     "fide": 2009
-    },
-    {
-     "no": 7,
-     "name": "Závodný Jaroslav",
-     "types": [
-      "ZK"
-     ],
-     "rtg": null,
-     "nat": 1861,
-     "fide": 1927
-    },
-    {
-     "no": 8,
-     "name": "Urban Vojtěch Gabriel",
-     "types": [],
-     "rtg": null,
-     "nat": 1769,
-     "fide": 1819
-    },
-    {
-     "no": 9,
-     "name": "Píštěk Zdeněk",
-     "types": [
-      "K"
-     ],
-     "rtg": null,
-     "nat": 1736,
-     "fide": 1798
-    },
-    {
-     "no": 10,
-     "name": "Švagera Adam",
-     "types": [],
-     "rtg": null,
-     "nat": 1678,
-     "fide": 1758
-    },
-    {
-     "no": 11,
-     "name": "Mocek Tadeáš",
-     "types": [],
-     "rtg": null,
-     "nat": 1698,
-     "fide": 1764
-    },
-    {
-     "no": 12,
-     "name": "Lizúch Lukáš",
-     "types": [],
-     "rtg": null,
-     "nat": 1787,
-     "fide": 1852
-    },
-    {
-     "no": 13,
-     "name": "Skula David",
-     "types": [],
-     "rtg": null,
-     "nat": 1689,
-     "fide": 1811
-    },
-    {
-     "no": 14,
-     "name": "Mladý Pavel",
-     "types": [],
-     "rtg": null,
-     "nat": 1629,
-     "fide": 1711
-    },
-    {
-     "no": 15,
-     "name": "Štědrý Jáchym",
-     "types": [],
-     "rtg": null,
-     "nat": 1557,
-     "fide": 1625
-    },
-    {
-     "no": 16,
-     "name": "Dančák Stanislav",
-     "types": [],
-     "rtg": null,
-     "nat": 1575,
-     "fide": 1706
-    },
-    {
-     "no": 17,
-     "name": "Hradil Karel",
-     "types": [],
-     "rtg": null,
-     "nat": 1693,
-     "fide": 1823
-    },
-    {
-     "no": 18,
-     "name": "Lorenc Matěj",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 19,
-     "name": "Fiľo Metod",
-     "types": [],
-     "rtg": null,
-     "nat": 1188,
-     "fide": 1670
-    },
-    {
-     "no": 20,
-     "name": "Viazanko Marek",
-     "types": [],
-     "rtg": null,
-     "nat": 1363,
-     "fide": 1543
     }
    ]
   },
@@ -1324,164 +1320,176 @@
    ]
   },
   {
-   "name": "ŠK Zlín B",
-   "captain": "Machala Matěj",
+   "name": "Šachový klub Vsetín B",
+   "captain": "Píštěk Zdeněk",
    "players": [
     {
      "no": 1,
-     "name": "Černý Michal",
+     "name": "Zádrapová Amálie",
      "types": [
       "V"
      ],
      "rtg": null,
-     "nat": 2149,
-     "fide": 2168
+     "nat": 2066,
+     "fide": 2148
     },
     {
      "no": 2,
-     "name": "Mařák Jakub",
+     "name": "Stančík Jakub",
      "types": [
       "V"
      ],
      "rtg": null,
-     "nat": 2069,
-     "fide": 2091
+     "nat": 2052,
+     "fide": 2060
     },
     {
      "no": 3,
-     "name": "Kuna Patrik",
-     "types": [
-      "C"
-     ],
+     "name": "Smilek Petr",
+     "types": [],
      "rtg": null,
-     "nat": null,
-     "fide": 2078
+     "nat": 1955,
+     "fide": 1971
     },
     {
      "no": 4,
-     "name": "Hodovský Jiří",
+     "name": "Zádrapa Radek",
      "types": [],
      "rtg": null,
-     "nat": 1979,
-     "fide": 2006
+     "nat": 2091,
+     "fide": 2105
     },
     {
      "no": 5,
-     "name": "Kocián Miroslav",
+     "name": "Bosák Jan",
      "types": [],
      "rtg": null,
-     "nat": 2004,
-     "fide": 2023
+     "nat": 1952,
+     "fide": 2052
     },
     {
      "no": 6,
-     "name": "Šťastná Martina",
-     "types": [
-      "H"
-     ],
+     "name": "Zádrapa Jakub",
+     "types": [],
      "rtg": null,
-     "nat": 1894,
-     "fide": 1942
+     "nat": 1960,
+     "fide": 2009
     },
     {
      "no": 7,
-     "name": "Šimek Viktor",
+     "name": "Závodný Jaroslav",
      "types": [
       "ZK"
      ],
      "rtg": null,
-     "nat": 1898,
-     "fide": 1937
+     "nat": 1861,
+     "fide": 1927
     },
     {
      "no": 8,
-     "name": "Palica Jiří",
+     "name": "Urban Vojtěch Gabriel",
      "types": [],
      "rtg": null,
-     "nat": 1842,
-     "fide": 1895
+     "nat": 1769,
+     "fide": 1819
     },
     {
      "no": 9,
-     "name": "Machala Matěj",
+     "name": "Píštěk Zdeněk",
      "types": [
       "K"
      ],
      "rtg": null,
-     "nat": 1755,
-     "fide": 1848
+     "nat": 1736,
+     "fide": 1798
     },
     {
      "no": 10,
-     "name": "Michalica Štěpán",
-     "types": [],
-     "rtg": null,
-     "nat": 1369,
-     "fide": null
-    },
-    {
-     "no": 11,
-     "name": "Kokrda Vladimír",
+     "name": "Švagera Adam",
      "types": [],
      "rtg": null,
      "nat": 1678,
-     "fide": 1875
+     "fide": 1758
+    },
+    {
+     "no": 11,
+     "name": "Mocek Tadeáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1698,
+     "fide": 1764
     },
     {
      "no": 12,
-     "name": "Czinege Lukáš",
+     "name": "Lizúch Lukáš",
      "types": [],
      "rtg": null,
-     "nat": null,
-     "fide": null
+     "nat": 1787,
+     "fide": 1852
     },
     {
      "no": 13,
-     "name": "Kuzych Arsenii",
+     "name": "Skula David",
      "types": [],
      "rtg": null,
-     "nat": 1268,
-     "fide": 1694
+     "nat": 1689,
+     "fide": 1811
     },
     {
      "no": 14,
-     "name": "Šveďuk Jakub",
+     "name": "Mladý Pavel",
      "types": [],
      "rtg": null,
-     "nat": 1564,
-     "fide": 1700
+     "nat": 1629,
+     "fide": 1711
     },
     {
      "no": 15,
-     "name": "Skýba Jakub Jan",
+     "name": "Štědrý Jáchym",
      "types": [],
      "rtg": null,
-     "nat": 1512,
-     "fide": 1821
+     "nat": 1557,
+     "fide": 1625
     },
     {
      "no": 16,
-     "name": "Baránek Jan",
+     "name": "Dančák Stanislav",
      "types": [],
      "rtg": null,
-     "nat": 1398,
-     "fide": 1527
+     "nat": 1575,
+     "fide": 1706
     },
     {
      "no": 17,
-     "name": "Režná Hedvika",
+     "name": "Hradil Karel",
      "types": [],
      "rtg": null,
-     "nat": 1353,
-     "fide": 1548
+     "nat": 1693,
+     "fide": 1823
     },
     {
      "no": 18,
-     "name": "Moscoso Eric Sebastian",
+     "name": "Lorenc Matěj",
      "types": [],
      "rtg": null,
-     "nat": null,
+     "nat": 1000,
      "fide": null
+    },
+    {
+     "no": 19,
+     "name": "Fiľo Metod",
+     "types": [],
+     "rtg": null,
+     "nat": 1188,
+     "fide": 1670
+    },
+    {
+     "no": 20,
+     "name": "Viazanko Marek",
+     "types": [],
+     "rtg": null,
+     "nat": 1363,
+     "fide": 1543
     }
    ]
   },
@@ -1660,6 +1668,156 @@
    ]
   },
   {
+   "name": "Fatra Slavia Napajedla",
+   "captain": "Pálka Bronislav",
+   "players": [
+    {
+     "no": 1,
+     "name": "Bažant Petr",
+     "types": [
+      "ZK"
+     ],
+     "rtg": null,
+     "nat": 2190,
+     "fide": 2225
+    },
+    {
+     "no": 2,
+     "name": "Bažant Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 2152,
+     "fide": 2169
+    },
+    {
+     "no": 3,
+     "name": "Veselý Miroslav",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1919,
+     "fide": 1958
+    },
+    {
+     "no": 4,
+     "name": "Pálka Bronislav",
+     "types": [
+      "K"
+     ],
+     "rtg": null,
+     "nat": 1941,
+     "fide": 1967
+    },
+    {
+     "no": 5,
+     "name": "Bartas Pavel",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1840,
+     "fide": 1900
+    },
+    {
+     "no": 6,
+     "name": "Kopčil Milan",
+     "types": [],
+     "rtg": null,
+     "nat": 1908,
+     "fide": 1940
+    },
+    {
+     "no": 7,
+     "name": "Bažant Pavel",
+     "types": [],
+     "rtg": null,
+     "nat": 1790,
+     "fide": 1858
+    },
+    {
+     "no": 8,
+     "name": "Bažant Radek",
+     "types": [],
+     "rtg": null,
+     "nat": 1491,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Šiška Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1353,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Blahynka Svatopluk",
+     "types": [],
+     "rtg": null,
+     "nat": 1536,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Landsfeld Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1260,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Polášek Libor",
+     "types": [],
+     "rtg": null,
+     "nat": 1542,
+     "fide": 1710
+    },
+    {
+     "no": 13,
+     "name": "Kolomazník Ladislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1617,
+     "fide": 1772
+    },
+    {
+     "no": 14,
+     "name": "Varmuža Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1000,
+     "fide": null
+    },
+    {
+     "no": 15,
+     "name": "Galus Zdenek",
+     "types": [],
+     "rtg": null,
+     "nat": 1142,
+     "fide": null
+    },
+    {
+     "no": 16,
+     "name": "Gottwald Pavel",
+     "types": [],
+     "rtg": null,
+     "nat": 1446,
+     "fide": null
+    },
+    {
+     "no": 17,
+     "name": "Sedláček Roman",
+     "types": [],
+     "rtg": null,
+     "nat": 1629,
+     "fide": 1814
+    }
+   ]
+  },
+  {
    "name": "SK Boršice",
    "captain": "Tománek Pavel",
    "players": [
@@ -1831,156 +1989,6 @@
      "rtg": null,
      "nat": 1356,
      "fide": 1484
-    }
-   ]
-  },
-  {
-   "name": "Fatra Slavia Napajedla",
-   "captain": "Pálka Bronislav",
-   "players": [
-    {
-     "no": 1,
-     "name": "Bažant Petr",
-     "types": [
-      "ZK"
-     ],
-     "rtg": null,
-     "nat": 2190,
-     "fide": 2225
-    },
-    {
-     "no": 2,
-     "name": "Bažant Petr",
-     "types": [],
-     "rtg": null,
-     "nat": 2152,
-     "fide": 2169
-    },
-    {
-     "no": 3,
-     "name": "Veselý Miroslav",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": 1919,
-     "fide": 1958
-    },
-    {
-     "no": 4,
-     "name": "Pálka Bronislav",
-     "types": [
-      "K"
-     ],
-     "rtg": null,
-     "nat": 1941,
-     "fide": 1967
-    },
-    {
-     "no": 5,
-     "name": "Bartas Pavel",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": 1840,
-     "fide": 1900
-    },
-    {
-     "no": 6,
-     "name": "Kopčil Milan",
-     "types": [],
-     "rtg": null,
-     "nat": 1908,
-     "fide": 1940
-    },
-    {
-     "no": 7,
-     "name": "Bažant Pavel",
-     "types": [],
-     "rtg": null,
-     "nat": 1790,
-     "fide": 1858
-    },
-    {
-     "no": 8,
-     "name": "Bažant Radek",
-     "types": [],
-     "rtg": null,
-     "nat": 1491,
-     "fide": null
-    },
-    {
-     "no": 9,
-     "name": "Šiška Jan",
-     "types": [],
-     "rtg": null,
-     "nat": 1353,
-     "fide": null
-    },
-    {
-     "no": 10,
-     "name": "Blahynka Svatopluk",
-     "types": [],
-     "rtg": null,
-     "nat": 1536,
-     "fide": null
-    },
-    {
-     "no": 11,
-     "name": "Landsfeld Zdeněk",
-     "types": [],
-     "rtg": null,
-     "nat": 1260,
-     "fide": null
-    },
-    {
-     "no": 12,
-     "name": "Polášek Libor",
-     "types": [],
-     "rtg": null,
-     "nat": 1542,
-     "fide": 1710
-    },
-    {
-     "no": 13,
-     "name": "Kolomazník Ladislav",
-     "types": [],
-     "rtg": null,
-     "nat": 1617,
-     "fide": 1772
-    },
-    {
-     "no": 14,
-     "name": "Varmuža Petr",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 15,
-     "name": "Galus Zdenek",
-     "types": [],
-     "rtg": null,
-     "nat": 1142,
-     "fide": null
-    },
-    {
-     "no": 16,
-     "name": "Gottwald Pavel",
-     "types": [],
-     "rtg": null,
-     "nat": 1446,
-     "fide": null
-    },
-    {
-     "no": 17,
-     "name": "Sedláček Roman",
-     "types": [],
-     "rtg": null,
-     "nat": 1629,
-     "fide": 1814
     }
    ]
   }

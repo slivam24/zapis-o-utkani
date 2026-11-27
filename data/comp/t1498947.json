@@ -527,6 +527,144 @@
    ]
   },
   {
+   "name": "AVZO-STSČ Františkovy Lázně A",
+   "captain": "Kaigl Arnošt",
+   "players": [
+    {
+     "no": 1,
+     "name": "Bajcár Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1919,
+     "fide": 1963
+    },
+    {
+     "no": 2,
+     "name": "Břicháček Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1713,
+     "fide": 1924
+    },
+    {
+     "no": 3,
+     "name": "Macho Miloslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1765,
+     "fide": 1835
+    },
+    {
+     "no": 4,
+     "name": "Šíbl Václav",
+     "types": [],
+     "rtg": null,
+     "nat": 1794,
+     "fide": 1874
+    },
+    {
+     "no": 5,
+     "name": "Burč Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1811,
+     "fide": 1853
+    },
+    {
+     "no": 6,
+     "name": "Pevný František",
+     "types": [],
+     "rtg": null,
+     "nat": 1691,
+     "fide": 1726
+    },
+    {
+     "no": 7,
+     "name": "Kaigl Arnošt",
+     "types": [
+      "K"
+     ],
+     "rtg": null,
+     "nat": 1746,
+     "fide": 1871
+    },
+    {
+     "no": 8,
+     "name": "Brtva Pavel",
+     "types": [],
+     "rtg": null,
+     "nat": 1652,
+     "fide": 1757
+    },
+    {
+     "no": 9,
+     "name": "Jungwirth Jindřich",
+     "types": [
+      "ZK"
+     ],
+     "rtg": null,
+     "nat": 1621,
+     "fide": 1716
+    },
+    {
+     "no": 10,
+     "name": "Rewczuk Marcel",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": 1719
+    },
+    {
+     "no": 11,
+     "name": "Kohout Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1613,
+     "fide": 1745
+    },
+    {
+     "no": 12,
+     "name": "Bergmann Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1705,
+     "fide": 1739
+    },
+    {
+     "no": 13,
+     "name": "Hodík Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1617,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Franěk Antonín",
+     "types": [],
+     "rtg": null,
+     "nat": 1423,
+     "fide": 1633
+    },
+    {
+     "no": 15,
+     "name": "Bouzek Tomáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1477,
+     "fide": null
+    },
+    {
+     "no": 16,
+     "name": "Chlumský Petr",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": 1767
+    }
+   ]
+  },
+  {
    "name": "ŠK Karlovy Vary A",
    "captain": "",
    "players": [
@@ -699,144 +837,6 @@
      "rtg": null,
      "nat": 1539,
      "fide": 1632
-    }
-   ]
-  },
-  {
-   "name": "AVZO-STSČ Františkovy Lázně A",
-   "captain": "Kaigl Arnošt",
-   "players": [
-    {
-     "no": 1,
-     "name": "Bajcár Tomáš",
-     "types": [],
-     "rtg": null,
-     "nat": 1919,
-     "fide": 1963
-    },
-    {
-     "no": 2,
-     "name": "Břicháček Miroslav",
-     "types": [],
-     "rtg": null,
-     "nat": 1713,
-     "fide": 1924
-    },
-    {
-     "no": 3,
-     "name": "Macho Miloslav",
-     "types": [],
-     "rtg": null,
-     "nat": 1765,
-     "fide": 1835
-    },
-    {
-     "no": 4,
-     "name": "Šíbl Václav",
-     "types": [],
-     "rtg": null,
-     "nat": 1794,
-     "fide": 1874
-    },
-    {
-     "no": 5,
-     "name": "Burč Zdeněk",
-     "types": [],
-     "rtg": null,
-     "nat": 1811,
-     "fide": 1853
-    },
-    {
-     "no": 6,
-     "name": "Pevný František",
-     "types": [],
-     "rtg": null,
-     "nat": 1691,
-     "fide": 1726
-    },
-    {
-     "no": 7,
-     "name": "Kaigl Arnošt",
-     "types": [
-      "K"
-     ],
-     "rtg": null,
-     "nat": 1746,
-     "fide": 1871
-    },
-    {
-     "no": 8,
-     "name": "Brtva Pavel",
-     "types": [],
-     "rtg": null,
-     "nat": 1652,
-     "fide": 1757
-    },
-    {
-     "no": 9,
-     "name": "Jungwirth Jindřich",
-     "types": [
-      "ZK"
-     ],
-     "rtg": null,
-     "nat": 1621,
-     "fide": 1716
-    },
-    {
-     "no": 10,
-     "name": "Rewczuk Marcel",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": 1719
-    },
-    {
-     "no": 11,
-     "name": "Kohout Jiří",
-     "types": [],
-     "rtg": null,
-     "nat": 1613,
-     "fide": 1745
-    },
-    {
-     "no": 12,
-     "name": "Bergmann Jiří",
-     "types": [],
-     "rtg": null,
-     "nat": 1705,
-     "fide": 1739
-    },
-    {
-     "no": 13,
-     "name": "Hodík Petr",
-     "types": [],
-     "rtg": null,
-     "nat": 1617,
-     "fide": null
-    },
-    {
-     "no": 14,
-     "name": "Franěk Antonín",
-     "types": [],
-     "rtg": null,
-     "nat": 1423,
-     "fide": 1633
-    },
-    {
-     "no": 15,
-     "name": "Bouzek Tomáš",
-     "types": [],
-     "rtg": null,
-     "nat": 1477,
-     "fide": null
-    },
-    {
-     "no": 16,
-     "name": "Chlumský Petr",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": 1767
     }
    ]
   },
@@ -1017,6 +1017,140 @@
    ]
   },
   {
+   "name": "KD Chemie Sokolov A",
+   "captain": "Zbořil Jaroslav",
+   "players": [
+    {
+     "no": 1,
+     "name": "Zbořil Jaroslav",
+     "types": [
+      "K"
+     ],
+     "rtg": null,
+     "nat": 1882,
+     "fide": 1955
+    },
+    {
+     "no": 2,
+     "name": "Toncar Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1813,
+     "fide": 1882
+    },
+    {
+     "no": 3,
+     "name": "Radics Robert",
+     "types": [],
+     "rtg": null,
+     "nat": 1756,
+     "fide": 1837
+    },
+    {
+     "no": 4,
+     "name": "Klímek Petr",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1822,
+     "fide": 1817
+    },
+    {
+     "no": 5,
+     "name": "Vávra David",
+     "types": [],
+     "rtg": null,
+     "nat": 1669,
+     "fide": 1807
+    },
+    {
+     "no": 6,
+     "name": "Bulka Ondřej",
+     "types": [],
+     "rtg": null,
+     "nat": 1510,
+     "fide": 1658
+    },
+    {
+     "no": 7,
+     "name": "Šteinfeld Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1718,
+     "fide": 1852
+    },
+    {
+     "no": 8,
+     "name": "Pešek Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1813,
+     "fide": 1820
+    },
+    {
+     "no": 9,
+     "name": "Pittermann Jan",
+     "types": [
+      "ZK"
+     ],
+     "rtg": null,
+     "nat": 1621,
+     "fide": 1785
+    },
+    {
+     "no": 10,
+     "name": "Kindl František",
+     "types": [],
+     "rtg": null,
+     "nat": 1754,
+     "fide": 1822
+    },
+    {
+     "no": 11,
+     "name": "Jacko Pavel",
+     "types": [],
+     "rtg": null,
+     "nat": 1546,
+     "fide": 1686
+    },
+    {
+     "no": 12,
+     "name": "Wiedermann Jan",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1644,
+     "fide": 1776
+    },
+    {
+     "no": 13,
+     "name": "Flam Miroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1767,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Tejček Bohumil",
+     "types": [],
+     "rtg": null,
+     "nat": 1434,
+     "fide": 1647
+    },
+    {
+     "no": 15,
+     "name": "Koutecký Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1533,
+     "fide": 1744
+    }
+   ]
+  },
+  {
    "name": "TJ Sokol Teplá A",
    "captain": "Klepal Martin",
    "players": [
@@ -1183,140 +1317,6 @@
      "rtg": null,
      "nat": null,
      "fide": null
-    }
-   ]
-  },
-  {
-   "name": "KD Chemie Sokolov A",
-   "captain": "Zbořil Jaroslav",
-   "players": [
-    {
-     "no": 1,
-     "name": "Zbořil Jaroslav",
-     "types": [
-      "K"
-     ],
-     "rtg": null,
-     "nat": 1882,
-     "fide": 1955
-    },
-    {
-     "no": 2,
-     "name": "Toncar Jan",
-     "types": [],
-     "rtg": null,
-     "nat": 1813,
-     "fide": 1882
-    },
-    {
-     "no": 3,
-     "name": "Radics Robert",
-     "types": [],
-     "rtg": null,
-     "nat": 1756,
-     "fide": 1837
-    },
-    {
-     "no": 4,
-     "name": "Klímek Petr",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": 1822,
-     "fide": 1817
-    },
-    {
-     "no": 5,
-     "name": "Vávra David",
-     "types": [],
-     "rtg": null,
-     "nat": 1669,
-     "fide": 1807
-    },
-    {
-     "no": 6,
-     "name": "Bulka Ondřej",
-     "types": [],
-     "rtg": null,
-     "nat": 1510,
-     "fide": 1658
-    },
-    {
-     "no": 7,
-     "name": "Šteinfeld Jan",
-     "types": [],
-     "rtg": null,
-     "nat": 1718,
-     "fide": 1852
-    },
-    {
-     "no": 8,
-     "name": "Pešek Petr",
-     "types": [],
-     "rtg": null,
-     "nat": 1813,
-     "fide": 1820
-    },
-    {
-     "no": 9,
-     "name": "Pittermann Jan",
-     "types": [
-      "ZK"
-     ],
-     "rtg": null,
-     "nat": 1621,
-     "fide": 1785
-    },
-    {
-     "no": 10,
-     "name": "Kindl František",
-     "types": [],
-     "rtg": null,
-     "nat": 1754,
-     "fide": 1822
-    },
-    {
-     "no": 11,
-     "name": "Jacko Pavel",
-     "types": [],
-     "rtg": null,
-     "nat": 1546,
-     "fide": 1686
-    },
-    {
-     "no": 12,
-     "name": "Wiedermann Jan",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": 1644,
-     "fide": 1776
-    },
-    {
-     "no": 13,
-     "name": "Flam Miroslav",
-     "types": [],
-     "rtg": null,
-     "nat": 1767,
-     "fide": null
-    },
-    {
-     "no": 14,
-     "name": "Tejček Bohumil",
-     "types": [],
-     "rtg": null,
-     "nat": 1434,
-     "fide": 1647
-    },
-    {
-     "no": 15,
-     "name": "Koutecký Jiří",
-     "types": [],
-     "rtg": null,
-     "nat": 1533,
-     "fide": 1744
     }
    ]
   },
