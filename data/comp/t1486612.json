@@ -16,44 +16,49 @@
    "players": [
     {
      "no": 1,
+     "id": 54350,
      "name": "Burel Jan",
      "types": [
       "V"
      ],
      "rtg": null,
-     "nat": 1843,
-     "fide": 1896
+     "nat": 1856,
+     "fide": 1904
     },
     {
      "no": 2,
+     "id": 28294,
      "name": "Polanský Jiří",
      "types": [],
      "rtg": null,
      "nat": 1771,
-     "fide": 1861
+     "fide": 1864
     },
     {
      "no": 3,
+     "id": 52923,
      "name": "Brychta David",
      "types": [
       "V"
      ],
      "rtg": null,
-     "nat": 1624,
-     "fide": 1736
+     "nat": 1594,
+     "fide": 1734
     },
     {
      "no": 4,
+     "id": 48548,
      "name": "Stejskal Jakub",
      "types": [
       "V"
      ],
      "rtg": null,
-     "nat": 1688,
-     "fide": 1790
+     "nat": 1689,
+     "fide": 1784
     },
     {
      "no": 5,
+     "id": 35534,
      "name": "Daniel Michal",
      "types": [
       "ZK"
@@ -64,6 +69,7 @@
     },
     {
      "no": 6,
+     "id": 38831,
      "name": "Diviš Jan",
      "types": [
       "K"
@@ -74,50 +80,56 @@
     },
     {
      "no": 7,
+     "id": 54351,
      "name": "Burel Jiří",
      "types": [
       "V"
      ],
      "rtg": null,
-     "nat": 1624,
-     "fide": 1812
+     "nat": 1661,
+     "fide": 1824
     },
     {
      "no": 8,
+     "id": 56403,
      "name": "Fiala Tomáš",
      "types": [
       "V"
      ],
      "rtg": null,
-     "nat": 1506,
-     "fide": 1800
+     "nat": 1693,
+     "fide": 1794
     },
     {
      "no": 9,
+     "id": 56726,
      "name": "Štěpnička Filip",
      "types": [],
      "rtg": null,
-     "nat": 1497,
-     "fide": 1711
+     "nat": 1659,
+     "fide": 1692
     },
     {
      "no": 10,
+     "id": 52922,
      "name": "Brychta Adam",
      "types": [],
      "rtg": null,
-     "nat": 1456,
+     "nat": 1442,
      "fide": 1581
     },
     {
      "no": 11,
+     "id": 56408,
      "name": "Vaňoušek Zdeněk",
      "types": [],
      "rtg": null,
-     "nat": 1490,
+     "nat": 1326,
      "fide": 1601
     },
     {
      "no": 12,
+     "id": 30067,
      "name": "Palovčík Jiří",
      "types": [],
      "rtg": null,
@@ -126,6 +138,7 @@
     },
     {
      "no": 13,
+     "id": 47340,
      "name": "Procházka Petr",
      "types": [],
      "rtg": null,
@@ -134,6 +147,7 @@
     },
     {
      "no": 14,
+     "id": 7927,
      "name": "Marek Aleš",
      "types": [],
      "rtg": null,
@@ -142,14 +156,16 @@
     },
     {
      "no": 15,
+     "id": 56406,
      "name": "Mourycová Iva",
      "types": [],
      "rtg": null,
-     "nat": 1133,
-     "fide": 1442
+     "nat": 1208,
+     "fide": 1468
     },
     {
      "no": 16,
+     "id": 51978,
      "name": "Mourycová Soňa",
      "types": [],
      "rtg": null,
@@ -158,6 +174,7 @@
     },
     {
      "no": 17,
+     "id": 59815,
      "name": "Jaroš Vojtěch",
      "types": [],
      "rtg": null,
@@ -166,6 +183,7 @@
     },
     {
      "no": 18,
+     "id": 60866,
      "name": "Hlaváček Vít",
      "types": [],
      "rtg": null,
@@ -174,6 +192,7 @@
     },
     {
      "no": 19,
+     "id": 61547,
      "name": "Havlíček Vojtěch",
      "types": [],
      "rtg": null,
@@ -182,10 +201,11 @@
     },
     {
      "no": 20,
+     "id": 61509,
      "name": "Vrba Václav",
      "types": [],
      "rtg": null,
-     "nat": null,
+     "nat": 1168,
      "fide": null
     }
    ]
@@ -196,14 +216,16 @@
    "players": [
     {
      "no": 1,
+     "id": 53513,
      "name": "Kavanová Anežka",
      "types": [],
      "rtg": null,
-     "nat": 1630,
-     "fide": 1856
+     "nat": 1765,
+     "fide": 1899
     },
     {
      "no": 2,
+     "id": 40765,
      "name": "Richter Rudolf",
      "types": [],
      "rtg": null,
@@ -212,6 +234,7 @@
     },
     {
      "no": 3,
+     "id": 20290,
      "name": "Šťáva Zdeněk",
      "types": [
       "K"
@@ -222,6 +245,7 @@
     },
     {
      "no": 4,
+     "id": 44196,
      "name": "Šťávová Markéta",
      "types": [],
      "rtg": null,
@@ -230,24 +254,27 @@
     },
     {
      "no": 5,
+     "id": 56957,
      "name": "Kukla Antonín",
      "types": [],
      "rtg": null,
-     "nat": 1380,
+     "nat": 1517,
      "fide": 1606
     },
     {
      "no": 6,
+     "id": 37821,
      "name": "Zeman Jan",
      "types": [
       "H"
      ],
      "rtg": null,
      "nat": 1538,
-     "fide": 1734
+     "fide": 1725
     },
     {
      "no": 7,
+     "id": 44195,
      "name": "Šťávová Helena",
      "types": [],
      "rtg": null,
@@ -256,6 +283,7 @@
     },
     {
      "no": 8,
+     "id": 52798,
      "name": "Štěpánek Matyáš",
      "types": [
       "H"
@@ -266,6 +294,7 @@
     },
     {
      "no": 9,
+     "id": 2883,
      "name": "Horák Miroslav",
      "types": [],
      "rtg": null,
@@ -274,14 +303,16 @@
     },
     {
      "no": 10,
+     "id": 35726,
      "name": "Richterová Nataša",
      "types": [],
      "rtg": null,
-     "nat": 1353,
+     "nat": 1336,
      "fide": 1498
     },
     {
      "no": 11,
+     "id": 58993,
      "name": "Plocek Šimon",
      "types": [
       "H"
@@ -292,14 +323,16 @@
     },
     {
      "no": 12,
+     "id": 53514,
      "name": "Kavanová Valentýna",
      "types": [],
      "rtg": null,
-     "nat": 1421,
+     "nat": 1430,
      "fide": 1625
     },
     {
      "no": 13,
+     "id": 44670,
      "name": "Žaža David",
      "types": [],
      "rtg": null,
@@ -308,14 +341,16 @@
     },
     {
      "no": 14,
+     "id": 45411,
      "name": "Šťávová Lucie",
      "types": [],
      "rtg": null,
-     "nat": 1208,
+     "nat": 1254,
      "fide": 1434
     },
     {
      "no": 15,
+     "id": 49128,
      "name": "Křivánek Matěj",
      "types": [],
      "rtg": null,
@@ -324,6 +359,7 @@
     },
     {
      "no": 16,
+     "id": 57269,
      "name": "Kavan Jan",
      "types": [],
      "rtg": null,
@@ -338,78 +374,87 @@
    "players": [
     {
      "no": 1,
+     "id": 1245,
      "name": "Celý Jaroslav",
      "types": [
       "V"
      ],
      "rtg": null,
      "nat": 1889,
-     "fide": 1953
+     "fide": 1945
     },
     {
      "no": 2,
+     "id": 756,
      "name": "Siebenbürger Vlastimil",
      "types": [
       "V"
      ],
      "rtg": null,
-     "nat": 1782,
+     "nat": 1757,
      "fide": 1842
     },
     {
      "no": 3,
+     "id": 3668,
      "name": "Kořínková Eva",
      "types": [
       "V"
      ],
      "rtg": null,
-     "nat": 1808,
+     "nat": 1778,
      "fide": 1862
     },
     {
      "no": 4,
+     "id": 6973,
      "name": "Svoboda Ivo",
      "types": [],
      "rtg": null,
-     "nat": 1860,
+     "nat": 1793,
      "fide": 1820
     },
     {
      "no": 5,
+     "id": 2591,
      "name": "Obůrka Vladislav",
      "types": [
       "K"
      ],
      "rtg": null,
-     "nat": 1627,
-     "fide": 1781
+     "nat": 1626,
+     "fide": 1775
     },
     {
      "no": 6,
+     "id": 275,
      "name": "Pavliš Jaromír",
      "types": [],
      "rtg": null,
-     "nat": 1753,
+     "nat": 1743,
      "fide": 1844
     },
     {
      "no": 7,
+     "id": 36792,
      "name": "Prášil Pavel",
      "types": [],
      "rtg": null,
      "nat": 1635,
-     "fide": 1777
+     "fide": 1780
     },
     {
      "no": 8,
+     "id": 2449,
      "name": "Kodys Stanislav",
      "types": [],
      "rtg": null,
-     "nat": 1573,
+     "nat": 1554,
      "fide": 1725
     },
     {
      "no": 9,
+     "id": 3063,
      "name": "Petr Luboš",
      "types": [
       "V",
@@ -421,6 +466,7 @@
     },
     {
      "no": 10,
+     "id": 12118,
      "name": "Pelikán Petr",
      "types": [
       "V"
@@ -431,6 +477,7 @@
     },
     {
      "no": 11,
+     "id": 3928,
      "name": "Smejkal Mojmír",
      "types": [],
      "rtg": null,
@@ -439,6 +486,7 @@
     },
     {
      "no": 12,
+     "id": 3501,
      "name": "Straka Miloslav",
      "types": [],
      "rtg": null,
@@ -447,6 +495,7 @@
     },
     {
      "no": 13,
+     "id": 56295,
      "name": "Fišerová Petra",
      "types": [],
      "rtg": null,
@@ -455,6 +504,7 @@
     },
     {
      "no": 14,
+     "id": 47621,
      "name": "Zástěra Josef",
      "types": [],
      "rtg": null,
@@ -463,14 +513,16 @@
     },
     {
      "no": 15,
+     "id": 62704,
      "name": "Lorenc Matěj",
      "types": [],
      "rtg": null,
-     "nat": null,
-     "fide": 1547
+     "nat": 1077,
+     "fide": 1525
     },
     {
      "no": 16,
+     "id": 57628,
      "name": "Skalník Jakub",
      "types": [],
      "rtg": null,
@@ -485,66 +537,73 @@
    "players": [
     {
      "no": 1,
+     "id": 48203,
      "name": "Bártová Hana",
      "types": [
       "V"
      ],
      "rtg": null,
-     "nat": 1770,
-     "fide": 1792
+     "nat": 1709,
+     "fide": 1820
     },
     {
      "no": 2,
+     "id": 48214,
      "name": "Kocman Patrik",
      "types": [
       "V"
      ],
      "rtg": null,
-     "nat": 1788,
-     "fide": 1828
+     "nat": 1754,
+     "fide": 1833
     },
     {
      "no": 3,
+     "id": 16512,
      "name": "Linhart Jaroslav",
      "types": [
       "V"
      ],
      "rtg": null,
      "nat": 1817,
-     "fide": 1837
+     "fide": 1830
     },
     {
      "no": 4,
+     "id": 3490,
      "name": "Holata Miroslav",
      "types": [
       "V"
      ],
      "rtg": null,
-     "nat": 1683,
-     "fide": 1732
+     "nat": 1690,
+     "fide": 1747
     },
     {
      "no": 5,
+     "id": 48030,
      "name": "Dlasek Ján",
      "types": [
       "V"
      ],
      "rtg": null,
      "nat": 1646,
-     "fide": 1781
+     "fide": 1775
     },
     {
      "no": 6,
+     "id": 7022,
      "name": "Trčka Bohdan",
      "types": [
       "H"
      ],
      "rtg": null,
-     "nat": 1386,
+     "nat": 1336,
      "fide": 1587
     },
     {
      "no": 7,
+     "id": 9399,
      "name": "Hrančík Martin",
      "types": [
       "K"
@@ -555,6 +614,7 @@
     },
     {
      "no": 8,
+     "id": 44932,
      "name": "Havelka Vladislav",
      "types": [],
      "rtg": null,
@@ -563,6 +623,7 @@
     },
     {
      "no": 9,
+     "id": 54389,
      "name": "Jirák Vojtěch",
      "types": [],
      "rtg": null,
@@ -571,6 +632,7 @@
     },
     {
      "no": 10,
+     "id": 1246,
      "name": "Jelínek Václav",
      "types": [
       "H"
@@ -581,16 +643,18 @@
     },
     {
      "no": 11,
+     "id": 57522,
      "name": "Klement Tomáš",
      "types": [
       "ZK"
      ],
      "rtg": null,
-     "nat": 1315,
+     "nat": 1321,
      "fide": 1627
     },
     {
      "no": 12,
+     "id": 55257,
      "name": "Žáček Radim",
      "types": [],
      "rtg": null,
@@ -599,6 +663,7 @@
     },
     {
      "no": 13,
+     "id": 57523,
      "name": "Ishchuk Oleksandr",
      "types": [],
      "rtg": null,
@@ -607,6 +672,7 @@
     },
     {
      "no": 14,
+     "id": 39844,
      "name": "Havel Jiří",
      "types": [],
      "rtg": null,
@@ -615,6 +681,7 @@
     },
     {
      "no": 15,
+     "id": 62162,
      "name": "Kováč Martin",
      "types": [],
      "rtg": null,
@@ -623,14 +690,16 @@
     },
     {
      "no": 16,
+     "id": 54390,
      "name": "Klement Viktor",
      "types": [],
      "rtg": null,
-     "nat": null,
+     "nat": 1067,
      "fide": 1408
     },
     {
      "no": 17,
+     "id": 60778,
      "name": "Hyrš Jaroslav",
      "types": [],
      "rtg": null,
@@ -639,6 +708,7 @@
     },
     {
      "no": 18,
+     "id": 60779,
      "name": "Hyrš Michael",
      "types": [],
      "rtg": null,
@@ -647,14 +717,16 @@
     },
     {
      "no": 19,
+     "id": 57992,
      "name": "Sommer Kryštof",
      "types": [],
      "rtg": null,
-     "nat": null,
+     "nat": 1029,
      "fide": null
     },
     {
      "no": 20,
+     "id": 62274,
      "name": "Janáček Josef",
      "types": [],
      "rtg": null,
@@ -669,24 +741,27 @@
    "players": [
     {
      "no": 1,
+     "id": 2464,
      "name": "Pavlíček Robert",
      "types": [
       "H"
      ],
      "rtg": null,
      "nat": 1941,
-     "fide": 1997
+     "fide": 2004
     },
     {
      "no": 2,
+     "id": 39618,
      "name": "Vyhnálek Jan",
      "types": [],
      "rtg": null,
      "nat": 1754,
-     "fide": 1781
+     "fide": 1783
     },
     {
      "no": 3,
+     "id": 17442,
      "name": "Vacek Aleš",
      "types": [],
      "rtg": null,
@@ -695,6 +770,7 @@
     },
     {
      "no": 4,
+     "id": 6923,
      "name": "Slavík Pavel",
      "types": [
       "K"
@@ -705,22 +781,25 @@
     },
     {
      "no": 5,
+     "id": 58261,
      "name": "Mazanec David",
      "types": [],
      "rtg": null,
-     "nat": 1389,
+     "nat": 1405,
      "fide": null
     },
     {
      "no": 6,
+     "id": 57270,
      "name": "Hejsek Radim",
      "types": [],
      "rtg": null,
-     "nat": 1526,
-     "fide": 1772
+     "nat": 1562,
+     "fide": 1819
     },
     {
      "no": 7,
+     "id": 44372,
      "name": "Ecler Matěj",
      "types": [],
      "rtg": null,
@@ -729,6 +808,7 @@
     },
     {
      "no": 8,
+     "id": 59512,
      "name": "Říčan Pavel",
      "types": [],
      "rtg": null,
@@ -737,6 +817,7 @@
     },
     {
      "no": 9,
+     "id": 8607,
      "name": "Macháček Vladislav",
      "types": [],
      "rtg": null,
@@ -745,14 +826,16 @@
     },
     {
      "no": 10,
+     "id": 57987,
      "name": "Balaj Jakub",
      "types": [],
      "rtg": null,
-     "nat": 1194,
-     "fide": 1534
+     "nat": 1240,
+     "fide": 1541
     },
     {
      "no": 11,
+     "id": 61705,
      "name": "Droňak Andrej Romanovič",
      "types": [],
      "rtg": null,
@@ -761,6 +844,7 @@
     },
     {
      "no": 12,
+     "id": 61703,
      "name": "Kiko Pavel",
      "types": [],
      "rtg": null,
@@ -769,6 +853,7 @@
     },
     {
      "no": 13,
+     "id": 59383,
      "name": "Kiko Samuel",
      "types": [],
      "rtg": null,
@@ -777,6 +862,7 @@
     },
     {
      "no": 14,
+     "id": 52592,
      "name": "Havel Vojtěch",
      "types": [],
      "rtg": null,
@@ -785,6 +871,7 @@
     },
     {
      "no": 15,
+     "id": 62104,
      "name": "Nováček Jakub",
      "types": [],
      "rtg": null,
@@ -793,6 +880,7 @@
     },
     {
      "no": 16,
+     "id": 63703,
      "name": "Petera Antonín",
      "types": [],
      "rtg": null,
@@ -807,16 +895,18 @@
    "players": [
     {
      "no": 1,
+     "id": 61112,
      "name": "Dohnal Pavel",
      "types": [
       "V"
      ],
      "rtg": null,
-     "nat": 1757,
-     "fide": 1957
+     "nat": 1789,
+     "fide": 1971
     },
     {
      "no": 2,
+     "id": 3696,
      "name": "Mezlík Stanislav",
      "types": [
       "V"
@@ -827,14 +917,16 @@
     },
     {
      "no": 3,
+     "id": 38323,
      "name": "Halbrštat Petr",
      "types": [],
      "rtg": null,
-     "nat": 1556,
+     "nat": 1564,
      "fide": 1695
     },
     {
      "no": 4,
+     "id": 3771,
      "name": "Štork Rostislav",
      "types": [],
      "rtg": null,
@@ -843,14 +935,16 @@
     },
     {
      "no": 5,
+     "id": 14405,
      "name": "Svoboda František",
      "types": [],
      "rtg": null,
-     "nat": 1669,
+     "nat": 1715,
      "fide": 1800
     },
     {
      "no": 6,
+     "id": 7631,
      "name": "Ludvík Lukáš",
      "types": [
       "K"
@@ -861,6 +955,7 @@
     },
     {
      "no": 7,
+     "id": 9367,
      "name": "Palát František",
      "types": [],
      "rtg": null,
@@ -869,6 +964,7 @@
     },
     {
      "no": 8,
+     "id": 59602,
      "name": "Hanák Michael",
      "types": [],
      "rtg": null,
@@ -877,6 +973,7 @@
     },
     {
      "no": 9,
+     "id": 40261,
      "name": "Klempar Miloslav",
      "types": [],
      "rtg": null,
@@ -885,6 +982,7 @@
     },
     {
      "no": 10,
+     "id": 47972,
      "name": "Novák Pavel",
      "types": [
       "ZK"
@@ -895,22 +993,25 @@
     },
     {
      "no": 11,
+     "id": 57444,
      "name": "Peštál Richard",
      "types": [],
      "rtg": null,
-     "nat": 1165,
+     "nat": 1308,
      "fide": 1523
     },
     {
      "no": 12,
+     "id": 61831,
      "name": "Peštál David",
      "types": [],
      "rtg": null,
-     "nat": null,
+     "nat": 1295,
      "fide": 1627
     },
     {
      "no": 13,
+     "id": 55403,
      "name": "Klempar Jan",
      "types": [],
      "rtg": null,
@@ -919,6 +1020,7 @@
     },
     {
      "no": 14,
+     "id": 54620,
      "name": "Dobrovolný Michal",
      "types": [],
      "rtg": null,
@@ -927,6 +1029,7 @@
     },
     {
      "no": 15,
+     "id": 41881,
      "name": "Svoboda Kamil",
      "types": [],
      "rtg": null,
@@ -935,6 +1038,7 @@
     },
     {
      "no": 16,
+     "id": 57447,
      "name": "Mareš Bohumil",
      "types": [],
      "rtg": null,
@@ -949,16 +1053,18 @@
    "players": [
     {
      "no": 1,
+     "id": 56312,
      "name": "Holatová Irena",
      "types": [
       "V"
      ],
      "rtg": null,
-     "nat": 1835,
-     "fide": 1868
+     "nat": 1803,
+     "fide": 1855
     },
     {
      "no": 2,
+     "id": 2275,
      "name": "Holata Robert",
      "types": [],
      "rtg": null,
@@ -967,30 +1073,34 @@
     },
     {
      "no": 3,
+     "id": 2196,
      "name": "Fiala Zdeněk",
      "types": [],
      "rtg": null,
      "nat": 1865,
-     "fide": 1910
+     "fide": 1907
     },
     {
      "no": 4,
+     "id": 4155,
      "name": "Brož Pavel",
      "types": [],
      "rtg": null,
-     "nat": 1777,
-     "fide": 1857
+     "nat": 1774,
+     "fide": 1859
     },
     {
      "no": 5,
+     "id": 61915,
      "name": "Moravec Václav",
      "types": [],
      "rtg": null,
-     "nat": 1395,
-     "fide": 1700
+     "nat": 1432,
+     "fide": 1688
     },
     {
      "no": 6,
+     "id": 44857,
      "name": "Zvolánek Tomáš",
      "types": [],
      "rtg": null,
@@ -999,6 +1109,7 @@
     },
     {
      "no": 7,
+     "id": 3828,
      "name": "Volanin Jaromír",
      "types": [
       "K"
@@ -1009,6 +1120,7 @@
     },
     {
      "no": 8,
+     "id": 6827,
      "name": "Procházka Jaroslav",
      "types": [],
      "rtg": null,
@@ -1017,6 +1129,7 @@
     },
     {
      "no": 9,
+     "id": 39671,
      "name": "Volaninová Šárka",
      "types": [],
      "rtg": null,
@@ -1025,14 +1138,16 @@
     },
     {
      "no": 10,
+     "id": 3810,
      "name": "Brožová Renáta",
      "types": [],
      "rtg": null,
-     "nat": 1644,
+     "nat": 1642,
      "fide": 1784
     },
     {
      "no": 11,
+     "id": 41512,
      "name": "Homolková Ivana",
      "types": [],
      "rtg": null,
@@ -1041,70 +1156,79 @@
     },
     {
      "no": 12,
+     "id": 54300,
      "name": "Zvolánek Vojtěch",
      "types": [],
      "rtg": null,
-     "nat": 1277,
-     "fide": 1471
+     "nat": 1371,
+     "fide": 1523
     },
     {
      "no": 13,
+     "id": 54281,
      "name": "Hroch Pavel",
      "types": [],
      "rtg": null,
-     "nat": 1263,
-     "fide": 1481
+     "nat": 1222,
+     "fide": 1478
     },
     {
      "no": 14,
+     "id": 61192,
      "name": "Bílek Štěpán",
      "types": [],
      "rtg": null,
-     "nat": 1401,
-     "fide": 1567
+     "nat": 1432,
+     "fide": 1583
     },
     {
      "no": 15,
+     "id": 56413,
      "name": "Havlů Jakub",
      "types": [],
      "rtg": null,
-     "nat": 1169,
-     "fide": 1401
+     "nat": 1184,
+     "fide": 1431
     },
     {
      "no": 16,
+     "id": 52998,
      "name": "Novotný Adam",
      "types": [],
      "rtg": null,
      "nat": 1349,
-     "fide": 1549
+     "fide": 1536
     },
     {
      "no": 17,
+     "id": 49467,
      "name": "Brož Pavel",
      "types": [],
      "rtg": null,
-     "nat": 1325,
-     "fide": 1563
+     "nat": 1365,
+     "fide": 1560
     },
     {
      "no": 18,
+     "id": 62684,
      "name": "Čelanský Jindřich",
      "types": [],
      "rtg": null,
-     "nat": null,
+     "nat": 1030,
      "fide": null
     },
     {
      "no": 19,
+     "id": 62669,
      "name": "Dolejší Jakub",
      "types": [],
      "rtg": null,
-     "nat": null,
+     "nat": 1009,
      "fide": null
     },
     {
      "no": 20,
+     "id": 62427,
      "name": "Vaňková Šárka",
      "types": [],
      "rtg": null,
@@ -1119,26 +1243,29 @@
    "players": [
     {
      "no": 1,
+     "id": 54677,
      "name": "Závorka Vojtěch",
      "types": [
       "V"
      ],
      "rtg": null,
-     "nat": 1856,
-     "fide": 1997
+     "nat": 1907,
+     "fide": 1958
     },
     {
      "no": 2,
+     "id": 35815,
      "name": "Sýkora Milan",
      "types": [
       "V"
      ],
      "rtg": null,
-     "nat": 1910,
+     "nat": 1911,
      "fide": 1983
     },
     {
      "no": 3,
+     "id": 43370,
      "name": "Vokoun Tomáš",
      "types": [],
      "rtg": null,
@@ -1147,24 +1274,27 @@
     },
     {
      "no": 4,
+     "id": 59410,
      "name": "Prosecký Mojmír",
      "types": [
       "V"
      ],
      "rtg": null,
-     "nat": 1684,
+     "nat": 1682,
      "fide": 1780
     },
     {
      "no": 5,
+     "id": 61484,
      "name": "Balabán Jiří",
      "types": [],
      "rtg": null,
-     "nat": 1396,
-     "fide": 1585
+     "nat": 1619,
+     "fide": 1598
     },
     {
      "no": 6,
+     "id": 6172,
      "name": "Fišar Josef",
      "types": [],
      "rtg": null,
@@ -1173,6 +1303,7 @@
     },
     {
      "no": 7,
+     "id": 39914,
      "name": "Kuda Pavel",
      "types": [
       "K"
@@ -1183,44 +1314,49 @@
     },
     {
      "no": 8,
+     "id": 61725,
      "name": "Jaroš Dominik",
      "types": [],
      "rtg": null,
-     "nat": 1305,
+     "nat": 1271,
      "fide": null
     },
     {
      "no": 9,
+     "id": 46593,
      "name": "Sklář Petr",
      "types": [
       "V"
      ],
      "rtg": null,
-     "nat": 1710,
-     "fide": 1770
+     "nat": 1673,
+     "fide": 1765
     },
     {
      "no": 10,
+     "id": 5776,
      "name": "Kulhánek Jaromír",
      "types": [
       "V"
      ],
      "rtg": null,
      "nat": 1566,
-     "fide": 1698
+     "fide": 1729
     },
     {
      "no": 11,
+     "id": 28186,
      "name": "Sem Petr",
      "types": [
       "ZK"
      ],
      "rtg": null,
-     "nat": 1297,
+     "nat": 1275,
      "fide": 1536
     },
     {
      "no": 12,
+     "id": 37105,
      "name": "Zelenka Petr",
      "types": [],
      "rtg": null,
@@ -1229,6 +1365,7 @@
     },
     {
      "no": 13,
+     "id": 40762,
      "name": "Zelenka Adam",
      "types": [],
      "rtg": null,
@@ -1237,6 +1374,7 @@
     },
     {
      "no": 14,
+     "id": 35817,
      "name": "Hudeček Jan",
      "types": [],
      "rtg": null,
@@ -1245,14 +1383,16 @@
     },
     {
      "no": 15,
+     "id": 60753,
      "name": "Balabán Jiří",
      "types": [],
      "rtg": null,
-     "nat": null,
+     "nat": 1042,
      "fide": null
     },
     {
      "no": 16,
+     "id": 6664,
      "name": "Mička Josef",
      "types": [],
      "rtg": null,
@@ -1261,6 +1401,7 @@
     },
     {
      "no": 17,
+     "id": 62837,
      "name": "Doležal Vojtěch Lubomír",
      "types": [],
      "rtg": null,
@@ -1269,6 +1410,7 @@
     },
     {
      "no": 18,
+     "id": 62705,
      "name": "Starý Karel",
      "types": [],
      "rtg": null,
@@ -1283,6 +1425,7 @@
    "players": [
     {
      "no": 1,
+     "id": 26020,
      "name": "Sobotka Martin",
      "types": [],
      "rtg": null,
@@ -1291,14 +1434,16 @@
     },
     {
      "no": 2,
+     "id": 4170,
      "name": "Kraus Jan",
      "types": [],
      "rtg": null,
      "nat": 1448,
-     "fide": 1562
+     "fide": 1536
     },
     {
      "no": 3,
+     "id": 26021,
      "name": "Španěl Jan",
      "types": [],
      "rtg": null,
@@ -1307,6 +1452,7 @@
     },
     {
      "no": 4,
+     "id": 59693,
      "name": "Feke Kryštof",
      "types": [],
      "rtg": null,
@@ -1315,6 +1461,7 @@
     },
     {
      "no": 5,
+     "id": 30068,
      "name": "Vrzáček Jaroslav",
      "types": [],
      "rtg": null,
@@ -1323,6 +1470,7 @@
     },
     {
      "no": 6,
+     "id": 47852,
      "name": "Křišťál Bronislav",
      "types": [],
      "rtg": null,
@@ -1331,6 +1479,7 @@
     },
     {
      "no": 7,
+     "id": 44907,
      "name": "Makovec Jaroslav",
      "types": [],
      "rtg": null,
@@ -1339,6 +1488,7 @@
     },
     {
      "no": 8,
+     "id": 57354,
      "name": "Škrhák Libor",
      "types": [],
      "rtg": null,
@@ -1347,6 +1497,7 @@
     },
     {
      "no": 9,
+     "id": 4012,
      "name": "Velc Luděk",
      "types": [
       "K"
@@ -1357,6 +1508,7 @@
     },
     {
      "no": 10,
+     "id": 4262,
      "name": "Cháb Karel",
      "types": [
       "ZK"
@@ -1367,6 +1519,7 @@
     },
     {
      "no": 11,
+     "id": 32477,
      "name": "Novotný Petr",
      "types": [],
      "rtg": null,
@@ -1375,6 +1528,7 @@
     },
     {
      "no": 12,
+     "id": 52899,
      "name": "Hadrava Martin",
      "types": [],
      "rtg": null,
@@ -1383,6 +1537,7 @@
     },
     {
      "no": 13,
+     "id": 63460,
      "name": "Šimák David",
      "types": [],
      "rtg": null,
@@ -1391,6 +1546,7 @@
     },
     {
      "no": 14,
+     "id": 8291,
      "name": "Velc Radovan",
      "types": [],
      "rtg": null,
@@ -1399,6 +1555,7 @@
     },
     {
      "no": 15,
+     "id": 32655,
      "name": "Lízal Radek",
      "types": [],
      "rtg": null,
@@ -1413,6 +1570,7 @@
    "players": [
     {
      "no": 1,
+     "id": 34561,
      "name": "Bachan Lukáš",
      "types": [
       "ZK"
@@ -1423,6 +1581,7 @@
     },
     {
      "no": 2,
+     "id": 14411,
      "name": "Loucký Tomáš",
      "types": [],
      "rtg": null,
@@ -1431,22 +1590,25 @@
     },
     {
      "no": 3,
+     "id": 62426,
      "name": "Kašpárek Jiří",
      "types": [],
      "rtg": null,
-     "nat": null,
+     "nat": 1476,
      "fide": 1670
     },
     {
      "no": 4,
+     "id": 63145,
      "name": "Dmytriiev Vladyslav",
      "types": [],
      "rtg": null,
-     "nat": null,
+     "nat": 1354,
      "fide": 1571
     },
     {
      "no": 5,
+     "id": 44392,
      "name": "Vácha Martin",
      "types": [],
      "rtg": null,
@@ -1455,6 +1617,7 @@
     },
     {
      "no": 6,
+     "id": 4412,
      "name": "Žák Martin",
      "types": [],
      "rtg": null,
@@ -1463,26 +1626,29 @@
     },
     {
      "no": 7,
+     "id": 8974,
      "name": "Diviš Jan",
      "types": [
       "H"
      ],
      "rtg": null,
-     "nat": 1481,
+     "nat": 1466,
      "fide": 1602
     },
     {
      "no": 8,
+     "id": 32077,
      "name": "Kovács Ivan",
      "types": [
       "K"
      ],
      "rtg": null,
-     "nat": 1372,
+     "nat": 1364,
      "fide": 1594
     },
     {
      "no": 9,
+     "id": 11131,
      "name": "Kulovaný Radomír",
      "types": [],
      "rtg": null,
@@ -1491,6 +1657,7 @@
     },
     {
      "no": 10,
+     "id": 57446,
      "name": "Kulovaný Matěj",
      "types": [],
      "rtg": null,
@@ -1499,6 +1666,7 @@
     },
     {
      "no": 11,
+     "id": 62671,
      "name": "Petrecký Igor",
      "types": [],
      "rtg": null,
@@ -1507,6 +1675,7 @@
     },
     {
      "no": 12,
+     "id": 63312,
      "name": "Žatečka Josef",
      "types": [],
      "rtg": null,
@@ -1515,6 +1684,7 @@
     },
     {
      "no": 13,
+     "id": 3604,
      "name": "Kenovský Zdeněk",
      "types": [],
      "rtg": null,
@@ -1523,6 +1693,7 @@
     },
     {
      "no": 14,
+     "id": 61830,
      "name": "Zmrzlý Jan",
      "types": [],
      "rtg": null,
@@ -1531,6 +1702,7 @@
     },
     {
      "no": 15,
+     "id": 63179,
      "name": "Procházka Smil",
      "types": [],
      "rtg": null,
@@ -1539,6 +1711,7 @@
     },
     {
      "no": 16,
+     "id": 63544,
      "name": "Krejčí Vladimír",
      "types": [],
      "rtg": null,
@@ -1547,6 +1720,7 @@
     },
     {
      "no": 17,
+     "id": 57445,
      "name": "Feldbabel Tomáš",
      "types": [],
      "rtg": null,
@@ -1555,6 +1729,7 @@
     },
     {
      "no": 18,
+     "id": 61113,
      "name": "Matej Štefan",
      "types": [],
      "rtg": null,
@@ -1563,6 +1738,7 @@
     },
     {
      "no": 19,
+     "id": 63568,
      "name": "Vlna Jiří",
      "types": [],
      "rtg": null,
@@ -1571,6 +1747,7 @@
     },
     {
      "no": 20,
+     "id": 32079,
      "name": "Pokorný Alois",
      "types": [],
      "rtg": null,
