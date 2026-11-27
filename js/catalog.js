@@ -186,9 +186,15 @@ export function compareComps(a, b) {
 
 /**
  * Soutěže rozdělené do skupin pro nabídku: celostátní, celostátní mládeže, kraje (můj kraj první),
- * vlastní (přidané v zařízení), ukončené. Kraj `region` (kód) omezí kraje jen na ten jeden.
+ * vlastní (přidané v zařízení), zatím bez soupisek, ukončené. Kraj `region` (kód) omezí kraje jen na ten jeden.
  * `keep` je id soutěže, která se ukáže vždy (právě vybraná).
  */
+/** Má soutěž ve sdílených datech soupisky? Seznam nese počet družstev, stažená soutěž přímo družstva. */
+export const hasRosters = (comp) => (Array.isArray(comp?.teams) ? comp.teams.length : comp?.teamCount ?? 1) > 0;
+
+/** Kolik soutěží (neukončených i ukončených) má kraj ve sdílených datech. */
+export const regionCompCount = (comps, region) => comps.filter((c) => !c.local && c.region === region).length;
+
 export function groupCompetitions(comps, { region = '', now = new Date(), keep = '' } = {}) {
   const groups = new Map();
   const add = (key, label, c) => {
@@ -200,8 +206,14 @@ export function groupCompetitions(comps, { region = '', now = new Date(), keep =
       add('9local', 'Vlastní soutěže (jen v tomto zařízení)', c);
       continue;
     }
+    const inMyRegion = !region || c.region === region || c.region === 'CR' || c.id === keep;
     if (isFinished(c, { now })) {
-      if (!region || c.region === region || c.region === 'CR' || c.id === keep) add('9zend', 'Ukončené soutěže', c);
+      if (inMyRegion) add('9zend', 'Ukončené soutěže', c);
+      continue;
+    }
+    // soutěž je v seznamu svazu, ale soupisky ještě nezveřejnil (finále hrané na jaře): dolů, ať nepřekáží
+    if (!hasRosters(c)) {
+      if (inMyRegion) add('9wait', 'Zatím bez soupisek', c);
       continue;
     }
     const r = regionByCode(c.region);

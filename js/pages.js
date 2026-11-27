@@ -59,6 +59,9 @@ export function helpPage() {
     <p>Hotový zápis ulož tlačítkem <b>Uložit do archivu</b> na konci. Archiv je jen v tomto zařízení,
     proto si ho občas stáhni do souboru (<b>Archiv → Stáhnout zálohu</b>). Soubor jde nahrát zpátky
     na stejném nebo jiném zařízení, zápisy se sloučí bez duplicit.</p>
+    <p><b>iPhone a iPad:</b> Safari maže data webů, které týden nikdo neotevřel, a s nimi i archiv.
+    Neplatí to pro aplikaci přidanou na plochu (<b>Sdílet → Přidat na plochu</b>), proto ji tak používej
+    a zálohu stahuj i tak. Při prvním uložení do archivu aplikace požádá prohlížeč, aby její data nemazal sám.</p>
 
     <h3>Než začnete zápis používat naostro</h3>
     <p>Ověřte u řídicího orgánu soutěže, že elektronický zápis přijímá (čl. 2.4.6 soutěžního řádu:

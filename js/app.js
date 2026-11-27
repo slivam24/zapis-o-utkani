@@ -9,7 +9,7 @@ import { makeBackup, parseBackup, mergeArchive, olderThan } from './archive.js';
 import { helpPage, privacyPage } from './pages.js';
 import { encodeLink, decodeLink, hasLink } from './link.js';
 import qrcode from './vendor/qrcode.js';
-import { REGIONS, groupCompetitions, standardShort, isFinished as isFinishedComp } from './catalog.js';
+import { REGIONS, groupCompetitions, standardShort, regionCompCount, isFinished as isFinishedComp } from './catalog.js';
 
 const REPO = 'slivam24/zapis-o-utkani';
 
@@ -175,6 +175,19 @@ function showSaveWarning(failed) {
   document.body.append(b);
 }
 
+/**
+ * Požádá prohlížeč, aby data aplikace (archiv) nemazal sám, třeba při nedostatku místa nebo
+ * u Safari po týdnu bez návštěvy. Volá se až při uložení do archivu: Firefox se na to ptá
+ * uživatele a dotaz při otevření stránky by obtěžoval.
+ */
+function askPersistentStorage() {
+  try {
+    navigator.storage?.persisted?.().then((yes) => yes || navigator.storage.persist?.()).catch(() => {});
+  } catch {
+    /* prohlížeč to neumí */
+  }
+}
+
 /** Po uvolnění místa (smazání z archivu) zkusit rozpracovaný zápis uložit znovu. */
 function retrySave() {
   if ($('.store-bar')) save();
@@ -327,6 +340,16 @@ function addPanel() {
   </div>`;
 }
 
+/** Vybraný kraj nemá ve sdílených datech žádnou soutěž (Praha zveřejňuje sezónu až později). */
+function regionEmptyNote() {
+  const code = settings().region;
+  if (!code || !DATA.competitions.length || regionCompCount(DATA.competitions, code) > 0) return '';
+  const r = REGIONS.find((x) => x.code === code);
+  return `<p class="muted small-text" style="margin-top:.5rem">${esc(r?.name ?? code)}: soutěže této sezóny na chess.cz
+    zatím nejsou. Jakmile je svaz zveřejní, objeví se tu samy (data se obnovují každý pátek).
+    Do té doby jsou v nabídce celostátní soutěže${feature('addComp') ? ', nebo přidej soutěž z chess-results' : ''}.</p>`;
+}
+
 function viewZapas() {
   const c = comp();
   const teams = c?.teams ?? [];
@@ -400,7 +423,11 @@ function viewZapas() {
         ${
           teams.length
             ? ''
-            : '<p class="muted small-text">Pro tuto soutěž zatím nejsou soupisky. Názvy družstev a hráče můžeš zadat ručně.</p>'
+            : `<p class="muted small-text">${
+                c && !c.local && isLoaded(c)
+                  ? 'Svaz soupisky této soutěže zatím nezveřejnil. Jakmile budou na chess.cz, doplní se samy (data se obnovují každý pátek). Do té doby zadej družstva a hráče ručně.'
+                  : 'Pro tuto soutěž zatím nejsou soupisky. Názvy družstev a hráče můžeš zadat ručně.'
+              }</p>`
         }
         ${teamFields}
       </div>`;
@@ -418,6 +445,7 @@ function viewZapas() {
         <label class="field"><span>Soutěž</span><select data-chg="comp">${compOpts}</select></label>
         ${roundField}
       </div>
+      ${regionEmptyNote()}
       ${
         feature('addComp') || c?.local
           ? `<div class="row" style="margin-top:.6rem">
@@ -436,7 +464,9 @@ function viewZapas() {
       <h2>Datum a místo</h2>
       <div class="grid two">
         <label class="field"><span>Hráno dne</span><input type="date" data-bind="date" value="${esc(S.date)}"></label>
-        <label class="field"><span>Počet šachovnic${c ? ` (soutěž má ${c.boards})` : ''}</span>
+        <label class="field"><span>Počet šachovnic${
+          c ? ` (soutěž má ${c.boards}${c.boardsUnverified ? ', zatím odhad, upřesní se po 1. kole' : ''})` : ''
+        }</span>
           <input type="text" inputmode="numeric" data-chg="matchBoards" value="${esc(boards())}" autocomplete="off"></label>
         <label class="field"><span>Hrací místnost</span><input type="text" data-bind="venue" data-venue="1" value="${esc(S.venue)}" autocomplete="off"></label>
       </div>
@@ -917,6 +947,7 @@ function viewNastaveni() {
           .map((r) => `<option value="${r.code}" ${settings().region === r.code ? 'selected' : ''}>${esc(r.name)} (${esc(r.abbr)})</option>`)
           .join('')}
       </select></label>
+    ${regionEmptyNote()}
     <p class="muted small-text">S vybraným krajem nabídka soutěží ukáže jen celostátní soutěže a soutěže tvého kraje.
     Soutěže, jejichž poslední kolo bylo před víc než měsícem, jsou v nabídce dole mezi ukončenými.</p>
   </div>
@@ -1060,6 +1091,25 @@ function sizePad(canvas, key) {
   img.src = src;
 }
 
+/**
+ * Podpis jako PNG v rozumném rozlišení. Plátno má rozlišení displeje (telefon až 3×), ale pro zápis v PDF
+ * stačí dvojnásobek velikosti na obrazovce; menší obrázek šetří úložiště zařízení, archiv i odkaz.
+ */
+const SIG_SCALE = 2;
+const SIG_MAX_W = 800;
+function sigDataUrl(canvas) {
+  const cssW = canvas.getBoundingClientRect().width || canvas.width;
+  const k = Math.min(1, (SIG_SCALE * cssW) / canvas.width, SIG_MAX_W / canvas.width);
+  if (k >= 0.99) return canvas.toDataURL('image/png');
+  const out = document.createElement('canvas');
+  out.width = Math.max(1, Math.round(canvas.width * k));
+  out.height = Math.max(1, Math.round(canvas.height * k));
+  const ctx = out.getContext('2d');
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(canvas, 0, 0, out.width, out.height);
+  return out.toDataURL('image/png');
+}
+
 function initPad(canvas, key) {
   sizePad(canvas, key);
   const ctx = canvas.getContext('2d');
@@ -1091,7 +1141,7 @@ function initPad(canvas, key) {
   const end = () => {
     if (!drawing) return;
     drawing = false;
-    S.sig[key] = canvas.toDataURL('image/png');
+    S.sig[key] = sigDataUrl(canvas);
     save();
   };
   canvas.addEventListener('pointerup', end);
@@ -1668,6 +1718,7 @@ view.addEventListener('click', (e) => {
       S.boards = boards();
       S.compInfo = compSnapshot();
       if (!store.archiveMatch(S)) return toast('Zápis se nepodařilo uložit (plné úložiště zařízení).');
+      askPersistentStorage();
       store.rememberReferee(S.referee.name);
       store.rememberVenue(S.home.team, S.venue);
       toast('Zápis je uložený v archivu.');
