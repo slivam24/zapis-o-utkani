@@ -443,6 +443,11 @@ body.ov-open { overflow: hidden; }
   border-radius: 999px; box-shadow: 0 6px 20px rgba(0,0,0,.3); font-weight: 600; max-width: calc(100vw - 2rem);
 }
 
+/* rozpracovaný zápis se nevešel do úložiště: nahoře, aby se nepřekrýval s lištou nové verze */
+.update-bar.store-bar {
+  bottom: auto; top: calc(.6rem + env(safe-area-inset-top)); background: #b91c1c; border-radius: 14px; width: max-content;
+}
+
 /* podpis na telefonu */
 .qr-hint {
   display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;

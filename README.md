@@ -86,7 +86,9 @@ aby aplikace nestahovala soupisky celé republiky (`scripts/data_store.mjs`):
 - `data/comp/<id>.json`: jedna soutěž celá. Aplikace ji stáhne, až když se soutěž vybere. S nastaveným krajem
   si předem stáhne celostátní soutěže a soutěže kraje, takže v hrací místnosti funguje i bez internetu.
 
-Data se obnoví sama **každý pátek odpoledne** (úloha **Aktualizace soupisek**), po přidání soutěže z hlášení
+Data se obnoví sama **každý pátek odpoledne** (úloha **Aktualizace soupisek**). Úloha přitom přidá i soutěže, které
+svaz na chess.cz zveřejnil až během sezóny (Praha hraje v kalendářním roce, její soutěže se objevují později).
+Obnova se spouští také po přidání soutěže z hlášení
 a kdykoli ručně přes **Actions → Aktualizace soupisek → Run workflow**. Nový soubor se uloží jen tehdy,
 když se soupisky nebo rozlosování opravdu změnily. V aplikaci se pak projeví po otevření s internetem
 nebo tlačítkem pro obnovení dat.
@@ -190,7 +192,7 @@ jde upravit čtení v `scripts/chesscz.mjs` (chess.cz) nebo `js/parse.js` (chess
 
 ```bash
 npm install                 # jen linkedom, pro parsování HTML v Node
-npm test                    # 94 testů: logika zápisu, parser, čtečka .xlsx, přidávání soutěží, archiv, PDF, odkaz s QR
+npm test                    # 95 testů: logika zápisu, parser, čtečka .xlsx, přidávání soutěží, archiv, PDF, odkaz s QR
 npm run serve               # lokální spuštění: http://localhost:8080
 ```
 

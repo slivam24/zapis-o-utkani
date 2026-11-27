@@ -9,7 +9,7 @@ import { makeBackup, parseBackup, mergeArchive, olderThan } from './archive.js';
 import { helpPage, privacyPage } from './pages.js';
 import { encodeLink, decodeLink, hasLink } from './link.js';
 import qrcode from './vendor/qrcode.js';
-import { REGIONS, groupCompetitions, standardShort, isFinished as isFinishedComp } from './catalog.js';
+import { REGIONS, groupCompetitions, standardShort, regionCompCount, isFinished as isFinishedComp } from './catalog.js';
 
 const REPO = 'slivam24/zapis-o-utkani';
 
@@ -154,7 +154,43 @@ async function prefetchMyRegion() {
 
 function save() {
   S.updatedAt = new Date().toISOString();
-  store.saveDraft(S);
+  showSaveWarning(!store.saveDraft(S));
+}
+
+/**
+ * Když se rozpracovaný zápis nevejde do úložiště zařízení, musí to být vidět hned a pořád:
+ * po obnovení stránky by výsledky a podpisy zmizely. Lišta zmizí, jakmile se zápis zase uloží.
+ */
+function showSaveWarning(failed) {
+  const bar = $('.store-bar');
+  if (!failed) return bar?.remove();
+  if (bar) return;
+  const b = document.createElement('div');
+  b.className = 'update-bar store-bar';
+  b.setAttribute('role', 'alert');
+  b.innerHTML =
+    '<span>Zápis se nepodařilo uložit, úložiště zařízení je plné. Stránku neobnovuj, uvolni místo v archivu.</span>' +
+    '<button class="btn small" type="button">Archiv</button>';
+  $('button', b).addEventListener('click', () => goTo('archiv'));
+  document.body.append(b);
+}
+
+/**
+ * Požádá prohlížeč, aby data aplikace (archiv) nemazal sám, třeba při nedostatku místa nebo
+ * u Safari po týdnu bez návštěvy. Volá se až při uložení do archivu: Firefox se na to ptá
+ * uživatele a dotaz při otevření stránky by obtěžoval.
+ */
+function askPersistentStorage() {
+  try {
+    navigator.storage?.persisted?.().then((yes) => yes || navigator.storage.persist?.()).catch(() => {});
+  } catch {
+    /* prohlížeč to neumí */
+  }
+}
+
+/** Po uvolnění místa (smazání z archivu) zkusit rozpracovaný zápis uložit znovu. */
+function retrySave() {
+  if ($('.store-bar')) save();
 }
 
 let toastTimer;
@@ -304,6 +340,16 @@ function addPanel() {
   </div>`;
 }
 
+/** Vybraný kraj nemá ve sdílených datech žádnou soutěž (Praha zveřejňuje sezónu až později). */
+function regionEmptyNote() {
+  const code = settings().region;
+  if (!code || !DATA.competitions.length || regionCompCount(DATA.competitions, code) > 0) return '';
+  const r = REGIONS.find((x) => x.code === code);
+  return `<p class="muted small-text" style="margin-top:.5rem">${esc(r?.name ?? code)}: soutěže této sezóny na chess.cz
+    zatím nejsou. Jakmile je svaz zveřejní, objeví se tu samy (data se obnovují každý pátek).
+    Do té doby jsou v nabídce celostátní soutěže${feature('addComp') ? ', nebo přidej soutěž z chess-results' : ''}.</p>`;
+}
+
 function viewZapas() {
   const c = comp();
   const teams = c?.teams ?? [];
@@ -377,7 +423,11 @@ function viewZapas() {
         ${
           teams.length
             ? ''
-            : '<p class="muted small-text">Pro tuto soutěž zatím nejsou soupisky. Názvy družstev a hráče můžeš zadat ručně.</p>'
+            : `<p class="muted small-text">${
+                c && !c.local && isLoaded(c)
+                  ? 'Svaz soupisky této soutěže zatím nezveřejnil. Jakmile budou na chess.cz, doplní se samy (data se obnovují každý pátek). Do té doby zadej družstva a hráče ručně.'
+                  : 'Pro tuto soutěž zatím nejsou soupisky. Názvy družstev a hráče můžeš zadat ručně.'
+              }</p>`
         }
         ${teamFields}
       </div>`;
@@ -395,6 +445,7 @@ function viewZapas() {
         <label class="field"><span>Soutěž</span><select data-chg="comp">${compOpts}</select></label>
         ${roundField}
       </div>
+      ${regionEmptyNote()}
       ${
         feature('addComp') || c?.local
           ? `<div class="row" style="margin-top:.6rem">
@@ -413,7 +464,9 @@ function viewZapas() {
       <h2>Datum a místo</h2>
       <div class="grid two">
         <label class="field"><span>Hráno dne</span><input type="date" data-bind="date" value="${esc(S.date)}"></label>
-        <label class="field"><span>Počet šachovnic${c ? ` (soutěž má ${c.boards})` : ''}</span>
+        <label class="field"><span>Počet šachovnic${
+          c ? ` (soutěž má ${c.boards}${c.boardsUnverified ? ', zatím odhad, upřesní se po 1. kole' : ''})` : ''
+        }</span>
           <input type="text" inputmode="numeric" data-chg="matchBoards" value="${esc(boards())}" autocomplete="off"></label>
         <label class="field"><span>Hrací místnost</span><input type="text" data-bind="venue" data-venue="1" value="${esc(S.venue)}" autocomplete="off"></label>
       </div>
@@ -894,6 +947,7 @@ function viewNastaveni() {
           .map((r) => `<option value="${r.code}" ${settings().region === r.code ? 'selected' : ''}>${esc(r.name)} (${esc(r.abbr)})</option>`)
           .join('')}
       </select></label>
+    ${regionEmptyNote()}
     <p class="muted small-text">S vybraným krajem nabídka soutěží ukáže jen celostátní soutěže a soutěže tvého kraje.
     Soutěže, jejichž poslední kolo bylo před víc než měsícem, jsou v nabídce dole mezi ukončenými.</p>
   </div>
@@ -983,30 +1037,82 @@ function goTo(id) {
   renderAll({ keepScroll: false });
 }
 
+// plátna podpisů hlídají svou velikost (otočení tabletu, změna okna, přeskládání stránky)
+const padObserver =
+  typeof ResizeObserver === 'function'
+    ? new ResizeObserver((entries) => entries.forEach((e) => sizePad(e.target, e.target.dataset.sig)))
+    : null;
+
 function afterRender() {
-  $$('canvas[data-sig]').forEach((c) => initPad(c, c.dataset.sig));
+  padObserver?.disconnect();
+  $$('canvas[data-sig]').forEach((c) => {
+    initPad(c, c.dataset.sig);
+    padObserver?.observe(c);
+  });
   if (tab === 'vystup') renderPreview();
   const share = $('#btnShare');
   if (share && !navigator.share) share.style.display = 'none';
 }
 
 // ---------- podpisy ----------
-function initPad(canvas, key) {
+/**
+ * Nastaví plátnu podpisu rozlišení podle jeho velikosti na obrazovce a nakreslí do něj uložený podpis.
+ * Volá se při vykreslení kroku a znovu, když se plátno změní (otočení tabletu, změna okna):
+ * jinak by se obrázek roztáhl a čára by se nekreslila pod prstem.
+ */
+function sizePad(canvas, key) {
   const dpr = Math.max(1, window.devicePixelRatio || 1);
   const rect = canvas.getBoundingClientRect();
-  canvas.width = Math.round(rect.width * dpr);
-  canvas.height = Math.round(rect.height * dpr);
+  if (!rect.width || !rect.height) return;
+  const w = Math.round(rect.width * dpr);
+  const h = Math.round(rect.height * dpr);
+  if (canvas.width === w && canvas.height === h && canvas.dataset.sized) return;
+  canvas.dataset.sized = '1';
+  canvas.width = w; // změna rozměru plátno vymaže a vrátí nastavení kreslení
+  canvas.height = h;
   const ctx = canvas.getContext('2d');
-  ctx.scale(dpr, dpr);
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   ctx.lineWidth = 2.4;
   ctx.lineCap = 'round';
   ctx.lineJoin = 'round';
   ctx.strokeStyle = '#0b2a6f';
-  if (S.sig?.[key]) {
-    const img = new Image();
-    img.onload = () => ctx.drawImage(img, 0, 0, rect.width, rect.height);
-    img.src = S.sig[key];
-  }
+  const src = S.sig?.[key];
+  if (!src) return;
+  const img = new Image();
+  img.onload = () => {
+    // plátno se mezitím mohlo znovu změnit nebo podpis smazat
+    if (canvas.width !== w || canvas.height !== h || S.sig?.[key] !== src) return;
+    // podpis z plátna jiného tvaru se zmenší tak, aby se vešel, a nedeformuje se
+    const k = Math.min(rect.width / img.width, rect.height / img.height);
+    const dw = img.width * k;
+    const dh = img.height * k;
+    ctx.drawImage(img, (rect.width - dw) / 2, (rect.height - dh) / 2, dw, dh);
+  };
+  img.src = src;
+}
+
+/**
+ * Podpis jako PNG v rozumném rozlišení. Plátno má rozlišení displeje (telefon až 3×), ale pro zápis v PDF
+ * stačí dvojnásobek velikosti na obrazovce; menší obrázek šetří úložiště zařízení, archiv i odkaz.
+ */
+const SIG_SCALE = 2;
+const SIG_MAX_W = 800;
+function sigDataUrl(canvas) {
+  const cssW = canvas.getBoundingClientRect().width || canvas.width;
+  const k = Math.min(1, (SIG_SCALE * cssW) / canvas.width, SIG_MAX_W / canvas.width);
+  if (k >= 0.99) return canvas.toDataURL('image/png');
+  const out = document.createElement('canvas');
+  out.width = Math.max(1, Math.round(canvas.width * k));
+  out.height = Math.max(1, Math.round(canvas.height * k));
+  const ctx = out.getContext('2d');
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(canvas, 0, 0, out.width, out.height);
+  return out.toDataURL('image/png');
+}
+
+function initPad(canvas, key) {
+  sizePad(canvas, key);
+  const ctx = canvas.getContext('2d');
   let drawing = false;
   let last = null;
   const pos = (e) => {
@@ -1035,7 +1141,7 @@ function initPad(canvas, key) {
   const end = () => {
     if (!drawing) return;
     drawing = false;
-    S.sig[key] = canvas.toDataURL('image/png');
+    S.sig[key] = sigDataUrl(canvas);
     save();
   };
   canvas.addEventListener('pointerup', end);
@@ -1295,7 +1401,11 @@ window.addEventListener('hashchange', async () => {
 let fitTimer;
 window.addEventListener('resize', () => {
   clearTimeout(fitTimer);
-  fitTimer = setTimeout(() => overlayMode === 'prubeh' && fitPrubeh(), 100);
+  fitTimer = setTimeout(() => {
+    if (overlayMode === 'prubeh') fitPrubeh();
+    // záloha pro prohlížeče bez ResizeObserver
+    $$('canvas[data-sig]').forEach((c) => sizePad(c, c.dataset.sig));
+  }, 100);
 });
 
 // ---------- výstup (PDF / PNG) ----------
@@ -1608,6 +1718,7 @@ view.addEventListener('click', (e) => {
       S.boards = boards();
       S.compInfo = compSnapshot();
       if (!store.archiveMatch(S)) return toast('Zápis se nepodařilo uložit (plné úložiště zařízení).');
+      askPersistentStorage();
       store.rememberReferee(S.referee.name);
       store.rememberVenue(S.home.team, S.venue);
       toast('Zápis je uložený v archivu.');
@@ -1626,6 +1737,7 @@ view.addEventListener('click', (e) => {
     case 'delArch':
       if (confirm('Opravdu smazat tento zápis z archivu?')) {
         store.deleteFromArchive(el.dataset.id);
+        retrySave();
         renderView();
       }
       return;
@@ -1652,6 +1764,7 @@ view.addEventListener('click', (e) => {
       if (!confirm(`Smazat ${old.length} starých zápisů z archivu? Nejde to vrátit.`)) return;
       const ids = new Set(old.map((m) => m.id));
       store.saveArchive(list.filter((m) => !ids.has(m.id)));
+      retrySave();
       toast('Staré zápisy jsou smazané.');
       return renderView();
     }

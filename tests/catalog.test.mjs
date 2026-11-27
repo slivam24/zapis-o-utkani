@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { tierOf, standardShort, regionFromText, isFinished, groupCompetitions, compareComps } from '../js/catalog.js';
+import { tierOf, standardShort, regionFromText, isFinished, groupCompetitions, compareComps, hasRosters, regionCompCount } from '../js/catalog.js';
 
 const c = (name, extra = {}) => ({ id: name, name, ...extra });
 
@@ -115,4 +115,25 @@ test('nabídka: skupiny a pořadí', () => {
 test('řazení: dospělí před mládeží, skupiny abecedně', () => {
   const list = [c("1. liga mládeže 'A'"), c("2. liga 'C'"), c("2. liga 'A'"), c('1. liga - západ'), c('1. liga - východ')].sort(compareComps);
   assert.deepEqual(list.map((x) => standardShort(x)), ['1. liga východ', '1. liga západ', '2. liga A', '2. liga C', '1. liga ml. A']);
+});
+
+test('nabídka: soutěže bez soupisek dole ve vlastní skupině, kraj bez soutěží', () => {
+  const now = new Date('2026-11-20T12:00:00');
+  const comps = [
+    c('šachy.cz Extraliga', { region: 'CR', teamCount: 12 }),
+    c('MČR družstev mládeže - finále A', { region: 'CR', teamCount: 0 }),
+    c('Krajský přebor ÚKŠS', { region: 'UKSS', teamCount: 12 }),
+    c('Okresní přebor', { region: 'JmSS', teamCount: 0 }),
+    c('Stažená prázdná', { region: 'UKSS', teams: [] }),
+    c('Stará soutěž', { region: 'UKSS', teamCount: 10, rounds: [{ date: '2026-04-01' }] }),
+  ];
+  const all = groupCompetitions(comps, { now });
+  assert.deepEqual(all.map((g) => g.label), ['Celostátní soutěže', 'Ústecký kraj (ÚKŠS)', 'Zatím bez soupisek', 'Ukončené soutěže']);
+  assert.deepEqual(all[2].comps.map((x) => x.name), ['Okresní přebor', 'Stažená prázdná', 'MČR družstev mládeže - finále A']);
+  // s vybraným krajem jen celostátní a ten kraj
+  const mine = groupCompetitions(comps, { now, region: 'UKSS' });
+  assert.deepEqual(mine.find((g) => g.key === '9wait').comps.map((x) => x.name), ['Stažená prázdná', 'MČR družstev mládeže - finále A']);
+  assert.ok(hasRosters({ teamCount: 3 }) && hasRosters({}) && !hasRosters({ teamCount: 0 }) && !hasRosters({ teams: [] }));
+  assert.equal(regionCompCount(comps, 'UKSS'), 3);
+  assert.equal(regionCompCount([...comps, c('Moje', { local: true, region: 'PSS' })], 'PSS'), 0);
 });
