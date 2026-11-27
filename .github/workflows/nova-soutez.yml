@@ -16,7 +16,12 @@ jobs:
   pridat:
     runs-on: ubuntu-latest
     steps:
+      # Úlohy s daty čekají ve společné frontě (data-update). Bez ref by si vzaly stav větve z doby
+      # spuštění, a když mezitím jiná úloha uložila data, ukládání skončilo konfliktem.
+      # S ref se vezme nejnovější stav větve až ve chvíli, kdy úloha opravdu začne.
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
