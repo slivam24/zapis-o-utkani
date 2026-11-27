@@ -102,6 +102,7 @@ export function headerMap(cells) {
     else if (['rtgi', 'irtg', 'fide', 'rtgfide'].includes(k)) map.fide = i;
     else if (['rtg', 'elo'].includes(k)) map.rtg = i;
     else if (k === 'fed') map.fed = i;
+    else if (['fideid', 'fide-id', 'idfide'].includes(k)) map.fideId = i;
     else if (['typ', 'type'].includes(k)) map.type = i;
   });
   return map.name === undefined ? null : map;
@@ -136,8 +137,12 @@ function playerFrom(cells, linkTexts, hm) {
   }
   const rawType = hm ? col('type') : (cells.find((c) => TYPE_RE.test(clean(c))) ?? '');
   const pos = (v) => (v && v > 0 ? v : null);
+  // FIDE ID slouží úloze na GitHubu ke spárování s listinou LOK (aktuální Elo, scripts/lok.mjs)
+  const fideRaw = clean(col('fideId'));
+  const fideId = /^\d{1,10}$/.test(fideRaw) ? pos(Number(fideRaw)) : null;
   return {
     no,
+    ...(fideId ? { fideId } : {}),
     name,
     types: parseTypes(rawType),
     // rtg = neoznačené Elo ze sloupce Rtg, neví se, o které jde

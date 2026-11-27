@@ -114,7 +114,10 @@ const isoDate = (s) => {
   return m ? `${m[3]}-${m[2].padStart(2, '0')}-${m[1].padStart(2, '0')}` : null;
 };
 
-/** Hráči z tabulky soupisky: { no, name, types, rtg: null, nat, fide }. */
+/**
+ * Hráči z tabulky soupisky: { no, id, name, types, rtg: null, nat, fide }. id je číslo z odkazu
+ * chess.cz/hrac/<id>/, tedy ID hráče v LOK (podle něj se doplňují aktuální ratingy, scripts/lok.mjs).
+ */
 function rosterRows(table) {
   const head = [...(table.querySelector('thead tr, tr')?.querySelectorAll('th,td') ?? [])].map(text);
   const col = (label) => head.indexOf(label);
@@ -123,9 +126,12 @@ function rosterRows(table) {
   for (const tr of table.querySelectorAll('tbody tr')) {
     const cells = [...tr.querySelectorAll('td')].map(text);
     const no = /^(\d+)\.?$/.exec(cells[0] ?? '');
-    if (!no || !tr.querySelector('a[href*="/hrac/"]')) continue;
+    const link = tr.querySelector('a[href*="/hrac/"]');
+    if (!no || !link) continue;
+    const id = Number(/\/hrac\/(\d+)/.exec(link.getAttribute('href') ?? '')?.[1]) || null;
     players.push({
       no: Number(no[1]),
+      ...(id ? { id } : {}),
       name: cells[col('Jméno hráče')] ?? '',
       // Z je jen registrace, typ hráče jsou K, ZK, H, V, C
       types: (cells[col('Typ')] ?? '').split(/[\s,]+/).map((t) => t.toUpperCase()).filter((t) => t && t !== 'Z'),
