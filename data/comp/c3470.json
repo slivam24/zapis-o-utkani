@@ -11,7 +11,7 @@
  "teams": [
   {
    "name": "ŠK Dubno B",
-   "captain": "",
+   "captain": "Saxl Jiří",
    "players": [
     {
      "no": 1,
@@ -71,7 +71,9 @@
      "no": 7,
      "id": 3868,
      "name": "Saxl Jiří",
-     "types": [],
+     "types": [
+      "K"
+     ],
      "rtg": null,
      "nat": 1735,
      "fide": 1775
@@ -80,7 +82,9 @@
      "no": 8,
      "id": 7112,
      "name": "Štufka Karel",
-     "types": [],
+     "types": [
+      "ZK"
+     ],
      "rtg": null,
      "nat": 1715,
      "fide": 1832
@@ -197,13 +201,15 @@
   },
   {
    "name": "TJ Spartak Vlašim D",
-   "captain": "",
+   "captain": "Matějovský Ondřej",
    "players": [
     {
      "no": 1,
      "id": 46264,
      "name": "Stein Michael",
-     "types": [],
+     "types": [
+      "V"
+     ],
      "rtg": null,
      "nat": 1991,
      "fide": 2071
@@ -221,7 +227,9 @@
      "no": 3,
      "id": 48122,
      "name": "Slánský Jáchym",
-     "types": [],
+     "types": [
+      "V"
+     ],
      "rtg": null,
      "nat": 1884,
      "fide": 1977
@@ -239,7 +247,9 @@
      "no": 5,
      "id": 1852,
      "name": "Matějovský Ondřej",
-     "types": [],
+     "types": [
+      "K"
+     ],
      "rtg": null,
      "nat": 1992,
      "fide": 2018
@@ -248,7 +258,9 @@
      "no": 6,
      "id": 10967,
      "name": "Staněk Ondřej",
-     "types": [],
+     "types": [
+      "V"
+     ],
      "rtg": null,
      "nat": 1901,
      "fide": 1969
@@ -275,7 +287,9 @@
      "no": 9,
      "id": 56062,
      "name": "Gansukh Buyanjargal",
-     "types": [],
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": 1547,
      "fide": 1660
@@ -284,7 +298,9 @@
      "no": 10,
      "id": 7402,
      "name": "Lalouček Miroslav",
-     "types": [],
+     "types": [
+      "ZK"
+     ],
      "rtg": null,
      "nat": 1712,
      "fide": 1823
@@ -383,13 +399,15 @@
   },
   {
    "name": "Klub šachistů Říčany 1925 G",
-   "captain": "",
+   "captain": "Košata František",
    "players": [
     {
      "no": 1,
      "id": 9241,
      "name": "Steiner Juraj",
-     "types": [],
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": 1884,
      "fide": 1941
@@ -407,7 +425,9 @@
      "no": 3,
      "id": 1449,
      "name": "Doležal Radoslav",
-     "types": [],
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": 1870,
      "fide": 1920
@@ -416,7 +436,9 @@
      "no": 4,
      "id": 17193,
      "name": "Zděnek Pavel",
-     "types": [],
+     "types": [
+      "ZK"
+     ],
      "rtg": null,
      "nat": 1794,
      "fide": 1890
@@ -524,7 +546,9 @@
      "no": 16,
      "id": 6457,
      "name": "Košata František",
-     "types": [],
+     "types": [
+      "K"
+     ],
      "rtg": null,
      "nat": 1566,
      "fide": 1818
@@ -569,13 +593,15 @@
   },
   {
    "name": "Sokol Struhařov A",
-   "captain": "",
+   "captain": "Gernert Otakar",
    "players": [
     {
      "no": 1,
      "id": 44678,
      "name": "Mlýnek Jakub",
-     "types": [],
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": 1994,
      "fide": 2028
@@ -584,7 +610,9 @@
      "no": 2,
      "id": 8237,
      "name": "Bujak Michal",
-     "types": [],
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": 2134,
      "fide": 2147
@@ -593,7 +621,9 @@
      "no": 3,
      "id": 33483,
      "name": "Vystrčil Martin",
-     "types": [],
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": 2073,
      "fide": 2110
@@ -602,7 +632,9 @@
      "no": 4,
      "id": 41378,
      "name": "Döme Michal",
-     "types": [],
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": 1895,
      "fide": 1948
@@ -611,7 +643,9 @@
      "no": 5,
      "id": 42187,
      "name": "Strnad Michael",
-     "types": [],
+     "types": [
+      "ZK"
+     ],
      "rtg": null,
      "nat": 1831,
      "fide": 1859
@@ -620,7 +654,9 @@
      "no": 6,
      "id": 3407,
      "name": "Gernert Otakar",
-     "types": [],
+     "types": [
+      "K"
+     ],
      "rtg": null,
      "nat": 2032,
      "fide": 2008
@@ -629,7 +665,9 @@
      "no": 7,
      "id": 37381,
      "name": "Zemen Pavel",
-     "types": [],
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": 1826,
      "fide": 1902
@@ -746,7 +784,7 @@
   },
   {
    "name": "ŠK při MěÚ Hostomice B",
-   "captain": "",
+   "captain": "Fairaisl Dušan",
    "players": [
     {
      "no": 1,
@@ -761,7 +799,10 @@
      "no": 2,
      "id": 17240,
      "name": "Zadina Jiří",
-     "types": [],
+     "types": [
+      "H",
+      "ZK"
+     ],
      "rtg": null,
      "nat": 1795,
      "fide": null
@@ -770,7 +811,9 @@
      "no": 3,
      "id": 6157,
      "name": "Fairaisl Dušan",
-     "types": [],
+     "types": [
+      "K"
+     ],
      "rtg": null,
      "nat": 1613,
      "fide": 1769
@@ -914,13 +957,15 @@
   },
   {
    "name": "Klub šachistů Říčany 1925 H",
-   "captain": "",
+   "captain": "Melicharová Hana",
    "players": [
     {
      "no": 1,
      "id": 27852,
      "name": "Hroník Petr",
-     "types": [],
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": 1833,
      "fide": 1894
@@ -947,7 +992,9 @@
      "no": 4,
      "id": 43346,
      "name": "Bartošová Hana",
-     "types": [],
+     "types": [
+      "ZK"
+     ],
      "rtg": null,
      "nat": 1753,
      "fide": 1813
@@ -974,7 +1021,9 @@
      "no": 7,
      "id": 60388,
      "name": "Svatoň Jan",
-     "types": [],
+     "types": [
+      "V"
+     ],
      "rtg": null,
      "nat": 1725,
      "fide": 1848
@@ -1010,7 +1059,9 @@
      "no": 11,
      "id": 39524,
      "name": "Vasilev Dan",
-     "types": [],
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": 1547,
      "fide": 1733
@@ -1019,7 +1070,9 @@
      "no": 12,
      "id": 3679,
      "name": "Dudková Danka",
-     "types": [],
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": 1729,
      "fide": 1801
@@ -1082,7 +1135,9 @@
      "no": 19,
      "id": 59700,
      "name": "Melicharová Hana",
-     "types": [],
+     "types": [
+      "K"
+     ],
      "rtg": null,
      "nat": null,
      "fide": null
@@ -1100,13 +1155,15 @@
   },
   {
    "name": "ŠK Zdice B",
-   "captain": "",
+   "captain": "Mruškovič Radoslav",
    "players": [
     {
      "no": 1,
      "id": 33544,
      "name": "Civín Dominik",
-     "types": [],
+     "types": [
+      "V"
+     ],
      "rtg": null,
      "nat": 2102,
      "fide": 2157
@@ -1115,7 +1172,9 @@
      "no": 2,
      "id": 28821,
      "name": "Bauer Jindřich",
-     "types": [],
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": 2015,
      "fide": 2026
@@ -1133,7 +1192,10 @@
      "no": 4,
      "id": 14494,
      "name": "Třešňák Lukáš",
-     "types": [],
+     "types": [
+      "V",
+      "ZK"
+     ],
      "rtg": null,
      "nat": 1857,
      "fide": 1921
@@ -1160,7 +1222,9 @@
      "no": 7,
      "id": 38997,
      "name": "Mruškovič Radoslav",
-     "types": [],
+     "types": [
+      "K"
+     ],
      "rtg": null,
      "nat": 1838,
      "fide": 1908
@@ -1286,13 +1350,15 @@
   },
   {
    "name": "KŠ Stříbrná Skalice A",
-   "captain": "",
+   "captain": "Studzinski Boleslav",
    "players": [
     {
      "no": 1,
      "id": 1947,
      "name": "Tvrdý Jindřich",
-     "types": [],
+     "types": [
+      "ZK"
+     ],
      "rtg": null,
      "nat": 1827,
      "fide": 1880
@@ -1301,7 +1367,9 @@
      "no": 2,
      "id": 31992,
      "name": "Starýchfojtů Josef",
-     "types": [],
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": 1808,
      "fide": 1826
@@ -1310,7 +1378,9 @@
      "no": 3,
      "id": 1992,
      "name": "Flek Vladislav",
-     "types": [],
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": 1847,
      "fide": 1912
@@ -1319,7 +1389,9 @@
      "no": 4,
      "id": 1260,
      "name": "Netík Josef",
-     "types": [],
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": 1783,
      "fide": 1897
@@ -1346,7 +1418,9 @@
      "no": 7,
      "id": 34027,
      "name": "Studzinski Boleslav",
-     "types": [],
+     "types": [
+      "K"
+     ],
      "rtg": null,
      "nat": 1590,
      "fide": 1702
@@ -1373,7 +1447,9 @@
      "no": 10,
      "id": 10679,
      "name": "Kořínek Oldřich",
-     "types": [],
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": 1583,
      "fide": 1711
@@ -1445,7 +1521,9 @@
      "no": 18,
      "id": 57443,
      "name": "Kořínek Zdeněk",
-     "types": [],
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": 1230,
      "fide": 1537
@@ -1472,7 +1550,7 @@
   },
   {
    "name": "Mníšek pod Brdy",
-   "captain": "",
+   "captain": "Brabec Jaroslav",
    "players": [
     {
      "no": 1,
@@ -1487,7 +1565,9 @@
      "no": 2,
      "id": 13947,
      "name": "Chudáček Vladimír",
-     "types": [],
+     "types": [
+      "ZK"
+     ],
      "rtg": null,
      "nat": 1632,
      "fide": 1762
@@ -1523,7 +1603,10 @@
      "no": 6,
      "id": 3135,
      "name": "Brabec Jaroslav",
-     "types": [],
+     "types": [
+      "H",
+      "K"
+     ],
      "rtg": null,
      "nat": 1460,
      "fide": 1684
@@ -1559,7 +1642,9 @@
      "no": 10,
      "id": 52375,
      "name": "Mach Miroslav",
-     "types": [],
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": 1614,
      "fide": 1657
@@ -1568,7 +1653,9 @@
      "no": 11,
      "id": 52378,
      "name": "Burša Josef",
-     "types": [],
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": 1298,
      "fide": 1592
@@ -1577,7 +1664,9 @@
      "no": 12,
      "id": 59966,
      "name": "Doležal Jiří",
-     "types": [],
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": 1294,
      "fide": null
@@ -1586,13 +1675,15 @@
   },
   {
    "name": "ŠK KDJS Sedlčany B",
-   "captain": "",
+   "captain": "Sadil Pavel",
    "players": [
     {
      "no": 1,
      "id": 38178,
      "name": "Hlaváček Ondřej",
-     "types": [],
+     "types": [
+      "V"
+     ],
      "rtg": null,
      "nat": 1835,
      "fide": 1879
@@ -1601,7 +1692,9 @@
      "no": 2,
      "id": 30731,
      "name": "Sadil Jan",
-     "types": [],
+     "types": [
+      "V"
+     ],
      "rtg": null,
      "nat": 1762,
      "fide": 1864
@@ -1610,7 +1703,9 @@
      "no": 3,
      "id": 2925,
      "name": "Havelka Petr",
-     "types": [],
+     "types": [
+      "V"
+     ],
      "rtg": null,
      "nat": 1746,
      "fide": 1815
@@ -1619,7 +1714,9 @@
      "no": 4,
      "id": 36844,
      "name": "Sadil Pavel",
-     "types": [],
+     "types": [
+      "K"
+     ],
      "rtg": null,
      "nat": 1584,
      "fide": 1720
@@ -1655,7 +1752,9 @@
      "no": 8,
      "id": 46701,
      "name": "Kváča František",
-     "types": [],
+     "types": [
+      "ZK"
+     ],
      "rtg": null,
      "nat": 1408,
      "fide": 1562
@@ -1709,7 +1808,9 @@
      "no": 14,
      "id": 52287,
      "name": "Kváčová Lenka",
-     "types": [],
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": 1346,
      "fide": 1572
@@ -1760,7 +1861,10 @@
      "no": 1,
      "id": 32150,
      "name": "Zadina Tomáš",
-     "types": [],
+     "types": [
+      "H",
+      "ZK"
+     ],
      "rtg": null,
      "nat": 1838,
      "fide": null
@@ -1787,7 +1891,9 @@
      "no": 4,
      "id": 7167,
      "name": "Zadina Jiří",
-     "types": [],
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": 1569,
      "fide": null
@@ -1796,7 +1902,9 @@
      "no": 5,
      "id": 10628,
      "name": "Sasyn Stanislav",
-     "types": [],
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": 1430,
      "fide": 1692
