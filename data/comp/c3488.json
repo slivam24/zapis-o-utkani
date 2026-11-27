@@ -170,236 +170,6 @@
    ]
   },
   {
-   "name": "Ježov",
-   "captain": "",
-   "players": [
-    {
-     "no": 1,
-     "name": "Kašpárek Zdeněk",
-     "types": [],
-     "rtg": null,
-     "nat": 1444,
-     "fide": null
-    },
-    {
-     "no": 2,
-     "name": "Kořínek Jan",
-     "types": [],
-     "rtg": null,
-     "nat": 1599,
-     "fide": null
-    },
-    {
-     "no": 3,
-     "name": "Doležal Petr",
-     "types": [],
-     "rtg": null,
-     "nat": 1678,
-     "fide": null
-    },
-    {
-     "no": 4,
-     "name": "Kořínek Vladimír",
-     "types": [],
-     "rtg": null,
-     "nat": 1495,
-     "fide": null
-    },
-    {
-     "no": 5,
-     "name": "Hořák Petr",
-     "types": [],
-     "rtg": null,
-     "nat": 1577,
-     "fide": null
-    },
-    {
-     "no": 6,
-     "name": "Sedlák Slavomír",
-     "types": [],
-     "rtg": null,
-     "nat": 1514,
-     "fide": null
-    },
-    {
-     "no": 7,
-     "name": "Netopil Petr",
-     "types": [],
-     "rtg": null,
-     "nat": 1521,
-     "fide": null
-    },
-    {
-     "no": 8,
-     "name": "Vajgara Radek",
-     "types": [],
-     "rtg": null,
-     "nat": 1474,
-     "fide": null
-    },
-    {
-     "no": 9,
-     "name": "Tomek Jiří",
-     "types": [],
-     "rtg": null,
-     "nat": 1502,
-     "fide": null
-    },
-    {
-     "no": 10,
-     "name": "Erlebach David",
-     "types": [],
-     "rtg": null,
-     "nat": 1304,
-     "fide": null
-    },
-    {
-     "no": 11,
-     "name": "Nesvadba Lukáš",
-     "types": [],
-     "rtg": null,
-     "nat": 1440,
-     "fide": null
-    },
-    {
-     "no": 12,
-     "name": "Crha Zbyněk",
-     "types": [],
-     "rtg": null,
-     "nat": 1601,
-     "fide": null
-    },
-    {
-     "no": 13,
-     "name": "Mazouch Roman",
-     "types": [],
-     "rtg": null,
-     "nat": 1390,
-     "fide": null
-    }
-   ]
-  },
-  {
-   "name": "Kyjov",
-   "captain": "",
-   "players": [
-    {
-     "no": 1,
-     "name": "Matula Roman",
-     "types": [],
-     "rtg": null,
-     "nat": 1878,
-     "fide": null
-    },
-    {
-     "no": 2,
-     "name": "Strmiska Pavel",
-     "types": [],
-     "rtg": null,
-     "nat": 1673,
-     "fide": null
-    },
-    {
-     "no": 3,
-     "name": "Brídl Dominik",
-     "types": [],
-     "rtg": null,
-     "nat": 1508,
-     "fide": null
-    },
-    {
-     "no": 4,
-     "name": "Sláma Michal",
-     "types": [],
-     "rtg": null,
-     "nat": 1572,
-     "fide": null
-    },
-    {
-     "no": 5,
-     "name": "Vaněk Robin",
-     "types": [],
-     "rtg": null,
-     "nat": 1530,
-     "fide": 1622
-    },
-    {
-     "no": 6,
-     "name": "Hejda Jaroslav",
-     "types": [],
-     "rtg": null,
-     "nat": 1740,
-     "fide": null
-    },
-    {
-     "no": 7,
-     "name": "Machala Libor",
-     "types": [],
-     "rtg": null,
-     "nat": 1704,
-     "fide": null
-    },
-    {
-     "no": 8,
-     "name": "Vaněk Michal",
-     "types": [],
-     "rtg": null,
-     "nat": 1503,
-     "fide": 1677
-    },
-    {
-     "no": 9,
-     "name": "Jurutka Vladimír",
-     "types": [],
-     "rtg": null,
-     "nat": 1417,
-     "fide": null
-    },
-    {
-     "no": 10,
-     "name": "Šlahůnek Martin",
-     "types": [],
-     "rtg": null,
-     "nat": 1364,
-     "fide": null
-    },
-    {
-     "no": 11,
-     "name": "Vaškových Patrik",
-     "types": [],
-     "rtg": null,
-     "nat": 1518,
-     "fide": null
-    },
-    {
-     "no": 12,
-     "name": "Vaškových Martin",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 13,
-     "name": "Střeštík Filip",
-     "types": [],
-     "rtg": null,
-     "nat": 1283,
-     "fide": null
-    },
-    {
-     "no": 14,
-     "name": "Kovář Martin",
-     "types": [],
-     "rtg": null,
-     "nat": 1102,
-     "fide": null
-    }
-   ]
-  },
-  {
    "name": "Strážnice",
    "captain": "",
    "players": [
@@ -686,103 +456,231 @@
    ]
   },
   {
-   "name": "D. Bojanovice A",
+   "name": "Ježov",
    "captain": "",
    "players": [
     {
      "no": 1,
-     "name": "Lacina Josef",
+     "name": "Kašpárek Zdeněk",
      "types": [],
      "rtg": null,
-     "nat": 1430,
+     "nat": 1444,
      "fide": null
     },
     {
      "no": 2,
-     "name": "Padalík Luděk",
+     "name": "Kořínek Jan",
      "types": [],
      "rtg": null,
-     "nat": null,
+     "nat": 1599,
      "fide": null
     },
     {
      "no": 3,
-     "name": "Krátký Karel",
+     "name": "Doležal Petr",
      "types": [],
      "rtg": null,
-     "nat": 1588,
+     "nat": 1678,
      "fide": null
     },
     {
      "no": 4,
-     "name": "Vraňan Josef",
+     "name": "Kořínek Vladimír",
      "types": [],
      "rtg": null,
-     "nat": 1523,
+     "nat": 1495,
      "fide": null
     },
     {
      "no": 5,
-     "name": "Bohun Marian",
+     "name": "Hořák Petr",
      "types": [],
      "rtg": null,
-     "nat": 1365,
+     "nat": 1577,
      "fide": null
     },
     {
      "no": 6,
-     "name": "Hunča Petr",
+     "name": "Sedlák Slavomír",
      "types": [],
      "rtg": null,
-     "nat": 1168,
+     "nat": 1514,
      "fide": null
     },
     {
      "no": 7,
-     "name": "Vitoul Richard",
+     "name": "Netopil Petr",
      "types": [],
      "rtg": null,
-     "nat": 1204,
+     "nat": 1521,
      "fide": null
     },
     {
      "no": 8,
-     "name": "Řezáč Jaroslav",
+     "name": "Vajgara Radek",
      "types": [],
      "rtg": null,
-     "nat": 1380,
+     "nat": 1474,
      "fide": null
     },
     {
      "no": 9,
-     "name": "Balada René",
+     "name": "Tomek Jiří",
      "types": [],
      "rtg": null,
-     "nat": 1336,
+     "nat": 1502,
      "fide": null
     },
     {
      "no": 10,
-     "name": "Červenka Dan",
+     "name": "Erlebach David",
      "types": [],
      "rtg": null,
-     "nat": null,
+     "nat": 1304,
      "fide": null
     },
     {
      "no": 11,
-     "name": "Maláník Michal",
+     "name": "Nesvadba Lukáš",
      "types": [],
+     "rtg": null,
+     "nat": 1440,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Crha Zbyněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1601,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Mazouch Roman",
+     "types": [],
+     "rtg": null,
+     "nat": 1390,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Kyjov",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Matula Roman",
+     "types": [],
+     "rtg": null,
+     "nat": 1878,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Strmiska Pavel",
+     "types": [],
+     "rtg": null,
+     "nat": 1673,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Brídl Dominik",
+     "types": [],
+     "rtg": null,
+     "nat": 1508,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Sláma Michal",
+     "types": [],
+     "rtg": null,
+     "nat": 1572,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Vaněk Robin",
+     "types": [],
+     "rtg": null,
+     "nat": 1530,
+     "fide": 1622
+    },
+    {
+     "no": 6,
+     "name": "Hejda Jaroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1740,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Machala Libor",
+     "types": [],
+     "rtg": null,
+     "nat": 1704,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Vaněk Michal",
+     "types": [],
+     "rtg": null,
+     "nat": 1503,
+     "fide": 1677
+    },
+    {
+     "no": 9,
+     "name": "Jurutka Vladimír",
+     "types": [],
+     "rtg": null,
+     "nat": 1417,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Šlahůnek Martin",
+     "types": [],
+     "rtg": null,
+     "nat": 1364,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Vaškových Patrik",
+     "types": [],
+     "rtg": null,
+     "nat": 1518,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Vaškových Martin",
+     "types": [
+      "H"
+     ],
      "rtg": null,
      "nat": null,
      "fide": null
     },
     {
-     "no": 12,
-     "name": "Kaňa Štěpán",
+     "no": 13,
+     "name": "Střeštík Filip",
      "types": [],
      "rtg": null,
-     "nat": null,
+     "nat": 1283,
+     "fide": null
+    },
+    {
+     "no": 14,
+     "name": "Kovář Martin",
+     "types": [],
+     "rtg": null,
+     "nat": 1102,
      "fide": null
     }
    ]
@@ -917,6 +815,108 @@
      "types": [],
      "rtg": null,
      "nat": 1375,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "D. Bojanovice A",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Lacina Josef",
+     "types": [],
+     "rtg": null,
+     "nat": 1430,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Padalík Luděk",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 3,
+     "name": "Krátký Karel",
+     "types": [],
+     "rtg": null,
+     "nat": 1588,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Vraňan Josef",
+     "types": [],
+     "rtg": null,
+     "nat": 1523,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Bohun Marian",
+     "types": [],
+     "rtg": null,
+     "nat": 1365,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Hunča Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1168,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Vitoul Richard",
+     "types": [],
+     "rtg": null,
+     "nat": 1204,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Řezáč Jaroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1380,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Balada René",
+     "types": [],
+     "rtg": null,
+     "nat": 1336,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Červenka Dan",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Maláník Michal",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Kaňa Štěpán",
+     "types": [],
+     "rtg": null,
+     "nat": null,
      "fide": null
     }
    ]

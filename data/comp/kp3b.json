@@ -628,6 +628,102 @@
    ]
   },
   {
+   "name": "KŠ Štětí",
+   "captain": "Papík Jaromír",
+   "players": [
+    {
+     "no": 1,
+     "name": "Černík Lukáš",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 2071,
+     "fide": 2083
+    },
+    {
+     "no": 2,
+     "name": "Lev Lukáš",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1809,
+     "fide": 1865
+    },
+    {
+     "no": 3,
+     "name": "Cvek Jaroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1773,
+     "fide": 1885
+    },
+    {
+     "no": 4,
+     "name": "Papík Jaromír",
+     "types": [
+      "K"
+     ],
+     "rtg": null,
+     "nat": 1387,
+     "fide": 1566
+    },
+    {
+     "no": 5,
+     "name": "Gruber Tobiáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1134,
+     "fide": 1629
+    },
+    {
+     "no": 6,
+     "name": "Woska Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": 1105,
+     "fide": 1478
+    },
+    {
+     "no": 7,
+     "name": "Šotolová Jana",
+     "types": [],
+     "rtg": null,
+     "nat": 1581,
+     "fide": 1612
+    },
+    {
+     "no": 8,
+     "name": "Durdisová Monika",
+     "types": [
+      "ZK"
+     ],
+     "rtg": null,
+     "nat": 1254,
+     "fide": 1485
+    },
+    {
+     "no": 9,
+     "name": "Pěkný Jaroslav",
+     "types": [],
+     "rtg": null,
+     "nat": 1360,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Černíková Berenice Emma",
+     "types": [
+      "H"
+     ],
+     "rtg": null,
+     "nat": 1026,
+     "fide": null
+    }
+   ]
+  },
+  {
    "name": "SPORTIS Svádov-Olšinky \"B\"",
    "captain": "Beil Richard",
    "players": [
@@ -716,94 +812,6 @@
      "rtg": null,
      "nat": 1398,
      "fide": 1623
-    }
-   ]
-  },
-  {
-   "name": "KŠ Štětí",
-   "captain": "Papík Jaromír",
-   "players": [
-    {
-     "no": 1,
-     "name": "Černík Lukáš",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": 2071,
-     "fide": 2083
-    },
-    {
-     "no": 2,
-     "name": "Lev Lukáš",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": 1809,
-     "fide": 1865
-    },
-    {
-     "no": 3,
-     "name": "Cvek Jaroslav",
-     "types": [],
-     "rtg": null,
-     "nat": 1773,
-     "fide": 1885
-    },
-    {
-     "no": 4,
-     "name": "Papík Jaromír",
-     "types": [
-      "K"
-     ],
-     "rtg": null,
-     "nat": 1387,
-     "fide": 1566
-    },
-    {
-     "no": 5,
-     "name": "Gruber Tobiáš",
-     "types": [],
-     "rtg": null,
-     "nat": 1134,
-     "fide": 1629
-    },
-    {
-     "no": 6,
-     "name": "Šotolová Jana",
-     "types": [],
-     "rtg": null,
-     "nat": 1581,
-     "fide": 1612
-    },
-    {
-     "no": 7,
-     "name": "Durdisová Monika",
-     "types": [
-      "ZK"
-     ],
-     "rtg": null,
-     "nat": 1254,
-     "fide": 1485
-    },
-    {
-     "no": 8,
-     "name": "Pěkný Jaroslav",
-     "types": [],
-     "rtg": null,
-     "nat": 1360,
-     "fide": null
-    },
-    {
-     "no": 9,
-     "name": "Černíková Berenice Emma",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": 1026,
-     "fide": null
     }
    ]
   }

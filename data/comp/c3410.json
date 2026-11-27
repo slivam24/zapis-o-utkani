@@ -179,90 +179,6 @@
    ]
   },
   {
-   "name": "Fatra Slavia Napajedla B",
-   "captain": "Sedláček Roman",
-   "players": [
-    {
-     "no": 1,
-     "name": "Šiška Jan",
-     "types": [],
-     "rtg": null,
-     "nat": 1353,
-     "fide": null
-    },
-    {
-     "no": 2,
-     "name": "Sedláček Roman",
-     "types": [
-      "K"
-     ],
-     "rtg": null,
-     "nat": 1629,
-     "fide": 1812
-    },
-    {
-     "no": 3,
-     "name": "Blahynka Svatopluk",
-     "types": [
-      "ZK"
-     ],
-     "rtg": null,
-     "nat": 1536,
-     "fide": null
-    },
-    {
-     "no": 4,
-     "name": "Landsfeld Zdeněk",
-     "types": [],
-     "rtg": null,
-     "nat": 1260,
-     "fide": null
-    },
-    {
-     "no": 5,
-     "name": "Gottwald Pavel",
-     "types": [],
-     "rtg": null,
-     "nat": 1446,
-     "fide": null
-    },
-    {
-     "no": 6,
-     "name": "Jestříbek Martin",
-     "types": [],
-     "rtg": null,
-     "nat": 1415,
-     "fide": null
-    },
-    {
-     "no": 7,
-     "name": "Bažant Radek",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 1491,
-     "fide": null
-    },
-    {
-     "no": 8,
-     "name": "Polášek Libor",
-     "types": [],
-     "rtg": null,
-     "nat": 1542,
-     "fide": 1710
-    },
-    {
-     "no": 9,
-     "name": "Orlita Vratislav",
-     "types": [],
-     "rtg": null,
-     "nat": 1651,
-     "fide": null
-    }
-   ]
-  },
-  {
    "name": "ŠK Valašské Klobouky",
    "captain": "Haboň Martin",
    "players": [
@@ -442,6 +358,90 @@
      "types": [],
      "rtg": null,
      "nat": 1557,
+     "fide": null
+    }
+   ]
+  },
+  {
+   "name": "Fatra Slavia Napajedla B",
+   "captain": "Sedláček Roman",
+   "players": [
+    {
+     "no": 1,
+     "name": "Šiška Jan",
+     "types": [],
+     "rtg": null,
+     "nat": 1353,
+     "fide": null
+    },
+    {
+     "no": 2,
+     "name": "Sedláček Roman",
+     "types": [
+      "K"
+     ],
+     "rtg": null,
+     "nat": 1629,
+     "fide": 1812
+    },
+    {
+     "no": 3,
+     "name": "Blahynka Svatopluk",
+     "types": [
+      "ZK"
+     ],
+     "rtg": null,
+     "nat": 1536,
+     "fide": null
+    },
+    {
+     "no": 4,
+     "name": "Landsfeld Zdeněk",
+     "types": [],
+     "rtg": null,
+     "nat": 1260,
+     "fide": null
+    },
+    {
+     "no": 5,
+     "name": "Gottwald Pavel",
+     "types": [],
+     "rtg": null,
+     "nat": 1446,
+     "fide": null
+    },
+    {
+     "no": 6,
+     "name": "Jestříbek Martin",
+     "types": [],
+     "rtg": null,
+     "nat": 1415,
+     "fide": null
+    },
+    {
+     "no": 7,
+     "name": "Bažant Radek",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1491,
+     "fide": null
+    },
+    {
+     "no": 8,
+     "name": "Polášek Libor",
+     "types": [],
+     "rtg": null,
+     "nat": 1542,
+     "fide": 1710
+    },
+    {
+     "no": 9,
+     "name": "Orlita Vratislav",
+     "types": [],
+     "rtg": null,
+     "nat": 1651,
      "fide": null
     }
    ]

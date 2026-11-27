@@ -161,6 +161,172 @@
    ]
   },
   {
+   "name": "Šachová škola Bohumín B",
+   "captain": "",
+   "players": [
+    {
+     "no": 1,
+     "name": "Hladík Lumír",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1899,
+     "fide": 1873
+    },
+    {
+     "no": 2,
+     "name": "Jordan Mathias",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1653,
+     "fide": 1784
+    },
+    {
+     "no": 3,
+     "name": "Brejcha Lukáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1583,
+     "fide": 1668
+    },
+    {
+     "no": 4,
+     "name": "Jordan Tobias",
+     "types": [],
+     "rtg": null,
+     "nat": 1544,
+     "fide": 1677
+    },
+    {
+     "no": 5,
+     "name": "Koscielnik Ondřej",
+     "types": [],
+     "rtg": null,
+     "nat": 1428,
+     "fide": 1642
+    },
+    {
+     "no": 6,
+     "name": "Hrdý Petr",
+     "types": [],
+     "rtg": null,
+     "nat": 1282,
+     "fide": 1612
+    },
+    {
+     "no": 7,
+     "name": "Galužný Matyáš",
+     "types": [],
+     "rtg": null,
+     "nat": 1336,
+     "fide": 1480
+    },
+    {
+     "no": 8,
+     "name": "Luu Thien Phuc Filip",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 9,
+     "name": "Driečný Filip",
+     "types": [],
+     "rtg": null,
+     "nat": 1025,
+     "fide": null
+    },
+    {
+     "no": 10,
+     "name": "Rýchlik Daniel",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 11,
+     "name": "Luu Thien Phuc Šimon",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 12,
+     "name": "Rohel Vojtěch",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 13,
+     "name": "Dzialo David",
+     "types": [],
+     "rtg": null,
+     "nat": 1262,
+     "fide": 1456
+    },
+    {
+     "no": 14,
+     "name": "Vícha Petr",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1936,
+     "fide": 1965
+    },
+    {
+     "no": 15,
+     "name": "Tchuř Pavel",
+     "types": [
+      "V"
+     ],
+     "rtg": null,
+     "nat": 1807,
+     "fide": 1883
+    },
+    {
+     "no": 16,
+     "name": "Szmek Milan",
+     "types": [],
+     "rtg": null,
+     "nat": 1693,
+     "fide": 1769
+    },
+    {
+     "no": 17,
+     "name": "Warmuž Jiří",
+     "types": [],
+     "rtg": null,
+     "nat": 1672,
+     "fide": 1791
+    },
+    {
+     "no": 18,
+     "name": "Brdíčko Jakub",
+     "types": [],
+     "rtg": null,
+     "nat": null,
+     "fide": null
+    },
+    {
+     "no": 19,
+     "name": "Kalmár Martin",
+     "types": [],
+     "rtg": null,
+     "nat": 1819,
+     "fide": 1936
+    }
+   ]
+  },
+  {
    "name": "Baník Havířov C",
    "captain": "",
    "players": [
@@ -327,168 +493,162 @@
    ]
   },
   {
-   "name": "Šachová škola Bohumín B",
+   "name": "Rychvaldský spolek šachový 1945 B",
    "captain": "",
    "players": [
     {
      "no": 1,
-     "name": "Hladík Lumír",
+     "name": "Adamčík Bohdan",
      "types": [
       "V"
      ],
      "rtg": null,
-     "nat": 1899,
-     "fide": 1873
+     "nat": 1555,
+     "fide": 1596
     },
     {
      "no": 2,
-     "name": "Jordan Mathias",
+     "name": "Semančík David",
      "types": [
       "V"
      ],
      "rtg": null,
-     "nat": 1653,
-     "fide": 1784
+     "nat": 1745,
+     "fide": 1821
     },
     {
      "no": 3,
-     "name": "Brejcha Lukáš",
-     "types": [],
+     "name": "Filip Tomáš",
+     "types": [
+      "H"
+     ],
      "rtg": null,
-     "nat": 1583,
-     "fide": 1668
+     "nat": 1657,
+     "fide": 1735
     },
     {
      "no": 4,
-     "name": "Jordan Tobias",
+     "name": "Crha Břetislav",
      "types": [],
      "rtg": null,
-     "nat": 1544,
-     "fide": 1677
+     "nat": 1676,
+     "fide": 1763
     },
     {
      "no": 5,
-     "name": "Koscielnik Ondřej",
+     "name": "Ulman Stanislav",
      "types": [],
      "rtg": null,
-     "nat": 1428,
-     "fide": 1642
+     "nat": 1565,
+     "fide": 1684
     },
     {
      "no": 6,
-     "name": "Hrdý Petr",
+     "name": "Kubíček Aleš",
      "types": [],
      "rtg": null,
-     "nat": 1282,
-     "fide": 1612
+     "nat": 1553,
+     "fide": 1620
     },
     {
      "no": 7,
-     "name": "Galužný Matyáš",
+     "name": "Skalka Filip",
      "types": [],
      "rtg": null,
-     "nat": 1336,
-     "fide": 1480
+     "nat": 1408,
+     "fide": 1535
     },
     {
      "no": 8,
-     "name": "Luu Thien Phuc Filip",
+     "name": "Rusz Robin",
      "types": [],
      "rtg": null,
-     "nat": null,
+     "nat": 1431,
      "fide": null
     },
     {
      "no": 9,
-     "name": "Driečný Filip",
-     "types": [],
+     "name": "Zvolánek Jan",
+     "types": [
+      "V"
+     ],
      "rtg": null,
-     "nat": 1025,
-     "fide": null
+     "nat": 1840,
+     "fide": 1950
     },
     {
      "no": 10,
-     "name": "Rýchlik Daniel",
-     "types": [],
+     "name": "Brzezny Petr",
+     "types": [
+      "V"
+     ],
      "rtg": null,
-     "nat": null,
-     "fide": null
+     "nat": 1810,
+     "fide": 1876
     },
     {
      "no": 11,
-     "name": "Luu Thien Phuc Šimon",
+     "name": "Beran Daniel",
      "types": [],
      "rtg": null,
-     "nat": null,
-     "fide": null
+     "nat": 1391,
+     "fide": 1476
     },
     {
      "no": 12,
-     "name": "Rohel Vojtěch",
+     "name": "Havlík Vlastimil",
      "types": [],
      "rtg": null,
-     "nat": null,
-     "fide": null
+     "nat": 1614,
+     "fide": 1732
     },
     {
      "no": 13,
-     "name": "Dzialo David",
+     "name": "Brhel Zdeněk",
      "types": [],
      "rtg": null,
-     "nat": 1262,
-     "fide": 1456
+     "nat": 1342,
+     "fide": 1524
     },
     {
      "no": 14,
-     "name": "Vícha Petr",
-     "types": [
-      "V"
-     ],
+     "name": "Lipus Drahomír",
+     "types": [],
      "rtg": null,
-     "nat": 1936,
-     "fide": 1965
+     "nat": 1347,
+     "fide": 1521
     },
     {
      "no": 15,
-     "name": "Tchuř Pavel",
-     "types": [
-      "V"
-     ],
+     "name": "Šejda Karel",
+     "types": [],
      "rtg": null,
-     "nat": 1807,
-     "fide": 1883
+     "nat": 1497,
+     "fide": null
     },
     {
      "no": 16,
-     "name": "Szmek Milan",
+     "name": "Beran Luděk",
      "types": [],
      "rtg": null,
-     "nat": 1693,
-     "fide": 1769
+     "nat": 1252,
+     "fide": 1491
     },
     {
      "no": 17,
-     "name": "Warmuž Jiří",
-     "types": [],
-     "rtg": null,
-     "nat": 1672,
-     "fide": 1791
-    },
-    {
-     "no": 18,
-     "name": "Brdíčko Jakub",
+     "name": "Brožík Ondřej",
      "types": [],
      "rtg": null,
      "nat": null,
      "fide": null
     },
     {
-     "no": 19,
-     "name": "Kalmár Martin",
+     "no": 18,
+     "name": "Adamčík Jan",
      "types": [],
      "rtg": null,
-     "nat": 1819,
-     "fide": 1936
+     "nat": 1339,
+     "fide": null
     }
    ]
   },
@@ -774,166 +934,6 @@
      "types": [],
      "rtg": null,
      "nat": null,
-     "fide": null
-    }
-   ]
-  },
-  {
-   "name": "Rychvaldský spolek šachový 1945 B",
-   "captain": "",
-   "players": [
-    {
-     "no": 1,
-     "name": "Adamčík Bohdan",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 1555,
-     "fide": 1596
-    },
-    {
-     "no": 2,
-     "name": "Semančík David",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 1745,
-     "fide": 1821
-    },
-    {
-     "no": 3,
-     "name": "Filip Tomáš",
-     "types": [
-      "H"
-     ],
-     "rtg": null,
-     "nat": 1657,
-     "fide": 1735
-    },
-    {
-     "no": 4,
-     "name": "Crha Břetislav",
-     "types": [],
-     "rtg": null,
-     "nat": 1676,
-     "fide": 1763
-    },
-    {
-     "no": 5,
-     "name": "Ulman Stanislav",
-     "types": [],
-     "rtg": null,
-     "nat": 1565,
-     "fide": 1684
-    },
-    {
-     "no": 6,
-     "name": "Kubíček Aleš",
-     "types": [],
-     "rtg": null,
-     "nat": 1553,
-     "fide": 1620
-    },
-    {
-     "no": 7,
-     "name": "Skalka Filip",
-     "types": [],
-     "rtg": null,
-     "nat": 1408,
-     "fide": 1535
-    },
-    {
-     "no": 8,
-     "name": "Rusz Robin",
-     "types": [],
-     "rtg": null,
-     "nat": 1431,
-     "fide": null
-    },
-    {
-     "no": 9,
-     "name": "Zvolánek Jan",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 1840,
-     "fide": 1950
-    },
-    {
-     "no": 10,
-     "name": "Brzezny Petr",
-     "types": [
-      "V"
-     ],
-     "rtg": null,
-     "nat": 1810,
-     "fide": 1876
-    },
-    {
-     "no": 11,
-     "name": "Beran Daniel",
-     "types": [],
-     "rtg": null,
-     "nat": 1391,
-     "fide": 1476
-    },
-    {
-     "no": 12,
-     "name": "Havlík Vlastimil",
-     "types": [],
-     "rtg": null,
-     "nat": 1614,
-     "fide": 1732
-    },
-    {
-     "no": 13,
-     "name": "Brhel Zdeněk",
-     "types": [],
-     "rtg": null,
-     "nat": 1342,
-     "fide": 1524
-    },
-    {
-     "no": 14,
-     "name": "Lipus Drahomír",
-     "types": [],
-     "rtg": null,
-     "nat": 1347,
-     "fide": 1521
-    },
-    {
-     "no": 15,
-     "name": "Šejda Karel",
-     "types": [],
-     "rtg": null,
-     "nat": 1497,
-     "fide": null
-    },
-    {
-     "no": 16,
-     "name": "Beran Luděk",
-     "types": [],
-     "rtg": null,
-     "nat": 1252,
-     "fide": 1491
-    },
-    {
-     "no": 17,
-     "name": "Brožík Ondřej",
-     "types": [],
-     "rtg": null,
-     "nat": null,
-     "fide": null
-    },
-    {
-     "no": 18,
-     "name": "Adamčík Jan",
-     "types": [],
-     "rtg": null,
-     "nat": 1339,
      "fide": null
     }
    ]
