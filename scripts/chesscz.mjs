@@ -151,17 +151,63 @@ function rosterRows(table) {
   return players;
 }
 
-/** Stránka „Všechny soupisky“: [{ name, captain, players }]. Kapitán je hráč s typem K. */
+/**
+ * Stránka „Všechny soupisky“: [{ name, cz, captain, players }]. Kapitán je hráč s typem K.
+ * cz je číslo družstva na chess.cz z odkazu v popisku tabulky (stránka družstva, teamUrl).
+ */
 export function parseAllRosters(doc) {
   const teams = [];
   for (const table of doc.querySelectorAll('table')) {
-    const name = text(table.querySelector('caption'));
+    const caption = table.querySelector('caption');
+    const name = text(caption);
     const head = [...(table.querySelector('thead tr, tr')?.querySelectorAll('th,td') ?? [])].map(text);
     if (!name || !head.includes('Jméno hráče')) continue;
     const players = rosterRows(table);
-    teams.push({ name, captain: players.find((p) => p.types.includes('K'))?.name ?? '', players });
+    const cz = Number(/\/soutez\/druzstvo\/\d+\/(\d+)/.exec(caption.querySelector('a')?.getAttribute('href') ?? '')?.[1]) || null;
+    teams.push({ name, ...(cz ? { cz } : {}), captain: players.find((p) => p.types.includes('K'))?.name ?? '', players });
   }
   return teams;
+}
+
+// ---------- hrací místnost ze stránky družstva ----------
+// Adresu hrací místnosti zadává oddíl jako volný text a chess.cz ji zobrazí jen na stránce družstva,
+// zkrácenou na 70 znaků. Do zápisu patří jen místo, ne poznámky o dopravě nebo pravidlech v místnosti.
+
+export const teamUrl = (compId, teamId) => `${BASE}/soutez/druzstvo/${compId}/${teamId}/`;
+const VENUE_CUT = 70; // na tolik znaků chess.cz text zkracuje
+
+/** Uklidí text hrací místnosti z chess.cz: bez úvodního popisku, poznámek a useknutého konce. */
+export function cleanVenue(raw) {
+  let s = String(raw ?? '').replace(/\s+/g, ' ').trim();
+  const cut = s.length >= VENUE_CUT;
+  s = s
+    .replace(/^(adresa\s+)?hrac[íi]\s+m[íi]stnost[i]?\s*:\s*/i, '')
+    .replace(/\s+,/g, ',')
+    .replace(/,(?:\s*,)+/g, ',');
+  // poznámky za adresou: doprava a pravidla v místnosti
+  s = s.replace(/[\s,;–-]+(MHD|V hrac[íi] m[íi]stnosti)\b.*$/i, '');
+  if (cut && s.length >= VENUE_CUT - 2) {
+    // useknutý konec: zpátky k poslední čárce, jinak k poslednímu celému slovu
+    const comma = s.lastIndexOf(',');
+    s = comma >= 10 ? s.slice(0, comma) : s.slice(0, Math.max(s.lastIndexOf(' '), 0)) || s;
+  }
+  return s.replace(/[\s,;:–-]+$/, '').trim();
+}
+
+// Adresa se mění zřídka: každý týden se ověří čtvrtina družstev, za měsíc všechna.
+// Družstvo, které adresu ještě zjištěnou nemá, se stahuje vždy (rozhoduje scripts/fetch_data.mjs).
+const VENUE_ROTATION = 4;
+const weekNo = (now = Date.now()) => Math.floor(now / (7 * 864e5));
+/** Má se hrací místnost družstva ověřit tento týden? */
+export const venueDue = (teamId, now = Date.now()) => teamId % VENUE_ROTATION === weekNo(now) % VENUE_ROTATION;
+
+/** Hrací místnost ze stránky družstva ('' když ji oddíl nezadal). */
+export function parseVenue(doc) {
+  for (const tr of doc.querySelectorAll('tr')) {
+    const cells = [...tr.querySelectorAll('td,th')];
+    if (cells.length >= 2 && text(cells[0]) === 'Hrací místnost') return cleanVenue(text(cells[1]));
+  }
+  return '';
 }
 
 /** Stránka „Rozpis“ (kompletní): [{ no, date, time, matches: [{ home, away }] }]. */

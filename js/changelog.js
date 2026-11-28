@@ -4,6 +4,13 @@
 
 export const CHANGES = [
   {
+    date: '2026-11-28',
+    items: [
+      '<b>Hrací místnost se doplní sama</b> podle stránky domácího družstva na chess.cz. Když vybereš jiný zápas, vymění se za místnost nového domácího družstva.',
+      'Hrací místnost, kterou přepíšeš, si zařízení u družstva zapamatuje a příště ji nabídne místo té z chess.cz.',
+    ],
+  },
+  {
     date: '2026-11-27',
     items: [
       'Nová sekce <b>O aplikaci</b> v menu: návod krok za krokem, seznam změn a informace o aplikaci. Po aktualizaci aplikace upozorní, že má novinky.',
