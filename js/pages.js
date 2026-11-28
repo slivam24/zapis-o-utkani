@@ -1,6 +1,6 @@
 // Stránky z menu: O aplikaci (návod, seznam změn, informace) a ochrana osobních údajů. Jen text, bez stavu.
 
-import { CHANGES, VERSION, fmtChangeDate } from './changelog.js';
+import { CHANGES, VERSION, fmtChangeDate, isNew } from './changelog.js';
 
 const REPO_URL = 'https://github.com/slivam24/zapis-o-utkani';
 
@@ -28,7 +28,7 @@ export function aboutPage(sub = 'navod', { seen = '' } = {}) {
 /** Seznam změn po dnech, nejnovější nahoře. */
 export function changesPage(seen = '') {
   const days = CHANGES.map((c) => {
-    const fresh = seen && c.date > seen;
+    const fresh = isNew(c, seen);
     return `<section class="change-day${fresh ? ' fresh' : ''}">
       <h3>${fmtChangeDate(c.date)}${fresh ? ' <span class="badge new">nové</span>' : ''}</h3>
       <ul>${c.items.map((i) => `<li>${i}</li>`).join('')}</ul>
@@ -50,7 +50,7 @@ export function infoPage() {
     <p><b>Zápis o utkání</b> je webová aplikace, která nahrazuje papírový <i>Zápis o konaném šachovém utkání</i>
     v soutěžích družstev Šachového svazu ČR.</p>
     <dl class="about-facts">
-      <dt>Verze</dt><dd>${fmtChangeDate(VERSION)} <button class="link-btn" type="button" data-act="aboutTab" data-sub="zmeny">co je nového</button></dd>
+      <dt>Verze</dt><dd>${fmtChangeDate(CHANGES[0].date)} <button class="link-btn" type="button" data-act="aboutTab" data-sub="zmeny">co je nového</button></dd>
       <dt>Soupisky a rozlosování</dt><dd>ze stránek svazu <a href="https://www.chess.cz/souteze/vyber-kraje/" target="_blank" rel="noopener">chess.cz</a>,
       u několika soutěží z <a href="https://chess-results.com" target="_blank" rel="noopener">chess-results.com</a>; obnovují se každý pátek</dd>
       <dt>Hrací místnosti</dt><dd>ze stránek družstev na chess.cz, jak je zadaly oddíly</dd>
@@ -133,6 +133,9 @@ export function helpPage() {
       <li>Klepnutím na náhled se zápis zobrazí na celou obrazovku.</li>
       <li><b>Stáhnout PDF</b>, případně obrázek (PNG), <b>Sdílet</b> nebo <b>Odeslat e-mailem</b>.
       Adresa příjemce se pamatuje pro každou soutěž.</li>
+      <li><b>Stáhnout partie (PGN)</b> uloží sehrané partie pro šachové programy: hráče, barvy, Elo a výsledky
+      (tahy zápis nemá). Domácí hrají bílými na lichých šachovnicích (1. bílé, 2. černé…), texty jsou bez diakritiky
+      a uvozovek. Kontumované šachovnice v PGN nejsou, partie bez výsledku má výsledek *.</li>
       <li>Loga v zápisu (svaz, krajský svaz, družstva) jde nahrát a každé vypnout.</li>
       <li><b>Uložit do archivu a začít nový</b> zápis uloží a otevře prázdný.</li>
     </ul>
