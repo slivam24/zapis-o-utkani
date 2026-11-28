@@ -67,7 +67,13 @@ export function parseBoards(doc) {
   return max;
 }
 
-/** Stažení stránky z chess.cz s pár pokusy. */
+/** Chyba stažení; `status` je stavový kód HTTP, když server odpověděl. */
+const fetchError = (url, message, status) => Object.assign(new Error(`${url}: ${message}`), status ? { status } : {});
+
+/**
+ * Stažení stránky z chess.cz s pár pokusy. Stránka, která neexistuje (404), se znovu nezkouší:
+ * chess.cz takhle odpovídá i na rozpis soutěže, která ještě nemá zadaná kola.
+ */
 export async function fetchHtml(url, { retries = 3, timeoutMs = 30000, pause = 800 } = {}) {
   let last;
   for (let attempt = 1; attempt <= retries; attempt++) {
@@ -75,18 +81,20 @@ export async function fetchHtml(url, { retries = 3, timeoutMs = 30000, pause = 8
     const timer = setTimeout(() => ctrl.abort(), timeoutMs);
     try {
       const res = await fetch(url, { headers: { 'User-Agent': UA, 'Accept-Language': 'cs' }, signal: ctrl.signal });
+      if (res.status === 404) throw fetchError(url, 'HTTP 404', 404);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const html = await res.text();
       await sleep(pause); // ohleduplně k serveru svazu
       return html;
     } catch (e) {
+      if (e.status === 404) throw e;
       last = e;
       if (attempt < retries) await sleep(2000 * attempt);
     } finally {
       clearTimeout(timer);
     }
   }
-  throw new Error(`${url}: ${last?.message}`);
+  throw fetchError(url, last?.message);
 }
 
 /** Počet šachovnic soutěže z prvních odehraných kol (zkusí nejvýš `tries` kol). */
@@ -175,9 +183,18 @@ export function parseSchedule(doc) {
   return rounds.sort((a, b) => a.no - b.no);
 }
 
-/** Celá soutěž z chess.cz: { teams, rounds }. Dva dotazy na soutěž. */
+/** Celá soutěž z chess.cz: { teams, rounds, noSchedule? }. Dva dotazy na soutěž. */
 export async function fetchCompetition(id, { get = fetchHtml } = {}) {
   const teams = parseAllRosters(toDoc(await get(rostersUrl(id))));
-  const rounds = parseSchedule(toDoc(await get(scheduleUrl(id))));
-  return { teams, rounds };
+  // Soutěž bez zadaných kol (třeba finále, které se hraje až na konci sezóny) nemá stránku rozpisu,
+  // chess.cz vrací 404. Soupisky se ale uloží, rozpis se doplní při některé z dalších aktualizací.
+  let rounds = [];
+  let noSchedule = false;
+  try {
+    rounds = parseSchedule(toDoc(await get(scheduleUrl(id))));
+  } catch (e) {
+    if (e?.status !== 404) throw e;
+    noSchedule = true;
+  }
+  return { teams, rounds, ...(noSchedule ? { noSchedule } : {}) };
 }
