@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "TJ Fulnek",
+   "cz": 216717,
    "captain": "Vrobel Jaromír",
    "players": [
     {
@@ -89,10 +90,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Mořkov „B“",
+   "cz": 216718,
    "captain": "Hromádka Jaromír",
    "players": [
     {
@@ -204,10 +207,12 @@
      "nat": 1209,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Spartak Bílovec „A“",
+   "cz": 216715,
    "captain": "Opluštil Jiří",
    "players": [
     {
@@ -290,10 +295,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Šachy Nový Jičín",
+   "cz": 216716,
    "captain": "Bienek Petr",
    "players": [
     {
@@ -408,10 +415,12 @@
      "nat": 1429,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Petřvald",
+   "cz": 216711,
    "captain": "Hýl Martin",
    "players": [
     {
@@ -566,10 +575,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Kopřivnice „C“",
+   "cz": 216707,
    "captain": "Kozohorský Jan",
    "players": [
     {
@@ -683,10 +694,12 @@
      "nat": 1248,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Kopřivnice „D“",
+   "cz": 216713,
    "captain": "Štefaník Petr",
    "players": [
     {
@@ -777,10 +790,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Kopřivnice „E“",
+   "cz": 216714,
    "captain": "Prokop Michal",
    "players": [
     {
@@ -851,10 +866,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Frenštát „A“",
+   "cz": 216709,
    "captain": "Klecker David",
    "players": [
     {
@@ -933,10 +950,12 @@
      "nat": 1320,
      "fide": 1657
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Mořkov „C“",
+   "cz": 216712,
    "captain": "Černoch Václav",
    "players": [
     {
@@ -1072,10 +1091,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Frenštát „B“",
+   "cz": 216708,
    "captain": "Vojvodík Vlastimil",
    "players": [
     {
@@ -1154,10 +1175,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Spartak Bílovec „B“",
+   "cz": 216710,
    "captain": "",
    "players": [
     {
@@ -1245,7 +1268,8 @@
      "nat": 1357,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

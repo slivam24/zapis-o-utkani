@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "Tatran Litovel C",
+   "cz": 215000,
    "captain": "",
    "players": [
     {
@@ -120,10 +121,12 @@
      "nat": 1010,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Peškova 484/1, Olomouc, Dům s pečovatelskou službou."
   },
   {
    "name": "ŠK Šternberk B",
+   "cz": 215006,
    "captain": "Vymětalík Ivo",
    "players": [
     {
@@ -230,10 +233,12 @@
      "nat": 1684,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Dvorská 960/13-2.patro, Šternberk (naproti sportovní haly Ecce Homo)"
   },
   {
    "name": "STAV-IZOL ISO Olomouc C",
+   "cz": 215003,
    "captain": "Přenosil Jiří",
    "players": [
     {
@@ -333,10 +338,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Hájenka Nový Dvůr 150, Olomouc"
   },
   {
    "name": "ŠK Šternberk C",
+   "cz": 215001,
    "captain": "",
    "players": [
     {
@@ -449,10 +456,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Dvorská 960/13-2.patro, Šternberk (naproti sportovní haly Ecce Homo)"
   },
   {
    "name": "ŠK Bohuňovice C",
+   "cz": 215002,
    "captain": "Telařík Mojmír",
    "players": [
     {
@@ -574,10 +583,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "6. května 36, Bohuňovice, Klub setkávání – Domov důchodců"
   },
   {
    "name": "STAV-IZOL ISO Olomouc D",
+   "cz": 215004,
    "captain": "",
    "players": [
     {
@@ -647,10 +658,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Hájenka Nový Dvůr 150, Olomouc"
   },
   {
    "name": "Sigmia Olomouc C",
+   "cz": 215005,
    "captain": "Křížan Michal",
    "players": [
     {
@@ -769,10 +782,12 @@
      "nat": 1000,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Skautský dům, Holická 31/Q, Olomouc"
   },
   {
    "name": "Matadoor Přáslavice",
+   "cz": 215007,
    "captain": "Coufal František",
    "players": [
     {
@@ -860,10 +875,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Hostinec Na Dolní, Přáslavice 58"
   },
   {
    "name": "Tatran Litovel D",
+   "cz": 214999,
    "captain": "Krejčí Jan",
    "players": [
     {
@@ -961,7 +978,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Peškova 484/1, Olomouc, Dům s pečovatelskou službou."
   }
  ],
  "rounds": [

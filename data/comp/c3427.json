@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "Loko C",
+   "cz": 216539,
    "captain": "",
    "players": [
     {
@@ -143,10 +144,12 @@
      "nat": 1000,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Farského 5, vchod z ulice do nápisu Čalounictví, Plzeň 326 00"
   },
   {
    "name": "ŠK Líně D",
+   "cz": 216541,
    "captain": "Orlíček Karel",
    "players": [
     {
@@ -297,10 +300,12 @@
      "nat": 1240,
      "fide": 1432
     }
-   ]
+   ],
+   "venue": "Obecní dům Líně, Hornická 848, Líně 330 21"
   },
   {
    "name": "Přeštice B",
+   "cz": 216533,
    "captain": "Fišer Petr",
    "players": [
     {
@@ -435,10 +440,12 @@
      "nat": 1140,
      "fide": 1000
     }
-   ]
+   ],
+   "venue": "Přeštická svině - hotel Sport ( nad restaurací ), ul. 1.máje"
   },
   {
    "name": "Město Touškov",
+   "cz": 216538,
    "captain": "",
    "players": [
     {
@@ -580,10 +587,12 @@
      "nat": 1000,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Klubovna TJ Sokol Město Touškov, Sportovní 476, Město Touškov 330 33"
   },
   {
    "name": "Letná C",
+   "cz": 216542,
    "captain": "",
    "players": [
     {
@@ -732,10 +741,12 @@
      "nat": 1000,
      "fide": 1000
     }
-   ]
+   ],
+   "venue": "Klubovna v 1. patře nad restaurací Tunel, Republikánská 22, Plzeň"
   },
   {
    "name": "Sušice",
+   "cz": 216540,
    "captain": "",
    "players": [
     {
@@ -848,10 +859,12 @@
      "nat": 1405,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sokolovna, zadní vstup od gymnázia, T.G.Masaryka 120/2, Sušice 342 01"
   },
   {
    "name": "Košutka C",
+   "cz": 216532,
    "captain": "Kasík Miroslav",
    "players": [
     {
@@ -1022,10 +1035,12 @@
      "nat": 1503,
      "fide": 1000
     }
-   ]
+   ],
+   "venue": "Restaurace U komína, 1.patro, Karlovarská 126, Plzeň ( vchod dvorem )"
   },
   {
    "name": "ŠK 64 F",
+   "cz": 216537,
    "captain": "",
    "players": [
     {
@@ -1203,10 +1218,12 @@
      "nat": 1452,
      "fide": 1471
     }
-   ]
+   ],
+   "venue": "Konferenční sál hotelu LIONS, Zborovská 18, Plzeň 301 00"
   },
   {
    "name": "HeřNýř C",
+   "cz": 216535,
    "captain": "Bošek Vladimír",
    "players": [
     {
@@ -1358,10 +1375,12 @@
      "nat": 1000,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Klubovna TJ Nýřany z.s, Benešova třída 745, Nýřany 330 23"
   },
   {
    "name": "Košutka B",
+   "cz": 216531,
    "captain": "Bouše Vladimír",
    "players": [
     {
@@ -1495,10 +1514,12 @@
      "nat": 1000,
      "fide": 1000
     }
-   ]
+   ],
+   "venue": "Restaurace U komína, 1.patro, Karlovarská 126, Plzeň ( vchod dvorem )"
   },
   {
    "name": "Planá",
+   "cz": 216534,
    "captain": "",
    "players": [
     {
@@ -1590,10 +1611,12 @@
      "nat": 1377,
      "fide": 1000
     }
-   ]
+   ],
+   "venue": "DDM, Svobody 51, Planá 348 15"
   },
   {
    "name": "Tachov B",
+   "cz": 216536,
    "captain": "",
    "players": [
     {
@@ -1717,7 +1740,8 @@
      "nat": 1640,
      "fide": 1790
     }
-   ]
+   ],
+   "venue": "Zahradní 502, Tachov 347 01"
   }
  ],
  "rounds": [

@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "SK GPOA Znojmo \"B\"",
+   "cz": 216280,
    "captain": "",
    "players": [
     {
@@ -194,10 +195,12 @@
      "nat": 1087,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Kuřim D",
+   "cz": 216282,
    "captain": "",
    "players": [
     {
@@ -361,10 +364,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Duras Charlies Street Brno D",
+   "cz": 216278,
    "captain": "",
    "players": [
     {
@@ -555,10 +560,12 @@
      "nat": 1158,
      "fide": 1602
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Salesiáni Žabiny",
+   "cz": 216277,
    "captain": "",
    "players": [
     {
@@ -693,10 +700,12 @@
      "nat": 1576,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "VSK Univerzita Brno B",
+   "cz": 216275,
    "captain": "",
    "players": [
     {
@@ -881,10 +890,12 @@
      "nat": 1407,
      "fide": 1666
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Bíločerný Ořechov B",
+   "cz": 216281,
    "captain": "",
    "players": [
     {
@@ -1074,10 +1085,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Slovan Ivančice",
+   "cz": 216274,
    "captain": "",
    "players": [
     {
@@ -1215,10 +1228,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Lokomotiva Brno D",
+   "cz": 216276,
    "captain": "",
    "players": [
     {
@@ -1382,10 +1397,12 @@
      "nat": 1187,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Střelice",
+   "cz": 216279,
    "captain": "",
    "players": [
     {
@@ -1514,10 +1531,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Šachy Vyškov",
+   "cz": 216283,
    "captain": "",
    "players": [
     {
@@ -1704,7 +1723,8 @@
      "nat": 1063,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

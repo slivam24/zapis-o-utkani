@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "ŠO TJ Sokol Lužany",
+   "cz": 216764,
    "captain": "Mach Ladislav",
    "players": [
     {
@@ -96,10 +97,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Zasedací místnost OÚ Lužany (vedle pošty)"
   },
   {
    "name": "TJ Jiskra Nový Bydžov B",
+   "cz": 216757,
    "captain": "Mansfeld Jaromír",
    "players": [
     {
@@ -198,10 +201,12 @@
      "nat": 1288,
      "fide": null
     }
-   ]
+   ],
+   "venue": "TJ Jiskra Nový Bydžov, Revoluční 773"
   },
   {
    "name": "ŠK Šachonoše",
+   "cz": 216763,
    "captain": "Mareš Štěpán",
    "players": [
     {
@@ -341,10 +346,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Kolonáda, nám. Svobody 4, Janské Lázně"
   },
   {
    "name": "ŠK Sobotka B",
+   "cz": 216759,
    "captain": "Rejman Jindřich",
    "players": [
     {
@@ -443,10 +450,12 @@
      "nat": 1113,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Pošta, Boleslavská 440, Sobotka"
   },
   {
    "name": "CIS Lázně Bělohrad B",
+   "cz": 216755,
    "captain": "Kopysov Filip",
    "players": [
     {
@@ -628,10 +637,12 @@
      "nat": 1359,
      "fide": 1602
     }
-   ]
+   ],
+   "venue": "Vachkova 644, Lázně Bělohrad"
   },
   {
    "name": "TJ Jiskra Nový Bydžov C",
+   "cz": 216762,
    "captain": "Baťka Josef",
    "players": [
     {
@@ -721,10 +732,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "TJ Jiskra Nový Bydžov, Revoluční 773"
   },
   {
    "name": "TJ Spartak Vrchlabí B",
+   "cz": 216760,
    "captain": "Šafařík Radim",
    "players": [
     {
@@ -856,10 +869,12 @@
      "nat": 1401,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Pivnice Old School, Krkonošská 6/1, Vrchlabí"
   },
   {
    "name": "Šachklub Jilemnice",
+   "cz": 216761,
    "captain": "Pitrmuc Ondřej",
    "players": [
     {
@@ -1010,10 +1025,12 @@
      "nat": 1282,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Základní škola Jilemnice, Komenského 288, (vchod ze dvora budovy)"
   },
   {
    "name": "ŠK Lomnice n/Pop. C",
+   "cz": 216758,
    "captain": "Blažek Dušan",
    "players": [
     {
@@ -1116,10 +1133,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Středisko volného času Sluníčko, Komenského 1037, Lomnice n/Pop."
   },
   {
    "name": "TJ Lokomotiva Trutnov B",
+   "cz": 216756,
    "captain": "Kozel Jiří",
    "players": [
     {
@@ -1314,7 +1333,8 @@
      "nat": 1378,
      "fide": 1710
     }
-   ]
+   ],
+   "venue": "Národní dům, Národní 199, Trutnov"
   }
  ],
  "rounds": [

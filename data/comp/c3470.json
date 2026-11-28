@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "ŠK Dubno B",
+   "cz": 217947,
    "captain": "Saxl Jiří",
    "players": [
     {
@@ -197,10 +198,12 @@
      "nat": 1157,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Spartak Vlašim D",
+   "cz": 217950,
    "captain": "Matějovský Ondřej",
    "players": [
     {
@@ -395,10 +398,12 @@
      "nat": 1515,
      "fide": 1666
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Klub šachistů Říčany 1925 G",
+   "cz": 217943,
    "captain": "Košata František",
    "players": [
     {
@@ -589,10 +594,12 @@
      "nat": 1082,
      "fide": 1469
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Sokol Struhařov A",
+   "cz": 217940,
    "captain": "Gernert Otakar",
    "players": [
     {
@@ -780,10 +787,12 @@
      "nat": 1046,
      "fide": 1437
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK při MěÚ Hostomice B",
+   "cz": 217945,
    "captain": "Fairaisl Dušan",
    "players": [
     {
@@ -953,10 +962,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Klub šachistů Říčany 1925 H",
+   "cz": 217949,
    "captain": "Melicharová Hana",
    "players": [
     {
@@ -1151,10 +1162,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Zdice B",
+   "cz": 217942,
    "captain": "Mruškovič Radoslav",
    "players": [
     {
@@ -1346,10 +1359,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "KŠ Stříbrná Skalice A",
+   "cz": 217948,
    "captain": "Studzinski Boleslav",
    "players": [
     {
@@ -1546,10 +1561,12 @@
      "nat": 1270,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Mníšek pod Brdy",
+   "cz": 217944,
    "captain": "Brabec Jaroslav",
    "players": [
     {
@@ -1671,10 +1688,12 @@
      "nat": 1294,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK KDJS Sedlčany B",
+   "cz": 217941,
    "captain": "Sadil Pavel",
    "players": [
     {
@@ -1851,10 +1870,12 @@
      "nat": 1075,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK při MěÚ Hostomice A",
+   "cz": 217946,
    "captain": "",
    "players": [
     {
@@ -1990,7 +2011,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

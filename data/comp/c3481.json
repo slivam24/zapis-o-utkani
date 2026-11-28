@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "Sokol Čkyně",
+   "cz": 216683,
    "captain": "",
    "players": [
     {
@@ -141,10 +142,12 @@
      "nat": 1350,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Šachklub Tábor B",
+   "cz": 216680,
    "captain": "Pistulka Radek",
    "players": [
     {
@@ -317,10 +320,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠS Mild Bivoj Bechyně",
+   "cz": 216681,
    "captain": "Bernáth Štefan",
    "players": [
     {
@@ -463,10 +468,12 @@
      "nat": 1622,
      "fide": 1811
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ČZ Strakonice E",
+   "cz": 216685,
    "captain": "Čipera Josef",
    "players": [
     {
@@ -580,10 +587,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Chess Club Písek F",
+   "cz": 216686,
    "captain": "",
    "players": [
     {
@@ -770,10 +779,12 @@
      "nat": 1276,
      "fide": 1651
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ČZ Strakonice D",
+   "cz": 216678,
    "captain": "Kotál Václav",
    "players": [
     {
@@ -857,10 +868,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Chess Club Písek G",
+   "cz": 216677,
    "captain": "Friedl Václav",
    "players": [
     {
@@ -981,10 +994,12 @@
      "nat": 1347,
      "fide": 1575
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Tn Prachatice",
+   "cz": 216679,
    "captain": "Zikmund Alexandr",
    "players": [
     {
@@ -1099,10 +1114,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Spartak Soběslav B",
+   "cz": 216684,
    "captain": "Petkov Andon",
    "players": [
     {
@@ -1218,10 +1235,12 @@
      "nat": 1450,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Sokol Tábor Mládí",
+   "cz": 216682,
    "captain": "",
    "players": [
     {
@@ -1341,7 +1360,8 @@
      "nat": 1399,
      "fide": 1668
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

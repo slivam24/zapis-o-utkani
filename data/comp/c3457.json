@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "TJ Slovan Moravská Třebová",
+   "cz": 212174,
    "captain": "",
    "players": [
     {
@@ -104,10 +105,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Ústí nad Orlicí",
+   "cz": 212176,
    "captain": "",
    "players": [
     {
@@ -230,10 +233,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠO Horní Čermná",
+   "cz": 212177,
    "captain": "",
    "players": [
     {
@@ -349,10 +354,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Tramtáryje Svitavy",
+   "cz": 212172,
    "captain": "",
    "players": [
     {
@@ -496,10 +503,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠS Železné hory C",
+   "cz": 212175,
    "captain": "",
    "players": [
     {
@@ -638,10 +647,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠKM Damián Lanškroun B",
+   "cz": 212171,
    "captain": "",
    "players": [
     {
@@ -768,10 +779,12 @@
      "nat": 1044,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Štefanydes Polička",
+   "cz": 212180,
    "captain": "",
    "players": [
     {
@@ -928,10 +941,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ ŠO Chrudim",
+   "cz": 212178,
    "captain": "",
    "players": [
     {
@@ -1092,10 +1107,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Bohemia Pardubice",
+   "cz": 212173,
    "captain": "",
    "players": [
     {
@@ -1206,10 +1223,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Tramtáryje Svitavy B",
+   "cz": 212179,
    "captain": "",
    "players": [
     {
@@ -1360,7 +1379,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

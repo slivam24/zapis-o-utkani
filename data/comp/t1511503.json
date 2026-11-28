@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "ŠO TJ Hradec nad Moravicí",
+   "cz": 216950,
    "captain": "Škrobánek Vít",
    "players": [
     {
@@ -162,10 +163,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Fotbalové hřiště - nová tribuna"
   },
   {
    "name": "SK Kravaře B",
+   "cz": 216955,
    "captain": "",
    "players": [
     {
@@ -300,10 +303,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Kostelní 12"
   },
   {
    "name": "Orel Opava D",
+   "cz": 216953,
    "captain": "Jureček Daniel",
    "players": [
     {
@@ -446,10 +451,12 @@
      "nat": 1789,
      "fide": 1881
     }
-   ]
+   ],
+   "venue": "Beethovenova 2"
   },
   {
    "name": "ŠK Píšť B",
+   "cz": 216949,
    "captain": "Lejnar Ondřej",
    "players": [
     {
@@ -600,10 +607,12 @@
      "nat": 1190,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Kulturní centrum obce Píšť"
   },
   {
    "name": "Orel Opava C",
+   "cz": 216954,
    "captain": "Hasík Karel",
    "players": [
     {
@@ -747,10 +756,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Beethovenova 2"
   },
   {
    "name": "Slezan Opava E",
+   "cz": 216951,
    "captain": "Kurka Michal",
    "players": [
     {
@@ -875,10 +886,12 @@
      "nat": 1854,
      "fide": 1910
     }
-   ]
+   ],
+   "venue": "Boženy Němcové 20"
   },
   {
    "name": "ŠK TJ Dolní Benešov E",
+   "cz": 216948,
    "captain": "Slanina Maxmilián",
    "players": [
     {
@@ -1058,10 +1071,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Dům služeb - přízemí (u kostela).Náměstí Cvpriána Lellka 73"
   },
   {
    "name": "ŠO TJ Vítkov C",
+   "cz": 216952,
    "captain": "Dudová Anna",
    "players": [
     {
@@ -1179,10 +1194,12 @@
      "nat": 1355,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Restaurace u Berana, Zemědělská 720"
   },
   {
    "name": "TJ Sokol Kobeřice B",
+   "cz": 216956,
    "captain": "Mrovec Jakub",
    "players": [
     {
@@ -1373,7 +1390,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Klubovna TJ SOKOL Kobeřice-areál hřiště"
   }
  ],
  "rounds": [

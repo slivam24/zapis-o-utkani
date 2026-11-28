@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "ŠK Valdštejn Cheb B",
+   "cz": 216958,
    "captain": "",
    "players": [
     {
@@ -190,10 +191,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Cheb, Náměstí Krále Jiřího 507/6"
   },
   {
    "name": "ŠK Karlovy Vary B",
+   "cz": 216961,
    "captain": "Majstr Tomáš",
    "players": [
     {
@@ -357,10 +360,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Karlovy Vary, Lidická 590/38, Domov mládeže"
   },
   {
    "name": "ŠK Hartenberg B",
+   "cz": 216960,
    "captain": "Dub Miroslav",
    "players": [
     {
@@ -552,10 +557,12 @@
      "nat": 1080,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Josefov 100, 357 09 Josefov"
   },
   {
    "name": "TJ Olympie Hroznětín B",
+   "cz": 216959,
    "captain": "",
    "players": [
     {
@@ -756,10 +763,12 @@
      "nat": 1122,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Hroznětín, Školní 185, ( Městské společenské centrum)"
   },
   {
    "name": "Karlovarský šachklub Tietz D",
+   "cz": 216957,
    "captain": "Hajšman Martin",
    "players": [
     {
@@ -929,10 +938,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Karlovy Vary-Doubí, Studentská 64, (konečná st . autobusu"
   },
   {
    "name": "KD Chemie Sokolov B",
+   "cz": 216964,
    "captain": "Pittermann Jan",
    "players": [
     {
@@ -1080,10 +1091,12 @@
      "nat": 1533,
      "fide": 1744
     }
-   ]
+   ],
+   "venue": "Sokolov, Tovární 2093,( zasedačka chemičky)"
   },
   {
    "name": "TJ Tašovice A",
+   "cz": 216963,
    "captain": "David Ladislav",
    "players": [
     {
@@ -1243,10 +1256,12 @@
      "nat": 1295,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Březová u Kar.Varů, Hamerská 97, Hotel Slunce"
   },
   {
    "name": "ŠK Karlovy Vary C",
+   "cz": 216962,
    "captain": "Lorencová Věra",
    "players": [
     {
@@ -1421,10 +1436,12 @@
      "nat": 1274,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Karlovy Vary, Lidická 590/38, Domov mládeže"
   },
   {
    "name": "TJ Sokol Teplá B",
+   "cz": 216965,
    "captain": "Klepal Martin",
    "players": [
     {
@@ -1589,7 +1606,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Teplá, Masarykovo náměstí 66, přízemí bývalé knihovny."
   }
  ],
  "rounds": [

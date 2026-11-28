@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "ŠK TJ Dolní Benešov \"C\"",
+   "cz": 216888,
    "captain": "Vavřínek Radomír",
    "players": [
     {
@@ -148,10 +149,12 @@
      "nat": 1559,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Dům služeb - přízemí (u kostela), Náměstí Cypriána Lelka 73"
   },
   {
    "name": "Orel Opava \"B\"",
+   "cz": 216890,
    "captain": "Jaššo Slavomír",
    "players": [
     {
@@ -342,10 +345,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Beethovenova 2, Opava"
   },
   {
    "name": "Slezan Opava \"D\"",
+   "cz": 216892,
    "captain": "Hromada Jan",
    "players": [
     {
@@ -509,10 +514,12 @@
      "nat": 1016,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Boženy Němcové 20, Opava"
   },
   {
    "name": "TJ Sokol Kobeřice \"A\"",
+   "cz": 216889,
    "captain": "Mrovec Jakub",
    "players": [
     {
@@ -699,10 +706,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Klubovna TJ Sokol Kobeřice - areál hřiště"
   },
   {
    "name": "ŠK Darkovičky",
+   "cz": 216893,
    "captain": "Moravec Šimon",
    "players": [
     {
@@ -790,10 +799,12 @@
      "nat": 1330,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Restaurace U Šenkýřky, Kozmická 210/4 (u kaple)"
   },
   {
    "name": "ŠK Píšť \"A\"",
+   "cz": 216891,
    "captain": "Škrob Jaroslav",
    "players": [
     {
@@ -944,10 +955,12 @@
      "nat": 1190,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Kulturní centrum obce Píšť"
   },
   {
    "name": "SK Kravaře \"A\"",
+   "cz": 216894,
    "captain": "",
    "players": [
     {
@@ -1058,10 +1071,12 @@
      "nat": 1108,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Olšinky, 747 21 Kravaře Sportovní areál"
   },
   {
    "name": "ŠK 1935 Bolatice",
+   "cz": 216896,
    "captain": "Pavera Pavel",
    "players": [
     {
@@ -1187,10 +1202,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "OÚ Bolatice (zámek)"
   },
   {
    "name": "ŠK Dolní Benešov \"D\"",
+   "cz": 216897,
    "captain": "Gregořica Artur",
    "players": [
     {
@@ -1379,10 +1396,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Dům služeb - přízemí (u kostela), Náměstí Cypriána Lelka 73"
   },
   {
    "name": "ŠO TJ Vítkov \"B\"",
+   "cz": 216895,
    "captain": "Vlček Antonín",
    "players": [
     {
@@ -1502,7 +1521,8 @@
      "nat": 1151,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Restaurace U Berana, Zemědělská 720, Vítkov"
   }
  ],
  "rounds": [

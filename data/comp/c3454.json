@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "ŠO TJ Jiskra Nový Bydžov",
+   "cz": 215696,
    "captain": "",
    "players": [
     {
@@ -195,10 +196,12 @@
      "nat": 1288,
      "fide": null
     }
-   ]
+   ],
+   "venue": "NB, Revoluční 773, Sokolovna"
   },
   {
    "name": "TJ Spartak Vrchlabí",
+   "cz": 215693,
    "captain": "",
    "players": [
     {
@@ -349,10 +352,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Vrchlabí, Krkonošská 6/1"
   },
   {
    "name": "Šachový klub Sobotka 2009",
+   "cz": 215699,
    "captain": "",
    "players": [
     {
@@ -518,10 +523,12 @@
      "nat": 1494,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sobotka, Boleslavská 440"
   },
   {
    "name": "ŠO TJ Lokomotiva Trutnov",
+   "cz": 215698,
    "captain": "",
    "players": [
     {
@@ -716,10 +723,12 @@
      "nat": 1549,
      "fide": 1679
     }
-   ]
+   ],
+   "venue": "Trutnov, Národní 199, Národní dům"
   },
   {
    "name": "TJ SKP Valdice",
+   "cz": 215697,
    "captain": "",
    "players": [
     {
@@ -879,10 +888,12 @@
      "nat": 1640,
      "fide": 1784
     }
-   ]
+   ],
+   "venue": "Valdice, JIčínská37, OÚ"
   },
   {
    "name": "ŠO TJ Dvůr Králové nad Labem",
+   "cz": 215690,
    "captain": "",
    "players": [
     {
@@ -1032,10 +1043,12 @@
      "nat": 1477,
      "fide": 1686
     }
-   ]
+   ],
+   "venue": "DK, Ve Strži, E. Krásnohorské"
   },
   {
    "name": "TJ CIS Lázně Bělohrad",
+   "cz": 215692,
    "captain": "",
    "players": [
     {
@@ -1226,10 +1239,12 @@
      "nat": 1037,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Lázně Bělohrad, Vachkova 644"
   },
   {
    "name": "Šachový klub Lomnice nad Popelkou B",
+   "cz": 215689,
    "captain": "",
    "players": [
     {
@@ -1364,10 +1379,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Lomnice n. P., Komenského 1037, Sluníčko"
   },
   {
    "name": "ŠK Lípa D - ORTEX HK",
+   "cz": 215694,
    "captain": "",
    "players": [
     {
@@ -1558,10 +1575,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "HK, Resslova 3, ORTEX"
   },
   {
    "name": "TJ Nová Paka",
+   "cz": 215695,
    "captain": "",
    "players": [
     {
@@ -1741,10 +1760,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Nová Paka, U Teplárny 1258, Dům dětí a mládeže"
   },
   {
    "name": "TJ Jiskra Hořice v Podkrkonoší B",
+   "cz": 215691,
    "captain": "",
    "players": [
     {
@@ -1930,7 +1951,8 @@
      "nat": 1435,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Hořice v Podkrkonoší, Erbenova 1081, Sokolovna"
   }
  ],
  "rounds": [

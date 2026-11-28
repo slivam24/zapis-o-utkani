@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "TJ Neratovice B",
+   "cz": 216020,
    "captain": "Nadrchal Tomáš",
    "players": [
     {
@@ -192,10 +193,12 @@
      "nat": 1674,
      "fide": 1795
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Rakovník A",
+   "cz": 216018,
    "captain": "Volf Jaromír",
    "players": [
     {
@@ -379,10 +382,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Šachklub města Dobrovice C",
+   "cz": 216027,
    "captain": "Novotný Petr",
    "players": [
     {
@@ -577,10 +582,12 @@
      "nat": 1122,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Hostivice A",
+   "cz": 216017,
    "captain": "Dbalý Václav",
    "players": [
     {
@@ -768,10 +775,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Sokol Buštěhrad A",
+   "cz": 216024,
    "captain": "Budil Václav",
    "players": [
     {
@@ -966,10 +975,12 @@
      "nat": 1525,
      "fide": 1793
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Český lev Kolešovice B",
+   "cz": 216025,
    "captain": "Kšána Václav",
    "players": [
     {
@@ -1162,10 +1173,12 @@
      "nat": 1505,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Caissa Roztoky A",
+   "cz": 216023,
    "captain": "Turková Karolína",
    "players": [
     {
@@ -1340,10 +1353,12 @@
      "nat": 1380,
      "fide": 1496
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Šachový klub Velvary A",
+   "cz": 216021,
    "captain": "Trejbal Jindřich",
    "players": [
     {
@@ -1544,10 +1559,12 @@
      "nat": 1045,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Šachklub města Dobrovice B",
+   "cz": 216016,
    "captain": "Krejbich Lukáš",
    "players": [
     {
@@ -1744,10 +1761,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "DDM Neratovice",
+   "cz": 216026,
    "captain": "Burda Roman",
    "players": [
     {
@@ -1948,10 +1967,12 @@
      "nat": 1077,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Řevnice A",
+   "cz": 216022,
    "captain": "Paukert Jan",
    "players": [
     {
@@ -2144,10 +2165,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Sokol Mladá Boleslav B",
+   "cz": 216019,
    "captain": "Novák Ivan",
    "players": [
     {
@@ -2304,7 +2327,8 @@
      "nat": 1785,
      "fide": 1621
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "TJ Sokol Plzeň Letná A",
+   "cz": 211323,
    "captain": "",
    "players": [
     {
@@ -172,10 +173,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Republikánská, 22, klubovna 1. patro"
   },
   {
    "name": "Šachový klub 64 Plzeň A",
+   "cz": 211322,
    "captain": "",
    "players": [
     {
@@ -378,10 +381,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Hotel LIONS, Zborovská 18, Plzeň"
   },
   {
    "name": "TJ Bohemians Praha A",
+   "cz": 211327,
    "captain": "",
    "players": [
     {
@@ -580,10 +585,12 @@
      "nat": 1028,
      "fide": 1434
     }
-   ]
+   ],
+   "venue": "Hala Bohemians, Slovenská 2, Praha 10"
   },
   {
    "name": "ŠK Aurora A",
+   "cz": 211324,
    "captain": "",
    "players": [
     {
@@ -700,10 +707,12 @@
      "nat": 1454,
      "fide": 1503
     }
-   ]
+   ],
+   "venue": "EA Hotel Populus, U Staré cihelny 2182"
   },
   {
    "name": "ŠK Aurora B",
+   "cz": 211325,
    "captain": "",
    "players": [
     {
@@ -819,10 +828,12 @@
      "nat": 1343,
      "fide": null
     }
-   ]
+   ],
+   "venue": "EA Hotel Populus, U Staré cihelny 2182"
   },
   {
    "name": "ŠK Duras DDM Ústí nad Labem A",
+   "cz": 211329,
    "captain": "",
    "players": [
     {
@@ -985,10 +996,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "DDM, Velká Hradební 19, Ústí n. L"
   },
   {
    "name": "100 let Kobylisy",
+   "cz": 211328,
    "captain": "",
    "players": [
     {
@@ -1191,10 +1204,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sokolovna, U Školské zahrady 9, Praha"
   },
   {
    "name": "ŠŠ Vávra a Černoušek Unichess A",
+   "cz": 211326,
    "captain": "",
    "players": [
     {
@@ -1339,7 +1354,8 @@
      "nat": 1021,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Pernerova 18, Praha 8 - metro Křižíkova"
   }
  ],
  "rounds": [

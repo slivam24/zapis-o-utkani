@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "ŠK JOLY Lysá nad Labem G",
+   "cz": 216247,
    "captain": "Lažánek Jan",
    "players": [
     {
@@ -202,10 +203,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Náměstí Bedřicha Hrozného 1737 Lysá nad Labem 289 22"
   },
   {
    "name": "Rožďalovice",
+   "cz": 216241,
    "captain": "Buryan Petr",
    "players": [
     {
@@ -299,10 +302,12 @@
      "nat": 1102,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Základní škola Rožďalovice, Tyršova 278, 289 34"
   },
   {
    "name": "TJ AŠ Mladá Boleslav B",
+   "cz": 216250,
    "captain": "Šelder Stanislav",
    "players": [
     {
@@ -412,10 +417,12 @@
      "nat": 1121,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Škoda Muzeum, sál Kolowrat, tř. Václava Klementa 294, Mladá Boleslav"
   },
   {
    "name": "TJ AŠ Mladá Boleslav C",
+   "cz": 216240,
    "captain": "Musil Marek",
    "players": [
     {
@@ -521,10 +528,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Škoda Muzeum, sál Kolowrat, tř. Václava Klementa 294, Mladá Boleslav"
   },
   {
    "name": "DDM Sokol Nymburk C",
+   "cz": 216242,
    "captain": "Všetečka Jiří",
    "players": [
     {
@@ -656,10 +665,12 @@
      "nat": 1297,
      "fide": null
     }
-   ]
+   ],
+   "venue": "DDM Nymburk, 2. května 968/16, 28802 Nymburk"
   },
   {
    "name": "ŠK Spartak Čelákovice C",
+   "cz": 216243,
    "captain": "Janda Peter",
    "players": [
     {
@@ -839,10 +850,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Masarykova 585/16, Čelákovice - přezůvky nutné"
   },
   {
    "name": "Polabí B",
+   "cz": 216246,
    "captain": "",
    "players": [
     {
@@ -953,10 +966,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Misan s.r.o., Ke Vrutici 1795"
   },
   {
    "name": "Šachklub města Dobrovice F",
+   "cz": 216245,
    "captain": "Zimmermann Ladislav",
    "players": [
     {
@@ -1103,10 +1118,12 @@
      "nat": 1148,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Komunitní centrum fara, Palackého náměstí 70, 294 41 Dobrovice"
   },
   {
    "name": "Sokol Pečky C",
+   "cz": 216249,
    "captain": "Kubíček Miloš",
    "players": [
     {
@@ -1290,10 +1307,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sokolovna Pečky, Petra Bezruče 330 vchod z ulice Sokolské"
   },
   {
    "name": "Šachklub města Dobrovice G",
+   "cz": 216244,
    "captain": "Rastočný Josef",
    "players": [
     {
@@ -1479,10 +1498,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Komunitní centrum fara, Palackého náměstí 70, 294 41 Dobrovice"
   },
   {
    "name": "ŠACHY PRO RADOST!! - MISTŘI",
+   "cz": 216248,
    "captain": "Fadrný Dalibor",
    "players": [
     {
@@ -1643,10 +1664,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "ZŠ Kamenka Čelákovice, Kostelní 457, Čelákovice"
   },
   {
    "name": "ŠK Bakov nad Jizerou D",
+   "cz": 216239,
    "captain": "Švejdar Pavel",
    "players": [
     {
@@ -1797,7 +1820,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sokolovna 1.patro, Boleslavská 450, 294 01 Bakov nad Jizerou"
   }
  ],
  "rounds": [

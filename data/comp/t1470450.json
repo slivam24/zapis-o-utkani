@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "100 let Kobylisy \"B\"",
+   "cz": 215810,
    "captain": "",
    "players": [
     {
@@ -168,10 +169,12 @@
      "nat": 1943,
      "fide": 1979
     }
-   ]
+   ],
+   "venue": "U Školské zahrady 9, Praha 8 - Kobylisy"
   },
   {
    "name": "ŠK Slavoj Litoměřice \"C\"",
+   "cz": 215808,
    "captain": "",
    "players": [
     {
@@ -366,10 +369,12 @@
      "nat": 1617,
      "fide": 1713
     }
-   ]
+   ],
+   "venue": "Veslařský oddíl - 1. patro, Střelecký ostrov 1013/3, Litoměřice"
   },
   {
    "name": "TJ Sokol Údlice",
+   "cz": 215804,
    "captain": "",
    "players": [
     {
@@ -564,10 +569,12 @@
      "nat": 1806,
      "fide": 1884
     }
-   ]
+   ],
+   "venue": "Zámecká 1, Údlice"
   },
   {
    "name": "TJ Pankrác",
+   "cz": 215805,
    "captain": "",
    "players": [
     {
@@ -718,10 +725,12 @@
      "nat": 1903,
      "fide": 1908
     }
-   ]
+   ],
+   "venue": "hala TJ Pankrác, Lomníckého 1, Praha 4"
   },
   {
    "name": "TJ Bohemians Praha \"B\"",
+   "cz": 215806,
    "captain": "",
    "players": [
     {
@@ -906,10 +915,12 @@
      "nat": 1853,
      "fide": 1891
     }
-   ]
+   ],
+   "venue": "Hala Bohemians, Slovenská 2, Praha 10"
   },
   {
    "name": "Karlovarský šachklub Tietz \"A\"",
+   "cz": 215803,
    "captain": "",
    "players": [
     {
@@ -1075,10 +1086,12 @@
      "nat": 1261,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Studentská 328/64, 360 07 Karlovy Vary – VODAKVA"
   },
   {
    "name": "TJ Neratovice",
+   "cz": 215813,
    "captain": "",
    "players": [
     {
@@ -1251,10 +1264,12 @@
      "nat": 1836,
      "fide": 1903
     }
-   ]
+   ],
+   "venue": "Sportovní hala TJ Neratovice, Kpt. Jaroše 233, Neratovice"
   },
   {
    "name": "ŠK Aurora",
+   "cz": 215812,
    "captain": "",
    "players": [
     {
@@ -1412,10 +1427,12 @@
      "nat": 1546,
      "fide": 1701
     }
-   ]
+   ],
+   "venue": "EA Hotel Populus, U Staré Cihelny 2182/11, Praha 3"
   },
   {
    "name": "Teplice Chess Club",
+   "cz": 215811,
    "captain": "",
    "players": [
     {
@@ -1561,10 +1578,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Masarykova 1233/82, 415 01 Teplice - 1. patro"
   },
   {
    "name": "ŠK Slavoj Litoměřice \"B\"",
+   "cz": 215809,
    "captain": "",
    "players": [
     {
@@ -1763,10 +1782,12 @@
      "nat": 1441,
      "fide": 1642
     }
-   ]
+   ],
+   "venue": "Veslařský oddíl - 1. patro, Střelecký ostrov 1013/3, Litoměřice"
   },
   {
    "name": "Karlovarský šachklub Tietz \"B\"",
+   "cz": 215814,
    "captain": "",
    "players": [
     {
@@ -1892,10 +1913,12 @@
      "nat": 1794,
      "fide": 1874
     }
-   ]
+   ],
+   "venue": "Studentská 328/64, 360 07 Karlovy Vary – VODAKVA"
   },
   {
    "name": "SK Děčín",
+   "cz": 215807,
    "captain": "",
    "players": [
     {
@@ -2083,7 +2106,8 @@
      "nat": 1780,
      "fide": 1877
     }
-   ]
+   ],
+   "venue": "Restaurace U Pekaře (salónek) - Lázeňská 7/4, Děčín"
   }
  ],
  "rounds": [

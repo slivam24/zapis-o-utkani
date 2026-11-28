@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "TJ Vlčnov D",
+   "cz": 216784,
    "captain": "Flekač Milan",
    "players": [
     {
@@ -202,10 +203,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Staré Město E",
+   "cz": 216777,
    "captain": "Koběrský Petr",
    "players": [
     {
@@ -380,10 +383,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠO Mařatice B",
+   "cz": 216785,
    "captain": "Vojtík Jakub",
    "players": [
     {
@@ -555,10 +560,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Staré Město F",
+   "cz": 216782,
    "captain": "Trubačík Josef",
    "players": [
     {
@@ -739,10 +746,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Polešovice",
+   "cz": 216786,
    "captain": "",
    "players": [
     {
@@ -915,10 +924,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠO Kunovice",
+   "cz": 216783,
    "captain": "Růčka Pavel",
    "players": [
     {
@@ -1096,10 +1107,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "KK-ŠK Osvětimany",
+   "cz": 216781,
    "captain": "Peška Martin",
    "players": [
     {
@@ -1218,10 +1231,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Orel Nivnice",
+   "cz": 216779,
    "captain": "",
    "players": [
     {
@@ -1354,10 +1369,12 @@
      "nat": 1090,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Dolňácko C",
+   "cz": 216780,
    "captain": "Kunčík Petr",
    "players": [
     {
@@ -1554,10 +1571,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Velehrad",
+   "cz": 216778,
    "captain": "Plevák Pavel",
    "players": [
     {
@@ -1672,7 +1691,8 @@
      "nat": 1305,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

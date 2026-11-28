@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "Spartak Velké Meziříčí B",
+   "cz": 216828,
    "captain": "Štěpánek Matyáš",
    "players": [
     {
@@ -153,10 +154,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Spartak Velká Bíteš B",
+   "cz": 216825,
    "captain": "Blažková Hana",
    "players": [
     {
@@ -244,10 +247,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Žďár nad Sázavou E",
+   "cz": 216823,
    "captain": "Fišar Josef",
    "players": [
     {
@@ -401,10 +406,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Caissa Třebíč E",
+   "cz": 216826,
    "captain": "Svoboda Kamil",
    "players": [
     {
@@ -593,10 +600,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Gordic Jihlava E",
+   "cz": 216827,
    "captain": "",
    "players": [
     {
@@ -727,10 +736,12 @@
      "nat": 1010,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Spartak Velká Bíteš A",
+   "cz": 216824,
    "captain": "Nehybka Jakub",
    "players": [
     {
@@ -827,7 +838,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "Šachová škola Bohumín",
+   "cz": 216346,
    "captain": "",
    "players": [
     {
@@ -198,10 +199,12 @@
      "nat": 1819,
      "fide": 1936
     }
-   ]
+   ],
+   "venue": "Masarykova ZŠ a MŠ Bohumín, Seifertova 601, Bohumín"
   },
   {
    "name": "TJ Vendryně",
+   "cz": 216340,
    "captain": "",
    "players": [
     {
@@ -349,10 +352,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Klubovna v restauraci na fotbalovém hřišti TJ Vendryně"
   },
   {
    "name": "TJ Slovan Havířov \"B\"",
+   "cz": 216343,
    "captain": "",
    "players": [
     {
@@ -534,10 +539,12 @@
      "nat": 1372,
      "fide": 1474
     }
-   ]
+   ],
+   "venue": "Opletalova 1218/8b, Havířov-Šumbark"
   },
   {
    "name": "ŠK Karviná",
+   "cz": 216349,
    "captain": "",
    "players": [
     {
@@ -726,10 +733,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Restaurace Centrum, ul.Centrum 2298, Karviná-Mizerov"
   },
   {
    "name": "TJ TŽ Třinec \"C\"",
+   "cz": 216342,
    "captain": "",
    "players": [
     {
@@ -916,10 +925,12 @@
      "nat": 1298,
      "fide": 1505
     }
-   ]
+   ],
+   "venue": "Kulturní dům TRISIA, náměstí Svobody 526, Třinec"
   },
   {
    "name": "Rychvaldský spolek šachový 1945",
+   "cz": 216344,
    "captain": "",
    "players": [
     {
@@ -1110,10 +1121,12 @@
      "nat": 1339,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Kulturní dům Rychvald, Náměstí míru 1609, Rychvald"
   },
   {
    "name": "ŠK Šenov \"B\"",
+   "cz": 216345,
    "captain": "",
    "players": [
     {
@@ -1302,10 +1315,12 @@
      "nat": 1279,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Knihovna Šenov, Kostelní 128, Šenov"
   },
   {
    "name": "TJ Mosty u Jablunkova",
+   "cz": 216341,
    "captain": "",
    "players": [
     {
@@ -1500,10 +1515,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sokolovna TJ Sokol Mosty u Jablunkova č.p.700"
   },
   {
    "name": "TJ Ludgeřovice",
+   "cz": 216348,
    "captain": "",
    "players": [
     {
@@ -1654,10 +1671,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Obecní dům Ludgeřovice, Hlučinská 600/30"
   },
   {
    "name": "Sokol Chotěbuz",
+   "cz": 216347,
    "captain": "",
    "players": [
     {
@@ -1852,7 +1871,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Kulturní dům Chotěbuz, Chotěbuzská 300, Chotěbuz"
   }
  ],
  "rounds": [

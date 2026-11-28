@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "Slezan Opava A",
+   "cz": 216518,
    "captain": "",
    "players": [
     {
@@ -157,10 +158,12 @@
      "nat": 1498,
      "fide": 1757
     }
-   ]
+   ],
+   "venue": "B. Němcové 20, Opava"
   },
   {
    "name": "Slavoj Poruba D",
+   "cz": 216519,
    "captain": "",
    "players": [
     {
@@ -311,10 +314,12 @@
      "nat": 1361,
      "fide": 1572
     }
-   ]
+   ],
+   "venue": "CVČ, Vietnamská 1541/3, Ostrava-Poruba"
   },
   {
    "name": "TJ Slovan Havířov",
+   "cz": 216515,
    "captain": "",
    "players": [
     {
@@ -478,10 +483,12 @@
      "nat": 1406,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Opletalova 1218/8b, Havířov-Šumbark"
   },
   {
    "name": "SK Slavia Orlová C",
+   "cz": 216517,
    "captain": "",
    "players": [
     {
@@ -658,10 +665,12 @@
      "nat": 1730,
      "fide": 1816
     }
-   ]
+   ],
+   "venue": "Herna SK Slavia Orlová, Na Stuchlíkovci 340"
   },
   {
    "name": "Slavoj Poruba E",
+   "cz": 216510,
    "captain": "",
    "players": [
     {
@@ -852,10 +861,12 @@
      "nat": 1749,
      "fide": 1843
     }
-   ]
+   ],
+   "venue": "CVČ, Vietnamská 1541/3, Ostrava-Poruba"
   },
   {
    "name": "TJ Ostrava B",
+   "cz": 216516,
    "captain": "",
    "players": [
     {
@@ -1037,10 +1048,12 @@
      "nat": 1988,
      "fide": 2012
     }
-   ]
+   ],
+   "venue": "Sportovní areál TJ Ostrava, Varenská ul., Ostrava"
   },
   {
    "name": "BŠŠ Frýdek-Místek C",
+   "cz": 216514,
    "captain": "",
    "players": [
     {
@@ -1223,10 +1236,12 @@
      "nat": 1564,
      "fide": 1697
     }
-   ]
+   ],
+   "venue": "SVČ Klíč, Pionýrů 767, Frýdek-Místek"
   },
   {
    "name": "SK Stonava",
+   "cz": 216508,
    "captain": "",
    "players": [
     {
@@ -1423,10 +1438,12 @@
      "nat": 1756,
      "fide": 1778
     }
-   ]
+   ],
+   "venue": "Slezská diakonie, Stonava 1080"
   },
   {
    "name": "TJ Baník Havířov B",
+   "cz": 216511,
    "captain": "",
    "players": [
     {
@@ -1621,10 +1638,12 @@
      "nat": 1915,
      "fide": 1942
     }
-   ]
+   ],
+   "venue": "CVA Havířov, Horymírova 9, Havířov"
   },
   {
    "name": "Slezan Opava B",
+   "cz": 216512,
    "captain": "",
    "players": [
     {
@@ -1768,10 +1787,12 @@
      "nat": 1165,
      "fide": null
     }
-   ]
+   ],
+   "venue": "B. Němcové 20, Opava"
   },
   {
    "name": "ŠK Šenov",
+   "cz": 216513,
    "captain": "",
    "players": [
     {
@@ -1964,10 +1985,12 @@
      "nat": 1329,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Knihovna Šenov, Kostelní 128, Šenov"
   },
   {
    "name": "Sokol Brušperk A",
+   "cz": 216509,
    "captain": "",
    "players": [
     {
@@ -2113,7 +2136,8 @@
      "nat": 1100,
      "fide": 1530
     }
-   ]
+   ],
+   "venue": "Sokolovna Brušperk, Krmelínská 347"
   }
  ],
  "rounds": [

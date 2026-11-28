@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "Orel Opava A",
+   "cz": 216174,
    "captain": "",
    "players": [
     {
@@ -194,10 +195,12 @@
      "nat": 1243,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Beethovenova 2, Opava, GPS: 49°56'13.095\"N, 17°53'59.828\"E"
   },
   {
    "name": "Slezan Opava C",
+   "cz": 216176,
    "captain": "",
    "players": [
     {
@@ -394,10 +397,12 @@
      "nat": 1765,
      "fide": 1836
     }
-   ]
+   ],
+   "venue": "Boženy Němcové 20, Opava, GPS: 49°55'51.087\"N, 17°54'40.288\"E"
   },
   {
    "name": "ŠO TJ Vítkov A",
+   "cz": 216177,
    "captain": "",
    "players": [
     {
@@ -561,10 +566,12 @@
      "nat": 1151,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Restaurace U Berana, Zemědělská 720, 749 01 Vítkov, GPS: 49°46'55.748\"N"
   },
   {
    "name": "ŠK TJ Dolní Benešov B",
+   "cz": 216182,
    "captain": "",
    "players": [
     {
@@ -753,10 +760,12 @@
      "nat": 1539,
      "fide": 1692
     }
-   ]
+   ],
+   "venue": "Dům služeb – přízemí (u kostela), náměstí Cypriána Lelka 73, 747 22 Dolní Benešov, GPS: 49°55'6.567\"N"
   },
   {
    "name": "Slavoj Poruba F",
+   "cz": 216180,
    "captain": "",
    "players": [
     {
@@ -939,10 +948,12 @@
      "nat": 1090,
      "fide": 1483
     }
-   ]
+   ],
+   "venue": "Centrum volného času, Vietnamská 1541/3, Ostrava-Poruba, GPS: 49°49'19.812\"N"
   },
   {
    "name": "TJ Tatran Město Albrechtice",
+   "cz": 216175,
    "captain": "",
    "players": [
     {
@@ -1079,10 +1090,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Kavárna, ul. Míru 230/7, 793 95 Město Albrechtice, GPS: 50°9'44.354\"N"
   },
   {
    "name": "Šachy Krnov B",
+   "cz": 216178,
    "captain": "",
    "players": [
     {
@@ -1267,10 +1280,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "ZŠ Janáčkovo náměstí 17, 794 01 Krnov, GPS: 50°5'37.811\"N"
   },
   {
    "name": "ŠKTP Hrabyně",
+   "cz": 216173,
    "captain": "",
    "players": [
     {
@@ -1423,10 +1438,12 @@
      "nat": 1021,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Klubovna ŠKTP Hrabyně, bytový dům č.p. 201, přízemí ve vstupu od domu č.p. 207, GPS: 49°52'17.300\"N"
   },
   {
    "name": "ŠO Jiskra Rýmařov",
+   "cz": 216181,
    "captain": "",
    "players": [
     {
@@ -1573,10 +1590,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Středisko volného času, Okružní 10, Rýmařov – u autobusového nádraží, GPS: 49°55'50.802\"N"
   },
   {
    "name": "ŠK Bruntál B",
+   "cz": 216179,
    "captain": "",
    "players": [
     {
@@ -1763,7 +1782,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Klubovna Sportovní haly, Zeyerova 14, 792 01 Bruntál, GPS: 49°59'22.311\"N"
   }
  ],
  "rounds": [

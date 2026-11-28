@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "ŠK Merta Slavkov B",
+   "cz": 216857,
    "captain": "Dvořák Jakub",
    "players": [
     {
@@ -131,10 +132,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Svornost Rousínovec",
+   "cz": 216855,
    "captain": "",
    "players": [
     {
@@ -287,10 +290,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Maják Vyškov",
+   "cz": 216858,
    "captain": "Slepánek Jan",
    "players": [
     {
@@ -391,10 +396,12 @@
      "nat": 1151,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Merta Slavkov C",
+   "cz": 216856,
    "captain": "Vykoukal Vít",
    "players": [
     {
@@ -558,10 +565,12 @@
      "nat": 1490,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠO MKS Vyškov S",
+   "cz": 216853,
    "captain": "",
    "players": [
     {
@@ -667,10 +676,12 @@
      "nat": 1630,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Šachy Vyškov B",
+   "cz": 216854,
    "captain": "",
    "players": [
     {
@@ -808,10 +819,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Šachy Vyškov C",
+   "cz": 216859,
    "captain": "",
    "players": [
     {
@@ -949,7 +962,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

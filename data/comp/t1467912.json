@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "Klub šachistů Říčany 1925 K",
+   "cz": 216978,
    "captain": "Čech Lubomír",
    "players": [
     {
@@ -200,10 +201,12 @@
      "nat": 1107,
      "fide": 1491
     }
-   ]
+   ],
+   "venue": "MěKS U Labutě, 17. listopadu 214, 251 01 Říčany (II.patro)"
   },
   {
    "name": "Sokol Postupice",
+   "cz": 216982,
    "captain": "Blažek Ladislav",
    "players": [
     {
@@ -302,10 +305,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Zasedací místnost OÚ Postupice, Školní 154, Postupice"
   },
   {
    "name": "TJ Spartak Vlašim E",
+   "cz": 216980,
    "captain": "Lalouček Miroslav",
    "players": [
     {
@@ -476,10 +481,12 @@
      "nat": 1117,
      "fide": 1410
     }
-   ]
+   ],
+   "venue": "Sporthotel (klubovna), Sportovní 1570, Vlašim, přezůvky nutné"
   },
   {
    "name": "JAWA Brodce B",
+   "cz": 216985,
    "captain": "Steiner Juraj",
    "players": [
     {
@@ -666,10 +673,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Wellness Hotel Valnovka, Benešovská 102, Kamenice - Ládví"
   },
   {
    "name": "Sokol Struhařov B",
+   "cz": 216976,
    "captain": "Křišťan Petr",
    "players": [
     {
@@ -809,10 +818,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Fotbalové kabiny, ul. U hřiště, Struhařov u Mnichovic"
   },
   {
    "name": "ŠK Český Brod C",
+   "cz": 216979,
    "captain": "Vorlíčková Dana",
    "players": [
     {
@@ -999,10 +1010,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Domov Anna (kazetový sál v přízemí), Žitomířská 323, Český Brod"
   },
   {
    "name": "KŠ Stříbrná Skalice B",
+   "cz": 216984,
    "captain": "Studzinski Boleslav",
    "players": [
     {
@@ -1175,10 +1188,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Obecní úřad, Sázavská 323, Stříbrná Skalice, přezůvky nutné"
   },
   {
    "name": "Neveklov",
+   "cz": 216977,
    "captain": "Procházka Václav",
    "players": [
     {
@@ -1239,10 +1254,12 @@
      "nat": 1102,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sokolovna, Rákosníkova 162, Neveklov (přízemí - boční vchod)"
   },
   {
    "name": "TJ Kavalier Sázava",
+   "cz": 216981,
    "captain": "Gregorová Martina",
    "players": [
     {
@@ -1375,10 +1392,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Tyršovo nábřeží 82, Černé Budy, 285 06 Sázava, přezůvky nutné"
   },
   {
    "name": "Kolín D",
+   "cz": 216983,
    "captain": "Plechata Pavel",
    "players": [
     {
@@ -1546,7 +1565,8 @@
      "nat": 1485,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sokolovna Kolín, Kmochova 14"
   }
  ],
  "rounds": [

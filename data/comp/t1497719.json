@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "TJ ŠO Chrudim",
+   "cz": 216551,
    "captain": "Němec Pavel",
    "players": [
     {
@@ -184,10 +185,12 @@
      "nat": 1429,
      "fide": 1641
     }
-   ]
+   ],
+   "venue": "Čs. Partyzánů 13, 537 01 Chrudim"
   },
   {
    "name": "2222 ŠK Polabiny C",
+   "cz": 216560,
    "captain": "Daněk Pavel",
    "players": [
     {
@@ -381,10 +384,12 @@
      "nat": 1455,
      "fide": 1640
     }
-   ]
+   ],
+   "venue": "Resturace Rosignano, Ohrazenická 310, Pardubice 53009"
   },
   {
    "name": "TJ Lanškroun B",
+   "cz": 216552,
    "captain": "Kalousová Julie Antonie",
    "players": [
     {
@@ -582,10 +587,12 @@
      "nat": 1188,
      "fide": 1541
     }
-   ]
+   ],
+   "venue": "Dělnický dům, Lanškroun, Dobrovského 41"
   },
   {
    "name": "TJ CHS Chotěboř",
+   "cz": 216555,
    "captain": "Jun Rudolf",
    "players": [
     {
@@ -767,10 +774,12 @@
      "nat": 1745,
      "fide": 1822
     }
-   ]
+   ],
+   "venue": "Sportovní hala TJ CHS Chotěboř Tyršova 794 Chotěboř"
   },
   {
    "name": "TJ Štefanydes Polička",
+   "cz": 216549,
    "captain": "Komárek David",
    "players": [
     {
@@ -952,10 +961,12 @@
      "nat": 1344,
      "fide": 1646
     }
-   ]
+   ],
+   "venue": "Dům Jordán, Tyršova 34, Polička"
   },
   {
    "name": "ŠK Litomyšl",
+   "cz": 216554,
    "captain": "Daniel Martin",
    "players": [
     {
@@ -1150,10 +1161,12 @@
      "nat": 1457,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Dukelská 534, 57001 Litomyšl (Středisko volného času)"
   },
   {
    "name": "ŠK Ústí nad Orlicí C",
+   "cz": 216558,
    "captain": "Holásek Vojtěch",
    "players": [
     {
@@ -1309,10 +1322,12 @@
      "nat": 1439,
      "fide": 1641
     }
-   ]
+   ],
+   "venue": "SBD UO, Letohradská 1359, Ústí nad Orlicí, 1. patro"
   },
   {
    "name": "ŠS Železné hory",
+   "cz": 216556,
    "captain": "Nešpůrek Jakub",
    "players": [
     {
@@ -1501,10 +1516,12 @@
      "nat": 1398,
      "fide": 1623
     }
-   ]
+   ],
+   "venue": "Výrovský mlýn, Obránců míru 2, 535 01 Břehy, Přelouč"
   },
   {
    "name": "TJ Sokol Zaječice",
+   "cz": 216550,
    "captain": "Hájek Jiří",
    "players": [
     {
@@ -1690,10 +1707,12 @@
      "nat": 1202,
      "fide": 1552
     }
-   ]
+   ],
+   "venue": "Kulturní dům U Danešů, 53835 Zaječice 21"
   },
   {
    "name": "Rapid Pardubice",
+   "cz": 216553,
    "captain": "Fiala Jan",
    "players": [
     {
@@ -1859,10 +1878,12 @@
      "nat": 1499,
      "fide": 1672
     }
-   ]
+   ],
+   "venue": "Salónek Restaurace Pernštejnka, Odborářů 346"
   },
   {
    "name": "TJ Spartak Letohrad",
+   "cz": 216557,
    "captain": "Mikyska Kamil",
    "players": [
     {
@@ -2063,10 +2084,12 @@
      "nat": 1343,
      "fide": 1540
     }
-   ]
+   ],
+   "venue": "tělocvična TJ Spartak, Jilemnického 341, Letohrad"
   },
   {
    "name": "ŠK Ústí nad Orlicí B",
+   "cz": 216559,
    "captain": "Netušil Jakub",
    "players": [
     {
@@ -2258,7 +2281,8 @@
      "nat": 1402,
      "fide": 1629
     }
-   ]
+   ],
+   "venue": "SBD UO, Letohradská 1359, Ústí nad Orlicí, 1. patro"
   }
  ],
  "rounds": [

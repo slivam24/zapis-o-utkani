@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "ŠK Slavia Liberec ''B''",
+   "cz": 216208,
    "captain": "Šlechta Jan",
    "players": [
     {
@@ -143,10 +144,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK ZIKUDA Turnov ''G''",
+   "cz": 216209,
    "captain": "Táborská Aneta",
    "players": [
     {
@@ -336,10 +339,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Bižuterie Jablonec ''C''",
+   "cz": 216211,
    "captain": "Lelek Jaroslav",
    "players": [
     {
@@ -533,10 +538,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Desko Liberec ''C''",
+   "cz": 216207,
    "captain": "Brůna Matouš",
    "players": [
     {
@@ -673,10 +680,12 @@
      "nat": 1028,
      "fide": 1450
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK ZIKUDA Turnov ''F''",
+   "cz": 216213,
    "captain": "Zachelová Štěpánka",
    "players": [
     {
@@ -858,10 +867,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Jiskra Tanvald ''B''",
+   "cz": 216212,
    "captain": "Dvořák Luděk",
    "players": [
     {
@@ -960,10 +971,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Bižuterie Jablonec ''D\"",
+   "cz": 216210,
    "captain": "Vacek Radomír",
    "players": [
     {
@@ -1145,10 +1158,12 @@
      "nat": 1059,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Spartak Rokytnice nad Jizerou",
+   "cz": 216214,
    "captain": "Chrz Martin",
    "players": [
     {
@@ -1239,7 +1254,8 @@
      "nat": 1407,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

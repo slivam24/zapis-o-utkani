@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "TJ Sokol Dobrá C",
+   "cz": 216412,
    "captain": "",
    "players": [
     {
@@ -128,10 +129,12 @@
      "nat": 1095,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Klubovna v požární zbrojnici v centru obce Dobrá"
   },
   {
    "name": "TJ Sokol Dobrá D",
+   "cz": 216411,
    "captain": "",
    "players": [
     {
@@ -261,10 +264,12 @@
      "nat": 1135,
      "fide": 1411
     }
-   ]
+   ],
+   "venue": "Klubovna v požární zbrojnici v centru obce Dobrá"
   },
   {
    "name": "TJ TŽ Třinec E",
+   "cz": 216406,
    "captain": "",
    "players": [
     {
@@ -397,10 +402,12 @@
      "nat": 1289,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Kulturní dům TRISIA, náměstí Svobody 526"
   },
   {
    "name": "TJ Sokol Lhotka",
+   "cz": 216407,
    "captain": "",
    "players": [
     {
@@ -490,10 +497,12 @@
      "nat": 1634,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Komunitní centrum Pod Ořechem, Lhotka 76"
   },
   {
    "name": "TJ Bystřice",
+   "cz": 216405,
    "captain": "",
    "players": [
     {
@@ -574,10 +583,12 @@
      "nat": 1556,
      "fide": 1700
     }
-   ]
+   ],
+   "venue": "Požární zbrojnice Bystřice 936"
   },
   {
    "name": "BŠŠ Frýdek-Místek F",
+   "cz": 216409,
    "captain": "",
    "players": [
     {
@@ -762,10 +773,12 @@
      "nat": 1294,
      "fide": 1497
     }
-   ]
+   ],
+   "venue": "SVČ Klíč F-M, Pionýrů 767, Místek"
   },
   {
    "name": "TJ TŽ Třinec D",
+   "cz": 216408,
    "captain": "",
    "players": [
     {
@@ -907,10 +920,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Kulturní dům TRISIA, náměstí Svobody 526"
   },
   {
    "name": "TJ Sokol Metylovice",
+   "cz": 216413,
    "captain": "",
    "players": [
     {
@@ -1016,10 +1031,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sokolovna Metylovice 111"
   },
   {
    "name": "Sokol Brušperk B",
+   "cz": 216404,
    "captain": "",
    "players": [
     {
@@ -1089,10 +1106,12 @@
      "nat": 1763,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sokolovna Brušperk, Krmelínská 347"
   },
   {
    "name": "TJ Dobratice",
+   "cz": 216414,
    "captain": "",
    "players": [
     {
@@ -1214,10 +1233,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Zasedací místnost Obecního úřadu Dobratice"
   },
   {
    "name": "BŠŠ Black Cat",
+   "cz": 216410,
    "captain": "",
    "players": [
     {
@@ -1337,7 +1358,8 @@
      "nat": 1575,
      "fide": 1568
     }
-   ]
+   ],
+   "venue": "SVČ Klíč F-M, Pionýrů 767, Místek"
   }
  ],
  "rounds": [

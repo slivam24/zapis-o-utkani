@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "Šachový klub Vsetín D",
+   "cz": 215887,
    "captain": "Dančák Stanislav",
    "players": [
     {
@@ -162,10 +163,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Šachy Hošťálková D",
+   "cz": 215885,
    "captain": "Veselský František",
    "players": [
     {
@@ -332,10 +335,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Sokol Huslenky C",
+   "cz": 215883,
    "captain": "Múdrý Jan",
    "players": [
     {
@@ -419,10 +424,12 @@
      "nat": 1578,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠO TJ Karolinka B",
+   "cz": 215884,
    "captain": "Křenek Roman",
    "players": [
     {
@@ -550,10 +557,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Sokol Bystřička B",
+   "cz": 215881,
    "captain": "Černotík Jaroslav",
    "players": [
     {
@@ -670,10 +679,12 @@
      "nat": 1611,
      "fide": 1745
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Sokol Huslenky B",
+   "cz": 215882,
    "captain": "Hrbáček Pavel",
    "players": [
     {
@@ -765,10 +776,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Valašské Meziříčí C",
+   "cz": 215886,
    "captain": "Křižák Eduard",
    "players": [
     {
@@ -919,7 +932,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

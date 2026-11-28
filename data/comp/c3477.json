@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "Slovan Jindřichův Hradec B",
+   "cz": 216031,
    "captain": "Němeček Roman",
    "players": [
     {
@@ -183,10 +184,12 @@
      "nat": 1460,
      "fide": 1647
     }
-   ]
+   ],
+   "venue": "Tělocvična Slovanu J. Hradec - klubovna, Jarošovská 743/II, J. Hradec"
   },
   {
    "name": "Slávia České Budějovice",
+   "cz": 216030,
    "captain": "",
    "players": [
     {
@@ -337,10 +340,12 @@
      "nat": 1107,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Krajský sekretariát KDU-ČSL,1. patro, Lannova tř. 16/13"
   },
   {
    "name": "ŠK DDM Český Krumlov",
+   "cz": 216028,
    "captain": "Karlíček Pavel",
    "players": [
     {
@@ -511,10 +516,12 @@
      "nat": 1052,
      "fide": null
     }
-   ]
+   ],
+   "venue": "DDM Český Krumlov, Linecká 67, Český Krumlov 381 01"
   },
   {
    "name": "SK Royal Č. Budějovice A",
+   "cz": 216035,
    "captain": "Beníšek František",
    "players": [
     {
@@ -703,10 +710,12 @@
      "nat": 1437,
      "fide": 1708
     }
-   ]
+   ],
+   "venue": "KD Slavie, Jirsíkova 243/2, Č. B. (ze strany přes recepci, 4. patro)"
   },
   {
    "name": "Spartak KAPLICE B",
+   "cz": 216029,
    "captain": "Janošťák Jiří",
    "players": [
     {
@@ -897,10 +906,12 @@
      "nat": 1094,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Spolkovna, Linecká 368, Kaplice"
   },
   {
    "name": "Olympia A",
+   "cz": 216032,
    "captain": "Junek Petr",
    "players": [
     {
@@ -1089,10 +1100,12 @@
      "nat": 1231,
      "fide": 1490
     }
-   ]
+   ],
+   "venue": "KD Slavie, Jirsíkova 243/2, Č. B. (ze strany přes recepci, 4. patro)"
   },
   {
    "name": "TJ Sokol Křemže",
+   "cz": 216033,
    "captain": "Rončák Václav",
    "players": [
     {
@@ -1238,10 +1251,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Křemže č. 35, Obecní úřad Křemže II.patro"
   },
   {
    "name": "ŠA VŠTE České Budějovice B",
+   "cz": 216034,
    "captain": "Berkovec Josef",
    "players": [
     {
@@ -1434,7 +1449,8 @@
      "nat": 1735,
      "fide": 1834
     }
-   ]
+   ],
+   "venue": "Areál VŠTE ČB, Okružní ulice č. 517/10, Č. B. 370 01"
   }
  ],
  "rounds": [

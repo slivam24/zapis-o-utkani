@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "TJ Vlčnov E",
+   "cz": 215778,
    "captain": "Kadlčík Petr",
    "players": [
     {
@@ -172,10 +173,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Veselí nad Moravou D",
+   "cz": 215779,
    "captain": "Uřičář Zdeněk",
    "players": [
     {
@@ -318,10 +321,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "SK Boršice C",
+   "cz": 215777,
    "captain": "Stodůlka Václav",
    "players": [
     {
@@ -484,10 +489,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠO Kunovice B",
+   "cz": 215781,
    "captain": "Růčka Pavel",
    "players": [
     {
@@ -650,10 +657,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Dolňácko, z.s. E",
+   "cz": 215782,
    "captain": "Macháček Antonín",
    "players": [
     {
@@ -787,10 +796,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Dolňácko, z.s. D",
+   "cz": 215780,
    "captain": "Kadlček Petr",
    "players": [
     {
@@ -942,7 +953,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "Spartak Velké Meziříčí A",
+   "cz": 216471,
    "captain": "",
    "players": [
     {
@@ -175,10 +176,12 @@
      "nat": 1822,
      "fide": 1897
     }
-   ]
+   ],
+   "venue": "SVČ Dóza, Komenského 10/2, VM"
   },
   {
    "name": "ŠK Světlá nad Sázavou A",
+   "cz": 216472,
    "captain": "",
    "players": [
     {
@@ -354,10 +357,12 @@
      "nat": 1642,
      "fide": 1784
     }
-   ]
+   ],
+   "venue": "SC Pěšinky, Pěšinky 971, Světlá nad Sázavou"
   },
   {
    "name": "Spartak Pelhřimov A",
+   "cz": 216476,
    "captain": "",
    "players": [
     {
@@ -548,10 +553,12 @@
      "nat": 1240,
      "fide": 1541
     }
-   ]
+   ],
+   "venue": "Sportovní hala, Nádražní, Pelhřimov"
   },
   {
    "name": "Gordic Jihlava B",
+   "cz": 216474,
    "captain": "",
    "players": [
     {
@@ -736,10 +743,12 @@
      "nat": 1261,
      "fide": null
     }
-   ]
+   ],
+   "venue": "DDM Jihlava, Brněnská 670/46, Jihlava"
   },
   {
    "name": "Caissa Třebíč B",
+   "cz": 216470,
    "captain": "",
    "players": [
     {
@@ -930,10 +939,12 @@
      "nat": 1364,
      "fide": 1594
     }
-   ]
+   ],
+   "venue": "Komunitní centrum Moravia, Smrtelná 389/6, Třebíč"
   },
   {
    "name": "TJ Žďár nad Sázavou A",
+   "cz": 216468,
    "captain": "",
    "players": [
     {
@@ -1093,10 +1104,12 @@
      "nat": 1452,
      "fide": 1645
     }
-   ]
+   ],
+   "venue": "Sportovní hala Jungmannova 8, Žďár nad S. 1"
   },
   {
    "name": "Gordic Jihlava C",
+   "cz": 216469,
    "captain": "",
    "players": [
     {
@@ -1279,10 +1292,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "DDM Jihlava, Brněnská 670/46, Jihlava"
   },
   {
    "name": "SŠK Cejle A",
+   "cz": 216478,
    "captain": "",
    "players": [
     {
@@ -1469,10 +1484,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "sál Kulturního domu v Cejli"
   },
   {
    "name": "TJ Žďár nad Sázavou B",
+   "cz": 216473,
    "captain": "",
    "players": [
     {
@@ -1628,10 +1645,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sportovní hala Jungmannova 8, Žďár nad S. 1"
   },
   {
    "name": "Jiskra Humpolec",
+   "cz": 216475,
    "captain": "",
    "players": [
     {
@@ -1816,10 +1835,12 @@
      "nat": 1013,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sokolovna Tyršovo náměstí Humpolec"
   },
   {
    "name": "ŠK Havlíčkův Brod A",
+   "cz": 216477,
    "captain": "",
    "players": [
     {
@@ -1997,7 +2018,8 @@
      "nat": 1067,
      "fide": 1408
     }
-   ]
+   ],
+   "venue": "Horní 3188, Havlíčkův Brod"
   }
  ],
  "rounds": [

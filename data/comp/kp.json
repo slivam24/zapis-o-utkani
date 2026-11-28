@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "TJ Klášterec nad Ohří \"A\"",
+   "cz": 216629,
    "captain": "Gruss Petr",
    "players": [
     {
@@ -202,10 +203,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Společenský dům Panorama, Budovatelská 486 Klášterec nad Ohří"
   },
   {
    "name": "Duras Ústí nad Labem \"A\"",
+   "cz": 216637,
    "captain": "Přibyl Jakub",
    "players": [
     {
@@ -391,10 +394,12 @@
      "nat": 1504,
      "fide": 1661
     }
-   ]
+   ],
+   "venue": "DDM Velká Hradební 19, Ústí nad Labem, vchod z Bělehradské ul."
   },
   {
    "name": "ŠO TJ Tatran Podbořany \"A\"",
+   "cz": 216628,
    "captain": "Balín Jan",
    "players": [
     {
@@ -586,10 +591,12 @@
      "nat": 1488,
      "fide": 1698
     }
-   ]
+   ],
+   "venue": "Stará sportovní hala 571, vjezd z Vroutecké ulice"
   },
   {
    "name": "TJ Sokol Údlice \"B\"",
+   "cz": 216633,
    "captain": "Koblasa Josef",
    "players": [
     {
@@ -782,10 +789,12 @@
      "nat": 1552,
      "fide": 1711
     }
-   ]
+   ],
+   "venue": "Zámecká 1, Údlice"
   },
   {
    "name": "ŠK Louny \"A\"",
+   "cz": 216632,
    "captain": "Reitinger Petr",
    "players": [
     {
@@ -973,10 +982,12 @@
      "nat": 1149,
      "fide": 1575
     }
-   ]
+   ],
+   "venue": "Městská knihovna, Mírově náměstí 1, Louny"
   },
   {
    "name": "SK Děčín \"B\"",
+   "cz": 216627,
    "captain": "Mašek Daniel",
    "players": [
     {
@@ -1171,10 +1182,12 @@
      "nat": 1193,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Salónek Restaurace u Pekaře, Lázeňská 7/4, Děčín"
   },
   {
    "name": "Duras Ústí nad Labem \"B\"",
+   "cz": 216626,
    "captain": "Chrz Pavel",
    "players": [
     {
@@ -1352,10 +1365,12 @@
      "nat": 1277,
      "fide": null
     }
-   ]
+   ],
+   "venue": "DDM Velká Hradební 19, Ústí nad Labem, vchod z Bělehradské ul."
   },
   {
    "name": "Šachy Povrly",
+   "cz": 216635,
    "captain": "Sochor Jiří",
    "players": [
     {
@@ -1474,10 +1489,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "ZŠ Povrly, 5. května 233/14, Povrly"
   },
   {
    "name": "ŠK Teplice \"A\"",
+   "cz": 216634,
    "captain": "Bartoš Václav",
    "players": [
     {
@@ -1668,10 +1685,12 @@
      "nat": 1724,
      "fide": 1787
     }
-   ]
+   ],
+   "venue": "Masarykova 29, Teplice, 1. patro vlevo"
   },
   {
    "name": "CHESS MOST \"A\"",
+   "cz": 216630,
    "captain": "Hrbolka Ladislav",
    "players": [
     {
@@ -1844,10 +1863,12 @@
      "nat": 1008,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Komořanská 818, Most"
   },
   {
    "name": "ŠK Slavoj Litoměřice \"D\"",
+   "cz": 216631,
    "captain": "",
    "players": [
     {
@@ -2042,10 +2063,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Veslařský klub, Střelecký ostrov 1013/3, Litoměřice, 1. patro"
   },
   {
    "name": "SK Šachy Chlumec \"A\"",
+   "cz": 216636,
    "captain": "Polák Martin",
    "players": [
     {
@@ -2216,7 +2239,8 @@
      "nat": 1032,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Předsálí kulturního domu Chlumec, Muchova 267 Chlumec"
   }
  ],
  "rounds": [

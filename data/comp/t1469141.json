@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "Sokol Postoupky",
+   "cz": 216656,
    "captain": "Vrzal Filip",
    "players": [
     {
@@ -191,10 +192,12 @@
      "nat": 1498,
      "fide": 1530
     }
-   ]
+   ],
+   "venue": "Sokolovna v Postoupkách, Postoupky 67"
   },
   {
    "name": "ŠK Staré Město B",
+   "cz": 216652,
    "captain": "Dvouletý Pavel",
    "players": [
     {
@@ -374,10 +377,12 @@
      "nat": 1525,
      "fide": 1813
     }
-   ]
+   ],
+   "venue": "Společensko-kulturní centrum, Brněnská 1249 Staré Město"
   },
   {
    "name": "Slavia Kroměříž C",
+   "cz": 216648,
    "captain": "Šudřich Radek",
    "players": [
     {
@@ -574,10 +579,12 @@
      "nat": 1709,
      "fide": 1837
     }
-   ]
+   ],
+   "venue": "Tělocvična TJ SLAVIA Kroměříž - klubovna ŠO, 1. poschodí"
   },
   {
    "name": "ŠK Zlín-Malenovice",
+   "cz": 216654,
    "captain": "Boháček Jan Andrej",
    "players": [
     {
@@ -723,10 +730,12 @@
      "nat": 1463,
      "fide": 1598
     }
-   ]
+   ],
+   "venue": "Klub seniorů MMZL, Mlýnská 845, sídliště Zlín-Malenovice"
   },
   {
    "name": "TJ Vlčnov B",
+   "cz": 216650,
    "captain": "Oharek Vlastimil",
    "players": [
     {
@@ -901,10 +910,12 @@
      "nat": 2015,
      "fide": 2008
     }
-   ]
+   ],
+   "venue": "KSK Vlčnov 186"
   },
   {
    "name": "ŠK Zlín B",
+   "cz": 216659,
    "captain": "Machala Matěj",
    "players": [
     {
@@ -1081,10 +1092,12 @@
      "nat": 1000,
      "fide": null
     }
-   ]
+   ],
+   "venue": "herna ŠK Zlín, DDM Astra, Kotěrova 4395, Zlín"
   },
   {
    "name": "TJ Sokol Ústí",
+   "cz": 216655,
    "captain": "Matůš Filip",
    "players": [
     {
@@ -1268,10 +1281,12 @@
      "nat": 1536,
      "fide": 1644
     }
-   ]
+   ],
+   "venue": "klubovna Obecního úřadu, Ústí 76"
   },
   {
    "name": "ŠK Dolňácko",
+   "cz": 216657,
    "captain": "Světinský Antonín",
    "players": [
     {
@@ -1463,10 +1478,12 @@
      "nat": 1604,
      "fide": null
     }
-   ]
+   ],
+   "venue": "klubovna v 1. patře vedle penzionu Rozkvět, Hlucká 108 Dolní Němčí"
   },
   {
    "name": "Šachový klub Vsetín B",
+   "cz": 216653,
    "captain": "Píštěk Zdeněk",
    "players": [
     {
@@ -1657,10 +1674,12 @@
      "nat": 1363,
      "fide": 1543
     }
-   ]
+   ],
+   "venue": "Zimní stadion, Na Lapači 297, Vsetín"
   },
   {
    "name": "TJ Sokol Valašská Bystřice",
+   "cz": 216658,
    "captain": "Foukal Jiří",
    "players": [
     {
@@ -1850,10 +1869,12 @@
      "nat": 1633,
      "fide": 1855
     }
-   ]
+   ],
+   "venue": "Společenský dům U Pernických, Valašská Bystřice 222"
   },
   {
    "name": "Fatra Slavia Napajedla",
+   "cz": 216651,
    "captain": "Pálka Bronislav",
    "players": [
     {
@@ -2017,10 +2038,12 @@
      "nat": 1629,
      "fide": 1814
     }
-   ]
+   ],
+   "venue": "klášter Komenského 304, Napajedla"
   },
   {
    "name": "SK Boršice",
+   "cz": 216649,
    "captain": "Tománek Pavel",
    "players": [
     {
@@ -2212,7 +2235,8 @@
      "nat": 1356,
      "fide": 1484
     }
-   ]
+   ],
+   "venue": "Kulturní dům Boršice, klubovna šachu, Boršice 161"
   }
  ],
  "rounds": [

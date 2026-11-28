@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "ŠK Sokol Klatovy",
+   "cz": 212938,
    "captain": "",
    "players": [
     {
@@ -225,10 +226,12 @@
      "nat": 1000,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sokolovna Klatovy, kpt. Jaroše 118, Klatovy"
   },
   {
    "name": "TJ Sokol Plzeň-Letná B",
+   "cz": 212932,
    "captain": "",
    "players": [
     {
@@ -439,10 +442,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Plzeň, Republikánská, 22, klubovna nad restaurací Tunel 1. patro"
   },
   {
    "name": "Sokol Buštěhrad",
+   "cz": 212936,
    "captain": "",
    "players": [
     {
@@ -654,10 +659,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "SOKOLOVNA Buštěhrad, Sokolská ul. ( 50m od školy )"
   },
   {
    "name": "ŠK DP Praha - PORG",
+   "cz": 212937,
    "captain": "",
    "players": [
     {
@@ -859,10 +866,12 @@
      "nat": 1011,
      "fide": null
     }
-   ]
+   ],
+   "venue": "EA Hotel Populus, U Staré cihelny 11, Praha 3"
   },
   {
    "name": "ŠK Smíchov",
+   "cz": 212933,
    "captain": "",
    "players": [
     {
@@ -1002,10 +1011,12 @@
      "nat": 1102,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Zubatého 330/10, Praha 5 - Smíchov, TRAM: 20, 9, 12, 1, 15,16"
   },
   {
    "name": "QCC České Budějovice",
+   "cz": 212928,
    "captain": "",
    "players": [
     {
@@ -1208,10 +1219,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Domov pro seniory, Nerudova 2568/2a, České Budějovice"
   },
   {
    "name": "Chess club Písek",
+   "cz": 212930,
    "captain": "",
    "players": [
     {
@@ -1344,10 +1357,12 @@
      "nat": 1262,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Lázně hotel Vráž, Stará Vráž 1"
   },
   {
    "name": "ŠK 64 Plzeň B",
+   "cz": 212939,
    "captain": "",
    "players": [
     {
@@ -1566,10 +1581,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "konferenční sál hotelu LIONS, Zborovská 18, Plzeň"
   },
   {
    "name": "ŠK Valdštejn Cheb",
+   "cz": 212935,
    "captain": "",
    "players": [
     {
@@ -1699,10 +1716,12 @@
      "nat": 1035,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Náměstí Krále Jiřího 507 / 6, Cheb"
   },
   {
    "name": "Šachová akademie VŠTE",
+   "cz": 212929,
    "captain": "",
    "players": [
     {
@@ -1838,10 +1857,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Okružní 517/10, České Budějovice"
   },
   {
    "name": "ŠACHklub Tábor",
+   "cz": 212931,
    "captain": "",
    "players": [
     {
@@ -2033,10 +2054,12 @@
      "nat": 1374,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Klubovna ŠACHklubu Tábor, Světlogorská 2771, Tábor"
   },
   {
    "name": "ŠK Karlovy Vary",
+   "cz": 212934,
    "captain": "",
    "players": [
     {
@@ -2248,7 +2271,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Domov mládeže, Lidická 38, Karlovy Vary"
   }
  ],
  "rounds": [

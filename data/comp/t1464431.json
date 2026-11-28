@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "ŠK ZIKUDA Turnov B",
+   "cz": 216815,
    "captain": "Maršálek Zdenek",
    "players": [
     {
@@ -206,10 +207,12 @@
      "nat": 2035,
      "fide": 2059
     }
-   ]
+   ],
+   "venue": "Skálova 84, Turnov 511 01 ( 1.patro )"
   },
   {
    "name": "MGMBA Unichess",
+   "cz": 216813,
    "captain": "Bartoš Jan",
    "players": [
     {
@@ -404,10 +407,12 @@
      "nat": 1930,
      "fide": 1982
     }
-   ]
+   ],
+   "venue": "Pernerova 18, 180 00 Praha 8"
   },
   {
    "name": "KOBEX Říčany A",
+   "cz": 216817,
    "captain": "Stárek Stanislav",
    "players": [
     {
@@ -601,10 +606,12 @@
      "nat": 2218,
      "fide": 2226
     }
-   ]
+   ],
+   "venue": "1. ZŠ Říčany, Komenského náměstí. Parkování z ulice"
   },
   {
    "name": "ŠK Dopravní podnik Praha",
+   "cz": 216821,
    "captain": "",
    "players": [
     {
@@ -803,10 +810,12 @@
      "nat": null,
      "fide": 1957
     }
-   ]
+   ],
+   "venue": "DDM Praha Karlín - Karlínské náměstí 316/7"
   },
   {
    "name": "ŠK Města Lysá nad Labem",
+   "cz": 216811,
    "captain": "Červený Martin",
    "players": [
     {
@@ -1003,10 +1012,12 @@
      "nat": 1600,
      "fide": 1699
     }
-   ]
+   ],
+   "venue": "Náměstí Bedřicha Hrozného 1737 Lysá nad Labem"
   },
   {
    "name": "ŠK Sokol Vyšehrad",
+   "cz": 216816,
    "captain": "Filipi Štěpán",
    "players": [
     {
@@ -1205,10 +1216,12 @@
      "nat": 1661,
      "fide": 1764
     }
-   ]
+   ],
+   "venue": "zasedací místnost, 2. patro vlevo, Sokolovna Vyšehrad"
   },
   {
    "name": "BIOMEDICA Říčany B",
+   "cz": 216819,
    "captain": "Mach Petr",
    "players": [
     {
@@ -1403,10 +1416,12 @@
      "nat": 1753,
      "fide": 1813
     }
-   ]
+   ],
+   "venue": "1. ZŠ Říčany, Komenského náměstí. Parkování z ulice Chelčického"
   },
   {
    "name": "TJ Bohemians Praha",
+   "cz": 216812,
    "captain": "Zvára Petr",
    "players": [
     {
@@ -1603,10 +1618,12 @@
      "nat": 1718,
      "fide": 1781
     }
-   ]
+   ],
+   "venue": "Sportovní hala TJ Bohemians Praha, Slovenská 2, Praha 10"
   },
   {
    "name": "ŠK Slavoj Litoměřice",
+   "cz": 216820,
    "captain": "Brejník Gustav",
    "players": [
     {
@@ -1805,10 +1822,12 @@
      "nat": 2003,
      "fide": 2004
     }
-   ]
+   ],
+   "venue": "Jachetní klub, Střelecký ostrov 1008/8 (u Labe), Litoměřice"
   },
   {
    "name": "TJ Spartak Vlašim",
+   "cz": 216822,
    "captain": "Vojta Jakub",
    "players": [
     {
@@ -2008,10 +2027,12 @@
      "nat": 1913,
      "fide": 1973
     }
-   ]
+   ],
+   "venue": "Sporthotel (klubovna), Sportovní 1570, Vlašim"
   },
   {
    "name": "BIOMEDICA Říčany C",
+   "cz": 216814,
    "captain": "Novotný David",
    "players": [
     {
@@ -2208,10 +2229,12 @@
      "nat": 1832,
      "fide": 1895
     }
-   ]
+   ],
+   "venue": "1. ZŠ Říčany, Komenského náměstí. Parkování z ulice Chelčického"
   },
   {
    "name": "ŠK 64 Plzeň",
+   "cz": 216818,
    "captain": "Janouš Marek",
    "players": [
     {
@@ -2404,7 +2427,8 @@
      "nat": 1781,
      "fide": 1837
     }
-   ]
+   ],
+   "venue": "konferenční sál hotelu LIONS, Zborovská 18, Plzeň"
   }
  ],
  "rounds": [

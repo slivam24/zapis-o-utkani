@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "ŠK Líně A",
+   "cz": 216191,
    "captain": "",
    "players": [
     {
@@ -186,10 +187,12 @@
      "nat": 1877,
      "fide": 1880
     }
-   ]
+   ],
+   "venue": "Obecní dům Líně, Hornická 848, 330 21 Líně"
   },
   {
    "name": "Chess club Písek A",
+   "cz": 216194,
    "captain": "",
    "players": [
     {
@@ -371,10 +374,12 @@
      "nat": 1271,
      "fide": 1542
     }
-   ]
+   ],
+   "venue": "Vráž u Písku 398 32, Vráž 1 lázně hotel Vráž"
   },
   {
    "name": "OAZA Praha B",
+   "cz": 216193,
    "captain": "",
    "players": [
     {
@@ -563,10 +568,12 @@
      "nat": 1720,
      "fide": 1764
     }
-   ]
+   ],
+   "venue": "Zasedací místnost SK OAZA Praha, Jeremenkova 106, 140 00 Praha 4"
   },
   {
    "name": "Unichess Sekáček",
+   "cz": 216183,
    "captain": "",
    "players": [
     {
@@ -753,10 +760,12 @@
      "nat": 1798,
      "fide": 1850
     }
-   ]
+   ],
+   "venue": "Pernerova 18, 180 00 Praha 8"
   },
   {
    "name": "QCC České Budějovice",
+   "cz": 216192,
    "captain": "",
    "players": [
     {
@@ -945,10 +954,12 @@
      "nat": 1725,
      "fide": 1818
     }
-   ]
+   ],
+   "venue": "České Budějovice Nerudova 2A Dům s pečovatelskou službou"
   },
   {
    "name": "TJ Spartak Vlašim B",
+   "cz": 216184,
    "captain": "",
    "players": [
     {
@@ -1139,10 +1150,12 @@
      "nat": 1767,
      "fide": 1836
     }
-   ]
+   ],
+   "venue": "Vlašim Sportovní 1570 Sporthotel klubovna"
   },
   {
    "name": "ŠK Dvorec",
+   "cz": 216185,
    "captain": "",
    "players": [
     {
@@ -1335,10 +1348,12 @@
      "nat": 1540,
      "fide": 1770
     }
-   ]
+   ],
+   "venue": "Nepomuk, U sokolovny 308, 335 01, restaurace Sokolovna, 1. patro"
   },
   {
    "name": "ŠK DP Praha B - EA Hotels",
+   "cz": 216190,
    "captain": "",
    "players": [
     {
@@ -1531,10 +1546,12 @@
      "nat": 1735,
      "fide": 1755
     }
-   ]
+   ],
+   "venue": "Praha 3 EA Hotel Populus, U Staré cihelny 2182/11"
   },
   {
    "name": "Sokol Tábor",
+   "cz": 216186,
    "captain": "",
    "players": [
     {
@@ -1691,10 +1708,12 @@
      "nat": 1796,
      "fide": 1891
     }
-   ]
+   ],
+   "venue": "Tábor Fugnerova 822 sokolovna 2. Patro vchod seshora od budovy KB"
   },
   {
    "name": "TJ Sokol Plzeň Letná",
+   "cz": 216188,
    "captain": "",
    "players": [
     {
@@ -1887,10 +1906,12 @@
      "nat": 1439,
      "fide": 1667
     }
-   ]
+   ],
+   "venue": "Plzeň, Republikánská, 22, klubovna nad restaurací Tunel 1. patro"
   },
   {
    "name": "ŠK Líně B",
+   "cz": 216189,
    "captain": "",
    "players": [
     {
@@ -2054,10 +2075,12 @@
      "nat": 1477,
      "fide": 1709
     }
-   ]
+   ],
+   "venue": "Obecní dům Líně, Hornická 848, 330 21 Líně"
   },
   {
    "name": "Chess club Písek B",
+   "cz": 216187,
    "captain": "",
    "players": [
     {
@@ -2243,7 +2266,8 @@
      "nat": 2278,
      "fide": 2281
     }
-   ]
+   ],
+   "venue": "Vráž u Písku 398 32, Vráž 1 lázně hotel Vráž"
   }
  ],
  "rounds": [

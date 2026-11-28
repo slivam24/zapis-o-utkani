@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "Teplice Chess Club \"C\"",
+   "cz": 216851,
    "captain": "Maščák Milan",
    "players": [
     {
@@ -199,10 +200,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Masarykova 1233/82, 415 01, Teplice (1. patro)"
   },
   {
    "name": "SK Děčín \"D\"",
+   "cz": 216850,
    "captain": "Machka Roman",
    "players": [
     {
@@ -383,10 +386,12 @@
      "nat": 1030,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Maroldova 1279/2, 405 01, Děčín"
   },
   {
    "name": "ŠK Teplice \"C\"",
+   "cz": 216848,
    "captain": "Bayer Radek",
    "players": [
     {
@@ -539,10 +544,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Mechanika Teplice, Masarykova 29, Teplice (1. patro vlevo)"
   },
   {
    "name": "TJ Libouchec \"B\"",
+   "cz": 216852,
    "captain": "Viola Jan",
    "players": [
     {
@@ -694,10 +701,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Hospoda Kabiny, 403 36, Tisá (vedle č.p. 264)"
   },
   {
    "name": "KŠ Štětí",
+   "cz": 216849,
    "captain": "Papík Jaromír",
    "players": [
     {
@@ -800,10 +809,12 @@
      "nat": 1026,
      "fide": null
     }
-   ]
+   ],
+   "venue": "ZŠ Ostrovní 300, Štětí"
   },
   {
    "name": "SPORTIS Svádov-Olšinky \"B\"",
+   "cz": 216847,
    "captain": "Beil Richard",
    "players": [
     {
@@ -902,7 +913,8 @@
      "nat": 1398,
      "fide": 1623
     }
-   ]
+   ],
+   "venue": "Restaurace U Koruny, Sokolovská 42, Svádov"
   }
  ],
  "rounds": [

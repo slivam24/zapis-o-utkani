@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "Panda Rychnov nad Kněžnou",
+   "cz": 211308,
    "captain": "",
    "players": [
     {
@@ -178,10 +179,12 @@
      "nat": 1068,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Gymnáziu Pelcla, Hrdinů odboje 36, RnK"
   },
   {
    "name": "KOBEX Říčany 1925 A",
+   "cz": 211311,
    "captain": "",
    "players": [
     {
@@ -384,10 +387,12 @@
      "nat": 1394,
      "fide": 1499
     }
-   ]
+   ],
+   "venue": "KC Labuť, 17. listopadu, Říčany"
   },
   {
    "name": "ŠK Staré Město",
+   "cz": 211306,
    "captain": "",
    "players": [
     {
@@ -499,10 +504,12 @@
      "nat": 1420,
      "fide": 1585
     }
-   ]
+   ],
+   "venue": "Brněnská 1249, SM"
   },
   {
    "name": "Šachy Krnov A",
+   "cz": 211305,
    "captain": "",
    "players": [
     {
@@ -616,10 +623,12 @@
      "nat": 1088,
      "fide": null
     }
-   ]
+   ],
+   "venue": "ZŠ Janáčkovo náměstí 17, Krnov"
   },
   {
    "name": "Šachy Štěpán",
+   "cz": 211310,
    "captain": "",
    "players": [
     {
@@ -809,10 +818,12 @@
      "nat": 1282,
      "fide": 1471
     }
-   ]
+   ],
+   "venue": "ZŠ u sv. Štěpána, Štěpánská 1286/8, Praha 2"
   },
   {
    "name": "SK Prostějov",
+   "cz": 211307,
    "captain": "",
    "players": [
     {
@@ -935,10 +946,12 @@
      "nat": 1146,
      "fide": 1469
     }
-   ]
+   ],
+   "venue": "Klubovna SK Prostějov, Sportovní 1"
   },
   {
    "name": "ŠK JOLY Lysá nad Labem A",
+   "cz": 211309,
    "captain": "",
    "players": [
     {
@@ -1079,10 +1092,12 @@
      "nat": 1600,
      "fide": 1699
     }
-   ]
+   ],
+   "venue": "Náměstí B. Hrozného 1737/31, Lysá n. Labem"
   },
   {
    "name": "BŠŠ Frýdek-Místek A",
+   "cz": 211304,
    "captain": "",
    "players": [
     {
@@ -1279,7 +1294,8 @@
      "nat": 1575,
      "fide": 1568
     }
-   ]
+   ],
+   "venue": "SVČ Klíč, Pionýrů 767, F-M"
   }
  ],
  "rounds": [

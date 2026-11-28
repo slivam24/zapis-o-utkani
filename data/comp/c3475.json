@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "Sokol Tábor B",
+   "cz": 216776,
    "captain": "Bartoš Alois",
    "players": [
     {
@@ -201,10 +202,12 @@
      "nat": 1486,
      "fide": 1589
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Chess Club Písek C",
+   "cz": 216767,
    "captain": "Velychko Maksym",
    "players": [
     {
@@ -391,10 +394,12 @@
      "nat": 1663,
      "fide": 1772
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Spartak Kaplice",
+   "cz": 216772,
    "captain": "Šafránek Václav",
    "players": [
     {
@@ -589,10 +594,12 @@
      "nat": 1130,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Šachklub Tábor",
+   "cz": 216770,
    "captain": "Straka Zdeněk",
    "players": [
     {
@@ -776,10 +783,12 @@
      "nat": 1175,
      "fide": 1459
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ČZ Strakonice B",
+   "cz": 216774,
    "captain": "Kotál Václav",
    "players": [
     {
@@ -936,10 +945,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "QCC České Budějovice C",
+   "cz": 216775,
    "captain": "Pavlíček Adam",
    "players": [
     {
@@ -1116,10 +1127,12 @@
      "nat": 1395,
      "fide": 1577
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Spartak Sezimovo Ústí",
+   "cz": 216773,
    "captain": "Novák Jiří",
    "players": [
     {
@@ -1276,10 +1289,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "VŠTE České Budějovice",
+   "cz": 216765,
    "captain": "Hejda Martin",
    "players": [
     {
@@ -1474,10 +1489,12 @@
      "nat": 1691,
      "fide": 1835
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ČZ Strakonice A",
+   "cz": 216768,
    "captain": "Soucha Štěpán",
    "players": [
     {
@@ -1648,10 +1665,12 @@
      "nat": 1490,
      "fide": 1673
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Slovan Jindřichův Hradec",
+   "cz": 216771,
    "captain": "",
    "players": [
     {
@@ -1836,10 +1855,12 @@
      "nat": 1562,
      "fide": 1729
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "QCC České Budějovice B",
+   "cz": 216769,
    "captain": "Paulík Tomáš",
    "players": [
     {
@@ -2004,10 +2025,12 @@
      "nat": 1200,
      "fide": 1578
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Traxler Veselí n.Lužn.",
+   "cz": 216766,
    "captain": "Sýkora Ladislav",
    "players": [
     {
@@ -2186,7 +2209,8 @@
      "nat": 1237,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

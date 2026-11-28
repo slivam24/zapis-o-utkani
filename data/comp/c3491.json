@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "ŠK TJ Libina",
+   "cz": 216872,
    "captain": "",
    "players": [
     {
@@ -85,10 +86,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "732747629"
   },
   {
    "name": "ŠK SDH Stavenice",
+   "cz": 216876,
    "captain": "",
    "players": [
     {
@@ -163,10 +166,12 @@
      "nat": 1646,
      "fide": null
     }
-   ]
+   ],
+   "venue": "602195463"
   },
   {
    "name": "ŠK ZŠ Hrabišín B",
+   "cz": 216875,
    "captain": "",
    "players": [
     {
@@ -250,10 +255,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "723899710"
   },
   {
    "name": "ŠK Loštice B",
+   "cz": 216871,
    "captain": "",
    "players": [
     {
@@ -346,10 +353,12 @@
      "nat": 1595,
      "fide": 1791
     }
-   ]
+   ],
+   "venue": "731021127"
   },
   {
    "name": "ŠK 1921 Zábřeh C",
+   "cz": 216873,
    "captain": "",
    "players": [
     {
@@ -451,10 +460,12 @@
      "nat": 1759,
      "fide": null
     }
-   ]
+   ],
+   "venue": "602448963"
   },
   {
    "name": "ŠK 1921 Zábřeh D",
+   "cz": 216874,
    "captain": "",
    "players": [
     {
@@ -556,10 +567,12 @@
      "nat": 1389,
      "fide": null
     }
-   ]
+   ],
+   "venue": "606926444"
   },
   {
    "name": "ŠK ZŠ Hrabišín C",
+   "cz": 216870,
    "captain": "",
    "players": [
     {
@@ -643,7 +656,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "604691662"
   }
  ],
  "rounds": [

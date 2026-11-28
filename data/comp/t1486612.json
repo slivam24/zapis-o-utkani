@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "Gordic Jihlava D",
+   "cz": 214230,
    "captain": "Diviš Jan",
    "players": [
     {
@@ -208,10 +209,12 @@
      "nat": 1168,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Náměšť nad Oslavou B",
+   "cz": 214227,
    "captain": "Šťáva Zdeněk",
    "players": [
     {
@@ -366,10 +369,12 @@
      "nat": 1312,
      "fide": 1485
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Žďár nad Sázavou C",
+   "cz": 214223,
    "captain": "Obůrka Vladislav",
    "players": [
     {
@@ -529,10 +534,12 @@
      "nat": 1052,
      "fide": 1519
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Havlíčkův Brod B",
+   "cz": 214229,
    "captain": "Hrančík Martin",
    "players": [
     {
@@ -733,10 +740,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Spartak Pelhřimov B",
+   "cz": 214225,
    "captain": "Slavík Pavel",
    "players": [
     {
@@ -887,10 +896,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Caissa Třebíč C",
+   "cz": 214221,
    "captain": "Ludvík Lukáš",
    "players": [
     {
@@ -1045,10 +1056,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Světlá nad Sázavou B",
+   "cz": 214224,
    "captain": "Volanin Jaromír",
    "players": [
     {
@@ -1235,10 +1248,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Žďár nad Sázavou D",
+   "cz": 214228,
    "captain": "Kuda Pavel",
    "players": [
     {
@@ -1417,10 +1432,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "SŠK Cejle B",
+   "cz": 214222,
    "captain": "Velc Luděk",
    "players": [
     {
@@ -1562,10 +1579,12 @@
      "nat": 1049,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Caissa Třebíč D",
+   "cz": 214226,
    "captain": "Kovács Ivan",
    "players": [
     {
@@ -1754,7 +1773,8 @@
      "nat": 1439,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

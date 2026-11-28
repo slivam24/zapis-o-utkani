@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "MŠK Libčice nad Vltavou B",
+   "cz": 215957,
    "captain": "",
    "players": [
     {
@@ -141,10 +142,12 @@
      "nat": 1778,
      "fide": 1885
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Velvary B",
+   "cz": 215959,
    "captain": "",
    "players": [
     {
@@ -330,10 +333,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Velvary C",
+   "cz": 215953,
    "captain": "",
    "players": [
     {
@@ -490,10 +495,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠO Stochov C",
+   "cz": 215960,
    "captain": "",
    "players": [
     {
@@ -586,10 +593,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Sokol Buštěhrad C",
+   "cz": 215952,
    "captain": "",
    "players": [
     {
@@ -745,10 +754,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Rakovník C",
+   "cz": 215958,
    "captain": "",
    "players": [
     {
@@ -897,10 +908,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠO TP NOVA Kladno C",
+   "cz": 215955,
    "captain": "",
    "players": [
     {
@@ -966,10 +979,12 @@
      "nat": 1290,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Pravý Hradec Klecany",
+   "cz": 215951,
    "captain": "",
    "players": [
     {
@@ -1064,10 +1079,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Kralupy nad Vltavou E",
+   "cz": 215950,
    "captain": "",
    "players": [
     {
@@ -1232,10 +1249,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠO Stochov B",
+   "cz": 215954,
    "captain": "",
    "players": [
     {
@@ -1310,10 +1329,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠO TP NOVA Kladno B",
+   "cz": 215956,
    "captain": "",
    "players": [
     {
@@ -1396,7 +1417,8 @@
      "nat": 1369,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

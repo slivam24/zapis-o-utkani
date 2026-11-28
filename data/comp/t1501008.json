@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "Kralupy C",
+   "cz": 216869,
    "captain": "Kopecký Jiří",
    "players": [
     {
@@ -202,10 +203,12 @@
      "nat": 1490,
      "fide": 1547
     }
-   ]
+   ],
+   "venue": "Hotel Sport, u Cukrovaru 1086, Kralupy nad Vltavou"
   },
   {
    "name": "Aero Odolena Voda",
+   "cz": 216868,
    "captain": "Pšenička Oldřich",
    "players": [
     {
@@ -362,10 +365,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Obřadní síň, Dolní náměstí 25 ( vedle infocentra), Bus Odolena Voda"
   },
   {
    "name": "Šachový klub Bakov nad Jizerou C",
+   "cz": 216867,
    "captain": "Kolman Pavel Petr",
    "players": [
     {
@@ -552,10 +557,12 @@
      "nat": 1054,
      "fide": 1487
     }
-   ]
+   ],
+   "venue": "Sokolovna 1.patro, Boleslavská 450, 294 01 Bakov nad Jizerou"
   },
   {
    "name": "TJ Auto Škoda Mladá Boleslav A",
+   "cz": 216860,
    "captain": "Kryšpín Libor",
    "players": [
     {
@@ -750,10 +757,12 @@
      "nat": 1393,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Škoda Muzeum, sál Hieronimus, tř. Václava Klementa 294"
   },
   {
    "name": "Šachklub města Dobrovice E",
+   "cz": 216864,
    "captain": "Krejbich Lukáš",
    "players": [
     {
@@ -930,10 +939,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Palackého náměstí 70, 294 41 Dobrovice Komunitní centrum Fara"
   },
   {
    "name": "Šachklub města Dobrovice D",
+   "cz": 216865,
    "captain": "Šoltys Roman",
    "players": [
     {
@@ -1110,10 +1121,12 @@
      "nat": 1122,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Palackého náměstí 70, 294 41 Dobrovice Komunitní centrum Fara"
   },
   {
    "name": "Sokol Brandýs nad Labem B",
+   "cz": 216863,
    "captain": "Kabát Josef",
    "players": [
     {
@@ -1282,10 +1295,12 @@
      "nat": 1675,
      "fide": 1833
     }
-   ]
+   ],
+   "venue": "Klubovna Sokolovny, Brandýs nad Labem,Zápská 329"
   },
   {
    "name": "TJ Neratovice D",
+   "cz": 216866,
    "captain": "Huja Matěj",
    "players": [
     {
@@ -1462,10 +1477,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sportovní hala, Kpt. Jaroše 233, Neratovice"
   },
   {
    "name": "Sokol Mšeno",
+   "cz": 216861,
    "captain": "Burda Roman",
    "players": [
     {
@@ -1616,10 +1633,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Restaurace U Havelků, Růžová 2314, Mělník (10:00)"
   },
   {
    "name": "Šachy Polabí A",
+   "cz": 216862,
    "captain": "Jílek Jakub",
    "players": [
     {
@@ -1808,7 +1827,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Misan s.r.o., Ke Vrutici 1795"
   }
  ],
  "rounds": [

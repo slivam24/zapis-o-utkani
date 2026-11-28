@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "ŠK Velké Losiny",
+   "cz": 216561,
    "captain": "Viktorin Petr",
    "players": [
     {
@@ -206,10 +207,12 @@
      "nat": 1474,
      "fide": 1588
     }
-   ]
+   ],
+   "venue": "Dům s chráněnými byty, Rudé armády 322, Velké Losiny"
   },
   {
    "name": "STAV-IZOL ISO Olomouc",
+   "cz": 216567,
    "captain": "Zdražil Jan",
    "players": [
     {
@@ -402,10 +405,12 @@
      "nat": 1069,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Hájenka Nový Dvůr 150, Olomouc"
   },
   {
    "name": "ŠK 1921 Zábřeh",
+   "cz": 216565,
    "captain": "Krahula Pavel",
    "players": [
     {
@@ -593,10 +598,12 @@
      "nat": 1449,
      "fide": 1705
     }
-   ]
+   ],
+   "venue": "Katolický dům, Sušilova 1285, Zábřeh"
   },
   {
    "name": "Tatran Litovel",
+   "cz": 216568,
    "captain": "Gnida Patrik",
    "players": [
     {
@@ -792,10 +799,12 @@
      "nat": 1362,
      "fide": 1656
     }
-   ]
+   ],
+   "venue": "U Stadionu 1437/1b, 784 01 Litovel"
   },
   {
    "name": "SK Prostějov C",
+   "cz": 216570,
    "captain": "Tichý Miroslav",
    "players": [
     {
@@ -970,10 +979,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sportovní Klub Prostějov,Sportovní 3924/1,79601 Prostějov"
   },
   {
    "name": "TJ Sokol Skalička",
+   "cz": 216569,
    "captain": "Vozák Jaromír",
    "players": [
     {
@@ -1157,10 +1168,12 @@
      "nat": 1430,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Hospůdka u Bagarů, Skalička 27"
   },
   {
    "name": "SK Prostějov B",
+   "cz": 216564,
    "captain": "Hradský Aleš",
    "players": [
     {
@@ -1321,10 +1334,12 @@
      "nat": 1394,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Klubovna SK Sportovní 1, Prostějov, vchod od tenisových kurtů"
   },
   {
    "name": "T.J. Sokol Přemyslovice",
+   "cz": 216571,
    "captain": "Zapletal Jiří",
    "players": [
     {
@@ -1470,10 +1485,12 @@
      "nat": 1834,
      "fide": 1798
     }
-   ]
+   ],
+   "venue": "Sokolovna, Přemyslovice 400"
   },
   {
    "name": "TJ ŠK DUE POP Uničov",
+   "cz": 216562,
    "captain": "Navrátil Jiří",
    "players": [
     {
@@ -1663,10 +1680,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Oblastní pečovatelská služba, Gymnazijní 237, Uničov"
   },
   {
    "name": "ŠK ZŠ Horka nad Moravou",
+   "cz": 216572,
    "captain": "Malenovský Martin",
    "players": [
     {
@@ -1840,10 +1859,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "ZŠ a MŠ Horka nad Moravou, Lidická 9"
   },
   {
    "name": "ŠK Sigmia Olomouc",
+   "cz": 216563,
    "captain": "Smékal Zdeněk",
    "players": [
     {
@@ -2020,10 +2041,12 @@
      "nat": 1432,
      "fide": 1643
     }
-   ]
+   ],
+   "venue": "Skautský dům, Holická 31/Q Olomouc"
   },
   {
    "name": "TJ Spartak Přerov",
+   "cz": 216566,
    "captain": "Klimecký Tomáš",
    "players": [
     {
@@ -2223,7 +2246,8 @@
      "nat": 1854,
      "fide": 1871
     }
-   ]
+   ],
+   "venue": "Klubovna kuželny Přerov, Kopaniny 626/4"
   }
  ],
  "rounds": [

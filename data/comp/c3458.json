@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "Bíločerný Ořechov",
+   "cz": 217957,
    "captain": "",
    "players": [
     {
@@ -164,10 +165,12 @@
      "nat": null,
      "fide": 1767
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Kuřim B",
+   "cz": 217959,
    "captain": "",
    "players": [
     {
@@ -302,10 +305,12 @@
      "nat": 1576,
      "fide": 1759
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Letovice",
+   "cz": 217951,
    "captain": "",
    "players": [
     {
@@ -458,10 +463,12 @@
      "nat": 1434,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Veselí nad Moravou",
+   "cz": 217961,
    "captain": "",
    "players": [
     {
@@ -610,10 +617,12 @@
      "nat": 1067,
      "fide": 1476
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Duras Charlie´s Street Brno C",
+   "cz": 217956,
    "captain": "",
    "players": [
     {
@@ -802,10 +811,12 @@
      "nat": 1670,
      "fide": 1750
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Moravská Slavia C",
+   "cz": 217954,
    "captain": "",
    "players": [
     {
@@ -996,10 +1007,12 @@
      "nat": 1555,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Hodonín",
+   "cz": 217958,
    "captain": "",
    "players": [
     {
@@ -1150,10 +1163,12 @@
      "nat": 1644,
      "fide": 1773
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Lokomotiva Brno B",
+   "cz": 217962,
    "captain": "",
    "players": [
     {
@@ -1314,10 +1329,12 @@
      "nat": 1488,
      "fide": 1617
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Garde Lipovec",
+   "cz": 217953,
    "captain": "",
    "players": [
     {
@@ -1510,10 +1527,12 @@
      "nat": 1619,
      "fide": 1779
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Kuřim C",
+   "cz": 217952,
    "captain": "",
    "players": [
     {
@@ -1682,10 +1701,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "GPOA Znojmo",
+   "cz": 217960,
    "captain": "",
    "players": [
     {
@@ -1861,10 +1882,12 @@
      "nat": 1793,
      "fide": 1863
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Jezdci Jundrov C",
+   "cz": 217955,
    "captain": "",
    "players": [
     {
@@ -2051,13 +2074,14 @@
      "nat": 1622,
      "fide": 1736
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [
   {
    "no": 1,
-   "date": "2026-11-25",
+   "date": "2026-10-18",
    "matches": [
     {
      "home": "Bíločerný Ořechov",
@@ -2087,7 +2111,7 @@
   },
   {
    "no": 2,
-   "date": "2026-11-25",
+   "date": "2026-11-08",
    "matches": [
     {
      "home": "Bíločerný Ořechov",
@@ -2117,7 +2141,7 @@
   },
   {
    "no": 3,
-   "date": "2026-11-25",
+   "date": "2026-11-22",
    "matches": [
     {
      "home": "Duras Charlie´s Street Brno C",
@@ -2147,7 +2171,7 @@
   },
   {
    "no": 4,
-   "date": "2026-11-25",
+   "date": "2026-12-06",
    "matches": [
     {
      "home": "Bíločerný Ořechov",
@@ -2177,7 +2201,7 @@
   },
   {
    "no": 5,
-   "date": "2026-11-25",
+   "date": "2027-01-10",
    "matches": [
     {
      "home": "Duras Charlie´s Street Brno C",
@@ -2207,7 +2231,7 @@
   },
   {
    "no": 6,
-   "date": "2026-11-25",
+   "date": "2027-01-24",
    "matches": [
     {
      "home": "Bíločerný Ořechov",
@@ -2237,7 +2261,7 @@
   },
   {
    "no": 7,
-   "date": "2026-11-25",
+   "date": "2027-02-07",
    "matches": [
     {
      "home": "Duras Charlie´s Street Brno C",
@@ -2267,7 +2291,7 @@
   },
   {
    "no": 8,
-   "date": "2026-11-25",
+   "date": "2027-02-21",
    "matches": [
     {
      "home": "Bíločerný Ořechov",
@@ -2297,7 +2321,7 @@
   },
   {
    "no": 9,
-   "date": "2026-11-25",
+   "date": "2027-03-14",
    "matches": [
     {
      "home": "ŠK Hodonín",
@@ -2327,7 +2351,7 @@
   },
   {
    "no": 10,
-   "date": "2026-11-25",
+   "date": "2027-04-04",
    "matches": [
     {
      "home": "Bíločerný Ořechov",
@@ -2357,7 +2381,7 @@
   },
   {
    "no": 11,
-   "date": "2026-11-25",
+   "date": "2027-04-18",
    "matches": [
     {
      "home": "ŠK Hodonín",

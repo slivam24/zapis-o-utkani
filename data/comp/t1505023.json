@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "SK Sezimovo Ústí",
+   "cz": 215944,
    "captain": "",
    "players": [
     {
@@ -150,10 +151,12 @@
      "nat": 1430,
      "fide": 1581
     }
-   ]
+   ],
+   "venue": "Klubovna Šachklubu Tábor, Světlogorská 2771; bývalá ZŠ"
   },
   {
    "name": "SK Týn n.Vlt.",
+   "cz": 215947,
    "captain": "",
    "players": [
     {
@@ -317,10 +320,12 @@
      "nat": 1111,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Městský dům dětí a mládeže, Tyršova 26, Týn n.Vlt."
   },
   {
    "name": "Spartak Soběslav",
+   "cz": 215943,
    "captain": "",
    "players": [
     {
@@ -509,10 +514,12 @@
      "nat": 1450,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Zimní stadión Soběslav, Nová 401; klubovna ve 2. patře"
   },
   {
    "name": "ČZ Strakonice C",
+   "cz": 215946,
    "captain": "",
    "players": [
     {
@@ -718,10 +725,12 @@
      "nat": 1051,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sport. areál TJ ČZ, Máchova 108, Strakonice"
   },
   {
    "name": "Chess Club Písek D",
+   "cz": 215945,
    "captain": "",
    "players": [
     {
@@ -902,10 +911,12 @@
      "nat": 1510,
      "fide": 1716
     }
-   ]
+   ],
+   "venue": "Čechova 454, 39701 Písek"
   },
   {
    "name": "Chess Club Písek E",
+   "cz": 215948,
    "captain": "",
    "players": [
     {
@@ -1090,10 +1101,12 @@
      "nat": 1276,
      "fide": 1651
     }
-   ]
+   ],
+   "venue": "Čechova 454, 39701 Písek"
   },
   {
    "name": "QCC České Budějovice D",
+   "cz": 215942,
    "captain": "",
    "players": [
     {
@@ -1294,7 +1307,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Dům s pečovatelskou službou, Nerudova ul. 2a, 370 01 České Budějovice"
   }
  ],
  "rounds": [

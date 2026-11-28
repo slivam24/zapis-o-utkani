@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "ŠO Hlinsko B",
+   "cz": 216727,
    "captain": "Indra Antonín",
    "players": [
     {
@@ -155,10 +156,12 @@
      "nat": 1246,
      "fide": 1469
     }
-   ]
+   ],
+   "venue": "Dům dětí a mládeže, Hlinsko, Adámkova 1116"
   },
   {
    "name": "Sokol Lázně Bohdaneč",
+   "cz": 216721,
    "captain": "Sekyrka Josef",
    "players": [
     {
@@ -219,10 +222,12 @@
      "nat": 1308,
      "fide": 1538
     }
-   ]
+   ],
+   "venue": "sokolovna Dr. Tyrše 262 Lázně Bohdaneč"
   },
   {
    "name": "ŠO Hlinsko C",
+   "cz": 216720,
    "captain": "Indrová Jana",
    "players": [
     {
@@ -386,10 +391,12 @@
      "nat": 1001,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Dům dětí a mládeže, Hlinsko, Adámkova 1116"
   },
   {
    "name": "ŠO Miřetice",
+   "cz": 216719,
    "captain": "Janoušek Ladislav",
    "players": [
     {
@@ -526,10 +533,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Miřetice 126 (vedle školy)"
   },
   {
    "name": "ŠK Rapid Pardubice E",
+   "cz": 216725,
    "captain": "Kalhous Miroslav",
    "players": [
     {
@@ -651,10 +660,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Salónek Restaurace Pernštejnka, Odborářů 346, Pardubice II - Polabiny"
   },
   {
    "name": "2222 ŠK Polabiny E",
+   "cz": 216726,
    "captain": "Krejčí Jan",
    "players": [
     {
@@ -744,10 +755,12 @@
      "nat": 1166,
      "fide": 1448
     }
-   ]
+   ],
+   "venue": "Resturace Rosignano, Ohrazenická 310, Pardubice"
   },
   {
    "name": "TJ Sokol Krouna",
+   "cz": 216724,
    "captain": "Jirmásek Vladimír",
    "players": [
     {
@@ -808,10 +821,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Zasedací místnost Obecního úřadu Krouna"
   },
   {
    "name": "TJ ŠO Chrudim C",
+   "cz": 216722,
    "captain": "Veverka Radek",
    "players": [
     {
@@ -980,10 +995,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Čs. partyzánů 13, Chrudim"
   },
   {
    "name": "ŠK Bohemia Pardubice C",
+   "cz": 216728,
    "captain": "Stehlík Pavel",
    "players": [
     {
@@ -1146,10 +1163,12 @@
      "nat": 1249,
      "fide": 1413
     }
-   ]
+   ],
+   "venue": "Štrossova 239, Pardubice, hotel Kristl (zadní vchod)"
   },
   {
    "name": "ŠK Rapid Pardubice D",
+   "cz": 216723,
    "captain": "Kurka Petr",
    "players": [
     {
@@ -1243,7 +1262,8 @@
      "nat": 1000,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Salónek Restaurace Pernštejnka, Odborářů 346, Pardubice II - Polabiny"
   }
  ],
  "rounds": [
