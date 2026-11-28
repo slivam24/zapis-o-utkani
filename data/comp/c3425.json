@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "Sokol Domažlice A",
+   "cz": 216527,
    "captain": "",
    "players": [
     {
@@ -203,10 +204,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sokolovna Domažlice, Benešova 281"
   },
   {
    "name": "ŠK Líně C",
+   "cz": 216530,
    "captain": "",
    "players": [
     {
@@ -399,10 +402,12 @@
      "nat": 1495,
      "fide": 1570
     }
-   ]
+   ],
+   "venue": "Obecní dům Líně, Hornická 848, 330 21 Líně"
   },
   {
    "name": "ŠK Dvorec - B",
+   "cz": 216524,
    "captain": "",
    "players": [
     {
@@ -593,10 +598,12 @@
      "nat": 1056,
      "fide": 1483
     }
-   ]
+   ],
+   "venue": "Nepomuk, U sokolovny 565, 335 01, Sportovní hala, klubovna ŠK Dvorec"
   },
   {
    "name": "ŠK 64 Plzeň B",
+   "cz": 216528,
    "captain": "",
    "players": [
     {
@@ -779,10 +786,12 @@
      "nat": 1427,
      "fide": 1567
     }
-   ]
+   ],
+   "venue": "konferenční sál hotelu LIONS, Zborovská 18, Plzeň"
   },
   {
    "name": "SŠK HeřNýř A",
+   "cz": 216520,
    "captain": "",
    "players": [
     {
@@ -967,10 +976,12 @@
      "nat": 1162,
      "fide": 1464
     }
-   ]
+   ],
+   "venue": "Revoluční 1, Heřmanova Huť - Fara"
   },
   {
    "name": "ŠK Garde Kaznějov",
+   "cz": 216523,
    "captain": "",
    "players": [
     {
@@ -1145,10 +1156,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Ke Škále 220, Kaznějov, Budova Městského úřadu Kaznějov"
   },
   {
    "name": "ŠK 64 Plzeň C",
+   "cz": 216525,
    "captain": "",
    "players": [
     {
@@ -1335,10 +1348,12 @@
      "nat": 1394,
      "fide": 1629
     }
-   ]
+   ],
+   "venue": "konferenční sál hotelu LIONS, Zborovská 18, Plzeň"
   },
   {
    "name": "Šachklub Klatovy A",
+   "cz": 216521,
    "captain": "",
    "players": [
     {
@@ -1522,10 +1537,12 @@
      "nat": 1629,
      "fide": 1743
     }
-   ]
+   ],
+   "venue": "Sokolovna Klatovy, kpt. Jaroše 118, 339 01 Klatovy"
   },
   {
    "name": "Šakal Kozolupy",
+   "cz": 216529,
    "captain": "",
    "players": [
     {
@@ -1698,10 +1715,12 @@
      "nat": 1550,
      "fide": 1698
     }
-   ]
+   ],
+   "venue": "Požární zbrojnice, Čemínská 257, Město - Touškov"
   },
   {
    "name": "Lokomotiva A",
+   "cz": 216522,
    "captain": "",
    "players": [
     {
@@ -1890,10 +1909,12 @@
      "nat": 1546,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Farského 5, Plzeň"
   },
   {
    "name": "Sokol Domažlice B",
+   "cz": 216526,
    "captain": "",
    "players": [
     {
@@ -2086,7 +2107,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sokolovna Domažlice, Benešova 281"
   }
  ],
  "rounds": [

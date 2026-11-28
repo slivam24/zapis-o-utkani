@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "TJ Slovan Moravská Třebová A",
+   "cz": 216675,
    "captain": "Grepl Pavel",
    "players": [
     {
@@ -121,10 +122,12 @@
      "nat": 1138,
      "fide": 1419
     }
-   ]
+   ],
+   "venue": "ul.Piaristická 8/238 (vchod z hřiště za budovou Mú na ul.Olomoucké)"
   },
   {
    "name": "TJ Štefanydes Polička D",
+   "cz": 216671,
    "captain": "Smejkal Jan",
    "players": [
     {
@@ -279,10 +282,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Dům Jordán, Tyršova 34, Polička"
   },
   {
    "name": "ŠK Svitavy C",
+   "cz": 216668,
    "captain": "Krušina Adolf",
    "players": [
     {
@@ -473,10 +478,12 @@
      "nat": 1393,
      "fide": 1769
     }
-   ]
+   ],
+   "venue": "Svitavy, Kapitána Nálepky 39"
   },
   {
    "name": "TJ Lanškroun D",
+   "cz": 216672,
    "captain": "Křivohlávek Josef",
    "players": [
     {
@@ -677,10 +684,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Dělnický dům, Lanškroun, Dobrovského 41"
   },
   {
    "name": "TJ Lokomotiva Česká Třebová B",
+   "cz": 216670,
    "captain": "Nikolinko Alexandr",
    "players": [
     {
@@ -781,10 +790,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Ekocentrum Podorlicko, Podbranská 959, Česká Třebová"
   },
   {
    "name": "ŠK Litomyšl C",
+   "cz": 216669,
    "captain": "Holub Jan",
    "players": [
     {
@@ -932,10 +943,12 @@
      "nat": 1601,
      "fide": null
     }
-   ]
+   ],
+   "venue": "AKAIA, Benátská 1078, Litomyšl"
   },
   {
    "name": "TJ Sokol Němčice",
+   "cz": 216676,
    "captain": "Racek Josef",
    "players": [
     {
@@ -1038,10 +1051,12 @@
      "nat": 1518,
      "fide": 1716
     }
-   ]
+   ],
+   "venue": "Obecní úřad Němčice, Němčice 107, Němčice"
   },
   {
    "name": "TJ Štefanydes Polička E",
+   "cz": 216673,
    "captain": "Martínek Michal",
    "players": [
     {
@@ -1184,10 +1199,12 @@
      "nat": 1445,
      "fide": 1665
     }
-   ]
+   ],
+   "venue": "Dům Jordán, Tyršova 34, Polička."
   },
   {
    "name": "TJ Slovan Moravská Třebová B",
+   "cz": 216674,
    "captain": "Palášek Tadeáš",
    "players": [
     {
@@ -1290,7 +1307,8 @@
      "nat": 1058,
      "fide": null
     }
-   ]
+   ],
+   "venue": "ul.Piaristická 8/238 (vchod z hřiště za budovou Mú na ul.Olomoucké)"
   }
  ],
  "rounds": [

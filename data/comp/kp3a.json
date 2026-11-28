@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "Šachový klub Louny \"C\"",
+   "cz": 216611,
    "captain": "Heřt Karel",
    "players": [
     {
@@ -137,10 +138,12 @@
      "nat": 1484,
      "fide": 1647
     }
-   ]
+   ],
+   "venue": "Městská Knihovna Louny, Mírové náměstí 1"
   },
   {
    "name": "Slovan Jirkov \"B\"",
+   "cz": 216616,
    "captain": "Zmeškal Stanislav",
    "players": [
     {
@@ -241,10 +244,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Dům dětí a mládeže Paraplíčko, Školní 1725, Jirkov"
   },
   {
    "name": "TJ Sokol Údlice \"E\"",
+   "cz": 216612,
    "captain": "Richter Daniel",
    "players": [
     {
@@ -438,10 +443,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Zámecká 1, Údlice"
   },
   {
    "name": "Krásnodvorská Myslivna",
+   "cz": 216615,
    "captain": "Kastl Jaroslav",
    "players": [
     {
@@ -600,10 +607,12 @@
      "nat": 1439,
      "fide": 1612
     }
-   ]
+   ],
+   "venue": "OÚ, Krásný Dvůr 117"
   },
   {
    "name": "ŠK Magic Žatec \"B\"",
+   "cz": 216614,
    "captain": "Dostál Petr",
    "players": [
     {
@@ -759,10 +768,12 @@
      "nat": 1336,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Husitské náměstí 557, Žatec"
   },
   {
    "name": "Chess Most \"C\"",
+   "cz": 216617,
    "captain": "Zelinger Jiří",
    "players": [
     {
@@ -875,10 +886,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Penzion pro seniory, Komořanská 818 Most"
   },
   {
    "name": "Šachový klub Louny \"D\"",
+   "cz": 216618,
    "captain": "",
    "players": [
     {
@@ -1040,10 +1053,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Městská Knihovna Louny, Mírové náměstí 1"
   },
   {
    "name": "TJ Sokol Litvínov - Lom",
+   "cz": 216613,
    "captain": "Bakajsa Luboš",
    "players": [
     {
@@ -1104,7 +1119,8 @@
      "nat": 1275,
      "fide": 1492
     }
-   ]
+   ],
+   "venue": "Smetanova 40, Litvínov"
   }
  ],
  "rounds": [

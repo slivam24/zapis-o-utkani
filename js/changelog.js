@@ -1,11 +1,15 @@
 // Seznam změn v aplikaci, jak ho vidí uživatel (O aplikaci → Co je nového). Nejnovější nahoře.
 // Při každé změně, kterou uživatel pozná, přidej položku k dnešnímu datu (nebo nový den navrch).
-// Datum nejnovějšího dne je zároveň verze aplikace: když se změní, aplikace upozorní na novinky.
+// Verze aplikace je datum nejnovějšího dne a počet jeho položek (2026-11-28#3): když se změní,
+// aplikace upozorní na novinky, i když přibude jen položka ke dni, který už v seznamu je.
 
 export const CHANGES = [
   {
     date: '2026-11-28',
     items: [
+      '<b>Hrací místnost se doplní sama</b> podle stránky domácího družstva na chess.cz. Když vybereš jiný zápas, vymění se za místnost nového domácího družstva.',
+      'Hrací místnost, kterou přepíšeš, si zařízení u družstva zapamatuje a příště ji nabídne místo té z chess.cz.',
+      '<b>Partie v PGN:</b> v kroku Výstup tlačítko <b>Stáhnout partie (PGN)</b>. Barvy se střídají podle soutěžního řádu (domácí na 1. šachovnici bílými, na 2. černými…), texty jsou bez diakritiky a uvozovek. Kontumace se nehrály, v PGN nejsou.',
       'Nový <b>Můj profil</b> v menu: víc krajů najednou, <b>oblíbené soutěže</b> úplně nahoře v nabídce, <b>moje družstva</b>, loga a můj podpis.',
       'Hvězdičkou ☆ u soutěže ji přidáš do oblíbených, u družstva ho označíš jako svoje. Po výběru kola se zápas tvého družstva vybere sám.',
       'Loga družstev můžou být v novém zápisu zapnutá vždy, jen u tvého družstva, nebo nikdy.',
@@ -78,8 +82,17 @@ export const CHANGES = [
   },
 ];
 
-/** Verze aplikace: datum posledních změn (RRRR-MM-DD). */
-export const VERSION = CHANGES[0].date;
+/** Verze aplikace: datum posledních změn a počet jejich položek (RRRR-MM-DD#N). */
+export const VERSION = `${CHANGES[0].date}#${CHANGES[0].items.length}`;
+
+/** Den seznamu změn, který uživatel s naposledy viděnou verzí ještě neviděl (celý nebo jeho nové položky). */
+export function isNew(day, seen) {
+  if (!seen) return false;
+  const [date, count] = String(seen).split('#');
+  if (day.date !== date) return day.date > date;
+  // starší verze bez počtu položek: přibývat mohlo jen u nejnovějšího dne
+  return count === undefined ? day === CHANGES[0] : day.items.length > Number(count);
+}
 
 /** Datum ve tvaru 27. 11. 2026. */
 export function fmtChangeDate(iso) {
@@ -88,4 +101,4 @@ export function fmtChangeDate(iso) {
 }
 
 /** Dny se změnami novějšími než naposledy viděná verze (prázdné, když uživatel vše viděl). */
-export const newerThan = (seen) => CHANGES.filter((c) => !seen || c.date > seen);
+export const newerThan = (seen) => CHANGES.filter((c) => !seen || isNew(c, seen));

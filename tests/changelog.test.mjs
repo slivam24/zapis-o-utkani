@@ -12,7 +12,7 @@ test('seznam změn: platná data od nejnovějšího, každý den má položky', 
   }
   const dates = CHANGES.map((c) => c.date);
   assert.deepEqual(dates, [...new Set(dates)].sort().reverse());
-  assert.equal(VERSION, dates[0]);
+  assert.equal(VERSION, `${dates[0]}#${CHANGES[0].items.length}`);
 });
 
 test('datum změny po česku', () => {
@@ -26,17 +26,21 @@ test('novinky od naposledy viděné verze', () => {
     newerThan(CHANGES[1].date).map((c) => c.date),
     [CHANGES[0].date],
   );
+  // nová položka ke dni, který už uživatel viděl (i verze uložená jen jako datum)
+  assert.deepEqual(newerThan(`${CHANGES[0].date}#${CHANGES[0].items.length - 1}`).map((c) => c.date), [CHANGES[0].date]);
+  assert.deepEqual(newerThan(CHANGES[0].date).map((c) => c.date), [CHANGES[0].date]);
 });
 
 test('O aplikaci: záložky a označení nových změn', () => {
   assert.match(aboutPage('navod'), /<h2>Návod<\/h2>/);
   assert.match(aboutPage('info'), /<h2>O aplikaci<\/h2>/);
   assert.match(aboutPage('neznama'), /<h2>Návod<\/h2>/);
-  const changes = aboutPage('zmeny', { seen: CHANGES[1].date });
+  const changes = aboutPage('zmeny', { seen: `${CHANGES[1].date}#${CHANGES[1].items.length}` });
   assert.equal((changes.match(/badge new/g) ?? []).length, 1);
   assert.equal((aboutPage('zmeny').match(/badge new/g) ?? []).length, 0);
 });
 
-test('service worker ukládá seznam změn pro provoz bez internetu', () => {
-  assert.match(readFileSync(new URL('../sw.js', import.meta.url), 'utf8'), /'js\/changelog\.js'/);
+test('service worker ukládá seznam změn a PGN pro provoz bez internetu', () => {
+  const sw = readFileSync(new URL('../sw.js', import.meta.url), 'utf8');
+  for (const f of ['changelog', 'pgn']) assert.ok(sw.includes(`'js/${f}.js'`), f);
 });

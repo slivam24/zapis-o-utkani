@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "ŠK Dolní Čermná",
+   "cz": 216605,
    "captain": "Marek Jan",
    "players": [
     {
@@ -108,10 +109,12 @@
      "nat": 1575,
      "fide": 1746
     }
-   ]
+   ],
+   "venue": "Hasičský dům Dolní Čermná 314"
   },
   {
    "name": "Sokol Mistrovice",
+   "cz": 216602,
    "captain": "Janota Jiří",
    "players": [
     {
@@ -246,10 +249,12 @@
      "nat": 1000,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sport restaurant Mistrovice 204"
   },
   {
    "name": "ŠO Horní Čermná B",
+   "cz": 216608,
    "captain": "Balcar Vojtěch",
    "players": [
     {
@@ -433,10 +438,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Šachová klubovna v Sokolovně Horní Čermná č.p. 79 - vchod zezadu"
   },
   {
    "name": "ŠO K a.s. Kunvald B",
+   "cz": 216606,
    "captain": "Krčmář Stanislav",
    "players": [
     {
@@ -555,10 +562,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Hospůdka Na Salaši Kunvald (vedle fotbalového hřiště) a poslední kolo"
   },
   {
    "name": "ŠO K a.s. Kunvald C",
+   "cz": 216610,
    "captain": "Rusz Roman",
    "players": [
     {
@@ -687,10 +696,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Hospůdka Na Salaši Kunvald (vedle fotbalového hřiště)"
   },
   {
    "name": "SK Řetůvka B",
+   "cz": 216607,
    "captain": "Němeček David",
    "players": [
     {
@@ -811,10 +822,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Obecní úřad v Řetůvce"
   },
   {
    "name": "TJ Sokol Nekoř B",
+   "cz": 216603,
    "captain": "Šípek Vladimír",
    "players": [
     {
@@ -993,10 +1006,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "zimní stadion bez p. č. - vedle Nekoř 132"
   },
   {
    "name": "ŠO K a.s. Kunvald D",
+   "cz": 216604,
    "captain": "Dvořák Eduard",
    "players": [
     {
@@ -1106,10 +1121,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Hospůdka Na Salaši Kunvald (vedle fotbalového hřiště)"
   },
   {
    "name": "ŠK Ústí nad Orlicí E",
+   "cz": 216609,
    "captain": "Švec Jiří",
    "players": [
     {
@@ -1282,7 +1299,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "SBD UO, Letohradská 1359, Ústí nad Orlicí, 1. patro"
   }
  ],
  "rounds": [

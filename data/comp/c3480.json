@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "Jiskra Třeboň",
+   "cz": 216397,
    "captain": "Kalát Martin",
    "players": [
     {
@@ -107,10 +108,12 @@
      "nat": 1574,
      "fide": 1755
     }
-   ]
+   ],
+   "venue": "Třeboń CHelčického 2"
   },
   {
    "name": "QCC České Budějovice E",
+   "cz": 216396,
    "captain": "",
    "players": [
     {
@@ -284,10 +287,12 @@
      "nat": 1200,
      "fide": 1578
     }
-   ]
+   ],
+   "venue": "Důms pečovatelskou službou, Nerudova 2568/2a, České Budějovice 370 04"
   },
   {
    "name": "Olympia České Budějovice B",
+   "cz": 216395,
    "captain": "",
    "players": [
     {
@@ -461,10 +466,12 @@
      "nat": 1350,
      "fide": 1690
     }
-   ]
+   ],
+   "venue": "KD Slavie, Jirsíkova 243/2, České Budějovice 6 37001 (vchod ze strany"
   },
   {
    "name": "Royal České Budějovice B",
+   "cz": 216399,
    "captain": "Zachař Jaroslav",
    "players": [
     {
@@ -599,10 +606,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Kulturní a kreativní centrum SLÁVIE, Jirsíkova 243/2, Č.Budějovice"
   },
   {
    "name": "ŠK Sedlo",
+   "cz": 216394,
    "captain": "Lukáč Jakub",
    "players": [
     {
@@ -730,10 +739,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sedlo 2 374 01 Komařiče"
   },
   {
    "name": "Spartak Kaplice C",
+   "cz": 216400,
    "captain": "Lefler Václav",
    "players": [
     {
@@ -899,10 +910,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Spolkovna, Linecká 368, Kaplice Razítko a podpis právního subjektu, k"
   },
   {
    "name": "Royal České Budějovice C",
+   "cz": 216403,
    "captain": "Nováková Blanka",
    "players": [
     {
@@ -1067,10 +1080,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Kulturní a kreativní centrum SLÁVIE, Jirsíkova 243/2, Č.Budějovice"
   },
   {
    "name": "Slovan Jindřichův Hradec C",
+   "cz": 216398,
    "captain": "",
    "players": [
     {
@@ -1217,10 +1232,12 @@
      "nat": 1460,
      "fide": 1647
     }
-   ]
+   ],
+   "venue": "Těllocvična Ssloanu J.H. - klubovna, Jarošovská 743/11 J.H."
   },
   {
    "name": "VŠTE České Budějovice C",
+   "cz": 216402,
    "captain": "Šrámek Jan",
    "players": [
     {
@@ -1364,10 +1381,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "VŠTE Okružní 517/10, 37001 Č.Buějovice"
   },
   {
    "name": "QCC České Budějovice F",
+   "cz": 216401,
    "captain": "",
    "players": [
     {
@@ -1487,7 +1506,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "KIC Velešín, Družstevní 596, Velešín 382 32"
   }
  ],
  "rounds": [

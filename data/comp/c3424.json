@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "SK Prostějov D",
+   "cz": 215838,
    "captain": "Hradský Aleš",
    "players": [
     {
@@ -159,10 +160,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sportovní 1, Prostějov"
   },
   {
    "name": "STAV-IZOL ISO Olomouc B",
+   "cz": 215833,
    "captain": "Kolmaš Oldřich",
    "players": [
     {
@@ -348,10 +351,12 @@
      "nat": 1565,
      "fide": 1685
     }
-   ]
+   ],
+   "venue": "Hájenka Nový Dvůr 150, Olomouc"
   },
   {
    "name": "ŠK Šternberk",
+   "cz": 215837,
    "captain": "Vymětalík Ivo",
    "players": [
     {
@@ -542,10 +547,12 @@
      "nat": 1076,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Dvorská 960/13-2.patro, Šternberk (naproti sportovní haly Ecce Homo)"
   },
   {
    "name": "Sokol Citov",
+   "cz": 215832,
    "captain": "Šneidr Michal",
    "players": [
     {
@@ -687,10 +694,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Citov, Občerstvení na koupališti"
   },
   {
    "name": "SK Prostějov E",
+   "cz": 215836,
    "captain": "Tichý Miroslav",
    "players": [
     {
@@ -868,10 +877,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sportovní 1, Prostějov"
   },
   {
    "name": "SK ROŠÁDA Prostějov",
+   "cz": 215834,
    "captain": "Vaculka Pavel",
    "players": [
     {
@@ -1062,10 +1073,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Dopravní hřiště DDM, Bří Čapků 371/4, Prostějov"
   },
   {
    "name": "ŠK Sigmia Olomouc B",
+   "cz": 215835,
    "captain": "Macura Petr",
    "players": [
     {
@@ -1198,10 +1211,12 @@
      "nat": 1415,
      "fide": 1606
     }
-   ]
+   ],
+   "venue": "I.P. Pavlova – Jalta – klub důchodců, Olomouc"
   },
   {
    "name": "TJ Sokol Tovačov",
+   "cz": 215831,
    "captain": "Čala Jiří",
    "players": [
     {
@@ -1388,7 +1403,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sportovní hala Tovačov, Nádražní 333"
   }
  ],
  "rounds": [

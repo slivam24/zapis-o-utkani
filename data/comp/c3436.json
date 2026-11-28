@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "Sokol Dobšice",
+   "cz": 216491,
    "captain": "",
    "players": [
     {
@@ -94,10 +95,12 @@
      "nat": 1408,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sokolovna Dobšice,Za Sokolovnou 9,Dobšice"
   },
   {
    "name": "GPOA Znojmo C",
+   "cz": 216492,
    "captain": "",
    "players": [
     {
@@ -210,10 +213,12 @@
      "nat": 1385,
      "fide": 1584
     }
-   ]
+   ],
+   "venue": "Klubovna OA,Přemyslovců 4,Znojmo"
   },
   {
    "name": "Sokol Štítary",
+   "cz": 216490,
    "captain": "",
    "players": [
     {
@@ -272,10 +277,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "ZŠ, Štítary 191"
   },
   {
    "name": "Šachový klub Práče",
+   "cz": 216488,
    "captain": "",
    "players": [
     {
@@ -359,10 +366,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "KD,Práče 7"
   },
   {
    "name": "Optika Medek TJ Hodonice A",
+   "cz": 216489,
    "captain": "",
    "players": [
     {
@@ -455,10 +464,12 @@
      "nat": 1347,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Klubovna OÚ,Obecní 287,Hodonice"
   },
   {
    "name": "GPOA Znojmo D",
+   "cz": 216493,
    "captain": "",
    "players": [
     {
@@ -571,10 +582,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Klubovna OA,Přemyslovců 4,Znojmo"
   },
   {
    "name": "GPOA Znojmo E",
+   "cz": 216494,
    "captain": "",
    "players": [
     {
@@ -685,10 +698,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Klubovna OA,Přemyslovců 4,Znojmo"
   },
   {
    "name": "ŠK Sebranci RH",
+   "cz": 216495,
    "captain": "",
    "players": [
     {
@@ -799,10 +814,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Lékárna Hrušovany,Nádražní 529"
   },
   {
    "name": "Optika Medek TJ Hodonice B",
+   "cz": 216496,
    "captain": "",
    "players": [
     {
@@ -886,7 +903,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Klubovna OÚ Hodonice,Obecní 287"
   }
  ],
  "rounds": [

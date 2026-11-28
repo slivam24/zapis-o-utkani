@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "Prušánky C",
+   "cz": 216666,
    "captain": "",
    "players": [
     {
@@ -186,10 +187,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Strážnice",
+   "cz": 216662,
    "captain": "",
    "players": [
     {
@@ -355,10 +358,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Vacenovice",
+   "cz": 216661,
    "captain": "",
    "players": [
     {
@@ -504,10 +509,12 @@
      "nat": 1281,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Ježov",
+   "cz": 216663,
    "captain": "",
    "players": [
     {
@@ -627,10 +634,12 @@
      "nat": 1390,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Kyjov",
+   "cz": 216667,
    "captain": "",
    "players": [
     {
@@ -761,10 +770,12 @@
      "nat": 1102,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Veselí C",
+   "cz": 216665,
    "captain": "",
    "players": [
     {
@@ -911,10 +922,12 @@
      "nat": 1375,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "D. Bojanovice A",
+   "cz": 216660,
    "captain": "",
    "players": [
     {
@@ -1025,10 +1038,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "D. Bojanovice B",
+   "cz": 216664,
    "captain": "",
    "players": [
     {
@@ -1118,7 +1133,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

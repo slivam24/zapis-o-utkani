@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "1. Novoborský ŠK",
+   "cz": 214457,
    "captain": "",
    "players": [
     {
@@ -216,10 +217,12 @@
      "nat": 2037,
      "fide": 2060
     }
-   ]
+   ],
+   "venue": "Hotel Don Giovanni, Vinohradská 2733/157a, Praha 3 - Žižkov"
   },
   {
    "name": "Sigil Fund Pardubice",
+   "cz": 214455,
    "captain": "Movsesian Sergei",
    "players": [
     {
@@ -352,10 +355,12 @@
      "nat": 2237,
      "fide": 2244
     }
-   ]
+   ],
+   "venue": "Sál Jana Kašpara, Komenského náměstí 125, Pardubice"
   },
   {
    "name": "ŠK ZIKUDA Turnov",
+   "cz": 214459,
    "captain": "Šimáček Pavel",
    "players": [
     {
@@ -540,10 +545,12 @@
      "nat": 1901,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Skálova 71, Turnov"
   },
   {
    "name": "Slavia Kroměříž",
+   "cz": 214456,
    "captain": "",
    "players": [
     {
@@ -702,10 +709,12 @@
      "nat": 1902,
      "fide": 1935
     }
-   ]
+   ],
+   "venue": "Hotel U Zlatého kohouta, Velké nám. 21/3, Kroměříž"
   },
   {
    "name": "Moravská Slavia Brno",
+   "cz": 214458,
    "captain": "Polák Tomáš",
    "players": [
     {
@@ -892,10 +901,12 @@
      "nat": 1960,
      "fide": 1961
     }
-   ]
+   ],
+   "venue": "Bowling Brno, Líšeňská 4515/80, Brno-Líšeň, tramvaj linka č. 8, zast."
   },
   {
    "name": "Stelar OAZA Praha",
+   "cz": 214465,
    "captain": "Baštář Výprachtický David",
    "players": [
     {
@@ -1088,10 +1099,12 @@
      "nat": 1123,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Zasedací místnost SK OAZA Praha, Jeremenkova 106, Praha 4"
   },
   {
    "name": "BŠŠ Frýdek-Místek",
+   "cz": 214464,
    "captain": "",
    "players": [
     {
@@ -1241,10 +1254,12 @@
      "nat": 2187,
      "fide": 2185
     }
-   ]
+   ],
+   "venue": "Křivý pes, Slezská 1089, Frýdek-Místek"
   },
   {
    "name": "ŠŠ Vávra a Černoušek Unichess",
+   "cz": 214463,
    "captain": "Černoušek Lukáš",
    "players": [
     {
@@ -1406,10 +1421,12 @@
      "nat": 1626,
      "fide": 1758
     }
-   ]
+   ],
+   "venue": "Zasedací míst. SK OAZA, Jeremenkova 1835/106, Praha 4"
   },
   {
    "name": "ŠK Slavoj Poruba A",
+   "cz": 214454,
    "captain": "",
    "players": [
     {
@@ -1568,10 +1585,12 @@
      "nat": 1977,
      "fide": 2045
     }
-   ]
+   ],
+   "venue": "Centrum volného času, Vietnamská 1541/3, Ostrava - Poruba"
   },
   {
    "name": "Výstaviště Lysá nad Labem",
+   "cz": 214461,
    "captain": "Jansa Vlastimil",
    "players": [
     {
@@ -1768,10 +1787,12 @@
      "nat": 1885,
      "fide": 1958
     }
-   ]
+   ],
+   "venue": "Zasedací místnost podkroví, MěÚ Lysá nad Labem, Husovo náměstí 23/1"
   },
   {
    "name": "Český lev Kolešovice",
+   "cz": 214460,
    "captain": "Studnička Tomáš",
    "players": [
     {
@@ -1964,10 +1985,12 @@
      "nat": 1655,
      "fide": 1824
     }
-   ]
+   ],
+   "venue": "Restaurace U Kina, Kolešovice 61"
   },
   {
    "name": "ŠK Slavoj Poruba B",
+   "cz": 214462,
    "captain": "Krajina Aleš",
    "players": [
     {
@@ -2148,7 +2171,8 @@
      "nat": 1957,
      "fide": 2002
     }
-   ]
+   ],
+   "venue": "Centrum volného času, Vietnamská 1541/3, Ostrava - Poruba"
   }
  ],
  "rounds": [

@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "ŠK Česká Skalice",
+   "cz": 217973,
    "captain": "",
    "players": [
     {
@@ -85,10 +86,12 @@
      "nat": 1242,
      "fide": 1636
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Panda Rychnov n. K. D",
+   "cz": 217967,
    "captain": "",
    "players": [
     {
@@ -253,10 +256,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Sokol Rychnov nad Kněžnou",
+   "cz": 217968,
    "captain": "",
    "players": [
     {
@@ -349,10 +354,12 @@
      "nat": 1421,
      "fide": 1702
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Sokol Hradec Králové",
+   "cz": 217971,
    "captain": "",
    "players": [
     {
@@ -427,10 +434,12 @@
      "nat": 1484,
      "fide": 1671
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Náchod D",
+   "cz": 217972,
    "captain": "",
    "players": [
     {
@@ -541,10 +550,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Lípa F",
+   "cz": 217963,
    "captain": "",
    "players": [
     {
@@ -727,10 +738,12 @@
      "nat": 1294,
      "fide": 1583
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠŠPM Lipky HK E",
+   "cz": 217970,
    "captain": "",
    "players": [
     {
@@ -913,10 +926,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "PŠ TJ Náchod C",
+   "cz": 217966,
    "captain": "",
    "players": [
     {
@@ -1018,10 +1033,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Šachový klub Nové Město nad Metují z.s.",
+   "cz": 217964,
    "captain": "",
    "players": [
     {
@@ -1141,10 +1158,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Sokol Dubenec",
+   "cz": 217969,
    "captain": "",
    "players": [
     {
@@ -1237,10 +1256,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "DDM Kostelec nad Orlicí B",
+   "cz": 217965,
    "captain": "",
    "players": [
     {
@@ -1342,7 +1363,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

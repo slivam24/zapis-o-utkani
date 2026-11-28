@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "ŠK Svitavy A",
+   "cz": 216096,
    "captain": "Krušina Adolf",
    "players": [
     {
@@ -200,10 +201,12 @@
      "nat": 1000,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Svitavy, Kapitána Nálepky 39"
   },
   {
    "name": "ŠK Ústí nad Orlicí D",
+   "cz": 216097,
    "captain": "Leksová Soňa",
    "players": [
     {
@@ -385,10 +388,12 @@
      "nat": 1325,
      "fide": null
     }
-   ]
+   ],
+   "venue": "SBD UO, Letohradská 1359, Ústí nad Orlicí, 1. patro"
   },
   {
    "name": "ŠK Litomyšl B",
+   "cz": 216099,
    "captain": "Šváb Jiří",
    "players": [
     {
@@ -579,10 +584,12 @@
      "nat": 1601,
      "fide": null
     }
-   ]
+   ],
+   "venue": "DPS - (Dům s pečovatelskou službou)"
   },
   {
    "name": "TJ Lokomotiva Česká Třebová",
+   "cz": 216104,
    "captain": "Prax Ivo",
    "players": [
     {
@@ -746,10 +753,12 @@
      "nat": 1212,
      "fide": 1616
     }
-   ]
+   ],
+   "venue": "Ekocentrum Podorlicko, Podbranská 959, Česká Třebová"
   },
   {
    "name": "ŠO Horní Čermná",
+   "cz": 216102,
    "captain": "Večeř Martin",
    "players": [
     {
@@ -948,10 +957,12 @@
      "nat": 1175,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Šachová klubovna v Sokolovně Horní Čermná č.p. 79 - vchod zezadu"
   },
   {
    "name": "TJ Spartak Letohrad B",
+   "cz": 216103,
    "captain": "Lorencová Jitka",
    "players": [
     {
@@ -1130,10 +1141,12 @@
      "nat": 1404,
      "fide": 1610
     }
-   ]
+   ],
+   "venue": "tělocvična TJ Spartak, Jilemnického 341, Letohrad"
   },
   {
    "name": "ŠK Svitavy B",
+   "cz": 216098,
    "captain": "Bulva František",
    "players": [
     {
@@ -1322,10 +1335,12 @@
      "nat": 1000,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Svitavy, Kapitána Nálepky 39"
   },
   {
    "name": "SK Žamberk",
+   "cz": 216095,
    "captain": "Kalous Tomáš",
    "players": [
     {
@@ -1511,10 +1526,12 @@
      "nat": 1087,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Pivovar Žamberk, Čs. armády 1400, Žamberk"
   },
   {
    "name": "TJ Sokol Nekoř",
+   "cz": 216101,
    "captain": "Langr Petr",
    "players": [
     {
@@ -1685,10 +1702,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "zimní stadion bez p. č. - vedle Nekoř 132"
   },
   {
    "name": "SK Řetůvka",
+   "cz": 216106,
    "captain": "Švéda Lubomír",
    "players": [
     {
@@ -1854,10 +1873,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Hospůdka na konci světa, Řetůvka 31"
   },
   {
    "name": "TJ Lanškroun C",
+   "cz": 216105,
    "captain": "Krištof Jiří",
    "players": [
     {
@@ -2046,10 +2067,12 @@
      "nat": 1610,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Dělnický dům, Lanškroun, Dobrovského 41"
   },
   {
    "name": "ŠO K a. s. Kunvald",
+   "cz": 216100,
    "captain": "Vymetálek Petr",
    "players": [
     {
@@ -2220,7 +2243,8 @@
      "nat": 1245,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Hospůdka Na Salaši Kunvald (vedle fotbalového hřiště)"
   }
  ],
  "rounds": [

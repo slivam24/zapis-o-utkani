@@ -8,6 +8,7 @@ prstem a na konci vznikne **PDF** a **obrázek (PNG)** zápisu.
 ## Postup při utkání
 
 1. **Zápas:** vyber soutěž, kolo a zápas (nebo rovnou domácí a hostující družstvo), datum a hrací místnost.
+   Hrací místnost se doplní ze stránky domácího družstva na chess.cz; ručně přepsanou si zařízení u družstva pamatuje.
 2. **Sestavy:** zaškrtni hráče ze soupisky (až 8, v KP III až 5). Šachovnice se přidělují podle pořadí na soupisce.
    Aplikace hlídá limit hostů, volných hráčů a cizinců (čl. 3.6.3) a nejmenší počet hráčů (čl. 3.6.2).
 3. **Výsledky:** `1 : 0`, `½ : ½`, `0 : 1` a kontumace `1K : 0K`, `0K : 0K`, `0K : 1K`.
@@ -16,7 +17,16 @@ prstem a na konci vznikne **PDF** a **obrázek (PNG)** zápisu.
    a odtud jde přepnout i na celý zápis.
 4. **Závěr a podpisy:** rozhodčí, kapitáni, záznam rozhodčího a tři podpisy.
 5. **Výstup:** kontrola zápisu (co je nutné opravit a co jen doporučujeme, s odkazem na příslušný krok),
-   loga v zápisu, náhled na celou obrazovku, PDF, PNG, sdílení a odeslání e-mailem.
+   loga v zápisu, náhled na celou obrazovku, PDF, PNG, partie v PGN, sdílení a odeslání e-mailem.
+
+### Partie v PGN
+
+Tlačítko **Stáhnout partie (PGN)** v kroku Výstup (`js/pgn.js`) uloží jednu partii na šachovnici: hlavičky
+Event, Site, Date, Round (`kolo.šachovnice`), White, Black, Result, WhiteTeam, BlackTeam, WhiteElo a BlackElo
+(Elo FIDE, jinak neoznačené Elo; národní se nepoužije) a Board, za nimi jen výsledek, protože tahy zápis nemá.
+Barvy podle čl. 3.4.1: domácí bílými na lichých šachovnicích, výsledek je z pohledu bílého (výhra domácích
+na 2. šachovnici je `0-1`). Všechny texty jsou bez diakritiky, uvozovek a apostrofů (jen ASCII). Kontumované
+šachovnice se nehrály, v PGN nejsou; partie bez zadaného výsledku má `*`.
 
 ### Podpis na telefonu (QR kód)
 
@@ -119,6 +129,13 @@ tedy dva dotazy na soutěž (`scripts/chesscz.mjs`). Má všechny soutěže svaz
 Elo i Elo FIDE. Chess-results je záloha pro soutěže, které na chess.cz nejsou (přidané hlášením nebo v aplikaci),
 a pro případ, že chess.cz zrovna nejde stáhnout: čte se z jeho exportu do Excelu.
 
+**Hrací místnosti.** Adresu hrací místnosti zadává oddíl na chess.cz a ta je jen na stránce družstva
+(`soutez/druzstvo/<soutěž>/<družstvo>/`), tedy dotaz navíc na každé družstvo. Úloha proto každý týden ověří jen
+čtvrtinu družstev (podle čísla družstva), ostatním nechá adresu z minula; družstvo bez zjištěné adresy se stáhne vždy.
+Za měsíc se tak projdou všechna. chess.cz text zkracuje na 70 znaků, takže se uklidí: bez popisku „Adresa hrací
+místnosti:“, bez poznámek o MHD a pravidlech v místnosti a bez useknutého konce (`cleanVenue` ve `scripts/chesscz.mjs`).
+Všechna družstva najednou: `node scripts/fetch_data.mjs --all-venues`.
+
 **Aktuální Elo z LOK.** Na soupiskách je Elo z přihlášek na začátku soutěže. Úloha proto při každé aktualizaci
 stáhne listinu LOK z [elo.miramal.com](https://elo.miramal.com/) (`lok_sm_cz.xls`) a hráčům přepíše národní Elo
 a Elo FIDE na aktuální (`scripts/lok.mjs`). Hráči se párují přesně, ne podle jména (v LOK je spousta jmenovců):
@@ -217,7 +234,7 @@ jde upravit čtení v `scripts/chesscz.mjs` (chess.cz) nebo `js/parse.js` (chess
 
 ```bash
 npm install                 # jen linkedom, pro parsování HTML v Node
-npm test                    # 118 testů: logika zápisu, profil, parser, čtečky .xlsx a .xls, ratingy z LOK, přidávání soutěží, archiv, PDF, odkaz s QR
+npm test                    # 126 testů: logika zápisu, profil, PGN, parser, hrací místnosti, čtečky .xlsx a .xls, ratingy z LOK, přidávání soutěží, archiv, PDF, odkaz s QR
 npm run serve               # lokální spuštění: http://localhost:8080
 ```
 

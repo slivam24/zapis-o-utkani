@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "Valdštejn Cheb A",
+   "cz": 216735,
    "captain": "Míšek Jan",
    "players": [
     {
@@ -212,10 +213,12 @@
      "nat": 1455,
      "fide": 1561
     }
-   ]
+   ],
+   "venue": "Cheb, Náměstí Krále Jiřího 507/6"
   },
   {
    "name": "Karlovarský šach klub Tietz C",
+   "cz": 216731,
    "captain": "Čontoš Václav",
    "players": [
     {
@@ -387,10 +390,12 @@
      "nat": 1533,
      "fide": 1747
     }
-   ]
+   ],
+   "venue": "Karlovy Vary-Stará Role, Školní 7 - Lidový dům (2.patro)"
   },
   {
    "name": "ŠK Hartenberg A",
+   "cz": 216733,
    "captain": "Hroch Jiří",
    "players": [
     {
@@ -581,10 +586,12 @@
      "nat": 1126,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Josefov 100, 357 09 Josefov"
   },
   {
    "name": "AVZO-STSČ Františkovy Lázně A",
+   "cz": 216737,
    "captain": "Kaigl Arnošt",
    "players": [
     {
@@ -735,10 +742,12 @@
      "nat": null,
      "fide": 1767
     }
-   ]
+   ],
+   "venue": "Františkovy Lázně, Táborská 370/13, Klub seniorů"
   },
   {
    "name": "ŠK Karlovy Vary A",
+   "cz": 216736,
    "captain": "",
    "players": [
     {
@@ -931,10 +940,12 @@
      "nat": 1539,
      "fide": 1632
     }
-   ]
+   ],
+   "venue": "Karlovy Vary, Lidická 590/38, Domov mládeže"
   },
   {
    "name": "TJ Olympie Hroznětín A",
+   "cz": 216729,
    "captain": "Ornet Tomáš",
    "players": [
     {
@@ -1127,10 +1138,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Hroznětín, Školní 185 (Městské společenské centrum)"
   },
   {
    "name": "KD Chemie Sokolov A",
+   "cz": 216732,
    "captain": "Zbořil Jaroslav",
    "players": [
     {
@@ -1276,10 +1289,12 @@
      "nat": 1533,
      "fide": 1744
     }
-   ]
+   ],
+   "venue": "Sokolov, Tovární 2093 - zasedačka chemičky"
   },
   {
    "name": "TJ Sokol Teplá A",
+   "cz": 216730,
    "captain": "Klepal Martin",
    "players": [
     {
@@ -1465,10 +1480,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Teplá, Masarykovo náměstí 66, přízemí bývalé knihovny"
   },
   {
    "name": "TJ Ostrov A",
+   "cz": 216734,
    "captain": "Janecký Jaroslav",
    "players": [
     {
@@ -1625,7 +1642,8 @@
      "nat": 1574,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Ostrov, Studentská 1300 - sportovní hala TJ Ostrov, 1.patro"
   }
  ],
  "rounds": [

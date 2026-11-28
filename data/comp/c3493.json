@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "Sokol Lanžhot",
+   "cz": 216487,
    "captain": "",
    "players": [
     {
@@ -76,10 +77,12 @@
      "nat": 1394,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Hustopeče C",
+   "cz": 216485,
    "captain": "",
    "players": [
     {
@@ -190,10 +193,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Hospůdka Ladná",
+   "cz": 216484,
    "captain": "",
    "players": [
     {
@@ -286,10 +291,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Galerie Závodný Mikulov",
+   "cz": 216479,
    "captain": "",
    "players": [
     {
@@ -382,10 +389,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Slavoj Velké Pavlovice A",
+   "cz": 216480,
    "captain": "",
    "players": [
     {
@@ -442,10 +451,12 @@
      "nat": 1350,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Slavoj Velké Pavlovice C",
+   "cz": 216483,
    "captain": "",
    "players": [
     {
@@ -547,10 +558,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Slavoj Velké Pavlovice B",
+   "cz": 216486,
    "captain": "",
    "players": [
     {
@@ -616,10 +629,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Tatran Poštorná",
+   "cz": 216482,
    "captain": "",
    "players": [
     {
@@ -847,10 +862,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Hustopeče D",
+   "cz": 216481,
    "captain": "",
    "players": [
     {
@@ -943,7 +960,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

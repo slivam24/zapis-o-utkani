@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "ŠK Teplice „B\"",
+   "cz": 216285,
    "captain": "Bublík František",
    "players": [
     {
@@ -193,10 +194,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Mechanika Teplice, Masarykova 29, Teplice, 1. patro vlevo"
   },
   {
    "name": "Šachovy klub Louny \"B\"",
+   "cz": 216286,
    "captain": "Jarina Ladislav",
    "players": [
     {
@@ -389,10 +392,12 @@
      "nat": 1302,
      "fide": 1823
     }
-   ]
+   ],
+   "venue": "Městská knihovna v Lounech, Mírové nam. l, 440 01 Louny"
   },
   {
    "name": "TJ Sokol Údlice „C\"",
+   "cz": 216291,
    "captain": "Peroutka Šimon",
    "players": [
     {
@@ -580,10 +585,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Zámecká l, 431 41 Údlice"
   },
   {
    "name": "Chess Most \"B\"",
+   "cz": 216292,
    "captain": "Vácha Zdeněk",
    "players": [
     {
@@ -751,10 +758,12 @@
      "nat": 1918,
      "fide": 1982
     }
-   ]
+   ],
+   "venue": "Penzion pro seniory, Komořanská 818, Most"
   },
   {
    "name": "DDM OSEK – ŠK Stropník",
+   "cz": 216290,
    "captain": "Kovařík František",
    "players": [
     {
@@ -873,10 +882,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Dolnonádražní 269, 417 05 OSEK"
   },
   {
    "name": "ŠK Magic Žatec \"A\"",
+   "cz": 216287,
    "captain": "Horák Petr",
    "players": [
     {
@@ -1047,10 +1058,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Husitské nám. 557, Žatec"
   },
   {
    "name": "ŠK Postoloprty",
+   "cz": 216284,
    "captain": "Ulrych Radek",
    "players": [
     {
@@ -1229,10 +1242,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Zakladní škola Draguš 581, 43942 Postoloprty"
   },
   {
    "name": "Slovan Jirkov \"A\"",
+   "cz": 216289,
    "captain": "Zmeškal Stanislav",
    "players": [
     {
@@ -1380,10 +1395,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Dům dětí a mládeže PARAPLÍCKO, Školní 1725, 431 11 Jirkov"
   },
   {
    "name": "TJ Klášterec nad Ohří „B“",
+   "cz": 216293,
    "captain": "Bauer Miroslav",
    "players": [
     {
@@ -1518,10 +1535,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Společenský dům Panorama, Budovatelská 486, 43151 Klášterec nad Ohří"
   },
   {
    "name": "TJ Sokol Údlice „D\"",
+   "cz": 216288,
    "captain": "Kalužný Jiří",
    "players": [
     {
@@ -1708,7 +1727,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Zámecká l, 431 41 Údlice"
   }
  ],
  "rounds": [

@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "Sokol Domažlice C",
+   "cz": 216205,
    "captain": "",
    "players": [
     {
@@ -192,10 +193,12 @@
      "nat": 1268,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Domažlice, Benešova 281 sokolovna"
   },
   {
    "name": "TJ Sokol Plzeň Letná B",
+   "cz": 216203,
    "captain": "",
    "players": [
     {
@@ -360,10 +363,12 @@
      "nat": 1305,
      "fide": 1514
     }
-   ]
+   ],
+   "venue": "Plzeň, Republikánská, 22, klubovna nad restaurací Tunel 1. patro"
   },
   {
    "name": "TJ Lokomotiva Plzeň",
+   "cz": 216204,
    "captain": "",
    "players": [
     {
@@ -537,10 +542,12 @@
      "nat": 1443,
      "fide": 1653
     }
-   ]
+   ],
+   "venue": "Plzeň Farského 5"
   },
   {
    "name": "ŠK Tachov",
+   "cz": 216199,
    "captain": "",
    "players": [
     {
@@ -680,10 +687,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Tachov Zahradní 502"
   },
   {
    "name": "ŠK Kdyně",
+   "cz": 216196,
    "captain": "",
    "players": [
     {
@@ -814,10 +823,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Kdyně, Komenského č.p.134 Jídelna ZŠ Vjezd autem z Komenského ulice"
   },
   {
    "name": "Plzeň Košutka",
+   "cz": 216202,
    "captain": "",
    "players": [
     {
@@ -1008,10 +1019,12 @@
      "nat": 1685,
      "fide": 1800
     }
-   ]
+   ],
+   "venue": "Plzeň Karlovarská 126, 1. p. vchod dvore zadní vchod."
   },
   {
    "name": "ŠK 64 Plzeň E",
+   "cz": 216201,
    "captain": "",
    "players": [
     {
@@ -1202,10 +1215,12 @@
      "nat": 1245,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Plzeň Zborovská 18 kon. sál hotelu LIONS"
   },
   {
    "name": "Heřmanova Huť/Nýřany B",
+   "cz": 216206,
    "captain": "",
    "players": [
     {
@@ -1402,10 +1417,12 @@
      "nat": 1162,
      "fide": 1464
     }
-   ]
+   ],
+   "venue": "Nýřany Benešova tř. 745 klubovan TJ Nýřany"
   },
   {
    "name": "ŠK Sokol Klatovy B",
+   "cz": 216195,
    "captain": "",
    "players": [
     {
@@ -1585,10 +1602,12 @@
      "nat": 1465,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Klatovy lút Jaroše 118 sokolovna"
   },
   {
    "name": "ŠK Přeštice",
+   "cz": 216197,
    "captain": "",
    "players": [
     {
@@ -1762,10 +1781,12 @@
      "nat": 1140,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Přeštice, ul. 1.máje, Přeštická svině (hotel Sport) v patře nad resta"
   },
   {
    "name": "TJ Sokol Postřekov",
+   "cz": 216198,
    "captain": "",
    "players": [
     {
@@ -1907,10 +1928,12 @@
      "nat": 1645,
      "fide": null
     }
-   ]
+   ],
+   "venue": ", Postřekov č.p. 346 restaurace Špillarka"
   },
   {
    "name": "ŠK 64 Plzeň D",
+   "cz": 216200,
    "captain": "",
    "players": [
     {
@@ -2083,7 +2106,8 @@
      "nat": 1008,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Plzeň Zborovská 18 kon. sál hotelu LIONS"
   }
  ],
  "rounds": [

@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "TJ ŠO Chrudim B",
+   "cz": 216093,
    "captain": "Němec Bohumil",
    "players": [
     {
@@ -194,10 +195,12 @@
      "nat": 1025,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Čs. Partyzánů 13, Chrudim"
   },
   {
    "name": "ŠO Hlinsko",
+   "cz": 216084,
    "captain": "Ročňák Michal",
    "players": [
     {
@@ -384,10 +387,12 @@
      "nat": 1581,
      "fide": 1732
     }
-   ]
+   ],
+   "venue": "Dům dětí a mládeže, Hlinsko, Adámkova 1116"
   },
   {
    "name": "ŠS Železné hory B",
+   "cz": 216087,
    "captain": "Tyč Miroslav",
    "players": [
     {
@@ -580,10 +585,12 @@
      "nat": 1006,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Výrovský mlýn, Obránců míru 2, Břehy, Přelouč"
   },
   {
    "name": "Rapid Pardubice C",
+   "cz": 216090,
    "captain": "Svítil Radek",
    "players": [
     {
@@ -758,10 +765,12 @@
      "nat": 1000,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Salónek Restaurace Pernštejnka, Odborářů 346, Pardubice II - Polabiny"
   },
   {
    "name": "TJ Sokol Zaječice B",
+   "cz": 216085,
    "captain": "Hájek Jiří",
    "players": [
     {
@@ -928,10 +937,12 @@
      "nat": 1000,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Kulturní dům U Danešů, Zaječice 21"
   },
   {
    "name": "TJ Štefanydes Polička C",
+   "cz": 216092,
    "captain": "Schaffer David",
    "players": [
     {
@@ -1111,10 +1122,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Hostinec U Mrštíků, Eimova 58, Polička."
   },
   {
    "name": "GASCO Pardubice",
+   "cz": 216086,
    "captain": "Kvapil Pavel",
    "players": [
     {
@@ -1276,10 +1289,12 @@
      "nat": 1361,
      "fide": 1533
     }
-   ]
+   ],
+   "venue": "Resturace Rosignano, Ohrazenická 310, Pardubice"
   },
   {
    "name": "Rapid Pardubice B",
+   "cz": 216091,
    "captain": "Kalhous Miroslav",
    "players": [
     {
@@ -1416,10 +1431,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Salónek Restaurace Pernštejnka, Odborářů 346, Pardubice II - Polabiny"
   },
   {
    "name": "TJ CHS Chotěboř B",
+   "cz": 216088,
    "captain": "Jun Rudolf",
    "players": [
     {
@@ -1610,10 +1627,12 @@
      "nat": 1556,
      "fide": 1730
     }
-   ]
+   ],
+   "venue": "Sportovní hala, Tyršova 794, Chotěboř"
   },
   {
    "name": "Bohemia Pardubice B",
+   "cz": 216083,
    "captain": "Halousek Jaroslav",
    "players": [
     {
@@ -1802,10 +1821,12 @@
      "nat": 1399,
      "fide": 1564
     }
-   ]
+   ],
+   "venue": "Štrossova 239, Pardubice, hotel Kristl (zadní vchod)"
   },
   {
    "name": "TJ Štefanydes Polička B",
+   "cz": 216089,
    "captain": "Navrátil Ladislav",
    "players": [
     {
@@ -1992,10 +2013,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Hostinec U Mrštíků, Eimova 58, Polička"
   },
   {
    "name": "Jiskra Heřmanův Městec",
+   "cz": 216094,
    "captain": "Starý Lukáš",
    "players": [
     {
@@ -2138,7 +2161,8 @@
      "nat": 1189,
      "fide": 1406
     }
-   ]
+   ],
+   "venue": "Sportovní hala HM, Jiráskova 916, hrací prostor v suterénu u sauny"
   }
  ],
  "rounds": [

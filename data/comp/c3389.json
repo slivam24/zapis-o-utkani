@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "ŠK Sokol Tišnov \"D\"",
+   "cz": 216625,
    "captain": "",
    "players": [
     {
@@ -163,10 +164,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Střelice \"B\"",
+   "cz": 216620,
    "captain": "",
    "players": [
     {
@@ -298,10 +301,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Sokol Tišnov \"C\"",
+   "cz": 216624,
    "captain": "",
    "players": [
     {
@@ -465,10 +470,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Kuřim \"E\"",
+   "cz": 216621,
    "captain": "",
    "players": [
     {
@@ -653,10 +660,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Lokomotiva Brno \"F\"",
+   "cz": 216623,
    "captain": "",
    "players": [
     {
@@ -742,10 +751,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Slovan Ivančice \"B\"",
+   "cz": 216619,
    "captain": "",
    "players": [
     {
@@ -846,10 +857,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Lokomotiva Brno \"E\"",
+   "cz": 216622,
    "captain": "",
    "players": [
     {
@@ -937,7 +950,8 @@
      "nat": 1053,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

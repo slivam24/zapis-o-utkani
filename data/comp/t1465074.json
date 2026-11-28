@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "SK Podlužan Prušánky",
+   "cz": 216005,
    "captain": "",
    "players": [
     {
@@ -206,10 +207,12 @@
      "nat": 1613,
      "fide": 1776
     }
-   ]
+   ],
+   "venue": "Prušánky 100 (Klubovna pod DPS Prušánky -u obecního úřadu)"
   },
   {
    "name": "A64 PROCLIENT Grygov B",
+   "cz": 216012,
    "captain": "",
    "players": [
     {
@@ -404,10 +407,12 @@
      "nat": 1832,
      "fide": 1955
     }
-   ]
+   ],
+   "venue": "PřF UP, 17. listopadu, Olomouc"
   },
   {
    "name": "Slavia Kroměříž B",
+   "cz": 216007,
    "captain": "",
    "players": [
     {
@@ -546,10 +551,12 @@
      "nat": 1919,
      "fide": 1943
     }
-   ]
+   ],
+   "venue": "Kotojedská 2590/6, Kroměříž (TJ SLAVIA – klub ŠO, 1. pos)"
   },
   {
    "name": "Duras Charlie’s Street Brno B",
+   "cz": 216010,
    "captain": "",
    "players": [
     {
@@ -740,10 +747,12 @@
      "nat": 1990,
      "fide": 2031
     }
-   ]
+   ],
+   "venue": "Sokolovna, Vážného 19, Brno-Řečkovice"
   },
   {
    "name": "ŠO MKS Vyškov",
+   "cz": 216011,
    "captain": "",
    "players": [
     {
@@ -927,10 +936,12 @@
      "nat": 1630,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Besední dům, J.Šoupala 4,Vyškov"
   },
   {
    "name": "ŠK Lokomotiva Brno",
+   "cz": 216015,
    "captain": "",
    "players": [
     {
@@ -1105,10 +1116,12 @@
      "nat": 1773,
      "fide": 1827
     }
-   ]
+   ],
+   "venue": "ZŠ TGM, Havlíčkova 452, Rajhrad"
   },
   {
    "name": "Moravská Slavia Brno B",
+   "cz": 216004,
    "captain": "",
    "players": [
     {
@@ -1290,10 +1303,12 @@
      "nat": 1559,
      "fide": 1656
     }
-   ]
+   ],
+   "venue": "OREL, Hraničky 5, Brno-Bohunice, (tr 6,8, Běloruská)"
   },
   {
    "name": "ŠK Zlín",
+   "cz": 216006,
    "captain": "",
    "players": [
     {
@@ -1488,10 +1503,12 @@
      "nat": 1922,
      "fide": 1941
     }
-   ]
+   ],
+   "venue": "DDM Astra, Kotěrova 4395,Zlín"
   },
   {
    "name": "Šachy Hošťálková B",
+   "cz": 216014,
    "captain": "",
    "players": [
     {
@@ -1688,10 +1705,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Hošťálková 380,(vchod od parkoviště u budovy 569)"
   },
   {
    "name": "SK Prostějov",
+   "cz": 216013,
    "captain": "",
    "players": [
     {
@@ -1849,10 +1868,12 @@
      "nat": 1736,
      "fide": 1842
     }
-   ]
+   ],
+   "venue": "Klubovna, Sportovní 1 (přízemí vpravo, vchod od ten.k.)"
   },
   {
    "name": "VSK Univerzita Brno",
+   "cz": 216009,
    "captain": "",
    "players": [
     {
@@ -2043,10 +2064,12 @@
      "nat": 1407,
      "fide": 1666
     }
-   ]
+   ],
+   "venue": "Ibsenova 2, Brno-Lesná"
   },
   {
    "name": "ŠK Hustopeče",
+   "cz": 216008,
    "captain": "",
    "players": [
     {
@@ -2210,7 +2233,8 @@
      "nat": 1455,
      "fide": null
     }
-   ]
+   ],
+   "venue": "CVČ Pavučina, Šafaříkova 40, Hustopeče"
   }
  ],
  "rounds": [

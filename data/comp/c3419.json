@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "SK Podlužan Prušánky B",
+   "cz": 215759,
    "captain": "",
    "players": [
     {
@@ -201,10 +202,12 @@
      "nat": 1332,
      "fide": null
     }
-   ]
+   ],
+   "venue": "KLubovna DPS1 Prušánky 100 (u obec.úřadu)"
   },
   {
    "name": "ŠK Lokomotiva Brno C",
+   "cz": 215766,
    "captain": "",
    "players": [
     {
@@ -350,10 +353,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "ZŠ TGM Havlíčkova 452, Rajhrad"
   },
   {
    "name": "Jezdci Jundrov D",
+   "cz": 215758,
    "captain": "",
    "players": [
     {
@@ -527,10 +532,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "ÚMČ Brno - Jundrov, Veslařská 56, Brno"
   },
   {
    "name": "ŠK Moravská Slavia Brno D",
+   "cz": 215763,
    "captain": "",
    "players": [
     {
@@ -706,10 +713,12 @@
      "nat": 1011,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Orelna, Hraničky 5 (zadní vchod), Brno - Bohunice"
   },
   {
    "name": "ŠK Veselí nad Mor. B",
+   "cz": 215762,
    "captain": "",
    "players": [
     {
@@ -882,10 +891,12 @@
      "nat": 1264,
      "fide": 1479
     }
-   ]
+   ],
+   "venue": "Orelna, Masarykova 1688, Veselí nad Moravou"
   },
   {
    "name": "ŠK Hodonín B",
+   "cz": 215764,
    "captain": "",
    "players": [
     {
@@ -1049,10 +1060,12 @@
      "nat": 1170,
      "fide": null
     }
-   ]
+   ],
+   "venue": "SK (3.patro), Tyršova 8 - u zimního stadionu, Hodonín"
   },
   {
    "name": "ŠK Merta Slavkov A",
+   "cz": 215761,
    "captain": "",
    "players": [
     {
@@ -1239,10 +1252,12 @@
      "nat": 1072,
      "fide": null
     }
-   ]
+   ],
+   "venue": "ZŠ, Komenského nám 495 (zadní vchod), Slavkov u Brna"
   },
   {
    "name": "ŠO MKS Vyškov B",
+   "cz": 215760,
    "captain": "",
    "players": [
     {
@@ -1415,10 +1430,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Besední dům, Jana Šoupala 4, Vyškov"
   },
   {
    "name": "TJ Sokol Velké Němčice",
+   "cz": 215765,
    "captain": "",
    "players": [
     {
@@ -1579,10 +1596,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Kulturní dům, Městečko 55 Velké Němčice"
   },
   {
    "name": "ŠK Hustopeče B",
+   "cz": 215767,
    "captain": "",
    "players": [
     {
@@ -1757,7 +1776,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "CVČ Pavučina, Šafaříkova 40, HUstopeče"
   }
  ],
  "rounds": [

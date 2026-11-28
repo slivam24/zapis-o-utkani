@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "KOBEX Říčany 1925 D",
+   "cz": 211454,
    "captain": "",
    "players": [
     {
@@ -212,10 +213,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "KC Labuť, 17. Listopadu 214, 251 01 Říčany"
   },
   {
    "name": "JOLY Lysá nad Labem C",
+   "cz": 211457,
    "captain": "",
    "players": [
     {
@@ -404,10 +407,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Sokol Buštěhrad B",
+   "cz": 211461,
    "captain": "",
    "players": [
     {
@@ -556,10 +561,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "SOKOLOVNA Buštěhrad, Sokolská ul."
   },
   {
    "name": "Šachy Polabí A",
+   "cz": 211456,
    "captain": "",
    "players": [
     {
@@ -738,10 +745,12 @@
      "nat": 1050,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ KRALUPY B",
+   "cz": 211459,
    "captain": "",
    "players": [
     {
@@ -902,10 +911,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK KDJS Sedlčany",
+   "cz": 211460,
    "captain": "",
    "players": [
     {
@@ -1035,10 +1046,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Klubovna Kulturního domu Josefa Suka v Sedlčanech"
   },
   {
    "name": "TJ Neratovice",
+   "cz": 211458,
    "captain": "",
    "players": [
     {
@@ -1190,10 +1203,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "KOBEX Říčany 1925 E",
+   "cz": 211455,
    "captain": "",
    "players": [
     {
@@ -1387,7 +1402,8 @@
      "nat": 1048,
      "fide": null
     }
-   ]
+   ],
+   "venue": "KC Labuť, 17. Listopadu 214, 251 01 Říčany"
   }
  ],
  "rounds": [

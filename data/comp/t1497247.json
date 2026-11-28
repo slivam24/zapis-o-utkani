@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "ŠK Česká Lípa ''C''",
+   "cz": 216227,
    "captain": "Grindler Václav",
    "players": [
     {
@@ -112,10 +113,12 @@
      "nat": 1317,
      "fide": 1481
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Stráž pod Ralskem",
+   "cz": 216224,
    "captain": "Malec Jan",
    "players": [
     {
@@ -221,10 +224,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Krásná Lípa",
+   "cz": 216228,
    "captain": "Průdek Jiří",
    "players": [
     {
@@ -325,10 +330,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Lokomotiva Liberec ''B''",
+   "cz": 216223,
    "captain": "",
    "players": [
     {
@@ -456,10 +463,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Česká Lípa ''D''",
+   "cz": 216226,
    "captain": "",
    "players": [
     {
@@ -601,10 +610,12 @@
      "nat": 1358,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Desko Liberec ''D''",
+   "cz": 216222,
    "captain": "Pierowski Jakub",
    "players": [
     {
@@ -744,10 +755,12 @@
      "nat": 1124,
      "fide": 1421
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "1. Novoborský ŠK ''C''",
+   "cz": 216225,
    "captain": "Koudelka Miloš",
    "players": [
     {
@@ -937,7 +950,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

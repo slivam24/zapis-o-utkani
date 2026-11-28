@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "Stochov A",
+   "cz": 216688,
    "captain": "",
    "players": [
     {
@@ -201,10 +202,12 @@
      "nat": 1000,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Caissa Roztoky B",
+   "cz": 216694,
    "captain": "",
    "players": [
     {
@@ -388,10 +391,12 @@
      "nat": 1000,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "SK DDM Slaný",
+   "cz": 216692,
    "captain": "",
    "players": [
     {
@@ -570,10 +575,12 @@
      "nat": 1000,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Rakovník B",
+   "cz": 216695,
    "captain": "",
    "players": [
     {
@@ -737,10 +744,12 @@
      "nat": 1437,
      "fide": 1665
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Kladno A",
+   "cz": 216693,
    "captain": "",
    "players": [
     {
@@ -907,10 +916,12 @@
      "nat": 1067,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Sokol Buštěhrad B",
+   "cz": 216689,
    "captain": "",
    "players": [
     {
@@ -1095,10 +1106,12 @@
      "nat": 1016,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠO TP NOVA Kladno A",
+   "cz": 216696,
    "captain": "",
    "players": [
     {
@@ -1272,10 +1285,12 @@
      "nat": 1290,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "MŠK Libčice nad Vltavou A",
+   "cz": 216690,
    "captain": "",
    "players": [
     {
@@ -1457,10 +1472,12 @@
      "nat": 1389,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Český lev Kolešovice C",
+   "cz": 216691,
    "captain": "",
    "players": [
     {
@@ -1649,10 +1666,12 @@
      "nat": 1505,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Kralupy nad Vltavou D",
+   "cz": 216687,
    "captain": "",
    "players": [
     {
@@ -1835,7 +1854,8 @@
      "nat": 1351,
      "fide": 1530
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

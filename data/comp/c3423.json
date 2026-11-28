@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "Tatran Litovel B",
+   "cz": 215755,
    "captain": "",
    "players": [
     {
@@ -201,10 +202,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "U stadionu 1437/1b, 78401 Litovel"
   },
   {
    "name": "ŠK ZŠ Hrabišín",
+   "cz": 215750,
    "captain": "Kamler Zdeněk",
    "players": [
     {
@@ -359,10 +362,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "ZŠ Hrabišín, 788 04 Hrabišín 139"
   },
   {
    "name": "ŠK Bohuňovice A",
+   "cz": 215756,
    "captain": "Telařík Radek",
    "players": [
     {
@@ -483,10 +488,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Klub setkávání Bohuňovice, 6. května 36, Bohuňovice"
   },
   {
    "name": "ŠK Velké Losiny B",
+   "cz": 215757,
    "captain": "Polách Ladislav",
    "players": [
     {
@@ -643,10 +650,12 @@
      "nat": 1280,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Dům s chráněnými byty, Rudé armády 322, Velké Losiny"
   },
   {
    "name": "ŠK 1921 Zábřeh B",
+   "cz": 215753,
    "captain": "Blaha Marek",
    "players": [
     {
@@ -840,10 +849,12 @@
      "nat": 1452,
      "fide": 1574
     }
-   ]
+   ],
+   "venue": "Katolický dům, Sušilova 1285, 78901 Zábřeh"
   },
   {
    "name": "ŠK Bohuňovice B",
+   "cz": 215752,
    "captain": "Telařík Mojmír",
    "players": [
     {
@@ -962,10 +973,12 @@
      "nat": 1347,
      "fide": 1571
     }
-   ]
+   ],
+   "venue": "Klub setkávání Bohuňovice, 6. května 36, Bohuňovice"
   },
   {
    "name": "ŠK Loštice",
+   "cz": 215751,
    "captain": "Kofránek David",
    "players": [
     {
@@ -1125,10 +1138,12 @@
      "nat": 1343,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Kulturní dům, Hradská 1, Loštice"
   },
   {
    "name": "ŠK Mohelnice",
+   "cz": 215754,
    "captain": "Urbášek Oleg",
    "players": [
     {
@@ -1292,7 +1307,8 @@
      "nat": 1382,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Dům dětí a mládeže Magnet, Spartakiádní 8, Mohelnice"
   }
  ],
  "rounds": [

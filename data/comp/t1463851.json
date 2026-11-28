@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "Jezdci Jundrov \"B\"",
+   "cz": 215971,
    "captain": "Šípek Michal",
    "players": [
     {
@@ -204,10 +205,12 @@
      "nat": 1651,
      "fide": 1815
     }
-   ]
+   ],
+   "venue": "ÚMČ Brno-Jundrov, Veslařská 56, Brno"
   },
   {
    "name": "ŠK Vysoké Mýto",
+   "cz": 215982,
    "captain": "Kosek Jiří",
    "players": [
     {
@@ -395,10 +398,12 @@
      "nat": 1849,
      "fide": 1902
     }
-   ]
+   ],
+   "venue": "SPORTCENTRUM, Vysoké Mýto, Jiráskova 111"
   },
   {
    "name": "ŠO Gordic Jihlava",
+   "cz": 215976,
    "captain": "Seidl Štěpán",
    "players": [
     {
@@ -589,10 +594,12 @@
      "nat": 1856,
      "fide": 1904
     }
-   ]
+   ],
+   "venue": "DDM Jihlava, Brněnská 670/46"
   },
   {
    "name": "ŠŠPM Lipky HK \"B\"",
+   "cz": 215975,
    "captain": "Dedek Jan",
    "players": [
     {
@@ -791,10 +798,12 @@
      "nat": 1801,
      "fide": 1873
     }
-   ]
+   ],
+   "venue": "Tylovo nábřeží 690, Hradec Králové, ZŠ Josefa Gočára, vchod C"
   },
   {
    "name": "Panda Rychnov nad Kněžnou",
+   "cz": 215972,
    "captain": "Horák Jan",
    "players": [
     {
@@ -993,10 +1002,12 @@
      "nat": 1890,
      "fide": 1932
     }
-   ]
+   ],
+   "venue": "Sportovní hala R. Šebrleho, G F. M. Pelcla"
   },
   {
    "name": "TJ Lanškroun",
+   "cz": 215979,
    "captain": "Kupsa Matěj",
    "players": [
     {
@@ -1189,10 +1200,12 @@
      "nat": 1381,
      "fide": 1591
     }
-   ]
+   ],
+   "venue": "dělnický dům, Dobrovského 41 Lanškroun"
   },
   {
    "name": "2222 ŠK Polabiny \"B\"",
+   "cz": 215981,
    "captain": "Bujnoch Radek",
    "players": [
     {
@@ -1369,10 +1382,12 @@
      "nat": 1830,
      "fide": 1917
     }
-   ]
+   ],
+   "venue": "restaurace Rosignano, Ohrazenická 310, Pardubice"
   },
   {
    "name": "ŠK Kuřim",
+   "cz": 215980,
    "captain": "Majer Jiří",
    "players": [
     {
@@ -1558,10 +1573,12 @@
      "nat": 1822,
      "fide": 1855
     }
-   ]
+   ],
+   "venue": "klub Kotelna, Papkova 1012 Kuřim"
   },
   {
    "name": "ŠK Bohemia Pardubice",
+   "cz": 215978,
    "captain": "Horáček Michal",
    "players": [
     {
@@ -1758,10 +1775,12 @@
      "nat": 1618,
      "fide": 1840
     }
-   ]
+   ],
+   "venue": "hotel Kristl, Štrossova 239 Pardubice, zadní vchod"
   },
   {
    "name": "TJ Náměšť nad Oslavou",
+   "cz": 215974,
    "captain": "Kratochvíl Vít",
    "players": [
     {
@@ -1909,10 +1928,12 @@
      "nat": 1456,
      "fide": 1610
     }
-   ]
+   ],
+   "venue": "Husova 947, Náměšť nad Oslavou, penzion"
   },
   {
    "name": "Caissa Třebíč",
+   "cz": 215973,
    "captain": "Halbrštat Petr",
    "players": [
     {
@@ -2106,10 +2127,12 @@
      "nat": 1372,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Komunitní centrum Moravia, Smrtelná 389/6 Třebíč"
   },
   {
    "name": "ŠK Ústí nad Orlicí",
+   "cz": 215977,
    "captain": "Šmajzr Martin",
    "players": [
     {
@@ -2304,7 +2327,8 @@
      "nat": 1799,
      "fide": 1894
     }
-   ]
+   ],
+   "venue": "SBD UO, Letohradská 1359, Ústí nad Orlicí"
   }
  ],
  "rounds": [

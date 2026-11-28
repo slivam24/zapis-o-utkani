@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "DM Klášterského A",
+   "cz": 216330,
    "captain": "",
    "players": [
     {
@@ -169,10 +170,12 @@
      "nat": 1736,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "VSK Univerzita Brno C",
+   "cz": 216333,
    "captain": "",
    "players": [
     {
@@ -358,10 +361,12 @@
      "nat": 1342,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Duras Charles Street Brno E",
+   "cz": 216334,
    "captain": "",
    "players": [
     {
@@ -510,10 +515,12 @@
      "nat": 1175,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Lokomotiva Brno G",
+   "cz": 216331,
    "captain": "",
    "players": [
     {
@@ -643,10 +650,12 @@
      "nat": 1053,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Šachy Bowling Brno",
+   "cz": 216332,
    "captain": "",
    "players": [
     {
@@ -841,10 +850,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Bystrc Oilers",
+   "cz": 216337,
    "captain": "",
    "players": [
     {
@@ -997,10 +1008,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Salesiáni Žabiny B",
+   "cz": 216339,
    "captain": "",
    "players": [
     {
@@ -1148,10 +1161,12 @@
      "nat": 1599,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "DM Klášterského B",
+   "cz": 216336,
    "captain": "",
    "players": [
     {
@@ -1343,10 +1358,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Lokomotiva Brno H",
+   "cz": 216338,
    "captain": "",
    "players": [
     {
@@ -1449,10 +1466,12 @@
      "nat": 1478,
      "fide": 1645
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK 64 Brno",
+   "cz": 216335,
    "captain": "",
    "players": [
     {
@@ -1637,10 +1656,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Moravská Slavia E",
+   "cz": 216329,
    "captain": "",
    "players": [
     {
@@ -1759,7 +1780,8 @@
      "nat": 1500,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

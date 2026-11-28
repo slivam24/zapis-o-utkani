@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "BŠŠ Frýdek - Místek D",
+   "cz": 215792,
    "captain": "",
    "players": [
     {
@@ -200,10 +201,12 @@
      "nat": 1294,
      "fide": 1497
     }
-   ]
+   ],
+   "venue": "SVČ Klíč, Pionýrů 767"
   },
   {
    "name": "BŠŠ Frýdek - Místek E",
+   "cz": 215783,
    "captain": "",
    "players": [
     {
@@ -392,10 +395,12 @@
      "nat": 1378,
      "fide": 1569
     }
-   ]
+   ],
+   "venue": "SVČ Klíč, Pionýrů 767"
   },
   {
    "name": "ŠK ASK Tatra Kopřivnice A",
+   "cz": 215791,
    "captain": "Koleček Jiří",
    "players": [
     {
@@ -559,10 +564,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Dům dětí a mládeže, Kpt. Jaroše 1077"
   },
   {
    "name": "Interchess",
+   "cz": 215785,
    "captain": "Zemková Klára",
    "players": [
     {
@@ -758,10 +765,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Palackého 134. Frýdek-Místek, 738 01, klubovna č.6"
   },
   {
    "name": "TJ Sokol Dobrá B",
+   "cz": 215788,
    "captain": "Filip Tomáš",
    "players": [
     {
@@ -952,10 +961,12 @@
      "nat": 1591,
      "fide": 1742
     }
-   ]
+   ],
+   "venue": "Budova sboru dobrovolných hasičů Dobrá. v centru obce (2.patro)"
   },
   {
    "name": "TJ Mořkov A",
+   "cz": 215789,
    "captain": "",
    "players": [
     {
@@ -1137,10 +1148,12 @@
      "nat": 1129,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Společenský Dům v Mořkově, Horní 10 ( ve středu obce)"
   },
   {
    "name": "ŠK ASK Tatra Kopřivnice B",
+   "cz": 215786,
    "captain": "Kozohorský Jan",
    "players": [
     {
@@ -1337,10 +1350,12 @@
      "nat": 1273,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Zimní stadion Kopřivnice, Masarykovo náměstí 540"
   },
   {
    "name": "ŠK Ostrava-Jih B",
+   "cz": 215790,
    "captain": "Skočková Kateřina",
    "players": [
     {
@@ -1517,10 +1532,12 @@
      "nat": 1601,
      "fide": 1773
     }
-   ]
+   ],
+   "venue": "SPORTbar CORPUS, Lužická 530/2"
   },
   {
    "name": "TJ Ostrava C",
+   "cz": 215787,
    "captain": "",
    "players": [
     {
@@ -1680,10 +1697,12 @@
      "nat": 1088,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sportovní areál TJ Ostrava, Varenská"
   },
   {
    "name": "ŠK Hošťálkovice",
+   "cz": 215784,
    "captain": "Kolařík Tomáš",
    "players": [
     {
@@ -1826,7 +1845,8 @@
      "nat": 1599,
      "fide": 1712
     }
-   ]
+   ],
+   "venue": "Za Hřbitovem 120 (kulturní dům )"
   }
  ],
  "rounds": [

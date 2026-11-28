@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "Jince A",
+   "cz": 215712,
    "captain": "Horký Jiří",
    "players": [
     {
@@ -103,10 +104,12 @@
      "nat": 1151,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Příbram - Baník D",
+   "cz": 215716,
    "captain": "Beneš Karel",
    "players": [
     {
@@ -232,10 +235,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Voznice",
+   "cz": 215717,
    "captain": "Mach Miroslav",
    "players": [
     {
@@ -390,10 +395,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Zdice C",
+   "cz": 215713,
    "captain": "",
    "players": [
     {
@@ -544,10 +551,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Příbram - Baník C",
+   "cz": 215711,
    "captain": "Novák Milan",
    "players": [
     {
@@ -675,10 +684,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Medvědi Zvole B",
+   "cz": 215714,
    "captain": "Jungmann Martin",
    "players": [
     {
@@ -831,10 +842,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Kovohutě Příbram",
+   "cz": 215709,
    "captain": "Kafura Juraj",
    "players": [
     {
@@ -913,10 +926,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Jince C",
+   "cz": 215715,
    "captain": "Maršálek Miroslav",
    "players": [
     {
@@ -1024,10 +1039,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Jince B",
+   "cz": 215710,
    "captain": "Vošický David",
    "players": [
     {
@@ -1126,7 +1143,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

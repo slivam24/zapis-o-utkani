@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "BŠŠ Frýdek-Místek B",
+   "cz": 216596,
    "captain": "",
    "players": [
     {
@@ -202,10 +203,12 @@
      "nat": 1934,
      "fide": 1955
     }
-   ]
+   ],
+   "venue": "SVČ Klíč, Pionýrů 767, Frýdek-Místek"
   },
   {
    "name": "ŠŠPM Lipky HK",
+   "cz": 216591,
    "captain": "",
    "players": [
     {
@@ -398,10 +401,12 @@
      "nat": 1897,
      "fide": 1943
     }
-   ]
+   ],
+   "venue": "ZŠ Josefa Gočára, vchod C, Tylovo nábřeží 690, HK"
   },
   {
    "name": "TJ Vlčnov",
+   "cz": 216592,
    "captain": "",
    "players": [
     {
@@ -600,10 +605,12 @@
      "nat": 1548,
      "fide": 1604
     }
-   ]
+   ],
+   "venue": "KSK Vlčnov 186"
   },
   {
    "name": "TJ Sokol Dobrá",
+   "cz": 216599,
    "captain": "",
    "players": [
     {
@@ -800,10 +807,12 @@
      "nat": 1591,
      "fide": 1742
     }
-   ]
+   ],
+   "venue": "Budova SDH, Dobrá 31"
   },
   {
    "name": "SK Slavia Orlová",
+   "cz": 216593,
    "captain": "",
    "players": [
     {
@@ -958,10 +967,12 @@
      "nat": 1887,
      "fide": 1791
     }
-   ]
+   ],
+   "venue": "Herna SK Slavia Orlová, Na Stuchlíkovci 340"
   },
   {
    "name": "TJ TŽ Třinec",
+   "cz": 216594,
    "captain": "",
    "players": [
     {
@@ -1132,10 +1143,12 @@
      "nat": 1601,
      "fide": 1789
     }
-   ]
+   ],
+   "venue": "KD TRISIA, náměstí Svobody 526, Třinec"
   },
   {
    "name": "A64 PROCLIENT Grygov",
+   "cz": 216598,
    "captain": "",
    "players": [
     {
@@ -1326,10 +1339,12 @@
      "nat": 1832,
      "fide": 1955
     }
-   ]
+   ],
+   "venue": "Přírodovědecká fakulta UP, 17. listopadu, Olomouc"
   },
   {
    "name": "ŠK Lípa",
+   "cz": 216590,
    "captain": "",
    "players": [
     {
@@ -1524,10 +1539,12 @@
      "nat": 1792,
      "fide": 1898
     }
-   ]
+   ],
+   "venue": "Ortex, Reslova 935/3, Hradec Králové"
   },
   {
    "name": "ŠK Staré Město",
+   "cz": 216600,
    "captain": "",
    "players": [
     {
@@ -1720,10 +1737,12 @@
      "nat": 1938,
      "fide": 1970
     }
-   ]
+   ],
+   "venue": "Společensko-kulturní centrum, Brněnská 1249, SM"
   },
   {
    "name": "Šachy Hošťálková",
+   "cz": 216597,
    "captain": "",
    "players": [
     {
@@ -1907,10 +1926,12 @@
      "nat": 1706,
      "fide": 1788
     }
-   ]
+   ],
+   "venue": "Hošťálková 380 - vchod od parkoviště u budovy 569"
   },
   {
    "name": "Jezdci Jundrov",
+   "cz": 216601,
    "captain": "",
    "players": [
     {
@@ -2099,10 +2120,12 @@
      "nat": 1994,
      "fide": 2016
     }
-   ]
+   ],
+   "venue": "ÚMČ Brno-Jundrov, Veslařská 56, Brno"
   },
   {
    "name": "Duras Charlie’s Street Brno",
+   "cz": 216595,
    "captain": "",
    "players": [
     {
@@ -2297,7 +2320,8 @@
      "nat": 1785,
      "fide": 1877
     }
-   ]
+   ],
+   "venue": "Bowling Brno, Líšeňská 4515/80, Brno"
   }
  ],
  "rounds": [

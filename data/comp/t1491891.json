@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "Jezdci Jundrov",
+   "cz": 211124,
    "captain": "",
    "players": [
     {
@@ -174,10 +175,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Na Veslařské 56, Brno-Jundrov"
   },
   {
    "name": "BŠŠ Frýdek-Místek \"B\"",
+   "cz": 211121,
    "captain": "",
    "players": [
     {
@@ -394,10 +397,12 @@
      "nat": 1076,
      "fide": null
     }
-   ]
+   ],
+   "venue": "SVČ Klíč, Pionýrů 767, Frýdek-Místek"
   },
   {
    "name": "A64 Grygov",
+   "cz": 211127,
    "captain": "",
    "players": [
     {
@@ -615,10 +620,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Přírodovědecká fakulta UP, 17. listopadu, Olomouc"
   },
   {
    "name": "ŠK Duras Brno \"A\"",
+   "cz": 211128,
    "captain": "",
    "players": [
     {
@@ -817,10 +824,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Vážného 2/19, Brno"
   },
   {
    "name": "ŠK Slavoj Poruba",
+   "cz": 211129,
    "captain": "",
    "players": [
     {
@@ -1036,10 +1045,12 @@
      "nat": 1479,
      "fide": 1512
     }
-   ]
+   ],
+   "venue": "CVČ Vietnamská 1541, Ostrava-Poruba"
   },
   {
    "name": "Šachy Krnov \"B\"",
+   "cz": 211122,
    "captain": "",
    "players": [
     {
@@ -1250,10 +1261,12 @@
      "nat": 1058,
      "fide": null
     }
-   ]
+   ],
+   "venue": "ZŠ Krnov, Janáčkovo náměstí 1970/17, Krnov"
   },
   {
    "name": "TJ TŽ Třinec",
+   "cz": 211125,
    "captain": "",
    "players": [
     {
@@ -1450,10 +1463,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Kulturní dům Trisia, nám. Svobody 526, Třinec"
   },
   {
    "name": "Šachy Vyškov",
+   "cz": 211130,
    "captain": "",
    "players": [
     {
@@ -1666,10 +1681,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Nosálkovská 227/121, Vyškov"
   },
   {
    "name": "ŠK Jeseník",
+   "cz": 211123,
    "captain": "",
    "players": [
     {
@@ -1812,10 +1829,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "klubovna ŠK Jeseník, Palackého 13/11, Jeseník"
   },
   {
    "name": "ŠK Staré Město \"B\"",
+   "cz": 211131,
    "captain": "",
    "players": [
     {
@@ -1962,10 +1981,12 @@
      "nat": 1045,
      "fide": 1401
     }
-   ]
+   ],
+   "venue": "Brněnská 1249, Staré Město"
   },
   {
    "name": "ŠK Duras Brno \"B\"",
+   "cz": 211120,
    "captain": "",
    "players": [
     {
@@ -2165,10 +2186,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Vážného 2/19, Brno"
   },
   {
    "name": "BŠŠ Frýdek-Místek \"C\"",
+   "cz": 211126,
    "captain": "",
    "players": [
     {
@@ -2389,7 +2412,8 @@
      "nat": 1086,
      "fide": 1472
     }
-   ]
+   ],
+   "venue": "SVČ Klíč, Pionýrů 767, Frýdek-Místek"
   }
  ],
  "rounds": [

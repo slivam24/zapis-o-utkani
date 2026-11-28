@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "Sportovní klub Brumov-Bylnice",
+   "cz": 216082,
    "captain": "Častulík Jiří",
    "players": [
     {
@@ -197,10 +198,12 @@
      "nat": 1540,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Šachový klub Vsetín C",
+   "cz": 216078,
    "captain": "Mocek Tadeáš",
    "players": [
     {
@@ -366,10 +369,12 @@
      "nat": 1456,
      "fide": 1627
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Gumárny Zubří",
+   "cz": 216072,
    "captain": "Kubín Petr",
    "players": [
     {
@@ -547,10 +552,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Bystřice pod Hostýnem",
+   "cz": 216074,
    "captain": "Myška Dušan",
    "players": [
     {
@@ -719,10 +726,12 @@
      "nat": 1364,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Holešov",
+   "cz": 216073,
    "captain": "Zajíček Radek",
    "players": [
     {
@@ -892,10 +901,12 @@
      "nat": 1455,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠO TJ Sokol Lužná",
+   "cz": 216077,
    "captain": "Papšík Miroslav",
    "players": [
     {
@@ -1096,10 +1107,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Sokol Valašská Bystřice C",
+   "cz": 216080,
    "captain": "Růčka Petr",
    "players": [
     {
@@ -1285,10 +1298,12 @@
      "nat": 1144,
      "fide": 1473
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Sokol Bystřička",
+   "cz": 216081,
    "captain": "Hurta Karel",
    "players": [
     {
@@ -1463,10 +1478,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Sokol Valašská Bystřice B",
+   "cz": 216075,
    "captain": "Hutyra Tomáš",
    "players": [
     {
@@ -1623,10 +1640,12 @@
      "nat": 1112,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Valašské Meziříčí",
+   "cz": 216076,
    "captain": "Gvozdek Jiří",
    "players": [
     {
@@ -1806,10 +1825,12 @@
      "nat": 1248,
      "fide": 1675
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK DDM Slavičín",
+   "cz": 216079,
    "captain": "Janček Milan",
    "players": [
     {
@@ -1964,7 +1985,8 @@
      "nat": 1142,
      "fide": 1499
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

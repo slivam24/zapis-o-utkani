@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "ŠK Letovice B",
+   "cz": 215859,
    "captain": "",
    "players": [
     {
@@ -169,10 +170,12 @@
      "nat": 1187,
      "fide": 1479
     }
-   ]
+   ],
+   "venue": "Tyršova 27, Letovice (Klubovna AFK)"
   },
   {
    "name": "ŠK GARDE Lipovec B",
+   "cz": 215853,
    "captain": "",
    "players": [
     {
@@ -361,10 +364,12 @@
      "nat": 1277,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Lipovec 318 (Dům Služeb-vchod ČP)"
   },
   {
    "name": "Sokol Rudice",
+   "cz": 215860,
    "captain": "",
    "players": [
     {
@@ -537,10 +542,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Rudice 38 (Děl.dům-spol.místnost)"
   },
   {
    "name": "ŠK Boskovice",
+   "cz": 215857,
    "captain": "",
    "players": [
     {
@@ -705,10 +712,12 @@
      "nat": 1005,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Kpt. Jaroše 107/15, Boskovice (Restaurace u Pultu)"
   },
   {
    "name": "ŠK Sokol Tišnov A",
+   "cz": 215855,
    "captain": "",
    "players": [
     {
@@ -861,10 +870,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Drbalova 274, Tišnov"
   },
   {
    "name": "TJ Sloup",
+   "cz": 215858,
    "captain": "",
    "players": [
     {
@@ -1047,10 +1058,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Úřad Městyse, Sloup 1"
   },
   {
    "name": "ASK Blansko",
+   "cz": 215854,
    "captain": "",
    "players": [
     {
@@ -1224,10 +1237,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Mlýnská 1297/19, Blansko"
   },
   {
    "name": "ŠK Kunštát",
+   "cz": 215852,
    "captain": "",
    "players": [
     {
@@ -1391,10 +1406,12 @@
      "nat": 1426,
      "fide": null
     }
-   ]
+   ],
+   "venue": "nám.Kr.Jiřího 107, Kunštát (MÚ-velká zas.)"
   },
   {
    "name": "ŠK Jevíčko",
+   "cz": 215851,
    "captain": "",
    "players": [
     {
@@ -1587,10 +1604,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "U Zámečku 451, Jevíčko (Zámek)"
   },
   {
    "name": "ŠK Sokol Tišnov B",
+   "cz": 215856,
    "captain": "",
    "players": [
     {
@@ -1730,7 +1749,8 @@
      "nat": 1435,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Drbalova 274, Tišnov"
   }
  ],
  "rounds": [

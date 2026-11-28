@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "SK Brumov-Bylnice B",
+   "cz": 216753,
    "captain": "Jedlička František",
    "players": [
     {
@@ -195,10 +196,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Valašské Klobouky",
+   "cz": 216750,
    "captain": "Haboň Martin",
    "players": [
     {
@@ -279,10 +282,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Sokol Vizovice",
+   "cz": 216751,
    "captain": "",
    "players": [
     {
@@ -399,10 +404,12 @@
      "nat": 1557,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Fatra Slavia Napajedla B",
+   "cz": 216749,
    "captain": "Sedláček Roman",
    "players": [
     {
@@ -492,10 +499,12 @@
      "nat": 1651,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "SK Horní Lhota",
+   "cz": 216754,
    "captain": "",
    "players": [
     {
@@ -624,10 +633,12 @@
      "nat": 1497,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Zlín-Malenovice C",
+   "cz": 216752,
    "captain": "",
    "players": [
     {
@@ -756,10 +767,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Fatra Slavia Napajedla C",
+   "cz": 216748,
    "captain": "Galus Zdenek",
    "players": [
     {
@@ -874,7 +887,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

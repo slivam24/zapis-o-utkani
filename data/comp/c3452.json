@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "Šachový klub Lípa B",
+   "cz": 216437,
    "captain": "",
    "players": [
     {
@@ -201,10 +202,12 @@
      "nat": 1983,
      "fide": 2002
     }
-   ]
+   ],
+   "venue": "HK, Škroupova 726/13, hostinec Malý Růžek"
   },
   {
    "name": "Panda Rychnov nad Kněžnou B",
+   "cz": 216441,
    "captain": "",
    "players": [
     {
@@ -393,10 +396,12 @@
      "nat": 1511,
      "fide": 1654
     }
-   ]
+   ],
+   "venue": "RK, Hrdinů odboje 36, Sportovní hala R. Šebrleho"
   },
   {
    "name": "ŠK Lomnice nad Popelkou",
+   "cz": 216440,
    "captain": "",
    "players": [
     {
@@ -578,10 +583,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Lomnice nad Popelkou, Komenského 1037, Sluníčko"
   },
   {
    "name": "ŠŠPM Lipky HK C",
+   "cz": 216444,
    "captain": "",
    "players": [
     {
@@ -772,10 +779,12 @@
      "nat": 1554,
      "fide": 1692
     }
-   ]
+   ],
+   "venue": "HK, Tylovo nábřeží 1140, ZŠ Josefa Gočára"
   },
   {
    "name": "Šachový klub Lípa C - ORTEX HK",
+   "cz": 216443,
    "captain": "",
    "players": [
     {
@@ -966,10 +975,12 @@
      "nat": 1662,
      "fide": 1776
     }
-   ]
+   ],
+   "venue": "HK, Škroupova 726/13, hostinec Malý Růžek"
   },
   {
    "name": "TJ Hronov",
+   "cz": 216442,
    "captain": "",
    "players": [
     {
@@ -1162,10 +1173,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Hronov, Jiřího z Poděbrad, ZŠ"
   },
   {
    "name": "TJ Náchod",
+   "cz": 216446,
    "captain": "",
    "players": [
     {
@@ -1323,10 +1336,12 @@
      "nat": 1363,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Náchod, Hurdálkova 2171, Spolkový dům"
   },
   {
    "name": "TJ Jiskra Jaroměř",
+   "cz": 216438,
    "captain": "",
    "players": [
     {
@@ -1515,10 +1530,12 @@
      "nat": 1732,
      "fide": 1833
     }
-   ]
+   ],
+   "venue": "Jaroměř, Národní 83, klubovna PS Pohoda"
   },
   {
    "name": "TJ Jiskra Hořice v Podkrkonoší",
+   "cz": 216447,
    "captain": "",
    "players": [
     {
@@ -1705,10 +1722,12 @@
      "nat": 1284,
      "fide": 1590
     }
-   ]
+   ],
+   "venue": "Hořice v Podkrkonoší, Erbenova 1081, Sokolovna"
   },
   {
    "name": "Šachový klub Jičín",
+   "cz": 216439,
    "captain": "",
    "players": [
     {
@@ -1901,10 +1920,12 @@
      "nat": 1211,
      "fide": 1616
     }
-   ]
+   ],
+   "venue": "JC, Žižkovo nám. 18, zas. m. MÚ"
   },
   {
    "name": "TJ Tatran Hostinné",
+   "cz": 216448,
    "captain": "",
    "players": [
     {
@@ -2099,10 +2120,12 @@
      "nat": 1443,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Hostinné, Horská 166, Národní dům, klubovna"
   },
   {
    "name": "Slovan Broumov",
+   "cz": 216445,
    "captain": "",
    "players": [
     {
@@ -2246,7 +2269,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Broumov, St. Opočenského, klubovna pod šk. jídelnou"
   }
  ],
  "rounds": [

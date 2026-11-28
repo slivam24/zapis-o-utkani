@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "ŠK Staré Město C",
+   "cz": 216119,
    "captain": "Sháněl Jaroslav",
    "players": [
     {
@@ -176,10 +177,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Vlčnov C",
+   "cz": 216122,
    "captain": "Podškubka Ondřej",
    "players": [
     {
@@ -374,10 +377,12 @@
      "nat": 1367,
      "fide": 1713
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "SK Boršice B",
+   "cz": 216126,
    "captain": "Volčík Stanislav",
    "players": [
     {
@@ -563,10 +568,12 @@
      "nat": 1651,
      "fide": 1815
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Slavia Kroměříž D",
+   "cz": 216127,
    "captain": "Trávníček Jaroslav",
    "players": [
     {
@@ -736,10 +743,12 @@
      "nat": 1397,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK RAPOS Sulimov",
+   "cz": 216124,
    "captain": "Daněk Libor",
    "players": [
     {
@@ -921,10 +930,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Šachový oddíl Mařatice",
+   "cz": 216125,
    "captain": "Plachý Stanislav",
    "players": [
     {
@@ -1108,10 +1119,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Dolňácko B",
+   "cz": 216130,
    "captain": "Horňák Ondřej",
    "players": [
     {
@@ -1308,10 +1321,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Zlín C",
+   "cz": 216121,
    "captain": "Šimek Viktor",
    "players": [
     {
@@ -1485,10 +1500,12 @@
      "nat": 1815,
      "fide": 1914
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠO SK Pozlovice",
+   "cz": 216129,
    "captain": "Hlavička Roman",
    "players": [
     {
@@ -1674,10 +1691,12 @@
      "nat": 1493,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Staré Město D",
+   "cz": 216120,
    "captain": "Trubačík Pavel",
    "players": [
     {
@@ -1857,10 +1876,12 @@
      "nat": 1302,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Zlín-Malenovice B",
+   "cz": 216123,
    "captain": "Samohýl Adam",
    "players": [
     {
@@ -2042,10 +2063,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Bojkovice",
+   "cz": 216128,
    "captain": "Prchla Jaromír",
    "players": [
     {
@@ -2187,7 +2210,8 @@
      "nat": 1440,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

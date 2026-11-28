@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { toDoc, parseRegionPage, parseLeagues, parseDetail, parseBoards, detectBoards, boardsUrl, parseAllRosters, parseSchedule, fetchCompetition, fetchHtml, rostersUrl, scheduleUrl } from '../scripts/chesscz.mjs';
+import { toDoc, parseRegionPage, parseLeagues, parseDetail, parseBoards, detectBoards, boardsUrl, parseAllRosters, parseSchedule, fetchCompetition, fetchHtml, rostersUrl, scheduleUrl, parseVenue, cleanVenue, venueDue, teamUrl } from '../scripts/chesscz.mjs';
 import { parseKraj, seasonYear, makeEntry, otherSeason } from '../scripts/import_chesscz.mjs';
 import { readData, writeData, indexEntry } from '../scripts/data_store.mjs';
 
@@ -82,6 +82,9 @@ test('chess.cz: všechny soupisky soutěže (jména s diakritikou, národní Elo
   const teams = parseAllRosters(toDoc(fixture('soupisky.html')));
   assert.equal(teams.length, 3);
   assert.equal(teams[0].name, 'TJ Sokol Údlice "B"');
+  // číslo družstva z odkazu v popisku tabulky (stránka družstva s hrací místností)
+  assert.equal(teams[0].cz, 215330);
+  assert.equal(teamUrl(3459, 215330), 'https://www.chess.cz/soutez/druzstvo/3459/215330/');
   assert.ok(teams[0].players.length >= 15);
   assert.deepEqual(teams[0].players[0], { no: 1, id: 34231, name: 'Horák Aleš', types: ['V'], rtg: null, nat: 2098, fide: 2120 });
   // kapitán je hráč s typem K, typ Z (registrace) se vynechá
@@ -148,4 +151,32 @@ test('import: soutěž jen na chess.cz dostane id podle chess.cz', () => {
   assert.equal(e.id, 'c3458');
   assert.equal(e.tnr, undefined);
   assert.equal(e.short, 'KP');
+});
+
+test('chess.cz: hrací místnost ze stránky družstva', () => {
+  assert.equal(parseVenue(toDoc(fixture('druzstvo.html'))), 'Pernerova 18, 180 00 Praha 8');
+  assert.equal(parseVenue(toDoc('<table><tr><td>Kapitán družstva</td><td>X</td></tr></table>')), '');
+});
+
+test('chess.cz: úklid textu hrací místnosti (chess.cz ho zkracuje na 70 znaků)', () => {
+  const cases = [
+    ['Adresa hrací místnosti: Obecní dům Líně, Hornická 848, 330 21 Líně', 'Obecní dům Líně, Hornická 848, 330 21 Líně'],
+    ['Vlašim Sportovní 1570 Sporthotel klubovna  V hrací místnosti jsou povi', 'Vlašim Sportovní 1570 Sporthotel klubovna'],
+    ['Zasedací místnost SK OAZA Praha, Jeremenkova 106, 140 00 Praha 4, Zast', 'Zasedací místnost SK OAZA Praha, Jeremenkova 106, 140 00 Praha 4'],
+    ['Vráž u Písku 398 32  , Vráž 1 lázně hotel Vráž', 'Vráž u Písku 398 32, Vráž 1 lázně hotel Vráž'],
+    // celý (nezkrácený) text zůstane i s upřesněním, kudy dovnitř
+    ['Tábor Fugnerova 822 sokolovna 2. Patro vchod seshora od budovy KB', 'Tábor Fugnerova 822 sokolovna 2. Patro vchod seshora od budovy KB'],
+    // zkrácený text bez čárky: useknuté slovo pryč
+    ['Dlouhá ulice bez čárek a bez poznámek která se ale nevejde do sedmdesáti', 'Dlouhá ulice bez čárek a bez poznámek která se ale nevejde do'],
+    ['', ''],
+  ];
+  for (const [raw, want] of cases) assert.equal(cleanVenue(raw), want, raw);
+});
+
+test('chess.cz: hrací místnosti se ověřují po čtvrtinách, za čtyři týdny všechny', () => {
+  const week = 7 * 864e5;
+  for (const id of [216191, 216192, 216193, 216194]) {
+    const due = [0, 1, 2, 3].filter((w) => venueDue(id, w * week));
+    assert.equal(due.length, 1, String(id));
+  }
 });

@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "Spartak Adamov",
+   "cz": 216589,
    "captain": "",
    "players": [
     {
@@ -143,10 +144,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Komenského 322/6, Adamov (Klubovna Sp.)"
   },
   {
    "name": "Sokol Jedovnice",
+   "cz": 216586,
    "captain": "",
    "players": [
     {
@@ -281,10 +284,12 @@
      "nat": 1426,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Jedovnice 763 (býv. restaurace)"
   },
   {
    "name": "ŠK Boskovice B",
+   "cz": 216585,
    "captain": "",
    "players": [
     {
@@ -466,10 +471,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Kpt. Jaroše 107/15, Boskovice"
   },
   {
    "name": "TJ Sloup B",
+   "cz": 216588,
    "captain": "",
    "players": [
     {
@@ -662,10 +669,12 @@
      "nat": 1202,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Úřad Městyse, Sloup 1"
   },
   {
    "name": "ŠK Garde Lipovec C",
+   "cz": 216587,
    "captain": "",
    "players": [
     {
@@ -812,7 +821,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Lipovec 318 (Dům Služeb-vchod ČP)"
   }
  ],
  "rounds": [

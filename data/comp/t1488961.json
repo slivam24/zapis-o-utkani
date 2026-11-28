@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "Šachový spolek Železné hory A",
+   "cz": 211183,
    "captain": "",
    "players": [
     {
@@ -105,10 +106,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Komenského nám. 120, Pardubice, Budova Krajského úřadu"
   },
   {
    "name": "TJ Spartak Vlašim",
+   "cz": 211187,
    "captain": "",
    "players": [
     {
@@ -314,10 +317,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sporthotel (klubovna), Sportovní 1570, Vlašim, Povinné přezůvky"
   },
   {
    "name": "KOBEX Říčany 1925 B",
+   "cz": 211182,
    "captain": "",
    "players": [
     {
@@ -481,10 +486,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "KC Labuť, 17. Listopadu 214, Říčany"
   },
   {
    "name": "TJ Bohemians Praha B",
+   "cz": 211189,
    "captain": "",
    "players": [
     {
@@ -664,10 +671,12 @@
      "nat": 1020,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Hala Bohemians, Slovenská 2, 101 00 Praha 10, suterén"
   },
   {
    "name": "ŠO Gordic Jihlava",
+   "cz": 211191,
    "captain": "",
    "players": [
     {
@@ -861,10 +870,12 @@
      "nat": 1010,
      "fide": null
     }
-   ]
+   ],
+   "venue": "DDM Jihlava, Brněnská 670/46, Jihlava"
   },
   {
    "name": "ŠK Světlá nad Sázavou",
+   "cz": 211188,
    "captain": "",
    "players": [
     {
@@ -1070,10 +1081,12 @@
      "nat": 1000,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sportovní centrum Pěšinky, Pěšinky 971, 582 91 Světlá n.Sáz"
   },
   {
    "name": "TJ Žďár nad Sázavou",
+   "cz": 211186,
    "captain": "",
    "players": [
     {
@@ -1202,10 +1215,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sportovní hala, Jungmannova 1495/8, 591 01 Žďár nad Sázavou, Vstup po"
   },
   {
    "name": "KOBEX Říčany 1925 C",
+   "cz": 211181,
    "captain": "",
    "players": [
     {
@@ -1362,10 +1377,12 @@
      "nat": 1098,
      "fide": 1466
     }
-   ]
+   ],
+   "venue": "KC Labuť, 17. Listopadu 214, Říčany"
   },
   {
    "name": "Šachový spolek Železné hory B",
+   "cz": 211184,
    "captain": "",
    "players": [
     {
@@ -1468,10 +1485,12 @@
      "nat": 1035,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Komenského nám. 120, Pardubice, Budova Krajského úřadu"
   },
   {
    "name": "TJ Lanškroun",
+   "cz": 211185,
    "captain": "",
    "players": [
     {
@@ -1653,10 +1672,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Dělnický dům, Dobrovského 41, 563 01 Lanškroun"
   },
   {
    "name": "Spartak Velká Bíteš",
+   "cz": 211192,
    "captain": "",
    "players": [
     {
@@ -1790,10 +1811,12 @@
      "nat": 1000,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Budova bývalé knihovny, Masarykovo náměstí 85, Velká Bíteš"
   },
   {
    "name": "Unichess B",
+   "cz": 211190,
    "captain": "",
    "players": [
     {
@@ -1993,7 +2016,8 @@
      "nat": 1000,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Pernerova 18, Praha 8, metro Křižíkova"
   }
  ],
  "rounds": [

@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "Sokol Nová Bělá A",
+   "cz": 216927,
    "captain": "Paseka Aleš",
    "players": [
     {
@@ -208,10 +209,12 @@
      "nat": 1097,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Slavoj Poruba G",
+   "cz": 216925,
    "captain": "Návrat Vladimír",
    "players": [
     {
@@ -367,10 +370,12 @@
      "nat": 1313,
      "fide": 1545
     }
-   ]
+   ],
+   "venue": "Dům farnosti, Vřesinská 245/6, Ostrava - Poruba 708 00"
   },
   {
    "name": "Dynamo dopravní podnik A",
+   "cz": 216921,
    "captain": "Poništ Milan",
    "players": [
     {
@@ -530,10 +535,12 @@
      "nat": 1704,
      "fide": 1768
     }
-   ]
+   ],
+   "venue": "Jídelna tramvajové vozovny Poruba, U vozovny č.1115, Ostrava- Poruba"
   },
   {
    "name": "Chess Institute Ostrava",
+   "cz": 216923,
    "captain": "Chrostek Lukáš",
    "players": [
     {
@@ -656,10 +663,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Kotkova 271/6, Ostrava - V9tkovice 703 00"
   },
   {
    "name": "ŠK Šenov C",
+   "cz": 216928,
    "captain": "Robenek Bronislav",
    "players": [
     {
@@ -846,10 +855,12 @@
      "nat": 1743,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Knihovna Šenov, Kostelní 128, Šenov 739 34"
   },
   {
    "name": "Slovan Ostrava A",
+   "cz": 216929,
    "captain": "Bayer Vlastimil",
    "players": [
     {
@@ -1013,10 +1024,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "DPS Šimáčkova 1148/27, Ostrava 70900"
   },
   {
    "name": "HTJ Odra Ostrava",
+   "cz": 216924,
    "captain": "Hajduk Jan",
    "players": [
     {
@@ -1155,10 +1168,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Palackého 27, Ostrava - Přívoz, 702 00"
   },
   {
    "name": "TJ Ostrava D",
+   "cz": 216920,
    "captain": "",
    "players": [
     {
@@ -1291,10 +1306,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sportovní areál TJ Ostrava, Varenská, Ostrava"
   },
   {
    "name": "Šachový spolek Polanka A",
+   "cz": 216922,
    "captain": "Novotný Stanislav",
    "players": [
     {
@@ -1422,10 +1439,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Dělnický dům, Molákova 701/1, Polanka nad Odrou, 725 25"
   },
   {
    "name": "ŠK Ostrava-Jih C",
+   "cz": 216926,
    "captain": "Rykala Adam",
    "players": [
     {
@@ -1595,7 +1614,8 @@
      "nat": 1601,
      "fide": 1773
     }
-   ]
+   ],
+   "venue": "PORT bar CORPUS, Lužická 2 OV - Výškovice 700 30"
   }
  ],
  "rounds": [

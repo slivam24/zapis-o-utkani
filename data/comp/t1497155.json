@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "Slovan Havířov C",
+   "cz": 216806,
    "captain": "",
    "players": [
     {
@@ -175,10 +176,12 @@
      "nat": 1682,
      "fide": 1802
     }
-   ]
+   ],
+   "venue": "Hospůdka Na hřišti, Opletalova 1218/12a, Havířov-Šumbark"
   },
   {
    "name": "Šachová škola Bohumín B",
+   "cz": 216809,
    "captain": "",
    "players": [
     {
@@ -360,10 +363,12 @@
      "nat": 1819,
      "fide": 1936
     }
-   ]
+   ],
+   "venue": "Masarykova ZŠ a MŠ Bohumín, Středisko KRTEK, Seifertova 601, Bohumín"
   },
   {
    "name": "Baník Havířov C",
+   "cz": 216805,
    "captain": "",
    "players": [
     {
@@ -545,10 +550,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Centrum volnočasových aktivit Havířov, Horymírova 9"
   },
   {
    "name": "Rychvaldský spolek šachový 1945 B",
+   "cz": 216807,
    "captain": "",
    "players": [
     {
@@ -723,10 +730,12 @@
      "nat": 1339,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Kulturní dům Rychvald, Náměstí míru 1609, Rychvald"
   },
   {
    "name": "ŠK Karviná B",
+   "cz": 216808,
    "captain": "",
    "players": [
     {
@@ -893,10 +902,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "zadní místnost restaurace Centrum, ul. Centrum 2298, Karviná-Mizerov"
   },
   {
    "name": "SK Slavia Orlová D",
+   "cz": 216804,
    "captain": "",
    "players": [
     {
@@ -1043,10 +1054,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "SK Slavia Orlová, Na Stuchlíkovci 340, Orlová (sportovní areál)"
   },
   {
    "name": "Slovan Havířov D",
+   "cz": 216810,
    "captain": "",
    "players": [
     {
@@ -1224,7 +1237,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Hospůdka Na hřišti, Opletalova 1218/12a, Havířov-Šumbark"
   }
  ],
  "rounds": [

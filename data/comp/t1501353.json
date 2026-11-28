@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "Joly Lysá nad Labem E",
+   "cz": 216044,
    "captain": "Musil Martin",
    "players": [
     {
@@ -205,10 +206,12 @@
      "nat": 1662,
      "fide": 1817
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Sokol Kolín B",
+   "cz": 216038,
    "captain": "Franc Lubor",
    "players": [
     {
@@ -404,10 +407,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠS Kostelec nad Černými lesy B",
+   "cz": 216036,
    "captain": "Kořínek Oldřich",
    "players": [
     {
@@ -605,10 +610,12 @@
      "nat": 1526,
      "fide": 1740
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Sokol Pečky A",
+   "cz": 216040,
    "captain": "Vlasák Miloslav",
    "players": [
     {
@@ -803,10 +810,12 @@
      "nat": 1276,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Spartak Čelákovice A",
+   "cz": 216047,
    "captain": "Mácha Václav",
    "players": [
     {
@@ -994,10 +1003,12 @@
      "nat": 1099,
      "fide": 1446
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Sokol Brandýs nad Labem A",
+   "cz": 216041,
    "captain": "Jarý Josef",
    "players": [
     {
@@ -1194,10 +1205,12 @@
      "nat": 1020,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Klub šachistů Říčany 1925 F",
+   "cz": 216045,
    "captain": "Říha Jaroslav",
    "players": [
     {
@@ -1394,10 +1407,12 @@
      "nat": 1680,
      "fide": 1815
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Klub šachistů Říčany 1925 E",
+   "cz": 216039,
    "captain": "Straka Jaroslav",
    "players": [
     {
@@ -1590,10 +1605,12 @@
      "nat": 1590,
      "fide": 1728
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Jawa Brodce A",
+   "cz": 216042,
    "captain": "Feierfeil Jiří",
    "players": [
     {
@@ -1739,10 +1756,12 @@
      "nat": 1687,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Spartak Vlašim C",
+   "cz": 216046,
    "captain": "Staněk Ondřej",
    "players": [
     {
@@ -1933,10 +1952,12 @@
      "nat": 1330,
      "fide": 1617
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Město Poděbrady A",
+   "cz": 216037,
    "captain": "Kaplan Daniel",
    "players": [
     {
@@ -2075,10 +2096,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK KDJS Sedlčany A",
+   "cz": 216043,
    "captain": "Havelka Petr",
    "players": [
     {
@@ -2269,7 +2292,8 @@
      "nat": 1149,
      "fide": 1527
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

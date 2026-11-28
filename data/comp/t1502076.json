@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "Slavia Kroměříž F",
+   "cz": 216166,
    "captain": "Coufalík Jakub",
    "players": [
     {
@@ -129,10 +130,12 @@
      "nat": 1153,
      "fide": 1508
     }
-   ]
+   ],
+   "venue": "tělocvična TJ Slavia Kroměříž, Kotojedská 2590/6"
   },
   {
    "name": "ŠK Loukov",
+   "cz": 216169,
    "captain": "Dvořák Miroslav",
    "players": [
     {
@@ -215,10 +218,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Pohostinství – Kulturní dům Loukov"
   },
   {
    "name": "SK EMKaD Holešov B",
+   "cz": 216167,
    "captain": "Tomeček Marián",
    "players": [
     {
@@ -380,10 +385,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Zasedací místnost fy EMKaD, s.r.o., Masarykova 635/12, Holešov"
   },
   {
    "name": "ŠO TJ Zborovice B",
+   "cz": 216165,
    "captain": "Slavík Miroslav",
    "players": [
     {
@@ -488,10 +495,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sokolovna, Sokolská 230, Zborovice"
   },
   {
    "name": "ŠK RAPOS Sulimov C",
+   "cz": 216168,
    "captain": "Kováč Martin",
    "players": [
     {
@@ -676,10 +685,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Kulturní dům Sulimov, Sulimov 39"
   },
   {
    "name": "TJ Sokol Postoupky C",
+   "cz": 216171,
    "captain": "Kucián Miloš",
    "players": [
     {
@@ -806,10 +817,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sokolovna v Postoupkách, Postoupky 67"
   },
   {
    "name": "T.J. Sokol Morkovice B",
+   "cz": 216170,
    "captain": "Pavlík František",
    "players": [
     {
@@ -972,10 +985,12 @@
      "nat": 1496,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Sokolovna Morkovice, Sokolská 410, Morkovice-Slížany"
   },
   {
    "name": "ŠK Bystřice pod Hostýnem C",
+   "cz": 216172,
    "captain": "Zbranek Martin",
    "players": [
     {
@@ -1157,7 +1172,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Klub důchodců, Palackého 575, 768 61, Bystřice pod Hostýnem"
   }
  ],
  "rounds": [

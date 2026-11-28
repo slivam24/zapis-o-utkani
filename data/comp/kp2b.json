@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "ŠK Slavoj Litoměříce \"E\"",
+   "cz": 215940,
    "captain": "",
    "players": [
     {
@@ -200,10 +201,12 @@
      "nat": 1135,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Jachetní loděnice, Střelceký ostrov 1008, 412 01 Litoměřice"
   },
   {
    "name": "SK Šachy Chlumec \"B\"",
+   "cz": 215934,
    "captain": "",
    "players": [
     {
@@ -400,10 +403,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Předsálí KD Chlumec, Muchova 267, Chlumec"
   },
   {
    "name": "Duras Ústí n. L. \"C\"",
+   "cz": 215935,
    "captain": "",
    "players": [
     {
@@ -572,10 +577,12 @@
      "nat": 1892,
      "fide": 1847
     }
-   ]
+   ],
+   "venue": "Restaurace Na Rudce, Ústí nad Labem, Bělehradská 2992/41 - salónek"
   },
   {
    "name": "Teplice Chess Club \"B\"",
+   "cz": 215941,
    "captain": "",
    "players": [
     {
@@ -741,10 +748,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Masarykova 1233/82, 415 01 Teplice - 1. patro"
   },
   {
    "name": "Duras Ústí n. L. \"D\"",
+   "cz": 215936,
    "captain": "",
    "players": [
     {
@@ -920,10 +929,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "DDM, Velká Hardební 19, Ústí n. L., vchod z Bělehradské ul."
   },
   {
    "name": "TJ Libouchec",
+   "cz": 215933,
    "captain": "",
    "players": [
     {
@@ -1083,10 +1094,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Hospoda Kabiny (u fotbalového hřiště)"
   },
   {
    "name": "ŠK Slávie Děčín",
+   "cz": 215937,
    "captain": "",
    "players": [
     {
@@ -1228,10 +1241,12 @@
      "nat": 1307,
      "fide": 1594
     }
-   ]
+   ],
+   "venue": "ARMEX Sportcentrum, Maroldova 2, Děčín"
   },
   {
    "name": "SK Děčín \"C\"",
+   "cz": 215939,
    "captain": "",
    "players": [
     {
@@ -1387,10 +1402,12 @@
      "nat": 1193,
      "fide": null
     }
-   ]
+   ],
+   "venue": "ARMEX Sportcentrum, Maroldova 2, Děčín"
   },
   {
    "name": "Sportis Svádov-Olšinky \"A\"",
+   "cz": 215938,
    "captain": "",
    "players": [
     {
@@ -1555,10 +1572,12 @@
      "nat": 1398,
      "fide": 1623
     }
-   ]
+   ],
+   "venue": "Restaurace U Koruny, Sokolovská 42, Ústí n. L.-Svádov"
   },
   {
    "name": "Jezdci",
+   "cz": 215932,
    "captain": "",
    "players": [
     {
@@ -1675,7 +1694,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "DDM Cvrček, Sídliště 605, Krupka"
   }
  ],
  "rounds": [

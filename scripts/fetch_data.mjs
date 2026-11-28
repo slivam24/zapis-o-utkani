@@ -4,10 +4,11 @@
 // národní Elo a FIDE z listiny LOK (scripts/lok.mjs).
 // Spouští se úlohou Aktualizace soupisek na GitHubu, ručně:
 //
-//     node scripts/fetch_data.mjs [--only <id>] [--save-html raw] [--lok lok_sm_cz.xls]
+//     node scripts/fetch_data.mjs [--only <id>] [--save-html raw] [--lok lok_sm_cz.xls] [--all-venues]
 //
 // --lok vezme listinu LOK ze souboru místo stažení z elo.miramal.com.
-// Stahuje se jen pár stránek jednou týdně, mezi požadavky je prodleva.
+// --all-venues stáhne hrací místnosti všech družstev, ne jen čtvrtiny na tento týden.
+// Stahuje se jednou týdně, mezi požadavky je prodleva.
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -15,7 +16,7 @@ import { parseRosters, parseRounds, parseRostersFromGrid, parseRoundsFromGrid } 
 import { xlsxToGrid } from '../js/xlsx.js';
 import { fetchPage, fetchExport, toDocument, sleep } from './chess_results.mjs';
 import { readData, writeData } from './data_store.mjs';
-import { fetchCompetition, detailUrl, fetchHtml } from './chesscz.mjs';
+import { fetchCompetition, detailUrl, fetchHtml, teamUrl, parseVenue, venueDue, toDoc } from './chesscz.mjs';
 import { fetchLok, readLok, applyLok } from './lok.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -28,7 +29,7 @@ function args() {
     const i = a.indexOf(name);
     return i >= 0 ? a[i + 1] : null;
   };
-  return { only: get('--only'), saveHtml: get('--save-html'), lokFile: get('--lok') };
+  return { only: get('--only'), saveHtml: get('--save-html'), lokFile: get('--lok'), allVenues: a.includes('--all-venues') };
 }
 
 const readJson = async (file, fallback = null) => {
@@ -39,8 +40,32 @@ const readJson = async (file, fallback = null) => {
   }
 };
 
+// Hrací místnosti: stránka každého družstva je jeden dotaz navíc (přes tisíc družstev), proto se každý
+// týden ověří jen čtvrtina družstev (venueDue) a ostatním zůstane adresa z minula.
+
+/** Doplní družstvům z chess.cz hrací místnost (team.venue, '' = oddíl ji nezadal). Vrací počet dotazů. */
+async function addVenues(compId, teams, oldTeams = [], { force = false } = {}) {
+  let fetched = 0;
+  for (const t of teams) {
+    if (!t.cz) continue;
+    const old = oldTeams.find((o) => o.cz === t.cz) ?? oldTeams.find((o) => o.name === t.name);
+    if (!force && typeof old?.venue === 'string' && !venueDue(t.cz)) {
+      t.venue = old.venue;
+      continue;
+    }
+    try {
+      t.venue = parseVenue(toDoc(await fetchHtml(teamUrl(compId, t.cz))));
+      fetched++;
+    } catch (e) {
+      if (typeof old?.venue === 'string') t.venue = old.venue;
+      console.error(`  ! hrací místnost ${t.name}: ${e.message}`);
+    }
+  }
+  return fetched;
+}
+
 async function main() {
-  const { only, saveHtml, lokFile } = args();
+  const { only, saveHtml, lokFile, allVenues } = args();
   const cfg = await readJson(CONFIG);
   if (!cfg?.competitions?.length) {
     console.error('Nastavení soutěží chybí nebo je prázdné.');
@@ -91,7 +116,11 @@ async function main() {
         teams = got.teams.filter((t) => t.players.length);
         rounds = got.rounds;
         noSchedule = Boolean(got.noSchedule);
-        if (teams.length >= 2) sources.push('chess.cz');
+        if (teams.length >= 2) {
+          sources.push('chess.cz');
+          const n = await addVenues(c.chesscz, teams, old.teams, { force: allVenues });
+          if (n) sources.push(`hrací místnosti: ${n}`);
+        }
         if (noSchedule) console.log(`  rozpis na chess.cz zatím není (soutěž nemá zadaná kola)${teams.length ? '' : ', ani družstva'}`);
       } catch (e) {
         console.error(`  ! chess.cz: ${e.message}`);

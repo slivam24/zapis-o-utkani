@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "TJ Náchod B",
+   "cz": 215720,
    "captain": "",
    "players": [
     {
@@ -150,10 +151,12 @@
      "nat": 1840,
      "fide": 1882
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Lípa E",
+   "cz": 215727,
    "captain": "",
    "players": [
     {
@@ -342,10 +345,12 @@
      "nat": 1013,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "DDM Kostelec n. Orl.",
+   "cz": 215721,
    "captain": "",
    "players": [
     {
@@ -474,10 +479,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Jiskra Jaroměř B",
+   "cz": 215723,
    "captain": "",
    "players": [
     {
@@ -664,10 +671,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Panda Rychnov n. K. C",
+   "cz": 215719,
    "captain": "",
    "players": [
     {
@@ -847,10 +856,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠŠPM Lipky HK D",
+   "cz": 215722,
    "captain": "",
    "players": [
     {
@@ -1035,10 +1046,12 @@
      "nat": 1553,
      "fide": 1640
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Doudleby n. Orl.",
+   "cz": 215725,
    "captain": "",
    "players": [
     {
@@ -1202,10 +1215,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Červený Kostelec",
+   "cz": 215718,
    "captain": "",
    "players": [
     {
@@ -1373,10 +1388,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "DDM Třebechovice p. Or.",
+   "cz": 215726,
    "captain": "",
    "players": [
     {
@@ -1529,10 +1546,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Jiskra Jaroměř C",
+   "cz": 215724,
    "captain": "",
    "players": [
     {
@@ -1717,7 +1736,8 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

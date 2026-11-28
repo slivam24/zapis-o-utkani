@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "BIOMEDICA Říčany \"D\"",
+   "cz": 215746,
    "captain": "",
    "players": [
     {
@@ -204,10 +205,12 @@
      "nat": 1892,
      "fide": 1920
     }
-   ]
+   ],
+   "venue": "KC Labuť, 17. listopadu 214, 251 01 Říčany (II.patro)"
   },
   {
    "name": "ŠK Bakov nad Jizerou",
+   "cz": 215744,
    "captain": "Rigo Imrich",
    "players": [
     {
@@ -402,10 +405,12 @@
      "nat": 1523,
      "fide": 1668
     }
-   ]
+   ],
+   "venue": "Sokolovna 1.patro, Boleslavská 450, Bakov nad Jizerou"
   },
   {
    "name": "JOLY Lysá nad Labem \"C\"",
+   "cz": 215740,
    "captain": "Špaček Petr",
    "players": [
     {
@@ -599,10 +604,12 @@
      "nat": 1887,
      "fide": 1904
     }
-   ]
+   ],
+   "venue": "Náměstí Bedřicha Hrozného 1737 Lysá nad Labem"
   },
   {
    "name": "100 let Kobylisy \"A\"",
+   "cz": 215739,
    "captain": "Dvořák Jan",
    "players": [
     {
@@ -784,10 +791,12 @@
      "nat": 1802,
      "fide": 1867
     }
-   ]
+   ],
+   "venue": "U Školské zahrady 9, sokolovna TJ Kobylisy, suterén"
   },
   {
    "name": "ŠK ZIKUDA Turnov \"C\"",
+   "cz": 215741,
    "captain": "Ďúran Tomáš",
    "players": [
     {
@@ -992,10 +1001,12 @@
      "nat": 1602,
      "fide": 1731
     }
-   ]
+   ],
+   "venue": "Skálova 84, Turnov"
   },
   {
    "name": "Sparta Kutná Hora",
+   "cz": 215745,
    "captain": "Štolba Miloš",
    "players": [
     {
@@ -1194,10 +1205,12 @@
      "nat": 1804,
      "fide": 1847
     }
-   ]
+   ],
+   "venue": "Základní škola Kamenná Stezka, Kamenná stezka 40/1"
   },
   {
    "name": "ŠK Česká Lípa",
+   "cz": 215742,
    "captain": "Jínová Lucie",
    "players": [
     {
@@ -1370,10 +1383,12 @@
      "nat": 1470,
      "fide": 1576
     }
-   ]
+   ],
+   "venue": "DDM Libertin, Škroupovo náměstí138, Česká lípa"
   },
   {
    "name": "Desko Liberec",
+   "cz": 215738,
    "captain": "Cakl Zdeněk",
    "players": [
     {
@@ -1550,10 +1565,12 @@
      "nat": 1651,
      "fide": 1696
     }
-   ]
+   ],
+   "venue": "SPŠ a VOŠ Masarykova 3 46084 Liberec 1"
   },
   {
    "name": "ŠK Viktoria Žižkov",
+   "cz": 215749,
    "captain": "Burdík Lubomír",
    "players": [
     {
@@ -1750,10 +1767,12 @@
      "nat": 1468,
      "fide": 1517
     }
-   ]
+   ],
+   "venue": "U Staré cihelny 2182/11, Praha 3, (Salonek Shell, EA Hotel Populus)"
   },
   {
    "name": "ŠK ZIKUDA Turnov \"D\"",
+   "cz": 215747,
    "captain": "Brouček Tomáš",
    "players": [
     {
@@ -1950,10 +1969,12 @@
      "nat": 1775,
      "fide": 1897
     }
-   ]
+   ],
+   "venue": "Skálova 84, Turnov"
   },
   {
    "name": "ŠK Sokol Vyšehrad \"B\"",
+   "cz": 215743,
    "captain": "Zákoucká Adéla",
    "players": [
     {
@@ -2150,10 +2171,12 @@
      "nat": 1595,
      "fide": 1633
     }
-   ]
+   ],
+   "venue": "Sokolovna Vyšehrad, Rašínovo nábreží 65/24, 2.patro"
   },
   {
    "name": "Sokol Mladá Boleslav",
+   "cz": 215748,
    "captain": "Řehořek Martin",
    "players": [
     {
@@ -2347,7 +2370,8 @@
      "nat": 1501,
      "fide": 1629
     }
-   ]
+   ],
+   "venue": "Sokolovna, Palackého 223, Mladá Boleslav"
   }
  ],
  "rounds": [

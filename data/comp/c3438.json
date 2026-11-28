@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "Šachy TJ Sokol Rovečné",
+   "cz": 216543,
    "captain": "",
    "players": [
     {
@@ -139,10 +140,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Rovečné 82 (OÚ-knihovna)"
   },
   {
    "name": "Sokol Rudice B",
+   "cz": 216547,
    "captain": "",
    "players": [
     {
@@ -248,10 +251,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Rudice - kabiny u fotb.hř."
   },
   {
    "name": "ŠK Letovice C",
+   "cz": 216548,
    "captain": "",
    "players": [
     {
@@ -354,10 +359,12 @@
      "nat": 1201,
      "fide": 1412
     }
-   ]
+   ],
+   "venue": "Masarykovo nám. 13 Letovice (kav. Kalibán)"
   },
   {
    "name": "ASK Blansko B",
+   "cz": 216544,
    "captain": "",
    "players": [
     {
@@ -503,10 +510,12 @@
      "nat": 1519,
      "fide": 1711
     }
-   ]
+   ],
+   "venue": "Mlýnská 1297/19,Blansko"
   },
   {
    "name": "ŠK Kunštát B",
+   "cz": 216546,
    "captain": "",
    "players": [
     {
@@ -636,10 +645,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": "nám.Kr.Jiřího 106,Kunštát (MÚ-velká zas.)"
   },
   {
    "name": "TJ Sokol Vanovice",
+   "cz": 216545,
    "captain": "",
    "players": [
     {
@@ -705,7 +716,8 @@
      "nat": 1091,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Vanovice 202 (KD zadní vchod)"
   }
  ],
  "rounds": [

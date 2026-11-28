@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "Kralupy A",
+   "cz": 216904,
    "captain": "",
    "players": [
     {
@@ -201,10 +202,12 @@
      "nat": 1472,
      "fide": 1635
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Český Brod A",
+   "cz": 216901,
    "captain": "",
    "players": [
     {
@@ -395,10 +398,12 @@
      "nat": 1271,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Sokol Kolín A",
+   "cz": 216908,
    "captain": "",
    "players": [
     {
@@ -582,10 +587,12 @@
      "nat": 1945,
      "fide": 1803
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Medvědi Zvole A",
+   "cz": 216907,
    "captain": "",
    "players": [
     {
@@ -767,10 +774,12 @@
      "nat": 1538,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK JOLY Lysá nad Labem D",
+   "cz": 216905,
    "captain": "",
    "players": [
     {
@@ -963,10 +972,12 @@
      "nat": 1719,
      "fide": 1759
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Šachklub města Dobrovice A",
+   "cz": 216909,
    "captain": "",
    "players": [
     {
@@ -1155,10 +1166,12 @@
      "nat": 1629,
      "fide": 1765
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "DDM Sokol Nymburk A",
+   "cz": 216898,
    "captain": "",
    "players": [
     {
@@ -1351,10 +1364,12 @@
      "nat": 1494,
      "fide": 1617
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠK Zdice A",
+   "cz": 216906,
    "captain": "",
    "players": [
     {
@@ -1547,10 +1562,12 @@
      "nat": 1559,
      "fide": 1696
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Kralupy B",
+   "cz": 216903,
    "captain": "",
    "players": [
     {
@@ -1739,10 +1756,12 @@
      "nat": 1118,
      "fide": 1470
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Dubno A",
+   "cz": 216899,
    "captain": "",
    "players": [
     {
@@ -1937,10 +1956,12 @@
      "nat": 1642,
      "fide": 1727
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Šachový klub Bakov nad Jizerou B",
+   "cz": 216900,
    "captain": "",
    "players": [
     {
@@ -2133,10 +2154,12 @@
      "nat": 1449,
      "fide": 1687
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "ŠS Kostelec nad Černými lesy",
+   "cz": 216902,
    "captain": "",
    "players": [
     {
@@ -2331,7 +2354,8 @@
      "nat": 1815,
      "fide": 1875
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [

@@ -12,6 +12,7 @@
  "teams": [
   {
    "name": "TJ Baník Havířov",
+   "cz": 216159,
    "captain": "",
    "players": [
     {
@@ -204,10 +205,12 @@
      "nat": 1915,
      "fide": 1942
     }
-   ]
+   ],
+   "venue": "Centrum volnočasových aktivit Havířov, Horymírova 9, Havířov"
   },
   {
    "name": "ŠK TJ Dolní Benešov",
+   "cz": 216157,
    "captain": "",
    "players": [
     {
@@ -398,10 +401,12 @@
      "nat": 1713,
      "fide": 1784
     }
-   ]
+   ],
+   "venue": "Dům služeb – přízemí (u kostela), náměstí Cypriána Lelka 73"
   },
   {
    "name": "Sokol Francova Lhota",
+   "cz": 216155,
    "captain": "",
    "players": [
     {
@@ -595,10 +600,12 @@
      "nat": 1629,
      "fide": 1752
     }
-   ]
+   ],
+   "venue": "Kulturní dům, klubovna 100 m nad hřištěm TJ Sokol Francova lhota"
   },
   {
    "name": "ŠK Vsetín",
+   "cz": 216156,
    "captain": "",
    "players": [
     {
@@ -760,10 +767,12 @@
      "nat": 1698,
      "fide": 1764
     }
-   ]
+   ],
+   "venue": "Zimní stadion, Na Lapači 297, Vsetín"
   },
   {
    "name": "TJ Ostrava",
+   "cz": 216164,
    "captain": "",
    "players": [
     {
@@ -956,10 +965,12 @@
      "nat": 1943,
      "fide": 1968
     }
-   ]
+   ],
+   "venue": "Sportovní areál TJ Ostrava, Varenská ul., Ostrava"
   },
   {
    "name": "ŠK Ostrava-Jih",
+   "cz": 216161,
    "captain": "",
    "players": [
     {
@@ -1103,10 +1114,12 @@
      "nat": 1552,
      "fide": 1614
     }
-   ]
+   ],
+   "venue": "SPORTbar CORPUS, Lužická 2, Ostrava-Výškovice"
   },
   {
    "name": "SK Slavia Orlová B",
+   "cz": 216154,
    "captain": "",
    "players": [
     {
@@ -1272,10 +1285,12 @@
      "nat": 1730,
      "fide": 1816
     }
-   ]
+   ],
+   "venue": "SK Slavia Orlová (sportovní areál), Na Stuchlíkovci 340, Orlová"
   },
   {
    "name": "Slavoj Český Těšín",
+   "cz": 216162,
    "captain": "",
    "players": [
     {
@@ -1432,10 +1447,12 @@
      "nat": null,
      "fide": 1651
     }
-   ]
+   ],
+   "venue": "Modrý pavilon, Svojsíkova 833, Český Těšín"
   },
   {
    "name": "ŠK Bruntál",
+   "cz": 216160,
    "captain": "",
    "players": [
     {
@@ -1622,10 +1639,12 @@
      "nat": 1098,
      "fide": null
     }
-   ]
+   ],
+   "venue": "Klubovna sportovní haly, Zeyerova 14, Bruntál"
   },
   {
    "name": "ŠK Slavoj Poruba C",
+   "cz": 216158,
    "captain": "",
    "players": [
     {
@@ -1805,10 +1824,12 @@
      "nat": 1769,
      "fide": 1824
     }
-   ]
+   ],
+   "venue": "Centrum volného času, Vietnamská 1541/3, Ostrava-Poruba"
   },
   {
    "name": "Šachy Krnov",
+   "cz": 216153,
    "captain": "",
    "players": [
     {
@@ -2001,10 +2022,12 @@
      "nat": 1694,
      "fide": 1776
     }
-   ]
+   ],
+   "venue": "ZŠ Janáčkovo náměstí, Janáčkovo náměstí 1970/17"
   },
   {
    "name": "TJ TŽ Třinec B",
+   "cz": 216163,
    "captain": "",
    "players": [
     {
@@ -2177,7 +2200,8 @@
      "nat": 1405,
      "fide": 1617
     }
-   ]
+   ],
+   "venue": "Kulturní dům TRISIA, náměstí Svobody 526, Třinec"
   }
  ],
  "rounds": [

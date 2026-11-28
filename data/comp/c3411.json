@@ -11,6 +11,7 @@
  "teams": [
   {
    "name": "ŠO TJ Karolinka",
+   "cz": 216451,
    "captain": "Vlachopulos Elefteris",
    "players": [
     {
@@ -145,10 +146,12 @@
      "nat": 1067,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "KH Zašová",
+   "cz": 216454,
    "captain": "Kopecký Jiří",
    "players": [
     {
@@ -269,10 +272,12 @@
      "nat": 1512,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Sokol Valašská Bystřice D",
+   "cz": 216455,
    "captain": "Komínek Martin",
    "players": [
     {
@@ -467,10 +472,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Sokol Val. Polanka",
+   "cz": 216452,
    "captain": "Hromada Petr",
    "players": [
     {
@@ -631,10 +638,12 @@
      "nat": 1586,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "Šachy Hošťálková C",
+   "cz": 216453,
    "captain": "Bednařík Josef",
    "players": [
     {
@@ -815,10 +824,12 @@
      "nat": 1097,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Valašské Meziříčí B",
+   "cz": 216449,
    "captain": "Kabeláč Tomáš",
    "players": [
     {
@@ -1011,10 +1022,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Sokol Huslenky",
+   "cz": 216450,
    "captain": "Hrbáček Pavel",
    "players": [
     {
@@ -1174,10 +1187,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "TJ Sokol Ústí B",
+   "cz": 216456,
    "captain": "Trčálek Lukáš",
    "players": [
     {
@@ -1328,10 +1343,12 @@
      "nat": null,
      "fide": null
     }
-   ]
+   ],
+   "venue": ""
   },
   {
    "name": "MEZ Vsetín",
+   "cz": 216457,
    "captain": "Šulák Radomír",
    "players": [
     {
@@ -1445,7 +1462,8 @@
      "nat": 1255,
      "fide": 1407
     }
-   ]
+   ],
+   "venue": ""
   }
  ],
  "rounds": [
