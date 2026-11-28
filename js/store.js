@@ -63,6 +63,13 @@ export function rememberVenue(team, venue) {
   write(KEY_VENUES, map);
 }
 
+export function forgetVenue(team) {
+  const map = read(KEY_VENUES, {});
+  if (!(team in map)) return;
+  delete map[team];
+  write(KEY_VENUES, map);
+}
+
 export const loadCachedData = () => read(KEY_DATA, null);
 export const saveCachedData = (d) => write(KEY_DATA, d);
 

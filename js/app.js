@@ -210,13 +210,29 @@ function setPath(obj, path, value) {
   o[keys.at(-1)] = value;
 }
 
+// Hrací místnost domácího družstva: adresa, kterou uživatel v zařízení zadal sám, jinak ta ze stránky
+// družstva na chess.cz (team.venue). Vlastní adresa se pamatuje, jen když se od chess.cz liší, aby se
+// změna na chess.cz do zápisu dostala.
+const teamVenue = (name) => comp()?.teams?.find((t) => t.name === name)?.venue ?? '';
+const defaultVenue = (name) => (name ? store.venueFor(name) || teamVenue(name) : '');
+function rememberVenue() {
+  const team = S.home.team;
+  if (!team) return;
+  const v = (S.venue ?? '').trim();
+  if (v && v === teamVenue(team)) store.forgetVenue(team);
+  else store.rememberVenue(team, S.venue);
+}
+
 function setTeam(side, name) {
+  // místnost předchozího domácího družstva se při změně zápasu vymění za místnost nového,
+  // text napsaný bez vazby na družstvo zůstane
+  const autoVenue = side === 'home' && (!(S.venue ?? '').trim() || S.venue === defaultVenue(S.home.team));
   S[side].team = name;
   S[side].lineup = [];
   S.results = {};
   const t = teamOf(side);
   S[side].captain = L.defaultCaptain(t);
-  if (side === 'home' && !S.venue) S.venue = store.venueFor(name);
+  if (autoVenue) S.venue = defaultVenue(name);
 }
 
 function resetCompetition(id) {
@@ -1726,7 +1742,7 @@ view.addEventListener('click', (e) => {
       if (!store.archiveMatch(S)) return toast('Zápis se nepodařilo uložit (plné úložiště zařízení).');
       askPersistentStorage();
       store.rememberReferee(S.referee.name);
-      store.rememberVenue(S.home.team, S.venue);
+      rememberVenue();
       toast('Zápis je uložený v archivu.');
       return newMatch();
     }
@@ -1979,7 +1995,7 @@ view.addEventListener('input', (e) => {
 view.addEventListener('change', (e) => {
   const el = e.target;
   if (el.dataset.add) addComp[el.dataset.add] = el.value;
-  if (el.dataset.venue) store.rememberVenue(S.home.team, el.value);
+  if (el.dataset.venue) rememberVenue();
   switch (el.dataset.chg) {
     case 'comp':
       resetCompetition(el.value);
