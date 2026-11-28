@@ -1,4 +1,5 @@
 // Ukládání do zařízení (localStorage): rozpracovaný zápis, archiv, naposledy použití rozhodčí a místnosti.
+import { normalizeProfile } from './profile.js';
 const KEY_DRAFT = 'zapis.draft.v1';
 const KEY_ARCHIVE = 'zapis.archive.v1';
 const KEY_REFEREES = 'zapis.referees.v1';
@@ -99,6 +100,9 @@ export function setKrajLogo(dataUrl) {
   return write(KEY_LOGOS, l);
 }
 
+/** Všechna loga družstev v zařízení: { název družstva: data URL }. */
+export const allTeamLogos = () => ({ ...(loadLogos().teams ?? {}) });
+
 export const teamLogo = (team) => (team ? loadLogos().teams?.[team] ?? null : null);
 export function setTeamLogo(team, dataUrl) {
   if (!team) return false;
@@ -152,3 +156,40 @@ export function rememberMail(compId, to) {
 const KEY_SEEN = 'zapis.seen.v1';
 export const seenVersion = () => read(KEY_SEEN, '');
 export const setSeenVersion = (v) => write(KEY_SEEN, v);
+
+// Uživatelský profil: oblíbené kraje a soutěže, moje družstva, výchozí loga, můj podpis (js/profile.js).
+// Kraj ze starého nastavení (dřív jen jeden) se převezme, dokud profil kraje nemá.
+const KEY_PROFILE = 'zapis.profile.v1';
+export const loadProfile = () => normalizeProfile(read(KEY_PROFILE, null), { legacyRegion: loadSettings().region ?? '' });
+export const saveProfile = (p) => write(KEY_PROFILE, normalizeProfile(p));
+
+/** Všechno, co jde do souboru s profilem (viz cleanSnapshot v js/profile.js). */
+export function readSnapshot() {
+  return {
+    profile: loadProfile(),
+    logos: loadLogos(),
+    settings: loadSettings(),
+    ui: uiPref(),
+    mail: read(KEY_MAIL, {}),
+    referees: recentReferees(),
+    venues: read(KEY_VENUES, {}),
+    userComps: loadUserComps(),
+  };
+}
+
+/** Zapíše snímek (po sloučení s profilem ze souboru). Vrací false, když se něco nevešlo. */
+export function writeSnapshot(s) {
+  const settings = { ...loadSettings(), ...s.settings };
+  delete settings.region; // kraje jsou teď v profilu
+  const ok = [
+    write(KEY_PROFILE, normalizeProfile(s.profile)),
+    write(KEY_LOGOS, s.logos),
+    write(KEY_SETTINGS, settings),
+    write(KEY_UI, s.ui),
+    write(KEY_MAIL, { ...read(KEY_MAIL, {}), ...s.mail }),
+    write(KEY_REFEREES, s.referees),
+    write(KEY_VENUES, s.venues),
+    write(KEY_COMPS, s.userComps),
+  ];
+  return ok.every(Boolean);
+}

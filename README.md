@@ -46,6 +46,15 @@ Zápis zůstává co nejjednodušší, všechno ostatní je v **☰ Menu** v hla
 - **Nový zápis** a **Archiv**: archiv je jen v zařízení, proto jde stáhnout do souboru (celý i jednotlivé zápisy)
   a nahrát zpátky na stejném nebo jiném zařízení. Zápisy se sloučí bez duplicit (stejný zápis nahradí jen novější verze).
   Archiv upozorní na zápisy starší než zvolená lhůta (výchozí 12 měsíců) a nabídne jejich smazání.
+- **Můj profil**: moje kraje (víc najednou; nabídka soutěží pak ukáže celostátní soutěže a tyto kraje), oblíbené
+  soutěže (hvězdička ☆ u soutěže, v nabídce jsou úplně nahoře), moje družstva (po výběru kola se sám vybere
+  zápas mého družstva), loga (logo kraje, loga družstev a která jsou v novém zápisu zapnutá: loga družstev vždy,
+  jen u mého družstva, nebo nikdy) a můj podpis se jménem (v kroku Závěr a podpisy tlačítko **Vložit můj podpis**,
+  nikdy se nevloží sám). Oblíbené soutěže a soutěže mých krajů si aplikace stáhne předem pro hraní bez internetu.
+  Profil jde stáhnout do souboru (`profil-zapis-RRRR-MM-DD.json`) i s logy, nastavením, e-mailovými adresami,
+  rozhodčími, hracími místnostmi a vlastními soutěžemi, a nahrát na jiném zařízení (`js/profile.js`).
+  Podpis jde do souboru jen po zaškrtnutí. Při nahrání se oblíbené a nastavení vezmou ze souboru, loga a zapamatované
+  údaje se sloučí s tím, co v zařízení je, nic se nesmaže.
 - **Nastavení**: zobrazení, funkce, které jde vypnout (celá obrazovka, úprava hráčů, hráč mimo soupisku, rychlé texty
   záznamu, loga, e-mail, PNG, sdílení, přidání vlastní soutěže), lhůta archivu a smazání všech dat ze zařízení.
 - **O aplikaci a návod**: tři záložky. **Návod** krok za krokem i s častými potížemi, **Co je nového** (seznam změn
@@ -225,7 +234,7 @@ jde upravit čtení v `scripts/chesscz.mjs` (chess.cz) nebo `js/parse.js` (chess
 
 ```bash
 npm install                 # jen linkedom, pro parsování HTML v Node
-npm test                    # 117 testů: logika zápisu, PGN, parser, hrací místnosti, čtečky .xlsx a .xls, ratingy z LOK, přidávání soutěží, archiv, PDF, odkaz s QR
+npm test                    # 126 testů: logika zápisu, profil, PGN, parser, hrací místnosti, čtečky .xlsx a .xls, ratingy z LOK, přidávání soutěží, archiv, PDF, odkaz s QR
 npm run serve               # lokální spuštění: http://localhost:8080
 ```
 

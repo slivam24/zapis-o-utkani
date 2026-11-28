@@ -184,30 +184,39 @@ export function compareComps(a, b) {
   );
 }
 
-/**
- * Soutěže rozdělené do skupin pro nabídku: celostátní, celostátní mládeže, kraje (můj kraj první),
- * vlastní (přidané v zařízení), zatím bez soupisek, ukončené. Kraj `region` (kód) omezí kraje jen na ten jeden.
- * `keep` je id soutěže, která se ukáže vždy (právě vybraná).
- */
 /** Má soutěž ve sdílených datech soupisky? Seznam nese počet družstev, stažená soutěž přímo družstva. */
 export const hasRosters = (comp) => (Array.isArray(comp?.teams) ? comp.teams.length : comp?.teamCount ?? 1) > 0;
 
 /** Kolik soutěží (neukončených i ukončených) má kraj ve sdílených datech. */
 export const regionCompCount = (comps, region) => comps.filter((c) => !c.local && c.region === region).length;
 
-export function groupCompetitions(comps, { region = '', now = new Date(), keep = '' } = {}) {
+/**
+ * Soutěže rozdělené do skupin pro nabídku: oblíbené, celostátní, celostátní mládeže, kraje (moje kraje
+ * první), vlastní (přidané v zařízení), zatím bez soupisek, ukončené.
+ * - `regions` (kódy krajů, dřív jediný `region`) omezí kraje jen na vybrané,
+ * - `favs` (id soutěží) jsou úplně nahoře ve skupině Oblíbené soutěže (dokud neskončí),
+ * - `keep` je id soutěže, která se ukáže vždy (právě vybraná).
+ */
+export function groupCompetitions(comps, { region = '', regions = [], favs = [], now = new Date(), keep = '' } = {}) {
+  const mine = new Set([...(regions ?? []), ...(region ? [region] : [])].filter(Boolean));
+  const fav = new Set(favs ?? []);
   const groups = new Map();
   const add = (key, label, c) => {
     if (!groups.has(key)) groups.set(key, { key, label, comps: [] });
     groups.get(key).comps.push(c);
   };
   for (const c of comps) {
+    const finished = !c.local && isFinished(c, { now });
+    if (fav.has(c.id) && !finished) {
+      add('00fav', 'Oblíbené soutěže', c);
+      continue;
+    }
     if (c.local) {
       add('9local', 'Vlastní soutěže (jen v tomto zařízení)', c);
       continue;
     }
-    const inMyRegion = !region || c.region === region || c.region === 'CR' || c.id === keep;
-    if (isFinished(c, { now })) {
+    const inMyRegion = !mine.size || mine.has(c.region) || c.region === 'CR' || c.id === keep || fav.has(c.id);
+    if (finished) {
       if (inMyRegion) add('9zend', 'Ukončené soutěže', c);
       continue;
     }
@@ -226,8 +235,9 @@ export function groupCompetitions(comps, { region = '', now = new Date(), keep =
       add(youth ? '1cr-y' : '0cr', youth ? 'Celostátní soutěže mládeže' : 'Celostátní soutěže', c);
       continue;
     }
-    if (region && r.code !== region && c.id !== keep) continue;
-    add(r.code === region ? '2mine' : `3${r.name}`, `${r.name} (${r.abbr})`, c);
+    if (mine.size && !mine.has(r.code) && c.id !== keep) continue;
+    // moje kraje hned za celostátními, ostatní (bez výběru krajů nebo právě vybraná soutěž) za nimi
+    add(`${mine.has(r.code) ? '2' : '3'}${r.name}`, `${r.name} (${r.abbr})`, c);
   }
   return [...groups.values()]
     .sort((a, b) => a.key.localeCompare(b.key, 'cs'))

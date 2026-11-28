@@ -10,6 +10,11 @@ export const CHANGES = [
       '<b>Hrací místnost se doplní sama</b> podle stránky domácího družstva na chess.cz. Když vybereš jiný zápas, vymění se za místnost nového domácího družstva.',
       'Hrací místnost, kterou přepíšeš, si zařízení u družstva zapamatuje a příště ji nabídne místo té z chess.cz.',
       '<b>Partie v PGN:</b> v kroku Výstup tlačítko <b>Stáhnout partie (PGN)</b>. Barvy se střídají podle soutěžního řádu (domácí na 1. šachovnici bílými, na 2. černými…), texty jsou bez diakritiky a uvozovek. Kontumace se nehrály, v PGN nejsou.',
+      'Nový <b>Můj profil</b> v menu: víc krajů najednou, <b>oblíbené soutěže</b> úplně nahoře v nabídce, <b>moje družstva</b>, loga a můj podpis.',
+      'Hvězdičkou ☆ u soutěže ji přidáš do oblíbených, u družstva ho označíš jako svoje. Po výběru kola se zápas tvého družstva vybere sám.',
+      'Loga družstev můžou být v novém zápisu zapnutá vždy, jen u tvého družstva, nebo nikdy.',
+      '<b>Vložit můj podpis:</b> jednou se podepíšeš v profilu a v kroku Závěr a podpisy podpis vložíš jedním klepnutím, i se jménem.',
+      'Profil jde stáhnout do souboru i s logy a nastavením a nahrát na jiném zařízení. Podpis se přidá jen po zaškrtnutí.',
     ],
   },
   {

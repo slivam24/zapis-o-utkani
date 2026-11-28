@@ -12,6 +12,7 @@ import { VERSION, newerThan } from './changelog.js';
 import { encodeLink, decodeLink, hasLink } from './link.js';
 import qrcode from './vendor/qrcode.js';
 import { REGIONS, groupCompetitions, standardShort, regionCompCount, isFinished as isFinishedComp } from './catalog.js';
+import * as P from './profile.js';
 
 const REPO = 'slivam24/zapis-o-utkani';
 
@@ -110,6 +111,13 @@ function setSetting(path, value) {
   store.saveSettings(s);
 }
 
+// Profil: oblíbené kraje a soutěže, moje družstva, výchozí loga, můj podpis (js/profile.js)
+const profile = () => store.loadProfile();
+function setProfile(p) {
+  if (!store.saveProfile(p)) toast('Profil se nepodařilo uložit, úložiště zařízení je plné.');
+}
+const myRegions = () => profile().regions;
+
 // Archivovaný zápis nese kopii údajů o soutěži, aby šel otevřít i tam, kde soutěž v datech není.
 const comp = () => DATA.competitions.find((c) => c.id === S.compId) ?? S.compInfo;
 const compSnapshot = (c = comp()) =>
@@ -137,14 +145,18 @@ async function loadCompData(id = S.compId, { fresh = false } = {}) {
 }
 
 /**
- * Předem stáhne soupisky soutěží, které se budou hodit bez internetu: celostátní a soutěže mého kraje.
- * Jen když je nastavený kraj a jen probíhající soutěže, po jedné, aby to nezdržovalo.
+ * Předem stáhne soupisky soutěží, které se budou hodit bez internetu: oblíbené soutěže a s vybranými kraji
+ * i celostátní a soutěže těch krajů. Jen probíhající soutěže, po jedné, aby to nezdržovalo.
  */
 async function prefetchMyRegion() {
-  const region = settings().region;
-  if (!region || navigator.onLine === false) return;
+  if (navigator.onLine === false) return;
+  const { regions, favComps } = profile();
   const todo = DATA.competitions.filter(
-    (c) => !c.local && !isLoaded(c) && (c.region === region || c.region === 'CR') && !isFinishedComp(c),
+    (c) =>
+      !c.local &&
+      !isLoaded(c) &&
+      !isFinishedComp(c) &&
+      (favComps.includes(c.id) || (regions.length && (regions.includes(c.region) || c.region === 'CR'))),
   );
   for (const c of todo) {
     try {
@@ -235,6 +247,8 @@ function setTeam(side, name) {
   const t = teamOf(side);
   S[side].captain = L.defaultCaptain(t);
   if (autoVenue) S.venue = defaultVenue(name);
+  // logo družstva zapnuté podle profilu (vždy, jen u mého družstva, nikdy)
+  S.logos = { ...L.logoFlags(S), [side]: P.defaultLogoFlags(profile(), { [side]: name })[side] };
 }
 
 function resetCompetition(id) {
@@ -361,10 +375,11 @@ function addPanel() {
 
 /** Vybraný kraj nemá ve sdílených datech žádnou soutěž (Praha zveřejňuje sezónu až později). */
 function regionEmptyNote() {
-  const code = settings().region;
-  if (!code || !DATA.competitions.length || regionCompCount(DATA.competitions, code) > 0) return '';
-  const r = REGIONS.find((x) => x.code === code);
-  return `<p class="muted small-text" style="margin-top:.5rem">${esc(r?.name ?? code)}: soutěže této sezóny na chess.cz
+  if (!DATA.competitions.length) return '';
+  const empty = myRegions().filter((code) => regionCompCount(DATA.competitions, code) === 0);
+  if (!empty.length) return '';
+  const names = empty.map((code) => REGIONS.find((x) => x.code === code)?.name ?? code).join(', ');
+  return `<p class="muted small-text" style="margin-top:.5rem">${esc(names)}: soutěže této sezóny na chess.cz
     zatím nejsou. Jakmile je svaz zveřejní, objeví se tu samy (data se obnovují každý pátek).
     Do té doby jsou v nabídce celostátní soutěže${feature('addComp') ? ', nebo přidej soutěž z chess-results' : ''}.</p>`;
 }
@@ -384,7 +399,8 @@ function viewZapas() {
   };
   const opt = (x) => `<option value="${esc(x.id)}" ${x.id === S.compId ? 'selected' : ''}>${esc(compLabel(x))}</option>`;
   // nabídka po skupinách: celostátní, mládež, kraje (můj kraj první), vlastní, ukončené
-  const groups = groupCompetitions(DATA.competitions, { region: settings().region ?? '', keep: S.compId });
+  const prof = profile();
+  const groups = groupCompetitions(DATA.competitions, { regions: prof.regions, favs: prof.favComps, keep: S.compId });
   // zápis ze soutěže, kterou toto zařízení v datech nemá (z archivu nebo QR kódu)
   const foreign = S.compInfo && !DATA.competitions.some((x) => x.id === S.compId)
     ? `<optgroup label="Soutěž tohoto zápisu">${opt({ ...S.compInfo, id: S.compId })}</optgroup>`
@@ -403,16 +419,21 @@ function viewZapas() {
         .join('')}</select></label>`
     : `<label class="field"><span>Kolo</span><input type="text" inputmode="numeric" data-bind="round" value="${esc(S.round)}" autocomplete="off"></label>`;
 
+  // zápasy mého družstva (z profilu) jsou v seznamu první a označené hvězdičkou
+  const isMine = (m) => P.isMyTeam(prof, m.home) || P.isMyTeam(prof, m.away);
+  const teamName = (n) => (P.isMyTeam(prof, n) ? `<b>★ ${esc(n)}</b>` : esc(n));
   const matchList = round?.matches?.length
     ? `<h3 style="margin-top:1rem">Zápas v ${esc(round.no)}. kole</h3>
        <div class="match-list">${round.matches
+         .map((m, i) => ({ m, i }))
+         .sort((a, b) => Number(isMine(b.m)) - Number(isMine(a.m)))
          .map(
-           (m, i) =>
-             `<button type="button" class="match-btn ${
-               S.home.team === m.home && S.away.team === m.away ? 'active' : ''
+           ({ m, i }) =>
+             `<button type="button" class="match-btn ${S.home.team === m.home && S.away.team === m.away ? 'active' : ''} ${
+               isMine(m) ? 'mine' : ''
              }" data-act="pickMatch" data-i="${i}" ${
                S.home.team === m.home && S.away.team === m.away ? 'aria-pressed="true"' : ''
-             }>${esc(m.home)} <span class="muted">–</span> ${esc(m.away)}</button>`,
+             }>${teamName(m.home)} <span class="muted">–</span> ${teamName(m.away)}</button>`,
          )
          .join('')}</div>`
     : '';
@@ -423,9 +444,17 @@ function viewZapas() {
         S[side].team,
       )}" autocomplete="off" placeholder="Název družstva"></label>`;
     return `<label class="field"><span>${label}</span><select data-chg="team" data-side="${side}"><option value="">— vyber družstvo —</option>${teams
-      .map((t) => `<option ${t.name === S[side].team ? 'selected' : ''}>${esc(t.name)}</option>`)
+      .map((t) => `<option value="${esc(t.name)}" ${t.name === S[side].team ? 'selected' : ''}>${P.isMyTeam(prof, t.name) ? '★ ' : ''}${esc(t.name)}</option>`)
       .join('')}</select></label>`;
   };
+  // označení mého družstva u vybraných družstev (do profilu)
+  const myTeamBtn = (side) =>
+    S[side].team
+      ? `<button class="btn small ghost fav-btn ${P.isMyTeam(prof, S[side].team) ? 'on' : ''}" type="button" data-act="myTeam" data-side="${side}" aria-pressed="${P.isMyTeam(prof, S[side].team)}">${
+          P.isMyTeam(prof, S[side].team) ? '★' : '☆'
+        } ${esc(S[side].team)}${P.isMyTeam(prof, S[side].team) ? ' je moje družstvo' : ': moje družstvo'}</button>`
+      : '';
+  const myTeamRow = S.home.team || S.away.team ? `<div class="row" style="margin-top:.6rem">${myTeamBtn('home')}${myTeamBtn('away')}</div>` : '';
 
   // Když je vybraný zápas z rozlosování, výběr družstev je jen záloha pro výjimky a schová se.
   const fromDraw = round?.matches?.some((m) => m.home === S.home.team && m.away === S.away.team);
@@ -449,6 +478,7 @@ function viewZapas() {
               }</p>`
         }
         ${teamFields}
+        ${myTeamRow}
       </div>`;
 
   return `<div class="cols">
@@ -464,6 +494,13 @@ function viewZapas() {
         <label class="field"><span>Soutěž</span><select data-chg="comp">${compOpts}</select></label>
         ${roundField}
       </div>
+      ${
+        S.compId && c
+          ? `<div class="row" style="margin-top:.5rem"><button class="btn small ghost fav-btn ${P.isFavComp(prof, S.compId) ? 'on' : ''}" type="button" data-act="favComp" aria-pressed="${P.isFavComp(prof, S.compId)}">${
+              P.isFavComp(prof, S.compId) ? '★ Oblíbená soutěž' : '☆ Přidat do oblíbených'
+            }</button></div>`
+          : ''
+      }
       ${regionEmptyNote()}
       ${
         feature('addComp') || c?.local
@@ -475,6 +512,7 @@ function viewZapas() {
       }
       ${addComp.open && feature('addComp') ? addPanel() : ''}
       ${matchList}
+      ${round?.matches?.length ? myTeamRow : ''}
     </div>
     </div>
     <div class="col">
@@ -685,9 +723,12 @@ function refPicker() {
 function viewZaver() {
   const refList = store.recentReferees().map((n) => `<option value="${esc(n)}">`).join('');
   const role = (v, l) => `<option value="${v}" ${S.referee.role === v ? 'selected' : ''}>${l}</option>`;
+  const mySig = !!profile().me.sig;
   const sigBox = (key, title, name) => `<div class="sig"><div class="cap">${title}${name ? `: ${esc(name)}` : ''}</div>
       <canvas data-sig="${key}" aria-label="Podpis: ${esc(title)}"></canvas>
-      <div class="row end"><button class="btn small ghost" type="button" data-act="clearSig" data-key="${key}">Smazat podpis</button></div></div>`;
+      <div class="row end">${
+        mySig ? `<button class="btn small secondary" type="button" data-act="insertSig" data-key="${key}">✍ Vložit můj podpis</button>` : ''
+      }<button class="btn small ghost" type="button" data-act="clearSig" data-key="${key}">Smazat podpis</button></div></div>`;
   return `<div class="cols">
     <div class="col">
     <div class="card">
@@ -960,16 +1001,10 @@ function viewNastaveni() {
   </div>
   <div class="card">
     <h3>Soutěže</h3>
-    <label class="field"><span>Můj kraj</span>
-      <select data-chg="region">
-        <option value="">Všechny kraje</option>
-        ${REGIONS.filter((r) => r.code !== 'CR')
-          .map((r) => `<option value="${r.code}" ${settings().region === r.code ? 'selected' : ''}>${esc(r.name)} (${esc(r.abbr)})</option>`)
-          .join('')}
-      </select></label>
-    ${regionEmptyNote()}
-    <p class="muted small-text">S vybraným krajem nabídka soutěží ukáže jen celostátní soutěže a soutěže tvého kraje.
-    Soutěže, jejichž poslední kolo bylo před víc než měsícem, jsou v nabídce dole mezi ukončenými.</p>
+    <p class="muted small-text">Moje kraje, oblíbené soutěže a moje družstva jsou v profilu.</p>
+    <div class="actions" style="margin-top:.4rem">
+      <button class="btn secondary" type="button" data-act="go" data-tab="profil">👤 Můj profil</button>
+    </div>
   </div>
   <div class="card">
     <h3>Funkce</h3>
@@ -986,11 +1021,158 @@ function viewNastaveni() {
   </div>
   <div class="card">
     <h3>Data v tomto zařízení</h3>
-    <p class="muted small-text">Smaže rozpracovaný zápis, archiv, loga, zapamatované údaje i nastavení. Nejdřív si stáhni zálohu archivu.</p>
+    <p class="muted small-text">Smaže rozpracovaný zápis, archiv, profil včetně mého podpisu, loga, zapamatované údaje i nastavení. Nejdřív si stáhni zálohu archivu.</p>
     <div class="actions" style="margin-top:.4rem">
       <button class="btn secondary" type="button" data-act="exportArch">Stáhnout zálohu archivu</button>
       <button class="btn danger" type="button" data-act="clearAll">Smazat všechna data</button>
     </div>
+  </div>`;
+}
+
+// ---------- můj profil ----------
+/** Všechna družstva ze stažených soutěží (pro našeptávání mých družstev). */
+const knownTeams = () => [...new Set(DATA.competitions.flatMap((c) => (Array.isArray(c.teams) ? c.teams.map((t) => t.name) : [])))].sort((a, b) => a.localeCompare(b, 'cs'));
+const compName = (c) => {
+  const full = `${c.name}${c.group ? ` ${c.group}` : ''}`;
+  const short = standardShort(c);
+  return short && !full.startsWith(short) ? `${short} – ${full}` : full;
+};
+
+function viewProfil() {
+  const prof = profile();
+  const logos = store.allTeamLogos();
+  const kraj = store.krajLogo();
+  const thumb = (src) => (src ? `<span class="logo-thumb"><img src="${esc(src)}" alt=""></span>` : '<span class="logo-thumb"><span class="muted small-text">bez loga</span></span>');
+
+  const regionBoxes = REGIONS.filter((r) => r.code !== 'CR')
+    .map(
+      (r) => `<label class="set-check"><input type="checkbox" data-chg="profRegion" value="${r.code}" ${prof.regions.includes(r.code) ? 'checked' : ''}>
+        <span>${esc(r.name)} <span class="muted">(${esc(r.abbr)})</span></span></label>`,
+    )
+    .join('');
+
+  const favItems = prof.favComps
+    .map((id) => {
+      const c = DATA.competitions.find((x) => x.id === id);
+      return `<div class="prof-it"><span>${c ? esc(compName(c)) : `<span class="muted">${esc(id)} (soutěž už v nabídce není)</span>`}</span>
+        <button class="btn small ghost" type="button" data-act="favComp" data-id="${esc(id)}" aria-label="Odebrat z oblíbených">✕</button></div>`;
+    })
+    .join('');
+  const favOpts = groupCompetitions(
+    DATA.competitions.filter((c) => !prof.favComps.includes(c.id)),
+    {},
+  )
+    .filter((g) => g.key !== '9zend')
+    .map((g) => `<optgroup label="${esc(g.label)}">${g.comps.map((c) => `<option value="${esc(c.id)}">${esc(compName(c))}</option>`).join('')}</optgroup>`)
+    .join('');
+
+  const teamItems = prof.myTeams
+    .map(
+      (name) => `<div class="prof-it">
+        ${thumb(logos[name])}
+        <span><b>${esc(name)}</b></span>
+        <span class="logo-btns">
+          <label class="btn small secondary">${logos[name] ? 'Změnit logo' : 'Nahrát logo'}
+            <input type="file" accept="image/*" hidden data-act="teamLogoUpload" data-name="${esc(name)}"></label>
+          <button class="btn small ghost" type="button" data-act="myTeam" data-name="${esc(name)}" aria-label="Odebrat z mých družstev">✕</button>
+        </span></div>`,
+    )
+    .join('');
+  const otherLogos = Object.keys(logos)
+    .filter((n) => !prof.myTeams.includes(n))
+    .sort((a, b) => a.localeCompare(b, 'cs'))
+    .map(
+      (name) => `<div class="prof-it">${thumb(logos[name])}<span>${esc(name)}</span>
+        <span class="logo-btns"><button class="btn small ghost" type="button" data-act="teamLogoRemove" data-name="${esc(name)}" aria-label="Smazat logo">✕</button></span></div>`,
+    )
+    .join('');
+  const ld = prof.logoDefaults;
+  const teamMode = (v, label) =>
+    `<label class="set-radio"><input type="radio" name="logoTeams" data-chg="logoDefTeams" value="${v}" ${ld.teams === v ? 'checked' : ''}><span>${label}</span></label>`;
+
+  return `${backBar()}
+  <div class="card">
+    <h2>Můj profil</h2>
+    <p class="muted small-text">Kraje, oblíbené soutěže, moje družstva, loga a můj podpis. Profil je jen v tomto zařízení.
+    Na jiné zařízení ho přeneseš souborem (dole Záloha profilu).</p>
+  </div>
+  <div class="cols">
+  <div class="col">
+  <div class="card">
+    <h3>Moje kraje</h3>
+    <p class="muted small-text">Nabídka soutěží ukáže celostátní soutěže a soutěže vybraných krajů. Jejich soupisky si aplikace stáhne předem,
+    takže v hrací místnosti funguje i bez internetu. Bez vybraného kraje jsou v nabídce všechny kraje.</p>
+    <div class="set-checks">${regionBoxes}</div>
+    ${regionEmptyNote()}
+  </div>
+  <div class="card">
+    <h3>Oblíbené soutěže</h3>
+    <p class="muted small-text">Jsou v nabídce soutěží úplně nahoře a stahují se předem. Přidat jde i hvězdičkou ☆ u soutěže v kroku Zápas.</p>
+    ${favItems ? `<div class="prof-list">${favItems}</div>` : '<p class="muted small-text">Zatím žádné.</p>'}
+    <label class="field" style="margin-top:.6rem"><span>Přidat soutěž</span>
+      <select data-chg="favAdd"><option value="">— vyber soutěž —</option>${favOpts}</select></label>
+  </div>
+  <div class="card">
+    <h3>Moje družstva</h3>
+    <p class="muted small-text">Po výběru kola aplikace sama vybere zápas mého družstva a v seznamu zápasů ho dá nahoru.
+    Přidat jde i hvězdičkou ☆ u družstva v kroku Zápas.</p>
+    ${teamItems ? `<div class="prof-list">${teamItems}</div>` : '<p class="muted small-text">Zatím žádné.</p>'}
+    <div class="row" style="margin-top:.6rem;align-items:flex-end">
+      <label class="field" style="flex:1;min-width:12rem"><span>Přidat družstvo</span>
+        <input type="text" id="myTeamName" list="dl-teams" placeholder="Název družstva jako na soupisce" autocomplete="off"></label>
+      <button class="btn secondary" type="button" data-act="myTeamAdd">Přidat</button>
+    </div>
+    <datalist id="dl-teams">${knownTeams().map((n) => `<option value="${esc(n)}">`).join('')}</datalist>
+  </div>
+  </div>
+  <div class="col">
+  <div class="card">
+    <h3>Můj podpis</h3>
+    <p class="muted small-text">Podepiš se jednou tady. V kroku Závěr a podpisy pak bude u každého podpisu tlačítko
+    <b>Vložit můj podpis</b>, které vloží podpis a doplní tvoje jméno. Sám se podpis nikam nevloží.</p>
+    <label class="field"><span>Jméno a příjmení</span>
+      <input type="text" data-prof="name" value="${esc(prof.me.name)}" autocomplete="name" placeholder="Jak se podepisuješ do zápisu"></label>
+    <div class="sig" style="margin-top:.6rem"><div class="cap">Můj podpis</div>
+      <canvas data-sig="me" aria-label="Můj podpis"></canvas>
+      <div class="row end"><button class="btn small ghost" type="button" data-act="clearSig" data-key="me">Smazat podpis</button></div></div>
+  </div>
+  <div class="card">
+    <h3>Loga</h3>
+    <p class="muted small-text">Která loga jsou v novém zápisu zapnutá. V kroku Výstup jde každé zapnout nebo vypnout pro konkrétní zápis.</p>
+    <div class="set-list">
+      <label class="set-row"><span><b>Šachový svaz ČR</b></span>
+        <input type="checkbox" class="switch" data-chg="logoDef" data-key="svaz" ${ld.svaz ? 'checked' : ''}></label>
+      <label class="set-row"><span><b>Krajský svaz</b></span>
+        <input type="checkbox" class="switch" data-chg="logoDef" data-key="kraj" ${ld.kraj ? 'checked' : ''}></label>
+    </div>
+    <p class="small-text" style="margin:.6rem 0 .3rem"><b>Loga družstev</b></p>
+    <div class="set-radios">
+      ${teamMode('all', 'Vždy')}
+      ${teamMode('mine', 'Jen u mého družstva')}
+      ${teamMode('none', 'Nikdy')}
+    </div>
+    <div class="prof-list" style="margin-top:.8rem">
+      <div class="prof-it">${thumb(kraj)}<span><b>Logo krajského svazu</b></span>
+        <span class="logo-btns"><label class="btn small secondary">${kraj ? 'Změnit' : 'Nahrát'}
+          <input type="file" accept="image/*" hidden data-act="logoUpload" data-slot="kraj"></label>
+          ${kraj ? '<button class="btn small ghost" type="button" data-act="logoRemove" data-slot="kraj" aria-label="Smazat logo">✕</button>' : ''}</span></div>
+    </div>
+    ${otherLogos ? `<p class="small-text" style="margin:.8rem 0 .3rem"><b>Loga ostatních družstev</b> <span class="muted">(nahraná v zápisu)</span></p><div class="prof-list">${otherLogos}</div>` : ''}
+  </div>
+  <div class="card">
+    <h3>Záloha profilu</h3>
+    <p class="muted small-text">Soubor nese profil, loga, nastavení, e-mailové adresy, rozhodčí, hrací místnosti a vlastní soutěže.
+    Archiv zápisů má vlastní zálohu v Archivu. Při nahrání se oblíbené a nastavení vezmou ze souboru, loga a zapamatované
+    údaje se sloučí s tím, co v zařízení je, nic se nesmaže.</p>
+    <label class="set-check" style="margin-top:.4rem"><input type="checkbox" id="profWithSig" ${prof.me.sig ? '' : 'disabled'}>
+      <span>Přidat i můj podpis <span class="muted small-text">(kdo má soubor, může ho vložit do zápisu)</span></span></label>
+    <div class="actions" style="margin-top:.6rem">
+      <button class="btn" type="button" data-act="exportProfile">Stáhnout profil</button>
+      <label class="btn secondary file-btn">Nahrát profil ze souboru
+        <input type="file" accept=".json,application/json" hidden data-act="importProfile"></label>
+    </div>
+  </div>
+  </div>
   </div>`;
 }
 
@@ -1008,6 +1190,7 @@ const VIEWS = {
   vystup: viewVystup,
   archiv: viewArchiv,
   nastaveni: viewNastaveni,
+  profil: viewProfil,
   oaplikaci: viewOAplikaci,
   soukromi: viewSoukromi,
 };
@@ -1078,6 +1261,16 @@ function afterRender() {
 }
 
 // ---------- podpisy ----------
+// Plátno 'me' je můj podpis v profilu, ostatní (home, ref, away) jsou podpisy v zápisu.
+const sigOf = (key) => (key === 'me' ? profile().me.sig : S.sig?.[key]);
+function setSig(key, dataUrl) {
+  if (key === 'me') {
+    const p = profile();
+    return setProfile({ ...p, me: { ...p.me, sig: dataUrl } });
+  }
+  S.sig[key] = dataUrl;
+  save();
+}
 /**
  * Nastaví plátnu podpisu rozlišení podle jeho velikosti na obrazovce a nakreslí do něj uložený podpis.
  * Volá se při vykreslení kroku a znovu, když se plátno změní (otočení tabletu, změna okna):
@@ -1099,12 +1292,12 @@ function sizePad(canvas, key) {
   ctx.lineCap = 'round';
   ctx.lineJoin = 'round';
   ctx.strokeStyle = '#0b2a6f';
-  const src = S.sig?.[key];
+  const src = sigOf(key);
   if (!src) return;
   const img = new Image();
   img.onload = () => {
     // plátno se mezitím mohlo znovu změnit nebo podpis smazat
-    if (canvas.width !== w || canvas.height !== h || S.sig?.[key] !== src) return;
+    if (canvas.width !== w || canvas.height !== h || sigOf(key) !== src) return;
     // podpis z plátna jiného tvaru se zmenší tak, aby se vešel, a nedeformuje se
     const k = Math.min(rect.width / img.width, rect.height / img.height);
     const dw = img.width * k;
@@ -1164,8 +1357,7 @@ function initPad(canvas, key) {
   const end = () => {
     if (!drawing) return;
     drawing = false;
-    S.sig[key] = sigDataUrl(canvas);
-    save();
+    setSig(key, sigDataUrl(canvas));
   };
   canvas.addEventListener('pointerup', end);
   canvas.addEventListener('pointercancel', end);
@@ -1626,6 +1818,7 @@ async function sendMail() {
 
 function newMatch() {
   S = L.newMatch();
+  S.logos = P.defaultLogoFlags(profile());
   S.compId = DATA.competitions[0]?.id ?? '';
   save();
   tab = 'zapas';
@@ -1642,6 +1835,22 @@ view.addEventListener('click', (e) => {
   switch (a) {
     case 'go':
       return goTo(el.dataset.tab);
+    case 'favComp': {
+      const id = el.dataset.id ?? S.compId;
+      const p = P.toggleIn(profile(), 'favComps', id);
+      setProfile(p);
+      if (p.favComps.includes(id)) prefetchMyRegion();
+      toast(p.favComps.includes(id) ? 'Soutěž je mezi oblíbenými, v nabídce je nahoře.' : 'Soutěž už není mezi oblíbenými.');
+      return renderView();
+    }
+    case 'myTeam': {
+      const name = el.dataset.name ?? S[side]?.team;
+      if (!name) return;
+      const p = P.toggleIn(profile(), 'myTeams', name);
+      setProfile(p);
+      toast(p.myTeams.includes(name) ? `${name} je tvoje družstvo.` : `${name} už není tvoje družstvo.`);
+      return renderView();
+    }
     case 'aboutTab':
       return openAbout(el.dataset.sub);
     case 'pickMatch': {
@@ -1726,11 +1935,47 @@ view.addEventListener('click', (e) => {
     }
     case 'clearSig': {
       const key = el.dataset.key;
-      S.sig[key] = '';
-      save();
+      setSig(key, '');
       const c = $(`canvas[data-sig="${key}"]`);
       c.getContext('2d').clearRect(0, 0, c.width, c.height);
+      if (key === 'me') renderView();
       return;
+    }
+    case 'insertSig': {
+      // můj podpis z profilu do zápisu; jen na klepnutí, nikdy sám
+      const key = el.dataset.key;
+      const me = profile().me;
+      if (!me.sig) return goTo('profil');
+      if (S.sig?.[key] && !confirm('Tady už podpis je. Nahradit ho mým podpisem?')) return;
+      S.sig[key] = me.sig;
+      if (me.name) {
+        if (key === 'ref' && !S.referee.name) S.referee.name = me.name;
+        if ((key === 'home' || key === 'away') && !S[key].captain) S[key].captain = me.name;
+      }
+      save();
+      toast('Můj podpis je vložený.');
+      return renderView();
+    }
+    case 'myTeamAdd': {
+      const input = $('#myTeamName');
+      const name = clean(input?.value ?? '');
+      if (!name) return toast('Napiš název družstva.');
+      setProfile(P.toggleIn(profile(), 'myTeams', name, true));
+      toast(`${name} je tvoje družstvo.`);
+      return renderView();
+    }
+    case 'teamLogoRemove': {
+      if (!confirm(`Smazat logo družstva ${el.dataset.name} z tohoto zařízení?`)) return;
+      store.setTeamLogo(el.dataset.name, null);
+      return renderView();
+    }
+    case 'exportProfile': {
+      const withSig = !!$('#profWithSig')?.checked;
+      const file = P.makeProfileFile(store.readSnapshot(), { withSig });
+      return download(
+        new Blob([JSON.stringify(file, null, 1)], { type: 'application/json' }),
+        `profil-zapis-${new Date().toLocaleDateString('sv-SE')}.json`,
+      );
     }
     case 'fullscreen':
       return openOverlay(el.dataset.mode);
@@ -1809,7 +2054,7 @@ view.addEventListener('click', (e) => {
       return renderView();
     }
     case 'clearAll': {
-      if (!confirm('Smazat všechna data aplikace z tohoto zařízení? Zmizí rozpracovaný zápis, archiv, loga i nastavení. Nejde to vrátit.')) return;
+      if (!confirm('Smazat všechna data aplikace z tohoto zařízení? Zmizí rozpracovaný zápis, archiv, profil, loga i nastavení. Nejde to vrátit.')) return;
       store.clearAll();
       try {
         caches?.keys?.().then((ks) => Promise.all(ks.map((k) => caches.delete(k)))).finally(() => location.reload());
@@ -1956,6 +2201,35 @@ view.addEventListener('change', async (e) => {
     }
     return renderView();
   }
+  if (input.dataset.act === 'teamLogoUpload') {
+    const file = input.files?.[0];
+    if (!file) return;
+    try {
+      if (!store.setTeamLogo(input.dataset.name, await fileToLogo(file))) return toast('Logo se nepodařilo uložit, úložiště zařízení je plné.');
+      toast('Logo je nahrané.');
+    } catch {
+      toast('Tenhle soubor se jako obrázek načíst nepodařilo.');
+    }
+    return renderView();
+  }
+  if (input.dataset.act === 'importProfile') {
+    const file = input.files?.[0];
+    if (!file) return;
+    try {
+      const incoming = P.parseProfileFile(await file.text());
+      if (!confirm(`Nahrát profil ze souboru (${P.describeSnapshot(incoming)})? Oblíbené a nastavení se nahradí, loga a zapamatované údaje se sloučí.`)) return;
+      if (!store.writeSnapshot(P.mergeSnapshot(store.readSnapshot(), incoming))) toast('Část profilu se nevešla do úložiště zařízení.');
+      else toast('Profil je nahraný.');
+      DATA = reloadUserComps();
+      applyUi();
+      prefetchMyRegion();
+    } catch (err) {
+      toast(err.message);
+    } finally {
+      input.value = '';
+    }
+    return renderAll();
+  }
   if (input.dataset.act === 'importArch') {
     const files = [...(input.files ?? [])];
     if (!files.length) return;
@@ -1997,6 +2271,11 @@ view.addEventListener('input', (e) => {
     if (el.dataset.add === 'url') syncUrlUi();
     return;
   }
+  if (el.dataset.prof === 'name') {
+    const p = profile();
+    setProfile({ ...p, me: { ...p.me, name: el.value } });
+    return;
+  }
   if (el.dataset.bind) {
     setPath(S, el.dataset.bind, el.value);
     save();
@@ -2020,10 +2299,20 @@ view.addEventListener('change', (e) => {
       compFailed = null;
       save();
       return renderView();
-    case 'round':
+    case 'round': {
       S.round = el.value;
+      // v kole hraje moje družstvo (z profilu) jediný zápas: vybere se sám
+      const round = comp()?.rounds?.find((r) => String(r.no) === String(S.round));
+      const mine = P.myMatches(profile(), round);
+      if (mine.length === 1 && !S.home.team && !S.away.team) {
+        setTeam('home', mine[0].home);
+        setTeam('away', mine[0].away);
+        if (round.date) S.date = round.date;
+        toast(`Vybraný zápas tvého družstva: ${mine[0].home} – ${mine[0].away}.`);
+      }
       save();
       return renderView();
+    }
     case 'team':
       setTeam(el.dataset.side, el.value);
       save();
@@ -2046,11 +2335,28 @@ view.addEventListener('change', (e) => {
     case 'retention':
       setSetting('retention', Number(el.value));
       return;
-    case 'region': {
-      setSetting('region', el.value);
+    case 'profRegion': {
+      const p = P.toggleIn(profile(), 'regions', el.value, el.checked);
+      setProfile(p);
       prefetchMyRegion();
-      const r = REGIONS.find((x) => x.code === el.value);
-      return toast(r ? `Soutěže: celostátní a ${r.name}.` : 'Soutěže: všechny kraje.');
+      return renderView();
+    }
+    case 'favAdd': {
+      if (!el.value) return;
+      setProfile(P.toggleIn(profile(), 'favComps', el.value, true));
+      prefetchMyRegion();
+      toast('Soutěž je mezi oblíbenými.');
+      return renderView();
+    }
+    case 'logoDef': {
+      const p = profile();
+      setProfile({ ...p, logoDefaults: { ...p.logoDefaults, [el.dataset.key]: el.checked } });
+      return;
+    }
+    case 'logoDefTeams': {
+      const p = profile();
+      setProfile({ ...p, logoDefaults: { ...p.logoDefaults, teams: el.value } });
+      return;
     }
     case 'logo':
       S.logos = { ...L.logoFlags(S), [el.dataset.slot]: el.checked };
