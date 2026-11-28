@@ -7,6 +7,7 @@ import { clean, tournamentNumber, exportUrl } from './parse.js';
 import * as store from './store.js';
 import { makeBackup, parseBackup, mergeArchive, olderThan } from './archive.js';
 import { aboutPage, privacyPage } from './pages.js';
+import { buildPgn, pgnGames } from './pgn.js';
 import { VERSION, newerThan } from './changelog.js';
 import { encodeLink, decodeLink, hasLink } from './link.js';
 import qrcode from './vendor/qrcode.js';
@@ -86,6 +87,7 @@ const FEATURES = [
   ['logos', 'Loga v zápisu', 'Logo svazu, krajského svazu a družstev v zápisu.', true],
   ['mail', 'Odeslání e-mailem', 'Odeslání hotového zápisu e-mailem.', true],
   ['png', 'Obrázek PNG', 'Stažení zápisu i jako obrázek, nejen PDF.', true],
+  ['pgn', 'Partie v PGN', 'Stažení partií v PGN (hráči, barvy, výsledky) pro šachové programy.', true],
   ['share', 'Sdílení', 'Sdílení PDF do jiné aplikace (na tabletu a telefonu).', true],
   ['qrSign', 'Podpis na telefonu', 'QR kód, kterým se zápis přenese z počítače na telefon a podepíše se tam prstem.', true],
   ['addComp', 'Přidání vlastní soutěže', 'Soutěž, která v nabídce není, jde přidat ze souborů z chess-results.', false],
@@ -860,6 +862,7 @@ function viewVystup() {
       <div class="actions" style="margin-top:0">
         <button class="btn" type="button" data-act="pdf">Stáhnout PDF</button>
         ${feature('png') ? '<button class="btn" type="button" data-act="png">Stáhnout obrázek (PNG)</button>' : ''}
+        ${feature('pgn') ? '<button class="btn secondary" type="button" data-act="pgn">Stáhnout partie (PGN)</button>' : ''}
         ${feature('share') ? '<button class="btn secondary" type="button" data-act="share" id="btnShare">Sdílet</button>' : ''}
       </div>
     </div>
@@ -1541,6 +1544,19 @@ async function exportPdf() {
   download(await makePdfBlob(), `${L.fileBase(S, comp())}.pdf`);
 }
 
+// PGN: jedna partie na šachovnici, jen hlavičky a výsledek. Kontumace se nehrály, v PGN nejsou.
+function exportPgn() {
+  const { games, skipped } = pgnGames(S, comp());
+  if (!games.length) return toast('V zápisu zatím není žádná sehraná partie (nejdřív sestavy).');
+  download(new Blob([buildPgn(S, comp())], { type: 'application/x-chess-pgn' }), `${L.fileBase(S, comp())}.pgn`);
+  const open = games.filter((g) => g.result === '*').length;
+  const notes = [
+    skipped.length ? `bez ${skipped.length === 1 ? 'kontumované šachovnice' : 'kontumovaných šachovnic'} ${skipped.join(', ')}` : '',
+    open ? `${open} bez výsledku (*)` : '',
+  ].filter(Boolean);
+  toast(`PGN: ${games.length} ${games.length < 5 ? 'partie' : 'partií'}${notes.length ? `, ${notes.join(', ')}` : ''}.`);
+}
+
 async function exportPng() {
   if (!ensureCanvas()) return;
   toast('Vytvářím obrázek…');
@@ -1724,6 +1740,8 @@ view.addEventListener('click', (e) => {
       return exportPdf();
     case 'png':
       return exportPng();
+    case 'pgn':
+      return exportPgn();
     case 'share':
       return shareFiles();
     case 'mail':

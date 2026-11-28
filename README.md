@@ -17,7 +17,16 @@ prstem a na konci vznikne **PDF** a **obrázek (PNG)** zápisu.
    a odtud jde přepnout i na celý zápis.
 4. **Závěr a podpisy:** rozhodčí, kapitáni, záznam rozhodčího a tři podpisy.
 5. **Výstup:** kontrola zápisu (co je nutné opravit a co jen doporučujeme, s odkazem na příslušný krok),
-   loga v zápisu, náhled na celou obrazovku, PDF, PNG, sdílení a odeslání e-mailem.
+   loga v zápisu, náhled na celou obrazovku, PDF, PNG, partie v PGN, sdílení a odeslání e-mailem.
+
+### Partie v PGN
+
+Tlačítko **Stáhnout partie (PGN)** v kroku Výstup (`js/pgn.js`) uloží jednu partii na šachovnici: hlavičky
+Event, Site, Date, Round (`kolo.šachovnice`), White, Black, Result, WhiteTeam, BlackTeam, WhiteElo a BlackElo
+(Elo FIDE, jinak neoznačené Elo; národní se nepoužije) a Board, za nimi jen výsledek, protože tahy zápis nemá.
+Barvy podle čl. 3.4.1: domácí bílými na lichých šachovnicích, výsledek je z pohledu bílého (výhra domácích
+na 2. šachovnici je `0-1`). Všechny texty jsou bez diakritiky, uvozovek a apostrofů (jen ASCII). Kontumované
+šachovnice se nehrály, v PGN nejsou; partie bez zadaného výsledku má `*`.
 
 ### Podpis na telefonu (QR kód)
 
@@ -216,7 +225,7 @@ jde upravit čtení v `scripts/chesscz.mjs` (chess.cz) nebo `js/parse.js` (chess
 
 ```bash
 npm install                 # jen linkedom, pro parsování HTML v Node
-npm test                    # 112 testů: logika zápisu, parser, hrací místnosti, čtečky .xlsx a .xls, ratingy z LOK, přidávání soutěží, archiv, PDF, odkaz s QR
+npm test                    # 117 testů: logika zápisu, PGN, parser, hrací místnosti, čtečky .xlsx a .xls, ratingy z LOK, přidávání soutěží, archiv, PDF, odkaz s QR
 npm run serve               # lokální spuštění: http://localhost:8080
 ```
 
