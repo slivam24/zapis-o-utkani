@@ -112,6 +112,33 @@ test('nabídka: skupiny a pořadí', () => {
   assert.ok(keep.some((g) => g.label.startsWith('Jihomoravský')));
 });
 
+test('nabídka: víc krajů a oblíbené soutěže nahoře', () => {
+  const now = new Date('2026-11-20T12:00:00');
+  const live = [{ date: '2026-10-18' }, { date: '2027-03-01' }];
+  const comps = [
+    c('šachy.cz Extraliga', { region: 'CR', rounds: live }),
+    c('Krajský přebor ÚKŠS', { region: 'UKSS', rounds: live }),
+    c('Krajský přebor JmŠS', { region: 'JmSS', rounds: live }),
+    c('Krajský přebor PSS', { region: 'PSS', rounds: live }),
+    c('Stará soutěž', { region: 'PSS', rounds: [{ date: '2026-04-01' }] }),
+    c('Moje soutěž', { local: true }),
+  ];
+  const g = groupCompetitions(comps, { now, regions: ['UKSS', 'JmSS'], favs: ['Krajský přebor PSS', 'Moje soutěž', 'Stará soutěž'] });
+  assert.deepEqual(g.map((x) => x.label), [
+    'Oblíbené soutěže',
+    'Celostátní soutěže',
+    'Jihomoravský kraj (JmŠS)',
+    'Ústecký kraj (ÚKŠS)',
+    'Ukončené soutěže',
+  ]);
+  // oblíbená soutěž z jiného kraje je nahoře a jen jednou, ukončená oblíbená je mezi ukončenými
+  assert.deepEqual(g[0].comps.map((x) => x.name).sort(), ['Krajský přebor PSS', 'Moje soutěž']);
+  assert.equal(g.flatMap((x) => x.comps).filter((x) => x.name === 'Krajský přebor PSS').length, 1);
+  assert.deepEqual(g[4].comps.map((x) => x.name), ['Stará soutěž']);
+  // starý parametr region (jeden kraj) funguje dál
+  assert.deepEqual(groupCompetitions(comps, { now, region: 'UKSS' }).map((x) => x.label).slice(0, 2), ['Celostátní soutěže', 'Ústecký kraj (ÚKŠS)']);
+});
+
 test('řazení: dospělí před mládeží, skupiny abecedně', () => {
   const list = [c("1. liga mládeže 'A'"), c("2. liga 'C'"), c("2. liga 'A'"), c('1. liga - západ'), c('1. liga - východ')].sort(compareComps);
   assert.deepEqual(list.map((x) => standardShort(x)), ['1. liga východ', '1. liga západ', '2. liga A', '2. liga C', '1. liga ml. A']);

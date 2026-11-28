@@ -1,5 +1,5 @@
 // Service worker: aplikace funguje bez internetu. Data (soupisky) se berou přednostně ze sítě.
-const CACHE = 'zapis-v25';
+const CACHE = 'zapis-v26';
 const SHELL = [
   './',
   'index.html',
@@ -18,6 +18,7 @@ const SHELL = [
   'js/changelog.js',
   'js/link.js',
   'js/catalog.js',
+  'js/profile.js',
   'js/vendor/qrcode.js',
   'manifest.webmanifest',
   'icons/icon.svg',

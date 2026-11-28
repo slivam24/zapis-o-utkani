@@ -407,6 +407,21 @@ body.ov-open { overflow: hidden; }
 .app-menu summary { font-size: .95rem; }
 .page-back { max-width: 980px; margin: 0 auto .6rem; }
 
+/* můj profil */
+.set-checks { display: grid; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); gap: .1rem .8rem; }
+.set-check { display: flex; align-items: center; gap: .6rem; padding: .4rem .2rem; cursor: pointer; min-height: 40px; }
+.set-check input { width: 20px; height: 20px; flex: 0 0 auto; }
+.prof-list { display: grid; gap: .4rem; }
+.prof-it {
+  display: flex; align-items: center; gap: .6rem; border: 1px solid var(--line); border-radius: 10px;
+  padding: .4rem .6rem; min-height: 48px;
+}
+.prof-it > span:not(.logo-thumb):not(.logo-btns) { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.prof-it .logo-thumb { width: 3.5rem; flex: 0 0 auto; }
+.prof-it .logo-thumb .muted { white-space: nowrap; font-size: .7rem; }
+.fav-btn.on { color: var(--accent); border-color: var(--accent); background: var(--sel); font-weight: 700; }
+.match-btn.mine { border-color: var(--accent); }
+
 /* nastavení */
 .set-radios { display: grid; gap: .3rem; }
 .set-radio { display: flex; align-items: center; gap: .6rem; padding: .45rem .2rem; cursor: pointer; min-height: 40px; }

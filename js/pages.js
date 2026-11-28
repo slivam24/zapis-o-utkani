@@ -144,7 +144,8 @@ export function helpPage() {
     <h3>Nabídka soutěží</h3>
     <p>Soutěže jsou rozdělené do skupin: celostátní soutěže, celostátní soutěže mládeže a kraje. Uvnitř skupiny
     jdou od nejvyšší soutěže (Extraliga, 1. liga, 2. liga, KP, KP II, KP III) a pak podle skupin A, B, C.
-    V <b>Nastavení → Můj kraj</b> si nabídku zúžíš na celostátní soutěže a svůj kraj. Soutěže, které už skončily,
+    V <b>Můj profil → Moje kraje</b> si nabídku zúžíš na celostátní soutěže a své kraje. Oblíbené soutěže
+    (hvězdička ☆ u soutěže) jsou v nabídce úplně nahoře. Soutěže, které už skončily,
     jsou dole mezi ukončenými, zápis z nich jde pořád dodělat. Soupisky se obnovují každý pátek,
     ručně je obnovíš ikonou ↻ v hlavičce.</p>
 
@@ -161,6 +162,13 @@ export function helpPage() {
     <p><b>iPhone a iPad:</b> Safari maže data webů, které týden nikdo neotevřel, a s nimi i archiv.
     Neplatí to pro aplikaci přidanou na plochu (<b>Sdílet → Přidat na plochu</b>), proto ji tak používej
     a zálohu stahuj i tak. Při prvním uložení do archivu aplikace požádá prohlížeč, aby její data nemazal sám.</p>
+
+    <h3>Můj profil</h3>
+    <p>V <b>☰ Menu → Můj profil</b> si vybereš kraje, oblíbené soutěže a svoje družstva. Po výběru kola aplikace
+    sama vybere zápas tvého družstva. Nastavíš tam i, která loga jsou v novém zápisu zapnutá
+    (logo družstva třeba jen u tvého družstva), a jednou se podepíšeš: v kroku Závěr a podpisy pak stačí
+    klepnout na <b>Vložit můj podpis</b>. Profil i s logy jde stáhnout do souboru a nahrát na jiném zařízení.
+    Podpis se do souboru přidá, jen když ho zaškrtneš.</p>
 
     <h3>Nastavení a zobrazení</h3>
     <p>Funkce, které nejsou potřeba pokaždé (vlastní soutěže, loga, e-mail, rychlé texty záznamu…),
@@ -197,7 +205,8 @@ export function privacyPage() {
     <ul>
       <li>rozpracovaný zápis a archiv hotových zápisů, včetně podpisů,</li>
       <li>naposledy použití rozhodčí a hrací místnosti (aby se příště nabídly),</li>
-      <li>nahraná loga, adresa pro odeslání zápisu e-mailem a nastavení aplikace.</li>
+      <li>nahraná loga, adresa pro odeslání zápisu e-mailem a nastavení aplikace,</li>
+      <li>profil: kraje, oblíbené soutěže, moje družstva, jméno a můj podpis (pokud si ho uložíte).</li>
     </ul>
 
     <h3>Kam se data posílají</h3>
@@ -215,6 +224,9 @@ export function privacyPage() {
     <h3>Podpisy</h3>
     <p>Podpis se ukládá jen jako obrázek čáry, stejně jako na papírovém zápisu.
     Neukládá se tlak, rychlost ani průběh tahu. Podpis je součástí zápisu (PDF), který se odesílá řídicímu soutěže.</p>
+    <p>Můj podpis z profilu je uložený v zařízení a do zápisu se vloží jen klepnutím na <b>Vložit můj podpis</b>.
+    Na sdíleném zařízení (klubový tablet) ho proto neukládejte, nebo ho po utkání v profilu smažte.
+    Do souboru s profilem se podpis dostane, jen když to při stažení zaškrtnete. S takovým souborem zacházejte opatrně.</p>
 
     <h3>Jak dlouho a jak smazat</h3>
     <ul>

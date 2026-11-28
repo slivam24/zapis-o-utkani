@@ -4,6 +4,16 @@
 
 export const CHANGES = [
   {
+    date: '2026-11-28',
+    items: [
+      'Nový <b>Můj profil</b> v menu: víc krajů najednou, <b>oblíbené soutěže</b> úplně nahoře v nabídce, <b>moje družstva</b>, loga a můj podpis.',
+      'Hvězdičkou ☆ u soutěže ji přidáš do oblíbených, u družstva ho označíš jako svoje. Po výběru kola se zápas tvého družstva vybere sám.',
+      'Loga družstev můžou být v novém zápisu zapnutá vždy, jen u tvého družstva, nebo nikdy.',
+      '<b>Vložit můj podpis:</b> jednou se podepíšeš v profilu a v kroku Závěr a podpisy podpis vložíš jedním klepnutím, i se jménem.',
+      'Profil jde stáhnout do souboru i s logy a nastavením a nahrát na jiném zařízení. Podpis se přidá jen po zaškrtnutí.',
+    ],
+  },
+  {
     date: '2026-11-27',
     items: [
       'Nová sekce <b>O aplikaci</b> v menu: návod krok za krokem, seznam změn a informace o aplikaci. Po aktualizaci aplikace upozorní, že má novinky.',
